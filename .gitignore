@@ -1,0 +1,70 @@
+# ==========================================
+# 1. General / OS Files
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# ==========================================
+# 2. Frontend & Admin (Next.js / Node.js)
+# ==========================================
+# Dependency directories
+node_modules/
+frontend/node_modules/
+admin/node_modules/
+
+# Next.js build output
+.next/
+frontend/.next/
+admin/.next/
+
+# Production build files
+dist/
+build/
+
+# Next.js cache
+.turbo/
+.cache/
+
+# ==========================================
+# 3. Backend (FastAPI / Python)
+# ==========================================
+# Virtual Environments
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+
+# Python cache
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+
+# FastAPI / SQL / Testing
+.pytest_cache/
+.coverage
+.mypy_cache/
+db.sqlite3
+backend/db.sqlite3
+
+# ==========================================
+# 4. Environment Variables (CRITICAL)
+# ==========================================
+# Never commit actual secrets
+.env
+.env.local
+.env.production
+.env.development.local
+frontend/.env*
+admin/.env*
+backend/.env*
+
+# ==========================================
+# 5. Infrastructure / Tools
+# ==========================================
+docker-compose.override.yml
+.husky/_/
