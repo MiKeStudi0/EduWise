@@ -1,145 +1,117 @@
-import Link from "next/link"; // Replaced react-router-dom
-import { ArrowRight, Clock, BookOpen, Award, ChevronRight } from "lucide-react";
+import { ArrowRight, Clock, BookOpen, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+import Link from "next/link"; // Added Next.js Link
 
 const paths = [
   {
-    slug: "frontend",
     title: "Frontend Developer",
-    description: "Master HTML, CSS, JavaScript, and React to build modern web applications",
-    duration: "3-4 months",
+    description: "Master HTML, CSS, JavaScript, React, and modern frontend tooling",
+    duration: "4-6 months",
     modules: 12,
-    projects: 5,
-    color: "hsl(193, 95%, 68%)",
-    icon: "🎨",
-    progress: 35,
-  },
-  {
-    slug: "backend",
-    title: "Backend Developer",
-    description: "Learn Node.js, databases, APIs, and server architecture",
-    duration: "4-5 months",
-    modules: 15,
-    projects: 6,
-    color: "hsl(118, 40%, 45%)",
-    icon: "⚙️",
-    progress: 0,
-  },
-  {
-    slug: "fullstack",
-    title: "Full Stack Developer",
-    description: "Complete path covering frontend, backend, and deployment",
-    duration: "6-8 months",
-    modules: 24,
     projects: 8,
-    color: "hsl(239, 84%, 67%)",
-    icon: "🚀",
-    progress: 0,
+    gradient: "from-blue-500 to-cyan-500",
+    skills: ["HTML/CSS", "JavaScript", "React", "TypeScript", "Next.js"],
   },
   {
-    slug: "datascience",
+    title: "Backend Developer",
+    description: "Build scalable APIs with Node.js, databases, and cloud services",
+    duration: "4-6 months",
+    modules: 10,
+    projects: 6,
+    gradient: "from-green-500 to-emerald-500",
+    skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "AWS"],
+  },
+  {
+    title: "Full Stack Developer",
+    description: "Complete end-to-end development from frontend to deployment",
+    duration: "8-10 months",
+    modules: 20,
+    projects: 12,
+    gradient: "from-purple-500 to-pink-500",
+    skills: ["React", "Node.js", "Databases", "DevOps", "Testing"],
+  },
+  {
     title: "Data Science",
-    description: "Python, statistics, machine learning, and data visualization",
-    duration: "5-6 months",
-    modules: 18,
-    projects: 7,
-    color: "hsl(280, 70%, 55%)",
-    icon: "📊",
-    progress: 0,
+    description: "Analyze data, build ML models, and derive actionable insights",
+    duration: "6-8 months",
+    modules: 14,
+    projects: 10,
+    gradient: "from-orange-500 to-red-500",
+    skills: ["Python", "Pandas", "ML/AI", "TensorFlow", "SQL"],
   },
 ];
 
 export function PathsSection() {
   return (
-    <section className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4">
-            <Award className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Career Paths</span>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-2">
+              Career Paths & Certifications
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Structured learning journeys to land your dream job
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Structured learning paths to your dream job
-          </h2>
-          <p className="text-muted-foreground">
-            Follow our guided roadmaps, complete real projects, and earn industry-recognized certificates.
-          </p>
+          
+          {/* Refactored Button to use Next.js Link */}
+          <Button asChild variant="outline" className="self-start sm:self-auto group">
+            <Link href="/courses">
+              View All Paths
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
 
         {/* Paths Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid sm:grid-cols-2 gap-6">
           {paths.map((path, index) => (
-            <Link
-              key={path.slug}
-              href={`/paths/${path.slug}`}
-              className="group relative p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-lg overflow-hidden"
+            <div
+              key={path.title}
+              className="group relative p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift animate-fade-in-up overflow-hidden"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Progress indicator for started paths */}
-              {path.progress > 0 && (
-                <div className="absolute top-0 left-0 right-0 h-1">
-                  <div 
-                    className="h-full gradient-bg"
-                    style={{ width: `${path.progress}%` }}
-                  />
-                </div>
-              )}
+              {/* Gradient accent */}
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${path.gradient}`} />
+              
+              <div className="flex flex-col h-full">
+                <h3 className="text-xl font-semibold mb-2">{path.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4 flex-grow">
+                  {path.description}
+                </p>
 
-              <div className="flex items-start gap-4">
-                <div 
-                  className="w-14 h-14 rounded-xl flex items-center justify-center text-2xl shrink-0"
-                  style={{ backgroundColor: `${path.color.replace(')', ', 0.2)')}` }}
-                >
-                  {path.icon}
+                {/* Skills */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {path.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-2.5 py-1 text-xs font-medium rounded-full bg-muted text-muted-foreground"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between mb-1">
-                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
-                      {path.title}
-                    </h3>
-                    <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">{path.description}</p>
-                  
-                  <div className="flex flex-wrap gap-4 text-sm">
-                    <div className="flex items-center gap-1.5 text-muted-foreground">
-                      <Clock className="w-4 h-4" />
-                      {path.duration}
-                    </div>
-                    <div className="flex items-center gap-1.5 text-muted-foreground">
-                      <BookOpen className="w-4 h-4" />
-                      {path.modules} modules
-                    </div>
-                    <div className="flex items-center gap-1.5 text-muted-foreground">
-                      <Award className="w-4 h-4" />
-                      {path.projects} projects
-                    </div>
-                  </div>
 
-                  {path.progress > 0 && (
-                    <div className="mt-4">
-                      <div className="flex justify-between text-xs mb-1">
-                        <span className="text-muted-foreground">Progress</span>
-                        <span className="text-primary font-medium">{path.progress}%</span>
-                      </div>
-                      <Progress value={path.progress} className="h-1.5" />
-                    </div>
-                  )}
+                {/* Meta */}
+                <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <Clock className="w-4 h-4" />
+                    {path.duration}
+                  </div>
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <BookOpen className="w-4 h-4" />
+                    {path.modules} modules
+                  </div>
+                  <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                    <Trophy className="w-4 h-4" />
+                    {path.projects} projects
+                  </div>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button asChild variant="hero" size="lg">
-            <Link href="/paths">
-              Explore all paths
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

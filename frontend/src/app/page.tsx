@@ -2,23 +2,20 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/home/HeroSection";
 import { FeaturesSection } from "@/components/home/FeaturesSection";
-import { TutorialsSection } from "@/components/home/TutorialsSection";
-import { ProblemsSection } from "@/components/home/ProblemsSection";
 import { PathsSection } from "@/components/home/PathsSection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CTASection } from "@/components/home/CTASection";
+import { StatsSection } from "@/components/home/StatsSection";
 
-export default function Home() {
+// This replaces your "Index" component
+export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="pt-16">
+      <main>
         <HeroSection />
+        <StatsSection />
         <FeaturesSection />
-        <TutorialsSection />
-        <ProblemsSection />
         <PathsSection />
-        <TestimonialsSection />
         <CTASection />
       </main>
       <Footer />

@@ -1,119 +1,96 @@
-import { BookOpen, Code2, GraduationCap, Compass, CheckCircle, Zap } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { BookOpen, Code2, GraduationCap, Briefcase, Brain, Users, Zap, GitBranch } from "lucide-react";
 
 const features = [
   {
     icon: BookOpen,
-    title: "Interactive Tutorials",
-    description: "Learn by doing with our hands-on tutorials. Write code directly in the browser and see results instantly.",
-    color: "primary",
-    highlights: ["Live code editor", "Instant feedback", "Step-by-step guides"],
+    title: "Interactive Documentation",
+    description: "Learn with live code examples and instant feedback. Modern tutorials that adapt to your pace.",
+    color: "from-blue-500 to-cyan-500",
   },
   {
     icon: Code2,
-    title: "Practice Problems",
-    description: "Sharpen your skills with 2000+ coding challenges. From easy to expert, tackle problems that matter.",
-    color: "accent",
-    highlights: ["Difficulty levels", "Multiple languages", "Real interview prep"],
+    title: "Coding Challenges",
+    description: "Master algorithms and data structures with 50,000+ practice problems across all difficulty levels.",
+    color: "from-purple-500 to-pink-500",
   },
   {
     icon: GraduationCap,
     title: "Video Courses",
-    description: "Deep dive into topics with expert-led video courses. Learn at your own pace, anywhere.",
-    color: "warning",
-    highlights: ["HD video lessons", "Downloadable resources", "Lifetime access"],
+    description: "Premium video content from industry experts. Learn at your own pace with downloadable resources.",
+    color: "from-orange-500 to-red-500",
   },
   {
-    icon: Compass,
+    icon: Briefcase,
     title: "Career Paths",
-    description: "Follow structured roadmaps to become job-ready. Earn certificates that employers recognize.",
-    color: "success",
-    highlights: ["Guided learning", "Portfolio projects", "Industry certs"],
+    description: "Structured learning journeys from beginner to job-ready. Earn verified, shareable certificates.",
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    icon: Brain,
+    title: "AI-Powered Learning",
+    description: "Personalized roadmaps and adaptive recommendations based on your skills and goals.",
+    color: "from-indigo-500 to-purple-500",
+  },
+  {
+    icon: GitBranch,
+    title: "Real Projects",
+    description: "Build portfolio-worthy projects with Git integration and real-world development workflows.",
+    color: "from-teal-500 to-cyan-500",
+  },
+  {
+    icon: Users,
+    title: "Community",
+    description: "Connect with peers, get code reviews, and collaborate in real-time pair programming sessions.",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    icon: Zap,
+    title: "Interview Prep",
+    description: "DSA practice, mock interviews, and timed assessments to ace your technical interviews.",
+    color: "from-amber-500 to-orange-500",
   },
 ];
 
-// In Next.js, we keep this object outside the component to prevent re-creation on every render
-const colorClasses = {
-  primary: {
-    bg: "bg-primary/10",
-    text: "text-primary",
-    border: "border-primary/20",
-    glow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.3)]",
-  },
-  accent: {
-    bg: "bg-accent/10",
-    text: "text-accent",
-    border: "border-accent/20",
-    glow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--accent)/0.3)]",
-  },
-  warning: {
-    bg: "bg-warning/10",
-    text: "text-warning",
-    border: "border-warning/20",
-    glow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--warning)/0.3)]",
-  },
-  success: {
-    bg: "bg-success/10",
-    text: "text-success",
-    border: "border-success/20",
-    glow: "group-hover:shadow-[0_0_30px_-5px_hsl(var(--success)/0.3)]",
-  },
-};
-
 export function FeaturesSection() {
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+      
+      <div className="container relative z-10 px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 mb-4">
-            <Zap className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Why CodeForge</span>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Everything you need to become a developer
+            Everything you need to become a{" "}
+            <span className="gradient-text">better developer</span>
           </h2>
-          <p className="text-muted-foreground">
-            From your first line of code to landing your dream job, we've got you covered.
+          <p className="text-lg text-muted-foreground">
+            A unified platform that combines the best of documentation, practice, 
+            courses, and career development.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
-            const colors = colorClasses[feature.color as keyof typeof colorClasses];
-            
-            return (
-              <div
-                key={feature.title}
-                className={cn(
-                  "group relative p-6 rounded-2xl border bg-card/50 transition-all duration-300 hover:bg-card",
-                  colors.border,
-                  colors.glow,
-                  // We add the animation class here
-                  "animate-fade-in"
-                )}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className={cn("w-12 h-12 rounded-xl flex items-center justify-center mb-4", colors.bg)}>
-                  <Icon className={cn("w-6 h-6", colors.text)} />
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground mb-4">{feature.description}</p>
-                
-                <ul className="space-y-2">
-                  {feature.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className={cn("w-4 h-4", colors.text)} />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <div
+              key={feature.title}
+              className="group relative p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift animate-fade-in-up"
+              style={{ animationDelay: `${index * 50}ms` }}
+            >
+              {/* Gradient glow on hover */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+              
+              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} mb-4`}>
+                <feature.icon className="w-6 h-6 text-white" />
               </div>
-            );
-          })}
+              
+              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
