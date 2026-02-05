@@ -1,0 +1,42 @@
+{
+    "topic":[
+        {
+            "id":1 ,
+            "roadmap_id":1 ,
+            "title":"Frontend Development",
+            "description":"Learn the essentials of building user interfaces and experiences.",
+            "slug":"frontend-development",
+            "is_active": true ,
+            "meta_title": "Frontend Development Roadmap",
+            "meta_description": "A comprehensive roadmap to becoming a proficient frontend developer.",
+            "created_by": 1,
+            "updated_by": 1
+
+        },
+        {
+            "id":2 ,
+            "title":"Backend Development",
+            "description":"Master server-side development and database management.",
+            "slug":"backend-development",
+            "is_active": true ,
+            "meta_title": "Backend Development Roadmap",
+            "meta_description": "A step-by-step guide to becoming a skilled backend developer.",
+            "created_by": 1,
+            "updated_by": 1
+
+        },
+
+        {
+            "id":3 ,
+            "title":"Fullstack Development",
+            "description":"Combine frontend and backend skills to build complete web applications.",
+            "slug":"fullstack-development",
+            "is_active": true ,
+            "meta_title": "Fullstack Development Roadmap",
+            "meta_description": "An all-encompassing roadmap to becoming a fullstack developer.",
+            "created_by": 1,
+            "updated_by": 1
+        }
+
+    ]
+}

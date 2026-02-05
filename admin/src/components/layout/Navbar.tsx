@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link"; // Changed from react-router-dom
-import { Menu, X, Code2, BookOpen, Trophy, GraduationCap, MapIcon } from "lucide-react";
+import { Menu, X, Code2, BookOpen, Trophy, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../ThemeToggle";
@@ -31,12 +31,6 @@ const navItems = [
     href: "/careers", 
     icon: Trophy,
     description: "Certification & job prep"
-  },
-   { 
-    label: "Roadmaps", 
-    href: "/roadmap", 
-    icon: MapIcon,
-    description: "Guides to navigate your learning journey"
   },
 ];
 
