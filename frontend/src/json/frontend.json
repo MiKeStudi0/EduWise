@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Internet & Web Basics",
+    "short_title": "Web Basics",
+    "slug": "internet-web-basics",
+    "description": "Understand how the internet and web work, including browsers, servers, HTTP, and DNS.",
+    "long_description": "Covers the foundational concepts of how data flows across the internet, how browsers communicate with servers, and how web pages are delivered and rendered.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Learn core internet concepts and how web communication works.",
+    "outcomes": "Ability to explain how a website request flows from browser to server and back.",
+    "seo": {
+      "meta_title": "Internet and Web Basics for Frontend Developers",
+      "meta_description": "Learn how the internet works, including HTTP, DNS, browsers, and web communication basics."
+    }
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "HTML (Core)",
+    "short_title": "HTML",
+    "slug": "html-core",
+    "description": "Learn the structure and semantics of web pages using modern HTML.",
+    "long_description": "Focuses on writing semantic, accessible, and SEO-friendly HTML to create well-structured web pages.",
+    "estimated_hours": 12,
+    "recommendation": "P",
+    "learning_objectives": "Understand semantic markup and proper document structure.",
+    "outcomes": "Ability to build accessible and well-structured HTML pages.",
+    "seo": {
+      "meta_title": "HTML Core for Frontend Development",
+      "meta_description": "Master semantic HTML, accessibility basics, forms, and SEO-friendly markup."
+    }
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "CSS (Core)",
+    "short_title": "CSS",
+    "slug": "css-core",
+    "description": "Learn how to style and layout web pages using modern CSS.",
+    "long_description": "Covers layout systems, responsive design, and modern CSS features for building visually consistent UIs.",
+    "estimated_hours": 16,
+    "recommendation": "P",
+    "learning_objectives": "Learn how to create responsive and flexible layouts.",
+    "outcomes": "Ability to design responsive and modern web layouts using CSS.",
+    "seo": {
+      "meta_title": "CSS Core for Modern Web Design",
+      "meta_description": "Learn CSS layouts, Flexbox, Grid, responsive design, and modern styling techniques."
+    }
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "JavaScript (Core)",
+    "short_title": "JavaScript",
+    "slug": "javascript-core",
+    "description": "Learn the fundamentals of JavaScript to build interactive web applications.",
+    "long_description": "Focuses on JavaScript basics, DOM manipulation, async programming, and API interactions.",
+    "estimated_hours": 20,
+    "recommendation": "P",
+    "learning_objectives": "Understand core JavaScript concepts and browser APIs.",
+    "outcomes": "Ability to create interactive and dynamic web experiences.",
+    "seo": {
+      "meta_title": "JavaScript Core for Frontend Developers",
+      "meta_description": "Learn JavaScript fundamentals, DOM, async programming, and API usage."
+    }
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Version Control",
+    "short_title": "Git",
+    "slug": "version-control-git",
+    "description": "Learn how to track and manage code changes using Git.",
+    "long_description": "Covers basic Git concepts and workflows for managing source code history.",
+    "estimated_hours": 6,
+    "recommendation": "P",
+    "learning_objectives": "Understand how to use Git for source control.",
+    "outcomes": "Ability to manage code versions and collaborate using Git.",
+    "seo": {
+      "meta_title": "Git Version Control Basics",
+      "meta_description": "Learn Git fundamentals for tracking changes and managing code repositories."
+    }
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "VCS Hosting",
+    "short_title": "GitHub",
+    "slug": "vcs-hosting-github",
+    "description": "Learn how to use Git hosting platforms to collaborate on projects.",
+    "long_description": "Focuses on GitHub workflows including issues, pull requests, and basic automation.",
+    "estimated_hours": 6,
+    "recommendation": "P",
+    "learning_objectives": "Learn how to collaborate using GitHub.",
+    "outcomes": "Ability to manage repositories, issues, and pull requests.",
+    "seo": {
+      "meta_title": "GitHub and VCS Hosting",
+      "meta_description": "Learn how to use GitHub for collaboration, issues, and pull requests."
+    }
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Code Editors & Dev Setup",
+    "short_title": "Dev Setup",
+    "slug": "code-editors-dev-setup",
+    "description": "Set up a productive development environment for frontend development.",
+    "long_description": "Covers editor configuration, extensions, and terminal basics for efficient development.",
+    "estimated_hours": 4,
+    "recommendation": "P",
+    "learning_objectives": "Learn to configure tools for efficient development.",
+    "outcomes": "Ability to work productively with modern code editors and terminals.",
+    "seo": {
+      "meta_title": "Frontend Development Setup",
+      "meta_description": "Learn how to set up VS Code, extensions, and terminal for frontend development."
+    }
+  },
+  {
+    "id": 8,
+    "roadmap_id": 1,
+    "title": "Package Managers",
+    "short_title": "Packages",
+    "slug": "package-managers",
+    "description": "Learn how to manage project dependencies using modern JavaScript package managers.",
+    "long_description": "Covers installing, updating, and managing dependencies using tools like npm, pnpm, and yarn.",
+    "estimated_hours": 6,
+    "recommendation": "P",
+    "learning_objectives": "Understand how to manage project dependencies efficiently.",
+    "outcomes": "Ability to install, update, and manage frontend project dependencies.",
+    "seo": {
+      "meta_title": "JavaScript Package Managers for Frontend",
+      "meta_description": "Learn npm, pnpm, and yarn to manage frontend project dependencies."
+    }
+  },
+  {
+    "id": 9,
+    "roadmap_id": 1,
+    "title": "Build Tools & Bundlers",
+    "short_title": "Build Tools",
+    "slug": "build-tools-bundlers",
+    "description": "Learn how to bundle and build modern frontend applications.",
+    "long_description": "Covers modern build tools for fast development and optimized production builds.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand how modern build tools work.",
+    "outcomes": "Ability to configure and use modern bundlers for frontend projects.",
+    "seo": {
+      "meta_title": "Frontend Build Tools and Bundlers",
+      "meta_description": "Learn Vite and modern bundlers to build and optimize frontend applications."
+    }
+  },
+  {
+    "id": 10,
+    "roadmap_id": 1,
+    "title": "Writing CSS (Modern)",
+    "short_title": "Modern CSS",
+    "slug": "writing-css-modern",
+    "description": "Learn modern approaches to writing and managing CSS in large applications.",
+    "long_description": "Covers utility-first CSS and scoped styling approaches for scalable frontend styling.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Learn modern CSS methodologies for scalable styling.",
+    "outcomes": "Ability to manage styles efficiently in modern frontend projects.",
+    "seo": {
+      "meta_title": "Modern CSS for Frontend Development",
+      "meta_description": "Learn Tailwind CSS and modern CSS approaches for scalable frontend styling."
+    }
+  },
+  {
+    "id": 11,
+    "roadmap_id": 1,
+    "title": "JavaScript Frameworks",
+    "short_title": "JS Frameworks",
+    "slug": "javascript-frameworks",
+    "description": "Learn modern JavaScript frameworks for building scalable user interfaces.",
+    "long_description": "Covers component-based frameworks used to build complex frontend applications.",
+    "estimated_hours": 25,
+    "recommendation": "P",
+    "learning_objectives": "Understand component-based UI development.",
+    "outcomes": "Ability to build scalable frontend applications using modern frameworks.",
+    "seo": {
+      "meta_title": "JavaScript Frameworks for Frontend",
+      "meta_description": "Learn React and other modern JavaScript frameworks for frontend development."
+    }
+  },
+  {
+    "id": 12,
+    "roadmap_id": 1,
+    "title": "Meta Frameworks (Production Apps)",
+    "short_title": "Meta Frameworks",
+    "slug": "meta-frameworks-production",
+    "description": "Learn production-grade frameworks for building full-featured frontend applications.",
+    "long_description": "Covers frameworks that add routing, SSR, and production optimizations on top of UI frameworks.",
+    "estimated_hours": 16,
+    "recommendation": "P",
+    "learning_objectives": "Understand production application architecture.",
+    "outcomes": "Ability to build production-ready frontend applications.",
+    "seo": {
+      "meta_title": "Meta Frameworks for Production Frontend Apps",
+      "meta_description": "Learn Next.js, Astro, and other meta frameworks for production frontend apps."
+    }
+  },
+  {
+    "id": 13,
+    "roadmap_id": 1,
+    "title": "State Management",
+    "short_title": "State",
+    "slug": "state-management",
+    "description": "Learn how to manage application state in modern frontend applications.",
+    "long_description": "Covers local and global state patterns for scalable frontend apps.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand state management patterns.",
+    "outcomes": "Ability to manage complex application state effectively.",
+    "seo": {
+      "meta_title": "State Management for Frontend Applications",
+      "meta_description": "Learn Context API, Zustand, and Redux Toolkit for state management."
+    }
+  },
+  {
+    "id": 14,
+    "roadmap_id": 1,
+    "title": "API & Data Handling",
+    "short_title": "APIs",
+    "slug": "api-data-handling",
+    "description": "Learn how to fetch and manage data from external APIs.",
+    "long_description": "Covers REST APIs, data fetching patterns, and basic GraphQL concepts.",
+    "estimated_hours": 12,
+    "recommendation": "P",
+    "learning_objectives": "Learn how to work with APIs and async data.",
+    "outcomes": "Ability to integrate frontend apps with backend APIs.",
+    "seo": {
+      "meta_title": "API and Data Handling in Frontend",
+      "meta_description": "Learn REST APIs, Axios, and data fetching patterns for frontend apps."
+    }
+  },
+  {
+    "id": 15,
+    "roadmap_id": 1,
+    "title": "Forms & Validation",
+    "short_title": "Forms",
+    "slug": "forms-validation",
+    "description": "Learn how to build and validate forms in modern frontend applications.",
+    "long_description": "Covers form handling and schema validation in modern UI frameworks.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand modern form handling techniques.",
+    "outcomes": "Ability to build robust and validated user input forms.",
+    "seo": {
+      "meta_title": "Forms and Validation in Frontend",
+      "meta_description": "Learn modern form handling and validation techniques."
+    }
+  },
+  {
+    "id": 16,
+    "roadmap_id": 1,
+    "title": "Testing",
+    "short_title": "Testing",
+    "slug": "frontend-testing",
+    "description": "Learn how to test frontend applications effectively.",
+    "long_description": "Covers unit, integration, and end-to-end testing for frontend apps.",
+    "estimated_hours": 12,
+    "recommendation": "P",
+    "learning_objectives": "Understand frontend testing strategies.",
+    "outcomes": "Ability to write and run automated frontend tests.",
+    "seo": {
+      "meta_title": "Frontend Testing Tools and Practices",
+      "meta_description": "Learn Vitest, Playwright, and modern frontend testing approaches."
+    }
+  },
+  {
+    "id": 17,
+    "roadmap_id": 1,
+    "title": "Linters & Formatters",
+    "short_title": "Code Quality",
+    "slug": "linters-formatters",
+    "description": "Learn how to maintain code quality and consistency.",
+    "long_description": "Covers linting and formatting tools to enforce coding standards.",
+    "estimated_hours": 6,
+    "recommendation": "P",
+    "learning_objectives": "Understand automated code quality tools.",
+    "outcomes": "Ability to maintain consistent and clean codebases.",
+    "seo": {
+      "meta_title": "Linters and Formatters for Frontend",
+      "meta_description": "Learn ESLint, Prettier, and code quality tools for frontend projects."
+    }
+  },
+  {
+    "id": 18,
+    "roadmap_id": 1,
+    "title": "Performance Optimization",
+    "short_title": "Performance",
+    "slug": "performance-optimization",
+    "description": "Learn how to optimize frontend applications for speed and user experience.",
+    "long_description": "Covers performance audits, loading strategies, and techniques to improve real-world performance metrics.",
+    "estimated_hours": 12,
+    "recommendation": "P",
+    "learning_objectives": "Understand how to measure and improve frontend performance.",
+    "outcomes": "Ability to identify and fix performance bottlenecks.",
+    "seo": {
+      "meta_title": "Frontend Performance Optimization",
+      "meta_description": "Learn Lighthouse, code splitting, and web vitals to optimize frontend performance."
+    }
+  },
+  {
+    "id": 19,
+    "roadmap_id": 1,
+    "title": "Web Security",
+    "short_title": "Security",
+    "slug": "web-security",
+    "description": "Learn how to secure frontend applications and protect user data.",
+    "long_description": "Covers common frontend security concepts and web vulnerabilities.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand frontend security risks and protections.",
+    "outcomes": "Ability to apply basic security best practices in frontend apps.",
+    "seo": {
+      "meta_title": "Web Security for Frontend Developers",
+      "meta_description": "Learn HTTPS, CORS, and common web security risks for frontend applications."
+    }
+  },
+  {
+    "id": 20,
+    "roadmap_id": 1,
+    "title": "Authentication & Auth Flows",
+    "short_title": "Authentication",
+    "slug": "authentication-auth-flows",
+    "description": "Learn how authentication works in modern web applications.",
+    "long_description": "Covers authentication concepts and integrating third-party auth providers.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand authentication and authorization flows.",
+    "outcomes": "Ability to integrate secure login and auth flows.",
+    "seo": {
+      "meta_title": "Authentication and Authorization in Frontend",
+      "meta_description": "Learn JWT, OAuth, and auth providers for frontend authentication."
+    }
+  },
+  {
+    "id": 21,
+    "roadmap_id": 1,
+    "title": "Deployment & Hosting",
+    "short_title": "Deployment",
+    "slug": "deployment-hosting",
+    "description": "Learn how to deploy and host frontend applications in production.",
+    "long_description": "Covers modern deployment platforms and hosting workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand frontend deployment pipelines.",
+    "outcomes": "Ability to deploy and manage frontend applications in production.",
+    "seo": {
+      "meta_title": "Frontend Deployment and Hosting",
+      "meta_description": "Learn Vercel, Netlify, and modern frontend hosting platforms."
+    }
+  },
+  {
+    "id": 22,
+    "roadmap_id": 1,
+    "title": "Monitoring & Error Tracking",
+    "short_title": "Monitoring",
+    "slug": "monitoring-error-tracking",
+    "description": "Learn how to monitor frontend apps and track runtime errors.",
+    "long_description": "Covers tools and techniques for observing application health in production.",
+    "estimated_hours": 6,
+    "recommendation": "P",
+    "learning_objectives": "Understand production monitoring concepts.",
+    "outcomes": "Ability to track and debug production frontend issues.",
+    "seo": {
+      "meta_title": "Frontend Monitoring and Error Tracking",
+      "meta_description": "Learn Sentry and monitoring tools for frontend applications."
+    }
+  },
+  {
+    "id": 23,
+    "roadmap_id": 1,
+    "title": "Web APIs & Advanced Browser APIs",
+    "short_title": "Web APIs",
+    "slug": "web-apis-advanced-browser-apis",
+    "description": "Learn advanced browser capabilities for modern web applications.",
+    "long_description": "Covers storage, background processing, and offline capabilities.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand advanced browser APIs.",
+    "outcomes": "Ability to use advanced browser features in web apps.",
+    "seo": {
+      "meta_title": "Advanced Browser APIs for Frontend",
+      "meta_description": "Learn Service Workers, Web Workers, and browser storage APIs."
+    }
+  },
+  {
+    "id": 24,
+    "roadmap_id": 1,
+    "title": "Accessibility (Advanced)",
+    "short_title": "Accessibility",
+    "slug": "accessibility-advanced",
+    "description": "Learn advanced accessibility techniques for inclusive web applications.",
+    "long_description": "Covers standards and advanced accessibility testing techniques.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand accessibility standards and testing.",
+    "outcomes": "Ability to build accessible and inclusive web interfaces.",
+    "seo": {
+      "meta_title": "Advanced Accessibility for Frontend",
+      "meta_description": "Learn WCAG, ARIA, and accessibility testing for frontend apps."
+    }
+  },
+  {
+    "id": 25,
+    "roadmap_id": 1,
+    "title": "Design Systems",
+    "short_title": "Design Systems",
+    "slug": "design-systems",
+    "description": "Learn how to build and maintain scalable design systems.",
+    "long_description": "Covers component libraries, theming, and design consistency practices.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand design system architecture.",
+    "outcomes": "Ability to create and maintain reusable UI components.",
+    "seo": {
+      "meta_title": "Design Systems for Frontend",
+      "meta_description": "Learn component libraries and Storybook for scalable design systems."
+    }
+  },
+  {
+    "id": 26,
+    "roadmap_id": 1,
+    "title": "Mobile & Desktop (Optional Career Boost)",
+    "short_title": "Mobile & Desktop",
+    "slug": "mobile-desktop-optional",
+    "description": "Learn how to extend frontend skills to mobile and desktop platforms.",
+    "long_description": "Covers cross-platform technologies for building mobile and desktop apps.",
+    "estimated_hours": 14,
+    "recommendation": "P",
+    "learning_objectives": "Understand cross-platform frontend development.",
+    "outcomes": "Ability to build apps beyond the browser.",
+    "seo": {
+      "meta_title": "Mobile and Desktop Frontend Development",
+      "meta_description": "Learn React Native, Electron, and cross-platform frontend development."
+    }
+  },
+  {
+    "id": 27,
+    "roadmap_id": 1,
+    "title": "Engineering Practices",
+    "short_title": "Engineering",
+    "slug": "engineering-practices",
+    "description": "Learn professional engineering workflows and best practices.",
+    "long_description": "Covers collaboration, architecture, and scalable project practices.",
+    "estimated_hours": 10,
+    "recommendation": "P",
+    "learning_objectives": "Understand professional frontend engineering practices.",
+    "outcomes": "Ability to work effectively in professional engineering teams.",
+    "seo": {
+      "meta_title": "Frontend Engineering Best Practices",
+      "meta_description": "Learn code reviews, PR practices, and scalable frontend architecture."
+    }
+  },
+  {
+    "id": 28,
+    "roadmap_id": 1,
+    "title": "Portfolio & Career",
+    "short_title": "Career",
+    "slug": "portfolio-career",
+    "description": "Learn how to build a strong frontend portfolio and prepare for interviews.",
+    "long_description": "Covers personal branding, real-world projects, and frontend interview preparation.",
+    "estimated_hours": 12,
+    "recommendation": "P",
+    "learning_objectives": "Understand how to present skills professionally.",
+    "outcomes": "Ability to build a strong portfolio and prepare for frontend roles.",
+    "seo": {
+      "meta_title": "Frontend Portfolio and Career Growth",
+      "meta_description": "Learn how to build a frontend portfolio and prepare for frontend interviews."
+    }
+  }
+]
+
