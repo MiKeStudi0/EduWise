@@ -4,7 +4,6 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { 
   ReactFlow, 
   Background, 
-  Controls, 
   useNodesState, 
   useEdgesState,
   Handle, 
@@ -23,33 +22,118 @@ import {
   Target, BookOpen, ChevronRight, X, Globe
 } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
+
+// Assuming these exist in your project based on imports
 import { TopicItemNode } from "@/components/roadmap/TopicItemNode";
+import { OptionItemNode } from "@/components/roadmap/OptionItemNode";
+import roadmapDataSource from "@/json/frontend.json";
 
 // --- TYPE DEFINITIONS ---
 
-interface RawRoadmapNode {
-  id: string;
+type RoadmapChildType = 'subtopic' | 'module' | 'topic' | 'option';
+
+// 1. Updated Child Data Structure with 'side'
+interface RoadmapChild {
+  id: string | number;
   label: string;
-  type?: 'default' | 'group'; 
-  status: 'available' | 'mastered';
-  iconSlug?: string; 
-  description?: string;
-  subType?: 'topic' | 'option'; 
-  isRecommended?: boolean;      
+  type: RoadmapChildType; 
+  status?: 'available' | 'mastered' | 'locked';
+  recommendation?: string;
+  icon_slug?: string;
+  is_recommended?: boolean;
+  // NEW: Explicit control over placement
+  side?: 'left' | 'right'; 
+  children?: RoadmapChild[];
 }
 
+interface RoadmapStep {
+  id: number;
+  roadmap_id: number;
+  title: string;
+  short_title: string; 
+  slug: string;        
+  description: string;
+  long_description: string;
+  estimated_hours: number;
+  recommendation: string;
+  learning_objectives: string;
+  outcomes: string;
+  seo: {
+    meta_title: string;
+    meta_description: string;
+  };
+  ui_config?: {
+    topic_layout: 'grouped' | 'loose'; 
+    icon_slug?: string;
+    node_type?: 'default' | 'group';
+  };
+  children: RoadmapChild[]; 
+}
+
+const isOptionType = (type?: RoadmapChildType) => type === 'option';
+const resolveSide = (child: RoadmapChild, fallbackSide?: 'left' | 'right') =>
+  child.side ?? fallbackSide ?? (isOptionType(child.type) ? 'right' : 'left');
+
+type HierarchyNode = Omit<RoadmapChild, 'children' | 'side'> & {
+  side: 'left' | 'right';
+  children?: HierarchyNode[];
+};
+
+const normalizeHierarchy = (children: RoadmapChild[], parentSide?: 'left' | 'right'): HierarchyNode[] => {
+  return children.map((child) => {
+    const resolvedSide = resolveSide(child, parentSide);
+    const { children: rawChildren, ...rest } = child;
+    return {
+      ...rest,
+      side: resolvedSide,
+      children: rawChildren ? normalizeHierarchy(rawChildren, resolvedSide) : undefined
+    } as HierarchyNode;
+  });
+};
+
+const countNodes = (nodes: HierarchyNode[]): number =>
+  nodes.reduce((sum, node) => sum + 1 + countNodes(node.children ?? []), 0);
+
+const flattenHierarchy = (nodes: HierarchyNode[]): HierarchyNode[] => {
+  return nodes.reduce((acc, node) => {
+    acc.push(node);
+    if (node.children) {
+      acc.push(...flattenHierarchy(node.children));
+    }
+    return acc;
+  }, [] as HierarchyNode[]);
+};
+
+const priorityFromRecommendation = (recommendation?: string, fallback?: number) => {
+  if (recommendation === 'P') return 1;
+  if (recommendation === 'A') return 2;
+  return fallback ?? 0;
+};
+
+const resolveRecommended = (child: { is_recommended?: boolean }) => Boolean(child.is_recommended);
+
+// 2. React Flow Node Data Types
 type NodeData = {
+  id: string;
+  phaseId: string | number;
+  topicId?: string | number;
+  subtopicId?: string | number;
+  priority?: number;
+  depth?: number;
   label: string;
   status: 'available' | 'mastered';
   type?: 'default' | 'group'; 
   iconSlug?: string;
   description?: string;
   isActive?: boolean;
-  childrenItems?: RawRoadmapNode[]; 
+  childrenItems?: any[]; 
   onNodeClick?: (id: string, data: NodeData) => void;
+  isRecommended?: boolean;
+  // NEW: Pass side to node to determine handle position
+  side?: 'left' | 'right'; 
 };
 
-type AppNode = Node<NodeData, 'main' | 'topicGroup' | 'optionGroup' | 'topicItem'>;
+type AppNode = Node<NodeData, 'main' | 'topicGroup' | 'optionGroup' | 'topicItem' | 'optionItem'>;
 
 // --- 1. MAIN BACKBONE NODE ---
 const MainNode = ({ data, id }: NodeProps<AppNode>) => {
@@ -62,20 +146,19 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
       <Handle type="target" position={Position.Top} className="!bg-transparent !border-none" />
       
       <motion.button
-        whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => onNodeClick && onNodeClick(id, data)}
         className={`
           relative z-10 flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-300 w-44 shadow-sm hover:shadow-md
           border cursor-grab active:cursor-grabbing
           ${isMastered 
-            ? 'bg-yellow-400 border-yellow-500 text-black shadow-yellow-500/20' 
+            ? 'bg-blue-500 border-blue-600 text-white shadow-blue-500/20' 
             : isActive 
-            ? 'bg-indigo-600 border-indigo-600 text-white scale-110 ring-4 ring-indigo-600/20' 
-            : 'bg-white dark:bg-card border-slate-200 dark:border-border text-slate-700 dark:text-card-foreground hover:border-slate-300 dark:hover:bg-accent hover:text-slate-900 dark:hover:text-accent-foreground'}
+            ? 'bg-blue-600 border-blue-600 text-white scale-110 ring-4 ring-blue-600/20' 
+            : 'bg-gradient-to-br from-blue-500 to-blue-700 border-blue-600 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40'}
         `}
       >
-        <div className={`p-1 rounded-md ${isMastered ? 'bg-black/10' : 'bg-muted'}`}>
+        <div className="p-1 rounded-md bg-white/20">
           {iconSlug ? (
             <img src={`https://cdn.simpleicons.org/${iconSlug}`} alt="" className="w-4 h-4" />
           ) : isGroup ? (
@@ -94,19 +177,51 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
   );
 };
 
-// --- 2. TOPIC CONTAINER NODE (Left) ---
+// --- 2. TOPIC CONTAINER NODE ---
+// UPDATED: Dynamically switches Handle based on 'side' prop
 const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
-    const { childrenItems } = data;
+    const { childrenItems, side, onNodeClick, label } = data;
+    
+    // If this node is on the Right side, the connector comes from the Left.
+    // If on the Left side (default), connector comes from the Right.
+    const handlePosition = side === 'right' ? Position.Left : Position.Right;
+    const handleId = side === 'right' ? 'left' : 'right';
+    const itemSourcePosition = side === 'right' ? Position.Right : Position.Left;
+
     return (
         <div className="relative group cursor-default">
-            <Handle type="target" position={Position.Right} className="!bg-transparent !border-none" />
+            <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
             <div className="w-[200px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-200 dark:border-border rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50">
                 <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> Topics
+                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> {label}
                 </h4>
                 <div className="flex flex-col gap-2">
-                    {childrenItems?.map((child) => (
-                        <div key={child.id} className="h-8 px-2 rounded-md font-bold text-[11px] text-black shadow-sm border border-black/5 flex items-center justify-center bg-yellow-400 hover:bg-yellow-300 transition-colors">
+                    {childrenItems?.map((child: any) => (
+                        <div
+                            key={child.id}
+                            className={`relative h-8 px-2 rounded-md font-bold text-[11px] shadow-sm border border-black/5 flex items-center justify-center transition-colors group/item ${
+                                child.isRecommended
+                                    ? 'bg-green-500 text-white ring-2 ring-green-500/20'
+                                    : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                            }`}
+                        >
+                            {child.isRecommended && (
+                                <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none">
+                                    <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
+                                        Recommended
+                                        <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[4px] border-r-slate-900"></div>
+                                    </div>
+                                </div>
+                            )}
+                            {child.hasChildren && (
+                                <Handle 
+                                    type="source" 
+                                    position={itemSourcePosition} 
+                                    id={child.id}
+                                    className="!bg-transparent !border-none w-2 h-2"
+                                    style={{ [side === 'right' ? 'right' : 'left']: '-10px' }}
+                                />
+                            )}
                             <span className="truncate w-full text-center">{child.label}</span>
                         </div>
                     ))}
@@ -116,28 +231,46 @@ const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
     );
 };
 
-// --- 3. OPTION CONTAINER NODE (Right) ---
+// --- 3. OPTION CONTAINER NODE ---
+// UPDATED: Dynamically switches Handle based on 'side' prop
 const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
-    const { childrenItems } = data;
+    const { childrenItems, side, onNodeClick, label } = data;
+    
+    // Default options are on Right (Handle Left). If moved to Left, Handle is Right.
+    const handlePosition = side === 'left' ? Position.Right : Position.Left;
+    const handleId = side === 'left' ? 'right' : 'left';
+    const itemSourcePosition = side === 'left' ? Position.Left : Position.Right;
+
     return (
         <div className="relative group cursor-default">
-            <Handle type="target" position={Position.Left} className="!bg-transparent !border-none" />
+            <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
             <div className="w-[200px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-200 dark:border-border rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50">
                 <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> Options
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> {label}
                 </h4>
                 <div className="flex flex-col gap-2">
-                {childrenItems?.map((child) => (
+                {childrenItems?.map((child: any) => (
                     <div key={child.id} className="relative w-full group">
                     {child.isRecommended && (
-                        <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none">
+                        // Recommended Tooltip
+                        <div className="absolute top-1/2 -translate-y-1/2 z-[60] pointer-events-none left-full ml-2">
                         <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
                             Recommended
-                            <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[4px] border-r-slate-900"></div>
+                            {/* Little triangle pointer logic */}
+                             <div className="absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent right-full border-r-[4px] border-r-slate-900"></div>
                         </div>
                         </div>
                     )}
-                    <div className={`w-full h-8 px-3 rounded-md font-bold text-[11px] transition-all border border-black/5 flex items-center justify-center gap-2 shadow-sm ${child.isRecommended ? 'bg-green-500 text-white ring-2 ring-green-500/20' : 'bg-yellow-400 text-black hover:bg-yellow-300'}`}>
+                    <div className={`relative w-full h-8 px-3 rounded-md font-bold text-[11px] transition-all border border-black/5 flex items-center justify-center gap-2 shadow-sm ${child.isRecommended ? 'bg-green-500 text-white ring-2 ring-green-500/20' : 'bg-yellow-400 text-black hover:bg-yellow-300'}`}>
+                        {child.hasChildren && (
+                            <Handle 
+                                type="source" 
+                                position={itemSourcePosition} 
+                                id={child.id}
+                                className="!bg-transparent !border-none w-2 h-2"
+                                style={{ [side === 'left' ? 'left' : 'right']: '-10px' }}
+                            />
+                        )}
                         {child.iconSlug && <img src={`https://cdn.simpleicons.org/${child.iconSlug}`} alt="" className="w-3.5 h-3.5" />}
                         <span className="truncate">{child.label}</span>
                     </div>
@@ -152,38 +285,18 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
 export default function FrontendRoadmapPage() {
   const [activeNodeData, setActiveNodeData] = useState<NodeData | null>(null);
 
-  const rawBackbone: RawRoadmapNode[] = useMemo(() => [
-    { id: 'internet', label: 'Internet', x: 0, y: 0, type: 'group', status: 'mastered', iconSlug: 'internetexplorer', description: 'How the web works. DNS, HTTP, Browsers.' },
-    { id: 'html', label: 'HTML', x: 0, y: 0, status: 'mastered', iconSlug: 'html5', description: 'Structure of the web.' },
-    { id: 'css', label: 'CSS', x: 0, y: 0, status: 'mastered', iconSlug: 'css3', description: 'Styling the web.' },
-    { id: 'javascript', label: 'JavaScript', x: 0, y: 0, status: 'available', iconSlug: 'javascript', description: 'Programming the web.' },
-    { id: 'frameworks', label: 'Frameworks', x: 0, y: 0, type: 'group', status: 'available', description: 'Modern UI libraries.' },
-  ], []);
+  // --- CONFIGURATION ---
+  const roadmapData: RoadmapStep[] = useMemo(
+    () => roadmapDataSource as RoadmapStep[],
+    []
+  );
 
-  const groupChildren: Record<string, RawRoadmapNode[]> = useMemo(() => ({
-    'internet': [
-      { id: 'how-internet-works', label: 'How it works', status: 'mastered', subType: 'topic' } as any,
-      { id: 'http', label: 'HTTP', status: 'mastered', subType: 'topic' },
-      { id: 'dns', label: 'DNS', status: 'mastered', subType: 'topic' },
-      { id: 'chrome', label: 'Chrome', status: 'available', iconSlug: 'googlechrome', subType: 'option', isRecommended: true },
-      { id: 'firefox', label: 'Firefox', status: 'available', iconSlug: 'firefox', subType: 'option' },
-    ],
-    'frameworks': [
-      { id: 'components', label: 'Components', status: 'available', subType: 'topic' },
-      { id: 'state', label: 'State', status: 'available', subType: 'topic' },
-      { id: 'props', label: 'Props', status: 'available', subType: 'topic' },
-      { id: 'hooks', label: 'Hooks', status: 'available', subType: 'topic' },
-      { id: 'react', label: 'React', status: 'available', iconSlug: 'react', subType: 'option', isRecommended: true },
-      { id: 'vue', label: 'Vue.js', status: 'available', iconSlug: 'vuedotjs', subType: 'option' },
-      { id: 'angular', label: 'Angular', status: 'available', iconSlug: 'angular', subType: 'option' },
-      { id: 'svelte', label: 'Svelte', status: 'available', iconSlug: 'svelte', subType: 'option' },
-    ]
-  }), []);
 
   const nodeTypes = useMemo(() => ({ 
       main: MainNode,
       topicGroup: TopicGroupNode,
       topicItem: TopicItemNode,
+      optionItem: OptionItemNode,
       optionGroup: OptionGroupNode
   }), []);
 
@@ -196,114 +309,216 @@ export default function FrontendRoadmapPage() {
       })));
   }, []);
 
-  // --- DYNAMIC HEIGHT LAYOUT ---
+  // --- DYNAMIC HEIGHT LAYOUT ALGORITHM (UPDATED) ---
   const { initialNodes, initialEdges, totalCanvasHeight } = useMemo(() => {
     const nodes: AppNode[] = [];
     const edges: Edge[] = [];
     
-    // We start Y at 50 to give some top padding
     let currentY = 50; 
     const MAIN_X = 0;
     const CONTAINER_OFFSET_X = 280; 
+    const DEPTH_X_GAP = 220;
     const DEFAULT_GAP = 160;
     const TOPIC_ITEM_GAP = 40;
 
-    rawBackbone.forEach((mainNode, index) => {
-        const children = groupChildren[mainNode.id] || [];
-        const topics = children.filter(c => c.subType === 'topic');
-        const options = children.filter(c => c.subType === 'option');
+    roadmapData.forEach((step, index) => {
+        // 1. FILTER: Normalize hierarchy, then split into Left/Right roots
+        const hierarchy = normalizeHierarchy(step.children);
+        const leftItems = hierarchy.filter(c => c.side === 'left');
+        const rightItems = hierarchy.filter(c => c.side === 'right');
         
-        const maxItems = Math.max(topics.length, options.length);
-        const containerHeight = maxItems > 0 ? (maxItems * 40) + 80 : 0;
+        // Check if loose layout is explicitly set
+        // Note: We removed '|| hasNesting' because the user wants container style even for nested items
+        const isLoose = step.ui_config?.topic_layout === 'loose';
+        
+        const leftCount = countNodes(leftItems);
+        const rightCount = countNodes(rightItems);
+        const maxItems = Math.max(leftCount, rightCount);
+        const containerHeight = maxItems > 0 ? (maxItems * TOPIC_ITEM_GAP) + 40 : 0;
         const rowHeight = Math.max(containerHeight, DEFAULT_GAP);
 
-        // 1. MAIN NODE
+        // 2. MAIN NODE
         nodes.push({
-            id: mainNode.id,
+            id: step.slug,
             type: 'main',
             position: { x: MAIN_X, y: currentY },
-            data: { ...mainNode, onNodeClick: handleNodeClick, isActive: false }
+            data: { 
+              id: String(step.id),
+              phaseId: step.id,
+              priority: index + 1,
+              depth: 0,
+              label: step.short_title, 
+              status: 'available', 
+              iconSlug: step.ui_config?.icon_slug,
+              type: step.ui_config?.node_type || 'default',
+              description: step.description,
+              onNodeClick: handleNodeClick, 
+              isActive: false 
+            }
         });
 
-        // 2. TOPIC NODES (Left)
-        if (topics.length > 0) {
-            const useStandaloneTopics = mainNode.id === 'internet';
+        const layoutSideRecursive = (
+          items: HierarchyNode[],
+          side: 'left' | 'right',
+          startY: number
+        ) => {
+          let cursorY = startY;
+          const sign = side === 'left' ? -1 : 1;
 
-            if (useStandaloneTopics) {
-                const startY = currentY - ((topics.length - 1) * TOPIC_ITEM_GAP) / 2;
+          const walk = (
+            item: HierarchyNode,
+            depth: number,
+            parentNodeId: string,
+            topicId?: string | number,
+            subtopicId?: string | number,
+            order?: number
+          ) => {
+            const nodeId = `${step.slug}-${side}-${depth}-${item.id}`;
+            const isOption = isOptionType(item.type);
+            const itemStatus = item.status ?? 'available';
+            const nextTopicId = depth === 1 ? item.id : topicId;
+            const nextSubtopicId = depth === 2 ? item.id : subtopicId;
 
-                topics.forEach((topic, topicIndex) => {
-                    const topicNodeId = `${mainNode.id}-topic-${topic.id}`;
-                    nodes.push({
-                        id: topicNodeId,
-                        type: 'topicItem',
-                        position: { 
-                            x: MAIN_X - CONTAINER_OFFSET_X, 
-                            y: startY + (topicIndex * TOPIC_ITEM_GAP) 
-                        },
-                        data: { label: topic.label, status: topic.status }
-                    });
+            nodes.push({
+              id: nodeId,
+              type: isOption ? 'optionItem' : 'topicItem',
+              position: {
+                x: MAIN_X + sign * (CONTAINER_OFFSET_X + (depth - 1) * DEPTH_X_GAP),
+                y: cursorY
+              },
+              data: {
+                id: String(item.id),
+                phaseId: step.id,
+                topicId: nextTopicId,
+                subtopicId: nextSubtopicId,
+                priority: priorityFromRecommendation(item.recommendation, order),
+                depth,
+                label: item.label,
+                status: itemStatus as any,
+                iconSlug: item.icon_slug,
+                isRecommended: resolveRecommended(item),
+                side
+              }
+            });
 
-                    edges.push({
-                        id: `e-${mainNode.id}-${topicNodeId}`,
-                        source: mainNode.id,
-                        target: topicNodeId,
-                        sourceHandle: 'left',
-                        type: 'smoothstep',
-                        style: { stroke: '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
-                    });
-                });
-            } else {
+            edges.push({
+              id: `e-${parentNodeId}-${nodeId}`,
+              source: parentNodeId,
+              target: nodeId,
+              sourceHandle: side,
+              targetHandle: side === 'left' ? 'right' : 'left',
+              type: 'smoothstep',
+              style: { stroke: isOption ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
+            });
+
+            cursorY += TOPIC_ITEM_GAP;
+
+            item.children?.forEach((child, childIndex) => {
+              walk(child, depth + 1, nodeId, nextTopicId, nextSubtopicId, childIndex + 1);
+            });
+          };
+
+          items.forEach((item, index) => {
+            walk(item, 1, step.slug, undefined, undefined, index + 1);
+          });
+        };
+
+        if (isLoose) {
+            if (leftCount > 0) {
+              const startY = currentY - ((leftCount - 1) * TOPIC_ITEM_GAP) / 2;
+              layoutSideRecursive(leftItems, 'left', startY);
+            }
+
+            if (rightCount > 0) {
+              const startY = currentY - ((rightCount - 1) * TOPIC_ITEM_GAP) / 2;
+              layoutSideRecursive(rightItems, 'right', startY);
+            }
+        } else {
+            // GROUPED LAYOUT (Recursive Containers)
+            
+            const layoutGroupRecursive = (
+                items: HierarchyNode[],
+                side: 'left' | 'right',
+                baseX: number,
+                baseY: number,
+                parentId: string,
+                parentHandleId: string | null
+            ): number => {
+                if (items.length === 0) return 0;
+
+                const groupId = `${step.slug}-group-${parentId}-${items[0].id}`;
+                const isOptionGroup = items.length > 0 && items.every(i => isOptionType(i.type));
+                const groupType = isOptionGroup ? 'optionGroup' : 'topicGroup';
+                const groupHeight = (items.length * 40) + 50;
+
                 nodes.push({
-                    id: `${mainNode.id}-topics`,
-                    type: 'topicGroup',
-                    position: { 
-                        x: MAIN_X - CONTAINER_OFFSET_X, 
-                        y: currentY - ((topics.length * 40)/2) + 20 
-                    },
-                    data: { label: 'Topics', status: 'available', childrenItems: topics }
+                    id: groupId,
+                    type: groupType,
+                    position: { x: baseX, y: baseY },
+                    data: {
+                        id: groupId,
+                        phaseId: step.id,
+                        label: isOptionGroup ? 'Options' : 'Topics',
+                        status: 'available',
+                        side: side,
+                        childrenItems: items.map(t => ({
+                            ...t,
+                            id: String(t.id),
+                            iconSlug: t.icon_slug,
+                            isRecommended: resolveRecommended(t),
+                            hasChildren: t.children && t.children.length > 0
+                        }))
+                    }
                 });
 
+                // Edge from Parent
                 edges.push({
-                    id: `e-${mainNode.id}-topics`,
-                    source: mainNode.id,
-                    target: `${mainNode.id}-topics`,
-                    sourceHandle: 'left',
+                    id: `e-${parentId}-${groupId}`,
+                    source: parentId,
+                    target: groupId,
+                    sourceHandle: parentHandleId || side, // if null, use side (main node)
+                    targetHandle: side === 'left' ? 'right' : 'left',
                     type: 'smoothstep',
-                    style: { stroke: '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
+                    style: { stroke: isOptionGroup ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
                 });
+
+                // Process Children Groups
+                let currentChildY = baseY;
+                let maxChildHeight = 0;
+
+                items.forEach((item) => {
+                    if (item.children && item.children.length > 0) {
+                        const offset = side === 'left' ? -250 : 250;
+                        const childHeight = layoutGroupRecursive(
+                            item.children,
+                            side,
+                            baseX + offset,
+                            currentChildY,
+                            groupId,
+                            String(item.id)
+                        );
+                        currentChildY += Math.max(childHeight, 40) + 20;
+                        maxChildHeight += Math.max(childHeight, 40) + 20;
+                    }
+                });
+
+                return Math.max(groupHeight, maxChildHeight);
+            };
+
+            if (leftCount > 0) {
+                layoutGroupRecursive(leftItems, 'left', MAIN_X - CONTAINER_OFFSET_X, currentY, step.slug, null);
+            }
+            if (rightCount > 0) {
+                layoutGroupRecursive(rightItems, 'right', MAIN_X + CONTAINER_OFFSET_X, currentY, step.slug, null);
             }
         }
 
-        // 3. OPTION CONTAINER (Right)
-        if (options.length > 0) {
-            nodes.push({
-                id: `${mainNode.id}-options`,
-                type: 'optionGroup',
-                position: { 
-                    x: MAIN_X + CONTAINER_OFFSET_X, 
-                    y: currentY - ((options.length * 40)/2) + 20 
-                },
-                data: { label: 'Options', status: 'available', childrenItems: options }
-            });
-
-            edges.push({
-                id: `e-${mainNode.id}-options`,
-                source: mainNode.id,
-                target: `${mainNode.id}-options`,
-                sourceHandle: 'right',
-                type: 'smoothstep',
-                style: { stroke: '#22c55e', strokeWidth: 2, strokeDasharray: '4, 4' },
-            });
-        }
-
-        // 4. CONNECTOR
+        // 5. CONNECTOR (Vertical Line)
         if (index > 0) {
-            const prevId = rawBackbone[index - 1].id;
+            const prevId = roadmapData[index - 1].slug;
             edges.push({
-                id: `e-${prevId}-${mainNode.id}`,
-                source: prevId,
-                target: mainNode.id,
+                id: `e-${prevId}-${step.slug}`,
+                source: prevId, target: step.slug,
                 sourceHandle: 'bottom',
                 type: 'smoothstep',
                 style: { stroke: '#94a3b8', strokeWidth: 2, strokeDasharray: '5, 5' },
@@ -314,11 +529,10 @@ export default function FrontendRoadmapPage() {
         currentY += rowHeight;
     });
 
-    // Add extra padding at the bottom for the last node
     const totalCanvasHeight = currentY + 100;
 
     return { initialNodes: nodes, initialEdges: edges, totalCanvasHeight };
-  }, [rawBackbone, groupChildren, handleNodeClick]);
+  }, [roadmapData, handleNodeClick]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState<AppNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -327,9 +541,6 @@ export default function FrontendRoadmapPage() {
     <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-background text-foreground">
       <Navbar />
       
-      {/* 1. 'flex-grow' ensures this section takes up available space 
-          2. We removed fixed height (h-screen) so it can grow naturally 
-      */}
       <main className="flex-grow pt-28 pb-0 z-10 relative flex flex-col">
         <section className="text-center mb-8 px-4 flex-shrink-0">
            <motion.h1 
@@ -343,12 +554,8 @@ export default function FrontendRoadmapPage() {
            </p>
         </section>
 
-        {/* DYNAMIC HEIGHT WRAPPER 
-            We apply totalCanvasHeight here. This forces the div to be exactly as tall
-            as the chart, pushing the footer down naturally.
-        */}
         <div 
-            className="w-full relative border-t border-slate-200 dark:border-border bg-slate-50/50 dark:bg-background/50 backdrop-blur-sm"
+            className="w-full relative border-t border-border bg-background backdrop-blur-sm"
             style={{ height: `${totalCanvasHeight}px` }}
         >
             <ReactFlow<AppNode>
@@ -358,30 +565,24 @@ export default function FrontendRoadmapPage() {
                 onEdgesChange={onEdgesChange}
                 nodeTypes={nodeTypes}
                 fitView
-                // --- LOCK VIEWPORT ---
-                panOnDrag={false}        // Disable dragging the whole canvas
-                zoomOnScroll={false}     // Disable zooming with scroll
+                panOnDrag={false}        
+                zoomOnScroll={false}     
                 zoomOnPinch={false}
                 zoomOnDoubleClick={false}
-                panOnScroll={false}      // Allow normal browser scrolling
-                preventScrolling={false} // Important: Lets the browser window scroll
-                
-                // --- ENABLE NODE INTERACTION ---
-                nodesDraggable={true}    // You can still drag individual nodes
+                panOnScroll={false}      
+                preventScrolling={false} 
+                nodesDraggable={true}    
                 nodesConnectable={false}
-                
-                minZoom={1} // Lock Zoom to 1 so it matches pixel height perfectly
+                minZoom={1} 
                 maxZoom={1}
                 attributionPosition="bottom-right"
             >
                 <Background 
-                  color="#94a3b8" 
-                  gap={20} 
+                  color="hsl(var(--primary) / 0.06)" 
+                  gap={50} 
                   size={1} 
-                  variant={BackgroundVariant.Dots} 
-                  className="opacity-20" 
+                  variant={BackgroundVariant.Lines} 
                 />
-                {/* Removed Controls because zooming/panning is disabled */}
             </ReactFlow>
         </div>
 
@@ -429,7 +630,6 @@ export default function FrontendRoadmapPage() {
         </AnimatePresence>
       </main>
       
-      {/* Footer will now naturally appear after the specific chart height */}
       <Footer />
     </div>
   );
