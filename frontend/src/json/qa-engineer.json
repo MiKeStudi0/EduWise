@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "QA Foundations",
+    "short_title": "QA Foundations",
+    "slug": "qa-foundations",
+    "description": "Learn QA Foundations for QA.",
+    "long_description": "Covers core concepts in QA Foundations.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in QA Foundations.",
+    "outcomes": "Ability to apply QA Foundations in QA.",
+    "seo": {
+      "meta_title": "QA Foundations",
+      "meta_description": "Learn the fundamentals of QA Foundations for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "qa"
+    },
+    "children": [
+      {
+        "id": "qa-foundations-what-is-qa",
+        "label": "What is QA",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "qa-foundations-what-is-qa-quality-mindset",
+            "label": "Quality Mindset",
+            "type": "module"
+          },
+          {
+            "id": "qa-foundations-what-is-qa-qa-vs-qc",
+            "label": "QA vs QC",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "qa-foundations-sdlc-and-stlc",
+        "label": "SDLC & STLC",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "qa-foundations-sdlc-and-stlc-agile",
+            "label": "Agile",
+            "type": "module"
+          },
+          {
+            "id": "qa-foundations-sdlc-and-stlc-waterfall",
+            "label": "Waterfall",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "qa-foundations-testing-strategies",
+        "label": "Testing Strategies",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "qa-foundations-testing-strategies-test-pyramid",
+            "label": "Test Pyramid",
+            "type": "module"
+          },
+          {
+            "id": "qa-foundations-testing-strategies-risk-based-testing",
+            "label": "Risk-Based Testing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Test Design & Manual Testing",
+    "short_title": "Test Design &",
+    "slug": "test-design-and-manual-testing",
+    "description": "Learn Test Design & Manual Testing for QA.",
+    "long_description": "Covers core concepts in Test Design & Manual Testing.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Test Design & Manual Testing.",
+    "outcomes": "Ability to apply Test Design & Manual Testing in QA.",
+    "seo": {
+      "meta_title": "Test Design & Manual Testing",
+      "meta_description": "Learn the fundamentals of Test Design & Manual Testing for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "test"
+    },
+    "children": [
+      {
+        "id": "test-design-and-manual-testing-test-cases-and-scenarios",
+        "label": "Test Cases & Scenarios",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "test-design-and-manual-testing-test-cases-and-scenarios-equivalence-partitioning",
+            "label": "Equivalence Partitioning",
+            "type": "module"
+          },
+          {
+            "id": "test-design-and-manual-testing-test-cases-and-scenarios-boundary-value-analysis",
+            "label": "Boundary Value Analysis",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "test-design-and-manual-testing-exploratory-testing",
+        "label": "Exploratory Testing",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "test-design-and-manual-testing-exploratory-testing-session-based",
+            "label": "Session-Based",
+            "type": "module"
+          },
+          {
+            "id": "test-design-and-manual-testing-exploratory-testing-heuristics",
+            "label": "Heuristics",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "test-design-and-manual-testing-defect-management",
+        "label": "Defect Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "test-design-and-manual-testing-defect-management-bug-lifecycle",
+            "label": "Bug Lifecycle",
+            "type": "module"
+          },
+          {
+            "id": "test-design-and-manual-testing-defect-management-severity-vs-priority",
+            "label": "Severity vs Priority",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Automation Testing",
+    "short_title": "Automation Testing",
+    "slug": "automation-testing",
+    "description": "Learn Automation Testing for QA.",
+    "long_description": "Covers core concepts in Automation Testing.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Automation Testing.",
+    "outcomes": "Ability to apply Automation Testing in QA.",
+    "seo": {
+      "meta_title": "Automation Testing",
+      "meta_description": "Learn the fundamentals of Automation Testing for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "automation"
+    },
+    "children": [
+      {
+        "id": "automation-testing-ui-automation",
+        "label": "UI Automation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "automation-testing-ui-automation-playwright",
+            "label": "Playwright",
+            "type": "module"
+          },
+          {
+            "id": "automation-testing-ui-automation-cypress",
+            "label": "Cypress",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "automation-testing-api-testing",
+        "label": "API Testing",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "automation-testing-api-testing-postman-newman",
+            "label": "Postman/Newman",
+            "type": "module"
+          },
+          {
+            "id": "automation-testing-api-testing-rest-assured",
+            "label": "REST Assured",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "automation-testing-mobile-testing",
+        "label": "Mobile Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "automation-testing-mobile-testing-appium",
+            "label": "Appium",
+            "type": "module"
+          },
+          {
+            "id": "automation-testing-mobile-testing-espresso",
+            "label": "Espresso",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Non-Functional Testing",
+    "short_title": "Non-Functional Testing",
+    "slug": "non-functional-testing",
+    "description": "Learn Non-Functional Testing for QA.",
+    "long_description": "Covers core concepts in Non-Functional Testing.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Non-Functional Testing.",
+    "outcomes": "Ability to apply Non-Functional Testing in QA.",
+    "seo": {
+      "meta_title": "Non-Functional Testing",
+      "meta_description": "Learn the fundamentals of Non-Functional Testing for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "non"
+    },
+    "children": [
+      {
+        "id": "non-functional-testing-performance-testing",
+        "label": "Performance Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "non-functional-testing-performance-testing-k6",
+            "label": "k6",
+            "type": "module"
+          },
+          {
+            "id": "non-functional-testing-performance-testing-jmeter",
+            "label": "JMeter",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "non-functional-testing-security-testing",
+        "label": "Security Testing",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "non-functional-testing-security-testing-owasp-top-10",
+            "label": "OWASP Top 10",
+            "type": "module"
+          },
+          {
+            "id": "non-functional-testing-security-testing-vulnerability-scanning",
+            "label": "Vulnerability Scanning",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "non-functional-testing-accessibility-testing",
+        "label": "Accessibility Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "non-functional-testing-accessibility-testing-axe",
+            "label": "axe",
+            "type": "module"
+          },
+          {
+            "id": "non-functional-testing-accessibility-testing-wcag-basics",
+            "label": "WCAG Basics",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "CI/CD & Test Ops",
+    "short_title": "CI/CD & Test",
+    "slug": "ci-cd-and-test-ops",
+    "description": "Learn CI/CD & Test Ops for QA.",
+    "long_description": "Covers core concepts in CI/CD & Test Ops.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in CI/CD & Test Ops.",
+    "outcomes": "Ability to apply CI/CD & Test Ops in QA.",
+    "seo": {
+      "meta_title": "CI/CD & Test Ops",
+      "meta_description": "Learn the fundamentals of CI/CD & Test Ops for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ci"
+    },
+    "children": [
+      {
+        "id": "ci-cd-and-test-ops-ci-integration",
+        "label": "CI Integration",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-test-ops-ci-integration-github-actions",
+            "label": "GitHub Actions",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-test-ops-ci-integration-gitlab-ci",
+            "label": "GitLab CI",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-test-ops-test-reporting",
+        "label": "Test Reporting",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ci-cd-and-test-ops-test-reporting-allure",
+            "label": "Allure",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-test-ops-test-reporting-testrail",
+            "label": "TestRail",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-test-ops-test-data-management",
+        "label": "Test Data Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-test-ops-test-data-management-data-seeding",
+            "label": "Data Seeding",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-test-ops-test-data-management-environment-parity",
+            "label": "Environment Parity",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Monitoring & Quality Metrics",
+    "short_title": "Monitoring & Quality",
+    "slug": "monitoring-and-quality-metrics",
+    "description": "Learn Monitoring & Quality Metrics for QA.",
+    "long_description": "Covers core concepts in Monitoring & Quality Metrics.\nFocuses on practical QA workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Monitoring & Quality Metrics.",
+    "outcomes": "Ability to apply Monitoring & Quality Metrics in QA.",
+    "seo": {
+      "meta_title": "Monitoring & Quality Metrics",
+      "meta_description": "Learn the fundamentals of Monitoring & Quality Metrics for QA."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "monitoring"
+    },
+    "children": [
+      {
+        "id": "monitoring-and-quality-metrics-logs-and-monitoring",
+        "label": "Logs & Monitoring",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "monitoring-and-quality-metrics-logs-and-monitoring-kibana",
+            "label": "Kibana",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-quality-metrics-logs-and-monitoring-grafana",
+            "label": "Grafana",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-and-quality-metrics-quality-metrics",
+        "label": "Quality Metrics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "monitoring-and-quality-metrics-quality-metrics-defect-density",
+            "label": "Defect Density",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-quality-metrics-quality-metrics-escape-rate",
+            "label": "Escape Rate",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-and-quality-metrics-root-cause-analysis",
+        "label": "Root Cause Analysis",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "monitoring-and-quality-metrics-root-cause-analysis-5-whys",
+            "label": "5 Whys",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-quality-metrics-root-cause-analysis-fishbone",
+            "label": "Fishbone",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

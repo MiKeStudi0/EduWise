@@ -1,0 +1,538 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "DevSecOps Foundations",
+    "short_title": "DevSecOps Foundations",
+    "slug": "devsecops-foundations",
+    "description": "Learn DevSecOps Foundations for DevSecOps.",
+    "long_description": "Covers core concepts in DevSecOps Foundations.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in DevSecOps Foundations.",
+    "outcomes": "Ability to apply DevSecOps Foundations in DevSecOps.",
+    "seo": {
+      "meta_title": "DevSecOps Foundations",
+      "meta_description": "Learn the fundamentals of DevSecOps Foundations for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "devsecops"
+    },
+    "children": [
+      {
+        "id": "devsecops-foundations-devsecops-principles",
+        "label": "DevSecOps Principles",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "devsecops-foundations-devsecops-principles-shift-left-security",
+            "label": "Shift Left Security",
+            "type": "module"
+          },
+          {
+            "id": "devsecops-foundations-devsecops-principles-continuous-risk-reduction",
+            "label": "Continuous Risk Reduction",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devsecops-foundations-security-basics",
+        "label": "Security Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "devsecops-foundations-security-basics-cia-triad",
+            "label": "CIA Triad",
+            "type": "module"
+          },
+          {
+            "id": "devsecops-foundations-security-basics-threat-modeling",
+            "label": "Threat Modeling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devsecops-foundations-identity-and-access",
+        "label": "Identity & Access",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "devsecops-foundations-identity-and-access-iam",
+            "label": "IAM",
+            "type": "module"
+          },
+          {
+            "id": "devsecops-foundations-identity-and-access-least-privilege",
+            "label": "Least Privilege",
+            "type": "module"
+          },
+          {
+            "id": "devsecops-foundations-identity-and-access-rbac",
+            "label": "RBAC",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devsecops-foundations-secure-coding",
+        "label": "Secure Coding",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "devsecops-foundations-secure-coding-owasp-top-10",
+            "label": "OWASP Top 10",
+            "type": "module"
+          },
+          {
+            "id": "devsecops-foundations-secure-coding-input-validation",
+            "label": "Input Validation",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "App & Supply Chain Security",
+    "short_title": "App & Supply",
+    "slug": "app-and-supply-chain-security",
+    "description": "Learn App & Supply Chain Security for DevSecOps.",
+    "long_description": "Covers core concepts in App & Supply Chain Security.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in App & Supply Chain Security.",
+    "outcomes": "Ability to apply App & Supply Chain Security in DevSecOps.",
+    "seo": {
+      "meta_title": "App & Supply Chain Security",
+      "meta_description": "Learn the fundamentals of App & Supply Chain Security for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "app"
+    },
+    "children": [
+      {
+        "id": "app-and-supply-chain-security-sast-dast",
+        "label": "SAST / DAST",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "app-and-supply-chain-security-sast-dast-static-analysis",
+            "label": "Static Analysis",
+            "type": "module"
+          },
+          {
+            "id": "app-and-supply-chain-security-sast-dast-dynamic-analysis",
+            "label": "Dynamic Analysis",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "app-and-supply-chain-security-dependency-security",
+        "label": "Dependency Security",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "app-and-supply-chain-security-dependency-security-sbom",
+            "label": "SBOM",
+            "type": "module"
+          },
+          {
+            "id": "app-and-supply-chain-security-dependency-security-license-and-vulnerability-scans",
+            "label": "License & Vulnerability Scans",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "app-and-supply-chain-security-secrets-management",
+        "label": "Secrets Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "app-and-supply-chain-security-secrets-management-vault-kms",
+            "label": "Vault/KMS",
+            "type": "module"
+          },
+          {
+            "id": "app-and-supply-chain-security-secrets-management-secrets-rotation",
+            "label": "Secrets Rotation",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "app-and-supply-chain-security-build-pipeline-hardening",
+        "label": "Build Pipeline Hardening",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "app-and-supply-chain-security-build-pipeline-hardening-signed-artifacts",
+            "label": "Signed Artifacts",
+            "type": "module"
+          },
+          {
+            "id": "app-and-supply-chain-security-build-pipeline-hardening-provenance",
+            "label": "Provenance",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Infrastructure & Cloud Security",
+    "short_title": "Infrastructure & Cloud",
+    "slug": "infrastructure-and-cloud-security",
+    "description": "Learn Infrastructure & Cloud Security for DevSecOps.",
+    "long_description": "Covers core concepts in Infrastructure & Cloud Security.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Infrastructure & Cloud Security.",
+    "outcomes": "Ability to apply Infrastructure & Cloud Security in DevSecOps.",
+    "seo": {
+      "meta_title": "Infrastructure & Cloud Security",
+      "meta_description": "Learn the fundamentals of Infrastructure & Cloud Security for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "infrastructure"
+    },
+    "children": [
+      {
+        "id": "infrastructure-and-cloud-security-network-security",
+        "label": "Network Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "infrastructure-and-cloud-security-network-security-segmentation",
+            "label": "Segmentation",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-and-cloud-security-network-security-tls",
+            "label": "TLS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure-and-cloud-security-cloud-security",
+        "label": "Cloud Security",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "infrastructure-and-cloud-security-cloud-security-cspm",
+            "label": "CSPM",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-and-cloud-security-cloud-security-kms",
+            "label": "KMS",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-and-cloud-security-cloud-security-shared-responsibility",
+            "label": "Shared Responsibility",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure-and-cloud-security-infrastructure-as-code-security",
+        "label": "Infrastructure as Code Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "infrastructure-and-cloud-security-infrastructure-as-code-security-iac-scanning",
+            "label": "IaC Scanning",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-and-cloud-security-infrastructure-as-code-security-policy-as-code",
+            "label": "Policy as Code",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Container & Kubernetes Security",
+    "short_title": "Container & Kubernetes",
+    "slug": "container-and-kubernetes-security",
+    "description": "Learn Container & Kubernetes Security for DevSecOps.",
+    "long_description": "Covers core concepts in Container & Kubernetes Security.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Container & Kubernetes Security.",
+    "outcomes": "Ability to apply Container & Kubernetes Security in DevSecOps.",
+    "seo": {
+      "meta_title": "Container & Kubernetes Security",
+      "meta_description": "Learn the fundamentals of Container & Kubernetes Security for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "container"
+    },
+    "children": [
+      {
+        "id": "container-and-kubernetes-security-container-security",
+        "label": "Container Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "container-and-kubernetes-security-container-security-image-scanning",
+            "label": "Image Scanning",
+            "type": "module"
+          },
+          {
+            "id": "container-and-kubernetes-security-container-security-runtime-security",
+            "label": "Runtime Security",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "container-and-kubernetes-security-kubernetes-security",
+        "label": "Kubernetes Security",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "container-and-kubernetes-security-kubernetes-security-rbac",
+            "label": "RBAC",
+            "type": "module"
+          },
+          {
+            "id": "container-and-kubernetes-security-kubernetes-security-network-policies",
+            "label": "Network Policies",
+            "type": "module"
+          },
+          {
+            "id": "container-and-kubernetes-security-kubernetes-security-pod-security",
+            "label": "Pod Security",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "container-and-kubernetes-security-supply-chain-for-containers",
+        "label": "Supply Chain for Containers",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "container-and-kubernetes-security-supply-chain-for-containers-signed-images",
+            "label": "Signed Images",
+            "type": "module"
+          },
+          {
+            "id": "container-and-kubernetes-security-supply-chain-for-containers-registry-policies",
+            "label": "Registry Policies",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Monitoring & Incident Response",
+    "short_title": "Monitoring & Incident",
+    "slug": "monitoring-and-incident-response",
+    "description": "Learn Monitoring & Incident Response for DevSecOps.",
+    "long_description": "Covers core concepts in Monitoring & Incident Response.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Monitoring & Incident Response.",
+    "outcomes": "Ability to apply Monitoring & Incident Response in DevSecOps.",
+    "seo": {
+      "meta_title": "Monitoring & Incident Response",
+      "meta_description": "Learn the fundamentals of Monitoring & Incident Response for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "monitoring"
+    },
+    "children": [
+      {
+        "id": "monitoring-and-incident-response-logging-and-siem",
+        "label": "Logging & SIEM",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "monitoring-and-incident-response-logging-and-siem-log-pipelines",
+            "label": "Log Pipelines",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-incident-response-logging-and-siem-alerting",
+            "label": "Alerting",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-and-incident-response-detection-and-response",
+        "label": "Detection & Response",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "monitoring-and-incident-response-detection-and-response-ir-lifecycle",
+            "label": "IR Lifecycle",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-incident-response-detection-and-response-containment",
+            "label": "Containment",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-and-incident-response-threat-and-vulnerability-management",
+        "label": "Threat & Vulnerability Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "monitoring-and-incident-response-threat-and-vulnerability-management-vuln-scanning",
+            "label": "Vuln Scanning",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-incident-response-threat-and-vulnerability-management-risk-prioritization",
+            "label": "Risk Prioritization",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "monitoring-and-incident-response-forensics-and-rca",
+        "label": "Forensics & RCA",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "monitoring-and-incident-response-forensics-and-rca-root-cause-analysis",
+            "label": "Root Cause Analysis",
+            "type": "module"
+          },
+          {
+            "id": "monitoring-and-incident-response-forensics-and-rca-evidence-handling",
+            "label": "Evidence Handling",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Governance & Compliance",
+    "short_title": "Governance & Compliance",
+    "slug": "governance-and-compliance",
+    "description": "Learn Governance & Compliance for DevSecOps.",
+    "long_description": "Covers core concepts in Governance & Compliance.\nFocuses on practical DevSecOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Governance & Compliance.",
+    "outcomes": "Ability to apply Governance & Compliance in DevSecOps.",
+    "seo": {
+      "meta_title": "Governance & Compliance",
+      "meta_description": "Learn the fundamentals of Governance & Compliance for DevSecOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "governance"
+    },
+    "children": [
+      {
+        "id": "governance-and-compliance-security-frameworks",
+        "label": "Security Frameworks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "governance-and-compliance-security-frameworks-nist",
+            "label": "NIST",
+            "type": "module"
+          },
+          {
+            "id": "governance-and-compliance-security-frameworks-iso-27001",
+            "label": "ISO 27001",
+            "type": "module"
+          },
+          {
+            "id": "governance-and-compliance-security-frameworks-soc-2",
+            "label": "SOC 2",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "governance-and-compliance-audit-and-compliance",
+        "label": "Audit & Compliance",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "governance-and-compliance-audit-and-compliance-controls-mapping",
+            "label": "Controls Mapping",
+            "type": "module"
+          },
+          {
+            "id": "governance-and-compliance-audit-and-compliance-continuous-compliance",
+            "label": "Continuous Compliance",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "governance-and-compliance-risk-management",
+        "label": "Risk Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "governance-and-compliance-risk-management-risk-quantification",
+            "label": "Risk Quantification",
+            "type": "module"
+          },
+          {
+            "id": "governance-and-compliance-risk-management-risk-registers",
+            "label": "Risk Registers",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

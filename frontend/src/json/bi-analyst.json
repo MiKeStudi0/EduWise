@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "BI Foundations",
+    "short_title": "BI Foundations",
+    "slug": "bi-foundations",
+    "description": "Learn BI Foundations for bi analysis.",
+    "long_description": "Covers core concepts in BI Foundations.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in BI Foundations.",
+    "outcomes": "Ability to apply BI Foundations in bi analysis.",
+    "seo": {
+      "meta_title": "BI Foundations",
+      "meta_description": "Learn the fundamentals of BI Foundations for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "bi"
+    },
+    "children": [
+      {
+        "id": "bi-foundations-role-of-bi-analyst",
+        "label": "Role of BI Analyst",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "bi-foundations-role-of-bi-analyst-responsibilities",
+            "label": "Responsibilities",
+            "type": "module"
+          },
+          {
+            "id": "bi-foundations-role-of-bi-analyst-stakeholders",
+            "label": "Stakeholders",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "bi-foundations-business-fundamentals",
+        "label": "Business Fundamentals",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "bi-foundations-business-fundamentals-kpis",
+            "label": "KPIs",
+            "type": "module"
+          },
+          {
+            "id": "bi-foundations-business-fundamentals-business-functions",
+            "label": "Business Functions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "bi-foundations-data-fundamentals",
+        "label": "Data Fundamentals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "bi-foundations-data-fundamentals-data-types",
+            "label": "Data Types",
+            "type": "module"
+          },
+          {
+            "id": "bi-foundations-data-fundamentals-data-quality",
+            "label": "Data Quality",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Data & SQL",
+    "short_title": "Data & SQL",
+    "slug": "data-and-sql",
+    "description": "Learn Data & SQL for bi analysis.",
+    "long_description": "Covers core concepts in Data & SQL.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data & SQL.",
+    "outcomes": "Ability to apply Data & SQL in bi analysis.",
+    "seo": {
+      "meta_title": "Data & SQL",
+      "meta_description": "Learn the fundamentals of Data & SQL for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-and-sql-sql-core",
+        "label": "SQL Core",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-and-sql-sql-core-joins-and-aggregations",
+            "label": "Joins & Aggregations",
+            "type": "module"
+          },
+          {
+            "id": "data-and-sql-sql-core-window-functions",
+            "label": "Window Functions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-and-sql-data-modeling",
+        "label": "Data Modeling",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-and-sql-data-modeling-star-vs-snowflake",
+            "label": "Star vs Snowflake",
+            "type": "module"
+          },
+          {
+            "id": "data-and-sql-data-modeling-fact-and-dimension-tables",
+            "label": "Fact & Dimension Tables",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-and-sql-etl-elt-basics",
+        "label": "ETL/ELT Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-and-sql-etl-elt-basics-pipelines",
+            "label": "Pipelines",
+            "type": "module"
+          },
+          {
+            "id": "data-and-sql-etl-elt-basics-data-warehousing",
+            "label": "Data Warehousing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Analysis & Statistics",
+    "short_title": "Analysis & Statistics",
+    "slug": "analysis-and-statistics",
+    "description": "Learn Analysis & Statistics for bi analysis.",
+    "long_description": "Covers core concepts in Analysis & Statistics.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Analysis & Statistics.",
+    "outcomes": "Ability to apply Analysis & Statistics in bi analysis.",
+    "seo": {
+      "meta_title": "Analysis & Statistics",
+      "meta_description": "Learn the fundamentals of Analysis & Statistics for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "analysis"
+    },
+    "children": [
+      {
+        "id": "analysis-and-statistics-descriptive-and-diagnostic",
+        "label": "Descriptive & Diagnostic",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "analysis-and-statistics-descriptive-and-diagnostic-summary-stats",
+            "label": "Summary Stats",
+            "type": "module"
+          },
+          {
+            "id": "analysis-and-statistics-descriptive-and-diagnostic-root-cause-analysis",
+            "label": "Root Cause Analysis",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "analysis-and-statistics-experimentation",
+        "label": "Experimentation",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "analysis-and-statistics-experimentation-a-b-testing",
+            "label": "A/B Testing",
+            "type": "module"
+          },
+          {
+            "id": "analysis-and-statistics-experimentation-cohort-analysis",
+            "label": "Cohort Analysis",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "analysis-and-statistics-forecasting",
+        "label": "Forecasting",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "analysis-and-statistics-forecasting-time-series",
+            "label": "Time Series",
+            "type": "module"
+          },
+          {
+            "id": "analysis-and-statistics-forecasting-seasonality",
+            "label": "Seasonality",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Visualization & BI Tools",
+    "short_title": "Visualization & BI",
+    "slug": "visualization-and-bi-tools",
+    "description": "Learn Visualization & BI Tools for bi analysis.",
+    "long_description": "Covers core concepts in Visualization & BI Tools.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Visualization & BI Tools.",
+    "outcomes": "Ability to apply Visualization & BI Tools in bi analysis.",
+    "seo": {
+      "meta_title": "Visualization & BI Tools",
+      "meta_description": "Learn the fundamentals of Visualization & BI Tools for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "visualization"
+    },
+    "children": [
+      {
+        "id": "visualization-and-bi-tools-dashboard-design",
+        "label": "Dashboard Design",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "visualization-and-bi-tools-dashboard-design-layout-and-ux",
+            "label": "Layout & UX",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-bi-tools-dashboard-design-storytelling",
+            "label": "Storytelling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "visualization-and-bi-tools-bi-platforms",
+        "label": "BI Platforms",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "visualization-and-bi-tools-bi-platforms-power-bi",
+            "label": "Power BI",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-bi-tools-bi-platforms-tableau",
+            "label": "Tableau",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "visualization-and-bi-tools-advanced-visuals",
+        "label": "Advanced Visuals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "visualization-and-bi-tools-advanced-visuals-interactivity",
+            "label": "Interactivity",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-bi-tools-advanced-visuals-performance-tuning",
+            "label": "Performance Tuning",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Data Governance",
+    "short_title": "Data Governance",
+    "slug": "data-governance",
+    "description": "Learn Data Governance for bi analysis.",
+    "long_description": "Covers core concepts in Data Governance.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data Governance.",
+    "outcomes": "Ability to apply Data Governance in bi analysis.",
+    "seo": {
+      "meta_title": "Data Governance",
+      "meta_description": "Learn the fundamentals of Data Governance for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-governance-data-ethics",
+        "label": "Data Ethics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-governance-data-ethics-privacy",
+            "label": "Privacy",
+            "type": "module"
+          },
+          {
+            "id": "data-governance-data-ethics-bias",
+            "label": "Bias",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-governance-governance-practices",
+        "label": "Governance Practices",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-governance-governance-practices-data-lineage",
+            "label": "Data Lineage",
+            "type": "module"
+          },
+          {
+            "id": "data-governance-governance-practices-access-control",
+            "label": "Access Control",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-governance-quality-management",
+        "label": "Quality Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-governance-quality-management-validation-rules",
+            "label": "Validation Rules",
+            "type": "module"
+          },
+          {
+            "id": "data-governance-quality-management-monitoring",
+            "label": "Monitoring",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Career & Impact",
+    "short_title": "Career & Impact",
+    "slug": "career-and-impact",
+    "description": "Learn Career & Impact for bi analysis.",
+    "long_description": "Covers core concepts in Career & Impact.\nFocuses on practical bi analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Career & Impact.",
+    "outcomes": "Ability to apply Career & Impact in bi analysis.",
+    "seo": {
+      "meta_title": "Career & Impact",
+      "meta_description": "Learn the fundamentals of Career & Impact for bi analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "career"
+    },
+    "children": [
+      {
+        "id": "career-and-impact-business-communication",
+        "label": "Business Communication",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "career-and-impact-business-communication-executive-summaries",
+            "label": "Executive Summaries",
+            "type": "module"
+          },
+          {
+            "id": "career-and-impact-business-communication-stakeholder-updates",
+            "label": "Stakeholder Updates",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "career-and-impact-portfolio-projects",
+        "label": "Portfolio Projects",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "career-and-impact-portfolio-projects-end-to-end-bi-project",
+            "label": "End-to-End BI Project",
+            "type": "module"
+          },
+          {
+            "id": "career-and-impact-portfolio-projects-case-studies",
+            "label": "Case Studies",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "career-and-impact-career-growth",
+        "label": "Career Growth",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "career-and-impact-career-growth-certifications",
+            "label": "Certifications",
+            "type": "module"
+          },
+          {
+            "id": "career-and-impact-career-growth-interview-prep",
+            "label": "Interview Prep",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

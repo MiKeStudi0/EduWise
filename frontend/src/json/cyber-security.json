@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Cybersecurity Foundations",
+    "short_title": "Cybersecurity Foundations",
+    "slug": "cybersecurity-foundations",
+    "description": "Learn Cybersecurity Foundations for cyber security.",
+    "long_description": "Covers core concepts in Cybersecurity Foundations.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Cybersecurity Foundations.",
+    "outcomes": "Ability to apply Cybersecurity Foundations in cyber security.",
+    "seo": {
+      "meta_title": "Cybersecurity Foundations",
+      "meta_description": "Learn the fundamentals of Cybersecurity Foundations for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "cybersecurity"
+    },
+    "children": [
+      {
+        "id": "cybersecurity-foundations-security-basics",
+        "label": "Security Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cybersecurity-foundations-security-basics-cia-triad",
+            "label": "CIA Triad",
+            "type": "module"
+          },
+          {
+            "id": "cybersecurity-foundations-security-basics-risk-and-threats",
+            "label": "Risk & Threats",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cybersecurity-foundations-security-roles",
+        "label": "Security Roles",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cybersecurity-foundations-security-roles-blue-team",
+            "label": "Blue Team",
+            "type": "module"
+          },
+          {
+            "id": "cybersecurity-foundations-security-roles-red-team",
+            "label": "Red Team",
+            "type": "module"
+          },
+          {
+            "id": "cybersecurity-foundations-security-roles-purple-team",
+            "label": "Purple Team",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cybersecurity-foundations-ethics-and-legal",
+        "label": "Ethics & Legal",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cybersecurity-foundations-ethics-and-legal-rules-of-engagement",
+            "label": "Rules of Engagement",
+            "type": "module"
+          },
+          {
+            "id": "cybersecurity-foundations-ethics-and-legal-responsible-disclosure",
+            "label": "Responsible Disclosure",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Networking & OS",
+    "short_title": "Networking & OS",
+    "slug": "networking-and-os",
+    "description": "Learn Networking & OS for cyber security.",
+    "long_description": "Covers core concepts in Networking & OS.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Networking & OS.",
+    "outcomes": "Ability to apply Networking & OS in cyber security.",
+    "seo": {
+      "meta_title": "Networking & OS",
+      "meta_description": "Learn the fundamentals of Networking & OS for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "networking"
+    },
+    "children": [
+      {
+        "id": "networking-and-os-networking-fundamentals",
+        "label": "Networking Fundamentals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-os-networking-fundamentals-osi-tcp-ip",
+            "label": "OSI/TCP-IP",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-os-networking-fundamentals-common-ports",
+            "label": "Common Ports",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-os-networking-fundamentals-dns",
+            "label": "DNS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-os-web-basics",
+        "label": "Web Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "networking-and-os-web-basics-http-https",
+            "label": "HTTP/HTTPS",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-os-web-basics-tls",
+            "label": "TLS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-os-operating-systems",
+        "label": "Operating Systems",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-os-operating-systems-linux-basics",
+            "label": "Linux Basics",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-os-operating-systems-windows-basics",
+            "label": "Windows Basics",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Security Concepts",
+    "short_title": "Security Concepts",
+    "slug": "security-concepts",
+    "description": "Learn Security Concepts for cyber security.",
+    "long_description": "Covers core concepts in Security Concepts.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Security Concepts.",
+    "outcomes": "Ability to apply Security Concepts in cyber security.",
+    "seo": {
+      "meta_title": "Security Concepts",
+      "meta_description": "Learn the fundamentals of Security Concepts for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "security"
+    },
+    "children": [
+      {
+        "id": "security-concepts-identity-and-access",
+        "label": "Identity & Access",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "security-concepts-identity-and-access-authentication",
+            "label": "Authentication",
+            "type": "module"
+          },
+          {
+            "id": "security-concepts-identity-and-access-authorization",
+            "label": "Authorization",
+            "type": "module"
+          },
+          {
+            "id": "security-concepts-identity-and-access-mfa",
+            "label": "MFA",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "security-concepts-cryptography",
+        "label": "Cryptography",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "security-concepts-cryptography-hashing",
+            "label": "Hashing",
+            "type": "module"
+          },
+          {
+            "id": "security-concepts-cryptography-symmetric-vs-asymmetric",
+            "label": "Symmetric vs Asymmetric",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "security-concepts-defense-in-depth",
+        "label": "Defense in Depth",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "security-concepts-defense-in-depth-firewalls",
+            "label": "Firewalls",
+            "type": "module"
+          },
+          {
+            "id": "security-concepts-defense-in-depth-ids-ips",
+            "label": "IDS/IPS",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Offense & Vulnerabilities",
+    "short_title": "Offense & Vulnerabilities",
+    "slug": "offense-and-vulnerabilities",
+    "description": "Learn Offense & Vulnerabilities for cyber security.",
+    "long_description": "Covers core concepts in Offense & Vulnerabilities.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Offense & Vulnerabilities.",
+    "outcomes": "Ability to apply Offense & Vulnerabilities in cyber security.",
+    "seo": {
+      "meta_title": "Offense & Vulnerabilities",
+      "meta_description": "Learn the fundamentals of Offense & Vulnerabilities for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "offense"
+    },
+    "children": [
+      {
+        "id": "offense-and-vulnerabilities-web-security",
+        "label": "Web Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "offense-and-vulnerabilities-web-security-owasp-top-10",
+            "label": "OWASP Top 10",
+            "type": "module"
+          },
+          {
+            "id": "offense-and-vulnerabilities-web-security-common-attacks",
+            "label": "Common Attacks",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "offense-and-vulnerabilities-vulnerability-management",
+        "label": "Vulnerability Management",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "offense-and-vulnerabilities-vulnerability-management-scanning",
+            "label": "Scanning",
+            "type": "module"
+          },
+          {
+            "id": "offense-and-vulnerabilities-vulnerability-management-patch-management",
+            "label": "Patch Management",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "offense-and-vulnerabilities-threat-modeling",
+        "label": "Threat Modeling",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "offense-and-vulnerabilities-threat-modeling-attack-surface",
+            "label": "Attack Surface",
+            "type": "module"
+          },
+          {
+            "id": "offense-and-vulnerabilities-threat-modeling-kill-chain",
+            "label": "Kill Chain",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Detection & Response",
+    "short_title": "Detection & Response",
+    "slug": "detection-and-response",
+    "description": "Learn Detection & Response for cyber security.",
+    "long_description": "Covers core concepts in Detection & Response.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Detection & Response.",
+    "outcomes": "Ability to apply Detection & Response in cyber security.",
+    "seo": {
+      "meta_title": "Detection & Response",
+      "meta_description": "Learn the fundamentals of Detection & Response for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "detection"
+    },
+    "children": [
+      {
+        "id": "detection-and-response-monitoring-and-logging",
+        "label": "Monitoring & Logging",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "detection-and-response-monitoring-and-logging-siem",
+            "label": "SIEM",
+            "type": "module"
+          },
+          {
+            "id": "detection-and-response-monitoring-and-logging-log-sources",
+            "label": "Log Sources",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "detection-and-response-incident-response",
+        "label": "Incident Response",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "detection-and-response-incident-response-ir-lifecycle",
+            "label": "IR Lifecycle",
+            "type": "module"
+          },
+          {
+            "id": "detection-and-response-incident-response-forensics-basics",
+            "label": "Forensics Basics",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "detection-and-response-threat-hunting",
+        "label": "Threat Hunting",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "detection-and-response-threat-hunting-iocs",
+            "label": "IOCs",
+            "type": "module"
+          },
+          {
+            "id": "detection-and-response-threat-hunting-hypothesis-driven-hunts",
+            "label": "Hypothesis-Driven Hunts",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Cloud & Modern Security",
+    "short_title": "Cloud & Modern",
+    "slug": "cloud-and-modern-security",
+    "description": "Learn Cloud & Modern Security for cyber security.",
+    "long_description": "Covers core concepts in Cloud & Modern Security.\nFocuses on practical cyber security workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Cloud & Modern Security.",
+    "outcomes": "Ability to apply Cloud & Modern Security in cyber security.",
+    "seo": {
+      "meta_title": "Cloud & Modern Security",
+      "meta_description": "Learn the fundamentals of Cloud & Modern Security for cyber security."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "cloud"
+    },
+    "children": [
+      {
+        "id": "cloud-and-modern-security-cloud-security",
+        "label": "Cloud Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-modern-security-cloud-security-shared-responsibility",
+            "label": "Shared Responsibility",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-modern-security-cloud-security-cspm",
+            "label": "CSPM",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-modern-security-zero-trust",
+        "label": "Zero Trust",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cloud-and-modern-security-zero-trust-least-privilege",
+            "label": "Least Privilege",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-modern-security-zero-trust-segmentation",
+            "label": "Segmentation",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-modern-security-security-automation",
+        "label": "Security Automation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-modern-security-security-automation-soar",
+            "label": "SOAR",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-modern-security-security-automation-runbooks",
+            "label": "Runbooks",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

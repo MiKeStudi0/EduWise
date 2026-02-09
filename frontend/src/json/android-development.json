@@ -1,0 +1,574 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Android Foundations",
+    "short_title": "Android Foundations",
+    "slug": "android-foundations",
+    "description": "Learn Android Foundations for Android development.",
+    "long_description": "Covers core concepts in Android Foundations.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Android Foundations.",
+    "outcomes": "Ability to apply Android Foundations in Android development.",
+    "seo": {
+      "meta_title": "Android Foundations",
+      "meta_description": "Learn the fundamentals of Android Foundations for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "android"
+    },
+    "children": [
+      {
+        "id": "android-foundations-kotlin-basics",
+        "label": "Kotlin Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "android-foundations-kotlin-basics-syntax-and-types",
+            "label": "Syntax & Types",
+            "type": "module"
+          },
+          {
+            "id": "android-foundations-kotlin-basics-null-safety",
+            "label": "Null Safety",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "android-foundations-android-app-components",
+        "label": "Android App Components",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "android-foundations-android-app-components-activities",
+            "label": "Activities",
+            "type": "module"
+          },
+          {
+            "id": "android-foundations-android-app-components-intents",
+            "label": "Intents",
+            "type": "module"
+          },
+          {
+            "id": "android-foundations-android-app-components-services",
+            "label": "Services",
+            "type": "module"
+          },
+          {
+            "id": "android-foundations-android-app-components-broadcast-receivers",
+            "label": "Broadcast Receivers",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "android-foundations-app-lifecycle",
+        "label": "App Lifecycle",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "android-foundations-app-lifecycle-lifecycle-states",
+            "label": "Lifecycle States",
+            "type": "module"
+          },
+          {
+            "id": "android-foundations-app-lifecycle-configuration-changes",
+            "label": "Configuration Changes",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "UI & Navigation",
+    "short_title": "UI & Navigation",
+    "slug": "ui-and-navigation",
+    "description": "Learn UI & Navigation for Android development.",
+    "long_description": "Covers core concepts in UI & Navigation.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in UI & Navigation.",
+    "outcomes": "Ability to apply UI & Navigation in Android development.",
+    "seo": {
+      "meta_title": "UI & Navigation",
+      "meta_description": "Learn the fundamentals of UI & Navigation for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ui"
+    },
+    "children": [
+      {
+        "id": "ui-and-navigation-jetpack-compose",
+        "label": "Jetpack Compose",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ui-and-navigation-jetpack-compose-composable-functions",
+            "label": "Composable Functions",
+            "type": "module"
+          },
+          {
+            "id": "ui-and-navigation-jetpack-compose-state-and-side-effects",
+            "label": "State & Side Effects",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ui-and-navigation-layouts-and-ui-elements",
+        "label": "Layouts & UI Elements",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ui-and-navigation-layouts-and-ui-elements-recyclerview",
+            "label": "RecyclerView",
+            "type": "module"
+          },
+          {
+            "id": "ui-and-navigation-layouts-and-ui-elements-material-components",
+            "label": "Material Components",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ui-and-navigation-navigation",
+        "label": "Navigation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ui-and-navigation-navigation-navigation-component",
+            "label": "Navigation Component",
+            "type": "module"
+          },
+          {
+            "id": "ui-and-navigation-navigation-deep-links",
+            "label": "Deep Links",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Architecture & State",
+    "short_title": "Architecture & State",
+    "slug": "architecture-and-state",
+    "description": "Learn Architecture & State for Android development.",
+    "long_description": "Covers core concepts in Architecture & State.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Architecture & State.",
+    "outcomes": "Ability to apply Architecture & State in Android development.",
+    "seo": {
+      "meta_title": "Architecture & State",
+      "meta_description": "Learn the fundamentals of Architecture & State for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "architecture"
+    },
+    "children": [
+      {
+        "id": "architecture-and-state-architecture-patterns",
+        "label": "Architecture Patterns",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-and-state-architecture-patterns-mvvm",
+            "label": "MVVM",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-state-architecture-patterns-mvi",
+            "label": "MVI",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-and-state-dependency-injection",
+        "label": "Dependency Injection",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "architecture-and-state-dependency-injection-hilt",
+            "label": "Hilt",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-state-dependency-injection-koin",
+            "label": "Koin",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-and-state-data-and-state-flow",
+        "label": "Data & State Flow",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-and-state-data-and-state-flow-kotlin-flow",
+            "label": "Kotlin Flow",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-state-data-and-state-flow-livedata",
+            "label": "LiveData",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Data & Storage",
+    "short_title": "Data & Storage",
+    "slug": "data-and-storage",
+    "description": "Learn Data & Storage for Android development.",
+    "long_description": "Covers core concepts in Data & Storage.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data & Storage.",
+    "outcomes": "Ability to apply Data & Storage in Android development.",
+    "seo": {
+      "meta_title": "Data & Storage",
+      "meta_description": "Learn the fundamentals of Data & Storage for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-and-storage-local-storage",
+        "label": "Local Storage",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-and-storage-local-storage-datastore",
+            "label": "DataStore",
+            "type": "module"
+          },
+          {
+            "id": "data-and-storage-local-storage-room",
+            "label": "Room",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-and-storage-caching",
+        "label": "Caching",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-and-storage-caching-memory-cache",
+            "label": "Memory Cache",
+            "type": "module"
+          },
+          {
+            "id": "data-and-storage-caching-disk-cache",
+            "label": "Disk Cache",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Networking & Async",
+    "short_title": "Networking & Async",
+    "slug": "networking-and-async",
+    "description": "Learn Networking & Async for Android development.",
+    "long_description": "Covers core concepts in Networking & Async.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Networking & Async.",
+    "outcomes": "Ability to apply Networking & Async in Android development.",
+    "seo": {
+      "meta_title": "Networking & Async",
+      "meta_description": "Learn the fundamentals of Networking & Async for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "networking"
+    },
+    "children": [
+      {
+        "id": "networking-and-async-networking",
+        "label": "Networking",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-async-networking-okhttp",
+            "label": "OkHttp",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-async-networking-retrofit",
+            "label": "Retrofit",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-async-concurrency",
+        "label": "Concurrency",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "networking-and-async-concurrency-coroutines",
+            "label": "Coroutines",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-async-concurrency-workmanager",
+            "label": "WorkManager",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-async-api-integration",
+        "label": "API Integration",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-async-api-integration-rest",
+            "label": "REST",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-async-api-integration-graphql",
+            "label": "GraphQL",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Security & Permissions",
+    "short_title": "Security & Permissions",
+    "slug": "security-and-permissions",
+    "description": "Learn Security & Permissions for Android development.",
+    "long_description": "Covers core concepts in Security & Permissions.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Security & Permissions.",
+    "outcomes": "Ability to apply Security & Permissions in Android development.",
+    "seo": {
+      "meta_title": "Security & Permissions",
+      "meta_description": "Learn the fundamentals of Security & Permissions for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "security"
+    },
+    "children": [
+      {
+        "id": "security-and-permissions-app-security-basics",
+        "label": "App Security Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "security-and-permissions-app-security-basics-permissions",
+            "label": "Permissions",
+            "type": "module"
+          },
+          {
+            "id": "security-and-permissions-app-security-basics-secure-storage",
+            "label": "Secure Storage",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "security-and-permissions-auth-and-identity",
+        "label": "Auth & Identity",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "security-and-permissions-auth-and-identity-oauth",
+            "label": "OAuth",
+            "type": "module"
+          },
+          {
+            "id": "security-and-permissions-auth-and-identity-firebase-auth",
+            "label": "Firebase Auth",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Testing & Quality",
+    "short_title": "Testing & Quality",
+    "slug": "testing-and-quality",
+    "description": "Learn Testing & Quality for Android development.",
+    "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Testing & Quality.",
+    "outcomes": "Ability to apply Testing & Quality in Android development.",
+    "seo": {
+      "meta_title": "Testing & Quality",
+      "meta_description": "Learn the fundamentals of Testing & Quality for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "testing"
+    },
+    "children": [
+      {
+        "id": "testing-and-quality-unit-and-ui-testing",
+        "label": "Unit & UI Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "testing-and-quality-unit-and-ui-testing-junit",
+            "label": "JUnit",
+            "type": "module"
+          },
+          {
+            "id": "testing-and-quality-unit-and-ui-testing-espresso",
+            "label": "Espresso",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "testing-and-quality-performance-and-debugging",
+        "label": "Performance & Debugging",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "testing-and-quality-performance-and-debugging-profilers",
+            "label": "Profilers",
+            "type": "module"
+          },
+          {
+            "id": "testing-and-quality-performance-and-debugging-leakcanary",
+            "label": "LeakCanary",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "testing-and-quality-code-quality",
+        "label": "Code Quality",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "testing-and-quality-code-quality-detekt",
+            "label": "Detekt",
+            "type": "module"
+          },
+          {
+            "id": "testing-and-quality-code-quality-ktlint",
+            "label": "ktlint",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "roadmap_id": 1,
+    "title": "Distribution & Release",
+    "short_title": "Distribution & Release",
+    "slug": "distribution-and-release",
+    "description": "Learn Distribution & Release for Android development.",
+    "long_description": "Covers core concepts in Distribution & Release.\nFocuses on practical Android development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Distribution & Release.",
+    "outcomes": "Ability to apply Distribution & Release in Android development.",
+    "seo": {
+      "meta_title": "Distribution & Release",
+      "meta_description": "Learn the fundamentals of Distribution & Release for Android development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "distribution"
+    },
+    "children": [
+      {
+        "id": "distribution-and-release-release-and-signing",
+        "label": "Release & Signing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "distribution-and-release-release-and-signing-app-signing",
+            "label": "App Signing",
+            "type": "module"
+          },
+          {
+            "id": "distribution-and-release-release-and-signing-release-builds",
+            "label": "Release Builds",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "distribution-and-release-app-distribution",
+        "label": "App Distribution",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "distribution-and-release-app-distribution-play-store",
+            "label": "Play Store",
+            "type": "module"
+          },
+          {
+            "id": "distribution-and-release-app-distribution-internal-testing",
+            "label": "Internal Testing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

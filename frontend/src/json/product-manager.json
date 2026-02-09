@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Product Foundations",
+    "short_title": "Product Foundations",
+    "slug": "product-foundations",
+    "description": "Learn Product Foundations for product management.",
+    "long_description": "Covers core concepts in Product Foundations.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Product Foundations.",
+    "outcomes": "Ability to apply Product Foundations in product management.",
+    "seo": {
+      "meta_title": "Product Foundations",
+      "meta_description": "Learn the fundamentals of Product Foundations for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "product"
+    },
+    "children": [
+      {
+        "id": "product-foundations-role-of-a-pm",
+        "label": "Role of a PM",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "product-foundations-role-of-a-pm-responsibilities",
+            "label": "Responsibilities",
+            "type": "module"
+          },
+          {
+            "id": "product-foundations-role-of-a-pm-cross-functional-collaboration",
+            "label": "Cross-Functional Collaboration",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "product-foundations-product-thinking",
+        "label": "Product Thinking",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "product-foundations-product-thinking-problem-framing",
+            "label": "Problem Framing",
+            "type": "module"
+          },
+          {
+            "id": "product-foundations-product-thinking-user-centric-mindset",
+            "label": "User-Centric Mindset",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "product-foundations-business-basics",
+        "label": "Business Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "product-foundations-business-basics-value-propositions",
+            "label": "Value Propositions",
+            "type": "module"
+          },
+          {
+            "id": "product-foundations-business-basics-business-models",
+            "label": "Business Models",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Discovery & Research",
+    "short_title": "Discovery & Research",
+    "slug": "discovery-and-research",
+    "description": "Learn Discovery & Research for product management.",
+    "long_description": "Covers core concepts in Discovery & Research.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Discovery & Research.",
+    "outcomes": "Ability to apply Discovery & Research in product management.",
+    "seo": {
+      "meta_title": "Discovery & Research",
+      "meta_description": "Learn the fundamentals of Discovery & Research for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "discovery"
+    },
+    "children": [
+      {
+        "id": "discovery-and-research-market-research",
+        "label": "Market Research",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "discovery-and-research-market-research-competitive-analysis",
+            "label": "Competitive Analysis",
+            "type": "module"
+          },
+          {
+            "id": "discovery-and-research-market-research-market-sizing",
+            "label": "Market Sizing",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "discovery-and-research-user-research",
+        "label": "User Research",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "discovery-and-research-user-research-interviews",
+            "label": "Interviews",
+            "type": "module"
+          },
+          {
+            "id": "discovery-and-research-user-research-personas",
+            "label": "Personas",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "discovery-and-research-insights-and-validation",
+        "label": "Insights & Validation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "discovery-and-research-insights-and-validation-assumptions",
+            "label": "Assumptions",
+            "type": "module"
+          },
+          {
+            "id": "discovery-and-research-insights-and-validation-mvp-definition",
+            "label": "MVP Definition",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Strategy & Planning",
+    "short_title": "Strategy & Planning",
+    "slug": "strategy-and-planning",
+    "description": "Learn Strategy & Planning for product management.",
+    "long_description": "Covers core concepts in Strategy & Planning.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Strategy & Planning.",
+    "outcomes": "Ability to apply Strategy & Planning in product management.",
+    "seo": {
+      "meta_title": "Strategy & Planning",
+      "meta_description": "Learn the fundamentals of Strategy & Planning for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "strategy"
+    },
+    "children": [
+      {
+        "id": "strategy-and-planning-product-strategy",
+        "label": "Product Strategy",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "strategy-and-planning-product-strategy-vision-and-goals",
+            "label": "Vision & Goals",
+            "type": "module"
+          },
+          {
+            "id": "strategy-and-planning-product-strategy-positioning",
+            "label": "Positioning",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "strategy-and-planning-roadmapping",
+        "label": "Roadmapping",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "strategy-and-planning-roadmapping-outcome-based-roadmaps",
+            "label": "Outcome-Based Roadmaps",
+            "type": "module"
+          },
+          {
+            "id": "strategy-and-planning-roadmapping-prioritization",
+            "label": "Prioritization",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "strategy-and-planning-requirements",
+        "label": "Requirements",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "strategy-and-planning-requirements-prds",
+            "label": "PRDs",
+            "type": "module"
+          },
+          {
+            "id": "strategy-and-planning-requirements-user-stories",
+            "label": "User Stories",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Design & Delivery",
+    "short_title": "Design & Delivery",
+    "slug": "design-and-delivery",
+    "description": "Learn Design & Delivery for product management.",
+    "long_description": "Covers core concepts in Design & Delivery.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Design & Delivery.",
+    "outcomes": "Ability to apply Design & Delivery in product management.",
+    "seo": {
+      "meta_title": "Design & Delivery",
+      "meta_description": "Learn the fundamentals of Design & Delivery for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "design"
+    },
+    "children": [
+      {
+        "id": "design-and-delivery-product-design",
+        "label": "Product Design",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "design-and-delivery-product-design-ux-principles",
+            "label": "UX Principles",
+            "type": "module"
+          },
+          {
+            "id": "design-and-delivery-product-design-prototyping",
+            "label": "Prototyping",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "design-and-delivery-agile-delivery",
+        "label": "Agile Delivery",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "design-and-delivery-agile-delivery-backlog-management",
+            "label": "Backlog Management",
+            "type": "module"
+          },
+          {
+            "id": "design-and-delivery-agile-delivery-sprint-rituals",
+            "label": "Sprint Rituals",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "design-and-delivery-launch-planning",
+        "label": "Launch Planning",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "design-and-delivery-launch-planning-go-to-market",
+            "label": "Go-to-Market",
+            "type": "module"
+          },
+          {
+            "id": "design-and-delivery-launch-planning-release-strategy",
+            "label": "Release Strategy",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Metrics & Growth",
+    "short_title": "Metrics & Growth",
+    "slug": "metrics-and-growth",
+    "description": "Learn Metrics & Growth for product management.",
+    "long_description": "Covers core concepts in Metrics & Growth.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Metrics & Growth.",
+    "outcomes": "Ability to apply Metrics & Growth in product management.",
+    "seo": {
+      "meta_title": "Metrics & Growth",
+      "meta_description": "Learn the fundamentals of Metrics & Growth for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "metrics"
+    },
+    "children": [
+      {
+        "id": "metrics-and-growth-product-metrics",
+        "label": "Product Metrics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "metrics-and-growth-product-metrics-north-star-metric",
+            "label": "North Star Metric",
+            "type": "module"
+          },
+          {
+            "id": "metrics-and-growth-product-metrics-retention-and-churn",
+            "label": "Retention & Churn",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "metrics-and-growth-experimentation",
+        "label": "Experimentation",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "metrics-and-growth-experimentation-a-b-testing",
+            "label": "A/B Testing",
+            "type": "module"
+          },
+          {
+            "id": "metrics-and-growth-experimentation-cohort-analysis",
+            "label": "Cohort Analysis",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "metrics-and-growth-growth-loops",
+        "label": "Growth Loops",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "metrics-and-growth-growth-loops-acquisition",
+            "label": "Acquisition",
+            "type": "module"
+          },
+          {
+            "id": "metrics-and-growth-growth-loops-activation",
+            "label": "Activation",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Leadership & Stakeholders",
+    "short_title": "Leadership & Stakeholders",
+    "slug": "leadership-and-stakeholders",
+    "description": "Learn Leadership & Stakeholders for product management.",
+    "long_description": "Covers core concepts in Leadership & Stakeholders.\nFocuses on practical product management workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Leadership & Stakeholders.",
+    "outcomes": "Ability to apply Leadership & Stakeholders in product management.",
+    "seo": {
+      "meta_title": "Leadership & Stakeholders",
+      "meta_description": "Learn the fundamentals of Leadership & Stakeholders for product management."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "leadership"
+    },
+    "children": [
+      {
+        "id": "leadership-and-stakeholders-stakeholder-management",
+        "label": "Stakeholder Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "leadership-and-stakeholders-stakeholder-management-mapping-and-alignment",
+            "label": "Mapping & Alignment",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-stakeholders-stakeholder-management-communication-plans",
+            "label": "Communication Plans",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "leadership-and-stakeholders-influence-and-leadership",
+        "label": "Influence & Leadership",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "leadership-and-stakeholders-influence-and-leadership-decision-making",
+            "label": "Decision Making",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-stakeholders-influence-and-leadership-managing-tradeoffs",
+            "label": "Managing Tradeoffs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "leadership-and-stakeholders-risk-management",
+        "label": "Risk Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "leadership-and-stakeholders-risk-management-risk-assessment",
+            "label": "Risk Assessment",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-stakeholders-risk-management-mitigation",
+            "label": "Mitigation",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

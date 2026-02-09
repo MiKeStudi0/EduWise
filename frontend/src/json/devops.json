@@ -1,0 +1,1081 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "DevOps Foundations",
+    "short_title": "DevOps Foundations",
+    "slug": "devops-foundations",
+    "description": "Learn DevOps Foundations for DevOps.",
+    "long_description": "Covers core concepts in DevOps Foundations.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in DevOps Foundations.",
+    "outcomes": "Ability to apply DevOps Foundations in DevOps systems.",
+    "seo": {
+      "meta_title": "DevOps Foundations",
+      "meta_description": "Learn the fundamentals of DevOps Foundations for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "devops"
+    },
+    "children": [
+      {
+        "id": "devops-foundations-devops-culture-and-principles",
+        "label": "DevOps Culture & Principles",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "devops-foundations-devops-culture-and-principles-calms",
+            "label": "CALMS",
+            "type": "module"
+          },
+          {
+            "id": "devops-foundations-devops-culture-and-principles-feedback-loops",
+            "label": "Feedback Loops",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devops-foundations-sdlc-and-environments",
+        "label": "SDLC & Environments",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "devops-foundations-sdlc-and-environments-dev-stage-prod",
+            "label": "Dev/Stage/Prod",
+            "type": "module"
+          },
+          {
+            "id": "devops-foundations-sdlc-and-environments-change-management",
+            "label": "Change Management",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devops-foundations-automation-and-idempotency",
+        "label": "Automation & Idempotency",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "devops-foundations-automation-and-idempotency-immutable-infrastructure",
+            "label": "Immutable Infrastructure",
+            "type": "module"
+          },
+          {
+            "id": "devops-foundations-automation-and-idempotency-repeatable-builds",
+            "label": "Repeatable Builds",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "devops-foundations-reliability-basics",
+        "label": "Reliability Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "devops-foundations-reliability-basics-sli-slo-sla",
+            "label": "SLI/SLO/SLA",
+            "type": "module"
+          },
+          {
+            "id": "devops-foundations-reliability-basics-error-budgets",
+            "label": "Error Budgets",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Linux & System Administration",
+    "short_title": "Linux & System",
+    "slug": "linux-and-system-administration",
+    "description": "Learn Linux & System Administration for DevOps.",
+    "long_description": "Covers core concepts in Linux & System Administration.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Linux & System Administration.",
+    "outcomes": "Ability to apply Linux & System Administration in DevOps systems.",
+    "seo": {
+      "meta_title": "Linux & System Administration",
+      "meta_description": "Learn the fundamentals of Linux & System Administration for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "linux"
+    },
+    "children": [
+      {
+        "id": "linux-and-system-administration-linux-fundamentals",
+        "label": "Linux Fundamentals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "linux-and-system-administration-linux-fundamentals-filesystem",
+            "label": "Filesystem",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-linux-fundamentals-permissions",
+            "label": "Permissions",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-linux-fundamentals-users-and-groups",
+            "label": "Users & Groups",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "linux-and-system-administration-processes-and-services",
+        "label": "Processes & Services",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "linux-and-system-administration-processes-and-services-systemd",
+            "label": "systemd",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-processes-and-services-cron",
+            "label": "cron",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-processes-and-services-signals",
+            "label": "Signals",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "linux-and-system-administration-shell-scripting",
+        "label": "Shell Scripting",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "linux-and-system-administration-shell-scripting-bash",
+            "label": "bash",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-shell-scripting-python",
+            "label": "python",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "linux-and-system-administration-package-management",
+        "label": "Package Management",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "linux-and-system-administration-package-management-apt",
+            "label": "apt",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-package-management-yum-dnf",
+            "label": "yum/dnf",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "linux-and-system-administration-resource-monitoring",
+        "label": "Resource Monitoring",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "linux-and-system-administration-resource-monitoring-cpu-memory",
+            "label": "CPU/Memory",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-resource-monitoring-disk",
+            "label": "Disk",
+            "type": "module"
+          },
+          {
+            "id": "linux-and-system-administration-resource-monitoring-top-htop",
+            "label": "top/htop",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Networking & Security Basics",
+    "short_title": "Networking & Security",
+    "slug": "networking-and-security-basics",
+    "description": "Learn Networking & Security Basics for DevOps.",
+    "long_description": "Covers core concepts in Networking & Security Basics.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Networking & Security Basics.",
+    "outcomes": "Ability to apply Networking & Security Basics in DevOps systems.",
+    "seo": {
+      "meta_title": "Networking & Security Basics",
+      "meta_description": "Learn the fundamentals of Networking & Security Basics for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "networking"
+    },
+    "children": [
+      {
+        "id": "networking-and-security-basics-networking-fundamentals",
+        "label": "Networking Fundamentals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-security-basics-networking-fundamentals-tcp-udp",
+            "label": "TCP/UDP",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-networking-fundamentals-osi-model",
+            "label": "OSI Model",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-security-basics-dns-and-http-s",
+        "label": "DNS & HTTP(S)",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "networking-and-security-basics-dns-and-http-s-dns-records",
+            "label": "DNS Records",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-dns-and-http-s-tls-ssl",
+            "label": "TLS/SSL",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-security-basics-load-balancing-and-proxies",
+        "label": "Load Balancing & Proxies",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-security-basics-load-balancing-and-proxies-nginx",
+            "label": "Nginx",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-load-balancing-and-proxies-haproxy",
+            "label": "HAProxy",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-load-balancing-and-proxies-traefik",
+            "label": "Traefik",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-security-basics-firewalls-and-network-policies",
+        "label": "Firewalls & Network Policies",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "networking-and-security-basics-firewalls-and-network-policies-security-groups",
+            "label": "Security Groups",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-firewalls-and-network-policies-ingress-egress-rules",
+            "label": "Ingress/Egress Rules",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-security-basics-identity-and-secrets",
+        "label": "Identity & Secrets",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "networking-and-security-basics-identity-and-secrets-iam-rbac",
+            "label": "IAM/RBAC",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-identity-and-secrets-vault-kms",
+            "label": "Vault/KMS",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-identity-and-secrets-sealed-secrets",
+            "label": "Sealed Secrets",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "networking-and-security-basics-ssh-and-remote-access",
+        "label": "SSH & Remote Access",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "networking-and-security-basics-ssh-and-remote-access-ssh-keys",
+            "label": "SSH Keys",
+            "type": "module"
+          },
+          {
+            "id": "networking-and-security-basics-ssh-and-remote-access-bastion-hosts",
+            "label": "Bastion Hosts",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Version Control & Collaboration",
+    "short_title": "Version Control &",
+    "slug": "version-control-and-collaboration",
+    "description": "Learn Version Control & Collaboration for DevOps.",
+    "long_description": "Covers core concepts in Version Control & Collaboration.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Version Control & Collaboration.",
+    "outcomes": "Ability to apply Version Control & Collaboration in DevOps systems.",
+    "seo": {
+      "meta_title": "Version Control & Collaboration",
+      "meta_description": "Learn the fundamentals of Version Control & Collaboration for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "version"
+    },
+    "children": [
+      {
+        "id": "version-control-and-collaboration-git-basics",
+        "label": "Git Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "version-control-and-collaboration-git-basics-branching",
+            "label": "Branching",
+            "type": "module"
+          },
+          {
+            "id": "version-control-and-collaboration-git-basics-merge-rebase",
+            "label": "Merge/Rebase",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "version-control-and-collaboration-repo-hosting-and-prs",
+        "label": "Repo Hosting & PRs",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "version-control-and-collaboration-repo-hosting-and-prs-github",
+            "label": "GitHub",
+            "type": "module"
+          },
+          {
+            "id": "version-control-and-collaboration-repo-hosting-and-prs-gitlab",
+            "label": "GitLab",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "version-control-and-collaboration-versioning-and-releases",
+        "label": "Versioning & Releases",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "version-control-and-collaboration-versioning-and-releases-semver",
+            "label": "SemVer",
+            "type": "module"
+          },
+          {
+            "id": "version-control-and-collaboration-versioning-and-releases-release-tags",
+            "label": "Release Tags",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "CI/CD & Release Management",
+    "short_title": "CI/CD & Release",
+    "slug": "ci-cd-and-release-management",
+    "description": "Learn CI/CD & Release Management for DevOps.",
+    "long_description": "Covers core concepts in CI/CD & Release Management.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in CI/CD & Release Management.",
+    "outcomes": "Ability to apply CI/CD & Release Management in DevOps systems.",
+    "seo": {
+      "meta_title": "CI/CD & Release Management",
+      "meta_description": "Learn the fundamentals of CI/CD & Release Management for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ci"
+    },
+    "children": [
+      {
+        "id": "ci-cd-and-release-management-ci-pipelines",
+        "label": "CI Pipelines",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-ci-pipelines-build",
+            "label": "Build",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-ci-pipelines-test",
+            "label": "Test",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-ci-pipelines-lint",
+            "label": "Lint",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-release-management-cd-pipelines",
+        "label": "CD Pipelines",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-cd-pipelines-deploy",
+            "label": "Deploy",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-cd-pipelines-rollback",
+            "label": "Rollback",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-release-management-deployment-strategies",
+        "label": "Deployment Strategies",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-deployment-strategies-blue-green",
+            "label": "Blue/Green",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-deployment-strategies-canary",
+            "label": "Canary",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-deployment-strategies-rolling",
+            "label": "Rolling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-release-management-ci-cd-tools",
+        "label": "CI/CD Tools",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-ci-cd-tools-github-actions",
+            "label": "GitHub Actions",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-ci-cd-tools-gitlab-ci",
+            "label": "GitLab CI",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-ci-cd-tools-jenkins",
+            "label": "Jenkins",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-release-management-artifact-and-registry-management",
+        "label": "Artifact & Registry Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-artifact-and-registry-management-container-registry",
+            "label": "Container Registry",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-artifact-and-registry-management-package-registry",
+            "label": "Package Registry",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-release-management-gitops",
+        "label": "GitOps",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ci-cd-and-release-management-gitops-argo-cd",
+            "label": "Argo CD",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-release-management-gitops-flux",
+            "label": "Flux",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Infrastructure as Code & Configuration",
+    "short_title": "Infrastructure as Code",
+    "slug": "infrastructure-as-code-and-configuration",
+    "description": "Learn Infrastructure as Code & Configuration for DevOps.",
+    "long_description": "Covers core concepts in Infrastructure as Code & Configuration.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Infrastructure as Code & Configuration.",
+    "outcomes": "Ability to apply Infrastructure as Code & Configuration in DevOps systems.",
+    "seo": {
+      "meta_title": "Infrastructure as Code & Configuration",
+      "meta_description": "Learn the fundamentals of Infrastructure as Code & Configuration for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "infrastructure"
+    },
+    "children": [
+      {
+        "id": "infrastructure-as-code-and-configuration-iac-concepts",
+        "label": "IaC Concepts",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "infrastructure-as-code-and-configuration-iac-concepts-state",
+            "label": "State",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-as-code-and-configuration-iac-concepts-modules",
+            "label": "Modules",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-as-code-and-configuration-iac-concepts-idempotency",
+            "label": "Idempotency",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure-as-code-and-configuration-terraform-opentofu",
+        "label": "Terraform / OpenTofu",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "infrastructure-as-code-and-configuration-terraform-opentofu-plan-apply",
+            "label": "Plan/Apply",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-as-code-and-configuration-terraform-opentofu-state-management",
+            "label": "State Management",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure-as-code-and-configuration-cloudformation-cdk",
+        "label": "CloudFormation / CDK",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "infrastructure-as-code-and-configuration-cloudformation-cdk-stacks",
+            "label": "Stacks",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-as-code-and-configuration-cloudformation-cdk-constructs",
+            "label": "Constructs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "infrastructure-as-code-and-configuration-configuration-management",
+        "label": "Configuration Management",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "infrastructure-as-code-and-configuration-configuration-management-ansible",
+            "label": "Ansible",
+            "type": "module"
+          },
+          {
+            "id": "infrastructure-as-code-and-configuration-configuration-management-chef-puppet",
+            "label": "Chef/Puppet",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Containers & Orchestration",
+    "short_title": "Containers & Orchestration",
+    "slug": "containers-and-orchestration",
+    "description": "Learn Containers & Orchestration for DevOps.",
+    "long_description": "Covers core concepts in Containers & Orchestration.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Containers & Orchestration.",
+    "outcomes": "Ability to apply Containers & Orchestration in DevOps systems.",
+    "seo": {
+      "meta_title": "Containers & Orchestration",
+      "meta_description": "Learn the fundamentals of Containers & Orchestration for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "containers"
+    },
+    "children": [
+      {
+        "id": "containers-and-orchestration-containers-and-images",
+        "label": "Containers & Images",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "containers-and-orchestration-containers-and-images-docker",
+            "label": "Docker",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-containers-and-images-dockerfile",
+            "label": "Dockerfile",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-container-registries",
+        "label": "Container Registries",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "containers-and-orchestration-container-registries-oci",
+            "label": "OCI",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-container-registries-private-registries",
+            "label": "Private Registries",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-kubernetes-basics",
+        "label": "Kubernetes Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-pods",
+            "label": "Pods",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-services",
+            "label": "Services",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-deployments",
+            "label": "Deployments",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-kubernetes-operations",
+        "label": "Kubernetes Operations",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "containers-and-orchestration-kubernetes-operations-helm",
+            "label": "Helm",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-kubernetes-operations-kustomize",
+            "label": "Kustomize",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-managed-k8s-platforms",
+        "label": "Managed K8s Platforms",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "containers-and-orchestration-managed-k8s-platforms-eks",
+            "label": "EKS",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-managed-k8s-platforms-gke",
+            "label": "GKE",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-managed-k8s-platforms-aks",
+            "label": "AKS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-service-mesh",
+        "label": "Service Mesh",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "containers-and-orchestration-service-mesh-istio",
+            "label": "Istio",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-service-mesh-linkerd",
+            "label": "Linkerd",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "roadmap_id": 1,
+    "title": "Cloud Platforms & Serverless",
+    "short_title": "Cloud Platforms &",
+    "slug": "cloud-platforms-and-serverless",
+    "description": "Learn Cloud Platforms & Serverless for DevOps.",
+    "long_description": "Covers core concepts in Cloud Platforms & Serverless.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Cloud Platforms & Serverless.",
+    "outcomes": "Ability to apply Cloud Platforms & Serverless in DevOps systems.",
+    "seo": {
+      "meta_title": "Cloud Platforms & Serverless",
+      "meta_description": "Learn the fundamentals of Cloud Platforms & Serverless for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "cloud"
+    },
+    "children": [
+      {
+        "id": "cloud-platforms-and-serverless-cloud-providers",
+        "label": "Cloud Providers",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-platforms-and-serverless-cloud-providers-aws",
+            "label": "AWS",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-cloud-providers-azure",
+            "label": "Azure",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-cloud-providers-gcp",
+            "label": "GCP",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-platforms-and-serverless-core-cloud-services",
+        "label": "Core Cloud Services",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cloud-platforms-and-serverless-core-cloud-services-compute",
+            "label": "Compute",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-core-cloud-services-storage",
+            "label": "Storage",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-core-cloud-services-networking",
+            "label": "Networking",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-platforms-and-serverless-serverless",
+        "label": "Serverless",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-platforms-and-serverless-serverless-aws-lambda",
+            "label": "AWS Lambda",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-serverless-cloud-functions",
+            "label": "Cloud Functions",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-serverless-azure-functions",
+            "label": "Azure Functions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-platforms-and-serverless-managed-databases",
+        "label": "Managed Databases",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cloud-platforms-and-serverless-managed-databases-rds",
+            "label": "RDS",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-managed-databases-cloud-sql",
+            "label": "Cloud SQL",
+            "type": "module"
+          },
+          {
+            "id": "cloud-platforms-and-serverless-managed-databases-dynamodb",
+            "label": "DynamoDB",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "roadmap_id": 1,
+    "title": "Observability & Reliability",
+    "short_title": "Observability & Reliability",
+    "slug": "observability-and-reliability",
+    "description": "Learn Observability & Reliability for DevOps.",
+    "long_description": "Covers core concepts in Observability & Reliability.\nFocuses on practical DevOps workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Observability & Reliability.",
+    "outcomes": "Ability to apply Observability & Reliability in DevOps systems.",
+    "seo": {
+      "meta_title": "Observability & Reliability",
+      "meta_description": "Learn the fundamentals of Observability & Reliability for DevOps."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "observability"
+    },
+    "children": [
+      {
+        "id": "observability-and-reliability-metrics-and-monitoring",
+        "label": "Metrics & Monitoring",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-metrics-and-monitoring-prometheus",
+            "label": "Prometheus",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-metrics-and-monitoring-grafana",
+            "label": "Grafana",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-metrics-and-monitoring-datadog",
+            "label": "Datadog",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-logging",
+        "label": "Logging",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "observability-and-reliability-logging-elk-efk",
+            "label": "ELK/EFK",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-logging-loki",
+            "label": "Loki",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-tracing",
+        "label": "Tracing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-tracing-opentelemetry",
+            "label": "OpenTelemetry",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-tracing-jaeger",
+            "label": "Jaeger",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-alerting-and-on-call",
+        "label": "Alerting & On-Call",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "observability-and-reliability-alerting-and-on-call-pagerduty",
+            "label": "PagerDuty",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-alerting-and-on-call-incident-response",
+            "label": "Incident Response",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-sre-practices",
+        "label": "SRE Practices",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-sre-practices-sli-slo",
+            "label": "SLI/SLO",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-sre-practices-error-budgets",
+            "label": "Error Budgets",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-auto-scaling-and-capacity",
+        "label": "Auto-Scaling & Capacity",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "observability-and-reliability-auto-scaling-and-capacity-hpa",
+            "label": "HPA",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-auto-scaling-and-capacity-autoscaling",
+            "label": "Autoscaling",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

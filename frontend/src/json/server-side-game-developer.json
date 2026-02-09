@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Server-Side Game Foundations",
+    "short_title": "Server-Side Game Foundations",
+    "slug": "server-side-game-foundations",
+    "description": "Learn Server-Side Game Foundations for server-side game development.",
+    "long_description": "Covers core concepts in Server-Side Game Foundations.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Server-Side Game Foundations.",
+    "outcomes": "Ability to apply Server-Side Game Foundations in server-side game development.",
+    "seo": {
+      "meta_title": "Server-Side Game Foundations",
+      "meta_description": "Learn the fundamentals of Server-Side Game Foundations for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "server"
+    },
+    "children": [
+      {
+        "id": "server-side-game-foundations-networking-basics",
+        "label": "Networking Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "server-side-game-foundations-networking-basics-tcp-vs-udp",
+            "label": "TCP vs UDP",
+            "type": "module"
+          },
+          {
+            "id": "server-side-game-foundations-networking-basics-latency-and-jitter",
+            "label": "Latency & Jitter",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "server-side-game-foundations-client-server-architecture",
+        "label": "Client-Server Architecture",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "server-side-game-foundations-client-server-architecture-authoritative-server",
+            "label": "Authoritative Server",
+            "type": "module"
+          },
+          {
+            "id": "server-side-game-foundations-client-server-architecture-state-sync",
+            "label": "State Sync",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "server-side-game-foundations-session-and-match-flow",
+        "label": "Session & Match Flow",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "server-side-game-foundations-session-and-match-flow-lobby-and-matchmaking",
+            "label": "Lobby & Matchmaking",
+            "type": "module"
+          },
+          {
+            "id": "server-side-game-foundations-session-and-match-flow-session-lifecycle",
+            "label": "Session Lifecycle",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Real-Time Networking",
+    "short_title": "Real-Time Networking",
+    "slug": "real-time-networking",
+    "description": "Learn Real-Time Networking for server-side game development.",
+    "long_description": "Covers core concepts in Real-Time Networking.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Real-Time Networking.",
+    "outcomes": "Ability to apply Real-Time Networking in server-side game development.",
+    "seo": {
+      "meta_title": "Real-Time Networking",
+      "meta_description": "Learn the fundamentals of Real-Time Networking for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "real"
+    },
+    "children": [
+      {
+        "id": "real-time-networking-replication",
+        "label": "Replication",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "real-time-networking-replication-state-replication",
+            "label": "State Replication",
+            "type": "module"
+          },
+          {
+            "id": "real-time-networking-replication-delta-compression",
+            "label": "Delta Compression",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "real-time-networking-prediction-and-reconciliation",
+        "label": "Prediction & Reconciliation",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "real-time-networking-prediction-and-reconciliation-client-prediction",
+            "label": "Client Prediction",
+            "type": "module"
+          },
+          {
+            "id": "real-time-networking-prediction-and-reconciliation-server-reconciliation",
+            "label": "Server Reconciliation",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "real-time-networking-lag-compensation",
+        "label": "Lag Compensation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "real-time-networking-lag-compensation-interpolation",
+            "label": "Interpolation",
+            "type": "module"
+          },
+          {
+            "id": "real-time-networking-lag-compensation-rollback-techniques",
+            "label": "Rollback Techniques",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Backend Services",
+    "short_title": "Backend Services",
+    "slug": "backend-services",
+    "description": "Learn Backend Services for server-side game development.",
+    "long_description": "Covers core concepts in Backend Services.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Backend Services.",
+    "outcomes": "Ability to apply Backend Services in server-side game development.",
+    "seo": {
+      "meta_title": "Backend Services",
+      "meta_description": "Learn the fundamentals of Backend Services for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "backend"
+    },
+    "children": [
+      {
+        "id": "backend-services-apis-and-rpc",
+        "label": "APIs & RPC",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-services-apis-and-rpc-rest",
+            "label": "REST",
+            "type": "module"
+          },
+          {
+            "id": "backend-services-apis-and-rpc-grpc",
+            "label": "gRPC",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-services-data-storage",
+        "label": "Data Storage",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "backend-services-data-storage-sql-vs-nosql",
+            "label": "SQL vs NoSQL",
+            "type": "module"
+          },
+          {
+            "id": "backend-services-data-storage-caching",
+            "label": "Caching",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-services-messaging",
+        "label": "Messaging",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-services-messaging-message-queues",
+            "label": "Message Queues",
+            "type": "module"
+          },
+          {
+            "id": "backend-services-messaging-event-streaming",
+            "label": "Event Streaming",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Scalability & Reliability",
+    "short_title": "Scalability & Reliability",
+    "slug": "scalability-and-reliability",
+    "description": "Learn Scalability & Reliability for server-side game development.",
+    "long_description": "Covers core concepts in Scalability & Reliability.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Scalability & Reliability.",
+    "outcomes": "Ability to apply Scalability & Reliability in server-side game development.",
+    "seo": {
+      "meta_title": "Scalability & Reliability",
+      "meta_description": "Learn the fundamentals of Scalability & Reliability for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "scalability"
+    },
+    "children": [
+      {
+        "id": "scalability-and-reliability-load-handling",
+        "label": "Load Handling",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "scalability-and-reliability-load-handling-sharding",
+            "label": "Sharding",
+            "type": "module"
+          },
+          {
+            "id": "scalability-and-reliability-load-handling-autoscaling",
+            "label": "Autoscaling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scalability-and-reliability-fault-tolerance",
+        "label": "Fault Tolerance",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "scalability-and-reliability-fault-tolerance-retry-and-backoff",
+            "label": "Retry & Backoff",
+            "type": "module"
+          },
+          {
+            "id": "scalability-and-reliability-fault-tolerance-failover",
+            "label": "Failover",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scalability-and-reliability-observability",
+        "label": "Observability",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "scalability-and-reliability-observability-logging",
+            "label": "Logging",
+            "type": "module"
+          },
+          {
+            "id": "scalability-and-reliability-observability-metrics-and-tracing",
+            "label": "Metrics & Tracing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Security & Operations",
+    "short_title": "Security & Operations",
+    "slug": "security-and-operations",
+    "description": "Learn Security & Operations for server-side game development.",
+    "long_description": "Covers core concepts in Security & Operations.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Security & Operations.",
+    "outcomes": "Ability to apply Security & Operations in server-side game development.",
+    "seo": {
+      "meta_title": "Security & Operations",
+      "meta_description": "Learn the fundamentals of Security & Operations for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "security"
+    },
+    "children": [
+      {
+        "id": "security-and-operations-security-basics",
+        "label": "Security Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "security-and-operations-security-basics-auth-and-tokens",
+            "label": "Auth & Tokens",
+            "type": "module"
+          },
+          {
+            "id": "security-and-operations-security-basics-ddos-protection",
+            "label": "DDoS Protection",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "security-and-operations-cheat-prevention",
+        "label": "Cheat Prevention",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "security-and-operations-cheat-prevention-server-authority",
+            "label": "Server Authority",
+            "type": "module"
+          },
+          {
+            "id": "security-and-operations-cheat-prevention-anti-cheat-signals",
+            "label": "Anti-Cheat Signals",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "security-and-operations-infrastructure",
+        "label": "Infrastructure",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "security-and-operations-infrastructure-containers",
+            "label": "Containers",
+            "type": "module"
+          },
+          {
+            "id": "security-and-operations-infrastructure-cloud-hosting",
+            "label": "Cloud Hosting",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Production & Live Ops",
+    "short_title": "Production & Live",
+    "slug": "production-and-live-ops",
+    "description": "Learn Production & Live Ops for server-side game development.",
+    "long_description": "Covers core concepts in Production & Live Ops.\nFocuses on practical server-side game development workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Production & Live Ops.",
+    "outcomes": "Ability to apply Production & Live Ops in server-side game development.",
+    "seo": {
+      "meta_title": "Production & Live Ops",
+      "meta_description": "Learn the fundamentals of Production & Live Ops for server-side game development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "production"
+    },
+    "children": [
+      {
+        "id": "production-and-live-ops-release-management",
+        "label": "Release Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "production-and-live-ops-release-management-deployment-pipelines",
+            "label": "Deployment Pipelines",
+            "type": "module"
+          },
+          {
+            "id": "production-and-live-ops-release-management-rollbacks",
+            "label": "Rollbacks",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "production-and-live-ops-live-ops",
+        "label": "Live Ops",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "production-and-live-ops-live-ops-events-and-seasons",
+            "label": "Events & Seasons",
+            "type": "module"
+          },
+          {
+            "id": "production-and-live-ops-live-ops-economy-balancing",
+            "label": "Economy Balancing",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "production-and-live-ops-analytics",
+        "label": "Analytics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "production-and-live-ops-analytics-telemetry",
+            "label": "Telemetry",
+            "type": "module"
+          },
+          {
+            "id": "production-and-live-ops-analytics-kpis",
+            "label": "KPIs",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

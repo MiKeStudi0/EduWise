@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "UX Foundations",
+    "short_title": "UX Foundations",
+    "slug": "ux-foundations",
+    "description": "Learn UX Foundations for ux design.",
+    "long_description": "Covers core concepts in UX Foundations.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in UX Foundations.",
+    "outcomes": "Ability to apply UX Foundations in ux design.",
+    "seo": {
+      "meta_title": "UX Foundations",
+      "meta_description": "Learn the fundamentals of UX Foundations for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ux"
+    },
+    "children": [
+      {
+        "id": "ux-foundations-ux-principles",
+        "label": "UX Principles",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ux-foundations-ux-principles-usability-heuristics",
+            "label": "Usability Heuristics",
+            "type": "module"
+          },
+          {
+            "id": "ux-foundations-ux-principles-human-centered-design",
+            "label": "Human-Centered Design",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ux-foundations-design-process",
+        "label": "Design Process",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ux-foundations-design-process-double-diamond",
+            "label": "Double Diamond",
+            "type": "module"
+          },
+          {
+            "id": "ux-foundations-design-process-lean-ux",
+            "label": "Lean UX",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ux-foundations-product-strategy-basics",
+        "label": "Product Strategy Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ux-foundations-product-strategy-basics-problem-framing",
+            "label": "Problem Framing",
+            "type": "module"
+          },
+          {
+            "id": "ux-foundations-product-strategy-basics-value-proposition",
+            "label": "Value Proposition",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "User Research",
+    "short_title": "User Research",
+    "slug": "user-research",
+    "description": "Learn User Research for ux design.",
+    "long_description": "Covers core concepts in User Research.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in User Research.",
+    "outcomes": "Ability to apply User Research in ux design.",
+    "seo": {
+      "meta_title": "User Research",
+      "meta_description": "Learn the fundamentals of User Research for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "user"
+    },
+    "children": [
+      {
+        "id": "user-research-research-methods",
+        "label": "Research Methods",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "user-research-research-methods-interviews",
+            "label": "Interviews",
+            "type": "module"
+          },
+          {
+            "id": "user-research-research-methods-surveys",
+            "label": "Surveys",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "user-research-synthesis-and-insights",
+        "label": "Synthesis & Insights",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "user-research-synthesis-and-insights-affinity-mapping",
+            "label": "Affinity Mapping",
+            "type": "module"
+          },
+          {
+            "id": "user-research-synthesis-and-insights-personas",
+            "label": "Personas",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "user-research-jobs-to-be-done",
+        "label": "Jobs to Be Done",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "user-research-jobs-to-be-done-jtbd-statements",
+            "label": "JTBD Statements",
+            "type": "module"
+          },
+          {
+            "id": "user-research-jobs-to-be-done-opportunity-mapping",
+            "label": "Opportunity Mapping",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Information Architecture",
+    "short_title": "Information Architecture",
+    "slug": "information-architecture",
+    "description": "Learn Information Architecture for ux design.",
+    "long_description": "Covers core concepts in Information Architecture.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Information Architecture.",
+    "outcomes": "Ability to apply Information Architecture in ux design.",
+    "seo": {
+      "meta_title": "Information Architecture",
+      "meta_description": "Learn the fundamentals of Information Architecture for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "information"
+    },
+    "children": [
+      {
+        "id": "information-architecture-structure-and-navigation",
+        "label": "Structure & Navigation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "information-architecture-structure-and-navigation-sitemap",
+            "label": "Sitemap",
+            "type": "module"
+          },
+          {
+            "id": "information-architecture-structure-and-navigation-navigation-patterns",
+            "label": "Navigation Patterns",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "information-architecture-content-strategy",
+        "label": "Content Strategy",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "information-architecture-content-strategy-content-inventory",
+            "label": "Content Inventory",
+            "type": "module"
+          },
+          {
+            "id": "information-architecture-content-strategy-content-prioritization",
+            "label": "Content Prioritization",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "information-architecture-user-flows",
+        "label": "User Flows",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "information-architecture-user-flows-task-flows",
+            "label": "Task Flows",
+            "type": "module"
+          },
+          {
+            "id": "information-architecture-user-flows-edge-cases",
+            "label": "Edge Cases",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Interaction & UI Design",
+    "short_title": "Interaction & UI",
+    "slug": "interaction-and-ui-design",
+    "description": "Learn Interaction & UI Design for ux design.",
+    "long_description": "Covers core concepts in Interaction & UI Design.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Interaction & UI Design.",
+    "outcomes": "Ability to apply Interaction & UI Design in ux design.",
+    "seo": {
+      "meta_title": "Interaction & UI Design",
+      "meta_description": "Learn the fundamentals of Interaction & UI Design for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "interaction"
+    },
+    "children": [
+      {
+        "id": "interaction-and-ui-design-interaction-design",
+        "label": "Interaction Design",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "interaction-and-ui-design-interaction-design-microinteractions",
+            "label": "Microinteractions",
+            "type": "module"
+          },
+          {
+            "id": "interaction-and-ui-design-interaction-design-feedback-and-states",
+            "label": "Feedback & States",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "interaction-and-ui-design-ui-principles",
+        "label": "UI Principles",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "interaction-and-ui-design-ui-principles-visual-hierarchy",
+            "label": "Visual Hierarchy",
+            "type": "module"
+          },
+          {
+            "id": "interaction-and-ui-design-ui-principles-consistency",
+            "label": "Consistency",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "interaction-and-ui-design-design-patterns",
+        "label": "Design Patterns",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "interaction-and-ui-design-design-patterns-forms",
+            "label": "Forms",
+            "type": "module"
+          },
+          {
+            "id": "interaction-and-ui-design-design-patterns-mobile-patterns",
+            "label": "Mobile Patterns",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Prototyping & Validation",
+    "short_title": "Prototyping & Validation",
+    "slug": "prototyping-and-validation",
+    "description": "Learn Prototyping & Validation for ux design.",
+    "long_description": "Covers core concepts in Prototyping & Validation.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Prototyping & Validation.",
+    "outcomes": "Ability to apply Prototyping & Validation in ux design.",
+    "seo": {
+      "meta_title": "Prototyping & Validation",
+      "meta_description": "Learn the fundamentals of Prototyping & Validation for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "prototyping"
+    },
+    "children": [
+      {
+        "id": "prototyping-and-validation-wireframing",
+        "label": "Wireframing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "prototyping-and-validation-wireframing-low-fidelity",
+            "label": "Low-Fidelity",
+            "type": "module"
+          },
+          {
+            "id": "prototyping-and-validation-wireframing-mid-fidelity",
+            "label": "Mid-Fidelity",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "prototyping-and-validation-prototyping",
+        "label": "Prototyping",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "prototyping-and-validation-prototyping-interactive-prototypes",
+            "label": "Interactive Prototypes",
+            "type": "module"
+          },
+          {
+            "id": "prototyping-and-validation-prototyping-handoff-specs",
+            "label": "Handoff Specs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "prototyping-and-validation-usability-testing",
+        "label": "Usability Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "prototyping-and-validation-usability-testing-test-plans",
+            "label": "Test Plans",
+            "type": "module"
+          },
+          {
+            "id": "prototyping-and-validation-usability-testing-findings-and-iteration",
+            "label": "Findings & Iteration",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Design Systems & Impact",
+    "short_title": "Design Systems &",
+    "slug": "design-systems-and-impact",
+    "description": "Learn Design Systems & Impact for ux design.",
+    "long_description": "Covers core concepts in Design Systems & Impact.\nFocuses on practical ux design workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Design Systems & Impact.",
+    "outcomes": "Ability to apply Design Systems & Impact in ux design.",
+    "seo": {
+      "meta_title": "Design Systems & Impact",
+      "meta_description": "Learn the fundamentals of Design Systems & Impact for ux design."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "design"
+    },
+    "children": [
+      {
+        "id": "design-systems-and-impact-design-systems",
+        "label": "Design Systems",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "design-systems-and-impact-design-systems-components",
+            "label": "Components",
+            "type": "module"
+          },
+          {
+            "id": "design-systems-and-impact-design-systems-design-tokens",
+            "label": "Design Tokens",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "design-systems-and-impact-collaboration-and-handoff",
+        "label": "Collaboration & Handoff",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "design-systems-and-impact-collaboration-and-handoff-specs-and-redlines",
+            "label": "Specs & Redlines",
+            "type": "module"
+          },
+          {
+            "id": "design-systems-and-impact-collaboration-and-handoff-design-qa",
+            "label": "Design QA",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "design-systems-and-impact-ux-metrics-and-experimentation",
+        "label": "UX Metrics & Experimentation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "design-systems-and-impact-ux-metrics-and-experimentation-ux-metrics",
+            "label": "UX Metrics",
+            "type": "module"
+          },
+          {
+            "id": "design-systems-and-impact-ux-metrics-and-experimentation-a-b-testing",
+            "label": "A/B Testing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

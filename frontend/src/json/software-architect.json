@@ -1,0 +1,556 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Architecture Foundations",
+    "short_title": "Architecture Foundations",
+    "slug": "architecture-foundations",
+    "description": "Learn Architecture Foundations for software architecture.",
+    "long_description": "Covers core concepts in Architecture Foundations.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Architecture Foundations.",
+    "outcomes": "Ability to apply Architecture Foundations in software architecture.",
+    "seo": {
+      "meta_title": "Architecture Foundations",
+      "meta_description": "Learn the fundamentals of Architecture Foundations for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "architecture"
+    },
+    "children": [
+      {
+        "id": "architecture-foundations-role-of-a-software-architect",
+        "label": "Role of a Software Architect",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-foundations-role-of-a-software-architect-responsibilities",
+            "label": "Responsibilities",
+            "type": "module"
+          },
+          {
+            "id": "architecture-foundations-role-of-a-software-architect-stakeholder-management",
+            "label": "Stakeholder Management",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-foundations-architecture-levels",
+        "label": "Architecture Levels",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "architecture-foundations-architecture-levels-application",
+            "label": "Application",
+            "type": "module"
+          },
+          {
+            "id": "architecture-foundations-architecture-levels-solution",
+            "label": "Solution",
+            "type": "module"
+          },
+          {
+            "id": "architecture-foundations-architecture-levels-enterprise",
+            "label": "Enterprise",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-foundations-architecture-decision-records",
+        "label": "Architecture Decision Records",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-foundations-architecture-decision-records-tradeoffs",
+            "label": "Tradeoffs",
+            "type": "module"
+          },
+          {
+            "id": "architecture-foundations-architecture-decision-records-decision-logs",
+            "label": "Decision Logs",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Quality Attributes",
+    "short_title": "Quality Attributes",
+    "slug": "quality-attributes",
+    "description": "Learn Quality Attributes for software architecture.",
+    "long_description": "Covers core concepts in Quality Attributes.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Quality Attributes.",
+    "outcomes": "Ability to apply Quality Attributes in software architecture.",
+    "seo": {
+      "meta_title": "Quality Attributes",
+      "meta_description": "Learn the fundamentals of Quality Attributes for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "quality"
+    },
+    "children": [
+      {
+        "id": "quality-attributes-scalability-and-performance",
+        "label": "Scalability & Performance",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "quality-attributes-scalability-and-performance-throughput",
+            "label": "Throughput",
+            "type": "module"
+          },
+          {
+            "id": "quality-attributes-scalability-and-performance-latency",
+            "label": "Latency",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "quality-attributes-reliability-and-resilience",
+        "label": "Reliability & Resilience",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "quality-attributes-reliability-and-resilience-fault-tolerance",
+            "label": "Fault Tolerance",
+            "type": "module"
+          },
+          {
+            "id": "quality-attributes-reliability-and-resilience-disaster-recovery",
+            "label": "Disaster Recovery",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "quality-attributes-security",
+        "label": "Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "quality-attributes-security-authn-authz",
+            "label": "AuthN/AuthZ",
+            "type": "module"
+          },
+          {
+            "id": "quality-attributes-security-owasp",
+            "label": "OWASP",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Architecture Patterns",
+    "short_title": "Architecture Patterns",
+    "slug": "architecture-patterns",
+    "description": "Learn Architecture Patterns for software architecture.",
+    "long_description": "Covers core concepts in Architecture Patterns.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Architecture Patterns.",
+    "outcomes": "Ability to apply Architecture Patterns in software architecture.",
+    "seo": {
+      "meta_title": "Architecture Patterns",
+      "meta_description": "Learn the fundamentals of Architecture Patterns for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "architecture"
+    },
+    "children": [
+      {
+        "id": "architecture-patterns-monolith-and-modular",
+        "label": "Monolith & Modular",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-patterns-monolith-and-modular-layered",
+            "label": "Layered",
+            "type": "module"
+          },
+          {
+            "id": "architecture-patterns-monolith-and-modular-modular-monolith",
+            "label": "Modular Monolith",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-patterns-microservices",
+        "label": "Microservices",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "architecture-patterns-microservices-service-boundaries",
+            "label": "Service Boundaries",
+            "type": "module"
+          },
+          {
+            "id": "architecture-patterns-microservices-service-discovery",
+            "label": "Service Discovery",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-patterns-event-driven",
+        "label": "Event-Driven",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-patterns-event-driven-messaging",
+            "label": "Messaging",
+            "type": "module"
+          },
+          {
+            "id": "architecture-patterns-event-driven-cqrs",
+            "label": "CQRS",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Systems & Data",
+    "short_title": "Systems & Data",
+    "slug": "systems-and-data",
+    "description": "Learn Systems & Data for software architecture.",
+    "long_description": "Covers core concepts in Systems & Data.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Systems & Data.",
+    "outcomes": "Ability to apply Systems & Data in software architecture.",
+    "seo": {
+      "meta_title": "Systems & Data",
+      "meta_description": "Learn the fundamentals of Systems & Data for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "systems"
+    },
+    "children": [
+      {
+        "id": "systems-and-data-distributed-systems",
+        "label": "Distributed Systems",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "systems-and-data-distributed-systems-cap-theorem",
+            "label": "CAP Theorem",
+            "type": "module"
+          },
+          {
+            "id": "systems-and-data-distributed-systems-consistency-models",
+            "label": "Consistency Models",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "systems-and-data-data-storage",
+        "label": "Data Storage",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "systems-and-data-data-storage-sql-vs-nosql",
+            "label": "SQL vs NoSQL",
+            "type": "module"
+          },
+          {
+            "id": "systems-and-data-data-storage-caching",
+            "label": "Caching",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "systems-and-data-data-pipelines",
+        "label": "Data Pipelines",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "systems-and-data-data-pipelines-etl-elt",
+            "label": "ETL/ELT",
+            "type": "module"
+          },
+          {
+            "id": "systems-and-data-data-pipelines-streaming",
+            "label": "Streaming",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "APIs & Integration",
+    "short_title": "APIs & Integration",
+    "slug": "apis-and-integration",
+    "description": "Learn APIs & Integration for software architecture.",
+    "long_description": "Covers core concepts in APIs & Integration.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in APIs & Integration.",
+    "outcomes": "Ability to apply APIs & Integration in software architecture.",
+    "seo": {
+      "meta_title": "APIs & Integration",
+      "meta_description": "Learn the fundamentals of APIs & Integration for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "apis"
+    },
+    "children": [
+      {
+        "id": "apis-and-integration-api-design",
+        "label": "API Design",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "apis-and-integration-api-design-rest",
+            "label": "REST",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-integration-api-design-grpc",
+            "label": "gRPC",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-integration-api-design-graphql",
+            "label": "GraphQL",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-integration-integration-patterns",
+        "label": "Integration Patterns",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "apis-and-integration-integration-patterns-message-queues",
+            "label": "Message Queues",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-integration-integration-patterns-event-bus",
+            "label": "Event Bus",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-integration-gateway-and-edge",
+        "label": "Gateway & Edge",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "apis-and-integration-gateway-and-edge-api-gateway",
+            "label": "API Gateway",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-integration-gateway-and-edge-rate-limiting",
+            "label": "Rate Limiting",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Cloud & Operations",
+    "short_title": "Cloud & Operations",
+    "slug": "cloud-and-operations",
+    "description": "Learn Cloud & Operations for software architecture.",
+    "long_description": "Covers core concepts in Cloud & Operations.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Cloud & Operations.",
+    "outcomes": "Ability to apply Cloud & Operations in software architecture.",
+    "seo": {
+      "meta_title": "Cloud & Operations",
+      "meta_description": "Learn the fundamentals of Cloud & Operations for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "cloud"
+    },
+    "children": [
+      {
+        "id": "cloud-and-operations-cloud-architecture",
+        "label": "Cloud Architecture",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-operations-cloud-architecture-aws-azure-gcp",
+            "label": "AWS/Azure/GCP",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-operations-cloud-architecture-shared-responsibility",
+            "label": "Shared Responsibility",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-operations-infrastructure-as-code",
+        "label": "Infrastructure as Code",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cloud-and-operations-infrastructure-as-code-terraform",
+            "label": "Terraform",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-operations-infrastructure-as-code-ci-cd",
+            "label": "CI/CD",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-operations-observability",
+        "label": "Observability",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-operations-observability-logging",
+            "label": "Logging",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-operations-observability-metrics",
+            "label": "Metrics",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-operations-observability-tracing",
+            "label": "Tracing",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Leadership & Governance",
+    "short_title": "Leadership & Governance",
+    "slug": "leadership-and-governance",
+    "description": "Learn Leadership & Governance for software architecture.",
+    "long_description": "Covers core concepts in Leadership & Governance.\nFocuses on practical architecture workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Leadership & Governance.",
+    "outcomes": "Ability to apply Leadership & Governance in software architecture.",
+    "seo": {
+      "meta_title": "Leadership & Governance",
+      "meta_description": "Learn the fundamentals of Leadership & Governance for software architecture."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "leadership"
+    },
+    "children": [
+      {
+        "id": "leadership-and-governance-architecture-governance",
+        "label": "Architecture Governance",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "leadership-and-governance-architecture-governance-standards",
+            "label": "Standards",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-governance-architecture-governance-review-boards",
+            "label": "Review Boards",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "leadership-and-governance-documentation",
+        "label": "Documentation",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "leadership-and-governance-documentation-diagrams",
+            "label": "Diagrams",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-governance-documentation-decision-records",
+            "label": "Decision Records",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "leadership-and-governance-mentoring-and-communication",
+        "label": "Mentoring & Communication",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "leadership-and-governance-mentoring-and-communication-coaching",
+            "label": "Coaching",
+            "type": "module"
+          },
+          {
+            "id": "leadership-and-governance-mentoring-and-communication-stakeholder-updates",
+            "label": "Stakeholder Updates",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

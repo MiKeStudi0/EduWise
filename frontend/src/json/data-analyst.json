@@ -1,0 +1,733 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Data Analytics Foundations",
+    "short_title": "Data Analytics Foundations",
+    "slug": "data-analytics-foundations",
+    "description": "Learn Data Analytics Foundations for data analysis.",
+    "long_description": "Covers core concepts in Data Analytics Foundations.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data Analytics Foundations.",
+    "outcomes": "Ability to apply Data Analytics Foundations in data analysis.",
+    "seo": {
+      "meta_title": "Data Analytics Foundations",
+      "meta_description": "Learn the fundamentals of Data Analytics Foundations for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-analytics-foundations-what-is-data-analytics",
+        "label": "What is Data Analytics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-analytics-foundations-what-is-data-analytics-roles-and-responsibilities",
+            "label": "Roles & Responsibilities",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-what-is-data-analytics-analytics-lifecycle",
+            "label": "Analytics Lifecycle",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-analytics-foundations-types-of-analytics",
+        "label": "Types of Analytics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-analytics-foundations-types-of-analytics-descriptive",
+            "label": "Descriptive",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-types-of-analytics-diagnostic",
+            "label": "Diagnostic",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-types-of-analytics-predictive",
+            "label": "Predictive",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-types-of-analytics-prescriptive",
+            "label": "Prescriptive",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-analytics-foundations-business-and-metrics",
+        "label": "Business & Metrics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-analytics-foundations-business-and-metrics-kpis",
+            "label": "KPIs",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-business-and-metrics-north-star-metrics",
+            "label": "North Star Metrics",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-analytics-foundations-data-ethics-and-privacy",
+        "label": "Data Ethics & Privacy",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-analytics-foundations-data-ethics-and-privacy-pii",
+            "label": "PII",
+            "type": "module"
+          },
+          {
+            "id": "data-analytics-foundations-data-ethics-and-privacy-bias-and-fairness",
+            "label": "Bias & Fairness",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Spreadsheets & Reporting",
+    "short_title": "Spreadsheets & Reporting",
+    "slug": "spreadsheets-and-reporting",
+    "description": "Learn Spreadsheets & Reporting for data analysis.",
+    "long_description": "Covers core concepts in Spreadsheets & Reporting.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Spreadsheets & Reporting.",
+    "outcomes": "Ability to apply Spreadsheets & Reporting in data analysis.",
+    "seo": {
+      "meta_title": "Spreadsheets & Reporting",
+      "meta_description": "Learn the fundamentals of Spreadsheets & Reporting for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "spreadsheets"
+    },
+    "children": [
+      {
+        "id": "spreadsheets-and-reporting-core-spreadsheet-skills",
+        "label": "Core Spreadsheet Skills",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "spreadsheets-and-reporting-core-spreadsheet-skills-formulas-and-functions",
+            "label": "Formulas & Functions",
+            "type": "module"
+          },
+          {
+            "id": "spreadsheets-and-reporting-core-spreadsheet-skills-data-cleaning",
+            "label": "Data Cleaning",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "spreadsheets-and-reporting-pivot-tables-and-summaries",
+        "label": "Pivot Tables & Summaries",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "spreadsheets-and-reporting-pivot-tables-and-summaries-aggregation",
+            "label": "Aggregation",
+            "type": "module"
+          },
+          {
+            "id": "spreadsheets-and-reporting-pivot-tables-and-summaries-grouping",
+            "label": "Grouping",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "spreadsheets-and-reporting-charts-and-dashboards",
+        "label": "Charts & Dashboards",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "spreadsheets-and-reporting-charts-and-dashboards-chart-selection",
+            "label": "Chart Selection",
+            "type": "module"
+          },
+          {
+            "id": "spreadsheets-and-reporting-charts-and-dashboards-dashboard-design",
+            "label": "Dashboard Design",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "SQL & Databases",
+    "short_title": "SQL & Databases",
+    "slug": "sql-and-databases",
+    "description": "Learn SQL & Databases for data analysis.",
+    "long_description": "Covers core concepts in SQL & Databases.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in SQL & Databases.",
+    "outcomes": "Ability to apply SQL & Databases in data analysis.",
+    "seo": {
+      "meta_title": "SQL & Databases",
+      "meta_description": "Learn the fundamentals of SQL & Databases for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "sql"
+    },
+    "children": [
+      {
+        "id": "sql-and-databases-sql-basics",
+        "label": "SQL Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "sql-and-databases-sql-basics-select-filter",
+            "label": "SELECT/FILTER",
+            "type": "module"
+          },
+          {
+            "id": "sql-and-databases-sql-basics-joins",
+            "label": "JOINs",
+            "type": "module"
+          },
+          {
+            "id": "sql-and-databases-sql-basics-group-by",
+            "label": "GROUP BY",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "sql-and-databases-data-modeling-basics",
+        "label": "Data Modeling Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "sql-and-databases-data-modeling-basics-schemas",
+            "label": "Schemas",
+            "type": "module"
+          },
+          {
+            "id": "sql-and-databases-data-modeling-basics-normalization",
+            "label": "Normalization",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "sql-and-databases-query-performance",
+        "label": "Query Performance",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "sql-and-databases-query-performance-indexes",
+            "label": "Indexes",
+            "type": "module"
+          },
+          {
+            "id": "sql-and-databases-query-performance-explain",
+            "label": "EXPLAIN",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "sql-and-databases-data-sources",
+        "label": "Data Sources",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "sql-and-databases-data-sources-relational-databases",
+            "label": "Relational Databases",
+            "type": "module"
+          },
+          {
+            "id": "sql-and-databases-data-sources-data-warehouses",
+            "label": "Data Warehouses",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Programming for Analysis",
+    "short_title": "Programming for Analysis",
+    "slug": "programming-for-analysis",
+    "description": "Learn Programming for Analysis for data analysis.",
+    "long_description": "Covers core concepts in Programming for Analysis.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Programming for Analysis.",
+    "outcomes": "Ability to apply Programming for Analysis in data analysis.",
+    "seo": {
+      "meta_title": "Programming for Analysis",
+      "meta_description": "Learn the fundamentals of Programming for Analysis for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "programming"
+    },
+    "children": [
+      {
+        "id": "programming-for-analysis-python-or-r",
+        "label": "Python or R",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "programming-for-analysis-python-or-r-python-basics",
+            "label": "Python Basics",
+            "type": "module"
+          },
+          {
+            "id": "programming-for-analysis-python-or-r-r-basics",
+            "label": "R Basics",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "programming-for-analysis-data-manipulation",
+        "label": "Data Manipulation",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "programming-for-analysis-data-manipulation-pandas",
+            "label": "Pandas",
+            "type": "module"
+          },
+          {
+            "id": "programming-for-analysis-data-manipulation-dplyr",
+            "label": "dplyr",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "programming-for-analysis-data-visualization",
+        "label": "Data Visualization",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "programming-for-analysis-data-visualization-matplotlib-seaborn",
+            "label": "Matplotlib/Seaborn",
+            "type": "module"
+          },
+          {
+            "id": "programming-for-analysis-data-visualization-ggplot2",
+            "label": "ggplot2",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "programming-for-analysis-notebooks-and-reproducibility",
+        "label": "Notebooks & Reproducibility",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "programming-for-analysis-notebooks-and-reproducibility-jupyter",
+            "label": "Jupyter",
+            "type": "module"
+          },
+          {
+            "id": "programming-for-analysis-notebooks-and-reproducibility-report-automation",
+            "label": "Report Automation",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Data Preparation",
+    "short_title": "Data Preparation",
+    "slug": "data-preparation",
+    "description": "Learn Data Preparation for data analysis.",
+    "long_description": "Covers core concepts in Data Preparation.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data Preparation.",
+    "outcomes": "Ability to apply Data Preparation in data analysis.",
+    "seo": {
+      "meta_title": "Data Preparation",
+      "meta_description": "Learn the fundamentals of Data Preparation for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-preparation-data-collection",
+        "label": "Data Collection",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-preparation-data-collection-csv-files",
+            "label": "CSV/Files",
+            "type": "module"
+          },
+          {
+            "id": "data-preparation-data-collection-apis",
+            "label": "APIs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-preparation-data-cleaning",
+        "label": "Data Cleaning",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-preparation-data-cleaning-missing-data",
+            "label": "Missing Data",
+            "type": "module"
+          },
+          {
+            "id": "data-preparation-data-cleaning-outliers",
+            "label": "Outliers",
+            "type": "module"
+          },
+          {
+            "id": "data-preparation-data-cleaning-duplicates",
+            "label": "Duplicates",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-preparation-data-transformation",
+        "label": "Data Transformation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-preparation-data-transformation-type-casting",
+            "label": "Type Casting",
+            "type": "module"
+          },
+          {
+            "id": "data-preparation-data-transformation-feature-engineering",
+            "label": "Feature Engineering",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-preparation-data-quality",
+        "label": "Data Quality",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-preparation-data-quality-validation-rules",
+            "label": "Validation Rules",
+            "type": "module"
+          },
+          {
+            "id": "data-preparation-data-quality-data-documentation",
+            "label": "Data Documentation",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Exploratory Data Analysis (EDA)",
+    "short_title": "Exploratory Data Analysis",
+    "slug": "exploratory-data-analysis-eda",
+    "description": "Learn Exploratory Data Analysis (EDA) for data analysis.",
+    "long_description": "Covers core concepts in Exploratory Data Analysis (EDA).\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Exploratory Data Analysis (EDA).",
+    "outcomes": "Ability to apply Exploratory Data Analysis (EDA) in data analysis.",
+    "seo": {
+      "meta_title": "Exploratory Data Analysis (EDA)",
+      "meta_description": "Learn the fundamentals of Exploratory Data Analysis (EDA) for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "exploratory"
+    },
+    "children": [
+      {
+        "id": "exploratory-data-analysis-eda-descriptive-statistics",
+        "label": "Descriptive Statistics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "exploratory-data-analysis-eda-descriptive-statistics-summary-stats",
+            "label": "Summary Stats",
+            "type": "module"
+          },
+          {
+            "id": "exploratory-data-analysis-eda-descriptive-statistics-distributions",
+            "label": "Distributions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "exploratory-data-analysis-eda-correlation-and-relationships",
+        "label": "Correlation & Relationships",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "exploratory-data-analysis-eda-correlation-and-relationships-correlation",
+            "label": "Correlation",
+            "type": "module"
+          },
+          {
+            "id": "exploratory-data-analysis-eda-correlation-and-relationships-regression-basics",
+            "label": "Regression Basics",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "exploratory-data-analysis-eda-hypothesis-testing",
+        "label": "Hypothesis Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "exploratory-data-analysis-eda-hypothesis-testing-a-b-testing",
+            "label": "A/B Testing",
+            "type": "module"
+          },
+          {
+            "id": "exploratory-data-analysis-eda-hypothesis-testing-p-values",
+            "label": "p-values",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Visualization & Storytelling",
+    "short_title": "Visualization & Storytelling",
+    "slug": "visualization-and-storytelling",
+    "description": "Learn Visualization & Storytelling for data analysis.",
+    "long_description": "Covers core concepts in Visualization & Storytelling.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Visualization & Storytelling.",
+    "outcomes": "Ability to apply Visualization & Storytelling in data analysis.",
+    "seo": {
+      "meta_title": "Visualization & Storytelling",
+      "meta_description": "Learn the fundamentals of Visualization & Storytelling for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "visualization"
+    },
+    "children": [
+      {
+        "id": "visualization-and-storytelling-data-storytelling",
+        "label": "Data Storytelling",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "visualization-and-storytelling-data-storytelling-narrative",
+            "label": "Narrative",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-storytelling-data-storytelling-audience",
+            "label": "Audience",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "visualization-and-storytelling-bi-tools",
+        "label": "BI Tools",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "visualization-and-storytelling-bi-tools-power-bi",
+            "label": "Power BI",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-storytelling-bi-tools-tableau",
+            "label": "Tableau",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-storytelling-bi-tools-looker",
+            "label": "Looker",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "visualization-and-storytelling-dashboard-best-practices",
+        "label": "Dashboard Best Practices",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "visualization-and-storytelling-dashboard-best-practices-layout-and-ux",
+            "label": "Layout & UX",
+            "type": "module"
+          },
+          {
+            "id": "visualization-and-storytelling-dashboard-best-practices-interactivity",
+            "label": "Interactivity",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "roadmap_id": 1,
+    "title": "Advanced & Career-Ready Topics",
+    "short_title": "Advanced & Career-Ready",
+    "slug": "advanced-and-career-ready-topics",
+    "description": "Learn Advanced & Career-Ready Topics for data analysis.",
+    "long_description": "Covers core concepts in Advanced & Career-Ready Topics.\nFocuses on practical data analysis workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Advanced & Career-Ready Topics.",
+    "outcomes": "Ability to apply Advanced & Career-Ready Topics in data analysis.",
+    "seo": {
+      "meta_title": "Advanced & Career-Ready Topics",
+      "meta_description": "Learn the fundamentals of Advanced & Career-Ready Topics for data analysis."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "advanced"
+    },
+    "children": [
+      {
+        "id": "advanced-and-career-ready-topics-intro-to-machine-learning",
+        "label": "Intro to Machine Learning",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "advanced-and-career-ready-topics-intro-to-machine-learning-supervised-vs-unsupervised",
+            "label": "Supervised vs Unsupervised",
+            "type": "module"
+          },
+          {
+            "id": "advanced-and-career-ready-topics-intro-to-machine-learning-model-evaluation",
+            "label": "Model Evaluation",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "advanced-and-career-ready-topics-data-warehousing-concepts",
+        "label": "Data Warehousing Concepts",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "advanced-and-career-ready-topics-data-warehousing-concepts-star-schema",
+            "label": "Star Schema",
+            "type": "module"
+          },
+          {
+            "id": "advanced-and-career-ready-topics-data-warehousing-concepts-etl-vs-elt",
+            "label": "ETL vs ELT",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference",
+        "label": "Experimentation & Causal Inference",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference-cohort-analysis",
+            "label": "Cohort Analysis",
+            "type": "module"
+          },
+          {
+            "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference-causal-impact",
+            "label": "Causal Impact",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "advanced-and-career-ready-topics-portfolio-and-projects",
+        "label": "Portfolio & Projects",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "advanced-and-career-ready-topics-portfolio-and-projects-case-studies",
+            "label": "Case Studies",
+            "type": "module"
+          },
+          {
+            "id": "advanced-and-career-ready-topics-portfolio-and-projects-stakeholder-communication",
+            "label": "Stakeholder Communication",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

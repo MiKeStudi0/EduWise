@@ -1,0 +1,464 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Technical Writing Foundations",
+    "short_title": "Technical Writing Foundations",
+    "slug": "technical-writing-foundations",
+    "description": "Learn Technical Writing Foundations for technical writing.",
+    "long_description": "Covers core concepts in Technical Writing Foundations.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Technical Writing Foundations.",
+    "outcomes": "Ability to apply Technical Writing Foundations in technical writing.",
+    "seo": {
+      "meta_title": "Technical Writing Foundations",
+      "meta_description": "Learn the fundamentals of Technical Writing Foundations for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "technical"
+    },
+    "children": [
+      {
+        "id": "technical-writing-foundations-role-and-audience",
+        "label": "Role & Audience",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "technical-writing-foundations-role-and-audience-audience-analysis",
+            "label": "Audience Analysis",
+            "type": "module"
+          },
+          {
+            "id": "technical-writing-foundations-role-and-audience-stakeholder-alignment",
+            "label": "Stakeholder Alignment",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "technical-writing-foundations-clarity-and-plain-language",
+        "label": "Clarity & Plain Language",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "technical-writing-foundations-clarity-and-plain-language-plain-language",
+            "label": "Plain Language",
+            "type": "module"
+          },
+          {
+            "id": "technical-writing-foundations-clarity-and-plain-language-tone-and-voice",
+            "label": "Tone & Voice",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "technical-writing-foundations-domain-understanding",
+        "label": "Domain Understanding",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "technical-writing-foundations-domain-understanding-system-concepts",
+            "label": "System Concepts",
+            "type": "module"
+          },
+          {
+            "id": "technical-writing-foundations-domain-understanding-terminology",
+            "label": "Terminology",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Research & Planning",
+    "short_title": "Research & Planning",
+    "slug": "research-and-planning",
+    "description": "Learn Research & Planning for technical writing.",
+    "long_description": "Covers core concepts in Research & Planning.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Research & Planning.",
+    "outcomes": "Ability to apply Research & Planning in technical writing.",
+    "seo": {
+      "meta_title": "Research & Planning",
+      "meta_description": "Learn the fundamentals of Research & Planning for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "research"
+    },
+    "children": [
+      {
+        "id": "research-and-planning-source-gathering",
+        "label": "Source Gathering",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "research-and-planning-source-gathering-sme-interviews",
+            "label": "SME Interviews",
+            "type": "module"
+          },
+          {
+            "id": "research-and-planning-source-gathering-existing-artifacts",
+            "label": "Existing Artifacts",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "research-and-planning-content-strategy",
+        "label": "Content Strategy",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "research-and-planning-content-strategy-objectives-and-scope",
+            "label": "Objectives & Scope",
+            "type": "module"
+          },
+          {
+            "id": "research-and-planning-content-strategy-content-outline",
+            "label": "Content Outline",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "research-and-planning-information-architecture",
+        "label": "Information Architecture",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "research-and-planning-information-architecture-content-inventory",
+            "label": "Content Inventory",
+            "type": "module"
+          },
+          {
+            "id": "research-and-planning-information-architecture-navigation-structure",
+            "label": "Navigation Structure",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "Writing & Structure",
+    "short_title": "Writing & Structure",
+    "slug": "writing-and-structure",
+    "description": "Learn Writing & Structure for technical writing.",
+    "long_description": "Covers core concepts in Writing & Structure.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Writing & Structure.",
+    "outcomes": "Ability to apply Writing & Structure in technical writing.",
+    "seo": {
+      "meta_title": "Writing & Structure",
+      "meta_description": "Learn the fundamentals of Writing & Structure for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "writing"
+    },
+    "children": [
+      {
+        "id": "writing-and-structure-doc-structure",
+        "label": "Doc Structure",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "writing-and-structure-doc-structure-headings-and-flow",
+            "label": "Headings & Flow",
+            "type": "module"
+          },
+          {
+            "id": "writing-and-structure-doc-structure-task-concept-reference",
+            "label": "Task/Concept/Reference",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "writing-and-structure-procedures-and-how-tos",
+        "label": "Procedures & How-Tos",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "writing-and-structure-procedures-and-how-tos-steps-and-preconditions",
+            "label": "Steps & Preconditions",
+            "type": "module"
+          },
+          {
+            "id": "writing-and-structure-procedures-and-how-tos-examples",
+            "label": "Examples",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "writing-and-structure-visuals-and-diagrams",
+        "label": "Visuals & Diagrams",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "writing-and-structure-visuals-and-diagrams-diagrams",
+            "label": "Diagrams",
+            "type": "module"
+          },
+          {
+            "id": "writing-and-structure-visuals-and-diagrams-tables-and-screenshots",
+            "label": "Tables & Screenshots",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Documentation Types",
+    "short_title": "Documentation Types",
+    "slug": "documentation-types",
+    "description": "Learn Documentation Types for technical writing.",
+    "long_description": "Covers core concepts in Documentation Types.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Documentation Types.",
+    "outcomes": "Ability to apply Documentation Types in technical writing.",
+    "seo": {
+      "meta_title": "Documentation Types",
+      "meta_description": "Learn the fundamentals of Documentation Types for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "documentation"
+    },
+    "children": [
+      {
+        "id": "documentation-types-api-documentation",
+        "label": "API Documentation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "documentation-types-api-documentation-endpoints",
+            "label": "Endpoints",
+            "type": "module"
+          },
+          {
+            "id": "documentation-types-api-documentation-auth-and-errors",
+            "label": "Auth & Errors",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "documentation-types-user-guides",
+        "label": "User Guides",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "documentation-types-user-guides-getting-started",
+            "label": "Getting Started",
+            "type": "module"
+          },
+          {
+            "id": "documentation-types-user-guides-troubleshooting",
+            "label": "Troubleshooting",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "documentation-types-release-notes",
+        "label": "Release Notes",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "documentation-types-release-notes-change-logs",
+            "label": "Change Logs",
+            "type": "module"
+          },
+          {
+            "id": "documentation-types-release-notes-deprecations",
+            "label": "Deprecations",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Docs as Code & Publishing",
+    "short_title": "Docs as Code",
+    "slug": "docs-as-code-and-publishing",
+    "description": "Learn Docs as Code & Publishing for technical writing.",
+    "long_description": "Covers core concepts in Docs as Code & Publishing.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Docs as Code & Publishing.",
+    "outcomes": "Ability to apply Docs as Code & Publishing in technical writing.",
+    "seo": {
+      "meta_title": "Docs as Code & Publishing",
+      "meta_description": "Learn the fundamentals of Docs as Code & Publishing for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "docs"
+    },
+    "children": [
+      {
+        "id": "docs-as-code-and-publishing-version-control",
+        "label": "Version Control",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "docs-as-code-and-publishing-version-control-git-basics",
+            "label": "Git Basics",
+            "type": "module"
+          },
+          {
+            "id": "docs-as-code-and-publishing-version-control-review-workflow",
+            "label": "Review Workflow",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "docs-as-code-and-publishing-markup-and-publishing",
+        "label": "Markup & Publishing",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "docs-as-code-and-publishing-markup-and-publishing-markdown",
+            "label": "Markdown",
+            "type": "module"
+          },
+          {
+            "id": "docs-as-code-and-publishing-markup-and-publishing-static-site-generators",
+            "label": "Static Site Generators",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "docs-as-code-and-publishing-automation",
+        "label": "Automation",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "docs-as-code-and-publishing-automation-docs-generation",
+            "label": "Docs Generation",
+            "type": "module"
+          },
+          {
+            "id": "docs-as-code-and-publishing-automation-ci-for-docs",
+            "label": "CI for Docs",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Quality & Impact",
+    "short_title": "Quality & Impact",
+    "slug": "quality-and-impact",
+    "description": "Learn Quality & Impact for technical writing.",
+    "long_description": "Covers core concepts in Quality & Impact.\nFocuses on practical technical writing workflows.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Quality & Impact.",
+    "outcomes": "Ability to apply Quality & Impact in technical writing.",
+    "seo": {
+      "meta_title": "Quality & Impact",
+      "meta_description": "Learn the fundamentals of Quality & Impact for technical writing."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "quality"
+    },
+    "children": [
+      {
+        "id": "quality-and-impact-editorial-review",
+        "label": "Editorial Review",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "quality-and-impact-editorial-review-style-guides",
+            "label": "Style Guides",
+            "type": "module"
+          },
+          {
+            "id": "quality-and-impact-editorial-review-editing",
+            "label": "Editing",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "quality-and-impact-accessibility-and-inclusivity",
+        "label": "Accessibility & Inclusivity",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "quality-and-impact-accessibility-and-inclusivity-accessible-content",
+            "label": "Accessible Content",
+            "type": "module"
+          },
+          {
+            "id": "quality-and-impact-accessibility-and-inclusivity-localization",
+            "label": "Localization",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "quality-and-impact-metrics-and-maintenance",
+        "label": "Metrics & Maintenance",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "quality-and-impact-metrics-and-maintenance-doc-analytics",
+            "label": "Doc Analytics",
+            "type": "module"
+          },
+          {
+            "id": "quality-and-impact-metrics-and-maintenance-content-lifecycle",
+            "label": "Content Lifecycle",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]
