@@ -1,0 +1,2720 @@
+[
+  {
+    "id": 1,
+    "roadmap_id": 1,
+    "title": "Backend Fundamentals",
+    "short_title": "Backend Fundamentals",
+    "slug": "backend-fundamentals",
+    "description": "Learn Backend Fundamentals for backend engineering.",
+    "long_description": "Covers core concepts in Backend Fundamentals.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Backend Fundamentals.",
+    "outcomes": "Ability to apply Backend Fundamentals in backend systems.",
+    "seo": {
+      "meta_title": "Backend Fundamentals",
+      "meta_description": "Learn the fundamentals of Backend Fundamentals for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "backend"
+    },
+    "children": [
+      {
+        "id": "backend-fundamentals-what-is-backend-engineering",
+        "label": "What is Backend Engineering?",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "backend-fundamentals-request-response-lifecycle",
+        "label": "Request/Response Lifecycle",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "backend-fundamentals-client-server-architecture",
+        "label": "Client-Server Architecture",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "backend-fundamentals-stateless-vs-stateful-services",
+        "label": "Stateless vs Stateful Services",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "backend-fundamentals-configuration-and-environment-variables",
+        "label": "Configuration & Environment Variables",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-fundamentals-configuration-and-environment-variables-12-factor-config",
+            "label": "12-Factor Config",
+            "type": "module"
+          },
+          {
+            "id": "backend-fundamentals-configuration-and-environment-variables-secrets-vs-config",
+            "label": "Secrets vs Config",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-fundamentals-service-documentation-and-runbooks",
+        "label": "Service Documentation & Runbooks",
+        "type": "subtopic",
+        "side": "right"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "roadmap_id": 1,
+    "title": "Internet & HTTP",
+    "short_title": "Internet & HTTP",
+    "slug": "internet-and-http",
+    "description": "Learn Internet & HTTP for backend engineering.",
+    "long_description": "Covers core concepts in Internet & HTTP.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Internet & HTTP.",
+    "outcomes": "Ability to apply Internet & HTTP in backend systems.",
+    "seo": {
+      "meta_title": "Internet & HTTP",
+      "meta_description": "Learn the fundamentals of Internet & HTTP for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "internet"
+    },
+    "children": [
+      {
+        "id": "internet-and-http-how-the-internet-works",
+        "label": "How the Internet Works",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "internet-and-http-http-methods-and-status-codes",
+        "label": "HTTP Methods & Status Codes",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "internet-and-http-http-methods-and-status-codes-get-post-put-patch-delete",
+            "label": "GET/POST/PUT/PATCH/DELETE",
+            "type": "module"
+          },
+          {
+            "id": "internet-and-http-http-methods-and-status-codes-2xx-4xx-5xx",
+            "label": "2xx/4xx/5xx",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "internet-and-http-http-headers-and-cookies",
+        "label": "HTTP Headers & Cookies",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "internet-and-http-https-and-tls-basics",
+        "label": "HTTPS and TLS Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "internet-and-http-https-and-tls-basics-certificates",
+            "label": "Certificates",
+            "type": "module"
+          },
+          {
+            "id": "internet-and-http-https-and-tls-basics-tls-handshake",
+            "label": "TLS Handshake",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "internet-and-http-dns-and-hosting",
+        "label": "DNS and Hosting",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "internet-and-http-dns-and-hosting-dns-records",
+            "label": "DNS Records",
+            "type": "module"
+          },
+          {
+            "id": "internet-and-http-dns-and-hosting-load-balancers",
+            "label": "Load Balancers",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "internet-and-http-web-servers-and-reverse-proxies",
+        "label": "Web Servers & Reverse Proxies",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "internet-and-http-web-servers-and-reverse-proxies-nginx",
+            "label": "Nginx",
+            "type": "module"
+          },
+          {
+            "id": "internet-and-http-web-servers-and-reverse-proxies-caddy",
+            "label": "Caddy",
+            "type": "module"
+          },
+          {
+            "id": "internet-and-http-web-servers-and-reverse-proxies-apache",
+            "label": "Apache",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "roadmap_id": 1,
+    "title": "OS, Linux & Networking",
+    "short_title": "OS, Linux &",
+    "slug": "os-linux-and-networking",
+    "description": "Learn OS, Linux & Networking for backend engineering.",
+    "long_description": "Covers core concepts in OS, Linux & Networking.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in OS, Linux & Networking.",
+    "outcomes": "Ability to apply OS, Linux & Networking in backend systems.",
+    "seo": {
+      "meta_title": "OS, Linux & Networking",
+      "meta_description": "Learn the fundamentals of OS, Linux & Networking for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "os"
+    },
+    "children": [
+      {
+        "id": "os-linux-and-networking-linux-basics",
+        "label": "Linux Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "os-linux-and-networking-linux-basics-file-permissions",
+            "label": "File Permissions",
+            "type": "module"
+          },
+          {
+            "id": "os-linux-and-networking-linux-basics-users-and-groups",
+            "label": "Users & Groups",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "os-linux-and-networking-processes-and-services",
+        "label": "Processes & Services",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "os-linux-and-networking-processes-and-services-systemd",
+            "label": "systemd",
+            "type": "module"
+          },
+          {
+            "id": "os-linux-and-networking-processes-and-services-process-signals",
+            "label": "Process Signals",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "os-linux-and-networking-shell-scripting",
+        "label": "Shell Scripting",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "os-linux-and-networking-networking-basics-tcp-udp",
+        "label": "Networking Basics (TCP/UDP)",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "os-linux-and-networking-ports-firewalls-and-nat",
+        "label": "Ports, Firewalls, and NAT",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "os-linux-and-networking-troubleshooting-tools",
+        "label": "Troubleshooting Tools",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "os-linux-and-networking-troubleshooting-tools-curl",
+            "label": "curl",
+            "type": "module"
+          },
+          {
+            "id": "os-linux-and-networking-troubleshooting-tools-ping-traceroute",
+            "label": "ping/traceroute",
+            "type": "module"
+          },
+          {
+            "id": "os-linux-and-networking-troubleshooting-tools-netstat-ss",
+            "label": "netstat/ss",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "roadmap_id": 1,
+    "title": "Programming Language & Tools",
+    "short_title": "Programming Language &",
+    "slug": "programming-language-and-tools",
+    "description": "Learn Programming Language & Tools for backend engineering.",
+    "long_description": "Covers core concepts in Programming Language & Tools.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Programming Language & Tools.",
+    "outcomes": "Ability to apply Programming Language & Tools in backend systems.",
+    "seo": {
+      "meta_title": "Programming Language & Tools",
+      "meta_description": "Learn the fundamentals of Programming Language & Tools for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "programming"
+    },
+    "children": [
+      {
+        "id": "programming-language-and-tools-python",
+        "label": "Python",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "programming-language-and-tools-python-virtualenv",
+            "label": "virtualenv",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-python-typing",
+            "label": "typing",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "programming-language-and-tools-javascript-typescript",
+        "label": "JavaScript / TypeScript",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "programming-language-and-tools-javascript-typescript-node-js",
+            "label": "Node.js",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-javascript-typescript-deno",
+            "label": "Deno",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-javascript-typescript-bun",
+            "label": "Bun",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "programming-language-and-tools-java-kotlin",
+        "label": "Java / Kotlin",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "programming-language-and-tools-c-net",
+        "label": "C# / .NET",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "programming-language-and-tools-go",
+        "label": "Go",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "programming-language-and-tools-rust",
+        "label": "Rust",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "programming-language-and-tools-ruby",
+        "label": "Ruby",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "programming-language-and-tools-package-managers-and-builds",
+        "label": "Package Managers & Builds",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-pip-poetry",
+            "label": "pip/poetry",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-npm-pnpm",
+            "label": "npm/pnpm",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-maven-gradle",
+            "label": "Maven/Gradle",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-nuget",
+            "label": "nuget",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-go-modules",
+            "label": "go modules",
+            "type": "module"
+          },
+          {
+            "id": "programming-language-and-tools-package-managers-and-builds-cargo",
+            "label": "cargo",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "roadmap_id": 1,
+    "title": "Backend Frameworks & Runtime",
+    "short_title": "Backend Frameworks &",
+    "slug": "backend-frameworks-and-runtime",
+    "description": "Learn Backend Frameworks & Runtime for backend engineering.",
+    "long_description": "Covers core concepts in Backend Frameworks & Runtime.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Backend Frameworks & Runtime.",
+    "outcomes": "Ability to apply Backend Frameworks & Runtime in backend systems.",
+    "seo": {
+      "meta_title": "Backend Frameworks & Runtime",
+      "meta_description": "Learn the fundamentals of Backend Frameworks & Runtime for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "backend"
+    },
+    "children": [
+      {
+        "id": "backend-frameworks-and-runtime-python-frameworks",
+        "label": "Python Frameworks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-python-frameworks-django",
+            "label": "Django",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-python-frameworks-fastapi",
+            "label": "FastAPI",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-python-frameworks-flask",
+            "label": "Flask",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-node-js-frameworks",
+        "label": "Node.js Frameworks",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-node-js-frameworks-express",
+            "label": "Express",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-node-js-frameworks-nestjs",
+            "label": "NestJS",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-node-js-frameworks-fastify",
+            "label": "Fastify",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-java-frameworks",
+        "label": "Java Frameworks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-java-frameworks-spring-boot",
+            "label": "Spring Boot",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-java-frameworks-quarkus",
+            "label": "Quarkus",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-java-frameworks-micronaut",
+            "label": "Micronaut",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-net-frameworks",
+        "label": ".NET Frameworks",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-net-frameworks-asp-net-core",
+            "label": "ASP.NET Core",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-net-frameworks-minimal-apis",
+            "label": "Minimal APIs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-go-frameworks",
+        "label": "Go Frameworks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-go-frameworks-gin",
+            "label": "Gin",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-go-frameworks-echo",
+            "label": "Echo",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-go-frameworks-fiber",
+            "label": "Fiber",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-rust-frameworks",
+        "label": "Rust Frameworks",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-rust-frameworks-axum",
+            "label": "Axum",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-rust-frameworks-actix",
+            "label": "Actix",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-runtime-concepts",
+        "label": "Runtime Concepts",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-runtime-concepts-event-loop",
+            "label": "Event Loop",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-runtime-concepts-concurrency-and-threads",
+            "label": "Concurrency & Threads",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "backend-frameworks-and-runtime-dependency-injection-and-config",
+        "label": "Dependency Injection & Config",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "backend-frameworks-and-runtime-dependency-injection-and-config-di-containers",
+            "label": "DI Containers",
+            "type": "module"
+          },
+          {
+            "id": "backend-frameworks-and-runtime-dependency-injection-and-config-config-files",
+            "label": "Config Files",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "roadmap_id": 1,
+    "title": "Version Control & Collaboration",
+    "short_title": "Version Control &",
+    "slug": "version-control-and-collaboration",
+    "description": "Learn Version Control & Collaboration for backend engineering.",
+    "long_description": "Covers core concepts in Version Control & Collaboration.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Version Control & Collaboration.",
+    "outcomes": "Ability to apply Version Control & Collaboration in backend systems.",
+    "seo": {
+      "meta_title": "Version Control & Collaboration",
+      "meta_description": "Learn the fundamentals of Version Control & Collaboration for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "version"
+    },
+    "children": [
+      {
+        "id": "version-control-and-collaboration-git-basics",
+        "label": "Git Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "version-control-and-collaboration-git-basics-add-commit-push-pull",
+            "label": "add/commit/push/pull",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "version-control-and-collaboration-branching-and-merging",
+        "label": "Branching & Merging",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "version-control-and-collaboration-branching-and-merging-trunk-based",
+            "label": "Trunk-Based",
+            "type": "module"
+          },
+          {
+            "id": "version-control-and-collaboration-branching-and-merging-gitflow",
+            "label": "GitFlow",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "version-control-and-collaboration-code-reviews-and-pull-requests",
+        "label": "Code Reviews & Pull Requests",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "version-control-and-collaboration-repo-hosting-github-gitlab",
+        "label": "Repo Hosting (GitHub/GitLab)",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "version-control-and-collaboration-issue-tracking-and-project-boards",
+        "label": "Issue Tracking & Project Boards",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "version-control-and-collaboration-semantic-versioning",
+        "label": "Semantic Versioning",
+        "type": "subtopic",
+        "side": "right"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "roadmap_id": 1,
+    "title": "Relational Databases",
+    "short_title": "Relational Databases",
+    "slug": "relational-databases",
+    "description": "Learn Relational Databases for backend engineering.",
+    "long_description": "Covers core concepts in Relational Databases.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Relational Databases.",
+    "outcomes": "Ability to apply Relational Databases in backend systems.",
+    "seo": {
+      "meta_title": "Relational Databases",
+      "meta_description": "Learn the fundamentals of Relational Databases for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "relational"
+    },
+    "children": [
+      {
+        "id": "relational-databases-postgresql",
+        "label": "PostgreSQL",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "relational-databases-mysql-mariadb",
+        "label": "MySQL / MariaDB",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "relational-databases-sql-server",
+        "label": "SQL Server",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "relational-databases-sqlite",
+        "label": "SQLite",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "relational-databases-managed-db-services",
+        "label": "Managed DB Services",
+        "type": "subtopic",
+        "side": "left"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "roadmap_id": 1,
+    "title": "Data Modeling & SQL",
+    "short_title": "Data Modeling &",
+    "slug": "data-modeling-and-sql",
+    "description": "Learn Data Modeling & SQL for backend engineering.",
+    "long_description": "Covers core concepts in Data Modeling & SQL.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Data Modeling & SQL.",
+    "outcomes": "Ability to apply Data Modeling & SQL in backend systems.",
+    "seo": {
+      "meta_title": "Data Modeling & SQL",
+      "meta_description": "Learn the fundamentals of Data Modeling & SQL for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "data"
+    },
+    "children": [
+      {
+        "id": "data-modeling-and-sql-schema-design-and-normalization",
+        "label": "Schema Design & Normalization",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "data-modeling-and-sql-joins-and-aggregations",
+        "label": "Joins & Aggregations",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "data-modeling-and-sql-indexes-and-query-planning",
+        "label": "Indexes & Query Planning",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "data-modeling-and-sql-indexes-and-query-planning-explain",
+            "label": "EXPLAIN",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-indexes-and-query-planning-composite-indexes",
+            "label": "Composite Indexes",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-modeling-and-sql-transactions-and-isolation-levels",
+        "label": "Transactions & Isolation Levels",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-modeling-and-sql-transactions-and-isolation-levels-acid",
+            "label": "ACID",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-transactions-and-isolation-levels-locking",
+            "label": "Locking",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "data-modeling-and-sql-migrations-and-schema-changes",
+        "label": "Migrations & Schema Changes",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "data-modeling-and-sql-orms-and-query-builders",
+        "label": "ORMs & Query Builders",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "data-modeling-and-sql-orms-and-query-builders-sqlalchemy",
+            "label": "SQLAlchemy",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-orms-and-query-builders-django-orm",
+            "label": "Django ORM",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-orms-and-query-builders-prisma",
+            "label": "Prisma",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-orms-and-query-builders-hibernate-jpa",
+            "label": "Hibernate/JPA",
+            "type": "module"
+          },
+          {
+            "id": "data-modeling-and-sql-orms-and-query-builders-ef-core",
+            "label": "EF Core",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "roadmap_id": 1,
+    "title": "APIs & Communication",
+    "short_title": "APIs & Communication",
+    "slug": "apis-and-communication",
+    "description": "Learn APIs & Communication for backend engineering.",
+    "long_description": "Covers core concepts in APIs & Communication.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in APIs & Communication.",
+    "outcomes": "Ability to apply APIs & Communication in backend systems.",
+    "seo": {
+      "meta_title": "APIs & Communication",
+      "meta_description": "Learn the fundamentals of APIs & Communication for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "apis"
+    },
+    "children": [
+      {
+        "id": "apis-and-communication-rest-apis",
+        "label": "REST APIs",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "apis-and-communication-rest-apis-json",
+            "label": "JSON",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-rest-apis-pagination",
+            "label": "Pagination",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-rest-apis-filtering",
+            "label": "Filtering",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-communication-grpc",
+        "label": "gRPC",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "apis-and-communication-grpc-protobuf",
+            "label": "Protobuf",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-grpc-streaming",
+            "label": "Streaming",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-communication-graphql",
+        "label": "GraphQL",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "apis-and-communication-graphql-schema",
+            "label": "Schema",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-graphql-resolvers",
+            "label": "Resolvers",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-communication-openapi-swagger",
+        "label": "OpenAPI / Swagger",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "apis-and-communication-openapi-swagger-spec-writing",
+            "label": "Spec Writing",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-openapi-swagger-codegen",
+            "label": "Codegen",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-communication-api-versioning",
+        "label": "API Versioning",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "apis-and-communication-error-handling-and-pagination",
+        "label": "Error Handling & Pagination",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "apis-and-communication-webhooks",
+        "label": "Webhooks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "apis-and-communication-webhooks-signatures",
+            "label": "Signatures",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-webhooks-retries",
+            "label": "Retries",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "apis-and-communication-real-time-apis",
+        "label": "Real-time APIs",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "apis-and-communication-real-time-apis-websockets",
+            "label": "WebSockets",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-real-time-apis-server-sent-events",
+            "label": "Server-Sent Events",
+            "type": "module"
+          },
+          {
+            "id": "apis-and-communication-real-time-apis-long-polling",
+            "label": "Long Polling",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "roadmap_id": 1,
+    "title": "Authentication & Authorization",
+    "short_title": "Authentication & Authorization",
+    "slug": "authentication-and-authorization",
+    "description": "Learn Authentication & Authorization for backend engineering.",
+    "long_description": "Covers core concepts in Authentication & Authorization.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Authentication & Authorization.",
+    "outcomes": "Ability to apply Authentication & Authorization in backend systems.",
+    "seo": {
+      "meta_title": "Authentication & Authorization",
+      "meta_description": "Learn the fundamentals of Authentication & Authorization for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "authentication"
+    },
+    "children": [
+      {
+        "id": "authentication-and-authorization-sessions-vs-tokens",
+        "label": "Sessions vs Tokens",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "authentication-and-authorization-sessions-vs-tokens-cookies",
+            "label": "Cookies",
+            "type": "module"
+          },
+          {
+            "id": "authentication-and-authorization-sessions-vs-tokens-session-stores",
+            "label": "Session Stores",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "authentication-and-authorization-jwt",
+        "label": "JWT",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "authentication-and-authorization-jwt-access-tokens",
+            "label": "Access Tokens",
+            "type": "module"
+          },
+          {
+            "id": "authentication-and-authorization-jwt-refresh-tokens",
+            "label": "Refresh Tokens",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "authentication-and-authorization-oauth2-and-openid-connect",
+        "label": "OAuth2 & OpenID Connect",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "authentication-and-authorization-oauth2-and-openid-connect-auth-code-plus-pkce",
+            "label": "Auth Code + PKCE",
+            "type": "module"
+          },
+          {
+            "id": "authentication-and-authorization-oauth2-and-openid-connect-client-credentials",
+            "label": "Client Credentials",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "authentication-and-authorization-api-keys",
+        "label": "API Keys",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "authentication-and-authorization-rbac-vs-abac",
+        "label": "RBAC vs ABAC",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "authentication-and-authorization-sso-and-identity-providers",
+        "label": "SSO & Identity Providers",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "authentication-and-authorization-sso-and-identity-providers-auth0",
+            "label": "Auth0",
+            "type": "module"
+          },
+          {
+            "id": "authentication-and-authorization-sso-and-identity-providers-okta",
+            "label": "Okta",
+            "type": "module"
+          },
+          {
+            "id": "authentication-and-authorization-sso-and-identity-providers-cognito",
+            "label": "Cognito",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "roadmap_id": 1,
+    "title": "Web Security",
+    "short_title": "Web Security",
+    "slug": "web-security",
+    "description": "Learn Web Security for backend engineering.",
+    "long_description": "Covers core concepts in Web Security.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Web Security.",
+    "outcomes": "Ability to apply Web Security in backend systems.",
+    "seo": {
+      "meta_title": "Web Security",
+      "meta_description": "Learn the fundamentals of Web Security for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "web"
+    },
+    "children": [
+      {
+        "id": "web-security-owasp-top-10",
+        "label": "OWASP Top 10",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "web-security-owasp-top-10-sql-injection",
+            "label": "SQL Injection",
+            "type": "module"
+          },
+          {
+            "id": "web-security-owasp-top-10-xss",
+            "label": "XSS",
+            "type": "module"
+          },
+          {
+            "id": "web-security-owasp-top-10-broken-auth",
+            "label": "Broken Auth",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "web-security-input-validation-and-sanitization",
+        "label": "Input Validation & Sanitization",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "web-security-cors-and-csrf",
+        "label": "CORS & CSRF",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "web-security-security-headers",
+        "label": "Security Headers",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "web-security-security-headers-hsts",
+            "label": "HSTS",
+            "type": "module"
+          },
+          {
+            "id": "web-security-security-headers-csp",
+            "label": "CSP",
+            "type": "module"
+          },
+          {
+            "id": "web-security-security-headers-x-content-type-options",
+            "label": "X-Content-Type-Options",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "web-security-secrets-management",
+        "label": "Secrets Management",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "web-security-secrets-management-vault",
+            "label": "Vault",
+            "type": "module"
+          },
+          {
+            "id": "web-security-secrets-management-kms",
+            "label": "KMS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "web-security-encryption-at-rest",
+        "label": "Encryption at Rest",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "web-security-rate-limiting-and-abuse-prevention",
+        "label": "Rate Limiting & Abuse Prevention",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "web-security-rate-limiting-and-abuse-prevention-token-bucket",
+            "label": "Token Bucket",
+            "type": "module"
+          },
+          {
+            "id": "web-security-rate-limiting-and-abuse-prevention-ip-throttling",
+            "label": "IP Throttling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "web-security-audit-logging",
+        "label": "Audit Logging",
+        "type": "subtopic",
+        "side": "right"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "roadmap_id": 1,
+    "title": "Caching & Performance",
+    "short_title": "Caching & Performance",
+    "slug": "caching-and-performance",
+    "description": "Learn Caching & Performance for backend engineering.",
+    "long_description": "Covers core concepts in Caching & Performance.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Caching & Performance.",
+    "outcomes": "Ability to apply Caching & Performance in backend systems.",
+    "seo": {
+      "meta_title": "Caching & Performance",
+      "meta_description": "Learn the fundamentals of Caching & Performance for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "caching"
+    },
+    "children": [
+      {
+        "id": "caching-and-performance-caching-strategies",
+        "label": "Caching Strategies",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "caching-and-performance-caching-strategies-cache-aside",
+            "label": "Cache Aside",
+            "type": "module"
+          },
+          {
+            "id": "caching-and-performance-caching-strategies-write-through",
+            "label": "Write Through",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "caching-and-performance-redis",
+        "label": "Redis",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "caching-and-performance-redis-data-structures",
+            "label": "Data Structures",
+            "type": "module"
+          },
+          {
+            "id": "caching-and-performance-redis-ttl-and-eviction",
+            "label": "TTL & Eviction",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "caching-and-performance-http-caching",
+        "label": "HTTP Caching",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "caching-and-performance-http-caching-etag",
+            "label": "ETag",
+            "type": "module"
+          },
+          {
+            "id": "caching-and-performance-http-caching-cache-control",
+            "label": "Cache-Control",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "caching-and-performance-cdn-basics",
+        "label": "CDN Basics",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "caching-and-performance-performance-profiling",
+        "label": "Performance Profiling",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "caching-and-performance-performance-profiling-profilers",
+            "label": "Profilers",
+            "type": "module"
+          },
+          {
+            "id": "caching-and-performance-performance-profiling-flamegraphs",
+            "label": "Flamegraphs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "caching-and-performance-concurrency-and-async-patterns",
+        "label": "Concurrency & Async Patterns",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "caching-and-performance-database-performance-tuning",
+        "label": "Database Performance Tuning",
+        "type": "subtopic",
+        "side": "left"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "roadmap_id": 1,
+    "title": "Async Processing & Messaging",
+    "short_title": "Async Processing &",
+    "slug": "async-processing-and-messaging",
+    "description": "Learn Async Processing & Messaging for backend engineering.",
+    "long_description": "Covers core concepts in Async Processing & Messaging.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Async Processing & Messaging.",
+    "outcomes": "Ability to apply Async Processing & Messaging in backend systems.",
+    "seo": {
+      "meta_title": "Async Processing & Messaging",
+      "meta_description": "Learn the fundamentals of Async Processing & Messaging for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "async"
+    },
+    "children": [
+      {
+        "id": "async-processing-and-messaging-job-queues",
+        "label": "Job Queues",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-job-queues-celery",
+            "label": "Celery",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-job-queues-sidekiq",
+            "label": "Sidekiq",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-job-queues-bullmq",
+            "label": "BullMQ",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-schedulers-and-cron",
+        "label": "Schedulers & Cron",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-schedulers-and-cron-cron",
+            "label": "cron",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-schedulers-and-cron-quartz",
+            "label": "Quartz",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-message-brokers",
+        "label": "Message Brokers",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-message-brokers-rabbitmq",
+            "label": "RabbitMQ",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-message-brokers-nats",
+            "label": "NATS",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-event-streaming",
+        "label": "Event Streaming",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-event-streaming-kafka",
+            "label": "Kafka",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-event-streaming-pulsar",
+            "label": "Pulsar",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-idempotency-and-retries",
+        "label": "Idempotency & Retries",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-idempotency-and-retries-exponential-backoff",
+            "label": "Exponential Backoff",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-idempotency-and-retries-dedup-keys",
+            "label": "Dedup Keys",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-dead-letter-queues",
+        "label": "Dead Letter Queues",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "async-processing-and-messaging-distributed-locks",
+        "label": "Distributed Locks",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "async-processing-and-messaging-distributed-locks-redis-locks",
+            "label": "Redis Locks",
+            "type": "module"
+          },
+          {
+            "id": "async-processing-and-messaging-distributed-locks-zookeeper",
+            "label": "Zookeeper",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "async-processing-and-messaging-outbox-pattern",
+        "label": "Outbox Pattern",
+        "type": "subtopic",
+        "side": "right"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "roadmap_id": 1,
+    "title": "Search & Indexing",
+    "short_title": "Search & Indexing",
+    "slug": "search-and-indexing",
+    "description": "Learn Search & Indexing for backend engineering.",
+    "long_description": "Covers core concepts in Search & Indexing.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Search & Indexing.",
+    "outcomes": "Ability to apply Search & Indexing in backend systems.",
+    "seo": {
+      "meta_title": "Search & Indexing",
+      "meta_description": "Learn the fundamentals of Search & Indexing for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "search"
+    },
+    "children": [
+      {
+        "id": "search-and-indexing-full-text-search-concepts",
+        "label": "Full-Text Search Concepts",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "search-and-indexing-full-text-search-concepts-tokenization",
+            "label": "Tokenization",
+            "type": "module"
+          },
+          {
+            "id": "search-and-indexing-full-text-search-concepts-inverted-index",
+            "label": "Inverted Index",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "search-and-indexing-elasticsearch-opensearch",
+        "label": "Elasticsearch / OpenSearch",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "search-and-indexing-elasticsearch-opensearch-analyzers",
+            "label": "Analyzers",
+            "type": "module"
+          },
+          {
+            "id": "search-and-indexing-elasticsearch-opensearch-mappings",
+            "label": "Mappings",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "search-and-indexing-solr",
+        "label": "Solr",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "search-and-indexing-indexing-strategies",
+        "label": "Indexing Strategies",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "search-and-indexing-relevance-and-ranking",
+        "label": "Relevance & Ranking",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "search-and-indexing-relevance-and-ranking-bm25",
+            "label": "BM25",
+            "type": "module"
+          },
+          {
+            "id": "search-and-indexing-relevance-and-ranking-boosting",
+            "label": "Boosting",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "roadmap_id": 1,
+    "title": "Testing & Quality",
+    "short_title": "Testing & Quality",
+    "slug": "testing-and-quality",
+    "description": "Learn Testing & Quality for backend engineering.",
+    "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Testing & Quality.",
+    "outcomes": "Ability to apply Testing & Quality in backend systems.",
+    "seo": {
+      "meta_title": "Testing & Quality",
+      "meta_description": "Learn the fundamentals of Testing & Quality for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "testing"
+    },
+    "children": [
+      {
+        "id": "testing-and-quality-unit-testing",
+        "label": "Unit Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "testing-and-quality-unit-testing-mocking",
+            "label": "Mocking",
+            "type": "module"
+          },
+          {
+            "id": "testing-and-quality-unit-testing-assertions",
+            "label": "Assertions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "testing-and-quality-integration-testing",
+        "label": "Integration Testing",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "testing-and-quality-contract-testing",
+        "label": "Contract Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "testing-and-quality-contract-testing-pact",
+            "label": "Pact",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "testing-and-quality-end-to-end-testing",
+        "label": "End-to-End Testing",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "testing-and-quality-load-and-stress-testing",
+        "label": "Load & Stress Testing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "testing-and-quality-load-and-stress-testing-k6",
+            "label": "k6",
+            "type": "module"
+          },
+          {
+            "id": "testing-and-quality-load-and-stress-testing-locust",
+            "label": "Locust",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "testing-and-quality-test-data-and-fixtures",
+        "label": "Test Data & Fixtures",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "testing-and-quality-test-containers-and-mocks",
+        "label": "Test Containers & Mocks",
+        "type": "subtopic",
+        "side": "left"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "roadmap_id": 1,
+    "title": "CI/CD & Delivery",
+    "short_title": "CI/CD & Delivery",
+    "slug": "ci-cd-and-delivery",
+    "description": "Learn CI/CD & Delivery for backend engineering.",
+    "long_description": "Covers core concepts in CI/CD & Delivery.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in CI/CD & Delivery.",
+    "outcomes": "Ability to apply CI/CD & Delivery in backend systems.",
+    "seo": {
+      "meta_title": "CI/CD & Delivery",
+      "meta_description": "Learn the fundamentals of CI/CD & Delivery for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ci"
+    },
+    "children": [
+      {
+        "id": "ci-cd-and-delivery-ci-pipelines",
+        "label": "CI Pipelines",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-delivery-ci-pipelines-build",
+            "label": "Build",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-delivery-ci-pipelines-test",
+            "label": "Test",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-delivery-ci-pipelines-deploy",
+            "label": "Deploy",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-delivery-build-artifacts-and-versioning",
+        "label": "Build Artifacts & Versioning",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "ci-cd-and-delivery-deployment-strategies",
+        "label": "Deployment Strategies",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ci-cd-and-delivery-deployment-strategies-blue-green",
+            "label": "Blue/Green",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-delivery-deployment-strategies-canary",
+            "label": "Canary",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-delivery-deployment-strategies-rolling",
+            "label": "Rolling",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-delivery-infrastructure-as-code",
+        "label": "Infrastructure as Code",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ci-cd-and-delivery-infrastructure-as-code-terraform",
+            "label": "Terraform",
+            "type": "module"
+          },
+          {
+            "id": "ci-cd-and-delivery-infrastructure-as-code-pulumi",
+            "label": "Pulumi",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ci-cd-and-delivery-github-actions-gitlab-ci",
+        "label": "GitHub Actions / GitLab CI",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "ci-cd-and-delivery-release-management",
+        "label": "Release Management",
+        "type": "subtopic",
+        "side": "right"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "roadmap_id": 1,
+    "title": "Containers & Orchestration",
+    "short_title": "Containers & Orchestration",
+    "slug": "containers-and-orchestration",
+    "description": "Learn Containers & Orchestration for backend engineering.",
+    "long_description": "Covers core concepts in Containers & Orchestration.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Containers & Orchestration.",
+    "outcomes": "Ability to apply Containers & Orchestration in backend systems.",
+    "seo": {
+      "meta_title": "Containers & Orchestration",
+      "meta_description": "Learn the fundamentals of Containers & Orchestration for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "containers"
+    },
+    "children": [
+      {
+        "id": "containers-and-orchestration-docker-basics",
+        "label": "Docker Basics",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "containers-and-orchestration-docker-compose",
+        "label": "Docker Compose",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "containers-and-orchestration-container-security",
+        "label": "Container Security",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "containers-and-orchestration-container-security-image-scanning",
+            "label": "Image Scanning",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-container-security-least-privilege",
+            "label": "Least Privilege",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-kubernetes-basics",
+        "label": "Kubernetes Basics",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-deployments",
+            "label": "Deployments",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-services",
+            "label": "Services",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-kubernetes-basics-ingress",
+            "label": "Ingress",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "containers-and-orchestration-helm-and-kustomize",
+        "label": "Helm & Kustomize",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "containers-and-orchestration-service-mesh",
+        "label": "Service Mesh",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "containers-and-orchestration-service-mesh-istio",
+            "label": "Istio",
+            "type": "module"
+          },
+          {
+            "id": "containers-and-orchestration-service-mesh-linkerd",
+            "label": "Linkerd",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "roadmap_id": 1,
+    "title": "Cloud & Infrastructure",
+    "short_title": "Cloud & Infrastructure",
+    "slug": "cloud-and-infrastructure",
+    "description": "Learn Cloud & Infrastructure for backend engineering.",
+    "long_description": "Covers core concepts in Cloud & Infrastructure.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Cloud & Infrastructure.",
+    "outcomes": "Ability to apply Cloud & Infrastructure in backend systems.",
+    "seo": {
+      "meta_title": "Cloud & Infrastructure",
+      "meta_description": "Learn the fundamentals of Cloud & Infrastructure for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "cloud"
+    },
+    "children": [
+      {
+        "id": "cloud-and-infrastructure-cloud-fundamentals",
+        "label": "Cloud Fundamentals",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-infrastructure-cloud-fundamentals-aws",
+            "label": "AWS",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-infrastructure-cloud-fundamentals-gcp",
+            "label": "GCP",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-infrastructure-cloud-fundamentals-azure",
+            "label": "Azure",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-infrastructure-networking-vpc-subnets",
+        "label": "Networking (VPC, subnets)",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "cloud-and-infrastructure-serverless",
+        "label": "Serverless",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "cloud-and-infrastructure-serverless-aws-lambda",
+            "label": "AWS Lambda",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-infrastructure-serverless-cloud-functions",
+            "label": "Cloud Functions",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "cloud-and-infrastructure-managed-databases",
+        "label": "Managed Databases",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "cloud-and-infrastructure-iam-and-access-policies",
+        "label": "IAM & Access Policies",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "cloud-and-infrastructure-secrets-and-config-services",
+        "label": "Secrets & Config Services",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "cloud-and-infrastructure-secrets-and-config-services-ssm-parameter-store",
+            "label": "SSM Parameter Store",
+            "type": "module"
+          },
+          {
+            "id": "cloud-and-infrastructure-secrets-and-config-services-secret-manager",
+            "label": "Secret Manager",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "roadmap_id": 1,
+    "title": "Observability & Reliability",
+    "short_title": "Observability & Reliability",
+    "slug": "observability-and-reliability",
+    "description": "Learn Observability & Reliability for backend engineering.",
+    "long_description": "Covers core concepts in Observability & Reliability.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Observability & Reliability.",
+    "outcomes": "Ability to apply Observability & Reliability in backend systems.",
+    "seo": {
+      "meta_title": "Observability & Reliability",
+      "meta_description": "Learn the fundamentals of Observability & Reliability for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "observability"
+    },
+    "children": [
+      {
+        "id": "observability-and-reliability-structured-logging",
+        "label": "Structured Logging",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "observability-and-reliability-metrics-and-monitoring",
+        "label": "Metrics & Monitoring",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "observability-and-reliability-metrics-and-monitoring-prometheus",
+            "label": "Prometheus",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-metrics-and-monitoring-grafana",
+            "label": "Grafana",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-distributed-tracing",
+        "label": "Distributed Tracing",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-distributed-tracing-jaeger",
+            "label": "Jaeger",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-distributed-tracing-zipkin",
+            "label": "Zipkin",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-opentelemetry",
+        "label": "OpenTelemetry",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "observability-and-reliability-opentelemetry-sdk",
+            "label": "SDK",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-opentelemetry-collector",
+            "label": "Collector",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-alerting-and-incident-response",
+        "label": "Alerting & Incident Response",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-alerting-and-incident-response-pagerduty",
+            "label": "PagerDuty",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-alerting-and-incident-response-on-call",
+            "label": "On-call",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "observability-and-reliability-slo-sli-and-error-budgets",
+        "label": "SLO/SLI & Error Budgets",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "observability-and-reliability-health-checks-and-readiness",
+        "label": "Health Checks & Readiness",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "observability-and-reliability-health-checks-and-readiness-liveness",
+            "label": "Liveness",
+            "type": "module"
+          },
+          {
+            "id": "observability-and-reliability-health-checks-and-readiness-readiness",
+            "label": "Readiness",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "roadmap_id": 1,
+    "title": "Architecture & Patterns",
+    "short_title": "Architecture & Patterns",
+    "slug": "architecture-and-patterns",
+    "description": "Learn Architecture & Patterns for backend engineering.",
+    "long_description": "Covers core concepts in Architecture & Patterns.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Architecture & Patterns.",
+    "outcomes": "Ability to apply Architecture & Patterns in backend systems.",
+    "seo": {
+      "meta_title": "Architecture & Patterns",
+      "meta_description": "Learn the fundamentals of Architecture & Patterns for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "architecture"
+    },
+    "children": [
+      {
+        "id": "architecture-and-patterns-monolith-vs-microservices",
+        "label": "Monolith vs Microservices",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "architecture-and-patterns-monolith-vs-microservices-tradeoffs",
+            "label": "Tradeoffs",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-patterns-monolith-vs-microservices-migration",
+            "label": "Migration",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-and-patterns-clean-architecture",
+        "label": "Clean Architecture",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "architecture-and-patterns-domain-driven-design",
+        "label": "Domain-Driven Design",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "architecture-and-patterns-api-gateway",
+        "label": "API Gateway",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "architecture-and-patterns-api-gateway-rate-limiting",
+            "label": "Rate Limiting",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-patterns-api-gateway-auth",
+            "label": "Auth",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-and-patterns-service-discovery",
+        "label": "Service Discovery",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "architecture-and-patterns-event-driven-architecture",
+        "label": "Event-Driven Architecture",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "architecture-and-patterns-event-driven-architecture-pub-sub",
+            "label": "Pub/Sub",
+            "type": "module"
+          },
+          {
+            "id": "architecture-and-patterns-event-driven-architecture-event-sourcing",
+            "label": "Event Sourcing",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "architecture-and-patterns-twelve-factor-apps",
+        "label": "Twelve-Factor Apps",
+        "type": "subtopic",
+        "side": "left"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "roadmap_id": 1,
+    "title": "Scaling & Distributed Systems",
+    "short_title": "Scaling & Distributed",
+    "slug": "scaling-and-distributed-systems",
+    "description": "Learn Scaling & Distributed Systems for backend engineering.",
+    "long_description": "Covers core concepts in Scaling & Distributed Systems.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Scaling & Distributed Systems.",
+    "outcomes": "Ability to apply Scaling & Distributed Systems in backend systems.",
+    "seo": {
+      "meta_title": "Scaling & Distributed Systems",
+      "meta_description": "Learn the fundamentals of Scaling & Distributed Systems for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "scaling"
+    },
+    "children": [
+      {
+        "id": "scaling-and-distributed-systems-horizontal-vs-vertical-scaling",
+        "label": "Horizontal vs Vertical Scaling",
+        "type": "subtopic",
+        "side": "left"
+      },
+      {
+        "id": "scaling-and-distributed-systems-replication-and-sharding",
+        "label": "Replication & Sharding",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "scaling-and-distributed-systems-replication-and-sharding-read-replicas",
+            "label": "Read Replicas",
+            "type": "module"
+          },
+          {
+            "id": "scaling-and-distributed-systems-replication-and-sharding-partitioning",
+            "label": "Partitioning",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scaling-and-distributed-systems-consistency-models",
+        "label": "Consistency Models",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "scaling-and-distributed-systems-consistency-models-strong",
+            "label": "Strong",
+            "type": "module"
+          },
+          {
+            "id": "scaling-and-distributed-systems-consistency-models-eventual",
+            "label": "Eventual",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scaling-and-distributed-systems-cap-theorem",
+        "label": "CAP Theorem",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "scaling-and-distributed-systems-resilience-patterns",
+        "label": "Resilience Patterns",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "scaling-and-distributed-systems-resilience-patterns-circuit-breaker",
+            "label": "Circuit Breaker",
+            "type": "module"
+          },
+          {
+            "id": "scaling-and-distributed-systems-resilience-patterns-bulkhead",
+            "label": "Bulkhead",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting",
+        "label": "Backpressure & Rate Limiting",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting-token-bucket",
+            "label": "Token Bucket",
+            "type": "module"
+          },
+          {
+            "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting-queue-depth",
+            "label": "Queue Depth",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "scaling-and-distributed-systems-data-partitioning",
+        "label": "Data Partitioning",
+        "type": "subtopic",
+        "side": "left"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "roadmap_id": 1,
+    "title": "NoSQL & Specialized Datastores",
+    "short_title": "NoSQL & Specialized",
+    "slug": "nosql-and-specialized-datastores",
+    "description": "Learn NoSQL & Specialized Datastores for backend engineering.",
+    "long_description": "Covers core concepts in NoSQL & Specialized Datastores.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in NoSQL & Specialized Datastores.",
+    "outcomes": "Ability to apply NoSQL & Specialized Datastores in backend systems.",
+    "seo": {
+      "meta_title": "NoSQL & Specialized Datastores",
+      "meta_description": "Learn the fundamentals of NoSQL & Specialized Datastores for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "nosql"
+    },
+    "children": [
+      {
+        "id": "nosql-and-specialized-datastores-document-databases",
+        "label": "Document Databases",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-document-databases-mongodb",
+            "label": "MongoDB",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-document-databases-couchdb",
+            "label": "CouchDB",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "nosql-and-specialized-datastores-key-value-stores",
+        "label": "Key-Value Stores",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-key-value-stores-redis",
+            "label": "Redis",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-key-value-stores-dynamodb",
+            "label": "DynamoDB",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "nosql-and-specialized-datastores-wide-column-stores",
+        "label": "Wide Column Stores",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-wide-column-stores-cassandra",
+            "label": "Cassandra",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-wide-column-stores-scylladb",
+            "label": "ScyllaDB",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "nosql-and-specialized-datastores-time-series-databases",
+        "label": "Time Series Databases",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-time-series-databases-influxdb",
+            "label": "InfluxDB",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-time-series-databases-timescaledb",
+            "label": "TimescaleDB",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "nosql-and-specialized-datastores-graph-databases",
+        "label": "Graph Databases",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-graph-databases-neo4j",
+            "label": "Neo4j",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-graph-databases-neptune",
+            "label": "Neptune",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "nosql-and-specialized-datastores-vector-databases",
+        "label": "Vector Databases",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "nosql-and-specialized-datastores-vector-databases-pgvector",
+            "label": "pgvector",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-vector-databases-pinecone",
+            "label": "Pinecone",
+            "type": "module"
+          },
+          {
+            "id": "nosql-and-specialized-datastores-vector-databases-weaviate",
+            "label": "Weaviate",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "roadmap_id": 1,
+    "title": "Storage & Files",
+    "short_title": "Storage & Files",
+    "slug": "storage-and-files",
+    "description": "Learn Storage & Files for backend engineering.",
+    "long_description": "Covers core concepts in Storage & Files.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in Storage & Files.",
+    "outcomes": "Ability to apply Storage & Files in backend systems.",
+    "seo": {
+      "meta_title": "Storage & Files",
+      "meta_description": "Learn the fundamentals of Storage & Files for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "storage"
+    },
+    "children": [
+      {
+        "id": "storage-and-files-object-storage",
+        "label": "Object Storage",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "storage-and-files-object-storage-s3",
+            "label": "S3",
+            "type": "module"
+          },
+          {
+            "id": "storage-and-files-object-storage-gcs",
+            "label": "GCS",
+            "type": "module"
+          },
+          {
+            "id": "storage-and-files-object-storage-azure-blob",
+            "label": "Azure Blob",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "storage-and-files-file-uploads-and-streaming",
+        "label": "File Uploads & Streaming",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "storage-and-files-file-uploads-and-streaming-multipart-uploads",
+            "label": "Multipart Uploads",
+            "type": "module"
+          },
+          {
+            "id": "storage-and-files-file-uploads-and-streaming-signed-urls",
+            "label": "Signed URLs",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "storage-and-files-cdn-and-edge-caching",
+        "label": "CDN & Edge Caching",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "storage-and-files-cdn-and-edge-caching-cloudfront",
+            "label": "CloudFront",
+            "type": "module"
+          },
+          {
+            "id": "storage-and-files-cdn-and-edge-caching-cloudflare",
+            "label": "Cloudflare",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "storage-and-files-data-retention-and-lifecycle",
+        "label": "Data Retention & Lifecycle",
+        "type": "subtopic",
+        "side": "right"
+      },
+      {
+        "id": "storage-and-files-backup-and-restore",
+        "label": "Backup & Restore",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "storage-and-files-backup-and-restore-snapshots",
+            "label": "Snapshots",
+            "type": "module"
+          },
+          {
+            "id": "storage-and-files-backup-and-restore-point-in-time-restore",
+            "label": "Point-in-Time Restore",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "roadmap_id": 1,
+    "title": "AI Integration for Backend",
+    "short_title": "AI Integration for",
+    "slug": "ai-integration-for-backend",
+    "description": "Learn AI Integration for Backend for backend engineering.",
+    "long_description": "Covers core concepts in AI Integration for Backend.\nFocuses on practical backend applications.",
+    "estimated_hours": 8,
+    "recommendation": "P",
+    "learning_objectives": "Understand key concepts in AI Integration for Backend.",
+    "outcomes": "Ability to apply AI Integration for Backend in backend systems.",
+    "seo": {
+      "meta_title": "AI Integration for Backend",
+      "meta_description": "Learn the fundamentals of AI Integration for Backend for backend development."
+    },
+    "ui_config": {
+      "topic_layout": "grouped",
+      "icon_slug": "ai"
+    },
+    "children": [
+      {
+        "id": "ai-integration-for-backend-llm-basics",
+        "label": "LLM Basics",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-llm-basics-tokenization",
+            "label": "Tokenization",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-llm-basics-context-windows",
+            "label": "Context Windows",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-embeddings-and-vector-search",
+        "label": "Embeddings & Vector Search",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-embeddings-and-vector-search-chunking",
+            "label": "Chunking",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-embeddings-and-vector-search-similarity-search",
+            "label": "Similarity Search",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-rag-pipelines",
+        "label": "RAG Pipelines",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-rag-pipelines-retrieval",
+            "label": "Retrieval",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-rag-pipelines-re-ranking",
+            "label": "Re-ranking",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-tool-function-calling",
+        "label": "Tool / Function Calling",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-tool-function-calling-schema-design",
+            "label": "Schema Design",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-tool-function-calling-retries",
+            "label": "Retries",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-evaluation-and-monitoring",
+        "label": "Evaluation & Monitoring",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-evaluation-and-monitoring-offline-eval",
+            "label": "Offline Eval",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-evaluation-and-monitoring-online-a-b",
+            "label": "Online A/B",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-safety-and-guardrails",
+        "label": "Safety & Guardrails",
+        "type": "subtopic",
+        "side": "right",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-safety-and-guardrails-pii-redaction",
+            "label": "PII Redaction",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-safety-and-guardrails-prompt-injection",
+            "label": "Prompt Injection",
+            "type": "module"
+          }
+        ]
+      },
+      {
+        "id": "ai-integration-for-backend-cost-optimization",
+        "label": "Cost Optimization",
+        "type": "subtopic",
+        "side": "left",
+        "children": [
+          {
+            "id": "ai-integration-for-backend-cost-optimization-caching",
+            "label": "Caching",
+            "type": "module"
+          },
+          {
+            "id": "ai-integration-for-backend-cost-optimization-batching",
+            "label": "Batching",
+            "type": "module"
+          }
+        ]
+      }
+    ]
+  }
+]

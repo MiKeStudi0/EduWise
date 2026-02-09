@@ -1,0 +1,290 @@
+{
+    "roadmap": [
+        {
+            "id": 1,
+            "title": "Frontend Development",
+            "description": "Learn the essentials of frontend development.",
+            "slug": "frontend-development",
+            "is_active": true,
+            "meta_title": "Frontend Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Frontend Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 2,
+            "title": "Backend Development",
+            "description": "Learn the essentials of backend development.",
+            "slug": "backend-development",
+            "is_active": true,
+            "meta_title": "Backend Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Backend Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 3,
+            "title": "Full Stack Development",
+            "description": "Learn the essentials of full stack development.",
+            "slug": "full-stack-development",
+            "is_active": true,
+            "meta_title": "Full Stack Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Full Stack Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 4,
+            "title": "DevOps",
+            "description": "Learn the essentials of devops.",
+            "slug": "devops",
+            "is_active": true,
+            "meta_title": "DevOps Roadmap",
+            "meta_description": "A roadmap to becoming proficient in DevOps.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 5,
+            "title": "DevSecOps",
+            "description": "Learn the essentials of devsecops.",
+            "slug": "devsecops",
+            "is_active": true,
+            "meta_title": "DevSecOps Roadmap",
+            "meta_description": "A roadmap to becoming proficient in DevSecOps.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 6,
+            "title": "Data Analyst",
+            "description": "Learn the essentials of data analyst.",
+            "slug": "data-analyst",
+            "is_active": true,
+            "meta_title": "Data Analyst Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Data Analyst.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 7,
+            "title": "AI Engineer",
+            "description": "Learn the essentials of ai engineer.",
+            "slug": "ai-engineer",
+            "is_active": true,
+            "meta_title": "AI Engineer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in AI Engineer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 8,
+            "title": "AI Data Scientist",
+            "description": "Learn the essentials of ai data scientist.",
+            "slug": "ai-data-scientist",
+            "is_active": true,
+            "meta_title": "AI Data Scientist Roadmap",
+            "meta_description": "A roadmap to becoming proficient in AI Data Scientist.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 9,
+            "title": "Data Engineer",
+            "description": "Learn the essentials of data engineer.",
+            "slug": "data-engineer",
+            "is_active": true,
+            "meta_title": "Data Engineer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Data Engineer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 10,
+            "title": "Android Development",
+            "description": "Learn the essentials of android development.",
+            "slug": "android-development",
+            "is_active": true,
+            "meta_title": "Android Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Android Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 11,
+            "title": "Machine Learning Engineer",
+            "description": "Learn the essentials of machine learning engineer.",
+            "slug": "machine-learning-engineer",
+            "is_active": true,
+            "meta_title": "Machine Learning Engineer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Machine Learning Engineer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 12,
+            "title": "PostgreSQL DBA",
+            "description": "Learn the essentials of postgresql dba.",
+            "slug": "postgresql-dba",
+            "is_active": true,
+            "meta_title": "PostgreSQL DBA Roadmap",
+            "meta_description": "A roadmap to becoming proficient in PostgreSQL DBA.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 13,
+            "title": "Blockchain Development",
+            "description": "Learn the essentials of blockchain development.",
+            "slug": "blockchain-development",
+            "is_active": true,
+            "meta_title": "Blockchain Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Blockchain Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 14,
+            "title": "QA Engineer",
+            "description": "Learn the essentials of qa engineer.",
+            "slug": "qa-engineer",
+            "is_active": true,
+            "meta_title": "QA Engineer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in QA Engineer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 15,
+            "title": "iOS Development",
+            "description": "Learn the essentials of ios development.",
+            "slug": "ios-development",
+            "is_active": true,
+            "meta_title": "iOS Development Roadmap",
+            "meta_description": "A roadmap to becoming proficient in iOS Development.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 16,
+            "title": "Software Architect",
+            "description": "Learn the essentials of software architect.",
+            "slug": "software-architect",
+            "is_active": true,
+            "meta_title": "Software Architect Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Software Architect.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 17,
+            "title": "Cyber Security",
+            "description": "Learn the essentials of cyber security.",
+            "slug": "cyber-security",
+            "is_active": true,
+            "meta_title": "Cyber Security Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Cyber Security.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 18,
+            "title": "UX Design",
+            "description": "Learn the essentials of ux design.",
+            "slug": "ux-design",
+            "is_active": true,
+            "meta_title": "UX Design Roadmap",
+            "meta_description": "A roadmap to becoming proficient in UX Design.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 19,
+            "title": "Technical Writer",
+            "description": "Learn the essentials of technical writer.",
+            "slug": "technical-writer",
+            "is_active": true,
+            "meta_title": "Technical Writer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Technical Writer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 20,
+            "title": "Game Developer",
+            "description": "Learn the essentials of game developer.",
+            "slug": "game-developer",
+            "is_active": true,
+            "meta_title": "Game Developer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Game Developer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 21,
+            "title": "Server Side Game Developer",
+            "description": "Learn the essentials of server side game developer.",
+            "slug": "server-side-game-developer",
+            "is_active": true,
+            "meta_title": "Server Side Game Developer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Server Side Game Developer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 22,
+            "title": "MLOps Engineer",
+            "description": "Learn the essentials of mlops engineer.",
+            "slug": "mlops-engineer",
+            "is_active": true,
+            "meta_title": "MLOps Engineer Roadmap",
+            "meta_description": "A roadmap to becoming proficient in MLOps Engineer.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 23,
+            "title": "Product Manager",
+            "description": "Learn the essentials of product manager.",
+            "slug": "product-manager",
+            "is_active": true,
+            "meta_title": "Product Manager Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Product Manager.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 24,
+            "title": "Engineering Manager",
+            "description": "Learn the essentials of engineering manager.",
+            "slug": "engineering-manager",
+            "is_active": true,
+            "meta_title": "Engineering Manager Roadmap",
+            "meta_description": "A roadmap to becoming proficient in Engineering Manager.",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 25,
+            "title": "DevRel (Developer Relations)",
+            "description": "Learn the essentials of devrel (developer relations).",
+            "slug": "devrel-developer-relations",
+            "is_active": true,
+            "meta_title": "DevRel (Developer Relations) Roadmap",
+            "meta_description": "A roadmap to becoming proficient in DevRel (Developer Relations).",
+            "created_by": 1,
+            "updated_by": 1
+        },
+        {
+            "id": 26,
+            "title": "BI Analyst",
+            "description": "Learn the essentials of bi analyst.",
+            "slug": "bi-analyst",
+            "is_active": true,
+            "meta_title": "BI Analyst Roadmap",
+            "meta_description": "A roadmap to becoming proficient in BI Analyst.",
+            "created_by": 1,
+            "updated_by": 1
+        }
+    ]
+}
