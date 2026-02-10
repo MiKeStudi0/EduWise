@@ -227,7 +227,7 @@ export default function CoursePage() {
                     className="group rounded-xl border border-border bg-card overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300"
                   >
                     <div className="relative aspect-video">
-                      <Image src={course.image} alt={course.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <Image src={course.image} alt={course.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" unoptimized />
                       {course.bestseller && (
                         <Badge className="absolute top-3 left-3 bg-amber-500 text-white">Bestseller</Badge>
                       )}
@@ -350,7 +350,7 @@ function CourseDetail({ course, onBack }: { course: typeof courses[0]; onBack: (
         <div className="lg:sticky lg:top-24 h-fit space-y-6">
           <div className="rounded-xl border border-border bg-card overflow-hidden shadow-2xl">
             <div className="relative aspect-video">
-               <Image src={course.image} alt="preview" fill className="object-cover" />
+               <Image src={course.image} alt="preview" fill className="object-cover" unoptimized />
                <div className="absolute inset-0 bg-black/50 flex items-center justify-center"><Button variant="ghost" className="w-14 h-14 rounded-full bg-white/90"><Play className="w-6 h-6 text-primary fill-primary" /></Button></div>
             </div>
             <div className="p-6">
