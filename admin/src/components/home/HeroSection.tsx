@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+
 import Link from "next/link"; // Changed to next/link
 import { ArrowRight, Play, Sparkles, Code2, BookOpen, Trophy } from "lucide-react";
+import { Button } from "../ui/button";
 
 export function HeroSection() {
   return (

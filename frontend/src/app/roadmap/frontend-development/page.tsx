@@ -19,7 +19,7 @@ import '@xyflow/react/dist/style.css';
 import { Navbar } from "@/components/layout/Navbar"; 
 import { Footer } from "@/components/layout/Footer"; 
 import { 
-  Target, BookOpen, ChevronRight, X, Globe
+  Target, BookOpen, ChevronRight, X, Globe, BrainCircuit, Code, Lock
 } from 'lucide-react';
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -28,11 +28,15 @@ import { TopicItemNode } from "@/components/roadmap/TopicItemNode";
 import { OptionItemNode } from "@/components/roadmap/OptionItemNode";
 import roadmapDataSource from "@/json/frontend-development.json";
 
+// --- CONSTANTS ---
+const PHASE_BRACKET_WIDTH = 120; // Reduced width for cleaner modern look
+const PHASE_BRACKET_GAP = 40;
+const PHASE_BRACKET_PADDING = 20;
+
 // --- TYPE DEFINITIONS ---
 
 type RoadmapChildType = 'subtopic' | 'module' | 'topic' | 'option';
 
-// 1. Updated Child Data Structure with 'side'
 interface RoadmapChild {
   id: string | number;
   label: string;
@@ -41,7 +45,6 @@ interface RoadmapChild {
   recommendation?: string;
   icon_slug?: string;
   is_recommended?: boolean;
-  // NEW: Explicit control over placement
   side?: 'left' | 'right'; 
   children?: RoadmapChild[];
 }
@@ -70,6 +73,26 @@ interface RoadmapStep {
   children: RoadmapChild[]; 
 }
 
+interface RoadmapPhase {
+  phase_number: number;
+  phase_name: string;
+  phase_description: string;
+  estimated_total_hours: number;
+  topics: RoadmapStep[];
+}
+
+interface RoadmapRoot {
+  title: string;
+  description: string;
+  phases: RoadmapPhase[];
+  metadata?: {
+    total_estimated_hours: number;
+    total_topics: number;
+    roadmap_version: string;
+    last_updated: string;
+  };
+}
+
 const isOptionType = (type?: RoadmapChildType) => type === 'option';
 const resolveSide = (child: RoadmapChild, fallbackSide?: 'left' | 'right') =>
   child.side ?? fallbackSide ?? (isOptionType(child.type) ? 'right' : 'left');
@@ -94,16 +117,6 @@ const normalizeHierarchy = (children: RoadmapChild[], parentSide?: 'left' | 'rig
 const countNodes = (nodes: HierarchyNode[]): number =>
   nodes.reduce((sum, node) => sum + 1 + countNodes(node.children ?? []), 0);
 
-const flattenHierarchy = (nodes: HierarchyNode[]): HierarchyNode[] => {
-  return nodes.reduce((acc, node) => {
-    acc.push(node);
-    if (node.children) {
-      acc.push(...flattenHierarchy(node.children));
-    }
-    return acc;
-  }, [] as HierarchyNode[]);
-};
-
 const priorityFromRecommendation = (recommendation?: string, fallback?: number) => {
   if (recommendation === 'P') return 1;
   if (recommendation === 'A') return 2;
@@ -112,7 +125,7 @@ const priorityFromRecommendation = (recommendation?: string, fallback?: number) 
 
 const resolveRecommended = (child: { is_recommended?: boolean }) => Boolean(child.is_recommended);
 
-// 2. React Flow Node Data Types
+// --- NODE DATA TYPES ---
 type NodeData = {
   id: string;
   phaseId: string | number;
@@ -129,16 +142,16 @@ type NodeData = {
   childrenItems?: any[]; 
   onNodeClick?: (id: string, data: NodeData) => void;
   isRecommended?: boolean;
-  // NEW: Pass side to node to determine handle position
   side?: 'left' | 'right'; 
+  phaseHeight?: number;
+  phaseSubtitle?: string;
 };
 
-type AppNode = Node<NodeData, 'main' | 'topicGroup' | 'optionGroup' | 'topicItem' | 'optionItem'>;
+type AppNode = Node<NodeData, 'main' | 'topicGroup' | 'optionGroup' | 'topicItem' | 'optionItem' | 'phaseBracket'>;
 
 // --- 1. MAIN BACKBONE NODE ---
 const MainNode = ({ data, id }: NodeProps<AppNode>) => {
   const { label, status, iconSlug, type, isActive, onNodeClick } = data;
-  const isGroup = type === 'group';
   const isMastered = status === 'mastered';
 
   return (
@@ -149,25 +162,21 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
         whileTap={{ scale: 0.95 }}
         onClick={() => onNodeClick && onNodeClick(id, data)}
         className={`
-          relative z-10 flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-300 w-44 shadow-sm hover:shadow-md
+          relative z-10 flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-300 w-48 shadow-sm hover:shadow-md
           border cursor-grab active:cursor-grabbing
           ${isMastered 
             ? 'bg-blue-500 border-blue-600 text-white shadow-blue-500/20' 
             : isActive 
-            ? 'bg-blue-600 border-blue-600 text-white scale-110 ring-4 ring-blue-600/20' 
-            : 'bg-gradient-to-br from-blue-500 to-blue-700 border-blue-600 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40'}
+            ? 'bg-blue-600 border-blue-600 text-white scale-105 ring-4 ring-blue-600/20' 
+            : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-foreground hover:border-blue-500/50'}
         `}
       >
-        <div className="p-1 rounded-md bg-white/20">
+        <div className={`p-1 rounded-md ${isActive ? 'bg-white/20' : 'bg-slate-100 dark:bg-slate-700'}`}>
           {iconSlug ? (
             <img src={`https://cdn.simpleicons.org/${iconSlug}`} alt="" className="w-4 h-4" />
-          ) : isGroup ? (
-            <Globe size={16} />
-          ) : (
-            <ChevronRight size={16} />
-          )}
+          ) : (type === 'group' ? <Globe size={16} /> : <ChevronRight size={16} />)}
         </div>
-        <span className="text-xs font-bold">{label}</span>
+        <span className="text-xs font-bold text-left">{label}</span>
       </motion.button>
 
       <Handle type="source" id="left" position={Position.Left} className="!bg-transparent !border-none" />
@@ -178,12 +187,8 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
 };
 
 // --- 2. TOPIC CONTAINER NODE ---
-// UPDATED: Dynamically switches Handle based on 'side' prop
 const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
-    const { childrenItems, side, onNodeClick, label } = data;
-    
-    // If this node is on the Right side, the connector comes from the Left.
-    // If on the Left side (default), connector comes from the Right.
+    const { childrenItems, side, label } = data;
     const handlePosition = side === 'right' ? Position.Left : Position.Right;
     const handleId = side === 'right' ? 'left' : 'right';
     const itemSourcePosition = side === 'right' ? Position.Right : Position.Left;
@@ -232,11 +237,8 @@ const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
 };
 
 // --- 3. OPTION CONTAINER NODE ---
-// UPDATED: Dynamically switches Handle based on 'side' prop
 const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
-    const { childrenItems, side, onNodeClick, label } = data;
-    
-    // Default options are on Right (Handle Left). If moved to Left, Handle is Right.
+    const { childrenItems, side, label } = data;
     const handlePosition = side === 'left' ? Position.Right : Position.Left;
     const handleId = side === 'left' ? 'right' : 'left';
     const itemSourcePosition = side === 'left' ? Position.Left : Position.Right;
@@ -252,12 +254,10 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
                 {childrenItems?.map((child: any) => (
                     <div key={child.id} className="relative w-full group">
                     {child.isRecommended && (
-                        // Recommended Tooltip
                         <div className="absolute top-1/2 -translate-y-1/2 z-[60] pointer-events-none left-full ml-2">
                         <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
                             Recommended
-                            {/* Little triangle pointer logic */}
-                             <div className="absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent right-full border-r-[4px] border-r-slate-900"></div>
+                            <div className="absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent right-full border-r-[4px] border-r-slate-900"></div>
                         </div>
                         </div>
                     )}
@@ -282,22 +282,78 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
     );
 };
 
+// --- 4. PHASE BRACKET NODE (UPDATED & STYLED) ---
+const getPhaseStyle = (phaseNum: number | string) => {
+    const num = Number(phaseNum);
+    switch (num) {
+      case 1: return { color: "text-cyan-500", bg: "bg-cyan-500", border: "border-cyan-500/30", gradient: "from-cyan-500/50 to-transparent" };
+      case 2: return { color: "text-violet-500", bg: "bg-violet-500", border: "border-violet-500/30", gradient: "from-violet-500/50 to-transparent" };
+      case 3: return { color: "text-amber-500", bg: "bg-amber-500", border: "border-amber-500/30", gradient: "from-amber-500/50 to-transparent" };
+      default: return { color: "text-slate-500", bg: "bg-slate-500", border: "border-slate-500/30", gradient: "from-slate-500/50 to-transparent" };
+    }
+  };
+  
+const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
+    const height = Math.max(120, data.phaseHeight ?? 120);
+    const styles = getPhaseStyle(data.phaseId);
+
+    return (
+        <div 
+        className="relative pointer-events-none flex flex-col" 
+        style={{ height, width: PHASE_BRACKET_WIDTH }} 
+        aria-hidden="true"
+        >
+            {/* Top Number Badge */}
+            <div className={`absolute top-0 right-0 w-10 h-10 rounded-xl ${styles.bg} flex items-center justify-center shadow-lg shadow-${styles.color}/20 z-10`}>
+                <span className="text-white font-black text-lg">{data.phaseId}</span>
+            </div>
+
+            {/* Vertical Gradient Line */}
+            <div className="absolute top-10 right-5 bottom-0 w-[2px] h-[calc(100%-20px)] bg-slate-200 dark:bg-slate-800">
+                <div className={`w-full h-1/2 bg-gradient-to-b ${styles.gradient}`} />
+            </div>
+
+            {/* Content Area */}
+            <div className="absolute top-14 right-8 flex flex-col items-end text-right w-64 pr-2">
+                <h3 className={`text-sm font-bold uppercase tracking-widest ${styles.color} mb-1`}>
+                {data.phaseSubtitle}
+                </h3>
+                <p className="text-[10px] font-medium text-muted-foreground leading-tight opacity-80 line-clamp-3">
+                {data.label}
+                </p>
+            </div>
+
+            {/* Bottom decorative dot */}
+            <div className={`absolute bottom-0 right-[17px] w-1.5 h-1.5 rounded-full ${styles.bg}`} />
+        </div>
+    );
+};
+
 export default function FrontendRoadmapPage() {
   const [activeNodeData, setActiveNodeData] = useState<NodeData | null>(null);
+  const [activeTab, setActiveTab] = useState('roadmap');
+
+  const tabs = [
+    { id: 'roadmap', label: 'Roadmap', icon: BrainCircuit },
+    { id: 'projects', label: 'Projects', icon: Code },
+    { id: 'practices', label: 'Best Practices', icon: Target },
+    { id: 'quiz', label: 'Quiz', icon: Lock },
+  ];
 
   // --- CONFIGURATION ---
-  const roadmapData: RoadmapStep[] = useMemo(
-    () => roadmapDataSource as RoadmapStep[],
+  const roadmapRoot: RoadmapRoot = useMemo(
+    () => (roadmapDataSource as { roadmap: RoadmapRoot }).roadmap,
     []
   );
-
+  const phases = roadmapRoot.phases ?? [];
 
   const nodeTypes = useMemo(() => ({ 
       main: MainNode,
       topicGroup: TopicGroupNode,
       topicItem: TopicItemNode,
       optionItem: OptionItemNode,
-      optionGroup: OptionGroupNode
+      optionGroup: OptionGroupNode,
+      phaseBracket: PhaseBracketNode
   }), []);
 
   const handleNodeClick = useCallback((id: string, data: NodeData) => {
@@ -309,26 +365,49 @@ export default function FrontendRoadmapPage() {
       })));
   }, []);
 
-  // --- DYNAMIC HEIGHT LAYOUT ALGORITHM (UPDATED) ---
+  // --- DYNAMIC HEIGHT LAYOUT ALGORITHM ---
   const { initialNodes, initialEdges, totalCanvasHeight } = useMemo(() => {
     const nodes: AppNode[] = [];
     const edges: Edge[] = [];
     
     let currentY = 50; 
+    let minX = 0;
     const MAIN_X = 0;
     const CONTAINER_OFFSET_X = 280; 
     const DEPTH_X_GAP = 220;
     const DEFAULT_GAP = 160;
     const TOPIC_ITEM_GAP = 40;
 
-    roadmapData.forEach((step, index) => {
+    const phaseMarkers: Array<{
+      id: string;
+      label: string;
+      subtitle: string;
+      startY: number;
+      endY: number;
+      phaseId: number | string;
+    }> = [];
+
+    const pushNode = (node: AppNode) => {
+      nodes.push(node);
+      minX = Math.min(minX, node.position.x);
+    };
+
+    let previousStepSlug: string | null = null;
+
+    phases.forEach((phase) => {
+      if (!phase.topics || phase.topics.length === 0) {
+        return;
+      }
+
+      const phaseStartY = currentY;
+
+      phase.topics.forEach((step, index) => {
         // 1. FILTER: Normalize hierarchy, then split into Left/Right roots
         const hierarchy = normalizeHierarchy(step.children);
         const leftItems = hierarchy.filter(c => c.side === 'left');
         const rightItems = hierarchy.filter(c => c.side === 'right');
         
         // Check if loose layout is explicitly set
-        // Note: We removed '|| hasNesting' because the user wants container style even for nested items
         const isLoose = step.ui_config?.topic_layout === 'loose';
         
         const leftCount = countNodes(leftItems);
@@ -338,13 +417,13 @@ export default function FrontendRoadmapPage() {
         const rowHeight = Math.max(containerHeight, DEFAULT_GAP);
 
         // 2. MAIN NODE
-        nodes.push({
+        pushNode({
             id: step.slug,
             type: 'main',
             position: { x: MAIN_X, y: currentY },
             data: { 
               id: String(step.id),
-              phaseId: step.id,
+              phaseId: phase.phase_number,
               priority: index + 1,
               depth: 0,
               label: step.short_title, 
@@ -379,7 +458,7 @@ export default function FrontendRoadmapPage() {
             const nextTopicId = depth === 1 ? item.id : topicId;
             const nextSubtopicId = depth === 2 ? item.id : subtopicId;
 
-            nodes.push({
+            pushNode({
               id: nodeId,
               type: isOption ? 'optionItem' : 'topicItem',
               position: {
@@ -388,7 +467,7 @@ export default function FrontendRoadmapPage() {
               },
               data: {
                 id: String(item.id),
-                phaseId: step.id,
+                phaseId: phase.phase_number,
                 topicId: nextTopicId,
                 subtopicId: nextSubtopicId,
                 priority: priorityFromRecommendation(item.recommendation, order),
@@ -451,13 +530,13 @@ export default function FrontendRoadmapPage() {
                 const groupType = isOptionGroup ? 'optionGroup' : 'topicGroup';
                 const groupHeight = (items.length * 40) + 50;
 
-                nodes.push({
+                pushNode({
                     id: groupId,
                     type: groupType,
                     position: { x: baseX, y: baseY },
                     data: {
                         id: groupId,
-                        phaseId: step.id,
+                        phaseId: phase.phase_number,
                         label: isOptionGroup ? 'Options' : 'Topics',
                         status: 'available',
                         side: side,
@@ -514,11 +593,10 @@ export default function FrontendRoadmapPage() {
         }
 
         // 5. CONNECTOR (Vertical Line)
-        if (index > 0) {
-            const prevId = roadmapData[index - 1].slug;
+        if (previousStepSlug) {
             edges.push({
-                id: `e-${prevId}-${step.slug}`,
-                source: prevId, target: step.slug,
+                id: `e-${previousStepSlug}-${step.slug}`,
+                source: previousStepSlug, target: step.slug,
                 sourceHandle: 'bottom',
                 type: 'smoothstep',
                 style: { stroke: '#94a3b8', strokeWidth: 2, strokeDasharray: '5, 5' },
@@ -526,39 +604,121 @@ export default function FrontendRoadmapPage() {
             });
         }
 
+        previousStepSlug = step.slug;
         currentY += rowHeight;
+      });
+
+      const phaseEndY = currentY;
+      phaseMarkers.push({
+        id: `phase-${phase.phase_number}`,
+        label: phase.phase_description, // UPDATED: Use description for text
+        subtitle: phase.phase_name,     // UPDATED: Use Name for Title
+        startY: phaseStartY,
+        endY: phaseEndY,
+        phaseId: phase.phase_number
+      });
+    });
+
+    const bracketX = minX - PHASE_BRACKET_WIDTH - PHASE_BRACKET_GAP;
+    phaseMarkers.forEach((marker) => {
+      const phaseHeight = Math.max(DEFAULT_GAP, marker.endY - marker.startY) + PHASE_BRACKET_PADDING * 2;
+      pushNode({
+        id: marker.id,
+        type: 'phaseBracket',
+        position: { x: bracketX, y: marker.startY - PHASE_BRACKET_PADDING },
+        data: {
+          id: marker.id,
+          phaseId: marker.phaseId,
+          label: marker.label,
+          status: 'available',
+          phaseSubtitle: marker.subtitle,
+          phaseHeight
+        },
+        draggable: false,
+        selectable: false,
+        focusable: false
+      });
     });
 
     const totalCanvasHeight = currentY + 100;
 
     return { initialNodes: nodes, initialEdges: edges, totalCanvasHeight };
-  }, [roadmapData, handleNodeClick]);
+  }, [phases, handleNodeClick]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState<AppNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-background text-foreground">
+    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-background text-foreground font-sans">
       <Navbar />
       
-      <main className="flex-grow pt-28 pb-0 z-10 relative flex flex-col">
-        <section className="text-center mb-8 px-4 flex-shrink-0">
-           <motion.h1 
-             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-             className="text-4xl md:text-5xl font-bold mb-4"
+      <main className="flex-grow pt-28 pb-0 z-10 relative flex flex-col items-center">
+        
+        {/* --- DYNAMIC HEADER --- */}
+        <section className="text-center mb-6 px-4 max-w-4xl w-full">
+           <motion.div
+             initial={{ opacity: 0, y: 20 }} 
+             animate={{ opacity: 1, y: 0 }}
+             className="inline-block mb-3 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wide uppercase"
            >
-             Frontend Roadmap
+             Career Path
+           </motion.div>
+           <motion.h1 
+             initial={{ opacity: 0, y: 20 }} 
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ delay: 0.1 }}
+             className="text-4xl md:text-6xl font-black mb-4 tracking-tight text-slate-900 dark:text-white"
+           >
+             {roadmapRoot.title}
            </motion.h1>
-           <p className="text-base text-muted-foreground max-w-2xl mx-auto">
-             A step-by-step guide to becoming a modern frontend developer.
-           </p>
+           <motion.p 
+             initial={{ opacity: 0 }} 
+             animate={{ opacity: 1 }}
+             transition={{ delay: 0.2 }}
+             className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+           >
+             {roadmapRoot.description}
+           </motion.p>
         </section>
 
-        <div 
-            className="w-full relative border-t border-border bg-background backdrop-blur-sm"
-            style={{ height: `${totalCanvasHeight}px` }}
-        >
-            <ReactFlow<AppNode>
+        {/* --- TAB NAVIGATION --- */}
+        <div className="w-full max-w-4xl px-4 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-8 border-b border-slate-200 dark:border-slate-800">
+            {tabs.map((tab) => {
+              const isActive = activeTab === tab.id;
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`
+                    relative flex items-center gap-2 pb-4 px-2 text-sm font-bold transition-colors
+                    ${isActive ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 hover:text-slate-600 dark:hover:text-slate-300'}
+                  `}
+                >
+                  <Icon size={16} />
+                  {tab.label}
+                  {isActive && (
+                    <motion.div 
+                      layoutId="tab-underline"
+                      className="absolute bottom-0 left-0 w-full h-[2px] bg-blue-600 dark:bg-blue-400 rounded-t-full"
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* --- CONTENT AREA --- */}
+        <div className="w-full flex-grow relative bg-slate-50/50 dark:bg-black/20">
+          
+          {activeTab === 'roadmap' ? (
+            <div 
+              className="w-full h-full min-h-[600px] border-t border-slate-200 dark:border-slate-800"
+              style={{ height: `${totalCanvasHeight}px` }}
+            >
+              <ReactFlow<AppNode>
                 nodes={nodes}
                 edges={edges}
                 onNodesChange={onNodesChange}
@@ -576,14 +736,30 @@ export default function FrontendRoadmapPage() {
                 minZoom={1} 
                 maxZoom={1}
                 attributionPosition="bottom-right"
-            >
+                proOptions={{ hideAttribution: true }}
+              >
                 <Background 
-                  color="hsl(var(--primary) / 0.06)" 
-                  gap={50} 
+                  color="currentColor"
+                  className="text-slate-200 dark:text-slate-800"
+                  gap={40} 
                   size={1} 
-                  variant={BackgroundVariant.Lines} 
+                  variant={BackgroundVariant.Dots} 
                 />
-            </ReactFlow>
+              </ReactFlow>
+            </div>
+          ) : (
+            // --- COMING SOON PLACEHOLDER ---
+            <div className="w-full h-[400px] flex flex-col items-center justify-center text-center px-4">
+              <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-4">
+                <Lock className="text-slate-400" size={32} />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Coming Soon</h3>
+              <p className="text-muted-foreground max-w-md">
+                The {tabs.find(t => t.id === activeTab)?.label} module is currently under development. 
+                Focus on the roadmap for now!
+              </p>
+            </div>
+          )}
         </div>
 
         {/* DRAWER COMPONENT */}
@@ -595,41 +771,40 @@ export default function FrontendRoadmapPage() {
                 exit={{ y: 100, opacity: 0 }}
                 className="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[450px] z-50"
             >
-                <div className="bg-card/95 backdrop-blur-xl border border-border rounded-2xl p-5 shadow-2xl relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[3px] bg-indigo-600 opacity-100" />
-                <div className="flex justify-between items-start mb-2">
+                <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-2xl relative overflow-hidden ring-1 ring-black/5">
+                  <div className="flex justify-between items-start mb-3">
                     <div>
-                    <h3 className="text-lg font-bold text-foreground mb-1 flex items-center gap-2">
-                        {activeNodeData.label}
-                    </h3>
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                        {activeNodeData.description || "Master this concept to progress."}
-                    </p>
+                      <h3 className="text-xl font-black text-slate-900 dark:text-white mb-1 flex items-center gap-2">
+                          {activeNodeData.label}
+                      </h3>
+                      <p className="text-slate-500 text-sm leading-relaxed font-medium">
+                          {activeNodeData.description || "Master this concept to progress."}
+                      </p>
                     </div>
                     <button 
                         onClick={() => {
                             setActiveNodeData(null);
                             setNodes((nds) => nds.map(n => ({ ...n, style: { zIndex: 1 }, data: { ...n.data, isActive: false } })));
                         }} 
-                        className="p-1 hover:bg-muted rounded-full text-muted-foreground hover:text-foreground"
+                        className="p-2 -mr-2 -mt-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full text-slate-400 transition-colors"
                     >
-                    <X size={16} />
+                      <X size={20} />
                     </button>
-                </div>
-                <div className="flex gap-3 mt-4">
-                    <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 hover:opacity-90 text-white font-bold rounded-xl shadow-lg active:scale-[0.98] text-xs">
-                    <BookOpen size={14} /> Start Lesson
-                    </button>
-                    <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-secondary hover:bg-secondary/80 text-secondary-foreground font-semibold rounded-xl border border-border active:scale-[0.98] text-xs">
-                    <Target size={14} /> Challenge
-                    </button>
-                </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3 mt-6">
+                      <button className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-500/20 active:scale-[0.98] transition-all">
+                        <BookOpen size={18} /> Start Learning
+                      </button>
+                      <button className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-900 dark:text-white font-bold rounded-xl active:scale-[0.98] transition-all">
+                        <Target size={18} /> Mark Complete
+                      </button>
+                  </div>
                 </div>
             </motion.div>
             )}
         </AnimatePresence>
       </main>
-      
       <Footer />
     </div>
   );
