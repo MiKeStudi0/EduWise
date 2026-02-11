@@ -3,7 +3,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import { 
   ReactFlow, 
-  Background, 
   useNodesState, 
   useEdgesState,
   Handle, 
@@ -11,8 +10,7 @@ import {
   MarkerType,
   NodeProps,
   Edge,
-  Node, 
-  BackgroundVariant 
+  Node,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css'; 
 
@@ -29,12 +27,12 @@ import { OptionItemNode } from "@/components/roadmap/OptionItemNode";
 import roadmapDataSource from "@/json/frontend-development.json";
 
 // --- CONSTANTS ---
-const PHASE_BRACKET_WIDTH = 120; // Reduced width for cleaner modern look
-const PHASE_BRACKET_GAP = 40;
+const PHASE_BRACKET_WIDTH = 60; // Slightly narrower for the brace look
+const PHASE_BRACKET_GAP = 60;
 const PHASE_BRACKET_PADDING = 20;
 
 // --- TYPE DEFINITIONS ---
-
+// ... (Your existing interfaces: RoadmapChild, RoadmapStep, RoadmapPhase, RoadmapRoot... keep them as is)
 type RoadmapChildType = 'subtopic' | 'module' | 'topic' | 'option';
 
 interface RoadmapChild {
@@ -149,34 +147,32 @@ type NodeData = {
 
 type AppNode = Node<NodeData, 'main' | 'topicGroup' | 'optionGroup' | 'topicItem' | 'optionItem' | 'phaseBracket'>;
 
-// --- 1. MAIN BACKBONE NODE ---
+// --- 1. MAIN BACKBONE NODE (UPDATED COLOR) ---
 const MainNode = ({ data, id }: NodeProps<AppNode>) => {
   const { label, status, iconSlug, type, isActive, onNodeClick } = data;
   const isMastered = status === 'mastered';
 
   return (
     <div className="relative group">
-      <Handle type="target" position={Position.Top} className="!bg-transparent !border-none" />
+      <Handle type="target" id="top" position={Position.Top} className="!bg-transparent !border-none" />
       
       <motion.button
         whileTap={{ scale: 0.95 }}
         onClick={() => onNodeClick && onNodeClick(id, data)}
         className={`
-          relative z-10 flex items-center gap-3 px-4 py-2.5 rounded-lg transition-all duration-300 w-48 shadow-sm hover:shadow-md
+          relative z-10 flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-300 w-44 shadow-lg hover:shadow-xl
           border cursor-grab active:cursor-grabbing
-          ${isMastered 
-            ? 'bg-blue-500 border-blue-600 text-white shadow-blue-500/20' 
-            : isActive 
-            ? 'bg-blue-600 border-blue-600 text-white scale-105 ring-4 ring-blue-600/20' 
-            : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-foreground hover:border-blue-500/50'}
+          ${isActive 
+            ? 'bg-blue-700 border-blue-800 text-white scale-105 ring-4 ring-blue-500/30' 
+            : 'bg-blue-600 border-blue-500 text-white hover:bg-blue-500'}
         `}
       >
-        <div className={`p-1 rounded-md ${isActive ? 'bg-white/20' : 'bg-slate-100 dark:bg-slate-700'}`}>
+        <div className={`p-1.5 rounded-lg bg-white/20 text-white shadow-inner`}>
           {iconSlug ? (
-            <img src={`https://cdn.simpleicons.org/${iconSlug}`} alt="" className="w-4 h-4" />
+            <img src={`https://cdn.simpleicons.org/${iconSlug}`} alt="" className="w-4 h-4 filter invert" />
           ) : (type === 'group' ? <Globe size={16} /> : <ChevronRight size={16} />)}
         </div>
-        <span className="text-xs font-bold text-left">{label}</span>
+        <span className="text-xs font-bold text-left tracking-tight">{label}</span>
       </motion.button>
 
       <Handle type="source" id="left" position={Position.Left} className="!bg-transparent !border-none" />
@@ -196,7 +192,7 @@ const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
     return (
         <div className="relative group cursor-default">
             <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
-            <div className="w-[200px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-200 dark:border-border rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50">
+            <div className="w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
                 <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> {label}
                 </h4>
@@ -210,14 +206,6 @@ const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
                                     : 'bg-yellow-400 text-black hover:bg-yellow-300'
                             }`}
                         >
-                            {child.isRecommended && (
-                                <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none">
-                                    <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
-                                        Recommended
-                                        <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[4px] border-r-slate-900"></div>
-                                    </div>
-                                </div>
-                            )}
                             {child.hasChildren && (
                                 <Handle 
                                     type="source" 
@@ -246,21 +234,13 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
     return (
         <div className="relative group cursor-default">
             <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
-            <div className="w-[200px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-200 dark:border-border rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50">
+            <div className="w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
                 <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> {label}
                 </h4>
                 <div className="flex flex-col gap-2">
                 {childrenItems?.map((child: any) => (
                     <div key={child.id} className="relative w-full group">
-                    {child.isRecommended && (
-                        <div className="absolute top-1/2 -translate-y-1/2 z-[60] pointer-events-none left-full ml-2">
-                        <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
-                            Recommended
-                            <div className="absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent right-full border-r-[4px] border-r-slate-900"></div>
-                        </div>
-                        </div>
-                    )}
                     <div className={`relative w-full h-8 px-3 rounded-md font-bold text-[11px] transition-all border border-black/5 flex items-center justify-center gap-2 shadow-sm ${child.isRecommended ? 'bg-green-500 text-white ring-2 ring-green-500/20' : 'bg-yellow-400 text-black hover:bg-yellow-300'}`}>
                         {child.hasChildren && (
                             <Handle 
@@ -282,49 +262,75 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
     );
 };
 
-// --- 4. PHASE BRACKET NODE (UPDATED & STYLED) ---
+// --- 4. PHASE BRACKET NODE (SVG CURLY BRACE) ---
 const getPhaseStyle = (phaseNum: number | string) => {
     const num = Number(phaseNum);
     switch (num) {
-      case 1: return { color: "text-cyan-500", bg: "bg-cyan-500", border: "border-cyan-500/30", gradient: "from-cyan-500/50 to-transparent" };
-      case 2: return { color: "text-violet-500", bg: "bg-violet-500", border: "border-violet-500/30", gradient: "from-violet-500/50 to-transparent" };
-      case 3: return { color: "text-amber-500", bg: "bg-amber-500", border: "border-amber-500/30", gradient: "from-amber-500/50 to-transparent" };
-      default: return { color: "text-slate-500", bg: "bg-slate-500", border: "border-slate-500/30", gradient: "from-slate-500/50 to-transparent" };
+      case 1: return { color: "#06b6d4", text: "text-cyan-500", bg: "bg-cyan-500" }; // Cyan
+      case 2: return { color: "#8b5cf6", text: "text-violet-500", bg: "bg-violet-500" }; // Violet
+      case 3: return { color: "#f59e0b", text: "text-amber-500", bg: "bg-amber-500" }; // Amber
+      default: return { color: "#64748b", text: "text-slate-500", bg: "bg-slate-500" }; // Slate
     }
   };
   
 const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
     const height = Math.max(120, data.phaseHeight ?? 120);
     const styles = getPhaseStyle(data.phaseId);
+    
+    // SVG Geometry for a Left-Facing Curly Brace "{"
+    const w = 40; // width of the bracket area
+    const q = 10; // curve radius
+    const mid = height / 2;
+
+    // Path Logic: Top Right -> Curve TL -> Down -> Curve In (Point) -> Curve Out -> Down -> Curve BL -> Bottom Right
+    const pathData = `
+        M ${w} 0 
+        Q 0 0 0 ${q} 
+        L 0 ${mid - q} 
+        Q 0 ${mid} ${-q*1.5} ${mid} 
+        Q 0 ${mid} 0 ${mid + q} 
+        L 0 ${height - q} 
+        Q 0 ${height} ${w} ${height}
+    `;
 
     return (
         <div 
-        className="relative pointer-events-none flex flex-col" 
-        style={{ height, width: PHASE_BRACKET_WIDTH }} 
-        aria-hidden="true"
+            className="relative pointer-events-none flex flex-col items-center justify-center" 
+            style={{ height, width: 140 }} 
+            aria-hidden="true"
         >
-            {/* Top Number Badge */}
-            <div className={`absolute top-0 right-0 w-10 h-10 rounded-xl ${styles.bg} flex items-center justify-center shadow-lg shadow-${styles.color}/20 z-10`}>
-                <span className="text-white font-black text-lg">{data.phaseId}</span>
+            {/* The Curly Brace SVG */}
+            <div className="absolute inset-0 flex items-center justify-center">
+                <svg 
+                    width="50" 
+                    height={height} 
+                    viewBox={`-20 0 50 ${height}`} 
+                    fill="none" 
+                    className="drop-shadow-sm"
+                    style={{ transform: 'translateX(20px)' }}
+                >
+                    <path 
+                        d={pathData} 
+                        stroke={styles.color}
+                        strokeWidth="2"
+                        fill="none"
+                        strokeLinecap="round"
+                    />
+                </svg>
             </div>
 
-            {/* Vertical Gradient Line */}
-            <div className="absolute top-10 right-5 bottom-0 w-[2px] h-[calc(100%-20px)] bg-slate-200 dark:bg-slate-800">
-                <div className={`w-full h-1/2 bg-gradient-to-b ${styles.gradient}`} />
-            </div>
-
-            {/* Content Area */}
-            <div className="absolute top-14 right-8 flex flex-col items-end text-right w-64 pr-2">
-                <h3 className={`text-sm font-bold uppercase tracking-widest ${styles.color} mb-1`}>
-                {data.phaseSubtitle}
+            {/* Text Content - Stacked Vertically & Centered */}
+            <div className="relative z-10 flex flex-col items-center justify-center text-center bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-3 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm max-w-[120px]">
+                <div className={`w-6 h-6 rounded-full ${styles.bg} flex items-center justify-center shadow-sm mb-1.5`}>
+                    <span className="text-white font-bold text-[10px]">{data.phaseId}</span>
+                </div>
+                <h3 className={`text-[10px] font-bold uppercase tracking-wider ${styles.text} leading-tight mb-1`}>
+                    {data.phaseSubtitle}
                 </h3>
-                <p className="text-[10px] font-medium text-muted-foreground leading-tight opacity-80 line-clamp-3">
-                {data.label}
+                <p className="text-[9px] font-medium text-muted-foreground leading-tight line-clamp-2">
+                    {data.label}
                 </p>
             </div>
-
-            {/* Bottom decorative dot */}
-            <div className={`absolute bottom-0 right-[17px] w-1.5 h-1.5 rounded-full ${styles.bg}`} />
         </div>
     );
 };
@@ -373,8 +379,8 @@ export default function FrontendRoadmapPage() {
     let currentY = 50; 
     let minX = 0;
     const MAIN_X = 0;
-    const CONTAINER_OFFSET_X = 280; 
-    const DEPTH_X_GAP = 220;
+    const CONTAINER_OFFSET_X = 220; 
+    const DEPTH_X_GAP = 200;
     const DEFAULT_GAP = 160;
     const TOPIC_ITEM_GAP = 40;
 
@@ -488,6 +494,7 @@ export default function FrontendRoadmapPage() {
               targetHandle: side === 'left' ? 'right' : 'left',
               type: 'smoothstep',
               style: { stroke: isOption ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
+              markerEnd: { type: MarkerType.ArrowClosed, color: isOption ? '#22c55e' : '#fbbf24' },
             });
 
             cursorY += TOPIC_ITEM_GAP;
@@ -559,6 +566,7 @@ export default function FrontendRoadmapPage() {
                     targetHandle: side === 'left' ? 'right' : 'left',
                     type: 'smoothstep',
                     style: { stroke: isOptionGroup ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
+                    markerEnd: { type: MarkerType.ArrowClosed, color: isOptionGroup ? '#22c55e' : '#fbbf24' },
                 });
 
                 // Process Children Groups
@@ -598,6 +606,7 @@ export default function FrontendRoadmapPage() {
                 id: `e-${previousStepSlug}-${step.slug}`,
                 source: previousStepSlug, target: step.slug,
                 sourceHandle: 'bottom',
+                targetHandle: 'top', // Changed to top for better vertical flow
                 type: 'smoothstep',
                 style: { stroke: '#94a3b8', strokeWidth: 2, strokeDasharray: '5, 5' },
                 markerEnd: { type: MarkerType.ArrowClosed, color: '#94a3b8' },
@@ -611,21 +620,27 @@ export default function FrontendRoadmapPage() {
       const phaseEndY = currentY;
       phaseMarkers.push({
         id: `phase-${phase.phase_number}`,
-        label: phase.phase_description, // UPDATED: Use description for text
-        subtitle: phase.phase_name,     // UPDATED: Use Name for Title
+        label: phase.phase_description,
+        subtitle: phase.phase_name,
         startY: phaseStartY,
         endY: phaseEndY,
         phaseId: phase.phase_number
       });
+      currentY += 120;
     });
 
+    // UPDATED BRACKET POSITIONING
     const bracketX = minX - PHASE_BRACKET_WIDTH - PHASE_BRACKET_GAP;
     phaseMarkers.forEach((marker) => {
-      const phaseHeight = Math.max(DEFAULT_GAP, marker.endY - marker.startY) + PHASE_BRACKET_PADDING * 2;
+      const phaseHeight = Math.max(DEFAULT_GAP, marker.endY - marker.startY);
+      // Center the bracket vertically relative to the content
+      const centeredY = marker.startY + (phaseHeight / 2) - (phaseHeight / 2);
+      
       pushNode({
         id: marker.id,
         type: 'phaseBracket',
-        position: { x: bracketX, y: marker.startY - PHASE_BRACKET_PADDING },
+        // Adjust X to allow space for the SVG width
+        position: { x: bracketX - 60, y: marker.startY },
         data: {
           id: marker.id,
           phaseId: marker.phaseId,
@@ -636,7 +651,8 @@ export default function FrontendRoadmapPage() {
         },
         draggable: false,
         selectable: false,
-        focusable: false
+        focusable: false,
+        style: { zIndex: -1 } // Send brackets to back
       });
     });
 
@@ -649,13 +665,20 @@ export default function FrontendRoadmapPage() {
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
   return (
-    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-background text-foreground font-sans">
+    <div className="flex flex-col min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       
-      <main className="flex-grow pt-28 pb-0 z-10 relative flex flex-col items-center">
+      <main className="flex-grow pt-28 pb-0 relative flex flex-col items-center overflow-hidden">
+        
+        {/* --- GLOBAL BACKGROUND GRID --- */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+             {/* The Dots/Grid */}
+             <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.25)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.25)_1px,transparent_1px)] bg-[size:40px_40px] dark:opacity-40" />
+             <div className="absolute inset-0 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_100%)] pointer-events-none" />
+        </div>
         
         {/* --- DYNAMIC HEADER --- */}
-        <section className="text-center mb-6 px-4 max-w-4xl w-full">
+        <section className="text-center mb-6 px-4 max-w-4xl w-full relative z-20">
            <motion.div
              initial={{ opacity: 0, y: 20 }} 
              animate={{ opacity: 1, y: 0 }}
@@ -682,7 +705,7 @@ export default function FrontendRoadmapPage() {
         </section>
 
         {/* --- TAB NAVIGATION --- */}
-        <div className="w-full max-w-4xl px-4 mb-8">
+        <div className="w-full max-w-4xl px-4 mb-8 relative z-20">
           <div className="flex flex-wrap justify-center gap-2 sm:gap-8 border-b border-slate-200 dark:border-slate-800">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
@@ -711,11 +734,11 @@ export default function FrontendRoadmapPage() {
         </div>
 
         {/* --- CONTENT AREA --- */}
-        <div className="w-full flex-grow relative bg-slate-50/50 dark:bg-black/20">
-          
+        <div className="w-full flex-grow relative z-10">
+
           {activeTab === 'roadmap' ? (
             <div 
-              className="w-full h-full min-h-[600px] border-t border-slate-200 dark:border-slate-800"
+              className="w-full h-full min-h-[600px] border-t border-slate-200 dark:border-slate-800 relative z-10"
               style={{ height: `${totalCanvasHeight}px` }}
             >
               <ReactFlow<AppNode>
@@ -737,19 +760,14 @@ export default function FrontendRoadmapPage() {
                 maxZoom={1}
                 attributionPosition="bottom-right"
                 proOptions={{ hideAttribution: true }}
+                className="bg-transparent" // Important for custom background to show
               >
-                <Background 
-                  color="currentColor"
-                  className="text-slate-200 dark:text-slate-800"
-                  gap={40} 
-                  size={1} 
-                  variant={BackgroundVariant.Dots} 
-                />
+                {/* Removed the default <Background> component to use custom CSS grid */}
               </ReactFlow>
             </div>
           ) : (
             // --- COMING SOON PLACEHOLDER ---
-            <div className="w-full h-[400px] flex flex-col items-center justify-center text-center px-4">
+            <div className="w-full h-[400px] flex flex-col items-center justify-center text-center px-4 relative z-10">
               <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-4">
                 <Lock className="text-slate-400" size={32} />
               </div>
