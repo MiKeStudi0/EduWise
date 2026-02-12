@@ -163,7 +163,7 @@ export default function Careers() {
                         Explore Paths
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </Button>
-                      <Button variant="hero-outline" size="xl">
+                      <Button variant="glass" size="xl">
                         Take Career Quiz
                       </Button>
                     </div>

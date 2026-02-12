@@ -44,7 +44,7 @@ export function HeroSection() {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button asChild variant="hero-outline" size="xl">
+            <Button asChild variant="glass" size="xl">
               <Link href="/practice">
                 <Play className="w-5 h-5" />
                 Try Coding Playground

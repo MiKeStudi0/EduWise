@@ -34,7 +34,7 @@ export function CTASection() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button asChild variant="hero-outline" size="xl" className="w-full sm:w-auto">
+            <Button asChild variant="glass" size="xl" className="w-full sm:w-auto">
               <Link href="/courses">
                 Explore Curriculum
               </Link>
