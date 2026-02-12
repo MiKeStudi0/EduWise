@@ -23,7 +23,7 @@ const ThemeProviderContext = createContext<ThemeProviderState>({
 export function ThemeProvider({
   children,
   defaultTheme = "dark",
-  storageKey = "codepath-ui-theme",
+  storageKey = "LearnStak-ui-theme",
 }: ThemeProviderProps) {
   // ✅ Safe default for SSR
   const [theme, setTheme] = useState<Theme>(defaultTheme);

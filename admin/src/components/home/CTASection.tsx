@@ -24,7 +24,7 @@ export function CTASection() {
 
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
             Join millions of developers learning, practicing, and building 
-            their careers with CodePath. It's free to get started.
+            their careers with LearnStak. It's free to get started.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

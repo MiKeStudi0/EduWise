@@ -98,7 +98,7 @@ const testimonials = [
     name: "Alex Johnson",
     role: "Frontend Developer at Google",
     avatar: "AJ",
-    quote: "CodePath's Frontend path helped me land my dream job. The projects were incredibly practical.",
+    quote: "LearnStak's Frontend path helped me land my dream job. The projects were incredibly practical.",
     path: "Frontend Developer",
   },
   {

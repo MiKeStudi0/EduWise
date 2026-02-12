@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback ,useEffect} from 'react';
 import { 
   ReactFlow, 
   useNodesState, 
@@ -28,7 +28,7 @@ import roadmapDataSource from "@/json/frontend-development.json";
 
 // --- CONSTANTS ---
 const PHASE_BRACKET_WIDTH = 60; // Slightly narrower for the brace look
-const PHASE_BRACKET_GAP = 60;
+const PHASE_BRACKET_GAP = 30;
 const PHASE_BRACKET_PADDING = 20;
 
 // --- TYPE DEFINITIONS ---
@@ -112,8 +112,15 @@ const normalizeHierarchy = (children: RoadmapChild[], parentSide?: 'left' | 'rig
   });
 };
 
-const countNodes = (nodes: HierarchyNode[]): number =>
-  nodes.reduce((sum, node) => sum + 1 + countNodes(node.children ?? []), 0);
+const countNodes = (
+  nodes: HierarchyNode[],
+  maxDepth = Number.POSITIVE_INFINITY,
+  depth = 1
+): number =>
+  nodes.reduce((sum, node) => {
+    if (depth > maxDepth) return sum;
+    return sum + 1 + countNodes(node.children ?? [], maxDepth, depth + 1);
+  }, 0);
 
 const priorityFromRecommendation = (recommendation?: string, fallback?: number) => {
   if (recommendation === 'P') return 1;
@@ -122,6 +129,18 @@ const priorityFromRecommendation = (recommendation?: string, fallback?: number) 
 };
 
 const resolveRecommended = (child: { is_recommended?: boolean }) => Boolean(child.is_recommended);
+
+// --- HOOKS ---
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+  return isMobile;
+}
 
 // --- NODE DATA TYPES ---
 type NodeData = {
@@ -160,8 +179,8 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
         whileTap={{ scale: 0.95 }}
         onClick={() => onNodeClick && onNodeClick(id, data)}
         className={`
-          relative z-10 flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-300 w-44 shadow-lg hover:shadow-xl
-          border cursor-grab active:cursor-grabbing
+          relative z-10 flex items-center gap-3 px-2 md:px-3 py-1.5 md:py-2.5 rounded-xl transition-all duration-300 w-36 md:w-44 shadow-lg hover:shadow-xl
+          border cursor-grab active:cursor-grabbing hover:scale-105
           ${isActive 
             ? 'bg-blue-700 border-blue-800 text-white scale-105 ring-4 ring-blue-500/30' 
             : 'bg-blue-600 border-blue-500 text-white hover:bg-blue-500'}
@@ -172,7 +191,7 @@ const MainNode = ({ data, id }: NodeProps<AppNode>) => {
             <img src={`https://cdn.simpleicons.org/${iconSlug}`} alt="" className="w-4 h-4 filter invert" />
           ) : (type === 'group' ? <Globe size={16} /> : <ChevronRight size={16} />)}
         </div>
-        <span className="text-xs font-bold text-left tracking-tight">{label}</span>
+        <span className="text-[10px] md:text-xs font-bold text-left tracking-tight">{label}</span>
       </motion.button>
 
       <Handle type="source" id="left" position={Position.Left} className="!bg-transparent !border-none" />
@@ -188,24 +207,43 @@ const TopicGroupNode = ({ data }: NodeProps<AppNode>) => {
     const handlePosition = side === 'right' ? Position.Left : Position.Right;
     const handleId = side === 'right' ? 'left' : 'right';
     const itemSourcePosition = side === 'right' ? Position.Right : Position.Left;
+    const recommendedTooltip = side === 'left'
+        ? {
+            wrapper: "absolute right-full top-1/2 -translate-y-1/2 mr-2 z-[60] pointer-events-none hidden md:block",
+            pointer: "absolute left-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[4px] border-l-slate-900 dark:border-l-white"
+          }
+        : {
+            wrapper: "absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none hidden md:block",
+            pointer: "absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[4px] border-r-slate-900 dark:border-r-white"
+          };
 
     return (
         <div className="relative group cursor-default">
             <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
-            <div className="w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
-                <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
+            <div className="w-[140px] md:w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-2 md:p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
+                <h4 className="text-slate-400 dark:text-muted-foreground text-[9px] md:text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span> {label}
                 </h4>
                 <div className="flex flex-col gap-2">
                     {childrenItems?.map((child: any) => (
                         <div
                             key={child.id}
-                            className={`relative h-8 px-2 rounded-md font-bold text-[11px] shadow-sm border border-black/5 flex items-center justify-center transition-colors group/item ${
+                            className={`relative h-7 md:h-8 px-2 rounded-md font-bold text-[9px] md:text-[11px] shadow-sm border border-black/5 flex items-center justify-center transition-all duration-200 group/item hover:scale-105 ${
                                 child.isRecommended
                                     ? 'bg-green-500 text-white ring-2 ring-green-500/20'
-                                    : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                                    : child.hasChildren
+                                        ? 'bg-amber-400 text-black hover:bg-amber-300'
+                                        : 'bg-yellow-400 text-black hover:bg-yellow-300'
                             }`}
                         >
+                            {child.isRecommended && (
+                                <div className={recommendedTooltip.wrapper}>
+                                    <div className="relative bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 dark:border-slate-200 whitespace-nowrap">
+                                        Recommended
+                                        <div className={recommendedTooltip.pointer}></div>
+                                    </div>
+                                </div>
+                            )}
                             {child.hasChildren && (
                                 <Handle 
                                     type="source" 
@@ -230,18 +268,41 @@ const OptionGroupNode = ({ data }: NodeProps<AppNode>) => {
     const handlePosition = side === 'left' ? Position.Right : Position.Left;
     const handleId = side === 'left' ? 'right' : 'left';
     const itemSourcePosition = side === 'left' ? Position.Left : Position.Right;
+    const recommendedTooltip = side === 'left'
+        ? {
+            wrapper: "absolute top-1/2 -translate-y-1/2 z-[60] pointer-events-none right-full mr-2 hidden md:block",
+            pointer: "absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent left-full border-l-[4px] border-l-slate-900 dark:border-l-white"
+          }
+        : {
+            wrapper: "absolute top-1/2 -translate-y-1/2 z-[60] pointer-events-none left-full ml-2 hidden md:block",
+            pointer: "absolute top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent right-full border-r-[4px] border-r-slate-900 dark:border-r-white"
+          };
 
     return (
         <div className="relative group cursor-default">
             <Handle type="target" id={handleId} position={handlePosition} className="!bg-transparent !border-none" />
-            <div className="w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
+            <div className="w-[140px] md:w-[170px] bg-white/95 dark:bg-card/95 backdrop-blur-md border border-slate-300 dark:border-slate-700 rounded-xl shadow-xl p-2 md:p-3 flex flex-col gap-2 relative z-50 ring-1 ring-black/5">
                 <h4 className="text-slate-400 dark:text-muted-foreground text-[10px] font-bold text-center mb-1 uppercase tracking-wider flex items-center justify-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> {label}
                 </h4>
                 <div className="flex flex-col gap-2">
                 {childrenItems?.map((child: any) => (
                     <div key={child.id} className="relative w-full group">
-                    <div className={`relative w-full h-8 px-3 rounded-md font-bold text-[11px] transition-all border border-black/5 flex items-center justify-center gap-2 shadow-sm ${child.isRecommended ? 'bg-green-500 text-white ring-2 ring-green-500/20' : 'bg-yellow-400 text-black hover:bg-yellow-300'}`}>
+                    {child.isRecommended && (
+                        <div className={recommendedTooltip.wrapper}>
+                        <div className="relative bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 dark:border-slate-200 whitespace-nowrap">
+                            Recommended
+                            <div className={recommendedTooltip.pointer}></div>
+                        </div>
+                        </div>
+                    )}
+                    <div className={`relative w-full h-7 md:h-8 px-3 rounded-md font-bold text-[9px] md:text-[11px] transition-all duration-200 border border-black/5 flex items-center justify-center gap-2 shadow-sm hover:scale-105 ${
+                        child.isRecommended 
+                            ? 'bg-green-500 text-white ring-2 ring-green-500/20' 
+                            : child.hasChildren
+                                ? 'bg-amber-400 text-black hover:bg-amber-300'
+                                : 'bg-yellow-400 text-black hover:bg-yellow-300'
+                    }`}>
                         {child.hasChildren && (
                             <Handle 
                                 type="source" 
@@ -274,12 +335,13 @@ const getPhaseStyle = (phaseNum: number | string) => {
   };
   
 const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
+    const isMobile = useIsMobile();
     const height = Math.max(120, data.phaseHeight ?? 120);
     const styles = getPhaseStyle(data.phaseId);
     
     // SVG Geometry for a Left-Facing Curly Brace "{"
-    const w = 40; // width of the bracket area
-    const q = 10; // curve radius
+    const w = isMobile ? 20 : 40; // width of the bracket area
+    const q = isMobile ? 5 : 10; // curve radius
     const mid = height / 2;
 
     // Path Logic: Top Right -> Curve TL -> Down -> Curve In (Point) -> Curve Out -> Down -> Curve BL -> Bottom Right
@@ -295,18 +357,18 @@ const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
 
     return (
         <div 
-            className="relative pointer-events-none flex flex-col items-center justify-center" 
-            style={{ height, width: 140 }} 
+            className="relative pointer-events-none flex flex-col items-center justify-center transition-all duration-300" 
+            style={{ height, width: isMobile ? 0 : 140, display: isMobile ? 'none' : 'flex' }} 
             aria-hidden="true"
         >
             {/* The Curly Brace SVG */}
             <div className="absolute inset-0 flex items-center justify-center">
                 <svg 
-                    width="50" 
+                    width={isMobile ? 30 : 50} 
                     height={height} 
                     viewBox={`-20 0 50 ${height}`} 
                     fill="none" 
-                    className="drop-shadow-sm"
+                    className="drop-shadow-sm origin-left"
                     style={{ transform: 'translateX(20px)' }}
                 >
                     <path 
@@ -320,7 +382,7 @@ const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
             </div>
 
             {/* Text Content - Stacked Vertically & Centered */}
-            <div className="relative z-10 flex flex-col items-center justify-center text-center bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-3 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm max-w-[120px]">
+            <div className="relative z-10 flex flex-col items-center justify-center text-center bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm p-3 rounded-2xl border border-slate-200/60 dark:border-slate-800 shadow-sm max-w-[120px] ml-2">
                 <div className={`w-6 h-6 rounded-full ${styles.bg} flex items-center justify-center shadow-sm mb-1.5`}>
                     <span className="text-white font-bold text-[10px]">{data.phaseId}</span>
                 </div>
@@ -335,15 +397,25 @@ const PhaseBracketNode = ({ data }: NodeProps<AppNode>) => {
     );
 };
 
+const FIT_VIEW_OPTIONS = { minZoom: 1, maxZoom: 1 };
+
+// --- MOBILE CONFIGURATION ---
+const MOBILE_VIEW_CONFIG = {
+  x: 142,      // Adjust horizontal position (pan)
+  y: 0,      // Adjust vertical position (pan)
+  zoom: 0.8, // Adjust initial zoom level
+};
+
 export default function FrontendRoadmapPage() {
   const [activeNodeData, setActiveNodeData] = useState<NodeData | null>(null);
   const [activeTab, setActiveTab] = useState('roadmap');
+  const isMobile = useIsMobile();
 
   const tabs = [
     { id: 'roadmap', label: 'Roadmap', icon: BrainCircuit },
     { id: 'projects', label: 'Projects', icon: Code },
     { id: 'practices', label: 'Best Practices', icon: Target },
-    { id: 'quiz', label: 'Quiz', icon: Lock },
+    // { id: 'quiz', label: 'Quiz', icon: Lock },
   ];
 
   // --- CONFIGURATION ---
@@ -379,10 +451,13 @@ export default function FrontendRoadmapPage() {
     let currentY = 50; 
     let minX = 0;
     const MAIN_X = 0;
-    const CONTAINER_OFFSET_X = 220; 
-    const DEPTH_X_GAP = 200;
-    const DEFAULT_GAP = 160;
-    const TOPIC_ITEM_GAP = 40;
+    // Responsive Constants
+    const CONTAINER_OFFSET_X = isMobile ? 160 : 220; 
+    const DEPTH_X_GAP = isMobile ? 160 : 200;
+    const DEFAULT_GAP = isMobile ? 80 : 120;
+    const TOPIC_ITEM_GAP = isMobile ? 32 : 40;
+    const PHASE_BRACKET_WIDTH = isMobile ? 40 : 60;
+    const PHASE_BRACKET_GAP = isMobile ? 15 : 30;
 
     const phaseMarkers: Array<{
       id: string;
@@ -398,9 +473,28 @@ export default function FrontendRoadmapPage() {
       minX = Math.min(minX, node.position.x);
     };
 
+    const getEstimatedNodeHeight = (node: AppNode): number => {
+      switch (node.type) {
+        case 'main':
+          return isMobile ? 40 : 52;
+        case 'topicItem':
+        case 'optionItem':
+          return isMobile ? 32 : 36;
+        case 'topicGroup':
+        case 'optionGroup':
+          return ((node.data.childrenItems?.length ?? 0) * 40) + 50;
+        case 'phaseBracket':
+          return Math.max(DEFAULT_GAP, node.data.phaseHeight ?? DEFAULT_GAP);
+        default:
+          return DEFAULT_GAP;
+      }
+    };
+
     let previousStepSlug: string | null = null;
 
-    phases.forEach((phase) => {
+    const visiblePhases = phases.filter((phase) => (phase.topics?.length ?? 0) > 0);
+
+    visiblePhases.forEach((phase, phaseIndex) => {
       if (!phase.topics || phase.topics.length === 0) {
         return;
       }
@@ -413,11 +507,21 @@ export default function FrontendRoadmapPage() {
         const leftItems = hierarchy.filter(c => c.side === 'left');
         const rightItems = hierarchy.filter(c => c.side === 'right');
         
-        // Check if loose layout is explicitly set
-        const isLoose = step.ui_config?.topic_layout === 'loose';
+        const hasGrandChildren = hierarchy.some(item => item.children && item.children.length > 0);
+
+        // Check if loose layout is explicitly set or implied by flat hierarchy
+        const isLoose = step.ui_config?.topic_layout 
+            ? step.ui_config.topic_layout === 'loose'
+            : !hasGrandChildren;
+        const hideLooseNodesOnMobile = isMobile && isLoose;
+
+        const dynamicOffsetX = (!hasGrandChildren && isLoose) ? 340 : CONTAINER_OFFSET_X;
+        const looseRootGapX = isMobile && isLoose ? 200 : dynamicOffsetX;
+        const looseDepthGapX = isMobile && isLoose ? 100 : DEPTH_X_GAP;
         
-        const leftCount = countNodes(leftItems);
-        const rightCount = countNodes(rightItems);
+        const maxVisibleDepth = isMobile ? 2 : Number.POSITIVE_INFINITY;
+        const leftCount = hideLooseNodesOnMobile ? 0 : countNodes(leftItems, maxVisibleDepth);
+        const rightCount = hideLooseNodesOnMobile ? 0 : countNodes(rightItems, maxVisibleDepth);
         const maxItems = Math.max(leftCount, rightCount);
         const containerHeight = maxItems > 0 ? (maxItems * TOPIC_ITEM_GAP) + 40 : 0;
         const rowHeight = Math.max(containerHeight, DEFAULT_GAP);
@@ -468,9 +572,10 @@ export default function FrontendRoadmapPage() {
               id: nodeId,
               type: isOption ? 'optionItem' : 'topicItem',
               position: {
-                x: MAIN_X + sign * (CONTAINER_OFFSET_X + (depth - 1) * DEPTH_X_GAP),
+                x: MAIN_X + sign * (looseRootGapX + (depth - 1) * looseDepthGapX),
                 y: cursorY
               },
+              className: "hover:scale-105 transition-transform duration-200",
               data: {
                 id: String(item.id),
                 phaseId: phase.phase_number,
@@ -493,6 +598,7 @@ export default function FrontendRoadmapPage() {
               sourceHandle: side,
               targetHandle: side === 'left' ? 'right' : 'left',
               type: 'smoothstep',
+              animated: true,
               style: { stroke: isOption ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
               markerEnd: { type: MarkerType.ArrowClosed, color: isOption ? '#22c55e' : '#fbbf24' },
             });
@@ -500,6 +606,7 @@ export default function FrontendRoadmapPage() {
             cursorY += TOPIC_ITEM_GAP;
 
             item.children?.forEach((child, childIndex) => {
+              if (isMobile && depth >= 2) return;
               walk(child, depth + 1, nodeId, nextTopicId, nextSubtopicId, childIndex + 1);
             });
           };
@@ -509,7 +616,7 @@ export default function FrontendRoadmapPage() {
           });
         };
 
-        if (isLoose) {
+        if (isLoose && !hideLooseNodesOnMobile) {
             if (leftCount > 0) {
               const startY = currentY - ((leftCount - 1) * TOPIC_ITEM_GAP) / 2;
               layoutSideRecursive(leftItems, 'left', startY);
@@ -519,7 +626,7 @@ export default function FrontendRoadmapPage() {
               const startY = currentY - ((rightCount - 1) * TOPIC_ITEM_GAP) / 2;
               layoutSideRecursive(rightItems, 'right', startY);
             }
-        } else {
+        } else if (!isLoose) {
             // GROUPED LAYOUT (Recursive Containers)
             
             const layoutGroupRecursive = (
@@ -528,7 +635,8 @@ export default function FrontendRoadmapPage() {
                 baseX: number,
                 baseY: number,
                 parentId: string,
-                parentHandleId: string | null
+                parentHandleId: string | null,
+                level: number = 1
             ): number => {
                 if (items.length === 0) return 0;
 
@@ -541,7 +649,8 @@ export default function FrontendRoadmapPage() {
                     id: groupId,
                     type: groupType,
                     position: { x: baseX, y: baseY },
-                    data: {
+                    className: "hover:scale-105 transition-transform duration-200",
+                   data: {
                         id: groupId,
                         phaseId: phase.phase_number,
                         label: isOptionGroup ? 'Options' : 'Topics',
@@ -552,7 +661,7 @@ export default function FrontendRoadmapPage() {
                             id: String(t.id),
                             iconSlug: t.icon_slug,
                             isRecommended: resolveRecommended(t),
-                            hasChildren: t.children && t.children.length > 0
+                            hasChildren: t.children && t.children.length > 0 && (!isMobile || level < 2)
                         }))
                     }
                 });
@@ -565,6 +674,7 @@ export default function FrontendRoadmapPage() {
                     sourceHandle: parentHandleId || side, // if null, use side (main node)
                     targetHandle: side === 'left' ? 'right' : 'left',
                     type: 'smoothstep',
+                    animated: true,
                     style: { stroke: isOptionGroup ? '#22c55e' : '#fbbf24', strokeWidth: 2, strokeDasharray: '4, 4' },
                     markerEnd: { type: MarkerType.ArrowClosed, color: isOptionGroup ? '#22c55e' : '#fbbf24' },
                 });
@@ -575,6 +685,8 @@ export default function FrontendRoadmapPage() {
 
                 items.forEach((item) => {
                     if (item.children && item.children.length > 0) {
+                        if (isMobile && level >= 2) return;
+
                         const offset = side === 'left' ? -250 : 250;
                         const childHeight = layoutGroupRecursive(
                             item.children,
@@ -582,7 +694,8 @@ export default function FrontendRoadmapPage() {
                             baseX + offset,
                             currentChildY,
                             groupId,
-                            String(item.id)
+                            String(item.id),
+                            level + 1
                         );
                         currentChildY += Math.max(childHeight, 40) + 20;
                         maxChildHeight += Math.max(childHeight, 40) + 20;
@@ -593,10 +706,10 @@ export default function FrontendRoadmapPage() {
             };
 
             if (leftCount > 0) {
-                layoutGroupRecursive(leftItems, 'left', MAIN_X - CONTAINER_OFFSET_X, currentY, step.slug, null);
+                layoutGroupRecursive(leftItems, 'left', MAIN_X - dynamicOffsetX, currentY, step.slug, null);
             }
             if (rightCount > 0) {
-                layoutGroupRecursive(rightItems, 'right', MAIN_X + CONTAINER_OFFSET_X, currentY, step.slug, null);
+                layoutGroupRecursive(rightItems, 'right', MAIN_X + dynamicOffsetX, currentY, step.slug, null);
             }
         }
 
@@ -608,6 +721,7 @@ export default function FrontendRoadmapPage() {
                 sourceHandle: 'bottom',
                 targetHandle: 'top', // Changed to top for better vertical flow
                 type: 'smoothstep',
+                animated: true,
                 style: { stroke: '#94a3b8', strokeWidth: 2, strokeDasharray: '5, 5' },
                 markerEnd: { type: MarkerType.ArrowClosed, color: '#94a3b8' },
             });
@@ -626,21 +740,21 @@ export default function FrontendRoadmapPage() {
         endY: phaseEndY,
         phaseId: phase.phase_number
       });
-      currentY += 120;
+      if (phaseIndex < visiblePhases.length - 1) {
+        currentY += isMobile ? 48 : 80;
+      }
     });
 
     // UPDATED BRACKET POSITIONING
-    const bracketX = minX - PHASE_BRACKET_WIDTH - PHASE_BRACKET_GAP;
+    const bracketX = minX - PHASE_BRACKET_WIDTH - PHASE_BRACKET_GAP + (isMobile ? 20 : 0);
     phaseMarkers.forEach((marker) => {
       const phaseHeight = Math.max(DEFAULT_GAP, marker.endY - marker.startY);
-      // Center the bracket vertically relative to the content
-      const centeredY = marker.startY + (phaseHeight / 2) - (phaseHeight / 2);
       
       pushNode({
         id: marker.id,
         type: 'phaseBracket',
         // Adjust X to allow space for the SVG width
-        position: { x: bracketX - 60, y: marker.startY },
+        position: { x: bracketX - 60, y: marker.startY },        
         data: {
           id: marker.id,
           phaseId: marker.phaseId,
@@ -656,19 +770,30 @@ export default function FrontendRoadmapPage() {
       });
     });
 
-    const totalCanvasHeight = currentY + 100;
+    const maxNodeBottom = nodes.reduce(
+      (max, node) => Math.max(max, node.position.y + getEstimatedNodeHeight(node)),
+      currentY
+    );
+    const viewportScale = isMobile ? MOBILE_VIEW_CONFIG.zoom : 1;
+    const canvasBottomPadding = isMobile ? 420 : 100;
+    const totalCanvasHeight = Math.ceil((maxNodeBottom * viewportScale) + canvasBottomPadding);
 
     return { initialNodes: nodes, initialEdges: edges, totalCanvasHeight };
-  }, [phases, handleNodeClick]);
+  }, [phases, handleNodeClick, isMobile]);
 
   const [nodes, setNodes, onNodesChange] = useNodesState<AppNode>(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+
+  useEffect(() => {
+    setNodes(initialNodes);
+    setEdges(initialEdges);
+  }, [initialNodes, initialEdges, setNodes, setEdges]);
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground font-sans">
       <Navbar />
       
-      <main className="flex-grow pt-28 pb-0 relative flex flex-col items-center overflow-hidden">
+      <main className="flex-grow pt-20 md:pt-28 pb-0 relative flex flex-col items-center overflow-x-hidden">
         
         {/* --- GLOBAL BACKGROUND GRID --- */}
         <div className="absolute inset-0 pointer-events-none z-0">
@@ -690,7 +815,7 @@ export default function FrontendRoadmapPage() {
              initial={{ opacity: 0, y: 20 }} 
              animate={{ opacity: 1, y: 0 }}
              transition={{ delay: 0.1 }}
-             className="text-4xl md:text-6xl font-black mb-4 tracking-tight text-slate-900 dark:text-white"
+             className="text-3xl md:text-5xl font-black mb-4  text-slate-900 dark:text-white "
            >
              {roadmapRoot.title}
            </motion.h1>
@@ -698,7 +823,7 @@ export default function FrontendRoadmapPage() {
              initial={{ opacity: 0 }} 
              animate={{ opacity: 1 }}
              transition={{ delay: 0.2 }}
-             className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+             className="text-sm md:text-base text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
            >
              {roadmapRoot.description}
            </motion.p>
@@ -706,7 +831,8 @@ export default function FrontendRoadmapPage() {
 
         {/* --- TAB NAVIGATION --- */}
         <div className="w-full max-w-4xl px-4 mb-8 relative z-20">
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-8 border-b border-slate-200 dark:border-slate-800">
+
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-8 ">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               const Icon = tab.icon;
@@ -737,32 +863,35 @@ export default function FrontendRoadmapPage() {
         <div className="w-full flex-grow relative z-10">
 
           {activeTab === 'roadmap' ? (
-            <div 
+            <div
               className="w-full h-full min-h-[600px] border-t border-slate-200 dark:border-slate-800 relative z-10"
               style={{ height: `${totalCanvasHeight}px` }}
             >
               <ReactFlow<AppNode>
+                key={isMobile ? 'mobile-view' : 'desktop-view'} // Forces re-render to apply correct viewport settings
                 nodes={nodes}
                 edges={edges}
                 onNodesChange={onNodesChange}
                 onEdgesChange={onEdgesChange}
                 nodeTypes={nodeTypes}
-                fitView
-                panOnDrag={false}        
+                fitView={!isMobile} // Only auto-fit on desktop
+                defaultViewport={isMobile ? MOBILE_VIEW_CONFIG : undefined} // Use manual config on mobile
+                fitViewOptions={FIT_VIEW_OPTIONS}
+                panOnDrag={false}
                 zoomOnScroll={false}     
                 zoomOnPinch={false}
                 zoomOnDoubleClick={false}
                 panOnScroll={false}      
                 preventScrolling={false} 
-                nodesDraggable={true}    
+                nodesDraggable={!isMobile}
                 nodesConnectable={false}
-                minZoom={1} 
-                maxZoom={1}
+                minZoom={isMobile ? 0.2 : 1} 
+                maxZoom={isMobile ? 2 : 1}
                 attributionPosition="bottom-right"
                 proOptions={{ hideAttribution: true }}
-                className="bg-transparent" // Important for custom background to show
+                className="bg-transparent " // Important for custom background to show
               >
-                {/* Removed the default <Background> component to use custom CSS grid */}
+                {/* Removed the default Background component to use custom CSS grid */}
               </ReactFlow>
             </div>
           ) : (

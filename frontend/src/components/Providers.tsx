@@ -13,7 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="dark" storageKey="codepath-ui-theme">
+      <ThemeProvider defaultTheme="dark" storageKey="LearnStak-ui-theme">
         <TooltipProvider>
           {children}
           <Toaster />

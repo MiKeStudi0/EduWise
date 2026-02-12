@@ -1,6 +1,6 @@
 {
   "roadmap": {
-    "title": "Frontend Developer Learning Roadmap",
+    "title": "Frontend Developer",
     "description": "A comprehensive, phased approach to becoming a professional frontend developer",
     "phases": [
       {
@@ -422,20 +422,20 @@
               {
                 "id": "pkg-npm",
                 "label": "npm",
-                "type": "subtopic",
-                "side": "left",
+                "type": "option",
+                "side": "right",
                 "is_recommended": true
               },
               {
                 "id": "pkg-pnpm",
                 "label": "pnpm",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "pkg-yarn",
                 "label": "yarn",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]
@@ -472,20 +472,21 @@
               {
                 "id": "build-vite",
                 "label": "Vite",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "left",
+                "is_recommended": true
               },
               {
                 "id": "build-esbuild",
                 "label": "esbuild",
-                "type": "subtopic",
+                "type": "option",
                 "side": "left"
               },
               {
                 "id": "build-swc",
                 "label": "SWC",
-                "type": "subtopic",
-                "side": "right"
+                "type": "option",
+                "side": "left"
               }
             ]
           },
@@ -513,20 +514,20 @@
               {
                 "id": "css-tailwind",
                 "label": "Tailwind CSS",
-                "type": "subtopic",
-                "side": "left",
+                "type": "option",
+                "side": "right",
                 "is_recommended": true
               },
               {
                 "id": "css-modules",
                 "label": "CSS Modules",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "css-styled",
                 "label": "Styled Components",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]
@@ -556,7 +557,7 @@
                 "id": "fw-react",
                 "label": "React",
                 "type": "option",
-                "side": "right",
+                "side": "left",
                 "children": [
                   {
                     "id": "react-hooks",
@@ -585,19 +586,19 @@
                 "id": "fw-vue",
                 "label": "Vue.js",
                 "type": "option",
-                "side": "right"
+                "side": "left"
               },
               {
                 "id": "fw-svelte",
                 "label": "Svelte",
                 "type": "option",
-                "side": "right"
+                "side": "left"
               },
               {
                 "id": "fw-solid",
                 "label": "SolidJS",
                 "type": "option",
-                "side": "right"
+                "side": "left"
               }
             ]
           },
@@ -625,25 +626,26 @@
               {
                 "id": "meta-next",
                 "label": "Next.js",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right",
+                "is_recommended": true
               },
               {
                 "id": "meta-astro",
                 "label": "Astro",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "meta-nuxt",
                 "label": "Nuxt.js",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               },
               {
                 "id": "meta-remix",
                 "label": "Remix",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]
@@ -672,20 +674,21 @@
               {
                 "id": "state-context",
                 "label": "Context API",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "left",
+                "is_recommended": true
               },
               {
                 "id": "state-zustand",
                 "label": "Zustand",
-                "type": "subtopic",
+                "type": "option",
                 "side": "left"
               },
               {
                 "id": "state-redux",
                 "label": "Redux Toolkit",
-                "type": "subtopic",
-                "side": "right"
+                "type": "option",
+                "side": "left"
               }
             ]
           },
@@ -797,25 +800,26 @@
               {
                 "id": "test-vitest",
                 "label": "Vitest",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right",
+                "is_recommended": true
               },
               {
                 "id": "test-jest",
                 "label": "Jest",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "test-playwright",
                 "label": "Playwright (E2E)",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               },
               {
                 "id": "test-cypress",
                 "label": "Cypress",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]
@@ -844,20 +848,21 @@
               {
                 "id": "lint-eslint",
                 "label": "ESLint",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "left",
+                "is_recommended": true
               },
               {
                 "id": "lint-prettier",
                 "label": "Prettier",
-                "type": "subtopic",
+                "type": "option",
                 "side": "left"
               },
               {
                 "id": "lint-biome",
                 "label": "Biome",
-                "type": "subtopic",
-                "side": "right"
+                "type": "option",
+                "side": "left"
               }
             ]
           },
@@ -997,17 +1002,18 @@
                   {
                     "id": "auth-clerk",
                     "label": "Clerk",
-                    "type": "module"
+                    "type": "option",
+                    "is_recommended": true
                   },
                   {
                     "id": "auth-auth0",
                     "label": "Auth0",
-                    "type": "module"
+                    "type": "option"
                   },
                   {
                     "id": "auth-firebase",
                     "label": "Firebase Auth",
-                    "type": "module"
+                    "type": "option"
                   }
                 ]
               }
@@ -1037,25 +1043,26 @@
               {
                 "id": "deploy-vercel",
                 "label": "Vercel",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right",
+                "is_recommended": true
               },
               {
                 "id": "deploy-netlify",
                 "label": "Netlify",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "deploy-cloudflare",
                 "label": "Cloudflare Pages",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               },
               {
                 "id": "deploy-github-pages",
                 "label": "GitHub Pages",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]
@@ -1084,14 +1091,15 @@
               {
                 "id": "monitor-sentry",
                 "label": "Sentry",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "left",
+                "is_recommended": true
               },
               {
                 "id": "monitor-logrocket",
                 "label": "LogRocket",
-                "type": "subtopic",
-                "side": "right"
+                "type": "option",
+                "side": "left"
               }
             ]
           },
@@ -1125,17 +1133,18 @@
                   {
                     "id": "design-shadcn",
                     "label": "ShadCN/UI",
-                    "type": "module"
+                    "type": "option",
+                    "is_recommended": true
                   },
                   {
                     "id": "design-mui",
                     "label": "MUI",
-                    "type": "module"
+                    "type": "option"
                   },
                   {
                     "id": "design-chakra",
                     "label": "Chakra",
-                    "type": "module"
+                    "type": "option"
                   }
                 ]
               },
@@ -1332,25 +1341,26 @@
               {
                 "id": "mobile-react-native",
                 "label": "React Native",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right",
+                "is_recommended": true
               },
               {
                 "id": "mobile-flutter",
                 "label": "Flutter",
-                "type": "subtopic",
-                "side": "left"
+                "type": "option",
+                "side": "right"
               },
               {
                 "id": "mobile-electron",
                 "label": "Electron",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               },
               {
                 "id": "mobile-tauri",
                 "label": "Tauri",
-                "type": "subtopic",
+                "type": "option",
                 "side": "right"
               }
             ]

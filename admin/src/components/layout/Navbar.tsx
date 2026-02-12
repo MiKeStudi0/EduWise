@@ -50,7 +50,7 @@ export function Navbar() {
               </div>
             </div>
             <span className="text-xl font-bold tracking-tight">
-              CodePath
+              LearnStak
             </span>
           </Link>
 

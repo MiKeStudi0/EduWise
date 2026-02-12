@@ -46,7 +46,7 @@ export function Footer() {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Code2 className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="text-lg font-bold">CodePath</span>
+              <span className="text-lg font-bold">LearnStak</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               The complete platform for developers to learn, practice, and build their careers.
@@ -90,7 +90,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CodePath. All rights reserved.
+            © {new Date().getFullYear()} LearnStak. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground transition-colors">

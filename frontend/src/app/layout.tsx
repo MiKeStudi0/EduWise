@@ -2,7 +2,7 @@ import { Providers } from "@/components/Providers";
 import "./globals.css"; // Ensure your Tailwind/CSS is imported here
 
 export const metadata = {
-  title: "CodePath - Learn to Code",
+  title: "LearnStak - Learn to Code",
   description: "Documentation, coding challenges, and courses.",
 };
 

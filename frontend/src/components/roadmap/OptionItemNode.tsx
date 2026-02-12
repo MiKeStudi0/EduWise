@@ -37,7 +37,7 @@ export const OptionItemNode = ({ data }: NodeProps<OptionItemNodeType>) => {
       />
       <div className="relative w-[200px] group">
         {data.isRecommended && (
-          <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none">
+          <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 z-[60] pointer-events-none hidden md:block">
             <div className="relative bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md shadow-lg border border-slate-700 whitespace-nowrap">
               Recommended
               <div className="absolute right-full top-1/2 -translate-y-1/2 w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[4px] border-r-slate-900"></div>
