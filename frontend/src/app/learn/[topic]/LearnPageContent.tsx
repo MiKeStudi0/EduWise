@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { 
@@ -44,9 +44,8 @@ const topics = [
   },
 ];
 
-export default function LearnPageContent({ params }: { params: Promise<{ topic: string }> }) {
-  const resolvedParams = use(params);
-  const urlTopic = resolvedParams.topic.toLowerCase();
+export default function LearnPageContent({ params }: { params: { topic: string } }) {
+  const urlTopic = params.topic.toLowerCase();
 
   // 1. Navigation States
   const [activeTopicId, setActiveTopicId] = useState(urlTopic);

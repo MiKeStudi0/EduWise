@@ -1,11 +1,12 @@
-"use client";
+import LearnPageContent from "./LearnPageContent";
 
-import { use } from "react";
-import LearnPageContent from "./LearnPageContent"; // This is the sidebar + editor component
+const learnTopics = ["html", "css", "javascript", "python"];
 
-export default function InteractiveTopicPage({ params }: { params: Promise<{ topic: string }> }) {
-  // We unwrap the search term/topic from the URL
-  // If the user picked 'html', this renders the HTML Workspace
+export function generateStaticParams() {
+  return learnTopics.map((topic) => ({ topic }));
+}
+
+export default function InteractiveTopicPage({ params }: { params: { topic: string } }) {
   return (
     <div className="min-h-screen bg-background">
       <LearnPageContent params={params} />
