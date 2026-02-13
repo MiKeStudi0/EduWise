@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Engineering Manager Foundations",
-    "short_title": "Engineering Manager Foundations",
-    "slug": "engineering-manager-foundations",
-    "description": "Learn Engineering Manager Foundations for engineering management.",
-    "long_description": "Covers core concepts in Engineering Manager Foundations.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Engineering Manager Foundations.",
-    "outcomes": "Ability to apply Engineering Manager Foundations in engineering management.",
+{
+  "roadmap": {
+    "title": "Engineering Manager Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Engineering Manager.",
     "seo": {
-      "meta_title": "Engineering Manager Foundations",
-      "meta_description": "Learn the fundamentals of Engineering Manager Foundations for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "engineering"
-    },
-    "children": [
-      {
-        "id": "engineering-manager-foundations-role-and-scope",
-        "label": "Role & Scope",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "engineering-manager-foundations-role-and-scope-em-vs-tl-vs-ic",
-            "label": "EM vs TL vs IC",
-            "type": "module"
-          },
-          {
-            "id": "engineering-manager-foundations-role-and-scope-core-responsibilities",
-            "label": "Core Responsibilities",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Engineering Manager Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Engineering Manager. Follow a phased, practical learning path.",
+      "keywords": [
+        "engineering manager roadmap",
+        "engineering manager roadmap 2026",
+        "learn engineering manager",
+        "engineering manager learning path"
+      ],
+      "canonical": "https://yourdomain.com/engineering-manager-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Engineering Manager Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Engineering Manager.",
+        "type": "website",
+        "url": "https://yourdomain.com/engineering-manager-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/engineering-manager-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Engineering Manager Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Engineering Manager Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Engineering Manager.",
+        "image": "https://yourdomain.com/og/engineering-manager-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "engineering-manager-foundations-leadership-basics",
-        "label": "Leadership Basics",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Engineering Manager.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "engineering-manager-foundations-leadership-basics-servant-leadership",
-            "label": "Servant Leadership",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Engineering Manager Foundations",
+            "short_title": "Engineering Manager Foundations",
+            "slug": "engineering-manager-foundations",
+            "description": "Learn Engineering Manager Foundations for engineering management.",
+            "long_description": "Covers core concepts in Engineering Manager Foundations.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Engineering Manager Foundations.",
+            "outcomes": "Ability to apply Engineering Manager Foundations in engineering management.",
+            "seo": {
+              "meta_title": "Engineering Manager Foundations",
+              "meta_description": "Learn the fundamentals of Engineering Manager Foundations for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "engineering-manager-foundations-role-and-scope",
+                "label": "Role & Scope",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "engineering-manager-foundations-role-and-scope-em-vs-tl-vs-ic",
+                    "label": "EM vs TL vs IC",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engineering-manager-foundations-role-and-scope-core-responsibilities",
+                    "label": "Core Responsibilities",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "engineering-manager-foundations-leadership-basics",
+                "label": "Leadership Basics",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "engineering-manager-foundations-leadership-basics-servant-leadership",
+                    "label": "Servant Leadership",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engineering-manager-foundations-leadership-basics-ethical-decision-making",
+                    "label": "Ethical Decision Making",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "engineering-manager-foundations-tech-fluency",
+                "label": "Tech Fluency",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "engineering-manager-foundations-tech-fluency-system-design-overview",
+                    "label": "System Design Overview",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engineering-manager-foundations-tech-fluency-engineering-lifecycle",
+                    "label": "Engineering Lifecycle",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "engineering-manager-foundations-leadership-basics-ethical-decision-making",
-            "label": "Ethical Decision Making",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "engineering-manager-foundations-tech-fluency",
-        "label": "Tech Fluency",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "engineering-manager-foundations-tech-fluency-system-design-overview",
-            "label": "System Design Overview",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "People Management",
+            "short_title": "People Management",
+            "slug": "people-management",
+            "description": "Learn People Management for engineering management.",
+            "long_description": "Covers core concepts in People Management.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in People Management.",
+            "outcomes": "Ability to apply People Management in engineering management.",
+            "seo": {
+              "meta_title": "People Management",
+              "meta_description": "Learn the fundamentals of People Management for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "people-management-hiring-and-team-design",
+                "label": "Hiring & Team Design",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "people-management-hiring-and-team-design-recruiting",
+                    "label": "Recruiting",
+                    "type": "module"
+                  },
+                  {
+                    "id": "people-management-hiring-and-team-design-team-structure",
+                    "label": "Team Structure",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "people-management-performance-and-growth",
+                "label": "Performance & Growth",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "people-management-performance-and-growth-feedback-and-coaching",
+                    "label": "Feedback & Coaching",
+                    "type": "module"
+                  },
+                  {
+                    "id": "people-management-performance-and-growth-career-ladders",
+                    "label": "Career Ladders",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "people-management-team-health",
+                "label": "Team Health",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "people-management-team-health-motivation",
+                    "label": "Motivation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "people-management-team-health-conflict-resolution",
+                    "label": "Conflict Resolution",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "engineering-manager-foundations-tech-fluency-engineering-lifecycle",
-            "label": "Engineering Lifecycle",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Delivery & Execution",
+            "short_title": "Delivery & Execution",
+            "slug": "delivery-and-execution",
+            "description": "Learn Delivery & Execution for engineering management.",
+            "long_description": "Covers core concepts in Delivery & Execution.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Delivery & Execution.",
+            "outcomes": "Ability to apply Delivery & Execution in engineering management.",
+            "seo": {
+              "meta_title": "Delivery & Execution",
+              "meta_description": "Learn the fundamentals of Delivery & Execution for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "delivery-and-execution-planning-and-estimation",
+                "label": "Planning & Estimation",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "delivery-and-execution-planning-and-estimation-roadmaps",
+                    "label": "Roadmaps",
+                    "type": "module"
+                  },
+                  {
+                    "id": "delivery-and-execution-planning-and-estimation-milestones",
+                    "label": "Milestones",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "delivery-and-execution-agile-and-process",
+                "label": "Agile & Process",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "delivery-and-execution-agile-and-process-scrum-and-kanban",
+                    "label": "Scrum & Kanban",
+                    "type": "module"
+                  },
+                  {
+                    "id": "delivery-and-execution-agile-and-process-continuous-improvement",
+                    "label": "Continuous Improvement",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "delivery-and-execution-quality-and-reliability",
+                "label": "Quality & Reliability",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "delivery-and-execution-quality-and-reliability-testing-strategy",
+                    "label": "Testing Strategy",
+                    "type": "module"
+                  },
+                  {
+                    "id": "delivery-and-execution-quality-and-reliability-incident-response",
+                    "label": "Incident Response",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Technical Leadership",
+            "short_title": "Technical Leadership",
+            "slug": "technical-leadership",
+            "description": "Learn Technical Leadership for engineering management.",
+            "long_description": "Covers core concepts in Technical Leadership.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Technical Leadership.",
+            "outcomes": "Ability to apply Technical Leadership in engineering management.",
+            "seo": {
+              "meta_title": "Technical Leadership",
+              "meta_description": "Learn the fundamentals of Technical Leadership for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "notion"
+            },
+            "children": [
+              {
+                "id": "technical-leadership-architecture-and-decisions",
+                "label": "Architecture & Decisions",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "technical-leadership-architecture-and-decisions-adr-practices",
+                    "label": "ADR Practices",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-leadership-architecture-and-decisions-build-vs-buy",
+                    "label": "Build vs Buy",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "technical-leadership-technical-strategy",
+                "label": "Technical Strategy",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "technical-leadership-technical-strategy-platform-thinking",
+                    "label": "Platform Thinking",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-leadership-technical-strategy-tech-debt-management",
+                    "label": "Tech Debt Management",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "technical-leadership-observability-and-sre",
+                "label": "Observability & SRE",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "technical-leadership-observability-and-sre-monitoring",
+                    "label": "Monitoring",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-leadership-observability-and-sre-reliability-metrics",
+                    "label": "Reliability Metrics",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Stakeholders & Business",
+            "short_title": "Stakeholders & Business",
+            "slug": "stakeholders-and-business",
+            "description": "Learn Stakeholders & Business for engineering management.",
+            "long_description": "Covers core concepts in Stakeholders & Business.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Stakeholders & Business.",
+            "outcomes": "Ability to apply Stakeholders & Business in engineering management.",
+            "seo": {
+              "meta_title": "Stakeholders & Business",
+              "meta_description": "Learn the fundamentals of Stakeholders & Business for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "stakeholders-and-business-stakeholder-management",
+                "label": "Stakeholder Management",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "stakeholders-and-business-stakeholder-management-alignment",
+                    "label": "Alignment",
+                    "type": "module"
+                  },
+                  {
+                    "id": "stakeholders-and-business-stakeholder-management-executive-communication",
+                    "label": "Executive Communication",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "stakeholders-and-business-business-acumen",
+                "label": "Business Acumen",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "stakeholders-and-business-business-acumen-roi-thinking",
+                    "label": "ROI Thinking",
+                    "type": "module"
+                  },
+                  {
+                    "id": "stakeholders-and-business-business-acumen-budgeting",
+                    "label": "Budgeting",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "stakeholders-and-business-risk-management",
+                "label": "Risk Management",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "stakeholders-and-business-risk-management-risk-assessment",
+                    "label": "Risk Assessment",
+                    "type": "module"
+                  },
+                  {
+                    "id": "stakeholders-and-business-risk-management-mitigation-plans",
+                    "label": "Mitigation Plans",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Culture & Change",
+            "short_title": "Culture & Change",
+            "slug": "culture-and-change",
+            "description": "Learn Culture & Change for engineering management.",
+            "long_description": "Covers core concepts in Culture & Change.\nFocuses on practical engineering management workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Culture & Change.",
+            "outcomes": "Ability to apply Culture & Change in engineering management.",
+            "seo": {
+              "meta_title": "Culture & Change",
+              "meta_description": "Learn the fundamentals of Culture & Change for engineering management."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "culture-and-change-culture-building",
+                "label": "Culture Building",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "culture-and-change-culture-building-psychological-safety",
+                    "label": "Psychological Safety",
+                    "type": "module"
+                  },
+                  {
+                    "id": "culture-and-change-culture-building-learning-culture",
+                    "label": "Learning Culture",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "culture-and-change-knowledge-sharing",
+                "label": "Knowledge Sharing",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "culture-and-change-knowledge-sharing-documentation",
+                    "label": "Documentation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "culture-and-change-knowledge-sharing-tech-talks",
+                    "label": "Tech Talks",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "culture-and-change-change-management",
+                "label": "Change Management",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "culture-and-change-change-management-org-change",
+                    "label": "Org Change",
+                    "type": "module"
+                  },
+                  {
+                    "id": "culture-and-change-change-management-communication-plans",
+                    "label": "Communication Plans",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "People Management",
-    "short_title": "People Management",
-    "slug": "people-management",
-    "description": "Learn People Management for engineering management.",
-    "long_description": "Covers core concepts in People Management.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in People Management.",
-    "outcomes": "Ability to apply People Management in engineering management.",
-    "seo": {
-      "meta_title": "People Management",
-      "meta_description": "Learn the fundamentals of People Management for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "people"
-    },
-    "children": [
-      {
-        "id": "people-management-hiring-and-team-design",
-        "label": "Hiring & Team Design",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "people-management-hiring-and-team-design-recruiting",
-            "label": "Recruiting",
-            "type": "module"
-          },
-          {
-            "id": "people-management-hiring-and-team-design-team-structure",
-            "label": "Team Structure",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "people-management-performance-and-growth",
-        "label": "Performance & Growth",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "people-management-performance-and-growth-feedback-and-coaching",
-            "label": "Feedback & Coaching",
-            "type": "module"
-          },
-          {
-            "id": "people-management-performance-and-growth-career-ladders",
-            "label": "Career Ladders",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "people-management-team-health",
-        "label": "Team Health",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "people-management-team-health-motivation",
-            "label": "Motivation",
-            "type": "module"
-          },
-          {
-            "id": "people-management-team-health-conflict-resolution",
-            "label": "Conflict Resolution",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Delivery & Execution",
-    "short_title": "Delivery & Execution",
-    "slug": "delivery-and-execution",
-    "description": "Learn Delivery & Execution for engineering management.",
-    "long_description": "Covers core concepts in Delivery & Execution.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Delivery & Execution.",
-    "outcomes": "Ability to apply Delivery & Execution in engineering management.",
-    "seo": {
-      "meta_title": "Delivery & Execution",
-      "meta_description": "Learn the fundamentals of Delivery & Execution for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "delivery"
-    },
-    "children": [
-      {
-        "id": "delivery-and-execution-planning-and-estimation",
-        "label": "Planning & Estimation",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "delivery-and-execution-planning-and-estimation-roadmaps",
-            "label": "Roadmaps",
-            "type": "module"
-          },
-          {
-            "id": "delivery-and-execution-planning-and-estimation-milestones",
-            "label": "Milestones",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "delivery-and-execution-agile-and-process",
-        "label": "Agile & Process",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "delivery-and-execution-agile-and-process-scrum-and-kanban",
-            "label": "Scrum & Kanban",
-            "type": "module"
-          },
-          {
-            "id": "delivery-and-execution-agile-and-process-continuous-improvement",
-            "label": "Continuous Improvement",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "delivery-and-execution-quality-and-reliability",
-        "label": "Quality & Reliability",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "delivery-and-execution-quality-and-reliability-testing-strategy",
-            "label": "Testing Strategy",
-            "type": "module"
-          },
-          {
-            "id": "delivery-and-execution-quality-and-reliability-incident-response",
-            "label": "Incident Response",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Technical Leadership",
-    "short_title": "Technical Leadership",
-    "slug": "technical-leadership",
-    "description": "Learn Technical Leadership for engineering management.",
-    "long_description": "Covers core concepts in Technical Leadership.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Technical Leadership.",
-    "outcomes": "Ability to apply Technical Leadership in engineering management.",
-    "seo": {
-      "meta_title": "Technical Leadership",
-      "meta_description": "Learn the fundamentals of Technical Leadership for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "technical"
-    },
-    "children": [
-      {
-        "id": "technical-leadership-architecture-and-decisions",
-        "label": "Architecture & Decisions",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "technical-leadership-architecture-and-decisions-adr-practices",
-            "label": "ADR Practices",
-            "type": "module"
-          },
-          {
-            "id": "technical-leadership-architecture-and-decisions-build-vs-buy",
-            "label": "Build vs Buy",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "technical-leadership-technical-strategy",
-        "label": "Technical Strategy",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "technical-leadership-technical-strategy-platform-thinking",
-            "label": "Platform Thinking",
-            "type": "module"
-          },
-          {
-            "id": "technical-leadership-technical-strategy-tech-debt-management",
-            "label": "Tech Debt Management",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "technical-leadership-observability-and-sre",
-        "label": "Observability & SRE",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "technical-leadership-observability-and-sre-monitoring",
-            "label": "Monitoring",
-            "type": "module"
-          },
-          {
-            "id": "technical-leadership-observability-and-sre-reliability-metrics",
-            "label": "Reliability Metrics",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Stakeholders & Business",
-    "short_title": "Stakeholders & Business",
-    "slug": "stakeholders-and-business",
-    "description": "Learn Stakeholders & Business for engineering management.",
-    "long_description": "Covers core concepts in Stakeholders & Business.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Stakeholders & Business.",
-    "outcomes": "Ability to apply Stakeholders & Business in engineering management.",
-    "seo": {
-      "meta_title": "Stakeholders & Business",
-      "meta_description": "Learn the fundamentals of Stakeholders & Business for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "stakeholders"
-    },
-    "children": [
-      {
-        "id": "stakeholders-and-business-stakeholder-management",
-        "label": "Stakeholder Management",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "stakeholders-and-business-stakeholder-management-alignment",
-            "label": "Alignment",
-            "type": "module"
-          },
-          {
-            "id": "stakeholders-and-business-stakeholder-management-executive-communication",
-            "label": "Executive Communication",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "stakeholders-and-business-business-acumen",
-        "label": "Business Acumen",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "stakeholders-and-business-business-acumen-roi-thinking",
-            "label": "ROI Thinking",
-            "type": "module"
-          },
-          {
-            "id": "stakeholders-and-business-business-acumen-budgeting",
-            "label": "Budgeting",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "stakeholders-and-business-risk-management",
-        "label": "Risk Management",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "stakeholders-and-business-risk-management-risk-assessment",
-            "label": "Risk Assessment",
-            "type": "module"
-          },
-          {
-            "id": "stakeholders-and-business-risk-management-mitigation-plans",
-            "label": "Mitigation Plans",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Culture & Change",
-    "short_title": "Culture & Change",
-    "slug": "culture-and-change",
-    "description": "Learn Culture & Change for engineering management.",
-    "long_description": "Covers core concepts in Culture & Change.\nFocuses on practical engineering management workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Culture & Change.",
-    "outcomes": "Ability to apply Culture & Change in engineering management.",
-    "seo": {
-      "meta_title": "Culture & Change",
-      "meta_description": "Learn the fundamentals of Culture & Change for engineering management."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "culture"
-    },
-    "children": [
-      {
-        "id": "culture-and-change-culture-building",
-        "label": "Culture Building",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "culture-and-change-culture-building-psychological-safety",
-            "label": "Psychological Safety",
-            "type": "module"
-          },
-          {
-            "id": "culture-and-change-culture-building-learning-culture",
-            "label": "Learning Culture",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "culture-and-change-knowledge-sharing",
-        "label": "Knowledge Sharing",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "culture-and-change-knowledge-sharing-documentation",
-            "label": "Documentation",
-            "type": "module"
-          },
-          {
-            "id": "culture-and-change-knowledge-sharing-tech-talks",
-            "label": "Tech Talks",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "culture-and-change-change-management",
-        "label": "Change Management",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "culture-and-change-change-management-org-change",
-            "label": "Org Change",
-            "type": "module"
-          },
-          {
-            "id": "culture-and-change-change-management-communication-plans",
-            "label": "Communication Plans",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

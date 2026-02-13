@@ -1,804 +1,855 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Data Engineering Foundations",
-    "short_title": "Data Engineering Foundations",
-    "slug": "data-engineering-foundations",
-    "description": "Learn Data Engineering Foundations for data engineering.",
-    "long_description": "Covers core concepts in Data Engineering Foundations.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Data Engineering Foundations.",
-    "outcomes": "Ability to apply Data Engineering Foundations in data engineering.",
+{
+  "roadmap": {
+    "title": "Data Engineer Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Data Engineer.",
     "seo": {
-      "meta_title": "Data Engineering Foundations",
-      "meta_description": "Learn the fundamentals of Data Engineering Foundations for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "data"
-    },
-    "children": [
-      {
-        "id": "data-engineering-foundations-role-of-a-data-engineer",
-        "label": "Role of a Data Engineer",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-engineering-foundations-role-of-a-data-engineer-responsibilities",
-            "label": "Responsibilities",
-            "type": "module"
-          },
-          {
-            "id": "data-engineering-foundations-role-of-a-data-engineer-stakeholders",
-            "label": "Stakeholders",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Data Engineer Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Data Engineer. Follow a phased, practical learning path.",
+      "keywords": [
+        "data engineer roadmap",
+        "data engineer roadmap 2026",
+        "learn data engineer",
+        "data engineer learning path"
+      ],
+      "canonical": "https://yourdomain.com/data-engineer-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Data Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Data Engineer.",
+        "type": "website",
+        "url": "https://yourdomain.com/data-engineer-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/data-engineer-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Data Engineer Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Data Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Data Engineer.",
+        "image": "https://yourdomain.com/og/data-engineer-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "data-engineering-foundations-data-lifecycle",
-        "label": "Data Lifecycle",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Data Engineer.",
+        "estimated_total_hours": 72,
+        "topics": [
           {
-            "id": "data-engineering-foundations-data-lifecycle-ingest",
-            "label": "Ingest",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Data Engineering Foundations",
+            "short_title": "Data Engineering Foundations",
+            "slug": "data-engineering-foundations",
+            "description": "Learn Data Engineering Foundations for data engineering.",
+            "long_description": "Covers core concepts in Data Engineering Foundations.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Data Engineering Foundations.",
+            "outcomes": "Ability to apply Data Engineering Foundations in data engineering.",
+            "seo": {
+              "meta_title": "Data Engineering Foundations",
+              "meta_description": "Learn the fundamentals of Data Engineering Foundations for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "data-engineering-foundations-role-of-a-data-engineer",
+                "label": "Role of a Data Engineer",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-engineering-foundations-role-of-a-data-engineer-responsibilities",
+                    "label": "Responsibilities",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-engineering-foundations-role-of-a-data-engineer-stakeholders",
+                    "label": "Stakeholders",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-engineering-foundations-data-lifecycle",
+                "label": "Data Lifecycle",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-engineering-foundations-data-lifecycle-ingest",
+                    "label": "Ingest",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-engineering-foundations-data-lifecycle-store",
+                    "label": "Store",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-engineering-foundations-data-lifecycle-transform",
+                    "label": "Transform",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-engineering-foundations-data-lifecycle-serve",
+                    "label": "Serve",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-engineering-foundations-core-concepts",
+                "label": "Core Concepts",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-engineering-foundations-core-concepts-batch-vs-streaming",
+                    "label": "Batch vs Streaming",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-engineering-foundations-core-concepts-oltp-vs-olap",
+                    "label": "OLTP vs OLAP",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "data-engineering-foundations-data-lifecycle-store",
-            "label": "Store",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Programming & SQL",
+            "short_title": "Programming & SQL",
+            "slug": "programming-and-sql",
+            "description": "Learn Programming & SQL for data engineering.",
+            "long_description": "Covers core concepts in Programming & SQL.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Programming & SQL.",
+            "outcomes": "Ability to apply Programming & SQL in data engineering.",
+            "seo": {
+              "meta_title": "Programming & SQL",
+              "meta_description": "Learn the fundamentals of Programming & SQL for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "programming-and-sql-programming-for-data",
+                "label": "Programming for Data",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-sql-programming-for-data-python",
+                    "label": "Python",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-sql-programming-for-data-sql",
+                    "label": "SQL",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-sql-data-structures-basics",
+                "label": "Data Structures Basics",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "programming-and-sql-data-structures-basics-arrays-maps",
+                    "label": "Arrays/Maps",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-sql-data-structures-basics-complexity",
+                    "label": "Complexity",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-sql-advanced-sql",
+                "label": "Advanced SQL",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-sql-advanced-sql-joins",
+                    "label": "Joins",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-sql-advanced-sql-window-functions",
+                    "label": "Window Functions",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-sql-query-performance",
+                "label": "Query Performance",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "programming-and-sql-query-performance-indexes",
+                    "label": "Indexes",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-sql-query-performance-explain",
+                    "label": "EXPLAIN",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "data-engineering-foundations-data-lifecycle-transform",
-            "label": "Transform",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Data Storage & Modeling",
+            "short_title": "Data Storage &",
+            "slug": "data-storage-and-modeling",
+            "description": "Learn Data Storage & Modeling for data engineering.",
+            "long_description": "Covers core concepts in Data Storage & Modeling.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Data Storage & Modeling.",
+            "outcomes": "Ability to apply Data Storage & Modeling in data engineering.",
+            "seo": {
+              "meta_title": "Data Storage & Modeling",
+              "meta_description": "Learn the fundamentals of Data Storage & Modeling for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "data-storage-and-modeling-relational-databases",
+                "label": "Relational Databases",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-storage-and-modeling-relational-databases-postgresql",
+                    "label": "PostgreSQL",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-relational-databases-mysql",
+                    "label": "MySQL",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-storage-and-modeling-nosql-datastores",
+                "label": "NoSQL Datastores",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-storage-and-modeling-nosql-datastores-document",
+                    "label": "Document",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-nosql-datastores-key-value",
+                    "label": "Key-Value",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-nosql-datastores-columnar",
+                    "label": "Columnar",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-storage-and-modeling-data-modeling",
+                "label": "Data Modeling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-storage-and-modeling-data-modeling-normalization",
+                    "label": "Normalization",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-data-modeling-star-schema",
+                    "label": "Star Schema",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-data-modeling-slowly-changing-dimensions",
+                    "label": "Slowly Changing Dimensions",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-storage-and-modeling-storage-formats",
+                "label": "Storage Formats",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-storage-and-modeling-storage-formats-parquet",
+                    "label": "Parquet",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-storage-and-modeling-storage-formats-avro",
+                    "label": "Avro",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "data-engineering-foundations-data-lifecycle-serve",
-            "label": "Serve",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-engineering-foundations-core-concepts",
-        "label": "Core Concepts",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-engineering-foundations-core-concepts-batch-vs-streaming",
-            "label": "Batch vs Streaming",
-            "type": "module"
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Data Warehousing & Lakes",
+            "short_title": "Data Warehousing &",
+            "slug": "data-warehousing-and-lakes",
+            "description": "Learn Data Warehousing & Lakes for data engineering.",
+            "long_description": "Covers core concepts in Data Warehousing & Lakes.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Data Warehousing & Lakes.",
+            "outcomes": "Ability to apply Data Warehousing & Lakes in data engineering.",
+            "seo": {
+              "meta_title": "Data Warehousing & Lakes",
+              "meta_description": "Learn the fundamentals of Data Warehousing & Lakes for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "data-warehousing-and-lakes-warehousing-concepts",
+                "label": "Warehousing Concepts",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-warehousing-and-lakes-warehousing-concepts-data-warehouse",
+                    "label": "Data Warehouse",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-warehousing-and-lakes-warehousing-concepts-data-mart",
+                    "label": "Data Mart",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-warehousing-and-lakes-data-lakes",
+                "label": "Data Lakes",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-warehousing-and-lakes-data-lakes-lakehouse",
+                    "label": "Lakehouse",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-warehousing-and-lakes-data-lakes-delta-iceberg-hudi",
+                    "label": "Delta/Iceberg/Hudi",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-warehousing-and-lakes-cloud-warehouses",
+                "label": "Cloud Warehouses",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-warehousing-and-lakes-cloud-warehouses-bigquery",
+                    "label": "BigQuery",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-warehousing-and-lakes-cloud-warehouses-snowflake",
+                    "label": "Snowflake",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-warehousing-and-lakes-cloud-warehouses-redshift",
+                    "label": "Redshift",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "data-engineering-foundations-core-concepts-oltp-vs-olap",
-            "label": "OLTP vs OLAP",
-            "type": "module"
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Ingestion & Pipelines",
+            "short_title": "Ingestion & Pipelines",
+            "slug": "ingestion-and-pipelines",
+            "description": "Learn Ingestion & Pipelines for data engineering.",
+            "long_description": "Covers core concepts in Ingestion & Pipelines.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Ingestion & Pipelines.",
+            "outcomes": "Ability to apply Ingestion & Pipelines in data engineering.",
+            "seo": {
+              "meta_title": "Ingestion & Pipelines",
+              "meta_description": "Learn the fundamentals of Ingestion & Pipelines for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "ingestion-and-pipelines-ingestion-patterns",
+                "label": "Ingestion Patterns",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ingestion-and-pipelines-ingestion-patterns-batch",
+                    "label": "Batch",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-ingestion-patterns-streaming",
+                    "label": "Streaming",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-ingestion-patterns-cdc",
+                    "label": "CDC",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ingestion-and-pipelines-etl-elt",
+                "label": "ETL/ELT",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ingestion-and-pipelines-etl-elt-transformation",
+                    "label": "Transformation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-etl-elt-orchestration",
+                    "label": "Orchestration",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ingestion-and-pipelines-workflow-orchestration",
+                "label": "Workflow Orchestration",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ingestion-and-pipelines-workflow-orchestration-airflow",
+                    "label": "Airflow",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-workflow-orchestration-dagster",
+                    "label": "Dagster",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-workflow-orchestration-prefect",
+                    "label": "Prefect",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ingestion-and-pipelines-messaging-and-streaming",
+                "label": "Messaging & Streaming",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ingestion-and-pipelines-messaging-and-streaming-kafka",
+                    "label": "Kafka",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-messaging-and-streaming-pulsar",
+                    "label": "Pulsar",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ingestion-and-pipelines-messaging-and-streaming-kinesis",
+                    "label": "Kinesis",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Processing & Compute",
+            "short_title": "Processing & Compute",
+            "slug": "processing-and-compute",
+            "description": "Learn Processing & Compute for data engineering.",
+            "long_description": "Covers core concepts in Processing & Compute.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Processing & Compute.",
+            "outcomes": "Ability to apply Processing & Compute in data engineering.",
+            "seo": {
+              "meta_title": "Processing & Compute",
+              "meta_description": "Learn the fundamentals of Processing & Compute for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "processing-and-compute-distributed-processing",
+                "label": "Distributed Processing",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "processing-and-compute-distributed-processing-spark",
+                    "label": "Spark",
+                    "type": "module"
+                  },
+                  {
+                    "id": "processing-and-compute-distributed-processing-flink",
+                    "label": "Flink",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "processing-and-compute-cluster-concepts",
+                "label": "Cluster Concepts",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "processing-and-compute-cluster-concepts-resource-management",
+                    "label": "Resource Management",
+                    "type": "module"
+                  },
+                  {
+                    "id": "processing-and-compute-cluster-concepts-job-scheduling",
+                    "label": "Job Scheduling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "processing-and-compute-data-quality-in-pipelines",
+                "label": "Data Quality in Pipelines",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "processing-and-compute-data-quality-in-pipelines-validation",
+                    "label": "Validation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "processing-and-compute-data-quality-in-pipelines-anomaly-checks",
+                    "label": "Anomaly Checks",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "roadmap_id": 1,
+            "title": "Serving & Analytics",
+            "short_title": "Serving & Analytics",
+            "slug": "serving-and-analytics",
+            "description": "Learn Serving & Analytics for data engineering.",
+            "long_description": "Covers core concepts in Serving & Analytics.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Serving & Analytics.",
+            "outcomes": "Ability to apply Serving & Analytics in data engineering.",
+            "seo": {
+              "meta_title": "Serving & Analytics",
+              "meta_description": "Learn the fundamentals of Serving & Analytics for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "serving-and-analytics-data-serving",
+                "label": "Data Serving",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "serving-and-analytics-data-serving-apis",
+                    "label": "APIs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "serving-and-analytics-data-serving-reverse-etl",
+                    "label": "Reverse ETL",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "serving-and-analytics-bi-and-reporting",
+                "label": "BI & Reporting",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "serving-and-analytics-bi-and-reporting-power-bi",
+                    "label": "Power BI",
+                    "type": "module"
+                  },
+                  {
+                    "id": "serving-and-analytics-bi-and-reporting-tableau",
+                    "label": "Tableau",
+                    "type": "module"
+                  },
+                  {
+                    "id": "serving-and-analytics-bi-and-reporting-looker",
+                    "label": "Looker",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "serving-and-analytics-semantic-layer",
+                "label": "Semantic Layer",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "serving-and-analytics-semantic-layer-metrics-layer",
+                    "label": "Metrics Layer",
+                    "type": "module"
+                  },
+                  {
+                    "id": "serving-and-analytics-semantic-layer-consistency",
+                    "label": "Consistency",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "roadmap_id": 1,
+            "title": "Cloud & Infrastructure",
+            "short_title": "Cloud & Infrastructure",
+            "slug": "cloud-and-infrastructure",
+            "description": "Learn Cloud & Infrastructure for data engineering.",
+            "long_description": "Covers core concepts in Cloud & Infrastructure.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Cloud & Infrastructure.",
+            "outcomes": "Ability to apply Cloud & Infrastructure in data engineering.",
+            "seo": {
+              "meta_title": "Cloud & Infrastructure",
+              "meta_description": "Learn the fundamentals of Cloud & Infrastructure for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "cloudflare"
+            },
+            "children": [
+              {
+                "id": "cloud-and-infrastructure-cloud-platforms",
+                "label": "Cloud Platforms",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "cloud-and-infrastructure-cloud-platforms-aws",
+                    "label": "AWS",
+                    "type": "module"
+                  },
+                  {
+                    "id": "cloud-and-infrastructure-cloud-platforms-gcp",
+                    "label": "GCP",
+                    "type": "module"
+                  },
+                  {
+                    "id": "cloud-and-infrastructure-cloud-platforms-azure",
+                    "label": "Azure",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "cloud-and-infrastructure-infrastructure-as-code",
+                "label": "Infrastructure as Code",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "cloud-and-infrastructure-infrastructure-as-code-terraform",
+                    "label": "Terraform",
+                    "type": "module"
+                  },
+                  {
+                    "id": "cloud-and-infrastructure-infrastructure-as-code-ci-cd-for-data",
+                    "label": "CI/CD for Data",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "cloud-and-infrastructure-storage-and-compute-services",
+                "label": "Storage & Compute Services",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "cloud-and-infrastructure-storage-and-compute-services-object-storage",
+                    "label": "Object Storage",
+                    "type": "module"
+                  },
+                  {
+                    "id": "cloud-and-infrastructure-storage-and-compute-services-managed-databases",
+                    "label": "Managed Databases",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "roadmap_id": 1,
+            "title": "Governance, Security & Reliability",
+            "short_title": "Governance, Security &",
+            "slug": "governance-security-and-reliability",
+            "description": "Learn Governance, Security & Reliability for data engineering.",
+            "long_description": "Covers core concepts in Governance, Security & Reliability.\nFocuses on practical data engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Governance, Security & Reliability.",
+            "outcomes": "Ability to apply Governance, Security & Reliability in data engineering.",
+            "seo": {
+              "meta_title": "Governance, Security & Reliability",
+              "meta_description": "Learn the fundamentals of Governance, Security & Reliability for data engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "governance-security-and-reliability-data-governance",
+                "label": "Data Governance",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "governance-security-and-reliability-data-governance-lineage",
+                    "label": "Lineage",
+                    "type": "module"
+                  },
+                  {
+                    "id": "governance-security-and-reliability-data-governance-catalogs",
+                    "label": "Catalogs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "governance-security-and-reliability-security-and-privacy",
+                "label": "Security & Privacy",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "governance-security-and-reliability-security-and-privacy-access-control",
+                    "label": "Access Control",
+                    "type": "module"
+                  },
+                  {
+                    "id": "governance-security-and-reliability-security-and-privacy-encryption",
+                    "label": "Encryption",
+                    "type": "module"
+                  },
+                  {
+                    "id": "governance-security-and-reliability-security-and-privacy-pii-handling",
+                    "label": "PII Handling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "governance-security-and-reliability-observability",
+                "label": "Observability",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "governance-security-and-reliability-observability-monitoring",
+                    "label": "Monitoring",
+                    "type": "module"
+                  },
+                  {
+                    "id": "governance-security-and-reliability-observability-slos",
+                    "label": "SLOs",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Programming & SQL",
-    "short_title": "Programming & SQL",
-    "slug": "programming-and-sql",
-    "description": "Learn Programming & SQL for data engineering.",
-    "long_description": "Covers core concepts in Programming & SQL.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Programming & SQL.",
-    "outcomes": "Ability to apply Programming & SQL in data engineering.",
-    "seo": {
-      "meta_title": "Programming & SQL",
-      "meta_description": "Learn the fundamentals of Programming & SQL for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "programming"
-    },
-    "children": [
-      {
-        "id": "programming-and-sql-programming-for-data",
-        "label": "Programming for Data",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-sql-programming-for-data-python",
-            "label": "Python",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-sql-programming-for-data-sql",
-            "label": "SQL",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-sql-data-structures-basics",
-        "label": "Data Structures Basics",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "programming-and-sql-data-structures-basics-arrays-maps",
-            "label": "Arrays/Maps",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-sql-data-structures-basics-complexity",
-            "label": "Complexity",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-sql-advanced-sql",
-        "label": "Advanced SQL",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-sql-advanced-sql-joins",
-            "label": "Joins",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-sql-advanced-sql-window-functions",
-            "label": "Window Functions",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-sql-query-performance",
-        "label": "Query Performance",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "programming-and-sql-query-performance-indexes",
-            "label": "Indexes",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-sql-query-performance-explain",
-            "label": "EXPLAIN",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Data Storage & Modeling",
-    "short_title": "Data Storage &",
-    "slug": "data-storage-and-modeling",
-    "description": "Learn Data Storage & Modeling for data engineering.",
-    "long_description": "Covers core concepts in Data Storage & Modeling.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Data Storage & Modeling.",
-    "outcomes": "Ability to apply Data Storage & Modeling in data engineering.",
-    "seo": {
-      "meta_title": "Data Storage & Modeling",
-      "meta_description": "Learn the fundamentals of Data Storage & Modeling for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "data"
-    },
-    "children": [
-      {
-        "id": "data-storage-and-modeling-relational-databases",
-        "label": "Relational Databases",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-storage-and-modeling-relational-databases-postgresql",
-            "label": "PostgreSQL",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-relational-databases-mysql",
-            "label": "MySQL",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-storage-and-modeling-nosql-datastores",
-        "label": "NoSQL Datastores",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "data-storage-and-modeling-nosql-datastores-document",
-            "label": "Document",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-nosql-datastores-key-value",
-            "label": "Key-Value",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-nosql-datastores-columnar",
-            "label": "Columnar",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-storage-and-modeling-data-modeling",
-        "label": "Data Modeling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-storage-and-modeling-data-modeling-normalization",
-            "label": "Normalization",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-data-modeling-star-schema",
-            "label": "Star Schema",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-data-modeling-slowly-changing-dimensions",
-            "label": "Slowly Changing Dimensions",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-storage-and-modeling-storage-formats",
-        "label": "Storage Formats",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "data-storage-and-modeling-storage-formats-parquet",
-            "label": "Parquet",
-            "type": "module"
-          },
-          {
-            "id": "data-storage-and-modeling-storage-formats-avro",
-            "label": "Avro",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Data Warehousing & Lakes",
-    "short_title": "Data Warehousing &",
-    "slug": "data-warehousing-and-lakes",
-    "description": "Learn Data Warehousing & Lakes for data engineering.",
-    "long_description": "Covers core concepts in Data Warehousing & Lakes.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Data Warehousing & Lakes.",
-    "outcomes": "Ability to apply Data Warehousing & Lakes in data engineering.",
-    "seo": {
-      "meta_title": "Data Warehousing & Lakes",
-      "meta_description": "Learn the fundamentals of Data Warehousing & Lakes for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "data"
-    },
-    "children": [
-      {
-        "id": "data-warehousing-and-lakes-warehousing-concepts",
-        "label": "Warehousing Concepts",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-warehousing-and-lakes-warehousing-concepts-data-warehouse",
-            "label": "Data Warehouse",
-            "type": "module"
-          },
-          {
-            "id": "data-warehousing-and-lakes-warehousing-concepts-data-mart",
-            "label": "Data Mart",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-warehousing-and-lakes-data-lakes",
-        "label": "Data Lakes",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "data-warehousing-and-lakes-data-lakes-lakehouse",
-            "label": "Lakehouse",
-            "type": "module"
-          },
-          {
-            "id": "data-warehousing-and-lakes-data-lakes-delta-iceberg-hudi",
-            "label": "Delta/Iceberg/Hudi",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-warehousing-and-lakes-cloud-warehouses",
-        "label": "Cloud Warehouses",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-warehousing-and-lakes-cloud-warehouses-bigquery",
-            "label": "BigQuery",
-            "type": "module"
-          },
-          {
-            "id": "data-warehousing-and-lakes-cloud-warehouses-snowflake",
-            "label": "Snowflake",
-            "type": "module"
-          },
-          {
-            "id": "data-warehousing-and-lakes-cloud-warehouses-redshift",
-            "label": "Redshift",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Ingestion & Pipelines",
-    "short_title": "Ingestion & Pipelines",
-    "slug": "ingestion-and-pipelines",
-    "description": "Learn Ingestion & Pipelines for data engineering.",
-    "long_description": "Covers core concepts in Ingestion & Pipelines.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Ingestion & Pipelines.",
-    "outcomes": "Ability to apply Ingestion & Pipelines in data engineering.",
-    "seo": {
-      "meta_title": "Ingestion & Pipelines",
-      "meta_description": "Learn the fundamentals of Ingestion & Pipelines for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ingestion"
-    },
-    "children": [
-      {
-        "id": "ingestion-and-pipelines-ingestion-patterns",
-        "label": "Ingestion Patterns",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ingestion-and-pipelines-ingestion-patterns-batch",
-            "label": "Batch",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-ingestion-patterns-streaming",
-            "label": "Streaming",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-ingestion-patterns-cdc",
-            "label": "CDC",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ingestion-and-pipelines-etl-elt",
-        "label": "ETL/ELT",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ingestion-and-pipelines-etl-elt-transformation",
-            "label": "Transformation",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-etl-elt-orchestration",
-            "label": "Orchestration",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ingestion-and-pipelines-workflow-orchestration",
-        "label": "Workflow Orchestration",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ingestion-and-pipelines-workflow-orchestration-airflow",
-            "label": "Airflow",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-workflow-orchestration-dagster",
-            "label": "Dagster",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-workflow-orchestration-prefect",
-            "label": "Prefect",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ingestion-and-pipelines-messaging-and-streaming",
-        "label": "Messaging & Streaming",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ingestion-and-pipelines-messaging-and-streaming-kafka",
-            "label": "Kafka",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-messaging-and-streaming-pulsar",
-            "label": "Pulsar",
-            "type": "module"
-          },
-          {
-            "id": "ingestion-and-pipelines-messaging-and-streaming-kinesis",
-            "label": "Kinesis",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Processing & Compute",
-    "short_title": "Processing & Compute",
-    "slug": "processing-and-compute",
-    "description": "Learn Processing & Compute for data engineering.",
-    "long_description": "Covers core concepts in Processing & Compute.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Processing & Compute.",
-    "outcomes": "Ability to apply Processing & Compute in data engineering.",
-    "seo": {
-      "meta_title": "Processing & Compute",
-      "meta_description": "Learn the fundamentals of Processing & Compute for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "processing"
-    },
-    "children": [
-      {
-        "id": "processing-and-compute-distributed-processing",
-        "label": "Distributed Processing",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "processing-and-compute-distributed-processing-spark",
-            "label": "Spark",
-            "type": "module"
-          },
-          {
-            "id": "processing-and-compute-distributed-processing-flink",
-            "label": "Flink",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "processing-and-compute-cluster-concepts",
-        "label": "Cluster Concepts",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "processing-and-compute-cluster-concepts-resource-management",
-            "label": "Resource Management",
-            "type": "module"
-          },
-          {
-            "id": "processing-and-compute-cluster-concepts-job-scheduling",
-            "label": "Job Scheduling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "processing-and-compute-data-quality-in-pipelines",
-        "label": "Data Quality in Pipelines",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "processing-and-compute-data-quality-in-pipelines-validation",
-            "label": "Validation",
-            "type": "module"
-          },
-          {
-            "id": "processing-and-compute-data-quality-in-pipelines-anomaly-checks",
-            "label": "Anomaly Checks",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "roadmap_id": 1,
-    "title": "Serving & Analytics",
-    "short_title": "Serving & Analytics",
-    "slug": "serving-and-analytics",
-    "description": "Learn Serving & Analytics for data engineering.",
-    "long_description": "Covers core concepts in Serving & Analytics.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Serving & Analytics.",
-    "outcomes": "Ability to apply Serving & Analytics in data engineering.",
-    "seo": {
-      "meta_title": "Serving & Analytics",
-      "meta_description": "Learn the fundamentals of Serving & Analytics for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "serving"
-    },
-    "children": [
-      {
-        "id": "serving-and-analytics-data-serving",
-        "label": "Data Serving",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "serving-and-analytics-data-serving-apis",
-            "label": "APIs",
-            "type": "module"
-          },
-          {
-            "id": "serving-and-analytics-data-serving-reverse-etl",
-            "label": "Reverse ETL",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "serving-and-analytics-bi-and-reporting",
-        "label": "BI & Reporting",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "serving-and-analytics-bi-and-reporting-power-bi",
-            "label": "Power BI",
-            "type": "module"
-          },
-          {
-            "id": "serving-and-analytics-bi-and-reporting-tableau",
-            "label": "Tableau",
-            "type": "module"
-          },
-          {
-            "id": "serving-and-analytics-bi-and-reporting-looker",
-            "label": "Looker",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "serving-and-analytics-semantic-layer",
-        "label": "Semantic Layer",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "serving-and-analytics-semantic-layer-metrics-layer",
-            "label": "Metrics Layer",
-            "type": "module"
-          },
-          {
-            "id": "serving-and-analytics-semantic-layer-consistency",
-            "label": "Consistency",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "roadmap_id": 1,
-    "title": "Cloud & Infrastructure",
-    "short_title": "Cloud & Infrastructure",
-    "slug": "cloud-and-infrastructure",
-    "description": "Learn Cloud & Infrastructure for data engineering.",
-    "long_description": "Covers core concepts in Cloud & Infrastructure.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Cloud & Infrastructure.",
-    "outcomes": "Ability to apply Cloud & Infrastructure in data engineering.",
-    "seo": {
-      "meta_title": "Cloud & Infrastructure",
-      "meta_description": "Learn the fundamentals of Cloud & Infrastructure for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "cloud"
-    },
-    "children": [
-      {
-        "id": "cloud-and-infrastructure-cloud-platforms",
-        "label": "Cloud Platforms",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "cloud-and-infrastructure-cloud-platforms-aws",
-            "label": "AWS",
-            "type": "module"
-          },
-          {
-            "id": "cloud-and-infrastructure-cloud-platforms-gcp",
-            "label": "GCP",
-            "type": "module"
-          },
-          {
-            "id": "cloud-and-infrastructure-cloud-platforms-azure",
-            "label": "Azure",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "cloud-and-infrastructure-infrastructure-as-code",
-        "label": "Infrastructure as Code",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "cloud-and-infrastructure-infrastructure-as-code-terraform",
-            "label": "Terraform",
-            "type": "module"
-          },
-          {
-            "id": "cloud-and-infrastructure-infrastructure-as-code-ci-cd-for-data",
-            "label": "CI/CD for Data",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "cloud-and-infrastructure-storage-and-compute-services",
-        "label": "Storage & Compute Services",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "cloud-and-infrastructure-storage-and-compute-services-object-storage",
-            "label": "Object Storage",
-            "type": "module"
-          },
-          {
-            "id": "cloud-and-infrastructure-storage-and-compute-services-managed-databases",
-            "label": "Managed Databases",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "roadmap_id": 1,
-    "title": "Governance, Security & Reliability",
-    "short_title": "Governance, Security &",
-    "slug": "governance-security-and-reliability",
-    "description": "Learn Governance, Security & Reliability for data engineering.",
-    "long_description": "Covers core concepts in Governance, Security & Reliability.\nFocuses on practical data engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Governance, Security & Reliability.",
-    "outcomes": "Ability to apply Governance, Security & Reliability in data engineering.",
-    "seo": {
-      "meta_title": "Governance, Security & Reliability",
-      "meta_description": "Learn the fundamentals of Governance, Security & Reliability for data engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "governance"
-    },
-    "children": [
-      {
-        "id": "governance-security-and-reliability-data-governance",
-        "label": "Data Governance",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "governance-security-and-reliability-data-governance-lineage",
-            "label": "Lineage",
-            "type": "module"
-          },
-          {
-            "id": "governance-security-and-reliability-data-governance-catalogs",
-            "label": "Catalogs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "governance-security-and-reliability-security-and-privacy",
-        "label": "Security & Privacy",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "governance-security-and-reliability-security-and-privacy-access-control",
-            "label": "Access Control",
-            "type": "module"
-          },
-          {
-            "id": "governance-security-and-reliability-security-and-privacy-encryption",
-            "label": "Encryption",
-            "type": "module"
-          },
-          {
-            "id": "governance-security-and-reliability-security-and-privacy-pii-handling",
-            "label": "PII Handling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "governance-security-and-reliability-observability",
-        "label": "Observability",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "governance-security-and-reliability-observability-monitoring",
-            "label": "Monitoring",
-            "type": "module"
-          },
-          {
-            "id": "governance-security-and-reliability-observability-slos",
-            "label": "SLOs",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 72,
+      "total_topics": 9,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

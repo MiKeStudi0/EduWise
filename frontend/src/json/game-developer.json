@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Game Development Foundations",
-    "short_title": "Game Development Foundations",
-    "slug": "game-development-foundations",
-    "description": "Learn Game Development Foundations for game development.",
-    "long_description": "Covers core concepts in Game Development Foundations.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Game Development Foundations.",
-    "outcomes": "Ability to apply Game Development Foundations in game development.",
+{
+  "roadmap": {
+    "title": "Game Developer Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Game Developer.",
     "seo": {
-      "meta_title": "Game Development Foundations",
-      "meta_description": "Learn the fundamentals of Game Development Foundations for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "game"
-    },
-    "children": [
-      {
-        "id": "game-development-foundations-game-design-basics",
-        "label": "Game Design Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "game-development-foundations-game-design-basics-core-loops",
-            "label": "Core Loops",
-            "type": "module"
-          },
-          {
-            "id": "game-development-foundations-game-design-basics-player-motivation",
-            "label": "Player Motivation",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Game Developer Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Game Developer. Follow a phased, practical learning path.",
+      "keywords": [
+        "game developer roadmap",
+        "game developer roadmap 2026",
+        "learn game developer",
+        "game developer learning path"
+      ],
+      "canonical": "https://yourdomain.com/game-developer-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Game Developer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Game Developer.",
+        "type": "website",
+        "url": "https://yourdomain.com/game-developer-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/game-developer-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Game Developer Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Game Developer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Game Developer.",
+        "image": "https://yourdomain.com/og/game-developer-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "game-development-foundations-programming-fundamentals",
-        "label": "Programming Fundamentals",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Game Developer.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "game-development-foundations-programming-fundamentals-variables-and-control-flow",
-            "label": "Variables & Control Flow",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Game Development Foundations",
+            "short_title": "Game Development Foundations",
+            "slug": "game-development-foundations",
+            "description": "Learn Game Development Foundations for game development.",
+            "long_description": "Covers core concepts in Game Development Foundations.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Game Development Foundations.",
+            "outcomes": "Ability to apply Game Development Foundations in game development.",
+            "seo": {
+              "meta_title": "Game Development Foundations",
+              "meta_description": "Learn the fundamentals of Game Development Foundations for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "unity"
+            },
+            "children": [
+              {
+                "id": "game-development-foundations-game-design-basics",
+                "label": "Game Design Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "game-development-foundations-game-design-basics-core-loops",
+                    "label": "Core Loops",
+                    "type": "module"
+                  },
+                  {
+                    "id": "game-development-foundations-game-design-basics-player-motivation",
+                    "label": "Player Motivation",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "game-development-foundations-programming-fundamentals",
+                "label": "Programming Fundamentals",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "game-development-foundations-programming-fundamentals-variables-and-control-flow",
+                    "label": "Variables & Control Flow",
+                    "type": "module"
+                  },
+                  {
+                    "id": "game-development-foundations-programming-fundamentals-oop-basics",
+                    "label": "OOP Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "game-development-foundations-math-for-games",
+                "label": "Math for Games",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "game-development-foundations-math-for-games-vectors-and-matrices",
+                    "label": "Vectors & Matrices",
+                    "type": "module"
+                  },
+                  {
+                    "id": "game-development-foundations-math-for-games-transforms-and-projections",
+                    "label": "Transforms & Projections",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "game-development-foundations-programming-fundamentals-oop-basics",
-            "label": "OOP Basics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "game-development-foundations-math-for-games",
-        "label": "Math for Games",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "game-development-foundations-math-for-games-vectors-and-matrices",
-            "label": "Vectors & Matrices",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Engines & Tools",
+            "short_title": "Engines & Tools",
+            "slug": "engines-and-tools",
+            "description": "Learn Engines & Tools for game development.",
+            "long_description": "Covers core concepts in Engines & Tools.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Engines & Tools.",
+            "outcomes": "Ability to apply Engines & Tools in game development.",
+            "seo": {
+              "meta_title": "Engines & Tools",
+              "meta_description": "Learn the fundamentals of Engines & Tools for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "unity"
+            },
+            "children": [
+              {
+                "id": "engines-and-tools-unity",
+                "label": "Unity",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "engines-and-tools-unity-scenes-and-prefabs",
+                    "label": "Scenes & Prefabs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engines-and-tools-unity-scripting-and-components",
+                    "label": "Scripting & Components",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "engines-and-tools-unreal-engine",
+                "label": "Unreal Engine",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "engines-and-tools-unreal-engine-blueprints",
+                    "label": "Blueprints",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engines-and-tools-unreal-engine-gameplay-framework",
+                    "label": "Gameplay Framework",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "engines-and-tools-godot",
+                "label": "Godot",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "engines-and-tools-godot-nodes-and-scenes",
+                    "label": "Nodes & Scenes",
+                    "type": "module"
+                  },
+                  {
+                    "id": "engines-and-tools-godot-gdscript-basics",
+                    "label": "GDScript Basics",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "game-development-foundations-math-for-games-transforms-and-projections",
-            "label": "Transforms & Projections",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Gameplay Systems",
+            "short_title": "Gameplay Systems",
+            "slug": "gameplay-systems",
+            "description": "Learn Gameplay Systems for game development.",
+            "long_description": "Covers core concepts in Gameplay Systems.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Gameplay Systems.",
+            "outcomes": "Ability to apply Gameplay Systems in game development.",
+            "seo": {
+              "meta_title": "Gameplay Systems",
+              "meta_description": "Learn the fundamentals of Gameplay Systems for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "unity"
+            },
+            "children": [
+              {
+                "id": "gameplay-systems-game-physics",
+                "label": "Game Physics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "gameplay-systems-game-physics-collisions",
+                    "label": "Collisions",
+                    "type": "module"
+                  },
+                  {
+                    "id": "gameplay-systems-game-physics-rigidbodies",
+                    "label": "Rigidbodies",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "gameplay-systems-animation",
+                "label": "Animation",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "gameplay-systems-animation-animation-states",
+                    "label": "Animation States",
+                    "type": "module"
+                  },
+                  {
+                    "id": "gameplay-systems-animation-blend-trees",
+                    "label": "Blend Trees",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "gameplay-systems-game-ai",
+                "label": "Game AI",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "gameplay-systems-game-ai-state-machines",
+                    "label": "State Machines",
+                    "type": "module"
+                  },
+                  {
+                    "id": "gameplay-systems-game-ai-navigation",
+                    "label": "Navigation",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Graphics & Audio",
+            "short_title": "Graphics & Audio",
+            "slug": "graphics-and-audio",
+            "description": "Learn Graphics & Audio for game development.",
+            "long_description": "Covers core concepts in Graphics & Audio.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Graphics & Audio.",
+            "outcomes": "Ability to apply Graphics & Audio in game development.",
+            "seo": {
+              "meta_title": "Graphics & Audio",
+              "meta_description": "Learn the fundamentals of Graphics & Audio for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "unity"
+            },
+            "children": [
+              {
+                "id": "graphics-and-audio-rendering-basics",
+                "label": "Rendering Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "graphics-and-audio-rendering-basics-rasterization",
+                    "label": "Rasterization",
+                    "type": "module"
+                  },
+                  {
+                    "id": "graphics-and-audio-rendering-basics-shaders",
+                    "label": "Shaders",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "graphics-and-audio-lighting-and-materials",
+                "label": "Lighting & Materials",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "graphics-and-audio-lighting-and-materials-pbr-basics",
+                    "label": "PBR Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "graphics-and-audio-lighting-and-materials-light-types",
+                    "label": "Light Types",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "graphics-and-audio-audio-design",
+                "label": "Audio Design",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "graphics-and-audio-audio-design-sfx",
+                    "label": "SFX",
+                    "type": "module"
+                  },
+                  {
+                    "id": "graphics-and-audio-audio-design-music-and-mixing",
+                    "label": "Music & Mixing",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Production & Shipping",
+            "short_title": "Production & Shipping",
+            "slug": "production-and-shipping",
+            "description": "Learn Production & Shipping for game development.",
+            "long_description": "Covers core concepts in Production & Shipping.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Production & Shipping.",
+            "outcomes": "Ability to apply Production & Shipping in game development.",
+            "seo": {
+              "meta_title": "Production & Shipping",
+              "meta_description": "Learn the fundamentals of Production & Shipping for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "kubernetes"
+            },
+            "children": [
+              {
+                "id": "production-and-shipping-performance-optimization",
+                "label": "Performance Optimization",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "production-and-shipping-performance-optimization-profiling",
+                    "label": "Profiling",
+                    "type": "module"
+                  },
+                  {
+                    "id": "production-and-shipping-performance-optimization-asset-optimization",
+                    "label": "Asset Optimization",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "production-and-shipping-build-and-release",
+                "label": "Build & Release",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "production-and-shipping-build-and-release-build-pipelines",
+                    "label": "Build Pipelines",
+                    "type": "module"
+                  },
+                  {
+                    "id": "production-and-shipping-build-and-release-platform-publishing",
+                    "label": "Platform Publishing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "production-and-shipping-live-ops-and-analytics",
+                "label": "Live Ops & Analytics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "production-and-shipping-live-ops-and-analytics-telemetry",
+                    "label": "Telemetry",
+                    "type": "module"
+                  },
+                  {
+                    "id": "production-and-shipping-live-ops-and-analytics-patch-strategy",
+                    "label": "Patch Strategy",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Portfolio & Career",
+            "short_title": "Portfolio & Career",
+            "slug": "portfolio-and-career",
+            "description": "Learn Portfolio & Career for game development.",
+            "long_description": "Covers core concepts in Portfolio & Career.\nFocuses on practical game development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Portfolio & Career.",
+            "outcomes": "Ability to apply Portfolio & Career in game development.",
+            "seo": {
+              "meta_title": "Portfolio & Career",
+              "meta_description": "Learn the fundamentals of Portfolio & Career for game development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "portfolio-and-career-project-planning",
+                "label": "Project Planning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "portfolio-and-career-project-planning-scope-control",
+                    "label": "Scope Control",
+                    "type": "module"
+                  },
+                  {
+                    "id": "portfolio-and-career-project-planning-milestones",
+                    "label": "Milestones",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "portfolio-and-career-polish-and-qa",
+                "label": "Polish & QA",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "portfolio-and-career-polish-and-qa-bug-triage",
+                    "label": "Bug Triage",
+                    "type": "module"
+                  },
+                  {
+                    "id": "portfolio-and-career-polish-and-qa-playtesting",
+                    "label": "Playtesting",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "portfolio-and-career-showcase-and-hiring",
+                "label": "Showcase & Hiring",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "portfolio-and-career-showcase-and-hiring-portfolio",
+                    "label": "Portfolio",
+                    "type": "module"
+                  },
+                  {
+                    "id": "portfolio-and-career-showcase-and-hiring-game-jams",
+                    "label": "Game Jams",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Engines & Tools",
-    "short_title": "Engines & Tools",
-    "slug": "engines-and-tools",
-    "description": "Learn Engines & Tools for game development.",
-    "long_description": "Covers core concepts in Engines & Tools.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Engines & Tools.",
-    "outcomes": "Ability to apply Engines & Tools in game development.",
-    "seo": {
-      "meta_title": "Engines & Tools",
-      "meta_description": "Learn the fundamentals of Engines & Tools for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "engines"
-    },
-    "children": [
-      {
-        "id": "engines-and-tools-unity",
-        "label": "Unity",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "engines-and-tools-unity-scenes-and-prefabs",
-            "label": "Scenes & Prefabs",
-            "type": "module"
-          },
-          {
-            "id": "engines-and-tools-unity-scripting-and-components",
-            "label": "Scripting & Components",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "engines-and-tools-unreal-engine",
-        "label": "Unreal Engine",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "engines-and-tools-unreal-engine-blueprints",
-            "label": "Blueprints",
-            "type": "module"
-          },
-          {
-            "id": "engines-and-tools-unreal-engine-gameplay-framework",
-            "label": "Gameplay Framework",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "engines-and-tools-godot",
-        "label": "Godot",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "engines-and-tools-godot-nodes-and-scenes",
-            "label": "Nodes & Scenes",
-            "type": "module"
-          },
-          {
-            "id": "engines-and-tools-godot-gdscript-basics",
-            "label": "GDScript Basics",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Gameplay Systems",
-    "short_title": "Gameplay Systems",
-    "slug": "gameplay-systems",
-    "description": "Learn Gameplay Systems for game development.",
-    "long_description": "Covers core concepts in Gameplay Systems.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Gameplay Systems.",
-    "outcomes": "Ability to apply Gameplay Systems in game development.",
-    "seo": {
-      "meta_title": "Gameplay Systems",
-      "meta_description": "Learn the fundamentals of Gameplay Systems for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "gameplay"
-    },
-    "children": [
-      {
-        "id": "gameplay-systems-game-physics",
-        "label": "Game Physics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "gameplay-systems-game-physics-collisions",
-            "label": "Collisions",
-            "type": "module"
-          },
-          {
-            "id": "gameplay-systems-game-physics-rigidbodies",
-            "label": "Rigidbodies",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "gameplay-systems-animation",
-        "label": "Animation",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "gameplay-systems-animation-animation-states",
-            "label": "Animation States",
-            "type": "module"
-          },
-          {
-            "id": "gameplay-systems-animation-blend-trees",
-            "label": "Blend Trees",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "gameplay-systems-game-ai",
-        "label": "Game AI",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "gameplay-systems-game-ai-state-machines",
-            "label": "State Machines",
-            "type": "module"
-          },
-          {
-            "id": "gameplay-systems-game-ai-navigation",
-            "label": "Navigation",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Graphics & Audio",
-    "short_title": "Graphics & Audio",
-    "slug": "graphics-and-audio",
-    "description": "Learn Graphics & Audio for game development.",
-    "long_description": "Covers core concepts in Graphics & Audio.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Graphics & Audio.",
-    "outcomes": "Ability to apply Graphics & Audio in game development.",
-    "seo": {
-      "meta_title": "Graphics & Audio",
-      "meta_description": "Learn the fundamentals of Graphics & Audio for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "graphics"
-    },
-    "children": [
-      {
-        "id": "graphics-and-audio-rendering-basics",
-        "label": "Rendering Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "graphics-and-audio-rendering-basics-rasterization",
-            "label": "Rasterization",
-            "type": "module"
-          },
-          {
-            "id": "graphics-and-audio-rendering-basics-shaders",
-            "label": "Shaders",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "graphics-and-audio-lighting-and-materials",
-        "label": "Lighting & Materials",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "graphics-and-audio-lighting-and-materials-pbr-basics",
-            "label": "PBR Basics",
-            "type": "module"
-          },
-          {
-            "id": "graphics-and-audio-lighting-and-materials-light-types",
-            "label": "Light Types",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "graphics-and-audio-audio-design",
-        "label": "Audio Design",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "graphics-and-audio-audio-design-sfx",
-            "label": "SFX",
-            "type": "module"
-          },
-          {
-            "id": "graphics-and-audio-audio-design-music-and-mixing",
-            "label": "Music & Mixing",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Production & Shipping",
-    "short_title": "Production & Shipping",
-    "slug": "production-and-shipping",
-    "description": "Learn Production & Shipping for game development.",
-    "long_description": "Covers core concepts in Production & Shipping.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Production & Shipping.",
-    "outcomes": "Ability to apply Production & Shipping in game development.",
-    "seo": {
-      "meta_title": "Production & Shipping",
-      "meta_description": "Learn the fundamentals of Production & Shipping for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "production"
-    },
-    "children": [
-      {
-        "id": "production-and-shipping-performance-optimization",
-        "label": "Performance Optimization",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "production-and-shipping-performance-optimization-profiling",
-            "label": "Profiling",
-            "type": "module"
-          },
-          {
-            "id": "production-and-shipping-performance-optimization-asset-optimization",
-            "label": "Asset Optimization",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "production-and-shipping-build-and-release",
-        "label": "Build & Release",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "production-and-shipping-build-and-release-build-pipelines",
-            "label": "Build Pipelines",
-            "type": "module"
-          },
-          {
-            "id": "production-and-shipping-build-and-release-platform-publishing",
-            "label": "Platform Publishing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "production-and-shipping-live-ops-and-analytics",
-        "label": "Live Ops & Analytics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "production-and-shipping-live-ops-and-analytics-telemetry",
-            "label": "Telemetry",
-            "type": "module"
-          },
-          {
-            "id": "production-and-shipping-live-ops-and-analytics-patch-strategy",
-            "label": "Patch Strategy",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Portfolio & Career",
-    "short_title": "Portfolio & Career",
-    "slug": "portfolio-and-career",
-    "description": "Learn Portfolio & Career for game development.",
-    "long_description": "Covers core concepts in Portfolio & Career.\nFocuses on practical game development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Portfolio & Career.",
-    "outcomes": "Ability to apply Portfolio & Career in game development.",
-    "seo": {
-      "meta_title": "Portfolio & Career",
-      "meta_description": "Learn the fundamentals of Portfolio & Career for game development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "portfolio"
-    },
-    "children": [
-      {
-        "id": "portfolio-and-career-project-planning",
-        "label": "Project Planning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "portfolio-and-career-project-planning-scope-control",
-            "label": "Scope Control",
-            "type": "module"
-          },
-          {
-            "id": "portfolio-and-career-project-planning-milestones",
-            "label": "Milestones",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "portfolio-and-career-polish-and-qa",
-        "label": "Polish & QA",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "portfolio-and-career-polish-and-qa-bug-triage",
-            "label": "Bug Triage",
-            "type": "module"
-          },
-          {
-            "id": "portfolio-and-career-polish-and-qa-playtesting",
-            "label": "Playtesting",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "portfolio-and-career-showcase-and-hiring",
-        "label": "Showcase & Hiring",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "portfolio-and-career-showcase-and-hiring-portfolio",
-            "label": "Portfolio",
-            "type": "module"
-          },
-          {
-            "id": "portfolio-and-career-showcase-and-hiring-game-jams",
-            "label": "Game Jams",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

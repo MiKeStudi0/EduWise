@@ -1,718 +1,769 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "AI Engineering Foundations",
-    "short_title": "AI Engineering Foundations",
-    "slug": "ai-engineering-foundations",
-    "description": "Learn AI Engineering Foundations for AI engineering.",
-    "long_description": "Covers core concepts in AI Engineering Foundations.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in AI Engineering Foundations.",
-    "outcomes": "Ability to apply AI Engineering Foundations in AI engineering.",
+{
+  "roadmap": {
+    "title": "AI Engineer Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in AI Engineer.",
     "seo": {
-      "meta_title": "AI Engineering Foundations",
-      "meta_description": "Learn the fundamentals of AI Engineering Foundations for AI engineering."
+      "meta_title": "AI Engineer Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in AI Engineer. Follow a phased, practical learning path.",
+      "keywords": [
+        "ai engineer roadmap",
+        "ai engineer roadmap 2026",
+        "learn ai engineer",
+        "ai engineer learning path"
+      ],
+      "canonical": "https://yourdomain.com/ai-engineer-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "AI Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in AI Engineer.",
+        "type": "website",
+        "url": "https://yourdomain.com/ai-engineer-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/ai-engineer-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "AI Engineer Roadmap"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AI Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in AI Engineer.",
+        "image": "https://yourdomain.com/og/ai-engineer-roadmap.png"
+      }
     },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ai"
-    },
-    "children": [
+    "phases": [
       {
-        "id": "ai-engineering-foundations-role-of-an-ai-engineer",
-        "label": "Role of an AI Engineer",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for AI Engineer.",
+        "estimated_total_hours": 72,
+        "topics": [
           {
-            "id": "ai-engineering-foundations-role-of-an-ai-engineer-product-integration",
-            "label": "Product Integration",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "AI Engineering Foundations",
+            "short_title": "AI Engineering Foundations",
+            "slug": "ai-engineering-foundations",
+            "description": "Learn AI Engineering Foundations for AI engineering.",
+            "long_description": "Covers core concepts in AI Engineering Foundations.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in AI Engineering Foundations.",
+            "outcomes": "Ability to apply AI Engineering Foundations in AI engineering.",
+            "seo": {
+              "meta_title": "AI Engineering Foundations",
+              "meta_description": "Learn the fundamentals of AI Engineering Foundations for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "ai-engineering-foundations-role-of-an-ai-engineer",
+                "label": "Role of an AI Engineer",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ai-engineering-foundations-role-of-an-ai-engineer-product-integration",
+                    "label": "Product Integration",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ai-engineering-foundations-role-of-an-ai-engineer-system-thinking",
+                    "label": "System Thinking",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ai-engineering-foundations-ml-and-llm-basics",
+                "label": "ML & LLM Basics",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ai-engineering-foundations-ml-and-llm-basics-training-vs-inference",
+                    "label": "Training vs Inference",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ai-engineering-foundations-ml-and-llm-basics-tokenization",
+                    "label": "Tokenization",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ai-engineering-foundations-data-basics",
+                "label": "Data Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ai-engineering-foundations-data-basics-data-quality",
+                    "label": "Data Quality",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ai-engineering-foundations-data-basics-labeling-concepts",
+                    "label": "Labeling Concepts",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ai-engineering-foundations-ai-terminology",
+                "label": "AI Terminology",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ai-engineering-foundations-ai-terminology-embeddings",
+                    "label": "Embeddings",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ai-engineering-foundations-ai-terminology-vector-search",
+                    "label": "Vector Search",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ai-engineering-foundations-role-of-an-ai-engineer-system-thinking",
-            "label": "System Thinking",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ai-engineering-foundations-ml-and-llm-basics",
-        "label": "ML & LLM Basics",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ai-engineering-foundations-ml-and-llm-basics-training-vs-inference",
-            "label": "Training vs Inference",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Prompting & Interaction",
+            "short_title": "Prompting & Interaction",
+            "slug": "prompting-and-interaction",
+            "description": "Learn Prompting & Interaction for AI engineering.",
+            "long_description": "Covers core concepts in Prompting & Interaction.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Prompting & Interaction.",
+            "outcomes": "Ability to apply Prompting & Interaction in AI engineering.",
+            "seo": {
+              "meta_title": "Prompting & Interaction",
+              "meta_description": "Learn the fundamentals of Prompting & Interaction for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "prompting-and-interaction-prompt-design",
+                "label": "Prompt Design",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "prompting-and-interaction-prompt-design-system-developer-user-roles",
+                    "label": "System/Developer/User Roles",
+                    "type": "module"
+                  },
+                  {
+                    "id": "prompting-and-interaction-prompt-design-few-shot-examples",
+                    "label": "Few-shot Examples",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "prompting-and-interaction-context-management",
+                "label": "Context Management",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "prompting-and-interaction-context-management-context-windows",
+                    "label": "Context Windows",
+                    "type": "module"
+                  },
+                  {
+                    "id": "prompting-and-interaction-context-management-chunking",
+                    "label": "Chunking",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "prompting-and-interaction-output-control",
+                "label": "Output Control",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "prompting-and-interaction-output-control-structured-outputs",
+                    "label": "Structured Outputs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "prompting-and-interaction-output-control-formatting-and-validation",
+                    "label": "Formatting & Validation",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ai-engineering-foundations-ml-and-llm-basics-tokenization",
-            "label": "Tokenization",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ai-engineering-foundations-data-basics",
-        "label": "Data Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ai-engineering-foundations-data-basics-data-quality",
-            "label": "Data Quality",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Model Integration & APIs",
+            "short_title": "Model Integration &",
+            "slug": "model-integration-and-apis",
+            "description": "Learn Model Integration & APIs for AI engineering.",
+            "long_description": "Covers core concepts in Model Integration & APIs.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Model Integration & APIs.",
+            "outcomes": "Ability to apply Model Integration & APIs in AI engineering.",
+            "seo": {
+              "meta_title": "Model Integration & APIs",
+              "meta_description": "Learn the fundamentals of Model Integration & APIs for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "model-integration-and-apis-model-providers",
+                "label": "Model Providers",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-integration-and-apis-model-providers-hosted-apis",
+                    "label": "Hosted APIs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-integration-and-apis-model-providers-open-source-models",
+                    "label": "Open-source Models",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-integration-and-apis-api-usage-patterns",
+                "label": "API Usage Patterns",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "model-integration-and-apis-api-usage-patterns-rate-limits",
+                    "label": "Rate Limits",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-integration-and-apis-api-usage-patterns-retries-and-backoff",
+                    "label": "Retries & Backoff",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-integration-and-apis-cost-and-latency",
+                "label": "Cost & Latency",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-integration-and-apis-cost-and-latency-caching",
+                    "label": "Caching",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-integration-and-apis-cost-and-latency-batching",
+                    "label": "Batching",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ai-engineering-foundations-data-basics-labeling-concepts",
-            "label": "Labeling Concepts",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ai-engineering-foundations-ai-terminology",
-        "label": "AI Terminology",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ai-engineering-foundations-ai-terminology-embeddings",
-            "label": "Embeddings",
-            "type": "module"
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Embeddings & Vector Search",
+            "short_title": "Embeddings & Vector",
+            "slug": "embeddings-and-vector-search",
+            "description": "Learn Embeddings & Vector Search for AI engineering.",
+            "long_description": "Covers core concepts in Embeddings & Vector Search.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Embeddings & Vector Search.",
+            "outcomes": "Ability to apply Embeddings & Vector Search in AI engineering.",
+            "seo": {
+              "meta_title": "Embeddings & Vector Search",
+              "meta_description": "Learn the fundamentals of Embeddings & Vector Search for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "embeddings-and-vector-search-embeddings",
+                "label": "Embeddings",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "embeddings-and-vector-search-embeddings-use-cases",
+                    "label": "Use Cases",
+                    "type": "module"
+                  },
+                  {
+                    "id": "embeddings-and-vector-search-embeddings-similarity-metrics",
+                    "label": "Similarity Metrics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "embeddings-and-vector-search-vector-datastores",
+                "label": "Vector Datastores",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "embeddings-and-vector-search-vector-datastores-indexing",
+                    "label": "Indexing",
+                    "type": "module"
+                  },
+                  {
+                    "id": "embeddings-and-vector-search-vector-datastores-filtering",
+                    "label": "Filtering",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "embeddings-and-vector-search-retrieval-strategies",
+                "label": "Retrieval Strategies",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "embeddings-and-vector-search-retrieval-strategies-hybrid-search",
+                    "label": "Hybrid Search",
+                    "type": "module"
+                  },
+                  {
+                    "id": "embeddings-and-vector-search-retrieval-strategies-re-ranking",
+                    "label": "Re-ranking",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ai-engineering-foundations-ai-terminology-vector-search",
-            "label": "Vector Search",
-            "type": "module"
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "RAG Systems",
+            "short_title": "RAG Systems",
+            "slug": "rag-systems",
+            "description": "Learn RAG Systems for AI engineering.",
+            "long_description": "Covers core concepts in RAG Systems.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in RAG Systems.",
+            "outcomes": "Ability to apply RAG Systems in AI engineering.",
+            "seo": {
+              "meta_title": "RAG Systems",
+              "meta_description": "Learn the fundamentals of RAG Systems for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "rag-systems-rag-architecture",
+                "label": "RAG Architecture",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "rag-systems-rag-architecture-ingestion",
+                    "label": "Ingestion",
+                    "type": "module"
+                  },
+                  {
+                    "id": "rag-systems-rag-architecture-retrieval",
+                    "label": "Retrieval",
+                    "type": "module"
+                  },
+                  {
+                    "id": "rag-systems-rag-architecture-generation",
+                    "label": "Generation",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "rag-systems-evaluation",
+                "label": "Evaluation",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "rag-systems-evaluation-groundedness",
+                    "label": "Groundedness",
+                    "type": "module"
+                  },
+                  {
+                    "id": "rag-systems-evaluation-answer-quality",
+                    "label": "Answer Quality",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "rag-systems-rag-vs-fine-tuning",
+                "label": "RAG vs Fine-tuning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "rag-systems-rag-vs-fine-tuning-tradeoffs",
+                    "label": "Tradeoffs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "rag-systems-rag-vs-fine-tuning-when-to-use",
+                    "label": "When to Use",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Agents & Tool Use",
+            "short_title": "Agents & Tool",
+            "slug": "agents-and-tool-use",
+            "description": "Learn Agents & Tool Use for AI engineering.",
+            "long_description": "Covers core concepts in Agents & Tool Use.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Agents & Tool Use.",
+            "outcomes": "Ability to apply Agents & Tool Use in AI engineering.",
+            "seo": {
+              "meta_title": "Agents & Tool Use",
+              "meta_description": "Learn the fundamentals of Agents & Tool Use for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "agents-and-tool-use-tool-function-calling",
+                "label": "Tool / Function Calling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "agents-and-tool-use-tool-function-calling-schemas",
+                    "label": "Schemas",
+                    "type": "module"
+                  },
+                  {
+                    "id": "agents-and-tool-use-tool-function-calling-tool-selection",
+                    "label": "Tool Selection",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "agents-and-tool-use-agent-design",
+                "label": "Agent Design",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "agents-and-tool-use-agent-design-planning",
+                    "label": "Planning",
+                    "type": "module"
+                  },
+                  {
+                    "id": "agents-and-tool-use-agent-design-memory",
+                    "label": "Memory",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "agents-and-tool-use-workflows-and-orchestration",
+                "label": "Workflows & Orchestration",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "agents-and-tool-use-workflows-and-orchestration-pipelines",
+                    "label": "Pipelines",
+                    "type": "module"
+                  },
+                  {
+                    "id": "agents-and-tool-use-workflows-and-orchestration-human-in-the-loop",
+                    "label": "Human-in-the-loop",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "roadmap_id": 1,
+            "title": "Safety, Security & Governance",
+            "short_title": "Safety, Security &",
+            "slug": "safety-security-and-governance",
+            "description": "Learn Safety, Security & Governance for AI engineering.",
+            "long_description": "Covers core concepts in Safety, Security & Governance.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Safety, Security & Governance.",
+            "outcomes": "Ability to apply Safety, Security & Governance in AI engineering.",
+            "seo": {
+              "meta_title": "Safety, Security & Governance",
+              "meta_description": "Learn the fundamentals of Safety, Security & Governance for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "owasp"
+            },
+            "children": [
+              {
+                "id": "safety-security-and-governance-safety-risks",
+                "label": "Safety Risks",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "safety-security-and-governance-safety-risks-prompt-injection",
+                    "label": "Prompt Injection",
+                    "type": "module"
+                  },
+                  {
+                    "id": "safety-security-and-governance-safety-risks-data-exfiltration",
+                    "label": "Data Exfiltration",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "safety-security-and-governance-privacy-and-compliance",
+                "label": "Privacy & Compliance",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "safety-security-and-governance-privacy-and-compliance-pii-handling",
+                    "label": "PII Handling",
+                    "type": "module"
+                  },
+                  {
+                    "id": "safety-security-and-governance-privacy-and-compliance-retention-policies",
+                    "label": "Retention Policies",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "safety-security-and-governance-guardrails",
+                "label": "Guardrails",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "safety-security-and-governance-guardrails-policy-checks",
+                    "label": "Policy Checks",
+                    "type": "module"
+                  },
+                  {
+                    "id": "safety-security-and-governance-guardrails-red-teaming",
+                    "label": "Red Teaming",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "roadmap_id": 1,
+            "title": "Deployment & Observability",
+            "short_title": "Deployment & Observability",
+            "slug": "deployment-and-observability",
+            "description": "Learn Deployment & Observability for AI engineering.",
+            "long_description": "Covers core concepts in Deployment & Observability.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Deployment & Observability.",
+            "outcomes": "Ability to apply Deployment & Observability in AI engineering.",
+            "seo": {
+              "meta_title": "Deployment & Observability",
+              "meta_description": "Learn the fundamentals of Deployment & Observability for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "deployment-and-observability-serving-and-scaling",
+                "label": "Serving & Scaling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deployment-and-observability-serving-and-scaling-throughput",
+                    "label": "Throughput",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-observability-serving-and-scaling-autoscaling",
+                    "label": "Autoscaling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deployment-and-observability-monitoring",
+                "label": "Monitoring",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "deployment-and-observability-monitoring-latency",
+                    "label": "Latency",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-observability-monitoring-cost",
+                    "label": "Cost",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deployment-and-observability-model-versioning",
+                "label": "Model Versioning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deployment-and-observability-model-versioning-a-b-testing",
+                    "label": "A/B Testing",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-observability-model-versioning-rollback",
+                    "label": "Rollback",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 9,
+            "roadmap_id": 1,
+            "title": "Multimodal & Advanced Applications",
+            "short_title": "Multimodal & Advanced",
+            "slug": "multimodal-and-advanced-applications",
+            "description": "Learn Multimodal & Advanced Applications for AI engineering.",
+            "long_description": "Covers core concepts in Multimodal & Advanced Applications.\nFocuses on practical AI engineering workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Multimodal & Advanced Applications.",
+            "outcomes": "Ability to apply Multimodal & Advanced Applications in AI engineering.",
+            "seo": {
+              "meta_title": "Multimodal & Advanced Applications",
+              "meta_description": "Learn the fundamentals of Multimodal & Advanced Applications for AI engineering."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "multimodal-and-advanced-applications-multimodal-models",
+                "label": "Multimodal Models",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "multimodal-and-advanced-applications-multimodal-models-vision",
+                    "label": "Vision",
+                    "type": "module"
+                  },
+                  {
+                    "id": "multimodal-and-advanced-applications-multimodal-models-audio",
+                    "label": "Audio",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "multimodal-and-advanced-applications-structured-data-and-tools",
+                "label": "Structured Data & Tools",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "multimodal-and-advanced-applications-structured-data-and-tools-json-mode",
+                    "label": "JSON Mode",
+                    "type": "module"
+                  },
+                  {
+                    "id": "multimodal-and-advanced-applications-structured-data-and-tools-schema-validation",
+                    "label": "Schema Validation",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "multimodal-and-advanced-applications-use-case-design",
+                "label": "Use Case Design",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "multimodal-and-advanced-applications-use-case-design-search-and-assist",
+                    "label": "Search & Assist",
+                    "type": "module"
+                  },
+                  {
+                    "id": "multimodal-and-advanced-applications-use-case-design-automation",
+                    "label": "Automation",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Prompting & Interaction",
-    "short_title": "Prompting & Interaction",
-    "slug": "prompting-and-interaction",
-    "description": "Learn Prompting & Interaction for AI engineering.",
-    "long_description": "Covers core concepts in Prompting & Interaction.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Prompting & Interaction.",
-    "outcomes": "Ability to apply Prompting & Interaction in AI engineering.",
-    "seo": {
-      "meta_title": "Prompting & Interaction",
-      "meta_description": "Learn the fundamentals of Prompting & Interaction for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "prompting"
-    },
-    "children": [
-      {
-        "id": "prompting-and-interaction-prompt-design",
-        "label": "Prompt Design",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "prompting-and-interaction-prompt-design-system-developer-user-roles",
-            "label": "System/Developer/User Roles",
-            "type": "module"
-          },
-          {
-            "id": "prompting-and-interaction-prompt-design-few-shot-examples",
-            "label": "Few-shot Examples",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "prompting-and-interaction-context-management",
-        "label": "Context Management",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "prompting-and-interaction-context-management-context-windows",
-            "label": "Context Windows",
-            "type": "module"
-          },
-          {
-            "id": "prompting-and-interaction-context-management-chunking",
-            "label": "Chunking",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "prompting-and-interaction-output-control",
-        "label": "Output Control",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "prompting-and-interaction-output-control-structured-outputs",
-            "label": "Structured Outputs",
-            "type": "module"
-          },
-          {
-            "id": "prompting-and-interaction-output-control-formatting-and-validation",
-            "label": "Formatting & Validation",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Model Integration & APIs",
-    "short_title": "Model Integration &",
-    "slug": "model-integration-and-apis",
-    "description": "Learn Model Integration & APIs for AI engineering.",
-    "long_description": "Covers core concepts in Model Integration & APIs.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Model Integration & APIs.",
-    "outcomes": "Ability to apply Model Integration & APIs in AI engineering.",
-    "seo": {
-      "meta_title": "Model Integration & APIs",
-      "meta_description": "Learn the fundamentals of Model Integration & APIs for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "model"
-    },
-    "children": [
-      {
-        "id": "model-integration-and-apis-model-providers",
-        "label": "Model Providers",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-integration-and-apis-model-providers-hosted-apis",
-            "label": "Hosted APIs",
-            "type": "module"
-          },
-          {
-            "id": "model-integration-and-apis-model-providers-open-source-models",
-            "label": "Open-source Models",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-integration-and-apis-api-usage-patterns",
-        "label": "API Usage Patterns",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "model-integration-and-apis-api-usage-patterns-rate-limits",
-            "label": "Rate Limits",
-            "type": "module"
-          },
-          {
-            "id": "model-integration-and-apis-api-usage-patterns-retries-and-backoff",
-            "label": "Retries & Backoff",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-integration-and-apis-cost-and-latency",
-        "label": "Cost & Latency",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-integration-and-apis-cost-and-latency-caching",
-            "label": "Caching",
-            "type": "module"
-          },
-          {
-            "id": "model-integration-and-apis-cost-and-latency-batching",
-            "label": "Batching",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Embeddings & Vector Search",
-    "short_title": "Embeddings & Vector",
-    "slug": "embeddings-and-vector-search",
-    "description": "Learn Embeddings & Vector Search for AI engineering.",
-    "long_description": "Covers core concepts in Embeddings & Vector Search.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Embeddings & Vector Search.",
-    "outcomes": "Ability to apply Embeddings & Vector Search in AI engineering.",
-    "seo": {
-      "meta_title": "Embeddings & Vector Search",
-      "meta_description": "Learn the fundamentals of Embeddings & Vector Search for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "embeddings"
-    },
-    "children": [
-      {
-        "id": "embeddings-and-vector-search-embeddings",
-        "label": "Embeddings",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "embeddings-and-vector-search-embeddings-use-cases",
-            "label": "Use Cases",
-            "type": "module"
-          },
-          {
-            "id": "embeddings-and-vector-search-embeddings-similarity-metrics",
-            "label": "Similarity Metrics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "embeddings-and-vector-search-vector-datastores",
-        "label": "Vector Datastores",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "embeddings-and-vector-search-vector-datastores-indexing",
-            "label": "Indexing",
-            "type": "module"
-          },
-          {
-            "id": "embeddings-and-vector-search-vector-datastores-filtering",
-            "label": "Filtering",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "embeddings-and-vector-search-retrieval-strategies",
-        "label": "Retrieval Strategies",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "embeddings-and-vector-search-retrieval-strategies-hybrid-search",
-            "label": "Hybrid Search",
-            "type": "module"
-          },
-          {
-            "id": "embeddings-and-vector-search-retrieval-strategies-re-ranking",
-            "label": "Re-ranking",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "RAG Systems",
-    "short_title": "RAG Systems",
-    "slug": "rag-systems",
-    "description": "Learn RAG Systems for AI engineering.",
-    "long_description": "Covers core concepts in RAG Systems.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in RAG Systems.",
-    "outcomes": "Ability to apply RAG Systems in AI engineering.",
-    "seo": {
-      "meta_title": "RAG Systems",
-      "meta_description": "Learn the fundamentals of RAG Systems for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "rag"
-    },
-    "children": [
-      {
-        "id": "rag-systems-rag-architecture",
-        "label": "RAG Architecture",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "rag-systems-rag-architecture-ingestion",
-            "label": "Ingestion",
-            "type": "module"
-          },
-          {
-            "id": "rag-systems-rag-architecture-retrieval",
-            "label": "Retrieval",
-            "type": "module"
-          },
-          {
-            "id": "rag-systems-rag-architecture-generation",
-            "label": "Generation",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "rag-systems-evaluation",
-        "label": "Evaluation",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "rag-systems-evaluation-groundedness",
-            "label": "Groundedness",
-            "type": "module"
-          },
-          {
-            "id": "rag-systems-evaluation-answer-quality",
-            "label": "Answer Quality",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "rag-systems-rag-vs-fine-tuning",
-        "label": "RAG vs Fine-tuning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "rag-systems-rag-vs-fine-tuning-tradeoffs",
-            "label": "Tradeoffs",
-            "type": "module"
-          },
-          {
-            "id": "rag-systems-rag-vs-fine-tuning-when-to-use",
-            "label": "When to Use",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Agents & Tool Use",
-    "short_title": "Agents & Tool",
-    "slug": "agents-and-tool-use",
-    "description": "Learn Agents & Tool Use for AI engineering.",
-    "long_description": "Covers core concepts in Agents & Tool Use.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Agents & Tool Use.",
-    "outcomes": "Ability to apply Agents & Tool Use in AI engineering.",
-    "seo": {
-      "meta_title": "Agents & Tool Use",
-      "meta_description": "Learn the fundamentals of Agents & Tool Use for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "agents"
-    },
-    "children": [
-      {
-        "id": "agents-and-tool-use-tool-function-calling",
-        "label": "Tool / Function Calling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "agents-and-tool-use-tool-function-calling-schemas",
-            "label": "Schemas",
-            "type": "module"
-          },
-          {
-            "id": "agents-and-tool-use-tool-function-calling-tool-selection",
-            "label": "Tool Selection",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "agents-and-tool-use-agent-design",
-        "label": "Agent Design",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "agents-and-tool-use-agent-design-planning",
-            "label": "Planning",
-            "type": "module"
-          },
-          {
-            "id": "agents-and-tool-use-agent-design-memory",
-            "label": "Memory",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "agents-and-tool-use-workflows-and-orchestration",
-        "label": "Workflows & Orchestration",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "agents-and-tool-use-workflows-and-orchestration-pipelines",
-            "label": "Pipelines",
-            "type": "module"
-          },
-          {
-            "id": "agents-and-tool-use-workflows-and-orchestration-human-in-the-loop",
-            "label": "Human-in-the-loop",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "roadmap_id": 1,
-    "title": "Safety, Security & Governance",
-    "short_title": "Safety, Security &",
-    "slug": "safety-security-and-governance",
-    "description": "Learn Safety, Security & Governance for AI engineering.",
-    "long_description": "Covers core concepts in Safety, Security & Governance.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Safety, Security & Governance.",
-    "outcomes": "Ability to apply Safety, Security & Governance in AI engineering.",
-    "seo": {
-      "meta_title": "Safety, Security & Governance",
-      "meta_description": "Learn the fundamentals of Safety, Security & Governance for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "safety"
-    },
-    "children": [
-      {
-        "id": "safety-security-and-governance-safety-risks",
-        "label": "Safety Risks",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "safety-security-and-governance-safety-risks-prompt-injection",
-            "label": "Prompt Injection",
-            "type": "module"
-          },
-          {
-            "id": "safety-security-and-governance-safety-risks-data-exfiltration",
-            "label": "Data Exfiltration",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "safety-security-and-governance-privacy-and-compliance",
-        "label": "Privacy & Compliance",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "safety-security-and-governance-privacy-and-compliance-pii-handling",
-            "label": "PII Handling",
-            "type": "module"
-          },
-          {
-            "id": "safety-security-and-governance-privacy-and-compliance-retention-policies",
-            "label": "Retention Policies",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "safety-security-and-governance-guardrails",
-        "label": "Guardrails",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "safety-security-and-governance-guardrails-policy-checks",
-            "label": "Policy Checks",
-            "type": "module"
-          },
-          {
-            "id": "safety-security-and-governance-guardrails-red-teaming",
-            "label": "Red Teaming",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 8,
-    "roadmap_id": 1,
-    "title": "Deployment & Observability",
-    "short_title": "Deployment & Observability",
-    "slug": "deployment-and-observability",
-    "description": "Learn Deployment & Observability for AI engineering.",
-    "long_description": "Covers core concepts in Deployment & Observability.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Deployment & Observability.",
-    "outcomes": "Ability to apply Deployment & Observability in AI engineering.",
-    "seo": {
-      "meta_title": "Deployment & Observability",
-      "meta_description": "Learn the fundamentals of Deployment & Observability for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "deployment"
-    },
-    "children": [
-      {
-        "id": "deployment-and-observability-serving-and-scaling",
-        "label": "Serving & Scaling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deployment-and-observability-serving-and-scaling-throughput",
-            "label": "Throughput",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-observability-serving-and-scaling-autoscaling",
-            "label": "Autoscaling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deployment-and-observability-monitoring",
-        "label": "Monitoring",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "deployment-and-observability-monitoring-latency",
-            "label": "Latency",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-observability-monitoring-cost",
-            "label": "Cost",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deployment-and-observability-model-versioning",
-        "label": "Model Versioning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deployment-and-observability-model-versioning-a-b-testing",
-            "label": "A/B Testing",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-observability-model-versioning-rollback",
-            "label": "Rollback",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 9,
-    "roadmap_id": 1,
-    "title": "Multimodal & Advanced Applications",
-    "short_title": "Multimodal & Advanced",
-    "slug": "multimodal-and-advanced-applications",
-    "description": "Learn Multimodal & Advanced Applications for AI engineering.",
-    "long_description": "Covers core concepts in Multimodal & Advanced Applications.\nFocuses on practical AI engineering workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Multimodal & Advanced Applications.",
-    "outcomes": "Ability to apply Multimodal & Advanced Applications in AI engineering.",
-    "seo": {
-      "meta_title": "Multimodal & Advanced Applications",
-      "meta_description": "Learn the fundamentals of Multimodal & Advanced Applications for AI engineering."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "multimodal"
-    },
-    "children": [
-      {
-        "id": "multimodal-and-advanced-applications-multimodal-models",
-        "label": "Multimodal Models",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "multimodal-and-advanced-applications-multimodal-models-vision",
-            "label": "Vision",
-            "type": "module"
-          },
-          {
-            "id": "multimodal-and-advanced-applications-multimodal-models-audio",
-            "label": "Audio",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "multimodal-and-advanced-applications-structured-data-and-tools",
-        "label": "Structured Data & Tools",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "multimodal-and-advanced-applications-structured-data-and-tools-json-mode",
-            "label": "JSON Mode",
-            "type": "module"
-          },
-          {
-            "id": "multimodal-and-advanced-applications-structured-data-and-tools-schema-validation",
-            "label": "Schema Validation",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "multimodal-and-advanced-applications-use-case-design",
-        "label": "Use Case Design",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "multimodal-and-advanced-applications-use-case-design-search-and-assist",
-            "label": "Search & Assist",
-            "type": "module"
-          },
-          {
-            "id": "multimodal-and-advanced-applications-use-case-design-automation",
-            "label": "Automation",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 72,
+      "total_topics": 9,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

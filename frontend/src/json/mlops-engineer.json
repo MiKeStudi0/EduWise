@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "MLOps Foundations",
-    "short_title": "MLOps Foundations",
-    "slug": "mlops-foundations",
-    "description": "Learn MLOps Foundations for mlops.",
-    "long_description": "Covers core concepts in MLOps Foundations.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in MLOps Foundations.",
-    "outcomes": "Ability to apply MLOps Foundations in mlops.",
+{
+  "roadmap": {
+    "title": "MLOps Engineer Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in MLOps Engineer.",
     "seo": {
-      "meta_title": "MLOps Foundations",
-      "meta_description": "Learn the fundamentals of MLOps Foundations for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "mlops"
-    },
-    "children": [
-      {
-        "id": "mlops-foundations-mlops-principles",
-        "label": "MLOps Principles",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "mlops-foundations-mlops-principles-lifecycle-mindset",
-            "label": "Lifecycle Mindset",
-            "type": "module"
-          },
-          {
-            "id": "mlops-foundations-mlops-principles-automation-and-reliability",
-            "label": "Automation & Reliability",
-            "type": "module"
-          }
-        ]
+      "meta_title": "MLOps Engineer Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in MLOps Engineer. Follow a phased, practical learning path.",
+      "keywords": [
+        "mlops engineer roadmap",
+        "mlops engineer roadmap 2026",
+        "learn mlops engineer",
+        "mlops engineer learning path"
+      ],
+      "canonical": "https://yourdomain.com/mlops-engineer-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "MLOps Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in MLOps Engineer.",
+        "type": "website",
+        "url": "https://yourdomain.com/mlops-engineer-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/mlops-engineer-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "MLOps Engineer Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "MLOps Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in MLOps Engineer.",
+        "image": "https://yourdomain.com/og/mlops-engineer-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "mlops-foundations-ml-system-basics",
-        "label": "ML System Basics",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for MLOps Engineer.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "mlops-foundations-ml-system-basics-data-model-code",
-            "label": "Data/Model/Code",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "MLOps Foundations",
+            "short_title": "MLOps Foundations",
+            "slug": "mlops-foundations",
+            "description": "Learn MLOps Foundations for mlops.",
+            "long_description": "Covers core concepts in MLOps Foundations.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in MLOps Foundations.",
+            "outcomes": "Ability to apply MLOps Foundations in mlops.",
+            "seo": {
+              "meta_title": "MLOps Foundations",
+              "meta_description": "Learn the fundamentals of MLOps Foundations for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "mlflow"
+            },
+            "children": [
+              {
+                "id": "mlops-foundations-mlops-principles",
+                "label": "MLOps Principles",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "mlops-foundations-mlops-principles-lifecycle-mindset",
+                    "label": "Lifecycle Mindset",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-foundations-mlops-principles-automation-and-reliability",
+                    "label": "Automation & Reliability",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "mlops-foundations-ml-system-basics",
+                "label": "ML System Basics",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "mlops-foundations-ml-system-basics-data-model-code",
+                    "label": "Data/Model/Code",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-foundations-ml-system-basics-experiment-lifecycle",
+                    "label": "Experiment Lifecycle",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "mlops-foundations-collaboration-and-handoff",
+                "label": "Collaboration & Handoff",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "mlops-foundations-collaboration-and-handoff-roles-and-ownership",
+                    "label": "Roles & Ownership",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-foundations-collaboration-and-handoff-documentation",
+                    "label": "Documentation",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "mlops-foundations-ml-system-basics-experiment-lifecycle",
-            "label": "Experiment Lifecycle",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "mlops-foundations-collaboration-and-handoff",
-        "label": "Collaboration & Handoff",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "mlops-foundations-collaboration-and-handoff-roles-and-ownership",
-            "label": "Roles & Ownership",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Data & Feature Pipelines",
+            "short_title": "Data & Feature",
+            "slug": "data-and-feature-pipelines",
+            "description": "Learn Data & Feature Pipelines for mlops.",
+            "long_description": "Covers core concepts in Data & Feature Pipelines.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Data & Feature Pipelines.",
+            "outcomes": "Ability to apply Data & Feature Pipelines in mlops.",
+            "seo": {
+              "meta_title": "Data & Feature Pipelines",
+              "meta_description": "Learn the fundamentals of Data & Feature Pipelines for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "data-and-feature-pipelines-data-ingestion",
+                "label": "Data Ingestion",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-and-feature-pipelines-data-ingestion-batch-vs-streaming",
+                    "label": "Batch vs Streaming",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-feature-pipelines-data-ingestion-data-quality-checks",
+                    "label": "Data Quality Checks",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-and-feature-pipelines-feature-engineering",
+                "label": "Feature Engineering",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-and-feature-pipelines-feature-engineering-feature-stores",
+                    "label": "Feature Stores",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-feature-pipelines-feature-engineering-feature-versioning",
+                    "label": "Feature Versioning",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-and-feature-pipelines-data-storage",
+                "label": "Data Storage",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-and-feature-pipelines-data-storage-data-lakes",
+                    "label": "Data Lakes",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-feature-pipelines-data-storage-data-warehouses",
+                    "label": "Data Warehouses",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "mlops-foundations-collaboration-and-handoff-documentation",
-            "label": "Documentation",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Model Development",
+            "short_title": "Model Development",
+            "slug": "model-development",
+            "description": "Learn Model Development for mlops.",
+            "long_description": "Covers core concepts in Model Development.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Model Development.",
+            "outcomes": "Ability to apply Model Development in mlops.",
+            "seo": {
+              "meta_title": "Model Development",
+              "meta_description": "Learn the fundamentals of Model Development for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "model-development-training-workflows",
+                "label": "Training Workflows",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-development-training-workflows-reproducible-training",
+                    "label": "Reproducible Training",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-development-training-workflows-distributed-training",
+                    "label": "Distributed Training",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-development-experiment-tracking",
+                "label": "Experiment Tracking",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "model-development-experiment-tracking-metrics-and-artifacts",
+                    "label": "Metrics & Artifacts",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-development-experiment-tracking-model-registry",
+                    "label": "Model Registry",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-development-evaluation-and-validation",
+                "label": "Evaluation & Validation",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-development-evaluation-and-validation-offline-metrics",
+                    "label": "Offline Metrics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-development-evaluation-and-validation-bias-and-fairness",
+                    "label": "Bias & Fairness",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Deployment & Serving",
+            "short_title": "Deployment & Serving",
+            "slug": "deployment-and-serving",
+            "description": "Learn Deployment & Serving for mlops.",
+            "long_description": "Covers core concepts in Deployment & Serving.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Deployment & Serving.",
+            "outcomes": "Ability to apply Deployment & Serving in mlops.",
+            "seo": {
+              "meta_title": "Deployment & Serving",
+              "meta_description": "Learn the fundamentals of Deployment & Serving for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "deployment-and-serving-serving-patterns",
+                "label": "Serving Patterns",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deployment-and-serving-serving-patterns-batch-serving",
+                    "label": "Batch Serving",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-serving-serving-patterns-online-serving",
+                    "label": "Online Serving",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deployment-and-serving-ci-cd-for-ml",
+                "label": "CI/CD for ML",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "deployment-and-serving-ci-cd-for-ml-pipeline-automation",
+                    "label": "Pipeline Automation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-serving-ci-cd-for-ml-promotion-and-rollback",
+                    "label": "Promotion & Rollback",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deployment-and-serving-runtime-environments",
+                "label": "Runtime Environments",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deployment-and-serving-runtime-environments-containers",
+                    "label": "Containers",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deployment-and-serving-runtime-environments-orchestrators",
+                    "label": "Orchestrators",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Monitoring & Governance",
+            "short_title": "Monitoring & Governance",
+            "slug": "monitoring-and-governance",
+            "description": "Learn Monitoring & Governance for mlops.",
+            "long_description": "Covers core concepts in Monitoring & Governance.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Monitoring & Governance.",
+            "outcomes": "Ability to apply Monitoring & Governance in mlops.",
+            "seo": {
+              "meta_title": "Monitoring & Governance",
+              "meta_description": "Learn the fundamentals of Monitoring & Governance for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "grafana"
+            },
+            "children": [
+              {
+                "id": "monitoring-and-governance-model-monitoring",
+                "label": "Model Monitoring",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "monitoring-and-governance-model-monitoring-drift-detection",
+                    "label": "Drift Detection",
+                    "type": "module"
+                  },
+                  {
+                    "id": "monitoring-and-governance-model-monitoring-performance-degradation",
+                    "label": "Performance Degradation",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "monitoring-and-governance-observability",
+                "label": "Observability",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "monitoring-and-governance-observability-logs-and-metrics",
+                    "label": "Logs & Metrics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "monitoring-and-governance-observability-tracing-and-alerts",
+                    "label": "Tracing & Alerts",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "monitoring-and-governance-governance",
+                "label": "Governance",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "monitoring-and-governance-governance-compliance",
+                    "label": "Compliance",
+                    "type": "module"
+                  },
+                  {
+                    "id": "monitoring-and-governance-governance-auditability",
+                    "label": "Auditability",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Platform & Operations",
+            "short_title": "Platform & Operations",
+            "slug": "platform-and-operations",
+            "description": "Learn Platform & Operations for mlops.",
+            "long_description": "Covers core concepts in Platform & Operations.\nFocuses on practical mlops workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Platform & Operations.",
+            "outcomes": "Ability to apply Platform & Operations in mlops.",
+            "seo": {
+              "meta_title": "Platform & Operations",
+              "meta_description": "Learn the fundamentals of Platform & Operations for mlops."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "kubernetes"
+            },
+            "children": [
+              {
+                "id": "platform-and-operations-infrastructure-as-code",
+                "label": "Infrastructure as Code",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "platform-and-operations-infrastructure-as-code-terraform",
+                    "label": "Terraform",
+                    "type": "module"
+                  },
+                  {
+                    "id": "platform-and-operations-infrastructure-as-code-policy-as-code",
+                    "label": "Policy as Code",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "platform-and-operations-security",
+                "label": "Security",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "platform-and-operations-security-secrets-management",
+                    "label": "Secrets Management",
+                    "type": "module"
+                  },
+                  {
+                    "id": "platform-and-operations-security-access-control",
+                    "label": "Access Control",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "platform-and-operations-cost-and-scaling",
+                "label": "Cost & Scaling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "platform-and-operations-cost-and-scaling-autoscaling",
+                    "label": "Autoscaling",
+                    "type": "module"
+                  },
+                  {
+                    "id": "platform-and-operations-cost-and-scaling-cost-optimization",
+                    "label": "Cost Optimization",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Data & Feature Pipelines",
-    "short_title": "Data & Feature",
-    "slug": "data-and-feature-pipelines",
-    "description": "Learn Data & Feature Pipelines for mlops.",
-    "long_description": "Covers core concepts in Data & Feature Pipelines.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Data & Feature Pipelines.",
-    "outcomes": "Ability to apply Data & Feature Pipelines in mlops.",
-    "seo": {
-      "meta_title": "Data & Feature Pipelines",
-      "meta_description": "Learn the fundamentals of Data & Feature Pipelines for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "data"
-    },
-    "children": [
-      {
-        "id": "data-and-feature-pipelines-data-ingestion",
-        "label": "Data Ingestion",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-and-feature-pipelines-data-ingestion-batch-vs-streaming",
-            "label": "Batch vs Streaming",
-            "type": "module"
-          },
-          {
-            "id": "data-and-feature-pipelines-data-ingestion-data-quality-checks",
-            "label": "Data Quality Checks",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-and-feature-pipelines-feature-engineering",
-        "label": "Feature Engineering",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "data-and-feature-pipelines-feature-engineering-feature-stores",
-            "label": "Feature Stores",
-            "type": "module"
-          },
-          {
-            "id": "data-and-feature-pipelines-feature-engineering-feature-versioning",
-            "label": "Feature Versioning",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-and-feature-pipelines-data-storage",
-        "label": "Data Storage",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-and-feature-pipelines-data-storage-data-lakes",
-            "label": "Data Lakes",
-            "type": "module"
-          },
-          {
-            "id": "data-and-feature-pipelines-data-storage-data-warehouses",
-            "label": "Data Warehouses",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Model Development",
-    "short_title": "Model Development",
-    "slug": "model-development",
-    "description": "Learn Model Development for mlops.",
-    "long_description": "Covers core concepts in Model Development.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Model Development.",
-    "outcomes": "Ability to apply Model Development in mlops.",
-    "seo": {
-      "meta_title": "Model Development",
-      "meta_description": "Learn the fundamentals of Model Development for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "model"
-    },
-    "children": [
-      {
-        "id": "model-development-training-workflows",
-        "label": "Training Workflows",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-development-training-workflows-reproducible-training",
-            "label": "Reproducible Training",
-            "type": "module"
-          },
-          {
-            "id": "model-development-training-workflows-distributed-training",
-            "label": "Distributed Training",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-development-experiment-tracking",
-        "label": "Experiment Tracking",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "model-development-experiment-tracking-metrics-and-artifacts",
-            "label": "Metrics & Artifacts",
-            "type": "module"
-          },
-          {
-            "id": "model-development-experiment-tracking-model-registry",
-            "label": "Model Registry",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-development-evaluation-and-validation",
-        "label": "Evaluation & Validation",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-development-evaluation-and-validation-offline-metrics",
-            "label": "Offline Metrics",
-            "type": "module"
-          },
-          {
-            "id": "model-development-evaluation-and-validation-bias-and-fairness",
-            "label": "Bias & Fairness",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Deployment & Serving",
-    "short_title": "Deployment & Serving",
-    "slug": "deployment-and-serving",
-    "description": "Learn Deployment & Serving for mlops.",
-    "long_description": "Covers core concepts in Deployment & Serving.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Deployment & Serving.",
-    "outcomes": "Ability to apply Deployment & Serving in mlops.",
-    "seo": {
-      "meta_title": "Deployment & Serving",
-      "meta_description": "Learn the fundamentals of Deployment & Serving for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "deployment"
-    },
-    "children": [
-      {
-        "id": "deployment-and-serving-serving-patterns",
-        "label": "Serving Patterns",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deployment-and-serving-serving-patterns-batch-serving",
-            "label": "Batch Serving",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-serving-serving-patterns-online-serving",
-            "label": "Online Serving",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deployment-and-serving-ci-cd-for-ml",
-        "label": "CI/CD for ML",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "deployment-and-serving-ci-cd-for-ml-pipeline-automation",
-            "label": "Pipeline Automation",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-serving-ci-cd-for-ml-promotion-and-rollback",
-            "label": "Promotion & Rollback",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deployment-and-serving-runtime-environments",
-        "label": "Runtime Environments",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deployment-and-serving-runtime-environments-containers",
-            "label": "Containers",
-            "type": "module"
-          },
-          {
-            "id": "deployment-and-serving-runtime-environments-orchestrators",
-            "label": "Orchestrators",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Monitoring & Governance",
-    "short_title": "Monitoring & Governance",
-    "slug": "monitoring-and-governance",
-    "description": "Learn Monitoring & Governance for mlops.",
-    "long_description": "Covers core concepts in Monitoring & Governance.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Monitoring & Governance.",
-    "outcomes": "Ability to apply Monitoring & Governance in mlops.",
-    "seo": {
-      "meta_title": "Monitoring & Governance",
-      "meta_description": "Learn the fundamentals of Monitoring & Governance for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "monitoring"
-    },
-    "children": [
-      {
-        "id": "monitoring-and-governance-model-monitoring",
-        "label": "Model Monitoring",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "monitoring-and-governance-model-monitoring-drift-detection",
-            "label": "Drift Detection",
-            "type": "module"
-          },
-          {
-            "id": "monitoring-and-governance-model-monitoring-performance-degradation",
-            "label": "Performance Degradation",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "monitoring-and-governance-observability",
-        "label": "Observability",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "monitoring-and-governance-observability-logs-and-metrics",
-            "label": "Logs & Metrics",
-            "type": "module"
-          },
-          {
-            "id": "monitoring-and-governance-observability-tracing-and-alerts",
-            "label": "Tracing & Alerts",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "monitoring-and-governance-governance",
-        "label": "Governance",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "monitoring-and-governance-governance-compliance",
-            "label": "Compliance",
-            "type": "module"
-          },
-          {
-            "id": "monitoring-and-governance-governance-auditability",
-            "label": "Auditability",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Platform & Operations",
-    "short_title": "Platform & Operations",
-    "slug": "platform-and-operations",
-    "description": "Learn Platform & Operations for mlops.",
-    "long_description": "Covers core concepts in Platform & Operations.\nFocuses on practical mlops workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Platform & Operations.",
-    "outcomes": "Ability to apply Platform & Operations in mlops.",
-    "seo": {
-      "meta_title": "Platform & Operations",
-      "meta_description": "Learn the fundamentals of Platform & Operations for mlops."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "platform"
-    },
-    "children": [
-      {
-        "id": "platform-and-operations-infrastructure-as-code",
-        "label": "Infrastructure as Code",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "platform-and-operations-infrastructure-as-code-terraform",
-            "label": "Terraform",
-            "type": "module"
-          },
-          {
-            "id": "platform-and-operations-infrastructure-as-code-policy-as-code",
-            "label": "Policy as Code",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "platform-and-operations-security",
-        "label": "Security",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "platform-and-operations-security-secrets-management",
-            "label": "Secrets Management",
-            "type": "module"
-          },
-          {
-            "id": "platform-and-operations-security-access-control",
-            "label": "Access Control",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "platform-and-operations-cost-and-scaling",
-        "label": "Cost & Scaling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "platform-and-operations-cost-and-scaling-autoscaling",
-            "label": "Autoscaling",
-            "type": "module"
-          },
-          {
-            "id": "platform-and-operations-cost-and-scaling-cost-optimization",
-            "label": "Cost Optimization",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

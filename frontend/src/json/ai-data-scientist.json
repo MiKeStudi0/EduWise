@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Foundations",
-    "short_title": "Foundations",
-    "slug": "foundations",
-    "description": "Learn Foundations for ai and data science.",
-    "long_description": "Covers core concepts in Foundations.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Foundations.",
-    "outcomes": "Ability to apply Foundations in ai and data science.",
+{
+  "roadmap": {
+    "title": "AI Data Scientist Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in AI Data Scientist.",
     "seo": {
-      "meta_title": "Foundations",
-      "meta_description": "Learn the fundamentals of Foundations for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "foundations"
-    },
-    "children": [
-      {
-        "id": "foundations-math-for-ds",
-        "label": "Math for DS",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "foundations-math-for-ds-linear-algebra",
-            "label": "Linear Algebra",
-            "type": "module"
-          },
-          {
-            "id": "foundations-math-for-ds-calculus-basics",
-            "label": "Calculus Basics",
-            "type": "module"
-          }
-        ]
+      "meta_title": "AI Data Scientist Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in AI Data Scientist. Follow a phased, practical learning path.",
+      "keywords": [
+        "ai data scientist roadmap",
+        "ai data scientist roadmap 2026",
+        "learn ai data scientist",
+        "ai data scientist learning path"
+      ],
+      "canonical": "https://yourdomain.com/ai-data-scientist-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "AI Data Scientist Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in AI Data Scientist.",
+        "type": "website",
+        "url": "https://yourdomain.com/ai-data-scientist-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/ai-data-scientist-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "AI Data Scientist Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "AI Data Scientist Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in AI Data Scientist.",
+        "image": "https://yourdomain.com/og/ai-data-scientist-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "foundations-statistics",
-        "label": "Statistics",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for AI Data Scientist.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "foundations-statistics-probability",
-            "label": "Probability",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Foundations",
+            "short_title": "Foundations",
+            "slug": "foundations",
+            "description": "Learn Foundations for ai and data science.",
+            "long_description": "Covers core concepts in Foundations.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Foundations.",
+            "outcomes": "Ability to apply Foundations in ai and data science.",
+            "seo": {
+              "meta_title": "Foundations",
+              "meta_description": "Learn the fundamentals of Foundations for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "foundations-math-for-ds",
+                "label": "Math for DS",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "foundations-math-for-ds-linear-algebra",
+                    "label": "Linear Algebra",
+                    "type": "module"
+                  },
+                  {
+                    "id": "foundations-math-for-ds-calculus-basics",
+                    "label": "Calculus Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "foundations-statistics",
+                "label": "Statistics",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "foundations-statistics-probability",
+                    "label": "Probability",
+                    "type": "module"
+                  },
+                  {
+                    "id": "foundations-statistics-hypothesis-testing",
+                    "label": "Hypothesis Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "foundations-data-fundamentals",
+                "label": "Data Fundamentals",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "foundations-data-fundamentals-data-types",
+                    "label": "Data Types",
+                    "type": "module"
+                  },
+                  {
+                    "id": "foundations-data-fundamentals-data-quality",
+                    "label": "Data Quality",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "foundations-statistics-hypothesis-testing",
-            "label": "Hypothesis Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "foundations-data-fundamentals",
-        "label": "Data Fundamentals",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "foundations-data-fundamentals-data-types",
-            "label": "Data Types",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Programming & Data",
+            "short_title": "Programming & Data",
+            "slug": "programming-and-data",
+            "description": "Learn Programming & Data for ai and data science.",
+            "long_description": "Covers core concepts in Programming & Data.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Programming & Data.",
+            "outcomes": "Ability to apply Programming & Data in ai and data science.",
+            "seo": {
+              "meta_title": "Programming & Data",
+              "meta_description": "Learn the fundamentals of Programming & Data for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "programming-and-data-python-for-ds",
+                "label": "Python for DS",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-data-python-for-ds-core-syntax",
+                    "label": "Core Syntax",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-data-python-for-ds-pandas-and-numpy",
+                    "label": "Pandas & NumPy",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-data-sql",
+                "label": "SQL",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "programming-and-data-sql-joins-and-aggregations",
+                    "label": "Joins & Aggregations",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-data-sql-window-functions",
+                    "label": "Window Functions",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-data-eda",
+                "label": "EDA",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-data-eda-visualization",
+                    "label": "Visualization",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-data-eda-feature-understanding",
+                    "label": "Feature Understanding",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "foundations-data-fundamentals-data-quality",
-            "label": "Data Quality",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Machine Learning",
+            "short_title": "Machine Learning",
+            "slug": "machine-learning",
+            "description": "Learn Machine Learning for ai and data science.",
+            "long_description": "Covers core concepts in Machine Learning.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Machine Learning.",
+            "outcomes": "Ability to apply Machine Learning in ai and data science.",
+            "seo": {
+              "meta_title": "Machine Learning",
+              "meta_description": "Learn the fundamentals of Machine Learning for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "machine-learning-supervised-learning",
+                "label": "Supervised Learning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "machine-learning-supervised-learning-regression",
+                    "label": "Regression",
+                    "type": "module"
+                  },
+                  {
+                    "id": "machine-learning-supervised-learning-classification",
+                    "label": "Classification",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "machine-learning-unsupervised-learning",
+                "label": "Unsupervised Learning",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "machine-learning-unsupervised-learning-clustering",
+                    "label": "Clustering",
+                    "type": "module"
+                  },
+                  {
+                    "id": "machine-learning-unsupervised-learning-dimensionality-reduction",
+                    "label": "Dimensionality Reduction",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "machine-learning-model-evaluation",
+                "label": "Model Evaluation",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "machine-learning-model-evaluation-metrics",
+                    "label": "Metrics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "machine-learning-model-evaluation-cross-validation",
+                    "label": "Cross-Validation",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Deep Learning & AI",
+            "short_title": "Deep Learning &",
+            "slug": "deep-learning-and-ai",
+            "description": "Learn Deep Learning & AI for ai and data science.",
+            "long_description": "Covers core concepts in Deep Learning & AI.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Deep Learning & AI.",
+            "outcomes": "Ability to apply Deep Learning & AI in ai and data science.",
+            "seo": {
+              "meta_title": "Deep Learning & AI",
+              "meta_description": "Learn the fundamentals of Deep Learning & AI for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "deep-learning-and-ai-neural-networks",
+                "label": "Neural Networks",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deep-learning-and-ai-neural-networks-backpropagation",
+                    "label": "Backpropagation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-and-ai-neural-networks-regularization",
+                    "label": "Regularization",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deep-learning-and-ai-modern-architectures",
+                "label": "Modern Architectures",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "deep-learning-and-ai-modern-architectures-cnns",
+                    "label": "CNNs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-and-ai-modern-architectures-transformers",
+                    "label": "Transformers",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deep-learning-and-ai-generative-ai",
+                "label": "Generative AI",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deep-learning-and-ai-generative-ai-llms-basics",
+                    "label": "LLMs Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-and-ai-generative-ai-prompting-and-rag",
+                    "label": "Prompting & RAG",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "MLOps & Deployment",
+            "short_title": "MLOps & Deployment",
+            "slug": "mlops-and-deployment",
+            "description": "Learn MLOps & Deployment for ai and data science.",
+            "long_description": "Covers core concepts in MLOps & Deployment.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in MLOps & Deployment.",
+            "outcomes": "Ability to apply MLOps & Deployment in ai and data science.",
+            "seo": {
+              "meta_title": "MLOps & Deployment",
+              "meta_description": "Learn the fundamentals of MLOps & Deployment for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "mlflow"
+            },
+            "children": [
+              {
+                "id": "mlops-and-deployment-model-serving",
+                "label": "Model Serving",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "mlops-and-deployment-model-serving-batch-vs-online",
+                    "label": "Batch vs Online",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-and-deployment-model-serving-monitoring",
+                    "label": "Monitoring",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "mlops-and-deployment-pipelines",
+                "label": "Pipelines",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "mlops-and-deployment-pipelines-experiment-tracking",
+                    "label": "Experiment Tracking",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-and-deployment-pipelines-model-registry",
+                    "label": "Model Registry",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "mlops-and-deployment-production-readiness",
+                "label": "Production Readiness",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "mlops-and-deployment-production-readiness-ci-cd-for-ml",
+                    "label": "CI/CD for ML",
+                    "type": "module"
+                  },
+                  {
+                    "id": "mlops-and-deployment-production-readiness-governance",
+                    "label": "Governance",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Career & Practice",
+            "short_title": "Career & Practice",
+            "slug": "career-and-practice",
+            "description": "Learn Career & Practice for ai and data science.",
+            "long_description": "Covers core concepts in Career & Practice.\nFocuses on practical ai and data science workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Career & Practice.",
+            "outcomes": "Ability to apply Career & Practice in ai and data science.",
+            "seo": {
+              "meta_title": "Career & Practice",
+              "meta_description": "Learn the fundamentals of Career & Practice for ai and data science."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "career-and-practice-portfolio-projects",
+                "label": "Portfolio Projects",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "career-and-practice-portfolio-projects-case-studies",
+                    "label": "Case Studies",
+                    "type": "module"
+                  },
+                  {
+                    "id": "career-and-practice-portfolio-projects-end-to-end-projects",
+                    "label": "End-to-End Projects",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "career-and-practice-communication",
+                "label": "Communication",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "career-and-practice-communication-data-storytelling",
+                    "label": "Data Storytelling",
+                    "type": "module"
+                  },
+                  {
+                    "id": "career-and-practice-communication-stakeholder-updates",
+                    "label": "Stakeholder Updates",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "career-and-practice-career-growth",
+                "label": "Career Growth",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "career-and-practice-career-growth-interview-prep",
+                    "label": "Interview Prep",
+                    "type": "module"
+                  },
+                  {
+                    "id": "career-and-practice-career-growth-continuous-learning",
+                    "label": "Continuous Learning",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Programming & Data",
-    "short_title": "Programming & Data",
-    "slug": "programming-and-data",
-    "description": "Learn Programming & Data for ai and data science.",
-    "long_description": "Covers core concepts in Programming & Data.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Programming & Data.",
-    "outcomes": "Ability to apply Programming & Data in ai and data science.",
-    "seo": {
-      "meta_title": "Programming & Data",
-      "meta_description": "Learn the fundamentals of Programming & Data for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "programming"
-    },
-    "children": [
-      {
-        "id": "programming-and-data-python-for-ds",
-        "label": "Python for DS",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-data-python-for-ds-core-syntax",
-            "label": "Core Syntax",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-data-python-for-ds-pandas-and-numpy",
-            "label": "Pandas & NumPy",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-data-sql",
-        "label": "SQL",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "programming-and-data-sql-joins-and-aggregations",
-            "label": "Joins & Aggregations",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-data-sql-window-functions",
-            "label": "Window Functions",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-data-eda",
-        "label": "EDA",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-data-eda-visualization",
-            "label": "Visualization",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-data-eda-feature-understanding",
-            "label": "Feature Understanding",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Machine Learning",
-    "short_title": "Machine Learning",
-    "slug": "machine-learning",
-    "description": "Learn Machine Learning for ai and data science.",
-    "long_description": "Covers core concepts in Machine Learning.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Machine Learning.",
-    "outcomes": "Ability to apply Machine Learning in ai and data science.",
-    "seo": {
-      "meta_title": "Machine Learning",
-      "meta_description": "Learn the fundamentals of Machine Learning for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "machine"
-    },
-    "children": [
-      {
-        "id": "machine-learning-supervised-learning",
-        "label": "Supervised Learning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "machine-learning-supervised-learning-regression",
-            "label": "Regression",
-            "type": "module"
-          },
-          {
-            "id": "machine-learning-supervised-learning-classification",
-            "label": "Classification",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "machine-learning-unsupervised-learning",
-        "label": "Unsupervised Learning",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "machine-learning-unsupervised-learning-clustering",
-            "label": "Clustering",
-            "type": "module"
-          },
-          {
-            "id": "machine-learning-unsupervised-learning-dimensionality-reduction",
-            "label": "Dimensionality Reduction",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "machine-learning-model-evaluation",
-        "label": "Model Evaluation",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "machine-learning-model-evaluation-metrics",
-            "label": "Metrics",
-            "type": "module"
-          },
-          {
-            "id": "machine-learning-model-evaluation-cross-validation",
-            "label": "Cross-Validation",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Deep Learning & AI",
-    "short_title": "Deep Learning &",
-    "slug": "deep-learning-and-ai",
-    "description": "Learn Deep Learning & AI for ai and data science.",
-    "long_description": "Covers core concepts in Deep Learning & AI.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Deep Learning & AI.",
-    "outcomes": "Ability to apply Deep Learning & AI in ai and data science.",
-    "seo": {
-      "meta_title": "Deep Learning & AI",
-      "meta_description": "Learn the fundamentals of Deep Learning & AI for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "deep"
-    },
-    "children": [
-      {
-        "id": "deep-learning-and-ai-neural-networks",
-        "label": "Neural Networks",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deep-learning-and-ai-neural-networks-backpropagation",
-            "label": "Backpropagation",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-and-ai-neural-networks-regularization",
-            "label": "Regularization",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deep-learning-and-ai-modern-architectures",
-        "label": "Modern Architectures",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "deep-learning-and-ai-modern-architectures-cnns",
-            "label": "CNNs",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-and-ai-modern-architectures-transformers",
-            "label": "Transformers",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deep-learning-and-ai-generative-ai",
-        "label": "Generative AI",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deep-learning-and-ai-generative-ai-llms-basics",
-            "label": "LLMs Basics",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-and-ai-generative-ai-prompting-and-rag",
-            "label": "Prompting & RAG",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "MLOps & Deployment",
-    "short_title": "MLOps & Deployment",
-    "slug": "mlops-and-deployment",
-    "description": "Learn MLOps & Deployment for ai and data science.",
-    "long_description": "Covers core concepts in MLOps & Deployment.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in MLOps & Deployment.",
-    "outcomes": "Ability to apply MLOps & Deployment in ai and data science.",
-    "seo": {
-      "meta_title": "MLOps & Deployment",
-      "meta_description": "Learn the fundamentals of MLOps & Deployment for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "mlops"
-    },
-    "children": [
-      {
-        "id": "mlops-and-deployment-model-serving",
-        "label": "Model Serving",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "mlops-and-deployment-model-serving-batch-vs-online",
-            "label": "Batch vs Online",
-            "type": "module"
-          },
-          {
-            "id": "mlops-and-deployment-model-serving-monitoring",
-            "label": "Monitoring",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "mlops-and-deployment-pipelines",
-        "label": "Pipelines",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "mlops-and-deployment-pipelines-experiment-tracking",
-            "label": "Experiment Tracking",
-            "type": "module"
-          },
-          {
-            "id": "mlops-and-deployment-pipelines-model-registry",
-            "label": "Model Registry",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "mlops-and-deployment-production-readiness",
-        "label": "Production Readiness",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "mlops-and-deployment-production-readiness-ci-cd-for-ml",
-            "label": "CI/CD for ML",
-            "type": "module"
-          },
-          {
-            "id": "mlops-and-deployment-production-readiness-governance",
-            "label": "Governance",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Career & Practice",
-    "short_title": "Career & Practice",
-    "slug": "career-and-practice",
-    "description": "Learn Career & Practice for ai and data science.",
-    "long_description": "Covers core concepts in Career & Practice.\nFocuses on practical ai and data science workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Career & Practice.",
-    "outcomes": "Ability to apply Career & Practice in ai and data science.",
-    "seo": {
-      "meta_title": "Career & Practice",
-      "meta_description": "Learn the fundamentals of Career & Practice for ai and data science."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "career"
-    },
-    "children": [
-      {
-        "id": "career-and-practice-portfolio-projects",
-        "label": "Portfolio Projects",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "career-and-practice-portfolio-projects-case-studies",
-            "label": "Case Studies",
-            "type": "module"
-          },
-          {
-            "id": "career-and-practice-portfolio-projects-end-to-end-projects",
-            "label": "End-to-End Projects",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "career-and-practice-communication",
-        "label": "Communication",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "career-and-practice-communication-data-storytelling",
-            "label": "Data Storytelling",
-            "type": "module"
-          },
-          {
-            "id": "career-and-practice-communication-stakeholder-updates",
-            "label": "Stakeholder Updates",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "career-and-practice-career-growth",
-        "label": "Career Growth",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "career-and-practice-career-growth-interview-prep",
-            "label": "Interview Prep",
-            "type": "module"
-          },
-          {
-            "id": "career-and-practice-career-growth-continuous-learning",
-            "label": "Continuous Learning",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

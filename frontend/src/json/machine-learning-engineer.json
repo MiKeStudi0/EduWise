@@ -1,556 +1,607 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "ML Foundations",
-    "short_title": "ML Foundations",
-    "slug": "ml-foundations",
-    "description": "Learn ML Foundations for machine learning.",
-    "long_description": "Covers core concepts in ML Foundations.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in ML Foundations.",
-    "outcomes": "Ability to apply ML Foundations in machine learning.",
+{
+  "roadmap": {
+    "title": "Machine Learning Engineer Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Machine Learning Engineer.",
     "seo": {
-      "meta_title": "ML Foundations",
-      "meta_description": "Learn the fundamentals of ML Foundations for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ml"
-    },
-    "children": [
-      {
-        "id": "ml-foundations-what-is-machine-learning",
-        "label": "What is Machine Learning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ml-foundations-what-is-machine-learning-problem-types",
-            "label": "Problem Types",
-            "type": "module"
-          },
-          {
-            "id": "ml-foundations-what-is-machine-learning-ml-vs-ai-vs-dl",
-            "label": "ML vs AI vs DL",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Machine Learning Engineer Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Machine Learning Engineer. Follow a phased, practical learning path.",
+      "keywords": [
+        "machine learning engineer roadmap",
+        "machine learning engineer roadmap 2026",
+        "learn machine learning engineer",
+        "machine learning engineer learning path"
+      ],
+      "canonical": "https://yourdomain.com/machine-learning-engineer-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Machine Learning Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Machine Learning Engineer.",
+        "type": "website",
+        "url": "https://yourdomain.com/machine-learning-engineer-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/machine-learning-engineer-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Machine Learning Engineer Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Machine Learning Engineer Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Machine Learning Engineer.",
+        "image": "https://yourdomain.com/og/machine-learning-engineer-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "ml-foundations-math-essentials",
-        "label": "Math Essentials",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Machine Learning Engineer.",
+        "estimated_total_hours": 56,
+        "topics": [
           {
-            "id": "ml-foundations-math-essentials-linear-algebra",
-            "label": "Linear Algebra",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "ML Foundations",
+            "short_title": "ML Foundations",
+            "slug": "ml-foundations",
+            "description": "Learn ML Foundations for machine learning.",
+            "long_description": "Covers core concepts in ML Foundations.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in ML Foundations.",
+            "outcomes": "Ability to apply ML Foundations in machine learning.",
+            "seo": {
+              "meta_title": "ML Foundations",
+              "meta_description": "Learn the fundamentals of ML Foundations for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "ml-foundations-what-is-machine-learning",
+                "label": "What is Machine Learning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ml-foundations-what-is-machine-learning-problem-types",
+                    "label": "Problem Types",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-foundations-what-is-machine-learning-ml-vs-ai-vs-dl",
+                    "label": "ML vs AI vs DL",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ml-foundations-math-essentials",
+                "label": "Math Essentials",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ml-foundations-math-essentials-linear-algebra",
+                    "label": "Linear Algebra",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-foundations-math-essentials-probability-and-statistics",
+                    "label": "Probability & Statistics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-foundations-math-essentials-calculus-basics",
+                    "label": "Calculus Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ml-foundations-data-and-features",
+                "label": "Data & Features",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ml-foundations-data-and-features-feature-engineering",
+                    "label": "Feature Engineering",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-foundations-data-and-features-scaling-and-normalization",
+                    "label": "Scaling & Normalization",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ml-foundations-math-essentials-probability-and-statistics",
-            "label": "Probability & Statistics",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Programming & Tools",
+            "short_title": "Programming & Tools",
+            "slug": "programming-and-tools",
+            "description": "Learn Programming & Tools for machine learning.",
+            "long_description": "Covers core concepts in Programming & Tools.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Programming & Tools.",
+            "outcomes": "Ability to apply Programming & Tools in machine learning.",
+            "seo": {
+              "meta_title": "Programming & Tools",
+              "meta_description": "Learn the fundamentals of Programming & Tools for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "programming-and-tools-python-for-ml",
+                "label": "Python for ML",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-tools-python-for-ml-numpy",
+                    "label": "NumPy",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-tools-python-for-ml-pandas",
+                    "label": "Pandas",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-tools-visualization",
+                "label": "Visualization",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "programming-and-tools-visualization-matplotlib",
+                    "label": "Matplotlib",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-tools-visualization-seaborn",
+                    "label": "Seaborn",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "programming-and-tools-ml-libraries",
+                "label": "ML Libraries",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "programming-and-tools-ml-libraries-scikit-learn",
+                    "label": "scikit-learn",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-tools-ml-libraries-pytorch",
+                    "label": "PyTorch",
+                    "type": "module"
+                  },
+                  {
+                    "id": "programming-and-tools-ml-libraries-tensorflow",
+                    "label": "TensorFlow",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ml-foundations-math-essentials-calculus-basics",
-            "label": "Calculus Basics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ml-foundations-data-and-features",
-        "label": "Data & Features",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ml-foundations-data-and-features-feature-engineering",
-            "label": "Feature Engineering",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Supervised Learning",
+            "short_title": "Supervised Learning",
+            "slug": "supervised-learning",
+            "description": "Learn Supervised Learning for machine learning.",
+            "long_description": "Covers core concepts in Supervised Learning.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Supervised Learning.",
+            "outcomes": "Ability to apply Supervised Learning in machine learning.",
+            "seo": {
+              "meta_title": "Supervised Learning",
+              "meta_description": "Learn the fundamentals of Supervised Learning for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "supervised-learning-classification",
+                "label": "Classification",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "supervised-learning-classification-logistic-regression",
+                    "label": "Logistic Regression",
+                    "type": "module"
+                  },
+                  {
+                    "id": "supervised-learning-classification-tree-based-models",
+                    "label": "Tree-based Models",
+                    "type": "module"
+                  },
+                  {
+                    "id": "supervised-learning-classification-svm",
+                    "label": "SVM",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "supervised-learning-regression",
+                "label": "Regression",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "supervised-learning-regression-linear-regression",
+                    "label": "Linear Regression",
+                    "type": "module"
+                  },
+                  {
+                    "id": "supervised-learning-regression-regularization",
+                    "label": "Regularization",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "supervised-learning-ensembles",
+                "label": "Ensembles",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "supervised-learning-ensembles-random-forest",
+                    "label": "Random Forest",
+                    "type": "module"
+                  },
+                  {
+                    "id": "supervised-learning-ensembles-gradient-boosting",
+                    "label": "Gradient Boosting",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ml-foundations-data-and-features-scaling-and-normalization",
-            "label": "Scaling & Normalization",
-            "type": "module"
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Unsupervised Learning",
+            "short_title": "Unsupervised Learning",
+            "slug": "unsupervised-learning",
+            "description": "Learn Unsupervised Learning for machine learning.",
+            "long_description": "Covers core concepts in Unsupervised Learning.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Unsupervised Learning.",
+            "outcomes": "Ability to apply Unsupervised Learning in machine learning.",
+            "seo": {
+              "meta_title": "Unsupervised Learning",
+              "meta_description": "Learn the fundamentals of Unsupervised Learning for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "unsupervised-learning-clustering",
+                "label": "Clustering",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "unsupervised-learning-clustering-k-means",
+                    "label": "K-Means",
+                    "type": "module"
+                  },
+                  {
+                    "id": "unsupervised-learning-clustering-hierarchical",
+                    "label": "Hierarchical",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "unsupervised-learning-dimensionality-reduction",
+                "label": "Dimensionality Reduction",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "unsupervised-learning-dimensionality-reduction-pca",
+                    "label": "PCA",
+                    "type": "module"
+                  },
+                  {
+                    "id": "unsupervised-learning-dimensionality-reduction-t-sne-umap",
+                    "label": "t-SNE/UMAP",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "unsupervised-learning-anomaly-detection",
+                "label": "Anomaly Detection",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "unsupervised-learning-anomaly-detection-isolation-forest",
+                    "label": "Isolation Forest",
+                    "type": "module"
+                  },
+                  {
+                    "id": "unsupervised-learning-anomaly-detection-reconstruction-errors",
+                    "label": "Reconstruction Errors",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Model Evaluation & Tuning",
+            "short_title": "Model Evaluation &",
+            "slug": "model-evaluation-and-tuning",
+            "description": "Learn Model Evaluation & Tuning for machine learning.",
+            "long_description": "Covers core concepts in Model Evaluation & Tuning.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Model Evaluation & Tuning.",
+            "outcomes": "Ability to apply Model Evaluation & Tuning in machine learning.",
+            "seo": {
+              "meta_title": "Model Evaluation & Tuning",
+              "meta_description": "Learn the fundamentals of Model Evaluation & Tuning for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "model-evaluation-and-tuning-evaluation-metrics",
+                "label": "Evaluation Metrics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-evaluation-and-tuning-evaluation-metrics-accuracy-precision-recall",
+                    "label": "Accuracy/Precision/Recall",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-evaluation-and-tuning-evaluation-metrics-f1-roc-auc",
+                    "label": "F1/ROC-AUC",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-evaluation-and-tuning-validation",
+                "label": "Validation",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "model-evaluation-and-tuning-validation-train-val-test",
+                    "label": "Train/Val/Test",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-evaluation-and-tuning-validation-cross-validation",
+                    "label": "Cross-Validation",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "model-evaluation-and-tuning-hyperparameter-tuning",
+                "label": "Hyperparameter Tuning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "model-evaluation-and-tuning-hyperparameter-tuning-grid-random-search",
+                    "label": "Grid/Random Search",
+                    "type": "module"
+                  },
+                  {
+                    "id": "model-evaluation-and-tuning-hyperparameter-tuning-bayesian-optimization",
+                    "label": "Bayesian Optimization",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Deep Learning",
+            "short_title": "Deep Learning",
+            "slug": "deep-learning",
+            "description": "Learn Deep Learning for machine learning.",
+            "long_description": "Covers core concepts in Deep Learning.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Deep Learning.",
+            "outcomes": "Ability to apply Deep Learning in machine learning.",
+            "seo": {
+              "meta_title": "Deep Learning",
+              "meta_description": "Learn the fundamentals of Deep Learning for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "deep-learning-neural-network-basics",
+                "label": "Neural Network Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deep-learning-neural-network-basics-backpropagation",
+                    "label": "Backpropagation",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-neural-network-basics-activation-functions",
+                    "label": "Activation Functions",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deep-learning-cnns",
+                "label": "CNNs",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "deep-learning-cnns-convolution",
+                    "label": "Convolution",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-cnns-pooling",
+                    "label": "Pooling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "deep-learning-sequence-models",
+                "label": "Sequence Models",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "deep-learning-sequence-models-rnn-lstm-gru",
+                    "label": "RNN/LSTM/GRU",
+                    "type": "module"
+                  },
+                  {
+                    "id": "deep-learning-sequence-models-transformers",
+                    "label": "Transformers",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "roadmap_id": 1,
+            "title": "ML Systems & Practice",
+            "short_title": "ML Systems &",
+            "slug": "ml-systems-and-practice",
+            "description": "Learn ML Systems & Practice for machine learning.",
+            "long_description": "Covers core concepts in ML Systems & Practice.\nFocuses on practical machine learning workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in ML Systems & Practice.",
+            "outcomes": "Ability to apply ML Systems & Practice in machine learning.",
+            "seo": {
+              "meta_title": "ML Systems & Practice",
+              "meta_description": "Learn the fundamentals of ML Systems & Practice for machine learning."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "tensorflow"
+            },
+            "children": [
+              {
+                "id": "ml-systems-and-practice-data-pipelines",
+                "label": "Data Pipelines",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ml-systems-and-practice-data-pipelines-etl",
+                    "label": "ETL",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-systems-and-practice-data-pipelines-data-versioning",
+                    "label": "Data Versioning",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ml-systems-and-practice-model-deployment",
+                "label": "Model Deployment",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ml-systems-and-practice-model-deployment-serving",
+                    "label": "Serving",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-systems-and-practice-model-deployment-monitoring",
+                    "label": "Monitoring",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ml-systems-and-practice-responsible-ml",
+                "label": "Responsible ML",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ml-systems-and-practice-responsible-ml-bias-and-fairness",
+                    "label": "Bias & Fairness",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ml-systems-and-practice-responsible-ml-explainability",
+                    "label": "Explainability",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Programming & Tools",
-    "short_title": "Programming & Tools",
-    "slug": "programming-and-tools",
-    "description": "Learn Programming & Tools for machine learning.",
-    "long_description": "Covers core concepts in Programming & Tools.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Programming & Tools.",
-    "outcomes": "Ability to apply Programming & Tools in machine learning.",
-    "seo": {
-      "meta_title": "Programming & Tools",
-      "meta_description": "Learn the fundamentals of Programming & Tools for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "programming"
-    },
-    "children": [
-      {
-        "id": "programming-and-tools-python-for-ml",
-        "label": "Python for ML",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-tools-python-for-ml-numpy",
-            "label": "NumPy",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-tools-python-for-ml-pandas",
-            "label": "Pandas",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-tools-visualization",
-        "label": "Visualization",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "programming-and-tools-visualization-matplotlib",
-            "label": "Matplotlib",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-tools-visualization-seaborn",
-            "label": "Seaborn",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "programming-and-tools-ml-libraries",
-        "label": "ML Libraries",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "programming-and-tools-ml-libraries-scikit-learn",
-            "label": "scikit-learn",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-tools-ml-libraries-pytorch",
-            "label": "PyTorch",
-            "type": "module"
-          },
-          {
-            "id": "programming-and-tools-ml-libraries-tensorflow",
-            "label": "TensorFlow",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Supervised Learning",
-    "short_title": "Supervised Learning",
-    "slug": "supervised-learning",
-    "description": "Learn Supervised Learning for machine learning.",
-    "long_description": "Covers core concepts in Supervised Learning.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Supervised Learning.",
-    "outcomes": "Ability to apply Supervised Learning in machine learning.",
-    "seo": {
-      "meta_title": "Supervised Learning",
-      "meta_description": "Learn the fundamentals of Supervised Learning for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "supervised"
-    },
-    "children": [
-      {
-        "id": "supervised-learning-classification",
-        "label": "Classification",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "supervised-learning-classification-logistic-regression",
-            "label": "Logistic Regression",
-            "type": "module"
-          },
-          {
-            "id": "supervised-learning-classification-tree-based-models",
-            "label": "Tree-based Models",
-            "type": "module"
-          },
-          {
-            "id": "supervised-learning-classification-svm",
-            "label": "SVM",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "supervised-learning-regression",
-        "label": "Regression",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "supervised-learning-regression-linear-regression",
-            "label": "Linear Regression",
-            "type": "module"
-          },
-          {
-            "id": "supervised-learning-regression-regularization",
-            "label": "Regularization",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "supervised-learning-ensembles",
-        "label": "Ensembles",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "supervised-learning-ensembles-random-forest",
-            "label": "Random Forest",
-            "type": "module"
-          },
-          {
-            "id": "supervised-learning-ensembles-gradient-boosting",
-            "label": "Gradient Boosting",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Unsupervised Learning",
-    "short_title": "Unsupervised Learning",
-    "slug": "unsupervised-learning",
-    "description": "Learn Unsupervised Learning for machine learning.",
-    "long_description": "Covers core concepts in Unsupervised Learning.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Unsupervised Learning.",
-    "outcomes": "Ability to apply Unsupervised Learning in machine learning.",
-    "seo": {
-      "meta_title": "Unsupervised Learning",
-      "meta_description": "Learn the fundamentals of Unsupervised Learning for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "unsupervised"
-    },
-    "children": [
-      {
-        "id": "unsupervised-learning-clustering",
-        "label": "Clustering",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "unsupervised-learning-clustering-k-means",
-            "label": "K-Means",
-            "type": "module"
-          },
-          {
-            "id": "unsupervised-learning-clustering-hierarchical",
-            "label": "Hierarchical",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "unsupervised-learning-dimensionality-reduction",
-        "label": "Dimensionality Reduction",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "unsupervised-learning-dimensionality-reduction-pca",
-            "label": "PCA",
-            "type": "module"
-          },
-          {
-            "id": "unsupervised-learning-dimensionality-reduction-t-sne-umap",
-            "label": "t-SNE/UMAP",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "unsupervised-learning-anomaly-detection",
-        "label": "Anomaly Detection",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "unsupervised-learning-anomaly-detection-isolation-forest",
-            "label": "Isolation Forest",
-            "type": "module"
-          },
-          {
-            "id": "unsupervised-learning-anomaly-detection-reconstruction-errors",
-            "label": "Reconstruction Errors",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Model Evaluation & Tuning",
-    "short_title": "Model Evaluation &",
-    "slug": "model-evaluation-and-tuning",
-    "description": "Learn Model Evaluation & Tuning for machine learning.",
-    "long_description": "Covers core concepts in Model Evaluation & Tuning.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Model Evaluation & Tuning.",
-    "outcomes": "Ability to apply Model Evaluation & Tuning in machine learning.",
-    "seo": {
-      "meta_title": "Model Evaluation & Tuning",
-      "meta_description": "Learn the fundamentals of Model Evaluation & Tuning for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "model"
-    },
-    "children": [
-      {
-        "id": "model-evaluation-and-tuning-evaluation-metrics",
-        "label": "Evaluation Metrics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-evaluation-and-tuning-evaluation-metrics-accuracy-precision-recall",
-            "label": "Accuracy/Precision/Recall",
-            "type": "module"
-          },
-          {
-            "id": "model-evaluation-and-tuning-evaluation-metrics-f1-roc-auc",
-            "label": "F1/ROC-AUC",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-evaluation-and-tuning-validation",
-        "label": "Validation",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "model-evaluation-and-tuning-validation-train-val-test",
-            "label": "Train/Val/Test",
-            "type": "module"
-          },
-          {
-            "id": "model-evaluation-and-tuning-validation-cross-validation",
-            "label": "Cross-Validation",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "model-evaluation-and-tuning-hyperparameter-tuning",
-        "label": "Hyperparameter Tuning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "model-evaluation-and-tuning-hyperparameter-tuning-grid-random-search",
-            "label": "Grid/Random Search",
-            "type": "module"
-          },
-          {
-            "id": "model-evaluation-and-tuning-hyperparameter-tuning-bayesian-optimization",
-            "label": "Bayesian Optimization",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Deep Learning",
-    "short_title": "Deep Learning",
-    "slug": "deep-learning",
-    "description": "Learn Deep Learning for machine learning.",
-    "long_description": "Covers core concepts in Deep Learning.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Deep Learning.",
-    "outcomes": "Ability to apply Deep Learning in machine learning.",
-    "seo": {
-      "meta_title": "Deep Learning",
-      "meta_description": "Learn the fundamentals of Deep Learning for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "deep"
-    },
-    "children": [
-      {
-        "id": "deep-learning-neural-network-basics",
-        "label": "Neural Network Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deep-learning-neural-network-basics-backpropagation",
-            "label": "Backpropagation",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-neural-network-basics-activation-functions",
-            "label": "Activation Functions",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deep-learning-cnns",
-        "label": "CNNs",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "deep-learning-cnns-convolution",
-            "label": "Convolution",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-cnns-pooling",
-            "label": "Pooling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "deep-learning-sequence-models",
-        "label": "Sequence Models",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "deep-learning-sequence-models-rnn-lstm-gru",
-            "label": "RNN/LSTM/GRU",
-            "type": "module"
-          },
-          {
-            "id": "deep-learning-sequence-models-transformers",
-            "label": "Transformers",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "roadmap_id": 1,
-    "title": "ML Systems & Practice",
-    "short_title": "ML Systems &",
-    "slug": "ml-systems-and-practice",
-    "description": "Learn ML Systems & Practice for machine learning.",
-    "long_description": "Covers core concepts in ML Systems & Practice.\nFocuses on practical machine learning workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in ML Systems & Practice.",
-    "outcomes": "Ability to apply ML Systems & Practice in machine learning.",
-    "seo": {
-      "meta_title": "ML Systems & Practice",
-      "meta_description": "Learn the fundamentals of ML Systems & Practice for machine learning."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ml"
-    },
-    "children": [
-      {
-        "id": "ml-systems-and-practice-data-pipelines",
-        "label": "Data Pipelines",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ml-systems-and-practice-data-pipelines-etl",
-            "label": "ETL",
-            "type": "module"
-          },
-          {
-            "id": "ml-systems-and-practice-data-pipelines-data-versioning",
-            "label": "Data Versioning",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ml-systems-and-practice-model-deployment",
-        "label": "Model Deployment",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ml-systems-and-practice-model-deployment-serving",
-            "label": "Serving",
-            "type": "module"
-          },
-          {
-            "id": "ml-systems-and-practice-model-deployment-monitoring",
-            "label": "Monitoring",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ml-systems-and-practice-responsible-ml",
-        "label": "Responsible ML",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ml-systems-and-practice-responsible-ml-bias-and-fairness",
-            "label": "Bias & Fairness",
-            "type": "module"
-          },
-          {
-            "id": "ml-systems-and-practice-responsible-ml-explainability",
-            "label": "Explainability",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 56,
+      "total_topics": 7,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Blockchain Foundations",
-    "short_title": "Blockchain Foundations",
-    "slug": "blockchain-foundations",
-    "description": "Learn Blockchain Foundations for blockchain.",
-    "long_description": "Covers core concepts in Blockchain Foundations.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Blockchain Foundations.",
-    "outcomes": "Ability to apply Blockchain Foundations in blockchain.",
+{
+  "roadmap": {
+    "title": "Blockchain Development Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Blockchain Development.",
     "seo": {
-      "meta_title": "Blockchain Foundations",
-      "meta_description": "Learn the fundamentals of Blockchain Foundations for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "blockchain"
-    },
-    "children": [
-      {
-        "id": "blockchain-foundations-core-concepts",
-        "label": "Core Concepts",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "blockchain-foundations-core-concepts-distributed-ledger",
-            "label": "Distributed Ledger",
-            "type": "module"
-          },
-          {
-            "id": "blockchain-foundations-core-concepts-consensus-basics",
-            "label": "Consensus Basics",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Blockchain Development Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Blockchain Development. Follow a phased, practical learning path.",
+      "keywords": [
+        "blockchain development roadmap",
+        "blockchain development roadmap 2026",
+        "learn blockchain development",
+        "blockchain development learning path"
+      ],
+      "canonical": "https://yourdomain.com/blockchain-development-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Blockchain Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Blockchain Development.",
+        "type": "website",
+        "url": "https://yourdomain.com/blockchain-development-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/blockchain-development-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Blockchain Development Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Blockchain Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Blockchain Development.",
+        "image": "https://yourdomain.com/og/blockchain-development-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "blockchain-foundations-cryptography",
-        "label": "Cryptography",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Blockchain Development.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "blockchain-foundations-cryptography-hashing",
-            "label": "Hashing",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Blockchain Foundations",
+            "short_title": "Blockchain Foundations",
+            "slug": "blockchain-foundations",
+            "description": "Learn Blockchain Foundations for blockchain.",
+            "long_description": "Covers core concepts in Blockchain Foundations.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Blockchain Foundations.",
+            "outcomes": "Ability to apply Blockchain Foundations in blockchain.",
+            "seo": {
+              "meta_title": "Blockchain Foundations",
+              "meta_description": "Learn the fundamentals of Blockchain Foundations for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "ethereum"
+            },
+            "children": [
+              {
+                "id": "blockchain-foundations-core-concepts",
+                "label": "Core Concepts",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "blockchain-foundations-core-concepts-distributed-ledger",
+                    "label": "Distributed Ledger",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-foundations-core-concepts-consensus-basics",
+                    "label": "Consensus Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "blockchain-foundations-cryptography",
+                "label": "Cryptography",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "blockchain-foundations-cryptography-hashing",
+                    "label": "Hashing",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-foundations-cryptography-public-private-keys",
+                    "label": "Public/Private Keys",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "blockchain-foundations-networks",
+                "label": "Networks",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "blockchain-foundations-networks-p2p-networking",
+                    "label": "P2P Networking",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-foundations-networks-nodes-and-validators",
+                    "label": "Nodes & Validators",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "blockchain-foundations-cryptography-public-private-keys",
-            "label": "Public/Private Keys",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "blockchain-foundations-networks",
-        "label": "Networks",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "blockchain-foundations-networks-p2p-networking",
-            "label": "P2P Networking",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Blockchain Architecture",
+            "short_title": "Blockchain Architecture",
+            "slug": "blockchain-architecture",
+            "description": "Learn Blockchain Architecture for blockchain.",
+            "long_description": "Covers core concepts in Blockchain Architecture.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Blockchain Architecture.",
+            "outcomes": "Ability to apply Blockchain Architecture in blockchain.",
+            "seo": {
+              "meta_title": "Blockchain Architecture",
+              "meta_description": "Learn the fundamentals of Blockchain Architecture for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "ethereum"
+            },
+            "children": [
+              {
+                "id": "blockchain-architecture-blocks-and-transactions",
+                "label": "Blocks & Transactions",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "blockchain-architecture-blocks-and-transactions-transaction-lifecycle",
+                    "label": "Transaction Lifecycle",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-architecture-blocks-and-transactions-utxo-vs-account-model",
+                    "label": "UTXO vs Account Model",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "blockchain-architecture-consensus-mechanisms",
+                "label": "Consensus Mechanisms",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "blockchain-architecture-consensus-mechanisms-pow-vs-pos",
+                    "label": "PoW vs PoS",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-architecture-consensus-mechanisms-finality",
+                    "label": "Finality",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "blockchain-architecture-scaling",
+                "label": "Scaling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "blockchain-architecture-scaling-layer-2",
+                    "label": "Layer 2",
+                    "type": "module"
+                  },
+                  {
+                    "id": "blockchain-architecture-scaling-sharding",
+                    "label": "Sharding",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "blockchain-foundations-networks-nodes-and-validators",
-            "label": "Nodes & Validators",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Smart Contracts",
+            "short_title": "Smart Contracts",
+            "slug": "smart-contracts",
+            "description": "Learn Smart Contracts for blockchain.",
+            "long_description": "Covers core concepts in Smart Contracts.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Smart Contracts.",
+            "outcomes": "Ability to apply Smart Contracts in blockchain.",
+            "seo": {
+              "meta_title": "Smart Contracts",
+              "meta_description": "Learn the fundamentals of Smart Contracts for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "smart"
+            },
+            "children": [
+              {
+                "id": "smart-contracts-smart-contract-basics",
+                "label": "Smart Contract Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "smart-contracts-smart-contract-basics-state-and-gas",
+                    "label": "State & Gas",
+                    "type": "module"
+                  },
+                  {
+                    "id": "smart-contracts-smart-contract-basics-security-patterns",
+                    "label": "Security Patterns",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "smart-contracts-evm-and-solidity",
+                "label": "EVM & Solidity",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "smart-contracts-evm-and-solidity-solidity-basics",
+                    "label": "Solidity Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "smart-contracts-evm-and-solidity-contract-testing",
+                    "label": "Contract Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "smart-contracts-alternative-platforms",
+                "label": "Alternative Platforms",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "smart-contracts-alternative-platforms-solana-programs",
+                    "label": "Solana Programs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "smart-contracts-alternative-platforms-cosmwasm",
+                    "label": "CosmWasm",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Web3 Development",
+            "short_title": "Web3 Development",
+            "slug": "web3-development",
+            "description": "Learn Web3 Development for blockchain.",
+            "long_description": "Covers core concepts in Web3 Development.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Web3 Development.",
+            "outcomes": "Ability to apply Web3 Development in blockchain.",
+            "seo": {
+              "meta_title": "Web3 Development",
+              "meta_description": "Learn the fundamentals of Web3 Development for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "ethereum"
+            },
+            "children": [
+              {
+                "id": "web3-development-wallets-and-keys",
+                "label": "Wallets & Keys",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "web3-development-wallets-and-keys-wallet-types",
+                    "label": "Wallet Types",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web3-development-wallets-and-keys-key-management",
+                    "label": "Key Management",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "web3-development-dapp-architecture",
+                "label": "dApp Architecture",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "web3-development-dapp-architecture-frontend-integration",
+                    "label": "Frontend Integration",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web3-development-dapp-architecture-indexing-and-apis",
+                    "label": "Indexing & APIs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "web3-development-token-standards",
+                "label": "Token Standards",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "web3-development-token-standards-erc-20",
+                    "label": "ERC-20",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web3-development-token-standards-erc-721-1155",
+                    "label": "ERC-721/1155",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Security & Governance",
+            "short_title": "Security & Governance",
+            "slug": "security-and-governance",
+            "description": "Learn Security & Governance for blockchain.",
+            "long_description": "Covers core concepts in Security & Governance.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Security & Governance.",
+            "outcomes": "Ability to apply Security & Governance in blockchain.",
+            "seo": {
+              "meta_title": "Security & Governance",
+              "meta_description": "Learn the fundamentals of Security & Governance for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "owasp"
+            },
+            "children": [
+              {
+                "id": "security-and-governance-security-fundamentals",
+                "label": "Security Fundamentals",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "security-and-governance-security-fundamentals-threat-models",
+                    "label": "Threat Models",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-governance-security-fundamentals-auditing-basics",
+                    "label": "Auditing Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "security-and-governance-governance",
+                "label": "Governance",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "security-and-governance-governance-on-chain-governance",
+                    "label": "On-chain Governance",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-governance-governance-daos",
+                    "label": "DAOs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "security-and-governance-compliance",
+                "label": "Compliance",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "security-and-governance-compliance-regulatory-basics",
+                    "label": "Regulatory Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-governance-compliance-risk-management",
+                    "label": "Risk Management",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Ecosystem & Careers",
+            "short_title": "Ecosystem & Careers",
+            "slug": "ecosystem-and-careers",
+            "description": "Learn Ecosystem & Careers for blockchain.",
+            "long_description": "Covers core concepts in Ecosystem & Careers.\nFocuses on practical blockchain workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Ecosystem & Careers.",
+            "outcomes": "Ability to apply Ecosystem & Careers in blockchain.",
+            "seo": {
+              "meta_title": "Ecosystem & Careers",
+              "meta_description": "Learn the fundamentals of Ecosystem & Careers for blockchain."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "ecosystem-and-careers-use-cases",
+                "label": "Use Cases",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ecosystem-and-careers-use-cases-defi",
+                    "label": "DeFi",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ecosystem-and-careers-use-cases-nfts",
+                    "label": "NFTs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ecosystem-and-careers-tooling",
+                "label": "Tooling",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ecosystem-and-careers-tooling-block-explorers",
+                    "label": "Block Explorers",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ecosystem-and-careers-tooling-dev-tooling",
+                    "label": "Dev Tooling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ecosystem-and-careers-career-growth",
+                "label": "Career Growth",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ecosystem-and-careers-career-growth-portfolio-projects",
+                    "label": "Portfolio Projects",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ecosystem-and-careers-career-growth-community-and-networking",
+                    "label": "Community & Networking",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Blockchain Architecture",
-    "short_title": "Blockchain Architecture",
-    "slug": "blockchain-architecture",
-    "description": "Learn Blockchain Architecture for blockchain.",
-    "long_description": "Covers core concepts in Blockchain Architecture.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Blockchain Architecture.",
-    "outcomes": "Ability to apply Blockchain Architecture in blockchain.",
-    "seo": {
-      "meta_title": "Blockchain Architecture",
-      "meta_description": "Learn the fundamentals of Blockchain Architecture for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "blockchain"
-    },
-    "children": [
-      {
-        "id": "blockchain-architecture-blocks-and-transactions",
-        "label": "Blocks & Transactions",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "blockchain-architecture-blocks-and-transactions-transaction-lifecycle",
-            "label": "Transaction Lifecycle",
-            "type": "module"
-          },
-          {
-            "id": "blockchain-architecture-blocks-and-transactions-utxo-vs-account-model",
-            "label": "UTXO vs Account Model",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "blockchain-architecture-consensus-mechanisms",
-        "label": "Consensus Mechanisms",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "blockchain-architecture-consensus-mechanisms-pow-vs-pos",
-            "label": "PoW vs PoS",
-            "type": "module"
-          },
-          {
-            "id": "blockchain-architecture-consensus-mechanisms-finality",
-            "label": "Finality",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "blockchain-architecture-scaling",
-        "label": "Scaling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "blockchain-architecture-scaling-layer-2",
-            "label": "Layer 2",
-            "type": "module"
-          },
-          {
-            "id": "blockchain-architecture-scaling-sharding",
-            "label": "Sharding",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Smart Contracts",
-    "short_title": "Smart Contracts",
-    "slug": "smart-contracts",
-    "description": "Learn Smart Contracts for blockchain.",
-    "long_description": "Covers core concepts in Smart Contracts.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Smart Contracts.",
-    "outcomes": "Ability to apply Smart Contracts in blockchain.",
-    "seo": {
-      "meta_title": "Smart Contracts",
-      "meta_description": "Learn the fundamentals of Smart Contracts for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "smart"
-    },
-    "children": [
-      {
-        "id": "smart-contracts-smart-contract-basics",
-        "label": "Smart Contract Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "smart-contracts-smart-contract-basics-state-and-gas",
-            "label": "State & Gas",
-            "type": "module"
-          },
-          {
-            "id": "smart-contracts-smart-contract-basics-security-patterns",
-            "label": "Security Patterns",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "smart-contracts-evm-and-solidity",
-        "label": "EVM & Solidity",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "smart-contracts-evm-and-solidity-solidity-basics",
-            "label": "Solidity Basics",
-            "type": "module"
-          },
-          {
-            "id": "smart-contracts-evm-and-solidity-contract-testing",
-            "label": "Contract Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "smart-contracts-alternative-platforms",
-        "label": "Alternative Platforms",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "smart-contracts-alternative-platforms-solana-programs",
-            "label": "Solana Programs",
-            "type": "module"
-          },
-          {
-            "id": "smart-contracts-alternative-platforms-cosmwasm",
-            "label": "CosmWasm",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Web3 Development",
-    "short_title": "Web3 Development",
-    "slug": "web3-development",
-    "description": "Learn Web3 Development for blockchain.",
-    "long_description": "Covers core concepts in Web3 Development.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Web3 Development.",
-    "outcomes": "Ability to apply Web3 Development in blockchain.",
-    "seo": {
-      "meta_title": "Web3 Development",
-      "meta_description": "Learn the fundamentals of Web3 Development for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "web3"
-    },
-    "children": [
-      {
-        "id": "web3-development-wallets-and-keys",
-        "label": "Wallets & Keys",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "web3-development-wallets-and-keys-wallet-types",
-            "label": "Wallet Types",
-            "type": "module"
-          },
-          {
-            "id": "web3-development-wallets-and-keys-key-management",
-            "label": "Key Management",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "web3-development-dapp-architecture",
-        "label": "dApp Architecture",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "web3-development-dapp-architecture-frontend-integration",
-            "label": "Frontend Integration",
-            "type": "module"
-          },
-          {
-            "id": "web3-development-dapp-architecture-indexing-and-apis",
-            "label": "Indexing & APIs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "web3-development-token-standards",
-        "label": "Token Standards",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "web3-development-token-standards-erc-20",
-            "label": "ERC-20",
-            "type": "module"
-          },
-          {
-            "id": "web3-development-token-standards-erc-721-1155",
-            "label": "ERC-721/1155",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Security & Governance",
-    "short_title": "Security & Governance",
-    "slug": "security-and-governance",
-    "description": "Learn Security & Governance for blockchain.",
-    "long_description": "Covers core concepts in Security & Governance.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Security & Governance.",
-    "outcomes": "Ability to apply Security & Governance in blockchain.",
-    "seo": {
-      "meta_title": "Security & Governance",
-      "meta_description": "Learn the fundamentals of Security & Governance for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "security"
-    },
-    "children": [
-      {
-        "id": "security-and-governance-security-fundamentals",
-        "label": "Security Fundamentals",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "security-and-governance-security-fundamentals-threat-models",
-            "label": "Threat Models",
-            "type": "module"
-          },
-          {
-            "id": "security-and-governance-security-fundamentals-auditing-basics",
-            "label": "Auditing Basics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "security-and-governance-governance",
-        "label": "Governance",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "security-and-governance-governance-on-chain-governance",
-            "label": "On-chain Governance",
-            "type": "module"
-          },
-          {
-            "id": "security-and-governance-governance-daos",
-            "label": "DAOs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "security-and-governance-compliance",
-        "label": "Compliance",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "security-and-governance-compliance-regulatory-basics",
-            "label": "Regulatory Basics",
-            "type": "module"
-          },
-          {
-            "id": "security-and-governance-compliance-risk-management",
-            "label": "Risk Management",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Ecosystem & Careers",
-    "short_title": "Ecosystem & Careers",
-    "slug": "ecosystem-and-careers",
-    "description": "Learn Ecosystem & Careers for blockchain.",
-    "long_description": "Covers core concepts in Ecosystem & Careers.\nFocuses on practical blockchain workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Ecosystem & Careers.",
-    "outcomes": "Ability to apply Ecosystem & Careers in blockchain.",
-    "seo": {
-      "meta_title": "Ecosystem & Careers",
-      "meta_description": "Learn the fundamentals of Ecosystem & Careers for blockchain."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ecosystem"
-    },
-    "children": [
-      {
-        "id": "ecosystem-and-careers-use-cases",
-        "label": "Use Cases",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ecosystem-and-careers-use-cases-defi",
-            "label": "DeFi",
-            "type": "module"
-          },
-          {
-            "id": "ecosystem-and-careers-use-cases-nfts",
-            "label": "NFTs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ecosystem-and-careers-tooling",
-        "label": "Tooling",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ecosystem-and-careers-tooling-block-explorers",
-            "label": "Block Explorers",
-            "type": "module"
-          },
-          {
-            "id": "ecosystem-and-careers-tooling-dev-tooling",
-            "label": "Dev Tooling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ecosystem-and-careers-career-growth",
-        "label": "Career Growth",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ecosystem-and-careers-career-growth-portfolio-projects",
-            "label": "Portfolio Projects",
-            "type": "module"
-          },
-          {
-            "id": "ecosystem-and-careers-career-growth-community-and-networking",
-            "label": "Community & Networking",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "PostgreSQL DBA Foundations",
-    "short_title": "PostgreSQL DBA Foundations",
-    "slug": "postgresql-dba-foundations",
-    "description": "Learn PostgreSQL DBA Foundations for postgresql dba.",
-    "long_description": "Covers core concepts in PostgreSQL DBA Foundations.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in PostgreSQL DBA Foundations.",
-    "outcomes": "Ability to apply PostgreSQL DBA Foundations in postgresql dba.",
+{
+  "roadmap": {
+    "title": "PostgreSQL DBA Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in PostgreSQL DBA.",
     "seo": {
-      "meta_title": "PostgreSQL DBA Foundations",
-      "meta_description": "Learn the fundamentals of PostgreSQL DBA Foundations for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "postgresql"
-    },
-    "children": [
-      {
-        "id": "postgresql-dba-foundations-postgresql-basics",
-        "label": "PostgreSQL Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "postgresql-dba-foundations-postgresql-basics-architecture-overview",
-            "label": "Architecture Overview",
-            "type": "module"
-          },
-          {
-            "id": "postgresql-dba-foundations-postgresql-basics-core-components",
-            "label": "Core Components",
-            "type": "module"
-          }
-        ]
+      "meta_title": "PostgreSQL DBA Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in PostgreSQL DBA. Follow a phased, practical learning path.",
+      "keywords": [
+        "postgresql dba roadmap",
+        "postgresql dba roadmap 2026",
+        "learn postgresql dba",
+        "postgresql dba learning path"
+      ],
+      "canonical": "https://yourdomain.com/postgresql-dba-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "PostgreSQL DBA Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in PostgreSQL DBA.",
+        "type": "website",
+        "url": "https://yourdomain.com/postgresql-dba-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/postgresql-dba-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "PostgreSQL DBA Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "PostgreSQL DBA Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in PostgreSQL DBA.",
+        "image": "https://yourdomain.com/og/postgresql-dba-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "postgresql-dba-foundations-rdbms-concepts",
-        "label": "RDBMS Concepts",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for PostgreSQL DBA.",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "postgresql-dba-foundations-rdbms-concepts-acid",
-            "label": "ACID",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "PostgreSQL DBA Foundations",
+            "short_title": "PostgreSQL DBA Foundations",
+            "slug": "postgresql-dba-foundations",
+            "description": "Learn PostgreSQL DBA Foundations for postgresql dba.",
+            "long_description": "Covers core concepts in PostgreSQL DBA Foundations.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in PostgreSQL DBA Foundations.",
+            "outcomes": "Ability to apply PostgreSQL DBA Foundations in postgresql dba.",
+            "seo": {
+              "meta_title": "PostgreSQL DBA Foundations",
+              "meta_description": "Learn the fundamentals of PostgreSQL DBA Foundations for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "postgresql"
+            },
+            "children": [
+              {
+                "id": "postgresql-dba-foundations-postgresql-basics",
+                "label": "PostgreSQL Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "postgresql-dba-foundations-postgresql-basics-architecture-overview",
+                    "label": "Architecture Overview",
+                    "type": "module"
+                  },
+                  {
+                    "id": "postgresql-dba-foundations-postgresql-basics-core-components",
+                    "label": "Core Components",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "postgresql-dba-foundations-rdbms-concepts",
+                "label": "RDBMS Concepts",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "postgresql-dba-foundations-rdbms-concepts-acid",
+                    "label": "ACID",
+                    "type": "module"
+                  },
+                  {
+                    "id": "postgresql-dba-foundations-rdbms-concepts-mvcc",
+                    "label": "MVCC",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "postgresql-dba-foundations-sql-fundamentals",
+                "label": "SQL Fundamentals",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "postgresql-dba-foundations-sql-fundamentals-ddl-dml",
+                    "label": "DDL/DML",
+                    "type": "module"
+                  },
+                  {
+                    "id": "postgresql-dba-foundations-sql-fundamentals-joins-and-indexes",
+                    "label": "Joins & Indexes",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "postgresql-dba-foundations-rdbms-concepts-mvcc",
-            "label": "MVCC",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "postgresql-dba-foundations-sql-fundamentals",
-        "label": "SQL Fundamentals",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "postgresql-dba-foundations-sql-fundamentals-ddl-dml",
-            "label": "DDL/DML",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Configuration & Security",
+            "short_title": "Configuration & Security",
+            "slug": "configuration-and-security",
+            "description": "Learn Configuration & Security for postgresql dba.",
+            "long_description": "Covers core concepts in Configuration & Security.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Configuration & Security.",
+            "outcomes": "Ability to apply Configuration & Security in postgresql dba.",
+            "seo": {
+              "meta_title": "Configuration & Security",
+              "meta_description": "Learn the fundamentals of Configuration & Security for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "simpleicons"
+            },
+            "children": [
+              {
+                "id": "configuration-and-security-configuration",
+                "label": "Configuration",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "configuration-and-security-configuration-postgresql-conf",
+                    "label": "postgresql.conf",
+                    "type": "module"
+                  },
+                  {
+                    "id": "configuration-and-security-configuration-memory-and-wal",
+                    "label": "Memory & WAL",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "configuration-and-security-access-control",
+                "label": "Access Control",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "configuration-and-security-access-control-roles-and-privileges",
+                    "label": "Roles & Privileges",
+                    "type": "module"
+                  },
+                  {
+                    "id": "configuration-and-security-access-control-pg-hba-conf",
+                    "label": "pg_hba.conf",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "configuration-and-security-security",
+                "label": "Security",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "configuration-and-security-security-tls",
+                    "label": "TLS",
+                    "type": "module"
+                  },
+                  {
+                    "id": "configuration-and-security-security-row-level-security",
+                    "label": "Row-Level Security",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "postgresql-dba-foundations-sql-fundamentals-joins-and-indexes",
-            "label": "Joins & Indexes",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Operations & Reliability",
+            "short_title": "Operations & Reliability",
+            "slug": "operations-and-reliability",
+            "description": "Learn Operations & Reliability for postgresql dba.",
+            "long_description": "Covers core concepts in Operations & Reliability.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Operations & Reliability.",
+            "outcomes": "Ability to apply Operations & Reliability in postgresql dba.",
+            "seo": {
+              "meta_title": "Operations & Reliability",
+              "meta_description": "Learn the fundamentals of Operations & Reliability for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "kubernetes"
+            },
+            "children": [
+              {
+                "id": "operations-and-reliability-backup-and-recovery",
+                "label": "Backup & Recovery",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "operations-and-reliability-backup-and-recovery-pg-dump-pg-basebackup",
+                    "label": "pg_dump/pg_basebackup",
+                    "type": "module"
+                  },
+                  {
+                    "id": "operations-and-reliability-backup-and-recovery-restore-testing",
+                    "label": "Restore Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "operations-and-reliability-replication-and-ha",
+                "label": "Replication & HA",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "operations-and-reliability-replication-and-ha-streaming-replication",
+                    "label": "Streaming Replication",
+                    "type": "module"
+                  },
+                  {
+                    "id": "operations-and-reliability-replication-and-ha-failover",
+                    "label": "Failover",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "operations-and-reliability-monitoring",
+                "label": "Monitoring",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "operations-and-reliability-monitoring-pg-stat",
+                    "label": "pg_stat_*",
+                    "type": "module"
+                  },
+                  {
+                    "id": "operations-and-reliability-monitoring-alerting",
+                    "label": "Alerting",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Performance & Tuning",
+            "short_title": "Performance & Tuning",
+            "slug": "performance-and-tuning",
+            "description": "Learn Performance & Tuning for postgresql dba.",
+            "long_description": "Covers core concepts in Performance & Tuning.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Performance & Tuning.",
+            "outcomes": "Ability to apply Performance & Tuning in postgresql dba.",
+            "seo": {
+              "meta_title": "Performance & Tuning",
+              "meta_description": "Learn the fundamentals of Performance & Tuning for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "figma"
+            },
+            "children": [
+              {
+                "id": "performance-and-tuning-query-tuning",
+                "label": "Query Tuning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "performance-and-tuning-query-tuning-explain",
+                    "label": "EXPLAIN",
+                    "type": "module"
+                  },
+                  {
+                    "id": "performance-and-tuning-query-tuning-index-strategy",
+                    "label": "Index Strategy",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "performance-and-tuning-vacuum-and-bloat",
+                "label": "Vacuum & Bloat",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "performance-and-tuning-vacuum-and-bloat-autovacuum",
+                    "label": "Autovacuum",
+                    "type": "module"
+                  },
+                  {
+                    "id": "performance-and-tuning-vacuum-and-bloat-maintenance",
+                    "label": "Maintenance",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "performance-and-tuning-workload-tuning",
+                "label": "Workload Tuning",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "performance-and-tuning-workload-tuning-oltp-vs-olap",
+                    "label": "OLTP vs OLAP",
+                    "type": "module"
+                  },
+                  {
+                    "id": "performance-and-tuning-workload-tuning-connection-pooling",
+                    "label": "Connection Pooling",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Automation & Tooling",
+            "short_title": "Automation & Tooling",
+            "slug": "automation-and-tooling",
+            "description": "Learn Automation & Tooling for postgresql dba.",
+            "long_description": "Covers core concepts in Automation & Tooling.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Automation & Tooling.",
+            "outcomes": "Ability to apply Automation & Tooling in postgresql dba.",
+            "seo": {
+              "meta_title": "Automation & Tooling",
+              "meta_description": "Learn the fundamentals of Automation & Tooling for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "automation-and-tooling-automation",
+                "label": "Automation",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "automation-and-tooling-automation-shell-scripting",
+                    "label": "Shell Scripting",
+                    "type": "module"
+                  },
+                  {
+                    "id": "automation-and-tooling-automation-scheduled-jobs",
+                    "label": "Scheduled Jobs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "automation-and-tooling-infrastructure",
+                "label": "Infrastructure",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "automation-and-tooling-infrastructure-provisioning",
+                    "label": "Provisioning",
+                    "type": "module"
+                  },
+                  {
+                    "id": "automation-and-tooling-infrastructure-capacity-planning",
+                    "label": "Capacity Planning",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "automation-and-tooling-extensions-and-tools",
+                "label": "Extensions & Tools",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "automation-and-tooling-extensions-and-tools-extensions",
+                    "label": "Extensions",
+                    "type": "module"
+                  },
+                  {
+                    "id": "automation-and-tooling-extensions-and-tools-diagnostic-tools",
+                    "label": "Diagnostic Tools",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Advanced & Career",
+            "short_title": "Advanced & Career",
+            "slug": "advanced-and-career",
+            "description": "Learn Advanced & Career for postgresql dba.",
+            "long_description": "Covers core concepts in Advanced & Career.\nFocuses on practical postgresql dba workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Advanced & Career.",
+            "outcomes": "Ability to apply Advanced & Career in postgresql dba.",
+            "seo": {
+              "meta_title": "Advanced & Career",
+              "meta_description": "Learn the fundamentals of Advanced & Career for postgresql dba."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "github"
+            },
+            "children": [
+              {
+                "id": "advanced-and-career-advanced-sql",
+                "label": "Advanced SQL",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "advanced-and-career-advanced-sql-ctes",
+                    "label": "CTEs",
+                    "type": "module"
+                  },
+                  {
+                    "id": "advanced-and-career-advanced-sql-window-functions",
+                    "label": "Window Functions",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "advanced-and-career-troubleshooting",
+                "label": "Troubleshooting",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "advanced-and-career-troubleshooting-log-analysis",
+                    "label": "Log Analysis",
+                    "type": "module"
+                  },
+                  {
+                    "id": "advanced-and-career-troubleshooting-system-diagnostics",
+                    "label": "System Diagnostics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "advanced-and-career-community-and-growth",
+                "label": "Community & Growth",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "advanced-and-career-community-and-growth-mailing-lists",
+                    "label": "Mailing Lists",
+                    "type": "module"
+                  },
+                  {
+                    "id": "advanced-and-career-community-and-growth-contributing",
+                    "label": "Contributing",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Configuration & Security",
-    "short_title": "Configuration & Security",
-    "slug": "configuration-and-security",
-    "description": "Learn Configuration & Security for postgresql dba.",
-    "long_description": "Covers core concepts in Configuration & Security.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Configuration & Security.",
-    "outcomes": "Ability to apply Configuration & Security in postgresql dba.",
-    "seo": {
-      "meta_title": "Configuration & Security",
-      "meta_description": "Learn the fundamentals of Configuration & Security for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "configuration"
-    },
-    "children": [
-      {
-        "id": "configuration-and-security-configuration",
-        "label": "Configuration",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "configuration-and-security-configuration-postgresql-conf",
-            "label": "postgresql.conf",
-            "type": "module"
-          },
-          {
-            "id": "configuration-and-security-configuration-memory-and-wal",
-            "label": "Memory & WAL",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "configuration-and-security-access-control",
-        "label": "Access Control",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "configuration-and-security-access-control-roles-and-privileges",
-            "label": "Roles & Privileges",
-            "type": "module"
-          },
-          {
-            "id": "configuration-and-security-access-control-pg-hba-conf",
-            "label": "pg_hba.conf",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "configuration-and-security-security",
-        "label": "Security",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "configuration-and-security-security-tls",
-            "label": "TLS",
-            "type": "module"
-          },
-          {
-            "id": "configuration-and-security-security-row-level-security",
-            "label": "Row-Level Security",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Operations & Reliability",
-    "short_title": "Operations & Reliability",
-    "slug": "operations-and-reliability",
-    "description": "Learn Operations & Reliability for postgresql dba.",
-    "long_description": "Covers core concepts in Operations & Reliability.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Operations & Reliability.",
-    "outcomes": "Ability to apply Operations & Reliability in postgresql dba.",
-    "seo": {
-      "meta_title": "Operations & Reliability",
-      "meta_description": "Learn the fundamentals of Operations & Reliability for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "operations"
-    },
-    "children": [
-      {
-        "id": "operations-and-reliability-backup-and-recovery",
-        "label": "Backup & Recovery",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "operations-and-reliability-backup-and-recovery-pg-dump-pg-basebackup",
-            "label": "pg_dump/pg_basebackup",
-            "type": "module"
-          },
-          {
-            "id": "operations-and-reliability-backup-and-recovery-restore-testing",
-            "label": "Restore Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "operations-and-reliability-replication-and-ha",
-        "label": "Replication & HA",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "operations-and-reliability-replication-and-ha-streaming-replication",
-            "label": "Streaming Replication",
-            "type": "module"
-          },
-          {
-            "id": "operations-and-reliability-replication-and-ha-failover",
-            "label": "Failover",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "operations-and-reliability-monitoring",
-        "label": "Monitoring",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "operations-and-reliability-monitoring-pg-stat",
-            "label": "pg_stat_*",
-            "type": "module"
-          },
-          {
-            "id": "operations-and-reliability-monitoring-alerting",
-            "label": "Alerting",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Performance & Tuning",
-    "short_title": "Performance & Tuning",
-    "slug": "performance-and-tuning",
-    "description": "Learn Performance & Tuning for postgresql dba.",
-    "long_description": "Covers core concepts in Performance & Tuning.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Performance & Tuning.",
-    "outcomes": "Ability to apply Performance & Tuning in postgresql dba.",
-    "seo": {
-      "meta_title": "Performance & Tuning",
-      "meta_description": "Learn the fundamentals of Performance & Tuning for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "performance"
-    },
-    "children": [
-      {
-        "id": "performance-and-tuning-query-tuning",
-        "label": "Query Tuning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "performance-and-tuning-query-tuning-explain",
-            "label": "EXPLAIN",
-            "type": "module"
-          },
-          {
-            "id": "performance-and-tuning-query-tuning-index-strategy",
-            "label": "Index Strategy",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "performance-and-tuning-vacuum-and-bloat",
-        "label": "Vacuum & Bloat",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "performance-and-tuning-vacuum-and-bloat-autovacuum",
-            "label": "Autovacuum",
-            "type": "module"
-          },
-          {
-            "id": "performance-and-tuning-vacuum-and-bloat-maintenance",
-            "label": "Maintenance",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "performance-and-tuning-workload-tuning",
-        "label": "Workload Tuning",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "performance-and-tuning-workload-tuning-oltp-vs-olap",
-            "label": "OLTP vs OLAP",
-            "type": "module"
-          },
-          {
-            "id": "performance-and-tuning-workload-tuning-connection-pooling",
-            "label": "Connection Pooling",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Automation & Tooling",
-    "short_title": "Automation & Tooling",
-    "slug": "automation-and-tooling",
-    "description": "Learn Automation & Tooling for postgresql dba.",
-    "long_description": "Covers core concepts in Automation & Tooling.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Automation & Tooling.",
-    "outcomes": "Ability to apply Automation & Tooling in postgresql dba.",
-    "seo": {
-      "meta_title": "Automation & Tooling",
-      "meta_description": "Learn the fundamentals of Automation & Tooling for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "automation"
-    },
-    "children": [
-      {
-        "id": "automation-and-tooling-automation",
-        "label": "Automation",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "automation-and-tooling-automation-shell-scripting",
-            "label": "Shell Scripting",
-            "type": "module"
-          },
-          {
-            "id": "automation-and-tooling-automation-scheduled-jobs",
-            "label": "Scheduled Jobs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "automation-and-tooling-infrastructure",
-        "label": "Infrastructure",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "automation-and-tooling-infrastructure-provisioning",
-            "label": "Provisioning",
-            "type": "module"
-          },
-          {
-            "id": "automation-and-tooling-infrastructure-capacity-planning",
-            "label": "Capacity Planning",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "automation-and-tooling-extensions-and-tools",
-        "label": "Extensions & Tools",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "automation-and-tooling-extensions-and-tools-extensions",
-            "label": "Extensions",
-            "type": "module"
-          },
-          {
-            "id": "automation-and-tooling-extensions-and-tools-diagnostic-tools",
-            "label": "Diagnostic Tools",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Advanced & Career",
-    "short_title": "Advanced & Career",
-    "slug": "advanced-and-career",
-    "description": "Learn Advanced & Career for postgresql dba.",
-    "long_description": "Covers core concepts in Advanced & Career.\nFocuses on practical postgresql dba workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Advanced & Career.",
-    "outcomes": "Ability to apply Advanced & Career in postgresql dba.",
-    "seo": {
-      "meta_title": "Advanced & Career",
-      "meta_description": "Learn the fundamentals of Advanced & Career for postgresql dba."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "advanced"
-    },
-    "children": [
-      {
-        "id": "advanced-and-career-advanced-sql",
-        "label": "Advanced SQL",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "advanced-and-career-advanced-sql-ctes",
-            "label": "CTEs",
-            "type": "module"
-          },
-          {
-            "id": "advanced-and-career-advanced-sql-window-functions",
-            "label": "Window Functions",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "advanced-and-career-troubleshooting",
-        "label": "Troubleshooting",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "advanced-and-career-troubleshooting-log-analysis",
-            "label": "Log Analysis",
-            "type": "module"
-          },
-          {
-            "id": "advanced-and-career-troubleshooting-system-diagnostics",
-            "label": "System Diagnostics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "advanced-and-career-community-and-growth",
-        "label": "Community & Growth",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "advanced-and-career-community-and-growth-mailing-lists",
-            "label": "Mailing Lists",
-            "type": "module"
-          },
-          {
-            "id": "advanced-and-career-community-and-growth-contributing",
-            "label": "Contributing",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

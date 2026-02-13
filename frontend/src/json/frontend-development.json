@@ -2,6 +2,39 @@
   "roadmap": {
     "title": "Frontend Developer",
     "description": "A comprehensive, phased approach to becoming a professional frontend developer",
+    "seo": {
+      "meta_title": "Frontend Developer Roadmap 2026 – Complete Step-by-Step Guide",
+      "meta_description": "A complete frontend developer roadmap covering HTML, CSS, JavaScript, React, performance, security, and career growth. Visual, phased, and beginner-friendly.",
+      "keywords": [
+        "frontend developer roadmap",
+        "frontend roadmap 2026",
+        "learn frontend development",
+        "html css javascript roadmap",
+        "react developer roadmap",
+        "web development career path"
+      ],
+      "canonical": "https://yourdomain.com/frontend-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Frontend Developer Roadmap 2026",
+        "description": "An interactive, phase-wise roadmap to become a professional frontend developer.",
+        "type": "website",
+        "url": "https://yourdomain.com/frontend-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/frontend-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Frontend Developer Roadmap"
+        }
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Frontend Developer Roadmap 2026",
+        "description": "Visual roadmap to master frontend development step by step.",
+        "image": "https://yourdomain.com/og/frontend-roadmap.png"
+      }
+    },
     "phases": [
       {
         "phase_number": 1,
@@ -28,7 +61,7 @@
             "ui_config": {
               "topic_layout": "loose",
               "node_type": "group",
-              "icon_slug": "internet"
+              "icon_slug": "wireshark"
             },
             "children": [
               {
@@ -122,7 +155,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "css3"
+              "icon_slug": "css"
             },
             "children": [
               {
@@ -358,7 +391,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "vscode"
+              "icon_slug": "vscodium"
             },
             "children": [
               {
@@ -416,7 +449,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "package"
+              "icon_slug": "simpleicons"
             },
             "children": [
               {
@@ -466,7 +499,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "build"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -508,7 +541,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "palette"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -620,7 +653,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "layers"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -668,7 +701,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "database"
+              "icon_slug": "databricks"
             },
             "children": [
               {
@@ -710,7 +743,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "api"
+              "icon_slug": "openapiinitiative"
             },
             "children": [
               {
@@ -759,7 +792,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "form"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -794,7 +827,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "test"
+              "icon_slug": "pytest"
             },
             "children": [
               {
@@ -842,7 +875,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "code"
+              "icon_slug": "github"
             },
             "children": [
               {
@@ -884,7 +917,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "speed"
+              "icon_slug": "simpleicons"
             },
             "children": [
               {
@@ -931,7 +964,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "shield"
+              "icon_slug": "owasp"
             },
             "children": [
               {
@@ -978,7 +1011,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "lock"
+              "icon_slug": "owasp"
             },
             "children": [
               {
@@ -1037,7 +1070,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "cloud"
+              "icon_slug": "cloudflare"
             },
             "children": [
               {
@@ -1085,7 +1118,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "monitor"
+              "icon_slug": "grafana"
             },
             "children": [
               {
@@ -1121,7 +1154,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "components"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -1180,7 +1213,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "settings"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -1247,7 +1280,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "browser"
+              "icon_slug": "figma"
             },
             "children": [
               {
@@ -1294,7 +1327,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "accessibility"
+              "icon_slug": "databricks"
             },
             "children": [
               {
@@ -1335,7 +1368,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "mobile"
+              "icon_slug": "databricks"
             },
             "children": [
               {
@@ -1383,7 +1416,7 @@
             },
             "ui_config": {
               "topic_layout": "grouped",
-              "icon_slug": "briefcase"
+              "icon_slug": "simpleicons"
             },
             "children": [
               {

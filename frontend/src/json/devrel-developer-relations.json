@@ -1,464 +1,515 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "DevRel Foundations",
-    "short_title": "DevRel Foundations",
-    "slug": "devrel-foundations",
-    "description": "Learn DevRel Foundations for developer relations.",
-    "long_description": "Covers core concepts in DevRel Foundations.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in DevRel Foundations.",
-    "outcomes": "Ability to apply DevRel Foundations in developer relations.",
+{
+  "roadmap": {
+    "title": "DevRel (Developer Relations) Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in DevRel (Developer Relations).",
     "seo": {
-      "meta_title": "DevRel Foundations",
-      "meta_description": "Learn the fundamentals of DevRel Foundations for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "devrel"
-    },
-    "children": [
-      {
-        "id": "devrel-foundations-devrel-purpose",
-        "label": "DevRel Purpose",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "devrel-foundations-devrel-purpose-developer-experience",
-            "label": "Developer Experience",
-            "type": "module"
-          },
-          {
-            "id": "devrel-foundations-devrel-purpose-feedback-loops",
-            "label": "Feedback Loops",
-            "type": "module"
-          }
-        ]
+      "meta_title": "DevRel (Developer Relations) Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in DevRel (Developer Relations). Follow a phased, practical learning path.",
+      "keywords": [
+        "devrel (developer relations) roadmap",
+        "devrel (developer relations) roadmap 2026",
+        "learn devrel (developer relations)",
+        "devrel (developer relations) learning path"
+      ],
+      "canonical": "https://yourdomain.com/devrel-developer-relations-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "DevRel (Developer Relations) Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in DevRel (Developer Relations).",
+        "type": "website",
+        "url": "https://yourdomain.com/devrel-developer-relations-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/devrel-developer-relations-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "DevRel (Developer Relations) Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "DevRel (Developer Relations) Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in DevRel (Developer Relations).",
+        "image": "https://yourdomain.com/og/devrel-developer-relations-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "devrel-foundations-audience-and-positioning",
-        "label": "Audience & Positioning",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for DevRel (Developer Relations).",
+        "estimated_total_hours": 48,
+        "topics": [
           {
-            "id": "devrel-foundations-audience-and-positioning-developer-personas",
-            "label": "Developer Personas",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "DevRel Foundations",
+            "short_title": "DevRel Foundations",
+            "slug": "devrel-foundations",
+            "description": "Learn DevRel Foundations for developer relations.",
+            "long_description": "Covers core concepts in DevRel Foundations.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in DevRel Foundations.",
+            "outcomes": "Ability to apply DevRel Foundations in developer relations.",
+            "seo": {
+              "meta_title": "DevRel Foundations",
+              "meta_description": "Learn the fundamentals of DevRel Foundations for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "simpleicons"
+            },
+            "children": [
+              {
+                "id": "devrel-foundations-devrel-purpose",
+                "label": "DevRel Purpose",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "devrel-foundations-devrel-purpose-developer-experience",
+                    "label": "Developer Experience",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devrel-foundations-devrel-purpose-feedback-loops",
+                    "label": "Feedback Loops",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "devrel-foundations-audience-and-positioning",
+                "label": "Audience & Positioning",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "devrel-foundations-audience-and-positioning-developer-personas",
+                    "label": "Developer Personas",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devrel-foundations-audience-and-positioning-value-proposition",
+                    "label": "Value Proposition",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "devrel-foundations-messaging",
+                "label": "Messaging",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "devrel-foundations-messaging-product-narrative",
+                    "label": "Product Narrative",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devrel-foundations-messaging-use-cases",
+                    "label": "Use Cases",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "devrel-foundations-audience-and-positioning-value-proposition",
-            "label": "Value Proposition",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "devrel-foundations-messaging",
-        "label": "Messaging",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "devrel-foundations-messaging-product-narrative",
-            "label": "Product Narrative",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Technical Credibility",
+            "short_title": "Technical Credibility",
+            "slug": "technical-credibility",
+            "description": "Learn Technical Credibility for developer relations.",
+            "long_description": "Covers core concepts in Technical Credibility.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Technical Credibility.",
+            "outcomes": "Ability to apply Technical Credibility in developer relations.",
+            "seo": {
+              "meta_title": "Technical Credibility",
+              "meta_description": "Learn the fundamentals of Technical Credibility for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "notion"
+            },
+            "children": [
+              {
+                "id": "technical-credibility-api-and-docs",
+                "label": "API & Docs",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "technical-credibility-api-and-docs-api-design-basics",
+                    "label": "API Design Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-credibility-api-and-docs-documentation-structure",
+                    "label": "Documentation Structure",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "technical-credibility-developer-tooling",
+                "label": "Developer Tooling",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "technical-credibility-developer-tooling-sdks-and-samples",
+                    "label": "SDKs & Samples",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-credibility-developer-tooling-quickstarts",
+                    "label": "Quickstarts",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "technical-credibility-hands-on-skills",
+                "label": "Hands-on Skills",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "technical-credibility-hands-on-skills-programming-basics",
+                    "label": "Programming Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "technical-credibility-hands-on-skills-debugging-and-support",
+                    "label": "Debugging & Support",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "devrel-foundations-messaging-use-cases",
-            "label": "Use Cases",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Community & Programs",
+            "short_title": "Community & Programs",
+            "slug": "community-and-programs",
+            "description": "Learn Community & Programs for developer relations.",
+            "long_description": "Covers core concepts in Community & Programs.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Community & Programs.",
+            "outcomes": "Ability to apply Community & Programs in developer relations.",
+            "seo": {
+              "meta_title": "Community & Programs",
+              "meta_description": "Learn the fundamentals of Community & Programs for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "jira"
+            },
+            "children": [
+              {
+                "id": "community-and-programs-community-building",
+                "label": "Community Building",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "community-and-programs-community-building-engagement-strategy",
+                    "label": "Engagement Strategy",
+                    "type": "module"
+                  },
+                  {
+                    "id": "community-and-programs-community-building-code-of-conduct",
+                    "label": "Code of Conduct",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "community-and-programs-developer-programs",
+                "label": "Developer Programs",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "community-and-programs-developer-programs-ambassadors",
+                    "label": "Ambassadors",
+                    "type": "module"
+                  },
+                  {
+                    "id": "community-and-programs-developer-programs-open-source",
+                    "label": "Open Source",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "community-and-programs-events",
+                "label": "Events",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "community-and-programs-events-workshops",
+                    "label": "Workshops",
+                    "type": "module"
+                  },
+                  {
+                    "id": "community-and-programs-events-conferences-and-meetups",
+                    "label": "Conferences & Meetups",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Content & Education",
+            "short_title": "Content & Education",
+            "slug": "content-and-education",
+            "description": "Learn Content & Education for developer relations.",
+            "long_description": "Covers core concepts in Content & Education.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Content & Education.",
+            "outcomes": "Ability to apply Content & Education in developer relations.",
+            "seo": {
+              "meta_title": "Content & Education",
+              "meta_description": "Learn the fundamentals of Content & Education for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "notion"
+            },
+            "children": [
+              {
+                "id": "content-and-education-content-strategy",
+                "label": "Content Strategy",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "content-and-education-content-strategy-editorial-calendar",
+                    "label": "Editorial Calendar",
+                    "type": "module"
+                  },
+                  {
+                    "id": "content-and-education-content-strategy-topic-research",
+                    "label": "Topic Research",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "content-and-education-technical-writing",
+                "label": "Technical Writing",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "content-and-education-technical-writing-tutorials",
+                    "label": "Tutorials",
+                    "type": "module"
+                  },
+                  {
+                    "id": "content-and-education-technical-writing-reference-guides",
+                    "label": "Reference Guides",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "content-and-education-developer-education",
+                "label": "Developer Education",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "content-and-education-developer-education-courses",
+                    "label": "Courses",
+                    "type": "module"
+                  },
+                  {
+                    "id": "content-and-education-developer-education-live-demos",
+                    "label": "Live Demos",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Social & Advocacy",
+            "short_title": "Social & Advocacy",
+            "slug": "social-and-advocacy",
+            "description": "Learn Social & Advocacy for developer relations.",
+            "long_description": "Covers core concepts in Social & Advocacy.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Social & Advocacy.",
+            "outcomes": "Ability to apply Social & Advocacy in developer relations.",
+            "seo": {
+              "meta_title": "Social & Advocacy",
+              "meta_description": "Learn the fundamentals of Social & Advocacy for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "social-and-advocacy-public-speaking",
+                "label": "Public Speaking",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "social-and-advocacy-public-speaking-talk-design",
+                    "label": "Talk Design",
+                    "type": "module"
+                  },
+                  {
+                    "id": "social-and-advocacy-public-speaking-qanda-handling",
+                    "label": "Q&A Handling",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "social-and-advocacy-social-presence",
+                "label": "Social Presence",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "social-and-advocacy-social-presence-community-platforms",
+                    "label": "Community Platforms",
+                    "type": "module"
+                  },
+                  {
+                    "id": "social-and-advocacy-social-presence-brand-voice",
+                    "label": "Brand Voice",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "social-and-advocacy-advocacy",
+                "label": "Advocacy",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "social-and-advocacy-advocacy-customer-stories",
+                    "label": "Customer Stories",
+                    "type": "module"
+                  },
+                  {
+                    "id": "social-and-advocacy-advocacy-product-feedback",
+                    "label": "Product Feedback",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Metrics & Career",
+            "short_title": "Metrics & Career",
+            "slug": "metrics-and-career",
+            "description": "Learn Metrics & Career for developer relations.",
+            "long_description": "Covers core concepts in Metrics & Career.\nFocuses on practical developer relations workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Metrics & Career.",
+            "outcomes": "Ability to apply Metrics & Career in developer relations.",
+            "seo": {
+              "meta_title": "Metrics & Career",
+              "meta_description": "Learn the fundamentals of Metrics & Career for developer relations."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "grafana"
+            },
+            "children": [
+              {
+                "id": "metrics-and-career-measurement",
+                "label": "Measurement",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "metrics-and-career-measurement-engagement-metrics",
+                    "label": "Engagement Metrics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "metrics-and-career-measurement-content-performance",
+                    "label": "Content Performance",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "metrics-and-career-reporting",
+                "label": "Reporting",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "metrics-and-career-reporting-dashboards",
+                    "label": "Dashboards",
+                    "type": "module"
+                  },
+                  {
+                    "id": "metrics-and-career-reporting-insights-and-recommendations",
+                    "label": "Insights & Recommendations",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "metrics-and-career-career-growth",
+                "label": "Career Growth",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "metrics-and-career-career-growth-personal-brand",
+                    "label": "Personal Brand",
+                    "type": "module"
+                  },
+                  {
+                    "id": "metrics-and-career-career-growth-continuous-learning",
+                    "label": "Continuous Learning",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Technical Credibility",
-    "short_title": "Technical Credibility",
-    "slug": "technical-credibility",
-    "description": "Learn Technical Credibility for developer relations.",
-    "long_description": "Covers core concepts in Technical Credibility.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Technical Credibility.",
-    "outcomes": "Ability to apply Technical Credibility in developer relations.",
-    "seo": {
-      "meta_title": "Technical Credibility",
-      "meta_description": "Learn the fundamentals of Technical Credibility for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "technical"
-    },
-    "children": [
-      {
-        "id": "technical-credibility-api-and-docs",
-        "label": "API & Docs",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "technical-credibility-api-and-docs-api-design-basics",
-            "label": "API Design Basics",
-            "type": "module"
-          },
-          {
-            "id": "technical-credibility-api-and-docs-documentation-structure",
-            "label": "Documentation Structure",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "technical-credibility-developer-tooling",
-        "label": "Developer Tooling",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "technical-credibility-developer-tooling-sdks-and-samples",
-            "label": "SDKs & Samples",
-            "type": "module"
-          },
-          {
-            "id": "technical-credibility-developer-tooling-quickstarts",
-            "label": "Quickstarts",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "technical-credibility-hands-on-skills",
-        "label": "Hands-on Skills",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "technical-credibility-hands-on-skills-programming-basics",
-            "label": "Programming Basics",
-            "type": "module"
-          },
-          {
-            "id": "technical-credibility-hands-on-skills-debugging-and-support",
-            "label": "Debugging & Support",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Community & Programs",
-    "short_title": "Community & Programs",
-    "slug": "community-and-programs",
-    "description": "Learn Community & Programs for developer relations.",
-    "long_description": "Covers core concepts in Community & Programs.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Community & Programs.",
-    "outcomes": "Ability to apply Community & Programs in developer relations.",
-    "seo": {
-      "meta_title": "Community & Programs",
-      "meta_description": "Learn the fundamentals of Community & Programs for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "community"
-    },
-    "children": [
-      {
-        "id": "community-and-programs-community-building",
-        "label": "Community Building",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "community-and-programs-community-building-engagement-strategy",
-            "label": "Engagement Strategy",
-            "type": "module"
-          },
-          {
-            "id": "community-and-programs-community-building-code-of-conduct",
-            "label": "Code of Conduct",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "community-and-programs-developer-programs",
-        "label": "Developer Programs",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "community-and-programs-developer-programs-ambassadors",
-            "label": "Ambassadors",
-            "type": "module"
-          },
-          {
-            "id": "community-and-programs-developer-programs-open-source",
-            "label": "Open Source",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "community-and-programs-events",
-        "label": "Events",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "community-and-programs-events-workshops",
-            "label": "Workshops",
-            "type": "module"
-          },
-          {
-            "id": "community-and-programs-events-conferences-and-meetups",
-            "label": "Conferences & Meetups",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Content & Education",
-    "short_title": "Content & Education",
-    "slug": "content-and-education",
-    "description": "Learn Content & Education for developer relations.",
-    "long_description": "Covers core concepts in Content & Education.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Content & Education.",
-    "outcomes": "Ability to apply Content & Education in developer relations.",
-    "seo": {
-      "meta_title": "Content & Education",
-      "meta_description": "Learn the fundamentals of Content & Education for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "content"
-    },
-    "children": [
-      {
-        "id": "content-and-education-content-strategy",
-        "label": "Content Strategy",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "content-and-education-content-strategy-editorial-calendar",
-            "label": "Editorial Calendar",
-            "type": "module"
-          },
-          {
-            "id": "content-and-education-content-strategy-topic-research",
-            "label": "Topic Research",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "content-and-education-technical-writing",
-        "label": "Technical Writing",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "content-and-education-technical-writing-tutorials",
-            "label": "Tutorials",
-            "type": "module"
-          },
-          {
-            "id": "content-and-education-technical-writing-reference-guides",
-            "label": "Reference Guides",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "content-and-education-developer-education",
-        "label": "Developer Education",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "content-and-education-developer-education-courses",
-            "label": "Courses",
-            "type": "module"
-          },
-          {
-            "id": "content-and-education-developer-education-live-demos",
-            "label": "Live Demos",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Social & Advocacy",
-    "short_title": "Social & Advocacy",
-    "slug": "social-and-advocacy",
-    "description": "Learn Social & Advocacy for developer relations.",
-    "long_description": "Covers core concepts in Social & Advocacy.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Social & Advocacy.",
-    "outcomes": "Ability to apply Social & Advocacy in developer relations.",
-    "seo": {
-      "meta_title": "Social & Advocacy",
-      "meta_description": "Learn the fundamentals of Social & Advocacy for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "social"
-    },
-    "children": [
-      {
-        "id": "social-and-advocacy-public-speaking",
-        "label": "Public Speaking",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "social-and-advocacy-public-speaking-talk-design",
-            "label": "Talk Design",
-            "type": "module"
-          },
-          {
-            "id": "social-and-advocacy-public-speaking-qanda-handling",
-            "label": "Q&A Handling",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "social-and-advocacy-social-presence",
-        "label": "Social Presence",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "social-and-advocacy-social-presence-community-platforms",
-            "label": "Community Platforms",
-            "type": "module"
-          },
-          {
-            "id": "social-and-advocacy-social-presence-brand-voice",
-            "label": "Brand Voice",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "social-and-advocacy-advocacy",
-        "label": "Advocacy",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "social-and-advocacy-advocacy-customer-stories",
-            "label": "Customer Stories",
-            "type": "module"
-          },
-          {
-            "id": "social-and-advocacy-advocacy-product-feedback",
-            "label": "Product Feedback",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Metrics & Career",
-    "short_title": "Metrics & Career",
-    "slug": "metrics-and-career",
-    "description": "Learn Metrics & Career for developer relations.",
-    "long_description": "Covers core concepts in Metrics & Career.\nFocuses on practical developer relations workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Metrics & Career.",
-    "outcomes": "Ability to apply Metrics & Career in developer relations.",
-    "seo": {
-      "meta_title": "Metrics & Career",
-      "meta_description": "Learn the fundamentals of Metrics & Career for developer relations."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "metrics"
-    },
-    "children": [
-      {
-        "id": "metrics-and-career-measurement",
-        "label": "Measurement",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "metrics-and-career-measurement-engagement-metrics",
-            "label": "Engagement Metrics",
-            "type": "module"
-          },
-          {
-            "id": "metrics-and-career-measurement-content-performance",
-            "label": "Content Performance",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "metrics-and-career-reporting",
-        "label": "Reporting",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "metrics-and-career-reporting-dashboards",
-            "label": "Dashboards",
-            "type": "module"
-          },
-          {
-            "id": "metrics-and-career-reporting-insights-and-recommendations",
-            "label": "Insights & Recommendations",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "metrics-and-career-career-growth",
-        "label": "Career Growth",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "metrics-and-career-career-growth-personal-brand",
-            "label": "Personal Brand",
-            "type": "module"
-          },
-          {
-            "id": "metrics-and-career-career-growth-continuous-learning",
-            "label": "Continuous Learning",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 48,
+      "total_topics": 6,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

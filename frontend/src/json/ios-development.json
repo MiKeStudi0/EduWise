@@ -1,505 +1,556 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "iOS Foundations",
-    "short_title": "iOS Foundations",
-    "slug": "ios-foundations",
-    "description": "Learn iOS Foundations for iOS development.",
-    "long_description": "Covers core concepts in iOS Foundations.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in iOS Foundations.",
-    "outcomes": "Ability to apply iOS Foundations in iOS development.",
+{
+  "roadmap": {
+    "title": "iOS Development Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in iOS Development.",
     "seo": {
-      "meta_title": "iOS Foundations",
-      "meta_description": "Learn the fundamentals of iOS Foundations for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ios"
-    },
-    "children": [
-      {
-        "id": "ios-foundations-swift-basics",
-        "label": "Swift Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ios-foundations-swift-basics-syntax-and-types",
-            "label": "Syntax & Types",
-            "type": "module"
-          },
-          {
-            "id": "ios-foundations-swift-basics-optionals",
-            "label": "Optionals",
-            "type": "module"
-          }
-        ]
+      "meta_title": "iOS Development Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in iOS Development. Follow a phased, practical learning path.",
+      "keywords": [
+        "ios development roadmap",
+        "ios development roadmap 2026",
+        "learn ios development",
+        "ios development learning path"
+      ],
+      "canonical": "https://yourdomain.com/ios-development-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "iOS Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in iOS Development.",
+        "type": "website",
+        "url": "https://yourdomain.com/ios-development-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/ios-development-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "iOS Development Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "iOS Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in iOS Development.",
+        "image": "https://yourdomain.com/og/ios-development-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "ios-foundations-core-concepts",
-        "label": "Core Concepts",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for iOS Development.",
+        "estimated_total_hours": 56,
+        "topics": [
           {
-            "id": "ios-foundations-core-concepts-oop-and-protocols",
-            "label": "OOP & Protocols",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "iOS Foundations",
+            "short_title": "iOS Foundations",
+            "slug": "ios-foundations",
+            "description": "Learn iOS Foundations for iOS development.",
+            "long_description": "Covers core concepts in iOS Foundations.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in iOS Foundations.",
+            "outcomes": "Ability to apply iOS Foundations in iOS development.",
+            "seo": {
+              "meta_title": "iOS Foundations",
+              "meta_description": "Learn the fundamentals of iOS Foundations for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "ios"
+            },
+            "children": [
+              {
+                "id": "ios-foundations-swift-basics",
+                "label": "Swift Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ios-foundations-swift-basics-syntax-and-types",
+                    "label": "Syntax & Types",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ios-foundations-swift-basics-optionals",
+                    "label": "Optionals",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ios-foundations-core-concepts",
+                "label": "Core Concepts",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ios-foundations-core-concepts-oop-and-protocols",
+                    "label": "OOP & Protocols",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ios-foundations-core-concepts-memory-management-arc",
+                    "label": "Memory Management (ARC)",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ios-foundations-app-lifecycle",
+                "label": "App Lifecycle",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ios-foundations-app-lifecycle-view-controller-lifecycle",
+                    "label": "View Controller Lifecycle",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ios-foundations-app-lifecycle-app-states",
+                    "label": "App States",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ios-foundations-core-concepts-memory-management-arc",
-            "label": "Memory Management (ARC)",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ios-foundations-app-lifecycle",
-        "label": "App Lifecycle",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ios-foundations-app-lifecycle-view-controller-lifecycle",
-            "label": "View Controller Lifecycle",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "UI & Navigation",
+            "short_title": "UI & Navigation",
+            "slug": "ui-and-navigation",
+            "description": "Learn UI & Navigation for iOS development.",
+            "long_description": "Covers core concepts in UI & Navigation.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in UI & Navigation.",
+            "outcomes": "Ability to apply UI & Navigation in iOS development.",
+            "seo": {
+              "meta_title": "UI & Navigation",
+              "meta_description": "Learn the fundamentals of UI & Navigation for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "figma"
+            },
+            "children": [
+              {
+                "id": "ui-and-navigation-swiftui",
+                "label": "SwiftUI",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ui-and-navigation-swiftui-views-and-modifiers",
+                    "label": "Views & Modifiers",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ui-and-navigation-swiftui-state-management",
+                    "label": "State Management",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ui-and-navigation-uikit",
+                "label": "UIKit",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "ui-and-navigation-uikit-views-and-view-controllers",
+                    "label": "Views & View Controllers",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ui-and-navigation-uikit-auto-layout",
+                    "label": "Auto Layout",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "ui-and-navigation-navigation",
+                "label": "Navigation",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "ui-and-navigation-navigation-navigation-stack",
+                    "label": "Navigation Stack",
+                    "type": "module"
+                  },
+                  {
+                    "id": "ui-and-navigation-navigation-deep-links",
+                    "label": "Deep Links",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "ios-foundations-app-lifecycle-app-states",
-            "label": "App States",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Architecture & State",
+            "short_title": "Architecture & State",
+            "slug": "architecture-and-state",
+            "description": "Learn Architecture & State for iOS development.",
+            "long_description": "Covers core concepts in Architecture & State.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Architecture & State.",
+            "outcomes": "Ability to apply Architecture & State in iOS development.",
+            "seo": {
+              "meta_title": "Architecture & State",
+              "meta_description": "Learn the fundamentals of Architecture & State for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "kubernetes"
+            },
+            "children": [
+              {
+                "id": "architecture-and-state-architecture-patterns",
+                "label": "Architecture Patterns",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "architecture-and-state-architecture-patterns-mvvm",
+                    "label": "MVVM",
+                    "type": "module"
+                  },
+                  {
+                    "id": "architecture-and-state-architecture-patterns-coordinator",
+                    "label": "Coordinator",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "architecture-and-state-dependency-injection",
+                "label": "Dependency Injection",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "architecture-and-state-dependency-injection-protocols",
+                    "label": "Protocols",
+                    "type": "module"
+                  },
+                  {
+                    "id": "architecture-and-state-dependency-injection-factories",
+                    "label": "Factories",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "architecture-and-state-reactive-and-async",
+                "label": "Reactive & Async",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "architecture-and-state-reactive-and-async-combine",
+                    "label": "Combine",
+                    "type": "module"
+                  },
+                  {
+                    "id": "architecture-and-state-reactive-and-async-async-await",
+                    "label": "async/await",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Data & Networking",
+            "short_title": "Data & Networking",
+            "slug": "data-and-networking",
+            "description": "Learn Data & Networking for iOS development.",
+            "long_description": "Covers core concepts in Data & Networking.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Data & Networking.",
+            "outcomes": "Ability to apply Data & Networking in iOS development.",
+            "seo": {
+              "meta_title": "Data & Networking",
+              "meta_description": "Learn the fundamentals of Data & Networking for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "data-and-networking-persistence",
+                "label": "Persistence",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-and-networking-persistence-userdefaults",
+                    "label": "UserDefaults",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-networking-persistence-core-data",
+                    "label": "Core Data",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-and-networking-networking",
+                "label": "Networking",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "data-and-networking-networking-urlsession",
+                    "label": "URLSession",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-networking-networking-rest",
+                    "label": "REST",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "data-and-networking-parsing",
+                "label": "Parsing",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "data-and-networking-parsing-codable",
+                    "label": "Codable",
+                    "type": "module"
+                  },
+                  {
+                    "id": "data-and-networking-parsing-json",
+                    "label": "JSON",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Security & Privacy",
+            "short_title": "Security & Privacy",
+            "slug": "security-and-privacy",
+            "description": "Learn Security & Privacy for iOS development.",
+            "long_description": "Covers core concepts in Security & Privacy.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Security & Privacy.",
+            "outcomes": "Ability to apply Security & Privacy in iOS development.",
+            "seo": {
+              "meta_title": "Security & Privacy",
+              "meta_description": "Learn the fundamentals of Security & Privacy for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "owasp"
+            },
+            "children": [
+              {
+                "id": "security-and-privacy-security-basics",
+                "label": "Security Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "security-and-privacy-security-basics-keychain",
+                    "label": "Keychain",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-privacy-security-basics-secure-storage",
+                    "label": "Secure Storage",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "security-and-privacy-permissions-and-privacy",
+                "label": "Permissions & Privacy",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "security-and-privacy-permissions-and-privacy-app-permissions",
+                    "label": "App Permissions",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-privacy-permissions-and-privacy-privacy-labels",
+                    "label": "Privacy Labels",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "Testing & Quality",
+            "short_title": "Testing & Quality",
+            "slug": "testing-and-quality",
+            "description": "Learn Testing & Quality for iOS development.",
+            "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Testing & Quality.",
+            "outcomes": "Ability to apply Testing & Quality in iOS development.",
+            "seo": {
+              "meta_title": "Testing & Quality",
+              "meta_description": "Learn the fundamentals of Testing & Quality for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "pytest"
+            },
+            "children": [
+              {
+                "id": "testing-and-quality-testing",
+                "label": "Testing",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "testing-and-quality-testing-xctest",
+                    "label": "XCTest",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-testing-ui-testing",
+                    "label": "UI Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "testing-and-quality-debugging-and-profiling",
+                "label": "Debugging & Profiling",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "testing-and-quality-debugging-and-profiling-instruments",
+                    "label": "Instruments",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-debugging-and-profiling-memory-leaks",
+                    "label": "Memory Leaks",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "testing-and-quality-code-quality",
+                "label": "Code Quality",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "testing-and-quality-code-quality-swiftlint",
+                    "label": "SwiftLint",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-code-quality-swiftformat",
+                    "label": "SwiftFormat",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "roadmap_id": 1,
+            "title": "Release & Distribution",
+            "short_title": "Release & Distribution",
+            "slug": "release-and-distribution",
+            "description": "Learn Release & Distribution for iOS development.",
+            "long_description": "Covers core concepts in Release & Distribution.\nFocuses on practical iOS development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Release & Distribution.",
+            "outcomes": "Ability to apply Release & Distribution in iOS development.",
+            "seo": {
+              "meta_title": "Release & Distribution",
+              "meta_description": "Learn the fundamentals of Release & Distribution for iOS development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "release-and-distribution-app-signing-and-distribution",
+                "label": "App Signing & Distribution",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "release-and-distribution-app-signing-and-distribution-app-store",
+                    "label": "App Store",
+                    "type": "module"
+                  },
+                  {
+                    "id": "release-and-distribution-app-signing-and-distribution-testflight",
+                    "label": "TestFlight",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "release-and-distribution-ci-cd",
+                "label": "CI/CD",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "release-and-distribution-ci-cd-fastlane",
+                    "label": "Fastlane",
+                    "type": "module"
+                  },
+                  {
+                    "id": "release-and-distribution-ci-cd-github-actions",
+                    "label": "GitHub Actions",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "UI & Navigation",
-    "short_title": "UI & Navigation",
-    "slug": "ui-and-navigation",
-    "description": "Learn UI & Navigation for iOS development.",
-    "long_description": "Covers core concepts in UI & Navigation.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in UI & Navigation.",
-    "outcomes": "Ability to apply UI & Navigation in iOS development.",
-    "seo": {
-      "meta_title": "UI & Navigation",
-      "meta_description": "Learn the fundamentals of UI & Navigation for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "ui"
-    },
-    "children": [
-      {
-        "id": "ui-and-navigation-swiftui",
-        "label": "SwiftUI",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ui-and-navigation-swiftui-views-and-modifiers",
-            "label": "Views & Modifiers",
-            "type": "module"
-          },
-          {
-            "id": "ui-and-navigation-swiftui-state-management",
-            "label": "State Management",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ui-and-navigation-uikit",
-        "label": "UIKit",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "ui-and-navigation-uikit-views-and-view-controllers",
-            "label": "Views & View Controllers",
-            "type": "module"
-          },
-          {
-            "id": "ui-and-navigation-uikit-auto-layout",
-            "label": "Auto Layout",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "ui-and-navigation-navigation",
-        "label": "Navigation",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "ui-and-navigation-navigation-navigation-stack",
-            "label": "Navigation Stack",
-            "type": "module"
-          },
-          {
-            "id": "ui-and-navigation-navigation-deep-links",
-            "label": "Deep Links",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Architecture & State",
-    "short_title": "Architecture & State",
-    "slug": "architecture-and-state",
-    "description": "Learn Architecture & State for iOS development.",
-    "long_description": "Covers core concepts in Architecture & State.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Architecture & State.",
-    "outcomes": "Ability to apply Architecture & State in iOS development.",
-    "seo": {
-      "meta_title": "Architecture & State",
-      "meta_description": "Learn the fundamentals of Architecture & State for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "architecture"
-    },
-    "children": [
-      {
-        "id": "architecture-and-state-architecture-patterns",
-        "label": "Architecture Patterns",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "architecture-and-state-architecture-patterns-mvvm",
-            "label": "MVVM",
-            "type": "module"
-          },
-          {
-            "id": "architecture-and-state-architecture-patterns-coordinator",
-            "label": "Coordinator",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "architecture-and-state-dependency-injection",
-        "label": "Dependency Injection",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "architecture-and-state-dependency-injection-protocols",
-            "label": "Protocols",
-            "type": "module"
-          },
-          {
-            "id": "architecture-and-state-dependency-injection-factories",
-            "label": "Factories",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "architecture-and-state-reactive-and-async",
-        "label": "Reactive & Async",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "architecture-and-state-reactive-and-async-combine",
-            "label": "Combine",
-            "type": "module"
-          },
-          {
-            "id": "architecture-and-state-reactive-and-async-async-await",
-            "label": "async/await",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Data & Networking",
-    "short_title": "Data & Networking",
-    "slug": "data-and-networking",
-    "description": "Learn Data & Networking for iOS development.",
-    "long_description": "Covers core concepts in Data & Networking.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Data & Networking.",
-    "outcomes": "Ability to apply Data & Networking in iOS development.",
-    "seo": {
-      "meta_title": "Data & Networking",
-      "meta_description": "Learn the fundamentals of Data & Networking for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "data"
-    },
-    "children": [
-      {
-        "id": "data-and-networking-persistence",
-        "label": "Persistence",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-and-networking-persistence-userdefaults",
-            "label": "UserDefaults",
-            "type": "module"
-          },
-          {
-            "id": "data-and-networking-persistence-core-data",
-            "label": "Core Data",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-and-networking-networking",
-        "label": "Networking",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "data-and-networking-networking-urlsession",
-            "label": "URLSession",
-            "type": "module"
-          },
-          {
-            "id": "data-and-networking-networking-rest",
-            "label": "REST",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "data-and-networking-parsing",
-        "label": "Parsing",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "data-and-networking-parsing-codable",
-            "label": "Codable",
-            "type": "module"
-          },
-          {
-            "id": "data-and-networking-parsing-json",
-            "label": "JSON",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Security & Privacy",
-    "short_title": "Security & Privacy",
-    "slug": "security-and-privacy",
-    "description": "Learn Security & Privacy for iOS development.",
-    "long_description": "Covers core concepts in Security & Privacy.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Security & Privacy.",
-    "outcomes": "Ability to apply Security & Privacy in iOS development.",
-    "seo": {
-      "meta_title": "Security & Privacy",
-      "meta_description": "Learn the fundamentals of Security & Privacy for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "security"
-    },
-    "children": [
-      {
-        "id": "security-and-privacy-security-basics",
-        "label": "Security Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "security-and-privacy-security-basics-keychain",
-            "label": "Keychain",
-            "type": "module"
-          },
-          {
-            "id": "security-and-privacy-security-basics-secure-storage",
-            "label": "Secure Storage",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "security-and-privacy-permissions-and-privacy",
-        "label": "Permissions & Privacy",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "security-and-privacy-permissions-and-privacy-app-permissions",
-            "label": "App Permissions",
-            "type": "module"
-          },
-          {
-            "id": "security-and-privacy-permissions-and-privacy-privacy-labels",
-            "label": "Privacy Labels",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "Testing & Quality",
-    "short_title": "Testing & Quality",
-    "slug": "testing-and-quality",
-    "description": "Learn Testing & Quality for iOS development.",
-    "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Testing & Quality.",
-    "outcomes": "Ability to apply Testing & Quality in iOS development.",
-    "seo": {
-      "meta_title": "Testing & Quality",
-      "meta_description": "Learn the fundamentals of Testing & Quality for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "testing"
-    },
-    "children": [
-      {
-        "id": "testing-and-quality-testing",
-        "label": "Testing",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "testing-and-quality-testing-xctest",
-            "label": "XCTest",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-testing-ui-testing",
-            "label": "UI Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "testing-and-quality-debugging-and-profiling",
-        "label": "Debugging & Profiling",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "testing-and-quality-debugging-and-profiling-instruments",
-            "label": "Instruments",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-debugging-and-profiling-memory-leaks",
-            "label": "Memory Leaks",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "testing-and-quality-code-quality",
-        "label": "Code Quality",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "testing-and-quality-code-quality-swiftlint",
-            "label": "SwiftLint",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-code-quality-swiftformat",
-            "label": "SwiftFormat",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "roadmap_id": 1,
-    "title": "Release & Distribution",
-    "short_title": "Release & Distribution",
-    "slug": "release-and-distribution",
-    "description": "Learn Release & Distribution for iOS development.",
-    "long_description": "Covers core concepts in Release & Distribution.\nFocuses on practical iOS development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Release & Distribution.",
-    "outcomes": "Ability to apply Release & Distribution in iOS development.",
-    "seo": {
-      "meta_title": "Release & Distribution",
-      "meta_description": "Learn the fundamentals of Release & Distribution for iOS development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "release"
-    },
-    "children": [
-      {
-        "id": "release-and-distribution-app-signing-and-distribution",
-        "label": "App Signing & Distribution",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "release-and-distribution-app-signing-and-distribution-app-store",
-            "label": "App Store",
-            "type": "module"
-          },
-          {
-            "id": "release-and-distribution-app-signing-and-distribution-testflight",
-            "label": "TestFlight",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "release-and-distribution-ci-cd",
-        "label": "CI/CD",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "release-and-distribution-ci-cd-fastlane",
-            "label": "Fastlane",
-            "type": "module"
-          },
-          {
-            "id": "release-and-distribution-ci-cd-github-actions",
-            "label": "GitHub Actions",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 56,
+      "total_topics": 7,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

@@ -1,541 +1,592 @@
-[
-  {
-    "id": 1,
-    "roadmap_id": 1,
-    "title": "Web Foundations",
-    "short_title": "Web Foundations",
-    "slug": "web-foundations",
-    "description": "Learn Web Foundations for full stack development.",
-    "long_description": "Covers core concepts in Web Foundations.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Web Foundations.",
-    "outcomes": "Ability to apply Web Foundations in full stack development.",
+{
+  "roadmap": {
+    "title": "Full Stack Development Roadmap",
+    "description": "A comprehensive, phased approach to becoming proficient in Full Stack Development.",
     "seo": {
-      "meta_title": "Web Foundations",
-      "meta_description": "Learn the fundamentals of Web Foundations for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "web"
-    },
-    "children": [
-      {
-        "id": "web-foundations-internet-and-http",
-        "label": "Internet & HTTP",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "web-foundations-internet-and-http-dns-and-hosting",
-            "label": "DNS & Hosting",
-            "type": "module"
-          },
-          {
-            "id": "web-foundations-internet-and-http-http-https-and-apis",
-            "label": "HTTP/HTTPS & APIs",
-            "type": "module"
-          }
-        ]
+      "meta_title": "Full Stack Development Roadmap 2026 - Complete Step-by-Step Guide",
+      "meta_description": "A roadmap to becoming proficient in Full Stack Development. Follow a phased, practical learning path.",
+      "keywords": [
+        "full stack development roadmap",
+        "full stack development roadmap 2026",
+        "learn full stack development",
+        "full stack development learning path"
+      ],
+      "canonical": "https://yourdomain.com/full-stack-development-roadmap",
+      "robots": "index, follow",
+      "open_graph": {
+        "title": "Full Stack Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Full Stack Development.",
+        "type": "website",
+        "url": "https://yourdomain.com/full-stack-development-roadmap",
+        "site_name": "Mike Devlogs",
+        "image": {
+          "url": "https://yourdomain.com/og/full-stack-development-roadmap.png",
+          "width": 1200,
+          "height": 630,
+          "alt": "Full Stack Development Roadmap"
+        }
       },
+      "twitter": {
+        "card": "summary_large_image",
+        "title": "Full Stack Development Roadmap",
+        "description": "A comprehensive, phased approach to becoming proficient in Full Stack Development.",
+        "image": "https://yourdomain.com/og/full-stack-development-roadmap.png"
+      }
+    },
+    "phases": [
       {
-        "id": "web-foundations-html-and-accessibility",
-        "label": "HTML & Accessibility",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
+        "phase_number": 1,
+        "phase_name": "Core Learning Path",
+        "phase_description": "Complete, step-by-step roadmap for Full Stack Development.",
+        "estimated_total_hours": 56,
+        "topics": [
           {
-            "id": "web-foundations-html-and-accessibility-semantic-html",
-            "label": "Semantic HTML",
-            "type": "module"
+            "id": 1,
+            "roadmap_id": 1,
+            "title": "Web Foundations",
+            "short_title": "Web Foundations",
+            "slug": "web-foundations",
+            "description": "Learn Web Foundations for full stack development.",
+            "long_description": "Covers core concepts in Web Foundations.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Web Foundations.",
+            "outcomes": "Ability to apply Web Foundations in full stack development.",
+            "seo": {
+              "meta_title": "Web Foundations",
+              "meta_description": "Learn the fundamentals of Web Foundations for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "nodedotjs"
+            },
+            "children": [
+              {
+                "id": "web-foundations-internet-and-http",
+                "label": "Internet & HTTP",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "web-foundations-internet-and-http-dns-and-hosting",
+                    "label": "DNS & Hosting",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web-foundations-internet-and-http-http-https-and-apis",
+                    "label": "HTTP/HTTPS & APIs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "web-foundations-html-and-accessibility",
+                "label": "HTML & Accessibility",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "web-foundations-html-and-accessibility-semantic-html",
+                    "label": "Semantic HTML",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web-foundations-html-and-accessibility-aria-and-wcag-basics",
+                    "label": "ARIA & WCAG Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "web-foundations-css-fundamentals",
+                "label": "CSS Fundamentals",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "web-foundations-css-fundamentals-layout-flex-grid",
+                    "label": "Layout (Flex/Grid)",
+                    "type": "module"
+                  },
+                  {
+                    "id": "web-foundations-css-fundamentals-responsive-design",
+                    "label": "Responsive Design",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "web-foundations-html-and-accessibility-aria-and-wcag-basics",
-            "label": "ARIA & WCAG Basics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "web-foundations-css-fundamentals",
-        "label": "CSS Fundamentals",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "web-foundations-css-fundamentals-layout-flex-grid",
-            "label": "Layout (Flex/Grid)",
-            "type": "module"
+            "id": 2,
+            "roadmap_id": 1,
+            "title": "Frontend Development",
+            "short_title": "Frontend Development",
+            "slug": "frontend-development",
+            "description": "Learn Frontend Development for full stack development.",
+            "long_description": "Covers core concepts in Frontend Development.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Frontend Development.",
+            "outcomes": "Ability to apply Frontend Development in full stack development.",
+            "seo": {
+              "meta_title": "Frontend Development",
+              "meta_description": "Learn the fundamentals of Frontend Development for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "nodedotjs"
+            },
+            "children": [
+              {
+                "id": "frontend-development-javascript-core",
+                "label": "JavaScript Core",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "frontend-development-javascript-core-es6plus-and-dom",
+                    "label": "ES6+ & DOM",
+                    "type": "module"
+                  },
+                  {
+                    "id": "frontend-development-javascript-core-async-and-fetch",
+                    "label": "Async & Fetch",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "frontend-development-frontend-frameworks",
+                "label": "Frontend Frameworks",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "frontend-development-frontend-frameworks-react",
+                    "label": "React",
+                    "type": "module"
+                  },
+                  {
+                    "id": "frontend-development-frontend-frameworks-state-management",
+                    "label": "State Management",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "frontend-development-ui-ux-basics",
+                "label": "UI/UX Basics",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "frontend-development-ui-ux-basics-design-systems",
+                    "label": "Design Systems",
+                    "type": "module"
+                  },
+                  {
+                    "id": "frontend-development-ui-ux-basics-component-architecture",
+                    "label": "Component Architecture",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "id": "web-foundations-css-fundamentals-responsive-design",
-            "label": "Responsive Design",
-            "type": "module"
+            "id": 3,
+            "roadmap_id": 1,
+            "title": "Backend Development",
+            "short_title": "Backend Development",
+            "slug": "backend-development",
+            "description": "Learn Backend Development for full stack development.",
+            "long_description": "Covers core concepts in Backend Development.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Backend Development.",
+            "outcomes": "Ability to apply Backend Development in full stack development.",
+            "seo": {
+              "meta_title": "Backend Development",
+              "meta_description": "Learn the fundamentals of Backend Development for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "nodedotjs"
+            },
+            "children": [
+              {
+                "id": "backend-development-server-fundamentals",
+                "label": "Server Fundamentals",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "backend-development-server-fundamentals-routing-and-middleware",
+                    "label": "Routing & Middleware",
+                    "type": "module"
+                  },
+                  {
+                    "id": "backend-development-server-fundamentals-rest-patterns",
+                    "label": "REST Patterns",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "backend-development-api-design",
+                "label": "API Design",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "backend-development-api-design-authentication-and-authz",
+                    "label": "Authentication & AuthZ",
+                    "type": "module"
+                  },
+                  {
+                    "id": "backend-development-api-design-versioning-and-docs",
+                    "label": "Versioning & Docs",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "backend-development-backend-frameworks",
+                "label": "Backend Frameworks",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "backend-development-backend-frameworks-node-express-or-nest",
+                    "label": "Node/Express or Nest",
+                    "type": "module"
+                  },
+                  {
+                    "id": "backend-development-backend-frameworks-python-fastapi-or-django",
+                    "label": "Python/FastAPI or Django",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "roadmap_id": 1,
+            "title": "Databases & Data",
+            "short_title": "Databases & Data",
+            "slug": "databases-and-data",
+            "description": "Learn Databases & Data for full stack development.",
+            "long_description": "Covers core concepts in Databases & Data.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Databases & Data.",
+            "outcomes": "Ability to apply Databases & Data in full stack development.",
+            "seo": {
+              "meta_title": "Databases & Data",
+              "meta_description": "Learn the fundamentals of Databases & Data for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "databricks"
+            },
+            "children": [
+              {
+                "id": "databases-and-data-sql-databases",
+                "label": "SQL Databases",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "databases-and-data-sql-databases-schema-design",
+                    "label": "Schema Design",
+                    "type": "module"
+                  },
+                  {
+                    "id": "databases-and-data-sql-databases-indexes-and-query-tuning",
+                    "label": "Indexes & Query Tuning",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "databases-and-data-nosql-databases",
+                "label": "NoSQL Databases",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "databases-and-data-nosql-databases-document-stores",
+                    "label": "Document Stores",
+                    "type": "module"
+                  },
+                  {
+                    "id": "databases-and-data-nosql-databases-caching-layers",
+                    "label": "Caching Layers",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "databases-and-data-data-modeling",
+                "label": "Data Modeling",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "databases-and-data-data-modeling-erd-basics",
+                    "label": "ERD Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "databases-and-data-data-modeling-transactions-and-consistency",
+                    "label": "Transactions & Consistency",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 5,
+            "roadmap_id": 1,
+            "title": "Testing & Quality",
+            "short_title": "Testing & Quality",
+            "slug": "testing-and-quality",
+            "description": "Learn Testing & Quality for full stack development.",
+            "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Testing & Quality.",
+            "outcomes": "Ability to apply Testing & Quality in full stack development.",
+            "seo": {
+              "meta_title": "Testing & Quality",
+              "meta_description": "Learn the fundamentals of Testing & Quality for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "pytest"
+            },
+            "children": [
+              {
+                "id": "testing-and-quality-testing-types",
+                "label": "Testing Types",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "testing-and-quality-testing-types-unit-and-integration",
+                    "label": "Unit & Integration",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-testing-types-e2e-testing",
+                    "label": "E2E Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "testing-and-quality-code-quality",
+                "label": "Code Quality",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "testing-and-quality-code-quality-linting-and-formatting",
+                    "label": "Linting & Formatting",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-code-quality-code-reviews",
+                    "label": "Code Reviews",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "testing-and-quality-observability",
+                "label": "Observability",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "testing-and-quality-observability-logging",
+                    "label": "Logging",
+                    "type": "module"
+                  },
+                  {
+                    "id": "testing-and-quality-observability-metrics-and-tracing",
+                    "label": "Metrics & Tracing",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "roadmap_id": 1,
+            "title": "DevOps & Deployment",
+            "short_title": "DevOps & Deployment",
+            "slug": "devops-and-deployment",
+            "description": "Learn DevOps & Deployment for full stack development.",
+            "long_description": "Covers core concepts in DevOps & Deployment.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in DevOps & Deployment.",
+            "outcomes": "Ability to apply DevOps & Deployment in full stack development.",
+            "seo": {
+              "meta_title": "DevOps & Deployment",
+              "meta_description": "Learn the fundamentals of DevOps & Deployment for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "docker"
+            },
+            "children": [
+              {
+                "id": "devops-and-deployment-ci-cd",
+                "label": "CI/CD",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "devops-and-deployment-ci-cd-build-pipelines",
+                    "label": "Build Pipelines",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devops-and-deployment-ci-cd-release-strategies",
+                    "label": "Release Strategies",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "devops-and-deployment-containers-and-orchestration",
+                "label": "Containers & Orchestration",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "devops-and-deployment-containers-and-orchestration-docker",
+                    "label": "Docker",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devops-and-deployment-containers-and-orchestration-kubernetes-basics",
+                    "label": "Kubernetes Basics",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "devops-and-deployment-cloud-and-hosting",
+                "label": "Cloud & Hosting",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "devops-and-deployment-cloud-and-hosting-aws-gcp-azure-basics",
+                    "label": "AWS/GCP/Azure Basics",
+                    "type": "module"
+                  },
+                  {
+                    "id": "devops-and-deployment-cloud-and-hosting-serverless-concepts",
+                    "label": "Serverless Concepts",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 7,
+            "roadmap_id": 1,
+            "title": "Security & Performance",
+            "short_title": "Security & Performance",
+            "slug": "security-and-performance",
+            "description": "Learn Security & Performance for full stack development.",
+            "long_description": "Covers core concepts in Security & Performance.\nFocuses on practical full stack development workflows.",
+            "estimated_hours": 8,
+            "recommendation": "P",
+            "learning_objectives": "Understand key concepts in Security & Performance.",
+            "outcomes": "Ability to apply Security & Performance in full stack development.",
+            "seo": {
+              "meta_title": "Security & Performance",
+              "meta_description": "Learn the fundamentals of Security & Performance for full stack development."
+            },
+            "ui_config": {
+              "topic_layout": "grouped",
+              "icon_slug": "owasp"
+            },
+            "children": [
+              {
+                "id": "security-and-performance-web-security",
+                "label": "Web Security",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "security-and-performance-web-security-owasp-top-10",
+                    "label": "OWASP Top 10",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-performance-web-security-cors-and-csp",
+                    "label": "CORS & CSP",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "security-and-performance-performance",
+                "label": "Performance",
+                "type": "subtopic",
+                "side": "right",
+                "children": [
+                  {
+                    "id": "security-and-performance-performance-caching-strategies",
+                    "label": "Caching Strategies",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-performance-performance-load-testing",
+                    "label": "Load Testing",
+                    "type": "module"
+                  }
+                ]
+              },
+              {
+                "id": "security-and-performance-scalability",
+                "label": "Scalability",
+                "type": "subtopic",
+                "side": "left",
+                "children": [
+                  {
+                    "id": "security-and-performance-scalability-horizontal-scaling",
+                    "label": "Horizontal Scaling",
+                    "type": "module"
+                  },
+                  {
+                    "id": "security-and-performance-scalability-queues-and-background-jobs",
+                    "label": "Queues & Background Jobs",
+                    "type": "module"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  {
-    "id": 2,
-    "roadmap_id": 1,
-    "title": "Frontend Development",
-    "short_title": "Frontend Development",
-    "slug": "frontend-development",
-    "description": "Learn Frontend Development for full stack development.",
-    "long_description": "Covers core concepts in Frontend Development.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Frontend Development.",
-    "outcomes": "Ability to apply Frontend Development in full stack development.",
-    "seo": {
-      "meta_title": "Frontend Development",
-      "meta_description": "Learn the fundamentals of Frontend Development for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "frontend"
-    },
-    "children": [
-      {
-        "id": "frontend-development-javascript-core",
-        "label": "JavaScript Core",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "frontend-development-javascript-core-es6plus-and-dom",
-            "label": "ES6+ & DOM",
-            "type": "module"
-          },
-          {
-            "id": "frontend-development-javascript-core-async-and-fetch",
-            "label": "Async & Fetch",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "frontend-development-frontend-frameworks",
-        "label": "Frontend Frameworks",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "frontend-development-frontend-frameworks-react",
-            "label": "React",
-            "type": "module"
-          },
-          {
-            "id": "frontend-development-frontend-frameworks-state-management",
-            "label": "State Management",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "frontend-development-ui-ux-basics",
-        "label": "UI/UX Basics",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "frontend-development-ui-ux-basics-design-systems",
-            "label": "Design Systems",
-            "type": "module"
-          },
-          {
-            "id": "frontend-development-ui-ux-basics-component-architecture",
-            "label": "Component Architecture",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 3,
-    "roadmap_id": 1,
-    "title": "Backend Development",
-    "short_title": "Backend Development",
-    "slug": "backend-development",
-    "description": "Learn Backend Development for full stack development.",
-    "long_description": "Covers core concepts in Backend Development.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Backend Development.",
-    "outcomes": "Ability to apply Backend Development in full stack development.",
-    "seo": {
-      "meta_title": "Backend Development",
-      "meta_description": "Learn the fundamentals of Backend Development for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "backend"
-    },
-    "children": [
-      {
-        "id": "backend-development-server-fundamentals",
-        "label": "Server Fundamentals",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "backend-development-server-fundamentals-routing-and-middleware",
-            "label": "Routing & Middleware",
-            "type": "module"
-          },
-          {
-            "id": "backend-development-server-fundamentals-rest-patterns",
-            "label": "REST Patterns",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "backend-development-api-design",
-        "label": "API Design",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "backend-development-api-design-authentication-and-authz",
-            "label": "Authentication & AuthZ",
-            "type": "module"
-          },
-          {
-            "id": "backend-development-api-design-versioning-and-docs",
-            "label": "Versioning & Docs",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "backend-development-backend-frameworks",
-        "label": "Backend Frameworks",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "backend-development-backend-frameworks-node-express-or-nest",
-            "label": "Node/Express or Nest",
-            "type": "module"
-          },
-          {
-            "id": "backend-development-backend-frameworks-python-fastapi-or-django",
-            "label": "Python/FastAPI or Django",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "roadmap_id": 1,
-    "title": "Databases & Data",
-    "short_title": "Databases & Data",
-    "slug": "databases-and-data",
-    "description": "Learn Databases & Data for full stack development.",
-    "long_description": "Covers core concepts in Databases & Data.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Databases & Data.",
-    "outcomes": "Ability to apply Databases & Data in full stack development.",
-    "seo": {
-      "meta_title": "Databases & Data",
-      "meta_description": "Learn the fundamentals of Databases & Data for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "databases"
-    },
-    "children": [
-      {
-        "id": "databases-and-data-sql-databases",
-        "label": "SQL Databases",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "databases-and-data-sql-databases-schema-design",
-            "label": "Schema Design",
-            "type": "module"
-          },
-          {
-            "id": "databases-and-data-sql-databases-indexes-and-query-tuning",
-            "label": "Indexes & Query Tuning",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "databases-and-data-nosql-databases",
-        "label": "NoSQL Databases",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "databases-and-data-nosql-databases-document-stores",
-            "label": "Document Stores",
-            "type": "module"
-          },
-          {
-            "id": "databases-and-data-nosql-databases-caching-layers",
-            "label": "Caching Layers",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "databases-and-data-data-modeling",
-        "label": "Data Modeling",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "databases-and-data-data-modeling-erd-basics",
-            "label": "ERD Basics",
-            "type": "module"
-          },
-          {
-            "id": "databases-and-data-data-modeling-transactions-and-consistency",
-            "label": "Transactions & Consistency",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "roadmap_id": 1,
-    "title": "Testing & Quality",
-    "short_title": "Testing & Quality",
-    "slug": "testing-and-quality",
-    "description": "Learn Testing & Quality for full stack development.",
-    "long_description": "Covers core concepts in Testing & Quality.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Testing & Quality.",
-    "outcomes": "Ability to apply Testing & Quality in full stack development.",
-    "seo": {
-      "meta_title": "Testing & Quality",
-      "meta_description": "Learn the fundamentals of Testing & Quality for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "testing"
-    },
-    "children": [
-      {
-        "id": "testing-and-quality-testing-types",
-        "label": "Testing Types",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "testing-and-quality-testing-types-unit-and-integration",
-            "label": "Unit & Integration",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-testing-types-e2e-testing",
-            "label": "E2E Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "testing-and-quality-code-quality",
-        "label": "Code Quality",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "testing-and-quality-code-quality-linting-and-formatting",
-            "label": "Linting & Formatting",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-code-quality-code-reviews",
-            "label": "Code Reviews",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "testing-and-quality-observability",
-        "label": "Observability",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "testing-and-quality-observability-logging",
-            "label": "Logging",
-            "type": "module"
-          },
-          {
-            "id": "testing-and-quality-observability-metrics-and-tracing",
-            "label": "Metrics & Tracing",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "roadmap_id": 1,
-    "title": "DevOps & Deployment",
-    "short_title": "DevOps & Deployment",
-    "slug": "devops-and-deployment",
-    "description": "Learn DevOps & Deployment for full stack development.",
-    "long_description": "Covers core concepts in DevOps & Deployment.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in DevOps & Deployment.",
-    "outcomes": "Ability to apply DevOps & Deployment in full stack development.",
-    "seo": {
-      "meta_title": "DevOps & Deployment",
-      "meta_description": "Learn the fundamentals of DevOps & Deployment for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "devops"
-    },
-    "children": [
-      {
-        "id": "devops-and-deployment-ci-cd",
-        "label": "CI/CD",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "devops-and-deployment-ci-cd-build-pipelines",
-            "label": "Build Pipelines",
-            "type": "module"
-          },
-          {
-            "id": "devops-and-deployment-ci-cd-release-strategies",
-            "label": "Release Strategies",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "devops-and-deployment-containers-and-orchestration",
-        "label": "Containers & Orchestration",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "devops-and-deployment-containers-and-orchestration-docker",
-            "label": "Docker",
-            "type": "module"
-          },
-          {
-            "id": "devops-and-deployment-containers-and-orchestration-kubernetes-basics",
-            "label": "Kubernetes Basics",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "devops-and-deployment-cloud-and-hosting",
-        "label": "Cloud & Hosting",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "devops-and-deployment-cloud-and-hosting-aws-gcp-azure-basics",
-            "label": "AWS/GCP/Azure Basics",
-            "type": "module"
-          },
-          {
-            "id": "devops-and-deployment-cloud-and-hosting-serverless-concepts",
-            "label": "Serverless Concepts",
-            "type": "module"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "roadmap_id": 1,
-    "title": "Security & Performance",
-    "short_title": "Security & Performance",
-    "slug": "security-and-performance",
-    "description": "Learn Security & Performance for full stack development.",
-    "long_description": "Covers core concepts in Security & Performance.\nFocuses on practical full stack development workflows.",
-    "estimated_hours": 8,
-    "recommendation": "P",
-    "learning_objectives": "Understand key concepts in Security & Performance.",
-    "outcomes": "Ability to apply Security & Performance in full stack development.",
-    "seo": {
-      "meta_title": "Security & Performance",
-      "meta_description": "Learn the fundamentals of Security & Performance for full stack development."
-    },
-    "ui_config": {
-      "topic_layout": "grouped",
-      "icon_slug": "security"
-    },
-    "children": [
-      {
-        "id": "security-and-performance-web-security",
-        "label": "Web Security",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "security-and-performance-web-security-owasp-top-10",
-            "label": "OWASP Top 10",
-            "type": "module"
-          },
-          {
-            "id": "security-and-performance-web-security-cors-and-csp",
-            "label": "CORS & CSP",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "security-and-performance-performance",
-        "label": "Performance",
-        "type": "subtopic",
-        "side": "right",
-        "children": [
-          {
-            "id": "security-and-performance-performance-caching-strategies",
-            "label": "Caching Strategies",
-            "type": "module"
-          },
-          {
-            "id": "security-and-performance-performance-load-testing",
-            "label": "Load Testing",
-            "type": "module"
-          }
-        ]
-      },
-      {
-        "id": "security-and-performance-scalability",
-        "label": "Scalability",
-        "type": "subtopic",
-        "side": "left",
-        "children": [
-          {
-            "id": "security-and-performance-scalability-horizontal-scaling",
-            "label": "Horizontal Scaling",
-            "type": "module"
-          },
-          {
-            "id": "security-and-performance-scalability-queues-and-background-jobs",
-            "label": "Queues & Background Jobs",
-            "type": "module"
-          }
-        ]
-      }
-    ]
+    ],
+    "metadata": {
+      "total_estimated_hours": 56,
+      "total_topics": 7,
+      "roadmap_version": "1.0",
+      "last_updated": "2026-02-13"
+    }
   }
-]
+}

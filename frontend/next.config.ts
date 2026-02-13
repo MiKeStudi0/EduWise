@@ -1,11 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  turbopack: {
-    root: __dirname,
-  },
+  output: "export", // 🔑 REQUIRED for static export
 
   images: {
+    unoptimized: true, // 🔑 REQUIRED for static hosting
     remotePatterns: [
       { protocol: "https", hostname: "images.unsplash.com" },
       { protocol: "https", hostname: "www.google.com" },
