@@ -19,90 +19,91 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { topics } from "./Topics";
 
 // --- Data Structure (Unchanged) ---
-const topics = [
-  {
-    id: "html",
-    name: "HTML",
-    icon: FileCode,
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10",
-    lessons: [
-      { 
-        id: "intro", 
-        title: "Introduction to HTML", 
-        description: "HTML (HyperText Markup Language) is the skeleton of every website. It tells the browser what content is on the page—headings, paragraphs, images, and links.",
-        videoUrl: "https://www.youtube.com/embed/UB1O30fR-EE", 
-        problem: "Computers need a structured way to understand text, images, and layout. Without HTML, a browser would just see a blob of unformatted text.",
-        mentalModel: "Think of HTML like the frame of a house. It defines the rooms (sections) and structure, but it doesn't decide the paint color (CSS) or how the lights turn on (JavaScript).",
-        whenToUse: ["Structuring web content", "Creating forms", "Embedding images/video"],
-        whenNotToUse: ["Styling the page (use CSS)", "Complex logic (use JS)"],
-        syntax: "<tagname>Content goes here...</tagname>",
-        code: `<!DOCTYPE html>
-<html>
-<head>
-  <title>My First Page</title>
-</head>
-<body>
-  <h1>Hello World</h1>
-  <p>This is my first website.</p>
-</body>
-</html>`,
-        subtopics: [
-            {
-                title: "The Anatomy of an Element",
-                content: "An HTML element usually consists of a start tag, content, and an end tag.",
-                example: "<h1>This is a Heading</h1>",
-                tip: "Tags are case-insensitive, but it's best practice to use lowercase (e.g., <div> not <DIV>)."
-            },
-            {
-                title: "Nesting Elements",
-                content: "Elements can contain other elements. This is called nesting.",
-                example: "<div><p>I am inside a div!</p></div>",
-                tip: "Always close inner tags before closing outer tags. Think of them like Russian nesting dolls."
-            }
-        ],
-        commonMistakes: [
-            "Forgetting the end tag (e.g., leaving a <p> open).",
-            "Nesting block elements inside inline elements incorrectly."
-        ],
-        bonusTip: "Use semantic tags like <article> and <section> instead of just <div> for better SEO and accessibility."
-      },
-    ],
-  },
-  {
-    id: "css",
-    name: "CSS",
-    icon: Palette,
-    color: "text-blue-500",
-    bgColor: "bg-blue-500/10",
-    lessons: [
-      { 
-        id: "intro", 
-        title: "Introduction to CSS", 
-        description: "CSS (Cascading Style Sheets) controls how HTML elements are displayed.",
-        videoUrl: "https://www.youtube.com/embed/yfoY53QXEnI",
-        problem: "HTML is ugly by default. CSS solves the problem of design, layout, and visual hierarchy.",
-        mentalModel: "If HTML is the skeleton, CSS is the skin, clothes, and makeup.",
-        whenToUse: ["Changing colors/fonts", "Layouts (Grid/Flexbox)", "Responsive design"],
-        whenNotToUse: ["Defining page structure (use HTML)", "Handling data logic (use JS)"],
-        syntax: "selector { property: value; }",
-        code: `body {
-  font-family: sans-serif;
-  background-color: #f0f0f0;
-}
-h1 {
-  color: navy;
-  text-align: center;
-}`,
-        subtopics: [],
-        commonMistakes: [" forgetting the semi-colon ; at the end of a line."],
-        bonusTip: "Use CSS Variables (--primary-color) to make theme changes easy."
-      },
-    ],
-  },
-];
+// const topics = [
+//   {
+//     id: "html",
+//     name: "HTML",
+//     icon: FileCode,
+//     color: "text-orange-500",
+//     bgColor: "bg-orange-500/10",
+//     lessons: [
+//       { 
+//         id: "intro", 
+//         title: "Introduction to HTML", 
+//         description: "HTML (HyperText Markup Language) is the skeleton of every website. It tells the browser what content is on the page—headings, paragraphs, images, and links.",
+//         videoUrl: "https://www.youtube.com/embed/UB1O30fR-EE", 
+//         problem: "Computers need a structured way to understand text, images, and layout. Without HTML, a browser would just see a blob of unformatted text.",
+//         mentalModel: "Think of HTML like the frame of a house. It defines the rooms (sections) and structure, but it doesn't decide the paint color (CSS) or how the lights turn on (JavaScript).",
+//         whenToUse: ["Structuring web content", "Creating forms", "Embedding images/video"],
+//         whenNotToUse: ["Styling the page (use CSS)", "Complex logic (use JS)"],
+//         syntax: "<tagname>Content goes here...</tagname>",
+//         code: `<!DOCTYPE html>
+// <html>
+// <head>
+//   <title>My First Page</title>
+// </head>
+// <body>
+//   <h1>Hello World</h1>
+//   <p>This is my first website.</p>
+// </body>
+// </html>`,
+//         subtopics: [
+//             {
+//                 title: "The Anatomy of an Element",
+//                 content: "An HTML element usually consists of a start tag, content, and an end tag.",
+//                 example: "<h1>This is a Heading</h1>",
+//                 tip: "Tags are case-insensitive, but it's best practice to use lowercase (e.g., <div> not <DIV>)."
+//             },
+//             {
+//                 title: "Nesting Elements",
+//                 content: "Elements can contain other elements. This is called nesting.",
+//                 example: "<div><p>I am inside a div!</p></div>",
+//                 tip: "Always close inner tags before closing outer tags. Think of them like Russian nesting dolls."
+//             }
+//         ],
+//         commonMistakes: [
+//             "Forgetting the end tag (e.g., leaving a <p> open).",
+//             "Nesting block elements inside inline elements incorrectly."
+//         ],
+//         bonusTip: "Use semantic tags like <article> and <section> instead of just <div> for better SEO and accessibility."
+//       },
+//     ],
+//   },
+//   {
+//     id: "css",
+//     name: "CSS",
+//     icon: Palette,
+//     color: "text-blue-500",
+//     bgColor: "bg-blue-500/10",
+//     lessons: [
+//       { 
+//         id: "intro", 
+//         title: "Introduction to CSS", 
+//         description: "CSS (Cascading Style Sheets) controls how HTML elements are displayed.",
+//         videoUrl: "https://www.youtube.com/embed/yfoY53QXEnI",
+//         problem: "HTML is ugly by default. CSS solves the problem of design, layout, and visual hierarchy.",
+//         mentalModel: "If HTML is the skeleton, CSS is the skin, clothes, and makeup.",
+//         whenToUse: ["Changing colors/fonts", "Layouts (Grid/Flexbox)", "Responsive design"],
+//         whenNotToUse: ["Defining page structure (use HTML)", "Handling data logic (use JS)"],
+//         syntax: "selector { property: value; }",
+//         code: `body {
+//   font-family: sans-serif;
+//   background-color: #f0f0f0;
+// }
+// h1 {
+//   color: navy;
+//   text-align: center;
+// }`,
+//         subtopics: [],
+//         commonMistakes: [" forgetting the semi-colon ; at the end of a line."],
+//         bonusTip: "Use CSS Variables (--primary-color) to make theme changes easy."
+//       },
+//     ],
+//   },
+// ];
 
 // --- Animation Variants ---
 const fadeInUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
