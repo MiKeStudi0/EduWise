@@ -8,6 +8,12 @@ import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../ThemeToggle";
 
 const navItems = [
+   { 
+    label: "Roadmaps", 
+    href: "/roadmap", 
+    icon: MapIcon,
+    description: "Guides to navigate your learning journey"
+  },
   { 
     label: "Learn", 
     href: "/learn", 
@@ -32,12 +38,7 @@ const navItems = [
     icon: Trophy,
     description: "Certification & job prep"
   },
-   { 
-    label: "Roadmaps", 
-    href: "/roadmap", 
-    icon: MapIcon,
-    description: "Guides to navigate your learning journey"
-  },
+  
 ];
 
 export function Navbar() {

@@ -13,9 +13,9 @@ export default function Page() {
       <Navbar />
       <main>
         <HeroSection />
-        <StatsSection />
+        {/* <StatsSection /> */}
         <FeaturesSection />
-        <PathsSection />
+        {/* <PathsSection /> */}
         <CTASection />
       </main>
       <Footer />

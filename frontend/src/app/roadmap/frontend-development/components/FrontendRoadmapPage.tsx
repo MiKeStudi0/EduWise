@@ -807,17 +807,10 @@ export default function FrontendRoadmapPage() {
   }, [initialNodes, initialEdges, setNodes, setEdges]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground font-sans">
+    <div className="universal-grid-bg flex flex-col min-h-screen text-foreground font-sans">
       <Navbar />
       
       <main className="flex-grow pt-20 md:pt-28 pb-0 relative flex flex-col items-center overflow-x-hidden">
-        
-        {/* --- GLOBAL BACKGROUND GRID --- */}
-        <div className="absolute inset-0 pointer-events-none z-0">
-             {/* The Dots/Grid */}
-             <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.25)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.25)_1px,transparent_1px)] bg-[size:40px_40px] dark:opacity-40" />
-             <div className="absolute inset-0 bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_100%)] pointer-events-none" />
-        </div>
         
         {/* --- DYNAMIC HEADER --- */}
         <section className="text-center mb-6 px-4 max-w-4xl w-full relative z-20">

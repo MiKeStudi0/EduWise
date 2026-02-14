@@ -145,6 +145,21 @@
 }
 
 @layer components {
+  .universal-grid-bg {
+    background-color: hsl(var(--background));
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.14) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.14) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: center;
+  }
+
+  .dark .universal-grid-bg {
+    background-image:
+      linear-gradient(rgba(99, 102, 241, 0.24) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.24) 1px, transparent 1px);
+  }
+
   .gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: var(--gradient-primary);

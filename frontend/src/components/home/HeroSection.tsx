@@ -1,5 +1,8 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowRight, Play, Sparkles, Code2, BookOpen, Trophy, CheckCircle2 } from "lucide-react";
 
 export function HeroSection() {
@@ -20,26 +23,39 @@ export function HeroSection() {
 
       {/* --- Main Content --- */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+          className="max-w-4xl mx-auto text-center flex flex-col items-center"
+        >
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-8 animate-fade-in">
+          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-8">
             <Sparkles className="w-4 h-4 text-primary fill-primary/10" />
             <span className="text-sm font-medium text-primary/90">Now with AI-powered learning paths</span>
-          </div>
+          </motion.div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 animate-slide-up">
+          <motion.h1 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6">
             <span className="block text-foreground">Learn. Practice.</span>
             <span className="block bg-gradient-to-r from-primary via-violet-600 to-blue-600 bg-clip-text text-transparent pb-2">
               Build. Get Hired.
             </span>
-          </h1>
+          </motion.h1>
 
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up stagger-1 leading-relaxed">
+          <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
             Master programming with interactive tutorials, hands-on coding challenges, 
             real-world projects, and industry-recognized certifications.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mb-20 animate-slide-up stagger-2">
+          <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto mb-20">
             <Button asChild variant="hero" size="xl" className="shadow-xl shadow-primary/20">
               <Link href="/learn">
                 Start Learning Free
@@ -53,9 +69,9 @@ export function HeroSection() {
                 Try Coding Playground
               </Link>
             </Button>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-3 gap-8 w-full max-w-3xl mx-auto animate-slide-up stagger-3 border-t border-border/50 pt-8">
+          <motion.div variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }} className="grid grid-cols-3 gap-8 w-full max-w-3xl mx-auto border-t border-border/50 pt-8">
             <div className="text-center">
               <div className="flex flex-col items-center gap-1">
                 <span className="text-3xl sm:text-4xl font-bold text-foreground">500+</span>
@@ -82,11 +98,20 @@ export function HeroSection() {
                 </span>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* --- Floating Elements --- */}
-        <div className="hidden xl:block absolute left-4 top-1/3 animate-float duration-[7s]">
+        <motion.div 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0, y: [0, -20, 0] }}
+          transition={{ 
+            opacity: { duration: 0.8, delay: 0.5 },
+            x: { duration: 0.8, delay: 0.5 },
+            y: { duration: 6, repeat: Infinity, ease: "easeInOut" } 
+          }}
+          className="hidden xl:block absolute left-4 top-1/3"
+        >
           <div className="relative rounded-xl overflow-hidden bg-[#1e1e2e] shadow-2xl border border-slate-800 w-72 rotate-[-6deg] hover:rotate-0 transition-transform duration-300">
             <div className="bg-[#2a2a3c] px-4 py-2 flex items-center gap-2">
                <div className="w-3 h-3 rounded-full bg-red-500/80" />
@@ -101,9 +126,18 @@ export function HeroSection() {
               <div>{"}"}</div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="hidden xl:block absolute right-4 top-1/2 animate-float duration-[6s] delay-700">
+        <motion.div 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0, y: [0, -20, 0] }}
+          transition={{ 
+            opacity: { duration: 0.8, delay: 0.7 },
+            x: { duration: 0.8, delay: 0.7 },
+            y: { duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 } 
+          }}
+          className="hidden xl:block absolute right-4 top-1/2"
+        >
           <div className="rounded-xl bg-background/95 backdrop-blur shadow-xl border border-border p-5 w-64 rotate-[6deg] hover:rotate-0 transition-transform duration-300">
             <div className="flex items-center gap-3 mb-4 border-b border-dashed border-border pb-3">
               <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
@@ -124,7 +158,7 @@ export function HeroSection() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

@@ -1,95 +1,103 @@
-import { BookOpen, Code2, GraduationCap, Briefcase, Brain, Users, Zap, GitBranch } from "lucide-react";
+import Link from "next/link";
+import { Layout, Server, Database, Globe, Cpu, Shield, Smartphone, Cloud } from "lucide-react";
 
-const features = [
+const roadmaps = [
   {
-    icon: BookOpen,
-    title: "Interactive Documentation",
-    description: "Learn with live code examples and instant feedback. Modern tutorials that adapt to your pace.",
+    icon: Layout,
+    title: "Frontend",
+    description: "Master the browser. HTML, CSS, React, and UI/UX principles.",
     color: "from-blue-500 to-cyan-500",
+    href: "/roadmap/frontend-development",
   },
   {
-    icon: Code2,
-    title: "Coding Challenges",
-    description: "Master algorithms and data structures with 50,000+ practice problems across all difficulty levels.",
-    color: "from-purple-500 to-pink-500",
-  },
-  {
-    icon: GraduationCap,
-    title: "Video Courses",
-    description: "Premium video content from industry experts. Learn at your own pace with downloadable resources.",
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    icon: Briefcase,
-    title: "Career Paths",
-    description: "Structured learning journeys from beginner to job-ready. Earn verified, shareable certificates.",
+    icon: Server,
+    title: "Backend",
+    description: "Server-side logic, APIs, databases, and system architecture.",
     color: "from-green-500 to-emerald-500",
+    href: "/roadmap/backend",
   },
   {
-    icon: Brain,
-    title: "AI-Powered Learning",
-    description: "Personalized roadmaps and adaptive recommendations based on your skills and goals.",
-    color: "from-indigo-500 to-purple-500",
+    icon: Database,
+    title: "Full Stack",
+    description: "Bridge the gap. Build complete web applications from scratch.",
+    color: "from-purple-500 to-pink-500",
+    href: "/roadmap/fullstack",
   },
   {
-    icon: GitBranch,
-    title: "Real Projects",
-    description: "Build portfolio-worthy projects with Git integration and real-world development workflows.",
-    color: "from-teal-500 to-cyan-500",
+    icon: Cpu,
+    title: "AI & Data Science",
+    description: "Machine learning, python, data analysis, and neural networks.",
+    color: "from-orange-500 to-red-500",
+    href: "/roadmap/ai-data-scientist",
   },
   {
-    icon: Users,
-    title: "Community",
-    description: "Connect with peers, get code reviews, and collaborate in real-time pair programming sessions.",
+    icon: Cloud,
+    title: "DevOps",
+    description: "CI/CD, containers, cloud infrastructure, and automation.",
+    color: "from-indigo-500 to-blue-500",
+    href: "/roadmap/devops",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Dev",
+    description: "Build native apps for iOS and Android using React Native or Flutter.",
     color: "from-pink-500 to-rose-500",
+    href: "/roadmap/mobile",
   },
   {
-    icon: Zap,
-    title: "Interview Prep",
-    description: "DSA practice, mock interviews, and timed assessments to ace your technical interviews.",
-    color: "from-amber-500 to-orange-500",
+    icon: Shield,
+    title: "Cyber Security",
+    description: "Ethical hacking, network security, and cryptography.",
+    color: "from-red-500 to-orange-500",
+    href: "/roadmap/cyber-security",
+  },
+  {
+    icon: Globe,
+    title: "Blockchain",
+    description: "Smart contracts, dApps, solidity, and web3 development.",
+    color: "from-teal-500 to-emerald-500",
+    href: "/roadmap/blockchain",
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/30 to-background" />
+    <section className="py-24 relative overflow-hidden bg-background">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)] dark:opacity-40 pointer-events-none" />
       
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Everything you need to become a{" "}
-            <span className="gradient-text">better developer</span>
+            <span className="gradient-text">Interactive Learning Roadmaps</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            A unified platform that combines the best of documentation, practice, 
-            courses, and career development.
+            Follow step-by-step guides to master your chosen technology path.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => (
-            <div
-              key={feature.title}
+          {roadmaps.map((roadmap, index) => (
+            <Link
+              href={roadmap.href}
+              key={roadmap.title}
               className="group relative p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover-lift animate-fade-in-up"
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Gradient glow on hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${roadmap.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
               
-              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} mb-4`}>
-                <feature.icon className="w-6 h-6 text-white" />
+              <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${roadmap.color} mb-4`}>
+                <roadmap.icon className="w-6 h-6 text-white" />
               </div>
               
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-semibold mb-2">{roadmap.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                {feature.description}
+                {roadmap.description}
               </p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
