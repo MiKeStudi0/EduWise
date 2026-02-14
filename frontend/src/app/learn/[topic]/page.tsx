@@ -6,10 +6,16 @@ export function generateStaticParams() {
   return learnTopics.map((topic) => ({ topic }));
 }
 
-export default function InteractiveTopicPage({ params }: { params: { topic: string } }) {
+type LearnTopicPageProps = {
+  params: Promise<{ topic: string }>;
+};
+
+export default async function InteractiveTopicPage({ params }: LearnTopicPageProps) {
+  const { topic } = await params;
+
   return (
     <div className="min-h-screen bg-background">
-      <LearnPageContent params={params} />
+      <LearnPageContent topic={topic} />
     </div>
   );
 }
