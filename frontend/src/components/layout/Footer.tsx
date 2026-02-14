@@ -1,30 +1,31 @@
-import Link from "next/link"; // Changed from react-router-dom
-import { Code2, Github, Twitter, Linkedin, Youtube } from "lucide-react";
+"use client";
+
+import Link from "next/link";
+import { Code2, Github, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button"; // Using your custom Button
+import { Input } from "@/components/ui/input";
 
 const footerLinks = {
-  Learn: [
-    { label: "Tutorials", href: "/learn" },
-    { label: "Documentation", href: "/docs" },
+  Product: [
+    { label: "Courses", href: "/courses" },
+    { label: "Roadmaps", href: "/roadmap" },
     { label: "Coding Playground", href: "/playground" },
     { label: "Challenges", href: "/practice" },
-  ],
-  Paths: [
-    { label: "Frontend Developer", href: "/paths/frontend" },
-    { label: "Backend Developer", href: "/paths/backend" },
-    { label: "Full Stack", href: "/paths/fullstack" },
-    { label: "Data Science", href: "/paths/data-science" },
+    { label: "Pricing", href: "/pricing" },
   ],
   Resources: [
     { label: "Blog", href: "/blog" },
     { label: "Community", href: "/community" },
-    { label: "Interview Prep", href: "/interview" },
-    { label: "Job Board", href: "/jobs" },
+    { label: "Documentation", href: "/docs" },
+    { label: "Help Center", href: "/help" },
+    { label: "Changelog", href: "/changelog" },
   ],
   Company: [
-    { label: "About", href: "/about" },
-    { label: "Careers", href: "/company/careers" },
+    { label: "About Us", href: "/about" },
+    { label: "Careers", href: "/careers" },
+    { label: "Legal", href: "/legal" },
     { label: "Contact", href: "/contact" },
-    { label: "Press", href: "/press" },
+    { label: "Partners", href: "/partners" },
   ],
 };
 
@@ -37,71 +38,116 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/50 bg-muted/30">
-      <div className="container px-4 sm:px-6 lg:px-8 py-16 mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Code2 className="w-4 h-4 text-primary-foreground" />
+    <footer className="relative border-t border-border bg-slate-50 dark:bg-slate-950/30 pt-16 pb-8 overflow-hidden">
+      
+      {/* Subtle Grid Background (Matches other screens) */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto relative z-10">
+        
+        {/* Top Section: Brand + Newsletter */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+          
+          {/* Brand Column */}
+          <div className="lg:col-span-5">
+            <Link href="/" className="flex items-center gap-2 mb-6 group">
+              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-300">
+                <Code2 className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-lg font-bold">LearnStak</span>
+              <span className="text-2xl font-bold tracking-tight text-foreground">LearnStak</span>
             </Link>
-            <p className="text-sm text-muted-foreground mb-4">
-              The complete platform for developers to learn, practice, and build their careers.
+            
+            <p className="text-base text-muted-foreground mb-8 max-w-sm leading-relaxed">
+              The premier platform for developers to master their craft. 
+              Interactive roadmaps, hands-on challenges, and a community that helps you grow.
             </p>
-            <div className="flex items-center gap-3">
+
+            {/* Social Icons - Using Button variant="ghost" */}
+            <div className="flex items-center gap-2">
               {socialLinks.map((social) => (
-                <a
+                <Button
                   key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                  aria-label={social.label}
+                  variant="ghost"
+                  size="icon"
+                  className="rounded-full hover:bg-white dark:hover:bg-white/10 border border-transparent hover:border-border transition-all"
+                  asChild
                 >
-                  <social.icon className="w-4 h-4" />
-                </a>
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5 text-muted-foreground" />
+                  </a>
+                </Button>
               ))}
             </div>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h3 className="font-semibold mb-4">{category}</h3>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Links Columns */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+            {Object.entries(footerLinks).map(([category, links]) => (
+              <div key={category}>
+                <h3 className="font-semibold text-foreground mb-6">{category}</h3>
+                <ul className="space-y-4">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1 group"
+                      >
+                        <span className="w-0 group-hover:w-1.5 h-1.5 rounded-full bg-primary mr-0 group-hover:mr-2 transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-16 pt-8 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Newsletter Section */}
+        <div className="border-t border-b border-border/60 py-10 mb-8 bg-card/30 backdrop-blur-sm rounded-2xl px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg text-foreground">Stay in the loop</h4>
+                <p className="text-sm text-muted-foreground">Get the latest tutorials and updates sent to your inbox.</p>
+              </div>
+            </div>
+            
+            <div className="flex w-full md:w-auto gap-3">
+              <Input 
+                type="email" 
+                placeholder="Enter your email" 
+                className="bg-background min-w-[240px] border-border focus-visible:ring-primary" 
+              />
+              {/* UPDATED SUBSCRIBE BUTTON - EXACT MATCH TO HERO */}
+              <Button 
+                variant="hero" 
+                size="lg" // Adjusted size slightly for this context, but variant is Hero
+                className="shadow-xl shadow-primary/20"
+              >
+                Subscribe
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} LearnStak. All rights reserved.
+            © {new Date().getFullYear()} LearnStak Inc. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground transition-colors">
-              Privacy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground transition-colors">
-              Terms
-            </Link>
-            <Link href="/cookies" className="hover:text-foreground transition-colors">
-              Cookies
-            </Link>
+          <div className="flex items-center gap-8 text-sm text-muted-foreground">
+            <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="/cookies" className="hover:text-foreground transition-colors">Cookie Settings</Link>
           </div>
         </div>
       </div>

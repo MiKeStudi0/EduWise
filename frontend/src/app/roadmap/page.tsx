@@ -1,18 +1,20 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { motion, Variants } from "framer-motion";
+// 1. Import Variants to fix the type error
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Layout, Server, Layers, Terminal, ArrowRight, Code2, Database, Shield, Smartphone,
   ShieldCheck, Bot, BrainCircuit, HardDrive, Cpu, Blocks, Bug, Compass, PenTool,
-  FileText, Gamepad2, GitBranch, Briefcase, Users, Megaphone, BarChart, LineChart
+  FileText, Gamepad2, GitBranch, Briefcase, Users, Megaphone, BarChart, LineChart,
+  Search, X
 } from 'lucide-react';
-import roadmapData from "@/json/roadmap.json"; // Ensure this path is correct
+import { Input } from "@/components/ui/input"; 
+import roadmapData from "@/json/roadmap.json"; 
 
-// Expanded style map for better visual variety
 const roadmapStyles: Record<string, { icon: React.ElementType; color: string; bg: string; gradient: string }> = {
   "frontend-development": { icon: Layout, color: "text-blue-500", bg: "bg-blue-500/10", gradient: "from-blue-500/20 to-cyan-500/20" },
   "backend-development": { icon: Server, color: "text-green-500", bg: "bg-green-500/10", gradient: "from-green-500/20 to-emerald-500/20" },
@@ -41,13 +43,16 @@ const roadmapStyles: Record<string, { icon: React.ElementType; color: string; bg
   "devrel-developer-relations": { icon: Megaphone, color: "text-orange-600", bg: "bg-orange-600/10", gradient: "from-orange-600/20 to-red-600/20" },
   "bi-analyst": { icon: LineChart, color: "text-yellow-600", bg: "bg-yellow-600/10", gradient: "from-yellow-600/20 to-orange-600/20" },
 };
+
 const defaultStyle = {
   icon: Code2,
   color: "text-indigo-500",
+  bg: "bg-indigo-500/10",
   gradient: "from-indigo-500/20 to-violet-500/20"
 };
 
-const containerVariants = {
+// 2. Explicitly type the variants objects
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -57,14 +62,32 @@ const containerVariants = {
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } }
+  visible: { 
+    opacity: 1, 
+    scale: 1, 
+    transition: { 
+      duration: 0.4, 
+      ease: "easeOut" 
+    } 
+  }
 };
 
 export default function RoadmapListingPage() {
-  const roadmaps = (roadmapData?.roadmap ?? []).filter((item) => item.is_active);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredRoadmaps = useMemo(() => {
+    const allRoadmaps = (roadmapData?.roadmap ?? []).filter((item) => item.is_active);
+    
+    if (!searchQuery) return allRoadmaps;
+
+    return allRoadmaps.filter((item) => 
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [searchQuery]);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-[#0B0C10] text-slate-900 dark:text-slate-100 font-sans selection:bg-indigo-500/30">
+    <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-[#0B0C10] text-slate-900 dark:text-slate-100 font-sans selection:bg-indigo-500/30">
       <Navbar />
       
       {/* Background Tech Grid Pattern */}
@@ -76,7 +99,7 @@ export default function RoadmapListingPage() {
       <main className="relative z-10 flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto">
           
-          {/* Hero Section */}
+          {/* Header Section */}
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -84,7 +107,7 @@ export default function RoadmapListingPage() {
               className="inline-flex items-center justify-center px-4 py-1.5 mb-6 text-sm font-medium border rounded-full text-slate-500 border-slate-200 bg-slate-50 dark:bg-slate-900/50 dark:border-slate-800 dark:text-slate-400 backdrop-blur-sm"
             >
               <span className="flex h-2 w-2 rounded-full bg-indigo-500 mr-2 animate-pulse"></span>
-              {roadmaps.length} Career Paths Available
+              {filteredRoadmaps.length} Career Paths Available
             </motion.div>
             
             <motion.h1 
@@ -100,67 +123,134 @@ export default function RoadmapListingPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+              className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10"
             >
               Professional, community-driven roadmaps to help you navigate the ever-changing landscape of software engineering.
             </motion.p>
+
+            {/* --- SEARCH BAR --- */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="relative max-w-xl mx-auto"
+            >
+              <div className="relative group">
+                <div className="relative flex items-center bg-white dark:bg-[#15161C] border border-slate-200 dark:border-slate-800 rounded-2xl 
+                  shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.2)]
+                  hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:hover:shadow-[0_8px_30px_rgb(0,0,0,0.3)]
+                  focus-within:ring-4 focus-within:ring-indigo-500/10 focus-within:border-indigo-500/50 
+                  transition-all duration-300"
+                >
+                  <Search className="w-5 h-5 ml-4 text-slate-400 group-focus-within:text-indigo-500 transition-colors" />
+                  <Input 
+                    type="text" 
+                    placeholder="Search for a role (e.g., 'Frontend', 'DevOps')..." 
+                    className="border-none bg-transparent h-14 px-4 text-base focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-slate-400 text-slate-900 dark:text-slate-100"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                  />
+                  {searchQuery && (
+                    <button 
+                      onClick={() => setSearchQuery("")}
+                      className="p-2 mr-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  )}
+                </div>
+              </div>
+            </motion.div>
           </div>
 
           {/* Cards Grid */}
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          >
-            {roadmaps.map((item) => {
-              const style = roadmapStyles[item.slug] ?? defaultStyle;
-              const Icon = style.icon;
+          <div className="min-h-[400px]">
+            {filteredRoadmaps.length > 0 ? (
+              <motion.div 
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+              >
+                <AnimatePresence mode="popLayout">
+                  {filteredRoadmaps.map((item) => {
+                    const style = roadmapStyles[item.slug] ?? defaultStyle;
+                    const Icon = style.icon;
 
-              return (
-                <motion.div variants={itemVariants} key={item.id} className="h-full group">
-                  <Link href={`/roadmap/${item.slug}`} className="block h-full">
-                    <div className="relative h-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111217] transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1">
-                      
-                      {/* Hover Gradient Overlay */}
-                      <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${style.gradient} pointer-events-none`} />
+                    return (
+                      <motion.div 
+                        layout
+                        variants={itemVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        key={item.id} 
+                        className="h-full group"
+                      >
+                        <Link href={`/roadmap/${item.slug}`} className="block h-full">
+                          <div className="relative h-full overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111217] transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1">
+                            
+                            {/* Hover Gradient Overlay */}
+                            <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${style.gradient} pointer-events-none`} />
 
-                      <div className="relative p-6 flex flex-col h-full">
-                        {/* Header: Icon & Decor */}
-                        <div className="flex justify-between items-start mb-6">
-                          <div className={`
-                            relative z-10 flex items-center justify-center w-12 h-12 rounded-xl 
-                            bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 
-                            ${style.color} shadow-sm group-hover:scale-110 transition-transform duration-300
-                          `}>
-                            <Icon size={24} strokeWidth={2} />
+                            <div className="relative p-6 flex flex-col h-full">
+                              {/* Header: Icon & Decor */}
+                              <div className="flex justify-between items-start mb-6">
+                                <div className={`
+                                  relative z-10 flex items-center justify-center w-12 h-12 rounded-xl 
+                                  bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 
+                                  ${style.color} shadow-sm group-hover:scale-110 transition-transform duration-300
+                                `}>
+                                  <Icon size={24} strokeWidth={2} />
+                                </div>
+                                <div className="text-slate-300 dark:text-slate-700 group-hover:text-indigo-500 transition-colors">
+                                   <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                                </div>
+                              </div>
+
+                              {/* Text Content */}
+                              <div className="flex flex-col flex-grow z-10">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                  {item.title}
+                                </h3>
+                                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
+                                  {item.description}
+                                </p>
+                              </div>
+
+                              {/* Footer Line */}
+                              <div className="mt-6 h-1 w-12 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:w-full group-hover:bg-indigo-500/50 transition-all duration-500" />
+                            </div>
                           </div>
-                          
-                          {/* Top Right Arrow */}
-                          <div className="text-slate-300 dark:text-slate-700 group-hover:text-indigo-500 transition-colors">
-                             <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                          </div>
-                        </div>
-
-                        {/* Text Content */}
-                        <div className="flex flex-col flex-grow z-10">
-                          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                            {item.title}
-                          </h3>
-                          <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
-                            {item.description}
-                          </p>
-                        </div>
-
-                        {/* Footer Line */}
-                        <div className="mt-6 h-1 w-12 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:w-full group-hover:bg-indigo-500/50 transition-all duration-500" />
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
+                </AnimatePresence>
+              </motion.div>
+            ) : (
+              // Empty State
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }} 
+                animate={{ opacity: 1, scale: 1 }}
+                className="flex flex-col items-center justify-center py-20 text-center"
+              >
+                <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800/50 rounded-full flex items-center justify-center mb-4 border border-slate-200 dark:border-slate-700">
+                  <Search className="w-8 h-8 text-slate-400" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">No roadmaps found</h3>
+                <p className="text-slate-500 dark:text-slate-400 max-w-md mb-6">
+                  We couldn't find any roadmaps matching "{searchQuery}". Try searching for something else like "React" or "Python".
+                </p>
+                <button 
+                  onClick={() => setSearchQuery("")}
+                  className="px-6 py-2 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium hover:bg-indigo-100 dark:hover:bg-indigo-500/20 transition-colors"
+                >
+                  Clear search
+                </button>
+              </motion.div>
+            )}
+          </div>
         </div>
       </main>
 

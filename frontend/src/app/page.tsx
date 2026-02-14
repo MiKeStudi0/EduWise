@@ -16,7 +16,7 @@ export default function Page() {
         {/* <StatsSection /> */}
         <FeaturesSection />
         {/* <PathsSection /> */}
-        <CTASection />
+        {/* <CTASection /> */}
       </main>
       <Footer />
     </div>
