@@ -22,7 +22,14 @@ if config.config_file_name is not None:
 
 # 🔴 IMPORT YOUR BASE + MODELS HERE
 from app.db.base import Base
-from app.models.user import User   # add more models later
+
+from app.models.user import User
+from app.models.user_role import UserRole
+from app.models.subscription import Subscription
+from app.models.user_profile import UserProfile
+from app.models.role_permission import RolePermission
+from app.models.permission import Permission
+
 target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,

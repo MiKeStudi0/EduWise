@@ -1,16 +1,21 @@
 from sqlalchemy.orm import Session
 from app.models.user import User
 from app.core.security import hash_password
-from app.schemas.user import UserCreate
-from app.crud.base import CRUDBase
 
-class CRUDUser(CRUDBase):
-    def create_user(self, db: Session, user: UserCreate):
-        db_user = User(
-            email=user.email,
-            username=user.username,
-            hashed_password=hash_password(user.password)
+class CRUDUser:
+    def create(self, db: Session, *, email, username, password, role_id):
+        user = User(
+            email=email,
+            username=username,
+            hashed_password=hash_password(password),
+            role_id=role_id,
         )
-        return self.create(db, db_user)
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+        return user
 
-crud_user = CRUDUser(User)
+    def get_all(self, db: Session):
+        return db.query(User).all()
+
+crud_user = CRUDUser()
