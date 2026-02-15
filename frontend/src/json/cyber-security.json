@@ -70,14 +70,17 @@
                   {
                     "id": "cybersecurity-foundations-security-basics-cia-triad",
                     "label": "CIA Triad",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cybersecurity-foundations-security-basics-risk-and-threats",
                     "label": "Risk & Threats",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cybersecurity-foundations-security-roles",
@@ -88,19 +91,23 @@
                   {
                     "id": "cybersecurity-foundations-security-roles-blue-team",
                     "label": "Blue Team",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cybersecurity-foundations-security-roles-red-team",
                     "label": "Red Team",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cybersecurity-foundations-security-roles-purple-team",
                     "label": "Purple Team",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cybersecurity-foundations-ethics-and-legal",
@@ -111,14 +118,17 @@
                   {
                     "id": "cybersecurity-foundations-ethics-and-legal-rules-of-engagement",
                     "label": "Rules of Engagement",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cybersecurity-foundations-ethics-and-legal-responsible-disclosure",
                     "label": "Responsible Disclosure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -152,19 +162,23 @@
                   {
                     "id": "networking-and-os-networking-fundamentals-osi-tcp-ip",
                     "label": "OSI/TCP-IP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-os-networking-fundamentals-common-ports",
                     "label": "Common Ports",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-os-networking-fundamentals-dns",
                     "label": "DNS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-os-web-basics",
@@ -175,14 +189,17 @@
                   {
                     "id": "networking-and-os-web-basics-http-https",
                     "label": "HTTP/HTTPS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-os-web-basics-tls",
                     "label": "TLS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-os-operating-systems",
@@ -193,14 +210,17 @@
                   {
                     "id": "networking-and-os-operating-systems-linux-basics",
                     "label": "Linux Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-os-operating-systems-windows-basics",
                     "label": "Windows Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -234,19 +254,23 @@
                   {
                     "id": "security-concepts-identity-and-access-authentication",
                     "label": "Authentication",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-concepts-identity-and-access-authorization",
                     "label": "Authorization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-concepts-identity-and-access-mfa",
                     "label": "MFA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-concepts-cryptography",
@@ -257,14 +281,17 @@
                   {
                     "id": "security-concepts-cryptography-hashing",
                     "label": "Hashing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-concepts-cryptography-symmetric-vs-asymmetric",
                     "label": "Symmetric vs Asymmetric",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-concepts-defense-in-depth",
@@ -275,14 +302,17 @@
                   {
                     "id": "security-concepts-defense-in-depth-firewalls",
                     "label": "Firewalls",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-concepts-defense-in-depth-ids-ips",
                     "label": "IDS/IPS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -316,14 +346,17 @@
                   {
                     "id": "offense-and-vulnerabilities-web-security-owasp-top-10",
                     "label": "OWASP Top 10",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "offense-and-vulnerabilities-web-security-common-attacks",
                     "label": "Common Attacks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "offense-and-vulnerabilities-vulnerability-management",
@@ -334,14 +367,17 @@
                   {
                     "id": "offense-and-vulnerabilities-vulnerability-management-scanning",
                     "label": "Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "offense-and-vulnerabilities-vulnerability-management-patch-management",
                     "label": "Patch Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "offense-and-vulnerabilities-threat-modeling",
@@ -352,14 +388,17 @@
                   {
                     "id": "offense-and-vulnerabilities-threat-modeling-attack-surface",
                     "label": "Attack Surface",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "offense-and-vulnerabilities-threat-modeling-kill-chain",
                     "label": "Kill Chain",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -393,14 +432,17 @@
                   {
                     "id": "detection-and-response-monitoring-and-logging-siem",
                     "label": "SIEM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "detection-and-response-monitoring-and-logging-log-sources",
                     "label": "Log Sources",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "detection-and-response-incident-response",
@@ -411,14 +453,17 @@
                   {
                     "id": "detection-and-response-incident-response-ir-lifecycle",
                     "label": "IR Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "detection-and-response-incident-response-forensics-basics",
                     "label": "Forensics Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "detection-and-response-threat-hunting",
@@ -429,14 +474,17 @@
                   {
                     "id": "detection-and-response-threat-hunting-iocs",
                     "label": "IOCs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "detection-and-response-threat-hunting-hypothesis-driven-hunts",
                     "label": "Hypothesis-Driven Hunts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -470,14 +518,17 @@
                   {
                     "id": "cloud-and-modern-security-cloud-security-shared-responsibility",
                     "label": "Shared Responsibility",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-modern-security-cloud-security-cspm",
                     "label": "CSPM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-modern-security-zero-trust",
@@ -488,14 +539,17 @@
                   {
                     "id": "cloud-and-modern-security-zero-trust-least-privilege",
                     "label": "Least Privilege",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-modern-security-zero-trust-segmentation",
                     "label": "Segmentation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-modern-security-security-automation",
@@ -506,14 +560,17 @@
                   {
                     "id": "cloud-and-modern-security-security-automation-soar",
                     "label": "SOAR",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-modern-security-security-automation-runbooks",
                     "label": "Runbooks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

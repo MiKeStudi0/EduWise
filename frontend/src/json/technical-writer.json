@@ -70,14 +70,17 @@
                   {
                     "id": "technical-writing-foundations-role-and-audience-audience-analysis",
                     "label": "Audience Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-writing-foundations-role-and-audience-stakeholder-alignment",
                     "label": "Stakeholder Alignment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-writing-foundations-clarity-and-plain-language",
@@ -88,14 +91,17 @@
                   {
                     "id": "technical-writing-foundations-clarity-and-plain-language-plain-language",
                     "label": "Plain Language",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-writing-foundations-clarity-and-plain-language-tone-and-voice",
                     "label": "Tone & Voice",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-writing-foundations-domain-understanding",
@@ -106,14 +112,17 @@
                   {
                     "id": "technical-writing-foundations-domain-understanding-system-concepts",
                     "label": "System Concepts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-writing-foundations-domain-understanding-terminology",
                     "label": "Terminology",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "research-and-planning-source-gathering-sme-interviews",
                     "label": "SME Interviews",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "research-and-planning-source-gathering-existing-artifacts",
                     "label": "Existing Artifacts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "research-and-planning-content-strategy",
@@ -165,14 +177,17 @@
                   {
                     "id": "research-and-planning-content-strategy-objectives-and-scope",
                     "label": "Objectives & Scope",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "research-and-planning-content-strategy-content-outline",
                     "label": "Content Outline",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "research-and-planning-information-architecture",
@@ -183,14 +198,17 @@
                   {
                     "id": "research-and-planning-information-architecture-content-inventory",
                     "label": "Content Inventory",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "research-and-planning-information-architecture-navigation-structure",
                     "label": "Navigation Structure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "writing-and-structure-doc-structure-headings-and-flow",
                     "label": "Headings & Flow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "writing-and-structure-doc-structure-task-concept-reference",
                     "label": "Task/Concept/Reference",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "writing-and-structure-procedures-and-how-tos",
@@ -242,14 +263,17 @@
                   {
                     "id": "writing-and-structure-procedures-and-how-tos-steps-and-preconditions",
                     "label": "Steps & Preconditions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "writing-and-structure-procedures-and-how-tos-examples",
                     "label": "Examples",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "writing-and-structure-visuals-and-diagrams",
@@ -260,14 +284,17 @@
                   {
                     "id": "writing-and-structure-visuals-and-diagrams-diagrams",
                     "label": "Diagrams",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "writing-and-structure-visuals-and-diagrams-tables-and-screenshots",
                     "label": "Tables & Screenshots",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "documentation-types-api-documentation-endpoints",
                     "label": "Endpoints",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "documentation-types-api-documentation-auth-and-errors",
                     "label": "Auth & Errors",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "documentation-types-user-guides",
@@ -319,14 +349,17 @@
                   {
                     "id": "documentation-types-user-guides-getting-started",
                     "label": "Getting Started",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "documentation-types-user-guides-troubleshooting",
                     "label": "Troubleshooting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "documentation-types-release-notes",
@@ -337,14 +370,17 @@
                   {
                     "id": "documentation-types-release-notes-change-logs",
                     "label": "Change Logs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "documentation-types-release-notes-deprecations",
                     "label": "Deprecations",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "docs-as-code-and-publishing-version-control-git-basics",
                     "label": "Git Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "docs-as-code-and-publishing-version-control-review-workflow",
                     "label": "Review Workflow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "docs-as-code-and-publishing-markup-and-publishing",
@@ -396,14 +435,17 @@
                   {
                     "id": "docs-as-code-and-publishing-markup-and-publishing-markdown",
                     "label": "Markdown",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "docs-as-code-and-publishing-markup-and-publishing-static-site-generators",
                     "label": "Static Site Generators",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "docs-as-code-and-publishing-automation",
@@ -414,14 +456,17 @@
                   {
                     "id": "docs-as-code-and-publishing-automation-docs-generation",
                     "label": "Docs Generation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "docs-as-code-and-publishing-automation-ci-for-docs",
                     "label": "CI for Docs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "quality-and-impact-editorial-review-style-guides",
                     "label": "Style Guides",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-and-impact-editorial-review-editing",
                     "label": "Editing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "quality-and-impact-accessibility-and-inclusivity",
@@ -473,14 +521,17 @@
                   {
                     "id": "quality-and-impact-accessibility-and-inclusivity-accessible-content",
                     "label": "Accessible Content",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-and-impact-accessibility-and-inclusivity-localization",
                     "label": "Localization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "quality-and-impact-metrics-and-maintenance",
@@ -491,14 +542,17 @@
                   {
                     "id": "quality-and-impact-metrics-and-maintenance-doc-analytics",
                     "label": "Doc Analytics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-and-impact-metrics-and-maintenance-content-lifecycle",
                     "label": "Content Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

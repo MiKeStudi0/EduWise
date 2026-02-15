@@ -68,25 +68,29 @@
                 "id": "internet-how",
                 "label": "How the Internet Works",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "internet-http",
                 "label": "HTTP/HTTPS Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "internet-dns",
                 "label": "DNS & Hosting Basics",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "internet-browser",
                 "label": "Browsers & Rendering Process",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -115,25 +119,29 @@
                 "id": "html-semantic",
                 "label": "Semantic HTML",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "html-accessibility",
                 "label": "Accessibility Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "html-forms",
                 "label": "Forms & Validation",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "html-seo",
                 "label": "SEO Basics",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -162,31 +170,36 @@
                 "id": "css-box",
                 "label": "Box Model & Layout",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "css-flexbox",
                 "label": "Flexbox",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "css-grid",
                 "label": "Grid",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "css-responsive",
                 "label": "Responsive Design",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "css-variables",
                 "label": "CSS Variables",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "css-modern",
@@ -197,9 +210,11 @@
                   {
                     "id": "css-container",
                     "label": "Container Queries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -228,19 +243,22 @@
                 "id": "js-fundamentals",
                 "label": "JS Fundamentals",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "js-dom",
                 "label": "DOM Manipulation",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "js-es6",
                 "label": "ES6+ Features",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "js-async",
@@ -251,20 +269,24 @@
                   {
                     "id": "js-promises",
                     "label": "Promises",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "js-async-await",
                     "label": "async/await",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "js-fetch",
                 "label": "Fetch API / Basic API Calls",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -293,7 +315,8 @@
                 "id": "git-core",
                 "label": "Git",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "git-workflow",
@@ -304,24 +327,29 @@
                   {
                     "id": "git-add",
                     "label": "add",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "git-commit",
                     "label": "commit",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "git-push",
                     "label": "push",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "git-pull",
                     "label": "pull",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -350,13 +378,15 @@
                 "id": "vcs-github",
                 "label": "GitHub",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "vcs-pr",
                 "label": "GitHub Issues & PRs",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "vcs-actions",
@@ -367,9 +397,11 @@
                   {
                     "id": "vcs-actions-basics",
                     "label": "Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -398,7 +430,8 @@
                 "id": "dev-vscode",
                 "label": "VS Code",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "dev-extensions",
@@ -409,25 +442,30 @@
                   {
                     "id": "dev-prettier",
                     "label": "Prettier",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "dev-eslint",
                     "label": "ESLint",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "dev-gitlens",
                     "label": "GitLens",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "dev-terminal",
                 "label": "Terminal Basics",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -457,19 +495,22 @@
                 "label": "npm",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "pkg-pnpm",
                 "label": "pnpm",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "pkg-yarn",
                 "label": "yarn",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           }
@@ -507,19 +548,22 @@
                 "label": "Vite",
                 "type": "option",
                 "side": "left",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "build-esbuild",
                 "label": "esbuild",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "build-swc",
                 "label": "SWC",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -549,19 +593,22 @@
                 "label": "Tailwind CSS",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "css-modules",
                 "label": "CSS Modules",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "css-styled",
                 "label": "Styled Components",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -595,43 +642,51 @@
                   {
                     "id": "react-hooks",
                     "label": "Hooks & State Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "react-architecture",
                     "label": "Component Architecture",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "react-query",
                     "label": "React Query / TanStack Query",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "react-hook-form",
                     "label": "React Hook Form",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
                 ],
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "fw-vue",
                 "label": "Vue.js",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "fw-svelte",
                 "label": "Svelte",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "fw-solid",
                 "label": "SolidJS",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -661,25 +716,29 @@
                 "label": "Next.js",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "meta-astro",
                 "label": "Astro",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "meta-nuxt",
                 "label": "Nuxt.js",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "meta-remix",
                 "label": "Remix",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -709,19 +768,22 @@
                 "label": "Context API",
                 "type": "option",
                 "side": "left",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "state-zustand",
                 "label": "Zustand",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "state-redux",
                 "label": "Redux Toolkit",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -751,13 +813,15 @@
                 "label": "REST APIs",
                 "type": "subtopic",
                 "side": "left",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "api-fetch",
                 "label": "Axios / Fetch Patterns",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "api-graphql",
@@ -768,9 +832,11 @@
                   {
                     "id": "api-apollo",
                     "label": "Apollo Client",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -799,13 +865,15 @@
                 "id": "forms-rhf",
                 "label": "React Hook Form",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "forms-schema",
                 "label": "Zod / Yup",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -835,25 +903,29 @@
                 "label": "Vitest",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "test-jest",
                 "label": "Jest",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "test-playwright",
                 "label": "Playwright (E2E)",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "test-cypress",
                 "label": "Cypress",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -883,19 +955,22 @@
                 "label": "ESLint",
                 "type": "option",
                 "side": "left",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "lint-prettier",
                 "label": "Prettier",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "lint-biome",
                 "label": "Biome",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -924,25 +999,29 @@
                 "id": "perf-lighthouse",
                 "label": "Lighthouse Audits",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "perf-codesplit",
                 "label": "Code Splitting & Lazy Loading",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "perf-images",
                 "label": "Image Optimization",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "perf-vitals",
                 "label": "Web Vitals",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -971,25 +1050,29 @@
                 "id": "sec-https",
                 "label": "HTTPS & SSL",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "sec-cors",
                 "label": "CORS",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "sec-csp",
                 "label": "CSP Basics",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "sec-owasp",
                 "label": "OWASP Top Risks",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1018,13 +1101,15 @@
                 "id": "auth-jwt",
                 "label": "JWT Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "auth-oauth",
                 "label": "OAuth Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "auth-providers",
@@ -1036,19 +1121,23 @@
                     "id": "auth-clerk",
                     "label": "Clerk",
                     "type": "option",
-                    "is_recommended": true
+                    "is_recommended": true,
+                    "slug": null
                   },
                   {
                     "id": "auth-auth0",
                     "label": "Auth0",
-                    "type": "option"
+                    "type": "option",
+                    "slug": null
                   },
                   {
                     "id": "auth-firebase",
                     "label": "Firebase Auth",
-                    "type": "option"
+                    "type": "option",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1078,25 +1167,29 @@
                 "label": "Vercel",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "deploy-netlify",
                 "label": "Netlify",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "deploy-cloudflare",
                 "label": "Cloudflare Pages",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "deploy-github-pages",
                 "label": "GitHub Pages",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1126,13 +1219,15 @@
                 "label": "Sentry",
                 "type": "option",
                 "side": "left",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "monitor-logrocket",
                 "label": "LogRocket",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -1167,31 +1262,37 @@
                     "id": "design-shadcn",
                     "label": "ShadCN/UI",
                     "type": "option",
-                    "is_recommended": true
+                    "is_recommended": true,
+                    "slug": null
                   },
                   {
                     "id": "design-mui",
                     "label": "MUI",
-                    "type": "option"
+                    "type": "option",
+                    "slug": null
                   },
                   {
                     "id": "design-chakra",
                     "label": "Chakra",
-                    "type": "option"
+                    "type": "option",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "design-storybook",
                 "label": "Storybook",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "design-tokens",
                 "label": "Tokens & Theming",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1220,19 +1321,22 @@
                 "id": "eng-code-reviews",
                 "label": "Code Reviews",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "eng-pr",
                 "label": "PR Best Practices",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "eng-architecture",
                 "label": "Project Structure & Architecture",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "eng-monorepos",
@@ -1243,14 +1347,17 @@
                   {
                     "id": "eng-turborepo",
                     "label": "Turborepo",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "eng-nx",
                     "label": "Nx",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }
@@ -1287,25 +1394,29 @@
                 "id": "api-storage",
                 "label": "LocalStorage / SessionStorage",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "api-service-workers",
                 "label": "Service Workers",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "api-web-workers",
                 "label": "Web Workers",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "api-indexeddb",
                 "label": "IndexedDB",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1334,19 +1445,22 @@
                 "id": "a11y-wcag",
                 "label": "WCAG Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "a11y-aria",
                 "label": "ARIA Attributes",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "a11y-testing",
                 "label": "Accessibility Testing",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1376,25 +1490,29 @@
                 "label": "React Native",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "mobile-flutter",
                 "label": "Flutter",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "mobile-electron",
                 "label": "Electron",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "mobile-tauri",
                 "label": "Tauri",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1423,25 +1541,29 @@
                 "id": "career-portfolio",
                 "label": "Personal Portfolio Website",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "career-projects",
                 "label": "Real-world Projects",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "career-oss",
                 "label": "Open Source Contributions",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "career-system-design",
                 "label": "System Design (Frontend)",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "career-interview",
@@ -1452,9 +1574,11 @@
                   {
                     "id": "career-ds-frontend",
                     "label": "DS + Frontend",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

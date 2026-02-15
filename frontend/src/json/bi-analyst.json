@@ -70,14 +70,17 @@
                   {
                     "id": "bi-foundations-role-of-bi-analyst-responsibilities",
                     "label": "Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "bi-foundations-role-of-bi-analyst-stakeholders",
                     "label": "Stakeholders",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "bi-foundations-business-fundamentals",
@@ -88,14 +91,17 @@
                   {
                     "id": "bi-foundations-business-fundamentals-kpis",
                     "label": "KPIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "bi-foundations-business-fundamentals-business-functions",
                     "label": "Business Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "bi-foundations-data-fundamentals",
@@ -106,14 +112,17 @@
                   {
                     "id": "bi-foundations-data-fundamentals-data-types",
                     "label": "Data Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "bi-foundations-data-fundamentals-data-quality",
                     "label": "Data Quality",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "data-and-sql-sql-core-joins-and-aggregations",
                     "label": "Joins & Aggregations",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-sql-sql-core-window-functions",
                     "label": "Window Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-sql-data-modeling",
@@ -165,14 +177,17 @@
                   {
                     "id": "data-and-sql-data-modeling-star-vs-snowflake",
                     "label": "Star vs Snowflake",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-sql-data-modeling-fact-and-dimension-tables",
                     "label": "Fact & Dimension Tables",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-sql-etl-elt-basics",
@@ -183,14 +198,17 @@
                   {
                     "id": "data-and-sql-etl-elt-basics-pipelines",
                     "label": "Pipelines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-sql-etl-elt-basics-data-warehousing",
                     "label": "Data Warehousing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "analysis-and-statistics-descriptive-and-diagnostic-summary-stats",
                     "label": "Summary Stats",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "analysis-and-statistics-descriptive-and-diagnostic-root-cause-analysis",
                     "label": "Root Cause Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "analysis-and-statistics-experimentation",
@@ -242,14 +263,17 @@
                   {
                     "id": "analysis-and-statistics-experimentation-a-b-testing",
                     "label": "A/B Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "analysis-and-statistics-experimentation-cohort-analysis",
                     "label": "Cohort Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "analysis-and-statistics-forecasting",
@@ -260,14 +284,17 @@
                   {
                     "id": "analysis-and-statistics-forecasting-time-series",
                     "label": "Time Series",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "analysis-and-statistics-forecasting-seasonality",
                     "label": "Seasonality",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "visualization-and-bi-tools-dashboard-design-layout-and-ux",
                     "label": "Layout & UX",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-bi-tools-dashboard-design-storytelling",
                     "label": "Storytelling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "visualization-and-bi-tools-bi-platforms",
@@ -319,14 +349,17 @@
                   {
                     "id": "visualization-and-bi-tools-bi-platforms-power-bi",
                     "label": "Power BI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-bi-tools-bi-platforms-tableau",
                     "label": "Tableau",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "visualization-and-bi-tools-advanced-visuals",
@@ -337,14 +370,17 @@
                   {
                     "id": "visualization-and-bi-tools-advanced-visuals-interactivity",
                     "label": "Interactivity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-bi-tools-advanced-visuals-performance-tuning",
                     "label": "Performance Tuning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "data-governance-data-ethics-privacy",
                     "label": "Privacy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-governance-data-ethics-bias",
                     "label": "Bias",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-governance-governance-practices",
@@ -396,14 +435,17 @@
                   {
                     "id": "data-governance-governance-practices-data-lineage",
                     "label": "Data Lineage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-governance-governance-practices-access-control",
                     "label": "Access Control",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-governance-quality-management",
@@ -414,14 +456,17 @@
                   {
                     "id": "data-governance-quality-management-validation-rules",
                     "label": "Validation Rules",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-governance-quality-management-monitoring",
                     "label": "Monitoring",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "career-and-impact-business-communication-executive-summaries",
                     "label": "Executive Summaries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-impact-business-communication-stakeholder-updates",
                     "label": "Stakeholder Updates",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "career-and-impact-portfolio-projects",
@@ -473,14 +521,17 @@
                   {
                     "id": "career-and-impact-portfolio-projects-end-to-end-bi-project",
                     "label": "End-to-End BI Project",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-impact-portfolio-projects-case-studies",
                     "label": "Case Studies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "career-and-impact-career-growth",
@@ -491,14 +542,17 @@
                   {
                     "id": "career-and-impact-career-growth-certifications",
                     "label": "Certifications",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-impact-career-growth-interview-prep",
                     "label": "Interview Prep",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

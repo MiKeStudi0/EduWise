@@ -70,14 +70,17 @@
                   {
                     "id": "server-side-game-foundations-networking-basics-tcp-vs-udp",
                     "label": "TCP vs UDP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "server-side-game-foundations-networking-basics-latency-and-jitter",
                     "label": "Latency & Jitter",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "server-side-game-foundations-client-server-architecture",
@@ -88,14 +91,17 @@
                   {
                     "id": "server-side-game-foundations-client-server-architecture-authoritative-server",
                     "label": "Authoritative Server",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "server-side-game-foundations-client-server-architecture-state-sync",
                     "label": "State Sync",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "server-side-game-foundations-session-and-match-flow",
@@ -106,14 +112,17 @@
                   {
                     "id": "server-side-game-foundations-session-and-match-flow-lobby-and-matchmaking",
                     "label": "Lobby & Matchmaking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "server-side-game-foundations-session-and-match-flow-session-lifecycle",
                     "label": "Session Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "real-time-networking-replication-state-replication",
                     "label": "State Replication",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "real-time-networking-replication-delta-compression",
                     "label": "Delta Compression",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "real-time-networking-prediction-and-reconciliation",
@@ -165,14 +177,17 @@
                   {
                     "id": "real-time-networking-prediction-and-reconciliation-client-prediction",
                     "label": "Client Prediction",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "real-time-networking-prediction-and-reconciliation-server-reconciliation",
                     "label": "Server Reconciliation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "real-time-networking-lag-compensation",
@@ -183,14 +198,17 @@
                   {
                     "id": "real-time-networking-lag-compensation-interpolation",
                     "label": "Interpolation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "real-time-networking-lag-compensation-rollback-techniques",
                     "label": "Rollback Techniques",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "backend-services-apis-and-rpc-rest",
                     "label": "REST",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-services-apis-and-rpc-grpc",
                     "label": "gRPC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-services-data-storage",
@@ -242,14 +263,17 @@
                   {
                     "id": "backend-services-data-storage-sql-vs-nosql",
                     "label": "SQL vs NoSQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-services-data-storage-caching",
                     "label": "Caching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-services-messaging",
@@ -260,14 +284,17 @@
                   {
                     "id": "backend-services-messaging-message-queues",
                     "label": "Message Queues",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-services-messaging-event-streaming",
                     "label": "Event Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "scalability-and-reliability-load-handling-sharding",
                     "label": "Sharding",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scalability-and-reliability-load-handling-autoscaling",
                     "label": "Autoscaling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scalability-and-reliability-fault-tolerance",
@@ -319,14 +349,17 @@
                   {
                     "id": "scalability-and-reliability-fault-tolerance-retry-and-backoff",
                     "label": "Retry & Backoff",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scalability-and-reliability-fault-tolerance-failover",
                     "label": "Failover",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scalability-and-reliability-observability",
@@ -337,14 +370,17 @@
                   {
                     "id": "scalability-and-reliability-observability-logging",
                     "label": "Logging",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scalability-and-reliability-observability-metrics-and-tracing",
                     "label": "Metrics & Tracing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "security-and-operations-security-basics-auth-and-tokens",
                     "label": "Auth & Tokens",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-operations-security-basics-ddos-protection",
                     "label": "DDoS Protection",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-operations-cheat-prevention",
@@ -396,14 +435,17 @@
                   {
                     "id": "security-and-operations-cheat-prevention-server-authority",
                     "label": "Server Authority",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-operations-cheat-prevention-anti-cheat-signals",
                     "label": "Anti-Cheat Signals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-operations-infrastructure",
@@ -414,14 +456,17 @@
                   {
                     "id": "security-and-operations-infrastructure-containers",
                     "label": "Containers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-operations-infrastructure-cloud-hosting",
                     "label": "Cloud Hosting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "production-and-live-ops-release-management-deployment-pipelines",
                     "label": "Deployment Pipelines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-live-ops-release-management-rollbacks",
                     "label": "Rollbacks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "production-and-live-ops-live-ops",
@@ -473,14 +521,17 @@
                   {
                     "id": "production-and-live-ops-live-ops-events-and-seasons",
                     "label": "Events & Seasons",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-live-ops-live-ops-economy-balancing",
                     "label": "Economy Balancing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "production-and-live-ops-analytics",
@@ -491,14 +542,17 @@
                   {
                     "id": "production-and-live-ops-analytics-telemetry",
                     "label": "Telemetry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-live-ops-analytics-kpis",
                     "label": "KPIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

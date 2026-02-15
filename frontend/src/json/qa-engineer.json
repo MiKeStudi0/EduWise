@@ -70,14 +70,17 @@
                   {
                     "id": "qa-foundations-what-is-qa-quality-mindset",
                     "label": "Quality Mindset",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "qa-foundations-what-is-qa-qa-vs-qc",
                     "label": "QA vs QC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "qa-foundations-sdlc-and-stlc",
@@ -88,14 +91,17 @@
                   {
                     "id": "qa-foundations-sdlc-and-stlc-agile",
                     "label": "Agile",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "qa-foundations-sdlc-and-stlc-waterfall",
                     "label": "Waterfall",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "qa-foundations-testing-strategies",
@@ -106,14 +112,17 @@
                   {
                     "id": "qa-foundations-testing-strategies-test-pyramid",
                     "label": "Test Pyramid",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "qa-foundations-testing-strategies-risk-based-testing",
                     "label": "Risk-Based Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "test-design-and-manual-testing-test-cases-and-scenarios-equivalence-partitioning",
                     "label": "Equivalence Partitioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "test-design-and-manual-testing-test-cases-and-scenarios-boundary-value-analysis",
                     "label": "Boundary Value Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "test-design-and-manual-testing-exploratory-testing",
@@ -165,14 +177,17 @@
                   {
                     "id": "test-design-and-manual-testing-exploratory-testing-session-based",
                     "label": "Session-Based",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "test-design-and-manual-testing-exploratory-testing-heuristics",
                     "label": "Heuristics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "test-design-and-manual-testing-defect-management",
@@ -183,14 +198,17 @@
                   {
                     "id": "test-design-and-manual-testing-defect-management-bug-lifecycle",
                     "label": "Bug Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "test-design-and-manual-testing-defect-management-severity-vs-priority",
                     "label": "Severity vs Priority",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "automation-testing-ui-automation-playwright",
                     "label": "Playwright",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-testing-ui-automation-cypress",
                     "label": "Cypress",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "automation-testing-api-testing",
@@ -242,14 +263,17 @@
                   {
                     "id": "automation-testing-api-testing-postman-newman",
                     "label": "Postman/Newman",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-testing-api-testing-rest-assured",
                     "label": "REST Assured",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "automation-testing-mobile-testing",
@@ -260,14 +284,17 @@
                   {
                     "id": "automation-testing-mobile-testing-appium",
                     "label": "Appium",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-testing-mobile-testing-espresso",
                     "label": "Espresso",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "non-functional-testing-performance-testing-k6",
                     "label": "k6",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "non-functional-testing-performance-testing-jmeter",
                     "label": "JMeter",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "non-functional-testing-security-testing",
@@ -319,14 +349,17 @@
                   {
                     "id": "non-functional-testing-security-testing-owasp-top-10",
                     "label": "OWASP Top 10",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "non-functional-testing-security-testing-vulnerability-scanning",
                     "label": "Vulnerability Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "non-functional-testing-accessibility-testing",
@@ -337,14 +370,17 @@
                   {
                     "id": "non-functional-testing-accessibility-testing-axe",
                     "label": "axe",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "non-functional-testing-accessibility-testing-wcag-basics",
                     "label": "WCAG Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "ci-cd-and-test-ops-ci-integration-github-actions",
                     "label": "GitHub Actions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-test-ops-ci-integration-gitlab-ci",
                     "label": "GitLab CI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-test-ops-test-reporting",
@@ -396,14 +435,17 @@
                   {
                     "id": "ci-cd-and-test-ops-test-reporting-allure",
                     "label": "Allure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-test-ops-test-reporting-testrail",
                     "label": "TestRail",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-test-ops-test-data-management",
@@ -414,14 +456,17 @@
                   {
                     "id": "ci-cd-and-test-ops-test-data-management-data-seeding",
                     "label": "Data Seeding",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-test-ops-test-data-management-environment-parity",
                     "label": "Environment Parity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "monitoring-and-quality-metrics-logs-and-monitoring-kibana",
                     "label": "Kibana",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-quality-metrics-logs-and-monitoring-grafana",
                     "label": "Grafana",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-quality-metrics-quality-metrics",
@@ -473,14 +521,17 @@
                   {
                     "id": "monitoring-and-quality-metrics-quality-metrics-defect-density",
                     "label": "Defect Density",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-quality-metrics-quality-metrics-escape-rate",
                     "label": "Escape Rate",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-quality-metrics-root-cause-analysis",
@@ -491,14 +542,17 @@
                   {
                     "id": "monitoring-and-quality-metrics-root-cause-analysis-5-whys",
                     "label": "5 Whys",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-quality-metrics-root-cause-analysis-fishbone",
                     "label": "Fishbone",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

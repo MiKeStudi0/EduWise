@@ -70,14 +70,17 @@
                   {
                     "id": "devrel-foundations-devrel-purpose-developer-experience",
                     "label": "Developer Experience",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devrel-foundations-devrel-purpose-feedback-loops",
                     "label": "Feedback Loops",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devrel-foundations-audience-and-positioning",
@@ -88,14 +91,17 @@
                   {
                     "id": "devrel-foundations-audience-and-positioning-developer-personas",
                     "label": "Developer Personas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devrel-foundations-audience-and-positioning-value-proposition",
                     "label": "Value Proposition",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devrel-foundations-messaging",
@@ -106,14 +112,17 @@
                   {
                     "id": "devrel-foundations-messaging-product-narrative",
                     "label": "Product Narrative",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devrel-foundations-messaging-use-cases",
                     "label": "Use Cases",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "technical-credibility-api-and-docs-api-design-basics",
                     "label": "API Design Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-credibility-api-and-docs-documentation-structure",
                     "label": "Documentation Structure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-credibility-developer-tooling",
@@ -165,14 +177,17 @@
                   {
                     "id": "technical-credibility-developer-tooling-sdks-and-samples",
                     "label": "SDKs & Samples",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-credibility-developer-tooling-quickstarts",
                     "label": "Quickstarts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-credibility-hands-on-skills",
@@ -183,14 +198,17 @@
                   {
                     "id": "technical-credibility-hands-on-skills-programming-basics",
                     "label": "Programming Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-credibility-hands-on-skills-debugging-and-support",
                     "label": "Debugging & Support",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "community-and-programs-community-building-engagement-strategy",
                     "label": "Engagement Strategy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "community-and-programs-community-building-code-of-conduct",
                     "label": "Code of Conduct",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "community-and-programs-developer-programs",
@@ -242,14 +263,17 @@
                   {
                     "id": "community-and-programs-developer-programs-ambassadors",
                     "label": "Ambassadors",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "community-and-programs-developer-programs-open-source",
                     "label": "Open Source",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "community-and-programs-events",
@@ -260,14 +284,17 @@
                   {
                     "id": "community-and-programs-events-workshops",
                     "label": "Workshops",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "community-and-programs-events-conferences-and-meetups",
                     "label": "Conferences & Meetups",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "content-and-education-content-strategy-editorial-calendar",
                     "label": "Editorial Calendar",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "content-and-education-content-strategy-topic-research",
                     "label": "Topic Research",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "content-and-education-technical-writing",
@@ -319,14 +349,17 @@
                   {
                     "id": "content-and-education-technical-writing-tutorials",
                     "label": "Tutorials",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "content-and-education-technical-writing-reference-guides",
                     "label": "Reference Guides",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "content-and-education-developer-education",
@@ -337,14 +370,17 @@
                   {
                     "id": "content-and-education-developer-education-courses",
                     "label": "Courses",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "content-and-education-developer-education-live-demos",
                     "label": "Live Demos",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "social-and-advocacy-public-speaking-talk-design",
                     "label": "Talk Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "social-and-advocacy-public-speaking-qanda-handling",
                     "label": "Q&A Handling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "social-and-advocacy-social-presence",
@@ -396,14 +435,17 @@
                   {
                     "id": "social-and-advocacy-social-presence-community-platforms",
                     "label": "Community Platforms",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "social-and-advocacy-social-presence-brand-voice",
                     "label": "Brand Voice",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "social-and-advocacy-advocacy",
@@ -414,14 +456,17 @@
                   {
                     "id": "social-and-advocacy-advocacy-customer-stories",
                     "label": "Customer Stories",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "social-and-advocacy-advocacy-product-feedback",
                     "label": "Product Feedback",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "metrics-and-career-measurement-engagement-metrics",
                     "label": "Engagement Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-career-measurement-content-performance",
                     "label": "Content Performance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "metrics-and-career-reporting",
@@ -473,14 +521,17 @@
                   {
                     "id": "metrics-and-career-reporting-dashboards",
                     "label": "Dashboards",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-career-reporting-insights-and-recommendations",
                     "label": "Insights & Recommendations",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "metrics-and-career-career-growth",
@@ -491,14 +542,17 @@
                   {
                     "id": "metrics-and-career-career-growth-personal-brand",
                     "label": "Personal Brand",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-career-career-growth-continuous-learning",
                     "label": "Continuous Learning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

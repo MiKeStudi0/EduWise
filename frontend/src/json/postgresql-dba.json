@@ -70,14 +70,17 @@
                   {
                     "id": "postgresql-dba-foundations-postgresql-basics-architecture-overview",
                     "label": "Architecture Overview",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "postgresql-dba-foundations-postgresql-basics-core-components",
                     "label": "Core Components",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "postgresql-dba-foundations-rdbms-concepts",
@@ -88,14 +91,17 @@
                   {
                     "id": "postgresql-dba-foundations-rdbms-concepts-acid",
                     "label": "ACID",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "postgresql-dba-foundations-rdbms-concepts-mvcc",
                     "label": "MVCC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "postgresql-dba-foundations-sql-fundamentals",
@@ -106,14 +112,17 @@
                   {
                     "id": "postgresql-dba-foundations-sql-fundamentals-ddl-dml",
                     "label": "DDL/DML",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "postgresql-dba-foundations-sql-fundamentals-joins-and-indexes",
                     "label": "Joins & Indexes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "configuration-and-security-configuration-postgresql-conf",
                     "label": "postgresql.conf",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "configuration-and-security-configuration-memory-and-wal",
                     "label": "Memory & WAL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "configuration-and-security-access-control",
@@ -165,14 +177,17 @@
                   {
                     "id": "configuration-and-security-access-control-roles-and-privileges",
                     "label": "Roles & Privileges",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "configuration-and-security-access-control-pg-hba-conf",
                     "label": "pg_hba.conf",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "configuration-and-security-security",
@@ -183,14 +198,17 @@
                   {
                     "id": "configuration-and-security-security-tls",
                     "label": "TLS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "configuration-and-security-security-row-level-security",
                     "label": "Row-Level Security",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "operations-and-reliability-backup-and-recovery-pg-dump-pg-basebackup",
                     "label": "pg_dump/pg_basebackup",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "operations-and-reliability-backup-and-recovery-restore-testing",
                     "label": "Restore Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "operations-and-reliability-replication-and-ha",
@@ -242,14 +263,17 @@
                   {
                     "id": "operations-and-reliability-replication-and-ha-streaming-replication",
                     "label": "Streaming Replication",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "operations-and-reliability-replication-and-ha-failover",
                     "label": "Failover",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "operations-and-reliability-monitoring",
@@ -260,14 +284,17 @@
                   {
                     "id": "operations-and-reliability-monitoring-pg-stat",
                     "label": "pg_stat_*",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "operations-and-reliability-monitoring-alerting",
                     "label": "Alerting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "performance-and-tuning-query-tuning-explain",
                     "label": "EXPLAIN",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "performance-and-tuning-query-tuning-index-strategy",
                     "label": "Index Strategy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "performance-and-tuning-vacuum-and-bloat",
@@ -319,14 +349,17 @@
                   {
                     "id": "performance-and-tuning-vacuum-and-bloat-autovacuum",
                     "label": "Autovacuum",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "performance-and-tuning-vacuum-and-bloat-maintenance",
                     "label": "Maintenance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "performance-and-tuning-workload-tuning",
@@ -337,14 +370,17 @@
                   {
                     "id": "performance-and-tuning-workload-tuning-oltp-vs-olap",
                     "label": "OLTP vs OLAP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "performance-and-tuning-workload-tuning-connection-pooling",
                     "label": "Connection Pooling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "automation-and-tooling-automation-shell-scripting",
                     "label": "Shell Scripting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-and-tooling-automation-scheduled-jobs",
                     "label": "Scheduled Jobs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "automation-and-tooling-infrastructure",
@@ -396,14 +435,17 @@
                   {
                     "id": "automation-and-tooling-infrastructure-provisioning",
                     "label": "Provisioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-and-tooling-infrastructure-capacity-planning",
                     "label": "Capacity Planning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "automation-and-tooling-extensions-and-tools",
@@ -414,14 +456,17 @@
                   {
                     "id": "automation-and-tooling-extensions-and-tools-extensions",
                     "label": "Extensions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "automation-and-tooling-extensions-and-tools-diagnostic-tools",
                     "label": "Diagnostic Tools",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "advanced-and-career-advanced-sql-ctes",
                     "label": "CTEs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-advanced-sql-window-functions",
                     "label": "Window Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "advanced-and-career-troubleshooting",
@@ -473,14 +521,17 @@
                   {
                     "id": "advanced-and-career-troubleshooting-log-analysis",
                     "label": "Log Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-troubleshooting-system-diagnostics",
                     "label": "System Diagnostics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "advanced-and-career-community-and-growth",
@@ -491,14 +542,17 @@
                   {
                     "id": "advanced-and-career-community-and-growth-mailing-lists",
                     "label": "Mailing Lists",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-community-and-growth-contributing",
                     "label": "Contributing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

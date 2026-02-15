@@ -70,14 +70,17 @@
                   {
                     "id": "architecture-foundations-role-of-a-software-architect-responsibilities",
                     "label": "Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-foundations-role-of-a-software-architect-stakeholder-management",
                     "label": "Stakeholder Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-foundations-architecture-levels",
@@ -88,19 +91,23 @@
                   {
                     "id": "architecture-foundations-architecture-levels-application",
                     "label": "Application",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-foundations-architecture-levels-solution",
                     "label": "Solution",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-foundations-architecture-levels-enterprise",
                     "label": "Enterprise",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-foundations-architecture-decision-records",
@@ -111,14 +118,17 @@
                   {
                     "id": "architecture-foundations-architecture-decision-records-tradeoffs",
                     "label": "Tradeoffs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-foundations-architecture-decision-records-decision-logs",
                     "label": "Decision Logs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -152,14 +162,17 @@
                   {
                     "id": "quality-attributes-scalability-and-performance-throughput",
                     "label": "Throughput",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-attributes-scalability-and-performance-latency",
                     "label": "Latency",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "quality-attributes-reliability-and-resilience",
@@ -170,14 +183,17 @@
                   {
                     "id": "quality-attributes-reliability-and-resilience-fault-tolerance",
                     "label": "Fault Tolerance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-attributes-reliability-and-resilience-disaster-recovery",
                     "label": "Disaster Recovery",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "quality-attributes-security",
@@ -188,14 +204,17 @@
                   {
                     "id": "quality-attributes-security-authn-authz",
                     "label": "AuthN/AuthZ",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "quality-attributes-security-owasp",
                     "label": "OWASP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -229,14 +248,17 @@
                   {
                     "id": "architecture-patterns-monolith-and-modular-layered",
                     "label": "Layered",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-patterns-monolith-and-modular-modular-monolith",
                     "label": "Modular Monolith",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-patterns-microservices",
@@ -247,14 +269,17 @@
                   {
                     "id": "architecture-patterns-microservices-service-boundaries",
                     "label": "Service Boundaries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-patterns-microservices-service-discovery",
                     "label": "Service Discovery",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-patterns-event-driven",
@@ -265,14 +290,17 @@
                   {
                     "id": "architecture-patterns-event-driven-messaging",
                     "label": "Messaging",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-patterns-event-driven-cqrs",
                     "label": "CQRS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -306,14 +334,17 @@
                   {
                     "id": "systems-and-data-distributed-systems-cap-theorem",
                     "label": "CAP Theorem",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "systems-and-data-distributed-systems-consistency-models",
                     "label": "Consistency Models",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "systems-and-data-data-storage",
@@ -324,14 +355,17 @@
                   {
                     "id": "systems-and-data-data-storage-sql-vs-nosql",
                     "label": "SQL vs NoSQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "systems-and-data-data-storage-caching",
                     "label": "Caching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "systems-and-data-data-pipelines",
@@ -342,14 +376,17 @@
                   {
                     "id": "systems-and-data-data-pipelines-etl-elt",
                     "label": "ETL/ELT",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "systems-and-data-data-pipelines-streaming",
                     "label": "Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -383,19 +420,23 @@
                   {
                     "id": "apis-and-integration-api-design-rest",
                     "label": "REST",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-integration-api-design-grpc",
                     "label": "gRPC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-integration-api-design-graphql",
                     "label": "GraphQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-integration-integration-patterns",
@@ -406,14 +447,17 @@
                   {
                     "id": "apis-and-integration-integration-patterns-message-queues",
                     "label": "Message Queues",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-integration-integration-patterns-event-bus",
                     "label": "Event Bus",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-integration-gateway-and-edge",
@@ -424,14 +468,17 @@
                   {
                     "id": "apis-and-integration-gateway-and-edge-api-gateway",
                     "label": "API Gateway",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-integration-gateway-and-edge-rate-limiting",
                     "label": "Rate Limiting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -465,14 +512,17 @@
                   {
                     "id": "cloud-and-operations-cloud-architecture-aws-azure-gcp",
                     "label": "AWS/Azure/GCP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-operations-cloud-architecture-shared-responsibility",
                     "label": "Shared Responsibility",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-operations-infrastructure-as-code",
@@ -483,14 +533,17 @@
                   {
                     "id": "cloud-and-operations-infrastructure-as-code-terraform",
                     "label": "Terraform",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-operations-infrastructure-as-code-ci-cd",
                     "label": "CI/CD",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-operations-observability",
@@ -501,19 +554,23 @@
                   {
                     "id": "cloud-and-operations-observability-logging",
                     "label": "Logging",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-operations-observability-metrics",
                     "label": "Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-operations-observability-tracing",
                     "label": "Tracing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -547,14 +604,17 @@
                   {
                     "id": "leadership-and-governance-architecture-governance-standards",
                     "label": "Standards",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-governance-architecture-governance-review-boards",
                     "label": "Review Boards",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "leadership-and-governance-documentation",
@@ -565,14 +625,17 @@
                   {
                     "id": "leadership-and-governance-documentation-diagrams",
                     "label": "Diagrams",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-governance-documentation-decision-records",
                     "label": "Decision Records",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "leadership-and-governance-mentoring-and-communication",
@@ -583,14 +646,17 @@
                   {
                     "id": "leadership-and-governance-mentoring-and-communication-coaching",
                     "label": "Coaching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-governance-mentoring-and-communication-stakeholder-updates",
                     "label": "Stakeholder Updates",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

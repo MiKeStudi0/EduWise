@@ -70,14 +70,17 @@
                   {
                     "id": "blockchain-foundations-core-concepts-distributed-ledger",
                     "label": "Distributed Ledger",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-foundations-core-concepts-consensus-basics",
                     "label": "Consensus Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "blockchain-foundations-cryptography",
@@ -88,14 +91,17 @@
                   {
                     "id": "blockchain-foundations-cryptography-hashing",
                     "label": "Hashing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-foundations-cryptography-public-private-keys",
                     "label": "Public/Private Keys",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "blockchain-foundations-networks",
@@ -106,14 +112,17 @@
                   {
                     "id": "blockchain-foundations-networks-p2p-networking",
                     "label": "P2P Networking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-foundations-networks-nodes-and-validators",
                     "label": "Nodes & Validators",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "blockchain-architecture-blocks-and-transactions-transaction-lifecycle",
                     "label": "Transaction Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-architecture-blocks-and-transactions-utxo-vs-account-model",
                     "label": "UTXO vs Account Model",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "blockchain-architecture-consensus-mechanisms",
@@ -165,14 +177,17 @@
                   {
                     "id": "blockchain-architecture-consensus-mechanisms-pow-vs-pos",
                     "label": "PoW vs PoS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-architecture-consensus-mechanisms-finality",
                     "label": "Finality",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "blockchain-architecture-scaling",
@@ -183,14 +198,17 @@
                   {
                     "id": "blockchain-architecture-scaling-layer-2",
                     "label": "Layer 2",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "blockchain-architecture-scaling-sharding",
                     "label": "Sharding",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "smart-contracts-smart-contract-basics-state-and-gas",
                     "label": "State & Gas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "smart-contracts-smart-contract-basics-security-patterns",
                     "label": "Security Patterns",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "smart-contracts-evm-and-solidity",
@@ -242,14 +263,17 @@
                   {
                     "id": "smart-contracts-evm-and-solidity-solidity-basics",
                     "label": "Solidity Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "smart-contracts-evm-and-solidity-contract-testing",
                     "label": "Contract Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "smart-contracts-alternative-platforms",
@@ -260,14 +284,17 @@
                   {
                     "id": "smart-contracts-alternative-platforms-solana-programs",
                     "label": "Solana Programs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "smart-contracts-alternative-platforms-cosmwasm",
                     "label": "CosmWasm",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "web3-development-wallets-and-keys-wallet-types",
                     "label": "Wallet Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web3-development-wallets-and-keys-key-management",
                     "label": "Key Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web3-development-dapp-architecture",
@@ -319,14 +349,17 @@
                   {
                     "id": "web3-development-dapp-architecture-frontend-integration",
                     "label": "Frontend Integration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web3-development-dapp-architecture-indexing-and-apis",
                     "label": "Indexing & APIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web3-development-token-standards",
@@ -337,14 +370,17 @@
                   {
                     "id": "web3-development-token-standards-erc-20",
                     "label": "ERC-20",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web3-development-token-standards-erc-721-1155",
                     "label": "ERC-721/1155",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "security-and-governance-security-fundamentals-threat-models",
                     "label": "Threat Models",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-governance-security-fundamentals-auditing-basics",
                     "label": "Auditing Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-governance-governance",
@@ -396,14 +435,17 @@
                   {
                     "id": "security-and-governance-governance-on-chain-governance",
                     "label": "On-chain Governance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-governance-governance-daos",
                     "label": "DAOs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-governance-compliance",
@@ -414,14 +456,17 @@
                   {
                     "id": "security-and-governance-compliance-regulatory-basics",
                     "label": "Regulatory Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-governance-compliance-risk-management",
                     "label": "Risk Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "ecosystem-and-careers-use-cases-defi",
                     "label": "DeFi",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ecosystem-and-careers-use-cases-nfts",
                     "label": "NFTs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ecosystem-and-careers-tooling",
@@ -473,14 +521,17 @@
                   {
                     "id": "ecosystem-and-careers-tooling-block-explorers",
                     "label": "Block Explorers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ecosystem-and-careers-tooling-dev-tooling",
                     "label": "Dev Tooling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ecosystem-and-careers-career-growth",
@@ -491,14 +542,17 @@
                   {
                     "id": "ecosystem-and-careers-career-growth-portfolio-projects",
                     "label": "Portfolio Projects",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ecosystem-and-careers-career-growth-community-and-networking",
                     "label": "Community & Networking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

@@ -1,0 +1,94 @@
+seo_metadata
+- id
+- meta_title
+- meta_description
+- keywords              -- JSON / TEXT[]
+- canonical_url
+- robots
+
+-- Open Graph
+- og_title
+- og_description
+- og_type
+- og_url
+- og_site_name
+- og_image_url
+- og_image_width
+- og_image_height
+- og_image_alt
+
+-- Twitter
+- twitter_card
+- twitter_title
+- twitter_description
+- twitter_image
+
+- created_at
+- updated_at
+
+
+roadmaps
+- id
+- slug
+- title
+- description
+- seo_id          -- FK → seo_metadata.id
+- order_index
+- is_active
+- created_at
+- updated_at
+
+
+technologies
+- id
+- roadmap_id
+- slug
+- name
+- description
+- seo_id          -- FK → seo_metadata.id
+- order_index
+- created_at
+- updated_at
+
+modules
+- id
+- technology_id
+- slug
+- title
+- description
+- seo_id          -- FK → seo_metadata.id
+- order_index
+- created_at
+- updated_at
+
+topics
+- id
+- module_id
+- slug
+- title
+- summary
+- seo_id          -- FK → seo_metadata.id
+- order_index
+- created_at
+- updated_at
+
+
+lessons
+- id
+- topic_id
+- slug
+- title
+- summary
+- content
+- video_url
+- problems          -- JSON / TEXT[]
+- when_to_use         -- JSON / TEXT[]
+- when_to_avoid       -- JSON / TEXT[]
+- syntax_highlighted_code -- JSON / TEXT[]
+- difficulty
+- content_type
+- duration_minutes
+- seo_id          -- FK → seo_metadata.id
+- order_index
+- created_at
+- updated_at

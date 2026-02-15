@@ -70,14 +70,17 @@
                   {
                     "id": "engineering-manager-foundations-role-and-scope-em-vs-tl-vs-ic",
                     "label": "EM vs TL vs IC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engineering-manager-foundations-role-and-scope-core-responsibilities",
                     "label": "Core Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "engineering-manager-foundations-leadership-basics",
@@ -88,14 +91,17 @@
                   {
                     "id": "engineering-manager-foundations-leadership-basics-servant-leadership",
                     "label": "Servant Leadership",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engineering-manager-foundations-leadership-basics-ethical-decision-making",
                     "label": "Ethical Decision Making",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "engineering-manager-foundations-tech-fluency",
@@ -106,14 +112,17 @@
                   {
                     "id": "engineering-manager-foundations-tech-fluency-system-design-overview",
                     "label": "System Design Overview",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engineering-manager-foundations-tech-fluency-engineering-lifecycle",
                     "label": "Engineering Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "people-management-hiring-and-team-design-recruiting",
                     "label": "Recruiting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "people-management-hiring-and-team-design-team-structure",
                     "label": "Team Structure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "people-management-performance-and-growth",
@@ -165,14 +177,17 @@
                   {
                     "id": "people-management-performance-and-growth-feedback-and-coaching",
                     "label": "Feedback & Coaching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "people-management-performance-and-growth-career-ladders",
                     "label": "Career Ladders",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "people-management-team-health",
@@ -183,14 +198,17 @@
                   {
                     "id": "people-management-team-health-motivation",
                     "label": "Motivation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "people-management-team-health-conflict-resolution",
                     "label": "Conflict Resolution",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "delivery-and-execution-planning-and-estimation-roadmaps",
                     "label": "Roadmaps",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "delivery-and-execution-planning-and-estimation-milestones",
                     "label": "Milestones",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "delivery-and-execution-agile-and-process",
@@ -242,14 +263,17 @@
                   {
                     "id": "delivery-and-execution-agile-and-process-scrum-and-kanban",
                     "label": "Scrum & Kanban",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "delivery-and-execution-agile-and-process-continuous-improvement",
                     "label": "Continuous Improvement",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "delivery-and-execution-quality-and-reliability",
@@ -260,14 +284,17 @@
                   {
                     "id": "delivery-and-execution-quality-and-reliability-testing-strategy",
                     "label": "Testing Strategy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "delivery-and-execution-quality-and-reliability-incident-response",
                     "label": "Incident Response",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "technical-leadership-architecture-and-decisions-adr-practices",
                     "label": "ADR Practices",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-leadership-architecture-and-decisions-build-vs-buy",
                     "label": "Build vs Buy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-leadership-technical-strategy",
@@ -319,14 +349,17 @@
                   {
                     "id": "technical-leadership-technical-strategy-platform-thinking",
                     "label": "Platform Thinking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-leadership-technical-strategy-tech-debt-management",
                     "label": "Tech Debt Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "technical-leadership-observability-and-sre",
@@ -337,14 +370,17 @@
                   {
                     "id": "technical-leadership-observability-and-sre-monitoring",
                     "label": "Monitoring",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "technical-leadership-observability-and-sre-reliability-metrics",
                     "label": "Reliability Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "stakeholders-and-business-stakeholder-management-alignment",
                     "label": "Alignment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "stakeholders-and-business-stakeholder-management-executive-communication",
                     "label": "Executive Communication",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "stakeholders-and-business-business-acumen",
@@ -396,14 +435,17 @@
                   {
                     "id": "stakeholders-and-business-business-acumen-roi-thinking",
                     "label": "ROI Thinking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "stakeholders-and-business-business-acumen-budgeting",
                     "label": "Budgeting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "stakeholders-and-business-risk-management",
@@ -414,14 +456,17 @@
                   {
                     "id": "stakeholders-and-business-risk-management-risk-assessment",
                     "label": "Risk Assessment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "stakeholders-and-business-risk-management-mitigation-plans",
                     "label": "Mitigation Plans",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "culture-and-change-culture-building-psychological-safety",
                     "label": "Psychological Safety",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "culture-and-change-culture-building-learning-culture",
                     "label": "Learning Culture",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "culture-and-change-knowledge-sharing",
@@ -473,14 +521,17 @@
                   {
                     "id": "culture-and-change-knowledge-sharing-documentation",
                     "label": "Documentation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "culture-and-change-knowledge-sharing-tech-talks",
                     "label": "Tech Talks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "culture-and-change-change-management",
@@ -491,14 +542,17 @@
                   {
                     "id": "culture-and-change-change-management-org-change",
                     "label": "Org Change",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "culture-and-change-change-management-communication-plans",
                     "label": "Communication Plans",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

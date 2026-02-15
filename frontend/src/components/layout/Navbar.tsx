@@ -101,14 +101,18 @@ export function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               <ThemeToggle />
               
-              <Button variant="ghost" size="sm">
-                Sign in
-              </Button>
+              <Link href="/auth">
+                <Button variant="ghost" size="sm">
+                  Sign in
+                </Button>
+              </Link>
               
               {/* PRIMARY CTA: Using 'hero' variant */}
-              <Button variant="hero" size="sm">
-                Get Started
-              </Button>
+              <Link href="/auth">
+                <Button variant="hero" size="sm">
+                  Get Started
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Actions (Theme Toggle + Menu) */}
@@ -158,12 +162,16 @@ export function Navbar() {
             
             <div className="pt-4 px-4 mt-2 border-t border-border/50">
               <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full justify-center">
-                  Sign in
-                </Button>
-                <Button variant="hero" className="w-full justify-center">
-                  Get Started
-                </Button>
+                <Link href="/auth" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="outline" className="w-full justify-center">
+                    Sign in
+                  </Button>
+                </Link>
+                <Link href="/auth" className="w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Button variant="hero" className="w-full justify-center">
+                    Get Started
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

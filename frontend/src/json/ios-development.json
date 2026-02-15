@@ -70,14 +70,17 @@
                   {
                     "id": "ios-foundations-swift-basics-syntax-and-types",
                     "label": "Syntax & Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ios-foundations-swift-basics-optionals",
                     "label": "Optionals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ios-foundations-core-concepts",
@@ -88,14 +91,17 @@
                   {
                     "id": "ios-foundations-core-concepts-oop-and-protocols",
                     "label": "OOP & Protocols",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ios-foundations-core-concepts-memory-management-arc",
                     "label": "Memory Management (ARC)",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ios-foundations-app-lifecycle",
@@ -106,14 +112,17 @@
                   {
                     "id": "ios-foundations-app-lifecycle-view-controller-lifecycle",
                     "label": "View Controller Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ios-foundations-app-lifecycle-app-states",
                     "label": "App States",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "ui-and-navigation-swiftui-views-and-modifiers",
                     "label": "Views & Modifiers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-swiftui-state-management",
                     "label": "State Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ui-and-navigation-uikit",
@@ -165,14 +177,17 @@
                   {
                     "id": "ui-and-navigation-uikit-views-and-view-controllers",
                     "label": "Views & View Controllers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-uikit-auto-layout",
                     "label": "Auto Layout",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ui-and-navigation-navigation",
@@ -183,14 +198,17 @@
                   {
                     "id": "ui-and-navigation-navigation-navigation-stack",
                     "label": "Navigation Stack",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-navigation-deep-links",
                     "label": "Deep Links",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "architecture-and-state-architecture-patterns-mvvm",
                     "label": "MVVM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-architecture-patterns-coordinator",
                     "label": "Coordinator",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-state-dependency-injection",
@@ -242,14 +263,17 @@
                   {
                     "id": "architecture-and-state-dependency-injection-protocols",
                     "label": "Protocols",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-dependency-injection-factories",
                     "label": "Factories",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-state-reactive-and-async",
@@ -260,14 +284,17 @@
                   {
                     "id": "architecture-and-state-reactive-and-async-combine",
                     "label": "Combine",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-reactive-and-async-async-await",
                     "label": "async/await",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "data-and-networking-persistence-userdefaults",
                     "label": "UserDefaults",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-networking-persistence-core-data",
                     "label": "Core Data",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-networking-networking",
@@ -319,14 +349,17 @@
                   {
                     "id": "data-and-networking-networking-urlsession",
                     "label": "URLSession",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-networking-networking-rest",
                     "label": "REST",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-networking-parsing",
@@ -337,14 +370,17 @@
                   {
                     "id": "data-and-networking-parsing-codable",
                     "label": "Codable",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-networking-parsing-json",
                     "label": "JSON",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "security-and-privacy-security-basics-keychain",
                     "label": "Keychain",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-privacy-security-basics-secure-storage",
                     "label": "Secure Storage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-privacy-permissions-and-privacy",
@@ -396,14 +435,17 @@
                   {
                     "id": "security-and-privacy-permissions-and-privacy-app-permissions",
                     "label": "App Permissions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-privacy-permissions-and-privacy-privacy-labels",
                     "label": "Privacy Labels",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -437,14 +479,17 @@
                   {
                     "id": "testing-and-quality-testing-xctest",
                     "label": "XCTest",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-testing-ui-testing",
                     "label": "UI Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-debugging-and-profiling",
@@ -455,14 +500,17 @@
                   {
                     "id": "testing-and-quality-debugging-and-profiling-instruments",
                     "label": "Instruments",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-debugging-and-profiling-memory-leaks",
                     "label": "Memory Leaks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-code-quality",
@@ -473,14 +521,17 @@
                   {
                     "id": "testing-and-quality-code-quality-swiftlint",
                     "label": "SwiftLint",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-code-quality-swiftformat",
                     "label": "SwiftFormat",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -514,14 +565,17 @@
                   {
                     "id": "release-and-distribution-app-signing-and-distribution-app-store",
                     "label": "App Store",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "release-and-distribution-app-signing-and-distribution-testflight",
                     "label": "TestFlight",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "release-and-distribution-ci-cd",
@@ -532,14 +586,17 @@
                   {
                     "id": "release-and-distribution-ci-cd-fastlane",
                     "label": "Fastlane",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "release-and-distribution-ci-cd-github-actions",
                     "label": "GitHub Actions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

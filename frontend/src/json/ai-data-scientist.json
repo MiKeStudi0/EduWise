@@ -70,14 +70,17 @@
                   {
                     "id": "foundations-math-for-ds-linear-algebra",
                     "label": "Linear Algebra",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "foundations-math-for-ds-calculus-basics",
                     "label": "Calculus Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "foundations-statistics",
@@ -88,14 +91,17 @@
                   {
                     "id": "foundations-statistics-probability",
                     "label": "Probability",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "foundations-statistics-hypothesis-testing",
                     "label": "Hypothesis Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "foundations-data-fundamentals",
@@ -106,14 +112,17 @@
                   {
                     "id": "foundations-data-fundamentals-data-types",
                     "label": "Data Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "foundations-data-fundamentals-data-quality",
                     "label": "Data Quality",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "programming-and-data-python-for-ds-core-syntax",
                     "label": "Core Syntax",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-data-python-for-ds-pandas-and-numpy",
                     "label": "Pandas & NumPy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-data-sql",
@@ -165,14 +177,17 @@
                   {
                     "id": "programming-and-data-sql-joins-and-aggregations",
                     "label": "Joins & Aggregations",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-data-sql-window-functions",
                     "label": "Window Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-data-eda",
@@ -183,14 +198,17 @@
                   {
                     "id": "programming-and-data-eda-visualization",
                     "label": "Visualization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-data-eda-feature-understanding",
                     "label": "Feature Understanding",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "machine-learning-supervised-learning-regression",
                     "label": "Regression",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "machine-learning-supervised-learning-classification",
                     "label": "Classification",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "machine-learning-unsupervised-learning",
@@ -242,14 +263,17 @@
                   {
                     "id": "machine-learning-unsupervised-learning-clustering",
                     "label": "Clustering",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "machine-learning-unsupervised-learning-dimensionality-reduction",
                     "label": "Dimensionality Reduction",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "machine-learning-model-evaluation",
@@ -260,14 +284,17 @@
                   {
                     "id": "machine-learning-model-evaluation-metrics",
                     "label": "Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "machine-learning-model-evaluation-cross-validation",
                     "label": "Cross-Validation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "deep-learning-and-ai-neural-networks-backpropagation",
                     "label": "Backpropagation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-and-ai-neural-networks-regularization",
                     "label": "Regularization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deep-learning-and-ai-modern-architectures",
@@ -319,14 +349,17 @@
                   {
                     "id": "deep-learning-and-ai-modern-architectures-cnns",
                     "label": "CNNs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-and-ai-modern-architectures-transformers",
                     "label": "Transformers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deep-learning-and-ai-generative-ai",
@@ -337,14 +370,17 @@
                   {
                     "id": "deep-learning-and-ai-generative-ai-llms-basics",
                     "label": "LLMs Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-and-ai-generative-ai-prompting-and-rag",
                     "label": "Prompting & RAG",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "mlops-and-deployment-model-serving-batch-vs-online",
                     "label": "Batch vs Online",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-and-deployment-model-serving-monitoring",
                     "label": "Monitoring",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "mlops-and-deployment-pipelines",
@@ -396,14 +435,17 @@
                   {
                     "id": "mlops-and-deployment-pipelines-experiment-tracking",
                     "label": "Experiment Tracking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-and-deployment-pipelines-model-registry",
                     "label": "Model Registry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "mlops-and-deployment-production-readiness",
@@ -414,14 +456,17 @@
                   {
                     "id": "mlops-and-deployment-production-readiness-ci-cd-for-ml",
                     "label": "CI/CD for ML",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-and-deployment-production-readiness-governance",
                     "label": "Governance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "career-and-practice-portfolio-projects-case-studies",
                     "label": "Case Studies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-practice-portfolio-projects-end-to-end-projects",
                     "label": "End-to-End Projects",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "career-and-practice-communication",
@@ -473,14 +521,17 @@
                   {
                     "id": "career-and-practice-communication-data-storytelling",
                     "label": "Data Storytelling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-practice-communication-stakeholder-updates",
                     "label": "Stakeholder Updates",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "career-and-practice-career-growth",
@@ -491,14 +542,17 @@
                   {
                     "id": "career-and-practice-career-growth-interview-prep",
                     "label": "Interview Prep",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "career-and-practice-career-growth-continuous-learning",
                     "label": "Continuous Learning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

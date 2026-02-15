@@ -70,14 +70,17 @@
                   {
                     "id": "android-foundations-kotlin-basics-syntax-and-types",
                     "label": "Syntax & Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "android-foundations-kotlin-basics-null-safety",
                     "label": "Null Safety",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "android-foundations-android-app-components",
@@ -88,24 +91,29 @@
                   {
                     "id": "android-foundations-android-app-components-activities",
                     "label": "Activities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "android-foundations-android-app-components-intents",
                     "label": "Intents",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "android-foundations-android-app-components-services",
                     "label": "Services",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "android-foundations-android-app-components-broadcast-receivers",
                     "label": "Broadcast Receivers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "android-foundations-app-lifecycle",
@@ -116,14 +124,17 @@
                   {
                     "id": "android-foundations-app-lifecycle-lifecycle-states",
                     "label": "Lifecycle States",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "android-foundations-app-lifecycle-configuration-changes",
                     "label": "Configuration Changes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -157,14 +168,17 @@
                   {
                     "id": "ui-and-navigation-jetpack-compose-composable-functions",
                     "label": "Composable Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-jetpack-compose-state-and-side-effects",
                     "label": "State & Side Effects",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ui-and-navigation-layouts-and-ui-elements",
@@ -175,14 +189,17 @@
                   {
                     "id": "ui-and-navigation-layouts-and-ui-elements-recyclerview",
                     "label": "RecyclerView",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-layouts-and-ui-elements-material-components",
                     "label": "Material Components",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ui-and-navigation-navigation",
@@ -193,14 +210,17 @@
                   {
                     "id": "ui-and-navigation-navigation-navigation-component",
                     "label": "Navigation Component",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ui-and-navigation-navigation-deep-links",
                     "label": "Deep Links",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -234,14 +254,17 @@
                   {
                     "id": "architecture-and-state-architecture-patterns-mvvm",
                     "label": "MVVM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-architecture-patterns-mvi",
                     "label": "MVI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-state-dependency-injection",
@@ -252,14 +275,17 @@
                   {
                     "id": "architecture-and-state-dependency-injection-hilt",
                     "label": "Hilt",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-dependency-injection-koin",
                     "label": "Koin",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-state-data-and-state-flow",
@@ -270,14 +296,17 @@
                   {
                     "id": "architecture-and-state-data-and-state-flow-kotlin-flow",
                     "label": "Kotlin Flow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-state-data-and-state-flow-livedata",
                     "label": "LiveData",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -311,14 +340,17 @@
                   {
                     "id": "data-and-storage-local-storage-datastore",
                     "label": "DataStore",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-storage-local-storage-room",
                     "label": "Room",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-storage-caching",
@@ -329,14 +361,17 @@
                   {
                     "id": "data-and-storage-caching-memory-cache",
                     "label": "Memory Cache",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-storage-caching-disk-cache",
                     "label": "Disk Cache",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -370,14 +405,17 @@
                   {
                     "id": "networking-and-async-networking-okhttp",
                     "label": "OkHttp",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-async-networking-retrofit",
                     "label": "Retrofit",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-async-concurrency",
@@ -388,14 +426,17 @@
                   {
                     "id": "networking-and-async-concurrency-coroutines",
                     "label": "Coroutines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-async-concurrency-workmanager",
                     "label": "WorkManager",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-async-api-integration",
@@ -406,14 +447,17 @@
                   {
                     "id": "networking-and-async-api-integration-rest",
                     "label": "REST",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-async-api-integration-graphql",
                     "label": "GraphQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -447,14 +491,17 @@
                   {
                     "id": "security-and-permissions-app-security-basics-permissions",
                     "label": "Permissions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-permissions-app-security-basics-secure-storage",
                     "label": "Secure Storage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-permissions-auth-and-identity",
@@ -465,14 +512,17 @@
                   {
                     "id": "security-and-permissions-auth-and-identity-oauth",
                     "label": "OAuth",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-permissions-auth-and-identity-firebase-auth",
                     "label": "Firebase Auth",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -506,14 +556,17 @@
                   {
                     "id": "testing-and-quality-unit-and-ui-testing-junit",
                     "label": "JUnit",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-unit-and-ui-testing-espresso",
                     "label": "Espresso",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-performance-and-debugging",
@@ -524,14 +577,17 @@
                   {
                     "id": "testing-and-quality-performance-and-debugging-profilers",
                     "label": "Profilers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-performance-and-debugging-leakcanary",
                     "label": "LeakCanary",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-code-quality",
@@ -542,14 +598,17 @@
                   {
                     "id": "testing-and-quality-code-quality-detekt",
                     "label": "Detekt",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-code-quality-ktlint",
                     "label": "ktlint",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -583,14 +642,17 @@
                   {
                     "id": "distribution-and-release-release-and-signing-app-signing",
                     "label": "App Signing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "distribution-and-release-release-and-signing-release-builds",
                     "label": "Release Builds",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "distribution-and-release-app-distribution",
@@ -601,14 +663,17 @@
                   {
                     "id": "distribution-and-release-app-distribution-play-store",
                     "label": "Play Store",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "distribution-and-release-app-distribution-internal-testing",
                     "label": "Internal Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

@@ -70,14 +70,17 @@
                   {
                     "id": "devsecops-foundations-devsecops-principles-shift-left-security",
                     "label": "Shift Left Security",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devsecops-foundations-devsecops-principles-continuous-risk-reduction",
                     "label": "Continuous Risk Reduction",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devsecops-foundations-security-basics",
@@ -88,14 +91,17 @@
                   {
                     "id": "devsecops-foundations-security-basics-cia-triad",
                     "label": "CIA Triad",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devsecops-foundations-security-basics-threat-modeling",
                     "label": "Threat Modeling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devsecops-foundations-identity-and-access",
@@ -106,19 +112,23 @@
                   {
                     "id": "devsecops-foundations-identity-and-access-iam",
                     "label": "IAM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devsecops-foundations-identity-and-access-least-privilege",
                     "label": "Least Privilege",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devsecops-foundations-identity-and-access-rbac",
                     "label": "RBAC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devsecops-foundations-secure-coding",
@@ -129,14 +139,17 @@
                   {
                     "id": "devsecops-foundations-secure-coding-owasp-top-10",
                     "label": "OWASP Top 10",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devsecops-foundations-secure-coding-input-validation",
                     "label": "Input Validation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -170,14 +183,17 @@
                   {
                     "id": "app-and-supply-chain-security-sast-dast-static-analysis",
                     "label": "Static Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "app-and-supply-chain-security-sast-dast-dynamic-analysis",
                     "label": "Dynamic Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "app-and-supply-chain-security-dependency-security",
@@ -188,14 +204,17 @@
                   {
                     "id": "app-and-supply-chain-security-dependency-security-sbom",
                     "label": "SBOM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "app-and-supply-chain-security-dependency-security-license-and-vulnerability-scans",
                     "label": "License & Vulnerability Scans",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "app-and-supply-chain-security-secrets-management",
@@ -206,14 +225,17 @@
                   {
                     "id": "app-and-supply-chain-security-secrets-management-vault-kms",
                     "label": "Vault/KMS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "app-and-supply-chain-security-secrets-management-secrets-rotation",
                     "label": "Secrets Rotation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "app-and-supply-chain-security-build-pipeline-hardening",
@@ -224,14 +246,17 @@
                   {
                     "id": "app-and-supply-chain-security-build-pipeline-hardening-signed-artifacts",
                     "label": "Signed Artifacts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "app-and-supply-chain-security-build-pipeline-hardening-provenance",
                     "label": "Provenance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -265,14 +290,17 @@
                   {
                     "id": "infrastructure-and-cloud-security-network-security-segmentation",
                     "label": "Segmentation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-and-cloud-security-network-security-tls",
                     "label": "TLS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "infrastructure-and-cloud-security-cloud-security",
@@ -283,19 +311,23 @@
                   {
                     "id": "infrastructure-and-cloud-security-cloud-security-cspm",
                     "label": "CSPM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-and-cloud-security-cloud-security-kms",
                     "label": "KMS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-and-cloud-security-cloud-security-shared-responsibility",
                     "label": "Shared Responsibility",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "infrastructure-and-cloud-security-infrastructure-as-code-security",
@@ -306,14 +338,17 @@
                   {
                     "id": "infrastructure-and-cloud-security-infrastructure-as-code-security-iac-scanning",
                     "label": "IaC Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-and-cloud-security-infrastructure-as-code-security-policy-as-code",
                     "label": "Policy as Code",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -347,14 +382,17 @@
                   {
                     "id": "container-and-kubernetes-security-container-security-image-scanning",
                     "label": "Image Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "container-and-kubernetes-security-container-security-runtime-security",
                     "label": "Runtime Security",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "container-and-kubernetes-security-kubernetes-security",
@@ -365,19 +403,23 @@
                   {
                     "id": "container-and-kubernetes-security-kubernetes-security-rbac",
                     "label": "RBAC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "container-and-kubernetes-security-kubernetes-security-network-policies",
                     "label": "Network Policies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "container-and-kubernetes-security-kubernetes-security-pod-security",
                     "label": "Pod Security",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "container-and-kubernetes-security-supply-chain-for-containers",
@@ -388,14 +430,17 @@
                   {
                     "id": "container-and-kubernetes-security-supply-chain-for-containers-signed-images",
                     "label": "Signed Images",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "container-and-kubernetes-security-supply-chain-for-containers-registry-policies",
                     "label": "Registry Policies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -429,14 +474,17 @@
                   {
                     "id": "monitoring-and-incident-response-logging-and-siem-log-pipelines",
                     "label": "Log Pipelines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-incident-response-logging-and-siem-alerting",
                     "label": "Alerting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-incident-response-detection-and-response",
@@ -447,14 +495,17 @@
                   {
                     "id": "monitoring-and-incident-response-detection-and-response-ir-lifecycle",
                     "label": "IR Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-incident-response-detection-and-response-containment",
                     "label": "Containment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-incident-response-threat-and-vulnerability-management",
@@ -465,14 +516,17 @@
                   {
                     "id": "monitoring-and-incident-response-threat-and-vulnerability-management-vuln-scanning",
                     "label": "Vuln Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-incident-response-threat-and-vulnerability-management-risk-prioritization",
                     "label": "Risk Prioritization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-incident-response-forensics-and-rca",
@@ -483,14 +537,17 @@
                   {
                     "id": "monitoring-and-incident-response-forensics-and-rca-root-cause-analysis",
                     "label": "Root Cause Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-incident-response-forensics-and-rca-evidence-handling",
                     "label": "Evidence Handling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -524,19 +581,23 @@
                   {
                     "id": "governance-and-compliance-security-frameworks-nist",
                     "label": "NIST",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-and-compliance-security-frameworks-iso-27001",
                     "label": "ISO 27001",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-and-compliance-security-frameworks-soc-2",
                     "label": "SOC 2",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "governance-and-compliance-audit-and-compliance",
@@ -547,14 +608,17 @@
                   {
                     "id": "governance-and-compliance-audit-and-compliance-controls-mapping",
                     "label": "Controls Mapping",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-and-compliance-audit-and-compliance-continuous-compliance",
                     "label": "Continuous Compliance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "governance-and-compliance-risk-management",
@@ -565,14 +629,17 @@
                   {
                     "id": "governance-and-compliance-risk-management-risk-quantification",
                     "label": "Risk Quantification",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-and-compliance-risk-management-risk-registers",
                     "label": "Risk Registers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

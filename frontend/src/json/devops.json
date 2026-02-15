@@ -70,14 +70,17 @@
                   {
                     "id": "devops-foundations-devops-culture-and-principles-calms",
                     "label": "CALMS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-foundations-devops-culture-and-principles-feedback-loops",
                     "label": "Feedback Loops",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devops-foundations-sdlc-and-environments",
@@ -88,14 +91,17 @@
                   {
                     "id": "devops-foundations-sdlc-and-environments-dev-stage-prod",
                     "label": "Dev/Stage/Prod",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-foundations-sdlc-and-environments-change-management",
                     "label": "Change Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devops-foundations-automation-and-idempotency",
@@ -106,14 +112,17 @@
                   {
                     "id": "devops-foundations-automation-and-idempotency-immutable-infrastructure",
                     "label": "Immutable Infrastructure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-foundations-automation-and-idempotency-repeatable-builds",
                     "label": "Repeatable Builds",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devops-foundations-reliability-basics",
@@ -124,14 +133,17 @@
                   {
                     "id": "devops-foundations-reliability-basics-sli-slo-sla",
                     "label": "SLI/SLO/SLA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-foundations-reliability-basics-error-budgets",
                     "label": "Error Budgets",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -165,19 +177,23 @@
                   {
                     "id": "linux-and-system-administration-linux-fundamentals-filesystem",
                     "label": "Filesystem",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-linux-fundamentals-permissions",
                     "label": "Permissions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-linux-fundamentals-users-and-groups",
                     "label": "Users & Groups",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "linux-and-system-administration-processes-and-services",
@@ -188,19 +204,23 @@
                   {
                     "id": "linux-and-system-administration-processes-and-services-systemd",
                     "label": "systemd",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-processes-and-services-cron",
                     "label": "cron",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-processes-and-services-signals",
                     "label": "Signals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "linux-and-system-administration-shell-scripting",
@@ -211,14 +231,17 @@
                   {
                     "id": "linux-and-system-administration-shell-scripting-bash",
                     "label": "bash",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-shell-scripting-python",
                     "label": "python",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "linux-and-system-administration-package-management",
@@ -229,14 +252,17 @@
                   {
                     "id": "linux-and-system-administration-package-management-apt",
                     "label": "apt",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-package-management-yum-dnf",
                     "label": "yum/dnf",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "linux-and-system-administration-resource-monitoring",
@@ -247,19 +273,23 @@
                   {
                     "id": "linux-and-system-administration-resource-monitoring-cpu-memory",
                     "label": "CPU/Memory",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-resource-monitoring-disk",
                     "label": "Disk",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "linux-and-system-administration-resource-monitoring-top-htop",
                     "label": "top/htop",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -293,14 +323,17 @@
                   {
                     "id": "networking-and-security-basics-networking-fundamentals-tcp-udp",
                     "label": "TCP/UDP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-networking-fundamentals-osi-model",
                     "label": "OSI Model",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-security-basics-dns-and-http-s",
@@ -311,14 +344,17 @@
                   {
                     "id": "networking-and-security-basics-dns-and-http-s-dns-records",
                     "label": "DNS Records",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-dns-and-http-s-tls-ssl",
                     "label": "TLS/SSL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-security-basics-load-balancing-and-proxies",
@@ -329,19 +365,23 @@
                   {
                     "id": "networking-and-security-basics-load-balancing-and-proxies-nginx",
                     "label": "Nginx",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-load-balancing-and-proxies-haproxy",
                     "label": "HAProxy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-load-balancing-and-proxies-traefik",
                     "label": "Traefik",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-security-basics-firewalls-and-network-policies",
@@ -352,14 +392,17 @@
                   {
                     "id": "networking-and-security-basics-firewalls-and-network-policies-security-groups",
                     "label": "Security Groups",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-firewalls-and-network-policies-ingress-egress-rules",
                     "label": "Ingress/Egress Rules",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-security-basics-identity-and-secrets",
@@ -370,19 +413,23 @@
                   {
                     "id": "networking-and-security-basics-identity-and-secrets-iam-rbac",
                     "label": "IAM/RBAC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-identity-and-secrets-vault-kms",
                     "label": "Vault/KMS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-identity-and-secrets-sealed-secrets",
                     "label": "Sealed Secrets",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "networking-and-security-basics-ssh-and-remote-access",
@@ -393,14 +440,17 @@
                   {
                     "id": "networking-and-security-basics-ssh-and-remote-access-ssh-keys",
                     "label": "SSH Keys",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "networking-and-security-basics-ssh-and-remote-access-bastion-hosts",
                     "label": "Bastion Hosts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -434,14 +484,17 @@
                   {
                     "id": "version-control-and-collaboration-git-basics-branching",
                     "label": "Branching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "version-control-and-collaboration-git-basics-merge-rebase",
                     "label": "Merge/Rebase",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-repo-hosting-and-prs",
@@ -452,14 +505,17 @@
                   {
                     "id": "version-control-and-collaboration-repo-hosting-and-prs-github",
                     "label": "GitHub",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "version-control-and-collaboration-repo-hosting-and-prs-gitlab",
                     "label": "GitLab",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-versioning-and-releases",
@@ -470,14 +526,17 @@
                   {
                     "id": "version-control-and-collaboration-versioning-and-releases-semver",
                     "label": "SemVer",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "version-control-and-collaboration-versioning-and-releases-release-tags",
                     "label": "Release Tags",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -511,19 +570,23 @@
                   {
                     "id": "ci-cd-and-release-management-ci-pipelines-build",
                     "label": "Build",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-ci-pipelines-test",
                     "label": "Test",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-ci-pipelines-lint",
                     "label": "Lint",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-release-management-cd-pipelines",
@@ -534,14 +597,17 @@
                   {
                     "id": "ci-cd-and-release-management-cd-pipelines-deploy",
                     "label": "Deploy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-cd-pipelines-rollback",
                     "label": "Rollback",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-release-management-deployment-strategies",
@@ -552,19 +618,23 @@
                   {
                     "id": "ci-cd-and-release-management-deployment-strategies-blue-green",
                     "label": "Blue/Green",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-deployment-strategies-canary",
                     "label": "Canary",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-deployment-strategies-rolling",
                     "label": "Rolling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-release-management-ci-cd-tools",
@@ -575,19 +645,23 @@
                   {
                     "id": "ci-cd-and-release-management-ci-cd-tools-github-actions",
                     "label": "GitHub Actions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-ci-cd-tools-gitlab-ci",
                     "label": "GitLab CI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-ci-cd-tools-jenkins",
                     "label": "Jenkins",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-release-management-artifact-and-registry-management",
@@ -598,14 +672,17 @@
                   {
                     "id": "ci-cd-and-release-management-artifact-and-registry-management-container-registry",
                     "label": "Container Registry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-artifact-and-registry-management-package-registry",
                     "label": "Package Registry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-release-management-gitops",
@@ -616,14 +693,17 @@
                   {
                     "id": "ci-cd-and-release-management-gitops-argo-cd",
                     "label": "Argo CD",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-release-management-gitops-flux",
                     "label": "Flux",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -657,19 +737,23 @@
                   {
                     "id": "infrastructure-as-code-and-configuration-iac-concepts-state",
                     "label": "State",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-as-code-and-configuration-iac-concepts-modules",
                     "label": "Modules",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-as-code-and-configuration-iac-concepts-idempotency",
                     "label": "Idempotency",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "infrastructure-as-code-and-configuration-terraform-opentofu",
@@ -680,14 +764,17 @@
                   {
                     "id": "infrastructure-as-code-and-configuration-terraform-opentofu-plan-apply",
                     "label": "Plan/Apply",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-as-code-and-configuration-terraform-opentofu-state-management",
                     "label": "State Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "infrastructure-as-code-and-configuration-cloudformation-cdk",
@@ -698,14 +785,17 @@
                   {
                     "id": "infrastructure-as-code-and-configuration-cloudformation-cdk-stacks",
                     "label": "Stacks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-as-code-and-configuration-cloudformation-cdk-constructs",
                     "label": "Constructs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "infrastructure-as-code-and-configuration-configuration-management",
@@ -716,14 +806,17 @@
                   {
                     "id": "infrastructure-as-code-and-configuration-configuration-management-ansible",
                     "label": "Ansible",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "infrastructure-as-code-and-configuration-configuration-management-chef-puppet",
                     "label": "Chef/Puppet",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -757,14 +850,17 @@
                   {
                     "id": "containers-and-orchestration-containers-and-images-docker",
                     "label": "Docker",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-containers-and-images-dockerfile",
                     "label": "Dockerfile",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-container-registries",
@@ -775,14 +871,17 @@
                   {
                     "id": "containers-and-orchestration-container-registries-oci",
                     "label": "OCI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-container-registries-private-registries",
                     "label": "Private Registries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-kubernetes-basics",
@@ -793,19 +892,23 @@
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-pods",
                     "label": "Pods",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-services",
                     "label": "Services",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-deployments",
                     "label": "Deployments",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-kubernetes-operations",
@@ -816,14 +919,17 @@
                   {
                     "id": "containers-and-orchestration-kubernetes-operations-helm",
                     "label": "Helm",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-kubernetes-operations-kustomize",
                     "label": "Kustomize",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-managed-k8s-platforms",
@@ -834,19 +940,23 @@
                   {
                     "id": "containers-and-orchestration-managed-k8s-platforms-eks",
                     "label": "EKS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-managed-k8s-platforms-gke",
                     "label": "GKE",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-managed-k8s-platforms-aks",
                     "label": "AKS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-service-mesh",
@@ -857,14 +967,17 @@
                   {
                     "id": "containers-and-orchestration-service-mesh-istio",
                     "label": "Istio",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-service-mesh-linkerd",
                     "label": "Linkerd",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -898,19 +1011,23 @@
                   {
                     "id": "cloud-platforms-and-serverless-cloud-providers-aws",
                     "label": "AWS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-cloud-providers-azure",
                     "label": "Azure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-cloud-providers-gcp",
                     "label": "GCP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-platforms-and-serverless-core-cloud-services",
@@ -921,19 +1038,23 @@
                   {
                     "id": "cloud-platforms-and-serverless-core-cloud-services-compute",
                     "label": "Compute",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-core-cloud-services-storage",
                     "label": "Storage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-core-cloud-services-networking",
                     "label": "Networking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-platforms-and-serverless-serverless",
@@ -944,19 +1065,23 @@
                   {
                     "id": "cloud-platforms-and-serverless-serverless-aws-lambda",
                     "label": "AWS Lambda",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-serverless-cloud-functions",
                     "label": "Cloud Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-serverless-azure-functions",
                     "label": "Azure Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-platforms-and-serverless-managed-databases",
@@ -967,19 +1092,23 @@
                   {
                     "id": "cloud-platforms-and-serverless-managed-databases-rds",
                     "label": "RDS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-managed-databases-cloud-sql",
                     "label": "Cloud SQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-platforms-and-serverless-managed-databases-dynamodb",
                     "label": "DynamoDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1013,19 +1142,23 @@
                   {
                     "id": "observability-and-reliability-metrics-and-monitoring-prometheus",
                     "label": "Prometheus",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-metrics-and-monitoring-grafana",
                     "label": "Grafana",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-metrics-and-monitoring-datadog",
                     "label": "Datadog",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-logging",
@@ -1036,14 +1169,17 @@
                   {
                     "id": "observability-and-reliability-logging-elk-efk",
                     "label": "ELK/EFK",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-logging-loki",
                     "label": "Loki",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-tracing",
@@ -1054,14 +1190,17 @@
                   {
                     "id": "observability-and-reliability-tracing-opentelemetry",
                     "label": "OpenTelemetry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-tracing-jaeger",
                     "label": "Jaeger",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-alerting-and-on-call",
@@ -1072,14 +1211,17 @@
                   {
                     "id": "observability-and-reliability-alerting-and-on-call-pagerduty",
                     "label": "PagerDuty",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-alerting-and-on-call-incident-response",
                     "label": "Incident Response",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-sre-practices",
@@ -1090,14 +1232,17 @@
                   {
                     "id": "observability-and-reliability-sre-practices-sli-slo",
                     "label": "SLI/SLO",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-sre-practices-error-budgets",
                     "label": "Error Budgets",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-auto-scaling-and-capacity",
@@ -1108,14 +1253,17 @@
                   {
                     "id": "observability-and-reliability-auto-scaling-and-capacity-hpa",
                     "label": "HPA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-auto-scaling-and-capacity-autoscaling",
                     "label": "Autoscaling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

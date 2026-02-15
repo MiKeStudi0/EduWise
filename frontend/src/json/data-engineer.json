@@ -70,14 +70,17 @@
                   {
                     "id": "data-engineering-foundations-role-of-a-data-engineer-responsibilities",
                     "label": "Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-engineering-foundations-role-of-a-data-engineer-stakeholders",
                     "label": "Stakeholders",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-engineering-foundations-data-lifecycle",
@@ -88,24 +91,29 @@
                   {
                     "id": "data-engineering-foundations-data-lifecycle-ingest",
                     "label": "Ingest",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-engineering-foundations-data-lifecycle-store",
                     "label": "Store",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-engineering-foundations-data-lifecycle-transform",
                     "label": "Transform",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-engineering-foundations-data-lifecycle-serve",
                     "label": "Serve",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-engineering-foundations-core-concepts",
@@ -116,14 +124,17 @@
                   {
                     "id": "data-engineering-foundations-core-concepts-batch-vs-streaming",
                     "label": "Batch vs Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-engineering-foundations-core-concepts-oltp-vs-olap",
                     "label": "OLTP vs OLAP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -157,14 +168,17 @@
                   {
                     "id": "programming-and-sql-programming-for-data-python",
                     "label": "Python",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-sql-programming-for-data-sql",
                     "label": "SQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-sql-data-structures-basics",
@@ -175,14 +189,17 @@
                   {
                     "id": "programming-and-sql-data-structures-basics-arrays-maps",
                     "label": "Arrays/Maps",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-sql-data-structures-basics-complexity",
                     "label": "Complexity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-sql-advanced-sql",
@@ -193,14 +210,17 @@
                   {
                     "id": "programming-and-sql-advanced-sql-joins",
                     "label": "Joins",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-sql-advanced-sql-window-functions",
                     "label": "Window Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-sql-query-performance",
@@ -211,14 +231,17 @@
                   {
                     "id": "programming-and-sql-query-performance-indexes",
                     "label": "Indexes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-sql-query-performance-explain",
                     "label": "EXPLAIN",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -252,14 +275,17 @@
                   {
                     "id": "data-storage-and-modeling-relational-databases-postgresql",
                     "label": "PostgreSQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-relational-databases-mysql",
                     "label": "MySQL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-storage-and-modeling-nosql-datastores",
@@ -270,19 +296,23 @@
                   {
                     "id": "data-storage-and-modeling-nosql-datastores-document",
                     "label": "Document",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-nosql-datastores-key-value",
                     "label": "Key-Value",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-nosql-datastores-columnar",
                     "label": "Columnar",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-storage-and-modeling-data-modeling",
@@ -293,19 +323,23 @@
                   {
                     "id": "data-storage-and-modeling-data-modeling-normalization",
                     "label": "Normalization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-data-modeling-star-schema",
                     "label": "Star Schema",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-data-modeling-slowly-changing-dimensions",
                     "label": "Slowly Changing Dimensions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-storage-and-modeling-storage-formats",
@@ -316,14 +350,17 @@
                   {
                     "id": "data-storage-and-modeling-storage-formats-parquet",
                     "label": "Parquet",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-storage-and-modeling-storage-formats-avro",
                     "label": "Avro",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -357,14 +394,17 @@
                   {
                     "id": "data-warehousing-and-lakes-warehousing-concepts-data-warehouse",
                     "label": "Data Warehouse",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-warehousing-and-lakes-warehousing-concepts-data-mart",
                     "label": "Data Mart",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-warehousing-and-lakes-data-lakes",
@@ -375,14 +415,17 @@
                   {
                     "id": "data-warehousing-and-lakes-data-lakes-lakehouse",
                     "label": "Lakehouse",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-warehousing-and-lakes-data-lakes-delta-iceberg-hudi",
                     "label": "Delta/Iceberg/Hudi",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-warehousing-and-lakes-cloud-warehouses",
@@ -393,19 +436,23 @@
                   {
                     "id": "data-warehousing-and-lakes-cloud-warehouses-bigquery",
                     "label": "BigQuery",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-warehousing-and-lakes-cloud-warehouses-snowflake",
                     "label": "Snowflake",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-warehousing-and-lakes-cloud-warehouses-redshift",
                     "label": "Redshift",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -439,19 +486,23 @@
                   {
                     "id": "ingestion-and-pipelines-ingestion-patterns-batch",
                     "label": "Batch",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-ingestion-patterns-streaming",
                     "label": "Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-ingestion-patterns-cdc",
                     "label": "CDC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ingestion-and-pipelines-etl-elt",
@@ -462,14 +513,17 @@
                   {
                     "id": "ingestion-and-pipelines-etl-elt-transformation",
                     "label": "Transformation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-etl-elt-orchestration",
                     "label": "Orchestration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ingestion-and-pipelines-workflow-orchestration",
@@ -480,19 +534,23 @@
                   {
                     "id": "ingestion-and-pipelines-workflow-orchestration-airflow",
                     "label": "Airflow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-workflow-orchestration-dagster",
                     "label": "Dagster",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-workflow-orchestration-prefect",
                     "label": "Prefect",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ingestion-and-pipelines-messaging-and-streaming",
@@ -503,19 +561,23 @@
                   {
                     "id": "ingestion-and-pipelines-messaging-and-streaming-kafka",
                     "label": "Kafka",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-messaging-and-streaming-pulsar",
                     "label": "Pulsar",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ingestion-and-pipelines-messaging-and-streaming-kinesis",
                     "label": "Kinesis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -549,14 +611,17 @@
                   {
                     "id": "processing-and-compute-distributed-processing-spark",
                     "label": "Spark",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "processing-and-compute-distributed-processing-flink",
                     "label": "Flink",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "processing-and-compute-cluster-concepts",
@@ -567,14 +632,17 @@
                   {
                     "id": "processing-and-compute-cluster-concepts-resource-management",
                     "label": "Resource Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "processing-and-compute-cluster-concepts-job-scheduling",
                     "label": "Job Scheduling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "processing-and-compute-data-quality-in-pipelines",
@@ -585,14 +653,17 @@
                   {
                     "id": "processing-and-compute-data-quality-in-pipelines-validation",
                     "label": "Validation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "processing-and-compute-data-quality-in-pipelines-anomaly-checks",
                     "label": "Anomaly Checks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -626,14 +697,17 @@
                   {
                     "id": "serving-and-analytics-data-serving-apis",
                     "label": "APIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "serving-and-analytics-data-serving-reverse-etl",
                     "label": "Reverse ETL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "serving-and-analytics-bi-and-reporting",
@@ -644,19 +718,23 @@
                   {
                     "id": "serving-and-analytics-bi-and-reporting-power-bi",
                     "label": "Power BI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "serving-and-analytics-bi-and-reporting-tableau",
                     "label": "Tableau",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "serving-and-analytics-bi-and-reporting-looker",
                     "label": "Looker",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "serving-and-analytics-semantic-layer",
@@ -667,14 +745,17 @@
                   {
                     "id": "serving-and-analytics-semantic-layer-metrics-layer",
                     "label": "Metrics Layer",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "serving-and-analytics-semantic-layer-consistency",
                     "label": "Consistency",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -708,19 +789,23 @@
                   {
                     "id": "cloud-and-infrastructure-cloud-platforms-aws",
                     "label": "AWS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-cloud-platforms-gcp",
                     "label": "GCP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-cloud-platforms-azure",
                     "label": "Azure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-infrastructure-as-code",
@@ -731,14 +816,17 @@
                   {
                     "id": "cloud-and-infrastructure-infrastructure-as-code-terraform",
                     "label": "Terraform",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-infrastructure-as-code-ci-cd-for-data",
                     "label": "CI/CD for Data",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-storage-and-compute-services",
@@ -749,14 +837,17 @@
                   {
                     "id": "cloud-and-infrastructure-storage-and-compute-services-object-storage",
                     "label": "Object Storage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-storage-and-compute-services-managed-databases",
                     "label": "Managed Databases",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -790,14 +881,17 @@
                   {
                     "id": "governance-security-and-reliability-data-governance-lineage",
                     "label": "Lineage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-security-and-reliability-data-governance-catalogs",
                     "label": "Catalogs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "governance-security-and-reliability-security-and-privacy",
@@ -808,19 +902,23 @@
                   {
                     "id": "governance-security-and-reliability-security-and-privacy-access-control",
                     "label": "Access Control",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-security-and-reliability-security-and-privacy-encryption",
                     "label": "Encryption",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-security-and-reliability-security-and-privacy-pii-handling",
                     "label": "PII Handling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "governance-security-and-reliability-observability",
@@ -831,14 +929,17 @@
                   {
                     "id": "governance-security-and-reliability-observability-monitoring",
                     "label": "Monitoring",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "governance-security-and-reliability-observability-slos",
                     "label": "SLOs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

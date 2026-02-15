@@ -70,14 +70,17 @@
                   {
                     "id": "web-foundations-internet-and-http-dns-and-hosting",
                     "label": "DNS & Hosting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-foundations-internet-and-http-http-https-and-apis",
                     "label": "HTTP/HTTPS & APIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-foundations-html-and-accessibility",
@@ -88,14 +91,17 @@
                   {
                     "id": "web-foundations-html-and-accessibility-semantic-html",
                     "label": "Semantic HTML",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-foundations-html-and-accessibility-aria-and-wcag-basics",
                     "label": "ARIA & WCAG Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-foundations-css-fundamentals",
@@ -106,14 +112,17 @@
                   {
                     "id": "web-foundations-css-fundamentals-layout-flex-grid",
                     "label": "Layout (Flex/Grid)",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-foundations-css-fundamentals-responsive-design",
                     "label": "Responsive Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "frontend-development-javascript-core-es6plus-and-dom",
                     "label": "ES6+ & DOM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "frontend-development-javascript-core-async-and-fetch",
                     "label": "Async & Fetch",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "frontend-development-frontend-frameworks",
@@ -165,14 +177,17 @@
                   {
                     "id": "frontend-development-frontend-frameworks-react",
                     "label": "React",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "frontend-development-frontend-frameworks-state-management",
                     "label": "State Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "frontend-development-ui-ux-basics",
@@ -183,14 +198,17 @@
                   {
                     "id": "frontend-development-ui-ux-basics-design-systems",
                     "label": "Design Systems",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "frontend-development-ui-ux-basics-component-architecture",
                     "label": "Component Architecture",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "backend-development-server-fundamentals-routing-and-middleware",
                     "label": "Routing & Middleware",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-development-server-fundamentals-rest-patterns",
                     "label": "REST Patterns",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-development-api-design",
@@ -242,14 +263,17 @@
                   {
                     "id": "backend-development-api-design-authentication-and-authz",
                     "label": "Authentication & AuthZ",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-development-api-design-versioning-and-docs",
                     "label": "Versioning & Docs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-development-backend-frameworks",
@@ -260,14 +284,17 @@
                   {
                     "id": "backend-development-backend-frameworks-node-express-or-nest",
                     "label": "Node/Express or Nest",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-development-backend-frameworks-python-fastapi-or-django",
                     "label": "Python/FastAPI or Django",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "databases-and-data-sql-databases-schema-design",
                     "label": "Schema Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "databases-and-data-sql-databases-indexes-and-query-tuning",
                     "label": "Indexes & Query Tuning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "databases-and-data-nosql-databases",
@@ -319,14 +349,17 @@
                   {
                     "id": "databases-and-data-nosql-databases-document-stores",
                     "label": "Document Stores",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "databases-and-data-nosql-databases-caching-layers",
                     "label": "Caching Layers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "databases-and-data-data-modeling",
@@ -337,14 +370,17 @@
                   {
                     "id": "databases-and-data-data-modeling-erd-basics",
                     "label": "ERD Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "databases-and-data-data-modeling-transactions-and-consistency",
                     "label": "Transactions & Consistency",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "testing-and-quality-testing-types-unit-and-integration",
                     "label": "Unit & Integration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-testing-types-e2e-testing",
                     "label": "E2E Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-code-quality",
@@ -396,14 +435,17 @@
                   {
                     "id": "testing-and-quality-code-quality-linting-and-formatting",
                     "label": "Linting & Formatting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-code-quality-code-reviews",
                     "label": "Code Reviews",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-observability",
@@ -414,14 +456,17 @@
                   {
                     "id": "testing-and-quality-observability-logging",
                     "label": "Logging",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-observability-metrics-and-tracing",
                     "label": "Metrics & Tracing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "devops-and-deployment-ci-cd-build-pipelines",
                     "label": "Build Pipelines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-and-deployment-ci-cd-release-strategies",
                     "label": "Release Strategies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devops-and-deployment-containers-and-orchestration",
@@ -473,14 +521,17 @@
                   {
                     "id": "devops-and-deployment-containers-and-orchestration-docker",
                     "label": "Docker",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-and-deployment-containers-and-orchestration-kubernetes-basics",
                     "label": "Kubernetes Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "devops-and-deployment-cloud-and-hosting",
@@ -491,14 +542,17 @@
                   {
                     "id": "devops-and-deployment-cloud-and-hosting-aws-gcp-azure-basics",
                     "label": "AWS/GCP/Azure Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "devops-and-deployment-cloud-and-hosting-serverless-concepts",
                     "label": "Serverless Concepts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -532,14 +586,17 @@
                   {
                     "id": "security-and-performance-web-security-owasp-top-10",
                     "label": "OWASP Top 10",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-performance-web-security-cors-and-csp",
                     "label": "CORS & CSP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-performance-performance",
@@ -550,14 +607,17 @@
                   {
                     "id": "security-and-performance-performance-caching-strategies",
                     "label": "Caching Strategies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-performance-performance-load-testing",
                     "label": "Load Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "security-and-performance-scalability",
@@ -568,14 +628,17 @@
                   {
                     "id": "security-and-performance-scalability-horizontal-scaling",
                     "label": "Horizontal Scaling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "security-and-performance-scalability-queues-and-background-jobs",
                     "label": "Queues & Background Jobs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

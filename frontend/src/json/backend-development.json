@@ -70,25 +70,29 @@
                 "id": "backend-fundamentals-what-is-backend-engineering",
                 "label": "What is Backend Engineering?",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "backend-fundamentals-request-response-lifecycle",
                 "label": "Request/Response Lifecycle",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "backend-fundamentals-client-server-architecture",
                 "label": "Client-Server Architecture",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "backend-fundamentals-stateless-vs-stateful-services",
                 "label": "Stateless vs Stateful Services",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "backend-fundamentals-configuration-and-environment-variables",
@@ -99,20 +103,24 @@
                   {
                     "id": "backend-fundamentals-configuration-and-environment-variables-12-factor-config",
                     "label": "12-Factor Config",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-fundamentals-configuration-and-environment-variables-secrets-vs-config",
                     "label": "Secrets vs Config",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-fundamentals-service-documentation-and-runbooks",
                 "label": "Service Documentation & Runbooks",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -142,7 +150,8 @@
                 "id": "internet-and-http-how-the-internet-works",
                 "label": "How the Internet Works",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "internet-and-http-http-methods-and-status-codes",
@@ -153,20 +162,24 @@
                   {
                     "id": "internet-and-http-http-methods-and-status-codes-get-post-put-patch-delete",
                     "label": "GET/POST/PUT/PATCH/DELETE",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "internet-and-http-http-methods-and-status-codes-2xx-4xx-5xx",
                     "label": "2xx/4xx/5xx",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "internet-and-http-http-headers-and-cookies",
                 "label": "HTTP Headers & Cookies",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "internet-and-http-https-and-tls-basics",
@@ -177,14 +190,17 @@
                   {
                     "id": "internet-and-http-https-and-tls-basics-certificates",
                     "label": "Certificates",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "internet-and-http-https-and-tls-basics-tls-handshake",
                     "label": "TLS Handshake",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "internet-and-http-dns-and-hosting",
@@ -195,14 +211,17 @@
                   {
                     "id": "internet-and-http-dns-and-hosting-dns-records",
                     "label": "DNS Records",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "internet-and-http-dns-and-hosting-load-balancers",
                     "label": "Load Balancers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "internet-and-http-web-servers-and-reverse-proxies",
@@ -213,19 +232,23 @@
                   {
                     "id": "internet-and-http-web-servers-and-reverse-proxies-nginx",
                     "label": "Nginx",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "internet-and-http-web-servers-and-reverse-proxies-caddy",
                     "label": "Caddy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "internet-and-http-web-servers-and-reverse-proxies-apache",
                     "label": "Apache",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -260,14 +283,17 @@
                   {
                     "id": "os-linux-and-networking-linux-basics-file-permissions",
                     "label": "File Permissions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "os-linux-and-networking-linux-basics-users-and-groups",
                     "label": "Users & Groups",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "os-linux-and-networking-processes-and-services",
@@ -278,32 +304,38 @@
                   {
                     "id": "os-linux-and-networking-processes-and-services-systemd",
                     "label": "systemd",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "os-linux-and-networking-processes-and-services-process-signals",
                     "label": "Process Signals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "os-linux-and-networking-shell-scripting",
                 "label": "Shell Scripting",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "os-linux-and-networking-networking-basics-tcp-udp",
                 "label": "Networking Basics (TCP/UDP)",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "os-linux-and-networking-ports-firewalls-and-nat",
                 "label": "Ports, Firewalls, and NAT",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "os-linux-and-networking-troubleshooting-tools",
@@ -314,19 +346,23 @@
                   {
                     "id": "os-linux-and-networking-troubleshooting-tools-curl",
                     "label": "curl",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "os-linux-and-networking-troubleshooting-tools-ping-traceroute",
                     "label": "ping/traceroute",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "os-linux-and-networking-troubleshooting-tools-netstat-ss",
                     "label": "netstat/ss",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -362,14 +398,17 @@
                   {
                     "id": "programming-language-and-tools-python-virtualenv",
                     "label": "virtualenv",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-python-typing",
                     "label": "typing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-javascript-typescript",
@@ -380,49 +419,58 @@
                   {
                     "id": "programming-language-and-tools-javascript-typescript-node-js",
                     "label": "Node.js",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-javascript-typescript-deno",
                     "label": "Deno",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-javascript-typescript-bun",
                     "label": "Bun",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-java-kotlin",
                 "label": "Java / Kotlin",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-c-net",
                 "label": "C# / .NET",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-go",
                 "label": "Go",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-rust",
                 "label": "Rust",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-ruby",
                 "label": "Ruby",
                 "type": "option",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "programming-language-and-tools-package-managers-and-builds",
@@ -433,34 +481,41 @@
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-pip-poetry",
                     "label": "pip/poetry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-npm-pnpm",
                     "label": "npm/pnpm",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-maven-gradle",
                     "label": "Maven/Gradle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-nuget",
                     "label": "nuget",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-go-modules",
                     "label": "go modules",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-language-and-tools-package-managers-and-builds-cargo",
                     "label": "cargo",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -495,20 +550,24 @@
                   {
                     "id": "backend-frameworks-and-runtime-python-frameworks-django",
                     "label": "Django",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-python-frameworks-fastapi",
                     "label": "FastAPI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-python-frameworks-flask",
                     "label": "Flask",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
                 ],
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-node-js-frameworks",
@@ -519,19 +578,23 @@
                   {
                     "id": "backend-frameworks-and-runtime-node-js-frameworks-express",
                     "label": "Express",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-node-js-frameworks-nestjs",
                     "label": "NestJS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-node-js-frameworks-fastify",
                     "label": "Fastify",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-java-frameworks",
@@ -542,19 +605,23 @@
                   {
                     "id": "backend-frameworks-and-runtime-java-frameworks-spring-boot",
                     "label": "Spring Boot",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-java-frameworks-quarkus",
                     "label": "Quarkus",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-java-frameworks-micronaut",
                     "label": "Micronaut",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-net-frameworks",
@@ -565,14 +632,17 @@
                   {
                     "id": "backend-frameworks-and-runtime-net-frameworks-asp-net-core",
                     "label": "ASP.NET Core",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-net-frameworks-minimal-apis",
                     "label": "Minimal APIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-go-frameworks",
@@ -583,19 +653,23 @@
                   {
                     "id": "backend-frameworks-and-runtime-go-frameworks-gin",
                     "label": "Gin",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-go-frameworks-echo",
                     "label": "Echo",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-go-frameworks-fiber",
                     "label": "Fiber",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-rust-frameworks",
@@ -606,14 +680,17 @@
                   {
                     "id": "backend-frameworks-and-runtime-rust-frameworks-axum",
                     "label": "Axum",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-rust-frameworks-actix",
                     "label": "Actix",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-runtime-concepts",
@@ -624,14 +701,17 @@
                   {
                     "id": "backend-frameworks-and-runtime-runtime-concepts-event-loop",
                     "label": "Event Loop",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-runtime-concepts-concurrency-and-threads",
                     "label": "Concurrency & Threads",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "backend-frameworks-and-runtime-dependency-injection-and-config",
@@ -642,14 +722,17 @@
                   {
                     "id": "backend-frameworks-and-runtime-dependency-injection-and-config-di-containers",
                     "label": "DI Containers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "backend-frameworks-and-runtime-dependency-injection-and-config-config-files",
                     "label": "Config Files",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -684,9 +767,11 @@
                   {
                     "id": "version-control-and-collaboration-git-basics-add-commit-push-pull",
                     "label": "add/commit/push/pull",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-branching-and-merging",
@@ -697,38 +782,45 @@
                   {
                     "id": "version-control-and-collaboration-branching-and-merging-trunk-based",
                     "label": "Trunk-Based",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "version-control-and-collaboration-branching-and-merging-gitflow",
                     "label": "GitFlow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-code-reviews-and-pull-requests",
                 "label": "Code Reviews & Pull Requests",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-repo-hosting-github-gitlab",
                 "label": "Repo Hosting (GitHub/GitLab)",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-issue-tracking-and-project-boards",
                 "label": "Issue Tracking & Project Boards",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "version-control-and-collaboration-semantic-versioning",
                 "label": "Semantic Versioning",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           }
@@ -767,31 +859,36 @@
                 "label": "PostgreSQL",
                 "type": "option",
                 "side": "right",
-                "is_recommended": true
+                "is_recommended": true,
+                "slug": null
               },
               {
                 "id": "relational-databases-mysql-mariadb",
                 "label": "MySQL / MariaDB",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "relational-databases-sql-server",
                 "label": "SQL Server",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "relational-databases-sqlite",
                 "label": "SQLite",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "relational-databases-managed-db-services",
                 "label": "Managed DB Services",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -821,13 +918,15 @@
                 "id": "data-modeling-and-sql-schema-design-and-normalization",
                 "label": "Schema Design & Normalization",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "data-modeling-and-sql-joins-and-aggregations",
                 "label": "Joins & Aggregations",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "data-modeling-and-sql-indexes-and-query-planning",
@@ -838,14 +937,17 @@
                   {
                     "id": "data-modeling-and-sql-indexes-and-query-planning-explain",
                     "label": "EXPLAIN",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-indexes-and-query-planning-composite-indexes",
                     "label": "Composite Indexes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-modeling-and-sql-transactions-and-isolation-levels",
@@ -856,20 +958,24 @@
                   {
                     "id": "data-modeling-and-sql-transactions-and-isolation-levels-acid",
                     "label": "ACID",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-transactions-and-isolation-levels-locking",
                     "label": "Locking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-modeling-and-sql-migrations-and-schema-changes",
                 "label": "Migrations & Schema Changes",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "data-modeling-and-sql-orms-and-query-builders",
@@ -880,29 +986,35 @@
                   {
                     "id": "data-modeling-and-sql-orms-and-query-builders-sqlalchemy",
                     "label": "SQLAlchemy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-orms-and-query-builders-django-orm",
                     "label": "Django ORM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-orms-and-query-builders-prisma",
                     "label": "Prisma",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-orms-and-query-builders-hibernate-jpa",
                     "label": "Hibernate/JPA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-modeling-and-sql-orms-and-query-builders-ef-core",
                     "label": "EF Core",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -937,19 +1049,23 @@
                   {
                     "id": "apis-and-communication-rest-apis-json",
                     "label": "JSON",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-rest-apis-pagination",
                     "label": "Pagination",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-rest-apis-filtering",
                     "label": "Filtering",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-communication-grpc",
@@ -960,14 +1076,17 @@
                   {
                     "id": "apis-and-communication-grpc-protobuf",
                     "label": "Protobuf",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-grpc-streaming",
                     "label": "Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-communication-graphql",
@@ -978,14 +1097,17 @@
                   {
                     "id": "apis-and-communication-graphql-schema",
                     "label": "Schema",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-graphql-resolvers",
                     "label": "Resolvers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-communication-openapi-swagger",
@@ -996,26 +1118,31 @@
                   {
                     "id": "apis-and-communication-openapi-swagger-spec-writing",
                     "label": "Spec Writing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-openapi-swagger-codegen",
                     "label": "Codegen",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-communication-api-versioning",
                 "label": "API Versioning",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "apis-and-communication-error-handling-and-pagination",
                 "label": "Error Handling & Pagination",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "apis-and-communication-webhooks",
@@ -1026,14 +1153,17 @@
                   {
                     "id": "apis-and-communication-webhooks-signatures",
                     "label": "Signatures",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-webhooks-retries",
                     "label": "Retries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "apis-and-communication-real-time-apis",
@@ -1044,19 +1174,23 @@
                   {
                     "id": "apis-and-communication-real-time-apis-websockets",
                     "label": "WebSockets",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-real-time-apis-server-sent-events",
                     "label": "Server-Sent Events",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "apis-and-communication-real-time-apis-long-polling",
                     "label": "Long Polling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1091,14 +1225,17 @@
                   {
                     "id": "authentication-and-authorization-sessions-vs-tokens-cookies",
                     "label": "Cookies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "authentication-and-authorization-sessions-vs-tokens-session-stores",
                     "label": "Session Stores",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "authentication-and-authorization-jwt",
@@ -1109,14 +1246,17 @@
                   {
                     "id": "authentication-and-authorization-jwt-access-tokens",
                     "label": "Access Tokens",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "authentication-and-authorization-jwt-refresh-tokens",
                     "label": "Refresh Tokens",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "authentication-and-authorization-oauth2-and-openid-connect",
@@ -1127,26 +1267,31 @@
                   {
                     "id": "authentication-and-authorization-oauth2-and-openid-connect-auth-code-plus-pkce",
                     "label": "Auth Code + PKCE",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "authentication-and-authorization-oauth2-and-openid-connect-client-credentials",
                     "label": "Client Credentials",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "authentication-and-authorization-api-keys",
                 "label": "API Keys",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "authentication-and-authorization-rbac-vs-abac",
                 "label": "RBAC vs ABAC",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "authentication-and-authorization-sso-and-identity-providers",
@@ -1157,19 +1302,23 @@
                   {
                     "id": "authentication-and-authorization-sso-and-identity-providers-auth0",
                     "label": "Auth0",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "authentication-and-authorization-sso-and-identity-providers-okta",
                     "label": "Okta",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "authentication-and-authorization-sso-and-identity-providers-cognito",
                     "label": "Cognito",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1204,31 +1353,37 @@
                   {
                     "id": "web-security-owasp-top-10-sql-injection",
                     "label": "SQL Injection",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-owasp-top-10-xss",
                     "label": "XSS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-owasp-top-10-broken-auth",
                     "label": "Broken Auth",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-security-input-validation-and-sanitization",
                 "label": "Input Validation & Sanitization",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "web-security-cors-and-csrf",
                 "label": "CORS & CSRF",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "web-security-security-headers",
@@ -1239,19 +1394,23 @@
                   {
                     "id": "web-security-security-headers-hsts",
                     "label": "HSTS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-security-headers-csp",
                     "label": "CSP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-security-headers-x-content-type-options",
                     "label": "X-Content-Type-Options",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-security-secrets-management",
@@ -1262,20 +1421,24 @@
                   {
                     "id": "web-security-secrets-management-vault",
                     "label": "Vault",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-secrets-management-kms",
                     "label": "KMS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-security-encryption-at-rest",
                 "label": "Encryption at Rest",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "web-security-rate-limiting-and-abuse-prevention",
@@ -1286,20 +1449,24 @@
                   {
                     "id": "web-security-rate-limiting-and-abuse-prevention-token-bucket",
                     "label": "Token Bucket",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "web-security-rate-limiting-and-abuse-prevention-ip-throttling",
                     "label": "IP Throttling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "web-security-audit-logging",
                 "label": "Audit Logging",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1334,14 +1501,17 @@
                   {
                     "id": "caching-and-performance-caching-strategies-cache-aside",
                     "label": "Cache Aside",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "caching-and-performance-caching-strategies-write-through",
                     "label": "Write Through",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "caching-and-performance-redis",
@@ -1352,14 +1522,17 @@
                   {
                     "id": "caching-and-performance-redis-data-structures",
                     "label": "Data Structures",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "caching-and-performance-redis-ttl-and-eviction",
                     "label": "TTL & Eviction",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "caching-and-performance-http-caching",
@@ -1370,20 +1543,24 @@
                   {
                     "id": "caching-and-performance-http-caching-etag",
                     "label": "ETag",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "caching-and-performance-http-caching-cache-control",
                     "label": "Cache-Control",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "caching-and-performance-cdn-basics",
                 "label": "CDN Basics",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "caching-and-performance-performance-profiling",
@@ -1394,26 +1571,31 @@
                   {
                     "id": "caching-and-performance-performance-profiling-profilers",
                     "label": "Profilers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "caching-and-performance-performance-profiling-flamegraphs",
                     "label": "Flamegraphs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "caching-and-performance-concurrency-and-async-patterns",
                 "label": "Concurrency & Async Patterns",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "caching-and-performance-database-performance-tuning",
                 "label": "Database Performance Tuning",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -1448,19 +1630,23 @@
                   {
                     "id": "async-processing-and-messaging-job-queues-celery",
                     "label": "Celery",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-job-queues-sidekiq",
                     "label": "Sidekiq",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-job-queues-bullmq",
                     "label": "BullMQ",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-schedulers-and-cron",
@@ -1471,14 +1657,17 @@
                   {
                     "id": "async-processing-and-messaging-schedulers-and-cron-cron",
                     "label": "cron",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-schedulers-and-cron-quartz",
                     "label": "Quartz",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-message-brokers",
@@ -1489,14 +1678,17 @@
                   {
                     "id": "async-processing-and-messaging-message-brokers-rabbitmq",
                     "label": "RabbitMQ",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-message-brokers-nats",
                     "label": "NATS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-event-streaming",
@@ -1507,14 +1699,17 @@
                   {
                     "id": "async-processing-and-messaging-event-streaming-kafka",
                     "label": "Kafka",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-event-streaming-pulsar",
                     "label": "Pulsar",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-idempotency-and-retries",
@@ -1525,20 +1720,24 @@
                   {
                     "id": "async-processing-and-messaging-idempotency-and-retries-exponential-backoff",
                     "label": "Exponential Backoff",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-idempotency-and-retries-dedup-keys",
                     "label": "Dedup Keys",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-dead-letter-queues",
                 "label": "Dead Letter Queues",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-distributed-locks",
@@ -1549,20 +1748,24 @@
                   {
                     "id": "async-processing-and-messaging-distributed-locks-redis-locks",
                     "label": "Redis Locks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "async-processing-and-messaging-distributed-locks-zookeeper",
                     "label": "Zookeeper",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "async-processing-and-messaging-outbox-pattern",
                 "label": "Outbox Pattern",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1597,14 +1800,17 @@
                   {
                     "id": "search-and-indexing-full-text-search-concepts-tokenization",
                     "label": "Tokenization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "search-and-indexing-full-text-search-concepts-inverted-index",
                     "label": "Inverted Index",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "search-and-indexing-elasticsearch-opensearch",
@@ -1615,26 +1821,31 @@
                   {
                     "id": "search-and-indexing-elasticsearch-opensearch-analyzers",
                     "label": "Analyzers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "search-and-indexing-elasticsearch-opensearch-mappings",
                     "label": "Mappings",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "search-and-indexing-solr",
                 "label": "Solr",
                 "type": "option",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "search-and-indexing-indexing-strategies",
                 "label": "Indexing Strategies",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "search-and-indexing-relevance-and-ranking",
@@ -1645,14 +1856,17 @@
                   {
                     "id": "search-and-indexing-relevance-and-ranking-bm25",
                     "label": "BM25",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "search-and-indexing-relevance-and-ranking-boosting",
                     "label": "Boosting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1687,20 +1901,24 @@
                   {
                     "id": "testing-and-quality-unit-testing-mocking",
                     "label": "Mocking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-unit-testing-assertions",
                     "label": "Assertions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-integration-testing",
                 "label": "Integration Testing",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "testing-and-quality-contract-testing",
@@ -1711,15 +1929,18 @@
                   {
                     "id": "testing-and-quality-contract-testing-pact",
                     "label": "Pact",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-end-to-end-testing",
                 "label": "End-to-End Testing",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "testing-and-quality-load-and-stress-testing",
@@ -1730,26 +1951,31 @@
                   {
                     "id": "testing-and-quality-load-and-stress-testing-k6",
                     "label": "k6",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "testing-and-quality-load-and-stress-testing-locust",
                     "label": "Locust",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "testing-and-quality-test-data-and-fixtures",
                 "label": "Test Data & Fixtures",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "testing-and-quality-test-containers-and-mocks",
                 "label": "Test Containers & Mocks",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -1784,25 +2010,30 @@
                   {
                     "id": "ci-cd-and-delivery-ci-pipelines-build",
                     "label": "Build",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-delivery-ci-pipelines-test",
                     "label": "Test",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-delivery-ci-pipelines-deploy",
                     "label": "Deploy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-delivery-build-artifacts-and-versioning",
                 "label": "Build Artifacts & Versioning",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "ci-cd-and-delivery-deployment-strategies",
@@ -1813,19 +2044,23 @@
                   {
                     "id": "ci-cd-and-delivery-deployment-strategies-blue-green",
                     "label": "Blue/Green",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-delivery-deployment-strategies-canary",
                     "label": "Canary",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-delivery-deployment-strategies-rolling",
                     "label": "Rolling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-delivery-infrastructure-as-code",
@@ -1836,26 +2071,31 @@
                   {
                     "id": "ci-cd-and-delivery-infrastructure-as-code-terraform",
                     "label": "Terraform",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ci-cd-and-delivery-infrastructure-as-code-pulumi",
                     "label": "Pulumi",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ci-cd-and-delivery-github-actions-gitlab-ci",
                 "label": "GitHub Actions / GitLab CI",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "ci-cd-and-delivery-release-management",
                 "label": "Release Management",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               }
             ]
           },
@@ -1885,13 +2125,15 @@
                 "id": "containers-and-orchestration-docker-basics",
                 "label": "Docker Basics",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-docker-compose",
                 "label": "Docker Compose",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-container-security",
@@ -1902,14 +2144,17 @@
                   {
                     "id": "containers-and-orchestration-container-security-image-scanning",
                     "label": "Image Scanning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-container-security-least-privilege",
                     "label": "Least Privilege",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-kubernetes-basics",
@@ -1920,25 +2165,30 @@
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-deployments",
                     "label": "Deployments",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-services",
                     "label": "Services",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-kubernetes-basics-ingress",
                     "label": "Ingress",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-helm-and-kustomize",
                 "label": "Helm & Kustomize",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "containers-and-orchestration-service-mesh",
@@ -1949,14 +2199,17 @@
                   {
                     "id": "containers-and-orchestration-service-mesh-istio",
                     "label": "Istio",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "containers-and-orchestration-service-mesh-linkerd",
                     "label": "Linkerd",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -1991,25 +2244,30 @@
                   {
                     "id": "cloud-and-infrastructure-cloud-fundamentals-aws",
                     "label": "AWS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-cloud-fundamentals-gcp",
                     "label": "GCP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-cloud-fundamentals-azure",
                     "label": "Azure",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-networking-vpc-subnets",
                 "label": "Networking (VPC, subnets)",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-serverless",
@@ -2020,26 +2278,31 @@
                   {
                     "id": "cloud-and-infrastructure-serverless-aws-lambda",
                     "label": "AWS Lambda",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-serverless-cloud-functions",
                     "label": "Cloud Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-managed-databases",
                 "label": "Managed Databases",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-iam-and-access-policies",
                 "label": "IAM & Access Policies",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "cloud-and-infrastructure-secrets-and-config-services",
@@ -2050,14 +2313,17 @@
                   {
                     "id": "cloud-and-infrastructure-secrets-and-config-services-ssm-parameter-store",
                     "label": "SSM Parameter Store",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "cloud-and-infrastructure-secrets-and-config-services-secret-manager",
                     "label": "Secret Manager",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -2087,7 +2353,8 @@
                 "id": "observability-and-reliability-structured-logging",
                 "label": "Structured Logging",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-metrics-and-monitoring",
@@ -2098,14 +2365,17 @@
                   {
                     "id": "observability-and-reliability-metrics-and-monitoring-prometheus",
                     "label": "Prometheus",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-metrics-and-monitoring-grafana",
                     "label": "Grafana",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-distributed-tracing",
@@ -2116,14 +2386,17 @@
                   {
                     "id": "observability-and-reliability-distributed-tracing-jaeger",
                     "label": "Jaeger",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-distributed-tracing-zipkin",
                     "label": "Zipkin",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-opentelemetry",
@@ -2134,14 +2407,17 @@
                   {
                     "id": "observability-and-reliability-opentelemetry-sdk",
                     "label": "SDK",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-opentelemetry-collector",
                     "label": "Collector",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-alerting-and-incident-response",
@@ -2152,20 +2428,24 @@
                   {
                     "id": "observability-and-reliability-alerting-and-incident-response-pagerduty",
                     "label": "PagerDuty",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-alerting-and-incident-response-on-call",
                     "label": "On-call",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-slo-sli-and-error-budgets",
                 "label": "SLO/SLI & Error Budgets",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "observability-and-reliability-health-checks-and-readiness",
@@ -2176,14 +2456,17 @@
                   {
                     "id": "observability-and-reliability-health-checks-and-readiness-liveness",
                     "label": "Liveness",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "observability-and-reliability-health-checks-and-readiness-readiness",
                     "label": "Readiness",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }
@@ -2226,26 +2509,31 @@
                   {
                     "id": "architecture-and-patterns-monolith-vs-microservices-tradeoffs",
                     "label": "Tradeoffs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-patterns-monolith-vs-microservices-migration",
                     "label": "Migration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-clean-architecture",
                 "label": "Clean Architecture",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-domain-driven-design",
                 "label": "Domain-Driven Design",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-api-gateway",
@@ -2256,20 +2544,24 @@
                   {
                     "id": "architecture-and-patterns-api-gateway-rate-limiting",
                     "label": "Rate Limiting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-patterns-api-gateway-auth",
                     "label": "Auth",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-service-discovery",
                 "label": "Service Discovery",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-event-driven-architecture",
@@ -2280,20 +2572,24 @@
                   {
                     "id": "architecture-and-patterns-event-driven-architecture-pub-sub",
                     "label": "Pub/Sub",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "architecture-and-patterns-event-driven-architecture-event-sourcing",
                     "label": "Event Sourcing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "architecture-and-patterns-twelve-factor-apps",
                 "label": "Twelve-Factor Apps",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -2323,7 +2619,8 @@
                 "id": "scaling-and-distributed-systems-horizontal-vs-vertical-scaling",
                 "label": "Horizontal vs Vertical Scaling",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-replication-and-sharding",
@@ -2334,14 +2631,17 @@
                   {
                     "id": "scaling-and-distributed-systems-replication-and-sharding-read-replicas",
                     "label": "Read Replicas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scaling-and-distributed-systems-replication-and-sharding-partitioning",
                     "label": "Partitioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-consistency-models",
@@ -2352,20 +2652,24 @@
                   {
                     "id": "scaling-and-distributed-systems-consistency-models-strong",
                     "label": "Strong",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scaling-and-distributed-systems-consistency-models-eventual",
                     "label": "Eventual",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-cap-theorem",
                 "label": "CAP Theorem",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-resilience-patterns",
@@ -2376,14 +2680,17 @@
                   {
                     "id": "scaling-and-distributed-systems-resilience-patterns-circuit-breaker",
                     "label": "Circuit Breaker",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scaling-and-distributed-systems-resilience-patterns-bulkhead",
                     "label": "Bulkhead",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting",
@@ -2394,20 +2701,24 @@
                   {
                     "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting-token-bucket",
                     "label": "Token Bucket",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "scaling-and-distributed-systems-backpressure-and-rate-limiting-queue-depth",
                     "label": "Queue Depth",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "scaling-and-distributed-systems-data-partitioning",
                 "label": "Data Partitioning",
                 "type": "subtopic",
-                "side": "left"
+                "side": "left",
+                "slug": null
               }
             ]
           },
@@ -2442,14 +2753,17 @@
                   {
                     "id": "nosql-and-specialized-datastores-document-databases-mongodb",
                     "label": "MongoDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-document-databases-couchdb",
                     "label": "CouchDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "nosql-and-specialized-datastores-key-value-stores",
@@ -2460,14 +2774,17 @@
                   {
                     "id": "nosql-and-specialized-datastores-key-value-stores-redis",
                     "label": "Redis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-key-value-stores-dynamodb",
                     "label": "DynamoDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "nosql-and-specialized-datastores-wide-column-stores",
@@ -2478,14 +2795,17 @@
                   {
                     "id": "nosql-and-specialized-datastores-wide-column-stores-cassandra",
                     "label": "Cassandra",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-wide-column-stores-scylladb",
                     "label": "ScyllaDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "nosql-and-specialized-datastores-time-series-databases",
@@ -2496,14 +2816,17 @@
                   {
                     "id": "nosql-and-specialized-datastores-time-series-databases-influxdb",
                     "label": "InfluxDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-time-series-databases-timescaledb",
                     "label": "TimescaleDB",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "nosql-and-specialized-datastores-graph-databases",
@@ -2514,14 +2837,17 @@
                   {
                     "id": "nosql-and-specialized-datastores-graph-databases-neo4j",
                     "label": "Neo4j",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-graph-databases-neptune",
                     "label": "Neptune",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "nosql-and-specialized-datastores-vector-databases",
@@ -2532,19 +2858,23 @@
                   {
                     "id": "nosql-and-specialized-datastores-vector-databases-pgvector",
                     "label": "pgvector",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-vector-databases-pinecone",
                     "label": "Pinecone",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "nosql-and-specialized-datastores-vector-databases-weaviate",
                     "label": "Weaviate",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -2579,19 +2909,23 @@
                   {
                     "id": "storage-and-files-object-storage-s3",
                     "label": "S3",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "storage-and-files-object-storage-gcs",
                     "label": "GCS",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "storage-and-files-object-storage-azure-blob",
                     "label": "Azure Blob",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "storage-and-files-file-uploads-and-streaming",
@@ -2602,14 +2936,17 @@
                   {
                     "id": "storage-and-files-file-uploads-and-streaming-multipart-uploads",
                     "label": "Multipart Uploads",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "storage-and-files-file-uploads-and-streaming-signed-urls",
                     "label": "Signed URLs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "storage-and-files-cdn-and-edge-caching",
@@ -2620,20 +2957,24 @@
                   {
                     "id": "storage-and-files-cdn-and-edge-caching-cloudfront",
                     "label": "CloudFront",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "storage-and-files-cdn-and-edge-caching-cloudflare",
                     "label": "Cloudflare",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "storage-and-files-data-retention-and-lifecycle",
                 "label": "Data Retention & Lifecycle",
                 "type": "subtopic",
-                "side": "right"
+                "side": "right",
+                "slug": null
               },
               {
                 "id": "storage-and-files-backup-and-restore",
@@ -2644,14 +2985,17 @@
                   {
                     "id": "storage-and-files-backup-and-restore-snapshots",
                     "label": "Snapshots",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "storage-and-files-backup-and-restore-point-in-time-restore",
                     "label": "Point-in-Time Restore",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -2686,14 +3030,17 @@
                   {
                     "id": "ai-integration-for-backend-llm-basics-tokenization",
                     "label": "Tokenization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-llm-basics-context-windows",
                     "label": "Context Windows",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-embeddings-and-vector-search",
@@ -2704,14 +3051,17 @@
                   {
                     "id": "ai-integration-for-backend-embeddings-and-vector-search-chunking",
                     "label": "Chunking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-embeddings-and-vector-search-similarity-search",
                     "label": "Similarity Search",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-rag-pipelines",
@@ -2722,14 +3072,17 @@
                   {
                     "id": "ai-integration-for-backend-rag-pipelines-retrieval",
                     "label": "Retrieval",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-rag-pipelines-re-ranking",
                     "label": "Re-ranking",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-tool-function-calling",
@@ -2740,14 +3093,17 @@
                   {
                     "id": "ai-integration-for-backend-tool-function-calling-schema-design",
                     "label": "Schema Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-tool-function-calling-retries",
                     "label": "Retries",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-evaluation-and-monitoring",
@@ -2758,14 +3114,17 @@
                   {
                     "id": "ai-integration-for-backend-evaluation-and-monitoring-offline-eval",
                     "label": "Offline Eval",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-evaluation-and-monitoring-online-a-b",
                     "label": "Online A/B",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-safety-and-guardrails",
@@ -2776,14 +3135,17 @@
                   {
                     "id": "ai-integration-for-backend-safety-and-guardrails-pii-redaction",
                     "label": "PII Redaction",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-safety-and-guardrails-prompt-injection",
                     "label": "Prompt Injection",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ai-integration-for-backend-cost-optimization",
@@ -2794,14 +3156,17 @@
                   {
                     "id": "ai-integration-for-backend-cost-optimization-caching",
                     "label": "Caching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ai-integration-for-backend-cost-optimization-batching",
                     "label": "Batching",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

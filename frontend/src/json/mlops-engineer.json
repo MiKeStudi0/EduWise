@@ -70,14 +70,17 @@
                   {
                     "id": "mlops-foundations-mlops-principles-lifecycle-mindset",
                     "label": "Lifecycle Mindset",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-foundations-mlops-principles-automation-and-reliability",
                     "label": "Automation & Reliability",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "mlops-foundations-ml-system-basics",
@@ -88,14 +91,17 @@
                   {
                     "id": "mlops-foundations-ml-system-basics-data-model-code",
                     "label": "Data/Model/Code",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-foundations-ml-system-basics-experiment-lifecycle",
                     "label": "Experiment Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "mlops-foundations-collaboration-and-handoff",
@@ -106,14 +112,17 @@
                   {
                     "id": "mlops-foundations-collaboration-and-handoff-roles-and-ownership",
                     "label": "Roles & Ownership",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "mlops-foundations-collaboration-and-handoff-documentation",
                     "label": "Documentation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "data-and-feature-pipelines-data-ingestion-batch-vs-streaming",
                     "label": "Batch vs Streaming",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-feature-pipelines-data-ingestion-data-quality-checks",
                     "label": "Data Quality Checks",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-feature-pipelines-feature-engineering",
@@ -165,14 +177,17 @@
                   {
                     "id": "data-and-feature-pipelines-feature-engineering-feature-stores",
                     "label": "Feature Stores",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-feature-pipelines-feature-engineering-feature-versioning",
                     "label": "Feature Versioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-and-feature-pipelines-data-storage",
@@ -183,14 +198,17 @@
                   {
                     "id": "data-and-feature-pipelines-data-storage-data-lakes",
                     "label": "Data Lakes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-and-feature-pipelines-data-storage-data-warehouses",
                     "label": "Data Warehouses",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "model-development-training-workflows-reproducible-training",
                     "label": "Reproducible Training",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-development-training-workflows-distributed-training",
                     "label": "Distributed Training",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "model-development-experiment-tracking",
@@ -242,14 +263,17 @@
                   {
                     "id": "model-development-experiment-tracking-metrics-and-artifacts",
                     "label": "Metrics & Artifacts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-development-experiment-tracking-model-registry",
                     "label": "Model Registry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "model-development-evaluation-and-validation",
@@ -260,14 +284,17 @@
                   {
                     "id": "model-development-evaluation-and-validation-offline-metrics",
                     "label": "Offline Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-development-evaluation-and-validation-bias-and-fairness",
                     "label": "Bias & Fairness",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "deployment-and-serving-serving-patterns-batch-serving",
                     "label": "Batch Serving",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deployment-and-serving-serving-patterns-online-serving",
                     "label": "Online Serving",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deployment-and-serving-ci-cd-for-ml",
@@ -319,14 +349,17 @@
                   {
                     "id": "deployment-and-serving-ci-cd-for-ml-pipeline-automation",
                     "label": "Pipeline Automation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deployment-and-serving-ci-cd-for-ml-promotion-and-rollback",
                     "label": "Promotion & Rollback",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deployment-and-serving-runtime-environments",
@@ -337,14 +370,17 @@
                   {
                     "id": "deployment-and-serving-runtime-environments-containers",
                     "label": "Containers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deployment-and-serving-runtime-environments-orchestrators",
                     "label": "Orchestrators",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "monitoring-and-governance-model-monitoring-drift-detection",
                     "label": "Drift Detection",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-governance-model-monitoring-performance-degradation",
                     "label": "Performance Degradation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-governance-observability",
@@ -396,14 +435,17 @@
                   {
                     "id": "monitoring-and-governance-observability-logs-and-metrics",
                     "label": "Logs & Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-governance-observability-tracing-and-alerts",
                     "label": "Tracing & Alerts",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "monitoring-and-governance-governance",
@@ -414,14 +456,17 @@
                   {
                     "id": "monitoring-and-governance-governance-compliance",
                     "label": "Compliance",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "monitoring-and-governance-governance-auditability",
                     "label": "Auditability",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "platform-and-operations-infrastructure-as-code-terraform",
                     "label": "Terraform",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "platform-and-operations-infrastructure-as-code-policy-as-code",
                     "label": "Policy as Code",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "platform-and-operations-security",
@@ -473,14 +521,17 @@
                   {
                     "id": "platform-and-operations-security-secrets-management",
                     "label": "Secrets Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "platform-and-operations-security-access-control",
                     "label": "Access Control",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "platform-and-operations-cost-and-scaling",
@@ -491,14 +542,17 @@
                   {
                     "id": "platform-and-operations-cost-and-scaling-autoscaling",
                     "label": "Autoscaling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "platform-and-operations-cost-and-scaling-cost-optimization",
                     "label": "Cost Optimization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

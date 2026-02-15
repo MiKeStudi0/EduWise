@@ -70,14 +70,17 @@
                   {
                     "id": "ml-foundations-what-is-machine-learning-problem-types",
                     "label": "Problem Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-foundations-what-is-machine-learning-ml-vs-ai-vs-dl",
                     "label": "ML vs AI vs DL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ml-foundations-math-essentials",
@@ -88,19 +91,23 @@
                   {
                     "id": "ml-foundations-math-essentials-linear-algebra",
                     "label": "Linear Algebra",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-foundations-math-essentials-probability-and-statistics",
                     "label": "Probability & Statistics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-foundations-math-essentials-calculus-basics",
                     "label": "Calculus Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ml-foundations-data-and-features",
@@ -111,14 +118,17 @@
                   {
                     "id": "ml-foundations-data-and-features-feature-engineering",
                     "label": "Feature Engineering",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-foundations-data-and-features-scaling-and-normalization",
                     "label": "Scaling & Normalization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -152,14 +162,17 @@
                   {
                     "id": "programming-and-tools-python-for-ml-numpy",
                     "label": "NumPy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-tools-python-for-ml-pandas",
                     "label": "Pandas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-tools-visualization",
@@ -170,14 +183,17 @@
                   {
                     "id": "programming-and-tools-visualization-matplotlib",
                     "label": "Matplotlib",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-tools-visualization-seaborn",
                     "label": "Seaborn",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-and-tools-ml-libraries",
@@ -188,19 +204,23 @@
                   {
                     "id": "programming-and-tools-ml-libraries-scikit-learn",
                     "label": "scikit-learn",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-tools-ml-libraries-pytorch",
                     "label": "PyTorch",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-and-tools-ml-libraries-tensorflow",
                     "label": "TensorFlow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -234,19 +254,23 @@
                   {
                     "id": "supervised-learning-classification-logistic-regression",
                     "label": "Logistic Regression",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "supervised-learning-classification-tree-based-models",
                     "label": "Tree-based Models",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "supervised-learning-classification-svm",
                     "label": "SVM",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "supervised-learning-regression",
@@ -257,14 +281,17 @@
                   {
                     "id": "supervised-learning-regression-linear-regression",
                     "label": "Linear Regression",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "supervised-learning-regression-regularization",
                     "label": "Regularization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "supervised-learning-ensembles",
@@ -275,14 +302,17 @@
                   {
                     "id": "supervised-learning-ensembles-random-forest",
                     "label": "Random Forest",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "supervised-learning-ensembles-gradient-boosting",
                     "label": "Gradient Boosting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -316,14 +346,17 @@
                   {
                     "id": "unsupervised-learning-clustering-k-means",
                     "label": "K-Means",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "unsupervised-learning-clustering-hierarchical",
                     "label": "Hierarchical",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "unsupervised-learning-dimensionality-reduction",
@@ -334,14 +367,17 @@
                   {
                     "id": "unsupervised-learning-dimensionality-reduction-pca",
                     "label": "PCA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "unsupervised-learning-dimensionality-reduction-t-sne-umap",
                     "label": "t-SNE/UMAP",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "unsupervised-learning-anomaly-detection",
@@ -352,14 +388,17 @@
                   {
                     "id": "unsupervised-learning-anomaly-detection-isolation-forest",
                     "label": "Isolation Forest",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "unsupervised-learning-anomaly-detection-reconstruction-errors",
                     "label": "Reconstruction Errors",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -393,14 +432,17 @@
                   {
                     "id": "model-evaluation-and-tuning-evaluation-metrics-accuracy-precision-recall",
                     "label": "Accuracy/Precision/Recall",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-evaluation-and-tuning-evaluation-metrics-f1-roc-auc",
                     "label": "F1/ROC-AUC",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "model-evaluation-and-tuning-validation",
@@ -411,14 +453,17 @@
                   {
                     "id": "model-evaluation-and-tuning-validation-train-val-test",
                     "label": "Train/Val/Test",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-evaluation-and-tuning-validation-cross-validation",
                     "label": "Cross-Validation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "model-evaluation-and-tuning-hyperparameter-tuning",
@@ -429,14 +474,17 @@
                   {
                     "id": "model-evaluation-and-tuning-hyperparameter-tuning-grid-random-search",
                     "label": "Grid/Random Search",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "model-evaluation-and-tuning-hyperparameter-tuning-bayesian-optimization",
                     "label": "Bayesian Optimization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -470,14 +518,17 @@
                   {
                     "id": "deep-learning-neural-network-basics-backpropagation",
                     "label": "Backpropagation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-neural-network-basics-activation-functions",
                     "label": "Activation Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deep-learning-cnns",
@@ -488,14 +539,17 @@
                   {
                     "id": "deep-learning-cnns-convolution",
                     "label": "Convolution",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-cnns-pooling",
                     "label": "Pooling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "deep-learning-sequence-models",
@@ -506,14 +560,17 @@
                   {
                     "id": "deep-learning-sequence-models-rnn-lstm-gru",
                     "label": "RNN/LSTM/GRU",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "deep-learning-sequence-models-transformers",
                     "label": "Transformers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -547,14 +604,17 @@
                   {
                     "id": "ml-systems-and-practice-data-pipelines-etl",
                     "label": "ETL",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-systems-and-practice-data-pipelines-data-versioning",
                     "label": "Data Versioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ml-systems-and-practice-model-deployment",
@@ -565,14 +625,17 @@
                   {
                     "id": "ml-systems-and-practice-model-deployment-serving",
                     "label": "Serving",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-systems-and-practice-model-deployment-monitoring",
                     "label": "Monitoring",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ml-systems-and-practice-responsible-ml",
@@ -583,14 +646,17 @@
                   {
                     "id": "ml-systems-and-practice-responsible-ml-bias-and-fairness",
                     "label": "Bias & Fairness",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ml-systems-and-practice-responsible-ml-explainability",
                     "label": "Explainability",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

@@ -70,14 +70,17 @@
                   {
                     "id": "ux-foundations-ux-principles-usability-heuristics",
                     "label": "Usability Heuristics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ux-foundations-ux-principles-human-centered-design",
                     "label": "Human-Centered Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ux-foundations-design-process",
@@ -88,14 +91,17 @@
                   {
                     "id": "ux-foundations-design-process-double-diamond",
                     "label": "Double Diamond",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ux-foundations-design-process-lean-ux",
                     "label": "Lean UX",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "ux-foundations-product-strategy-basics",
@@ -106,14 +112,17 @@
                   {
                     "id": "ux-foundations-product-strategy-basics-problem-framing",
                     "label": "Problem Framing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "ux-foundations-product-strategy-basics-value-proposition",
                     "label": "Value Proposition",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "user-research-research-methods-interviews",
                     "label": "Interviews",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "user-research-research-methods-surveys",
                     "label": "Surveys",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "user-research-synthesis-and-insights",
@@ -165,14 +177,17 @@
                   {
                     "id": "user-research-synthesis-and-insights-affinity-mapping",
                     "label": "Affinity Mapping",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "user-research-synthesis-and-insights-personas",
                     "label": "Personas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "user-research-jobs-to-be-done",
@@ -183,14 +198,17 @@
                   {
                     "id": "user-research-jobs-to-be-done-jtbd-statements",
                     "label": "JTBD Statements",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "user-research-jobs-to-be-done-opportunity-mapping",
                     "label": "Opportunity Mapping",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "information-architecture-structure-and-navigation-sitemap",
                     "label": "Sitemap",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "information-architecture-structure-and-navigation-navigation-patterns",
                     "label": "Navigation Patterns",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "information-architecture-content-strategy",
@@ -242,14 +263,17 @@
                   {
                     "id": "information-architecture-content-strategy-content-inventory",
                     "label": "Content Inventory",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "information-architecture-content-strategy-content-prioritization",
                     "label": "Content Prioritization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "information-architecture-user-flows",
@@ -260,14 +284,17 @@
                   {
                     "id": "information-architecture-user-flows-task-flows",
                     "label": "Task Flows",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "information-architecture-user-flows-edge-cases",
                     "label": "Edge Cases",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "interaction-and-ui-design-interaction-design-microinteractions",
                     "label": "Microinteractions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "interaction-and-ui-design-interaction-design-feedback-and-states",
                     "label": "Feedback & States",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "interaction-and-ui-design-ui-principles",
@@ -319,14 +349,17 @@
                   {
                     "id": "interaction-and-ui-design-ui-principles-visual-hierarchy",
                     "label": "Visual Hierarchy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "interaction-and-ui-design-ui-principles-consistency",
                     "label": "Consistency",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "interaction-and-ui-design-design-patterns",
@@ -337,14 +370,17 @@
                   {
                     "id": "interaction-and-ui-design-design-patterns-forms",
                     "label": "Forms",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "interaction-and-ui-design-design-patterns-mobile-patterns",
                     "label": "Mobile Patterns",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "prototyping-and-validation-wireframing-low-fidelity",
                     "label": "Low-Fidelity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "prototyping-and-validation-wireframing-mid-fidelity",
                     "label": "Mid-Fidelity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "prototyping-and-validation-prototyping",
@@ -396,14 +435,17 @@
                   {
                     "id": "prototyping-and-validation-prototyping-interactive-prototypes",
                     "label": "Interactive Prototypes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "prototyping-and-validation-prototyping-handoff-specs",
                     "label": "Handoff Specs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "prototyping-and-validation-usability-testing",
@@ -414,14 +456,17 @@
                   {
                     "id": "prototyping-and-validation-usability-testing-test-plans",
                     "label": "Test Plans",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "prototyping-and-validation-usability-testing-findings-and-iteration",
                     "label": "Findings & Iteration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "design-systems-and-impact-design-systems-components",
                     "label": "Components",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-systems-and-impact-design-systems-design-tokens",
                     "label": "Design Tokens",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "design-systems-and-impact-collaboration-and-handoff",
@@ -473,14 +521,17 @@
                   {
                     "id": "design-systems-and-impact-collaboration-and-handoff-specs-and-redlines",
                     "label": "Specs & Redlines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-systems-and-impact-collaboration-and-handoff-design-qa",
                     "label": "Design QA",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "design-systems-and-impact-ux-metrics-and-experimentation",
@@ -491,14 +542,17 @@
                   {
                     "id": "design-systems-and-impact-ux-metrics-and-experimentation-ux-metrics",
                     "label": "UX Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-systems-and-impact-ux-metrics-and-experimentation-a-b-testing",
                     "label": "A/B Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

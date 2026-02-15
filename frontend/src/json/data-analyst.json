@@ -70,14 +70,17 @@
                   {
                     "id": "data-analytics-foundations-what-is-data-analytics-roles-and-responsibilities",
                     "label": "Roles & Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-what-is-data-analytics-analytics-lifecycle",
                     "label": "Analytics Lifecycle",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-analytics-foundations-types-of-analytics",
@@ -88,24 +91,29 @@
                   {
                     "id": "data-analytics-foundations-types-of-analytics-descriptive",
                     "label": "Descriptive",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-types-of-analytics-diagnostic",
                     "label": "Diagnostic",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-types-of-analytics-predictive",
                     "label": "Predictive",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-types-of-analytics-prescriptive",
                     "label": "Prescriptive",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-analytics-foundations-business-and-metrics",
@@ -116,14 +124,17 @@
                   {
                     "id": "data-analytics-foundations-business-and-metrics-kpis",
                     "label": "KPIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-business-and-metrics-north-star-metrics",
                     "label": "North Star Metrics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-analytics-foundations-data-ethics-and-privacy",
@@ -134,14 +145,17 @@
                   {
                     "id": "data-analytics-foundations-data-ethics-and-privacy-pii",
                     "label": "PII",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-analytics-foundations-data-ethics-and-privacy-bias-and-fairness",
                     "label": "Bias & Fairness",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -175,14 +189,17 @@
                   {
                     "id": "spreadsheets-and-reporting-core-spreadsheet-skills-formulas-and-functions",
                     "label": "Formulas & Functions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "spreadsheets-and-reporting-core-spreadsheet-skills-data-cleaning",
                     "label": "Data Cleaning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "spreadsheets-and-reporting-pivot-tables-and-summaries",
@@ -193,14 +210,17 @@
                   {
                     "id": "spreadsheets-and-reporting-pivot-tables-and-summaries-aggregation",
                     "label": "Aggregation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "spreadsheets-and-reporting-pivot-tables-and-summaries-grouping",
                     "label": "Grouping",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "spreadsheets-and-reporting-charts-and-dashboards",
@@ -211,14 +231,17 @@
                   {
                     "id": "spreadsheets-and-reporting-charts-and-dashboards-chart-selection",
                     "label": "Chart Selection",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "spreadsheets-and-reporting-charts-and-dashboards-dashboard-design",
                     "label": "Dashboard Design",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -252,19 +275,23 @@
                   {
                     "id": "sql-and-databases-sql-basics-select-filter",
                     "label": "SELECT/FILTER",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "sql-and-databases-sql-basics-joins",
                     "label": "JOINs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "sql-and-databases-sql-basics-group-by",
                     "label": "GROUP BY",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "sql-and-databases-data-modeling-basics",
@@ -275,14 +302,17 @@
                   {
                     "id": "sql-and-databases-data-modeling-basics-schemas",
                     "label": "Schemas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "sql-and-databases-data-modeling-basics-normalization",
                     "label": "Normalization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "sql-and-databases-query-performance",
@@ -293,14 +323,17 @@
                   {
                     "id": "sql-and-databases-query-performance-indexes",
                     "label": "Indexes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "sql-and-databases-query-performance-explain",
                     "label": "EXPLAIN",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "sql-and-databases-data-sources",
@@ -311,14 +344,17 @@
                   {
                     "id": "sql-and-databases-data-sources-relational-databases",
                     "label": "Relational Databases",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "sql-and-databases-data-sources-data-warehouses",
                     "label": "Data Warehouses",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -352,14 +388,17 @@
                   {
                     "id": "programming-for-analysis-python-or-r-python-basics",
                     "label": "Python Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-for-analysis-python-or-r-r-basics",
                     "label": "R Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-for-analysis-data-manipulation",
@@ -370,14 +409,17 @@
                   {
                     "id": "programming-for-analysis-data-manipulation-pandas",
                     "label": "Pandas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-for-analysis-data-manipulation-dplyr",
                     "label": "dplyr",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-for-analysis-data-visualization",
@@ -388,14 +430,17 @@
                   {
                     "id": "programming-for-analysis-data-visualization-matplotlib-seaborn",
                     "label": "Matplotlib/Seaborn",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-for-analysis-data-visualization-ggplot2",
                     "label": "ggplot2",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "programming-for-analysis-notebooks-and-reproducibility",
@@ -406,14 +451,17 @@
                   {
                     "id": "programming-for-analysis-notebooks-and-reproducibility-jupyter",
                     "label": "Jupyter",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "programming-for-analysis-notebooks-and-reproducibility-report-automation",
                     "label": "Report Automation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -447,14 +495,17 @@
                   {
                     "id": "data-preparation-data-collection-csv-files",
                     "label": "CSV/Files",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-preparation-data-collection-apis",
                     "label": "APIs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-preparation-data-cleaning",
@@ -465,19 +516,23 @@
                   {
                     "id": "data-preparation-data-cleaning-missing-data",
                     "label": "Missing Data",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-preparation-data-cleaning-outliers",
                     "label": "Outliers",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-preparation-data-cleaning-duplicates",
                     "label": "Duplicates",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-preparation-data-transformation",
@@ -488,14 +543,17 @@
                   {
                     "id": "data-preparation-data-transformation-type-casting",
                     "label": "Type Casting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-preparation-data-transformation-feature-engineering",
                     "label": "Feature Engineering",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "data-preparation-data-quality",
@@ -506,14 +564,17 @@
                   {
                     "id": "data-preparation-data-quality-validation-rules",
                     "label": "Validation Rules",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "data-preparation-data-quality-data-documentation",
                     "label": "Data Documentation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -547,14 +608,17 @@
                   {
                     "id": "exploratory-data-analysis-eda-descriptive-statistics-summary-stats",
                     "label": "Summary Stats",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "exploratory-data-analysis-eda-descriptive-statistics-distributions",
                     "label": "Distributions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "exploratory-data-analysis-eda-correlation-and-relationships",
@@ -565,14 +629,17 @@
                   {
                     "id": "exploratory-data-analysis-eda-correlation-and-relationships-correlation",
                     "label": "Correlation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "exploratory-data-analysis-eda-correlation-and-relationships-regression-basics",
                     "label": "Regression Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "exploratory-data-analysis-eda-hypothesis-testing",
@@ -583,14 +650,17 @@
                   {
                     "id": "exploratory-data-analysis-eda-hypothesis-testing-a-b-testing",
                     "label": "A/B Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "exploratory-data-analysis-eda-hypothesis-testing-p-values",
                     "label": "p-values",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -624,14 +694,17 @@
                   {
                     "id": "visualization-and-storytelling-data-storytelling-narrative",
                     "label": "Narrative",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-storytelling-data-storytelling-audience",
                     "label": "Audience",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "visualization-and-storytelling-bi-tools",
@@ -642,19 +715,23 @@
                   {
                     "id": "visualization-and-storytelling-bi-tools-power-bi",
                     "label": "Power BI",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-storytelling-bi-tools-tableau",
                     "label": "Tableau",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-storytelling-bi-tools-looker",
                     "label": "Looker",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "visualization-and-storytelling-dashboard-best-practices",
@@ -665,14 +742,17 @@
                   {
                     "id": "visualization-and-storytelling-dashboard-best-practices-layout-and-ux",
                     "label": "Layout & UX",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "visualization-and-storytelling-dashboard-best-practices-interactivity",
                     "label": "Interactivity",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -706,14 +786,17 @@
                   {
                     "id": "advanced-and-career-ready-topics-intro-to-machine-learning-supervised-vs-unsupervised",
                     "label": "Supervised vs Unsupervised",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-ready-topics-intro-to-machine-learning-model-evaluation",
                     "label": "Model Evaluation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "advanced-and-career-ready-topics-data-warehousing-concepts",
@@ -724,14 +807,17 @@
                   {
                     "id": "advanced-and-career-ready-topics-data-warehousing-concepts-star-schema",
                     "label": "Star Schema",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-ready-topics-data-warehousing-concepts-etl-vs-elt",
                     "label": "ETL vs ELT",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference",
@@ -742,14 +828,17 @@
                   {
                     "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference-cohort-analysis",
                     "label": "Cohort Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-ready-topics-experimentation-and-causal-inference-causal-impact",
                     "label": "Causal Impact",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "advanced-and-career-ready-topics-portfolio-and-projects",
@@ -760,14 +849,17 @@
                   {
                     "id": "advanced-and-career-ready-topics-portfolio-and-projects-case-studies",
                     "label": "Case Studies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "advanced-and-career-ready-topics-portfolio-and-projects-stakeholder-communication",
                     "label": "Stakeholder Communication",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

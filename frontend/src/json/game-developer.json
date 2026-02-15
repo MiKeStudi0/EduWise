@@ -70,14 +70,17 @@
                   {
                     "id": "game-development-foundations-game-design-basics-core-loops",
                     "label": "Core Loops",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "game-development-foundations-game-design-basics-player-motivation",
                     "label": "Player Motivation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "game-development-foundations-programming-fundamentals",
@@ -88,14 +91,17 @@
                   {
                     "id": "game-development-foundations-programming-fundamentals-variables-and-control-flow",
                     "label": "Variables & Control Flow",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "game-development-foundations-programming-fundamentals-oop-basics",
                     "label": "OOP Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "game-development-foundations-math-for-games",
@@ -106,14 +112,17 @@
                   {
                     "id": "game-development-foundations-math-for-games-vectors-and-matrices",
                     "label": "Vectors & Matrices",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "game-development-foundations-math-for-games-transforms-and-projections",
                     "label": "Transforms & Projections",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "engines-and-tools-unity-scenes-and-prefabs",
                     "label": "Scenes & Prefabs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engines-and-tools-unity-scripting-and-components",
                     "label": "Scripting & Components",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "engines-and-tools-unreal-engine",
@@ -165,14 +177,17 @@
                   {
                     "id": "engines-and-tools-unreal-engine-blueprints",
                     "label": "Blueprints",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engines-and-tools-unreal-engine-gameplay-framework",
                     "label": "Gameplay Framework",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "engines-and-tools-godot",
@@ -183,14 +198,17 @@
                   {
                     "id": "engines-and-tools-godot-nodes-and-scenes",
                     "label": "Nodes & Scenes",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "engines-and-tools-godot-gdscript-basics",
                     "label": "GDScript Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "gameplay-systems-game-physics-collisions",
                     "label": "Collisions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "gameplay-systems-game-physics-rigidbodies",
                     "label": "Rigidbodies",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "gameplay-systems-animation",
@@ -242,14 +263,17 @@
                   {
                     "id": "gameplay-systems-animation-animation-states",
                     "label": "Animation States",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "gameplay-systems-animation-blend-trees",
                     "label": "Blend Trees",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "gameplay-systems-game-ai",
@@ -260,14 +284,17 @@
                   {
                     "id": "gameplay-systems-game-ai-state-machines",
                     "label": "State Machines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "gameplay-systems-game-ai-navigation",
                     "label": "Navigation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "graphics-and-audio-rendering-basics-rasterization",
                     "label": "Rasterization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "graphics-and-audio-rendering-basics-shaders",
                     "label": "Shaders",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "graphics-and-audio-lighting-and-materials",
@@ -319,14 +349,17 @@
                   {
                     "id": "graphics-and-audio-lighting-and-materials-pbr-basics",
                     "label": "PBR Basics",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "graphics-and-audio-lighting-and-materials-light-types",
                     "label": "Light Types",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "graphics-and-audio-audio-design",
@@ -337,14 +370,17 @@
                   {
                     "id": "graphics-and-audio-audio-design-sfx",
                     "label": "SFX",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "graphics-and-audio-audio-design-music-and-mixing",
                     "label": "Music & Mixing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "production-and-shipping-performance-optimization-profiling",
                     "label": "Profiling",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-shipping-performance-optimization-asset-optimization",
                     "label": "Asset Optimization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "production-and-shipping-build-and-release",
@@ -396,14 +435,17 @@
                   {
                     "id": "production-and-shipping-build-and-release-build-pipelines",
                     "label": "Build Pipelines",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-shipping-build-and-release-platform-publishing",
                     "label": "Platform Publishing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "production-and-shipping-live-ops-and-analytics",
@@ -414,14 +456,17 @@
                   {
                     "id": "production-and-shipping-live-ops-and-analytics-telemetry",
                     "label": "Telemetry",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "production-and-shipping-live-ops-and-analytics-patch-strategy",
                     "label": "Patch Strategy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "portfolio-and-career-project-planning-scope-control",
                     "label": "Scope Control",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "portfolio-and-career-project-planning-milestones",
                     "label": "Milestones",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "portfolio-and-career-polish-and-qa",
@@ -473,14 +521,17 @@
                   {
                     "id": "portfolio-and-career-polish-and-qa-bug-triage",
                     "label": "Bug Triage",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "portfolio-and-career-polish-and-qa-playtesting",
                     "label": "Playtesting",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "portfolio-and-career-showcase-and-hiring",
@@ -491,14 +542,17 @@
                   {
                     "id": "portfolio-and-career-showcase-and-hiring-portfolio",
                     "label": "Portfolio",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "portfolio-and-career-showcase-and-hiring-game-jams",
                     "label": "Game Jams",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }

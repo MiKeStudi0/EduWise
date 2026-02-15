@@ -70,14 +70,17 @@
                   {
                     "id": "product-foundations-role-of-a-pm-responsibilities",
                     "label": "Responsibilities",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "product-foundations-role-of-a-pm-cross-functional-collaboration",
                     "label": "Cross-Functional Collaboration",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "product-foundations-product-thinking",
@@ -88,14 +91,17 @@
                   {
                     "id": "product-foundations-product-thinking-problem-framing",
                     "label": "Problem Framing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "product-foundations-product-thinking-user-centric-mindset",
                     "label": "User-Centric Mindset",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "product-foundations-business-basics",
@@ -106,14 +112,17 @@
                   {
                     "id": "product-foundations-business-basics-value-propositions",
                     "label": "Value Propositions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "product-foundations-business-basics-business-models",
                     "label": "Business Models",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -147,14 +156,17 @@
                   {
                     "id": "discovery-and-research-market-research-competitive-analysis",
                     "label": "Competitive Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "discovery-and-research-market-research-market-sizing",
                     "label": "Market Sizing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "discovery-and-research-user-research",
@@ -165,14 +177,17 @@
                   {
                     "id": "discovery-and-research-user-research-interviews",
                     "label": "Interviews",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "discovery-and-research-user-research-personas",
                     "label": "Personas",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "discovery-and-research-insights-and-validation",
@@ -183,14 +198,17 @@
                   {
                     "id": "discovery-and-research-insights-and-validation-assumptions",
                     "label": "Assumptions",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "discovery-and-research-insights-and-validation-mvp-definition",
                     "label": "MVP Definition",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -224,14 +242,17 @@
                   {
                     "id": "strategy-and-planning-product-strategy-vision-and-goals",
                     "label": "Vision & Goals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "strategy-and-planning-product-strategy-positioning",
                     "label": "Positioning",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "strategy-and-planning-roadmapping",
@@ -242,14 +263,17 @@
                   {
                     "id": "strategy-and-planning-roadmapping-outcome-based-roadmaps",
                     "label": "Outcome-Based Roadmaps",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "strategy-and-planning-roadmapping-prioritization",
                     "label": "Prioritization",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "strategy-and-planning-requirements",
@@ -260,14 +284,17 @@
                   {
                     "id": "strategy-and-planning-requirements-prds",
                     "label": "PRDs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "strategy-and-planning-requirements-user-stories",
                     "label": "User Stories",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -301,14 +328,17 @@
                   {
                     "id": "design-and-delivery-product-design-ux-principles",
                     "label": "UX Principles",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-and-delivery-product-design-prototyping",
                     "label": "Prototyping",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "design-and-delivery-agile-delivery",
@@ -319,14 +349,17 @@
                   {
                     "id": "design-and-delivery-agile-delivery-backlog-management",
                     "label": "Backlog Management",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-and-delivery-agile-delivery-sprint-rituals",
                     "label": "Sprint Rituals",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "design-and-delivery-launch-planning",
@@ -337,14 +370,17 @@
                   {
                     "id": "design-and-delivery-launch-planning-go-to-market",
                     "label": "Go-to-Market",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "design-and-delivery-launch-planning-release-strategy",
                     "label": "Release Strategy",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -378,14 +414,17 @@
                   {
                     "id": "metrics-and-growth-product-metrics-north-star-metric",
                     "label": "North Star Metric",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-growth-product-metrics-retention-and-churn",
                     "label": "Retention & Churn",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "metrics-and-growth-experimentation",
@@ -396,14 +435,17 @@
                   {
                     "id": "metrics-and-growth-experimentation-a-b-testing",
                     "label": "A/B Testing",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-growth-experimentation-cohort-analysis",
                     "label": "Cohort Analysis",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "metrics-and-growth-growth-loops",
@@ -414,14 +456,17 @@
                   {
                     "id": "metrics-and-growth-growth-loops-acquisition",
                     "label": "Acquisition",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "metrics-and-growth-growth-loops-activation",
                     "label": "Activation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           },
@@ -455,14 +500,17 @@
                   {
                     "id": "leadership-and-stakeholders-stakeholder-management-mapping-and-alignment",
                     "label": "Mapping & Alignment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-stakeholders-stakeholder-management-communication-plans",
                     "label": "Communication Plans",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "leadership-and-stakeholders-influence-and-leadership",
@@ -473,14 +521,17 @@
                   {
                     "id": "leadership-and-stakeholders-influence-and-leadership-decision-making",
                     "label": "Decision Making",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-stakeholders-influence-and-leadership-managing-tradeoffs",
                     "label": "Managing Tradeoffs",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               },
               {
                 "id": "leadership-and-stakeholders-risk-management",
@@ -491,14 +542,17 @@
                   {
                     "id": "leadership-and-stakeholders-risk-management-risk-assessment",
                     "label": "Risk Assessment",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   },
                   {
                     "id": "leadership-and-stakeholders-risk-management-mitigation",
                     "label": "Mitigation",
-                    "type": "module"
+                    "type": "module",
+                    "slug": null
                   }
-                ]
+                ],
+                "slug": null
               }
             ]
           }
