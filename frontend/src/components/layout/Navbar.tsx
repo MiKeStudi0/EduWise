@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Code2, BookOpen, Trophy, GraduationCap, MapIcon } from "lucide-react";
-import { Button } from "@/components/ui/button"; // Uses your custom Button variants
+import { Button } from "@/components/ui/button"; 
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../ThemeToggle";
 
@@ -62,12 +62,12 @@ export function Navbar() {
           "bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60",
           // Scroll state: adds shadow and defines border visibility
           scrolled 
-            ? "border-border/50 shadow-sm py-2" 
-            : "border-transparent py-4"
+            ? "border-border/50 shadow-sm" 
+            : "border-transparent"
         )}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-10 items-center justify-between">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <div className="relative">
@@ -105,34 +105,40 @@ export function Navbar() {
                 Sign in
               </Button>
               
-              {/* PRIMARY CTA: Using 'hero' variant for the glow/gradient */}
+              {/* PRIMARY CTA: Using 'hero' variant */}
               <Button variant="hero" size="sm">
                 Get Started
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-accent transition-colors text-muted-foreground"
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            {/* Mobile Actions (Theme Toggle + Menu) */}
+            <div className="flex items-center gap-2 md:hidden">
+              {/* Theme Toggle visible on mobile top bar */}
+              <ThemeToggle />
+              
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="p-2 rounded-lg hover:bg-accent transition-colors text-muted-foreground"
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Dropdown */}
         <div
           className={cn(
             "md:hidden overflow-hidden bg-background/95 backdrop-blur-xl border-b border-border/50 transition-all duration-300 ease-in-out",
             isMobileMenuOpen ? "max-h-[500px] opacity-100 shadow-lg" : "max-h-0 opacity-0"
           )}
         >
-          <div className="container mx-auto px-4 pb-4 pt-2 space-y-1">
+          <div className="container mx-auto px-4 pb-6 pt-2 space-y-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -150,16 +156,11 @@ export function Navbar() {
               </Link>
             ))}
             
-            <div className="pt-4 space-y-3 px-4 border-t border-border/50 mt-2">
-              <div className="flex items-center justify-between">
-                 <span className="text-sm font-medium text-muted-foreground">Appearance</span>
-                 <ThemeToggle />
-              </div>
+            <div className="pt-4 px-4 mt-2 border-t border-border/50">
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="outline" className="w-full justify-center">
                   Sign in
                 </Button>
-                {/* Mobile PRIMARY CTA: Using 'hero' variant */}
                 <Button variant="hero" className="w-full justify-center">
                   Get Started
                 </Button>
