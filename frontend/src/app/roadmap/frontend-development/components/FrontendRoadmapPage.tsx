@@ -406,11 +406,13 @@ const FIT_VIEW_OPTIONS = { minZoom: 1, maxZoom: 1 };
 
 // --- MOBILE CONFIGURATION ---
 const MOBILE_VIEW_CONFIG = {
-  x: 142,      // Adjust horizontal position (pan)
+  x: 145,      // Adjust horizontal position (pan)
   y: 0,      // Adjust vertical position (pan)
-  zoom: 0.8, // Adjust initial zoom level
+  zoom: 0.88, // Adjust initial zoom level
 };
-
+  // x: 145,      
+  // y: 0,      
+  // zoom: 0.88, 
 export default function FrontendRoadmapPage() {
   const [activeNodeData, setActiveNodeData] = useState<NodeData | null>(null);
   const [activeTab, setActiveTab] = useState('roadmap');

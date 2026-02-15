@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-// Imported Variants type to fix the TypeScript error
 import { motion, Variants } from "framer-motion";
 import { Layout, Server, Database, Globe, Cpu, Shield, Smartphone, Cloud, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button"; 
@@ -90,19 +89,15 @@ const itemVariants: Variants = {
 
 export function FeaturesSection() {
   return (
-    <section className="py-10 relative overflow-hidden bg-background">
+    <section className="py-16 relative overflow-hidden bg-background">
       
-      {/* MATCHING GRID BACKGROUND FROM HERO SECTION 
-         - Uses the exact same indigo tint (rgba(99,102,241,0.08))
-         - Uses the same mask-image for the fade effect
-         - Uses the same dark mode opacity logic
-      */}
+      {/* Background Texture */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black_60%,transparent_100%)] dark:opacity-40 pointer-events-none" />
       
       <div className="container relative z-10 px-4 sm:px-6 lg:px-8 mx-auto">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -129,29 +124,44 @@ export function FeaturesSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {roadmaps.map((roadmap) => (
             <motion.div key={roadmap.title} variants={itemVariants}>
               <Link
                 href={roadmap.href}
-                className="group relative block h-full p-6 rounded-2xl transition-all duration-300
+                className="group relative block h-full p-5 sm:p-6 rounded-2xl transition-all duration-300
                   bg-card
                   border border-border
                   shadow-[0_8px_30px_rgb(0,0,0,0.04)] 
                   hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] 
                   hover:-translate-y-1"
               >
-                {/* Icon Container */}
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${roadmap.color} mb-4 shadow-sm group-hover:scale-110 transition-transform duration-300`}>
-                  <roadmap.icon className="w-6 h-6 text-white" />
+                {/* RESPONSIVE LAYOUT CONTAINER 
+                   - Mobile: flex-row (Icon left, Title right)
+                   - Tablet/Desktop (sm+): block (Icon top, Title bottom)
+                */}
+                <div className="flex items-center sm:block gap-4 sm:gap-0 mb-2 sm:mb-0">
+                  
+                  {/* Icon Container */}
+                  <div className={`
+                    inline-flex items-center justify-center 
+                    w-10 h-10 sm:w-12 sm:h-12 
+                    rounded-xl bg-gradient-to-br ${roadmap.color} 
+                    shadow-sm group-hover:scale-110 transition-transform duration-300 shrink-0
+                    sm:mb-4
+                  `}>
+                    <roadmap.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors sm:mb-2">
+                    {roadmap.title}
+                  </h3>
                 </div>
                 
-                {/* Text Content */}
-                <h3 className="text-lg font-bold mb-2 text-foreground group-hover:text-primary transition-colors">
-                  {roadmap.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed sm:mt-0">
                   {roadmap.description}
                 </p>
               </Link>
@@ -165,7 +175,7 @@ export function FeaturesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6 }}
-          className="mt-16 flex justify-center"
+          className="mt-12 sm:mt-16 flex justify-center"
         >
           <Link href="/roadmap">
             <Button 

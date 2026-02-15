@@ -4,7 +4,6 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-// 1. Import Variants to fix the type error
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { 
   Layout, Server, Layers, Terminal, ArrowRight, Code2, Database, Shield, Smartphone,
@@ -51,7 +50,6 @@ const defaultStyle = {
   gradient: "from-indigo-500/20 to-violet-500/20"
 };
 
-// 2. Explicitly type the variants objects
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -170,7 +168,8 @@ export default function RoadmapListingPage() {
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                // GRID: Single col on mobile, 2 on small tablets, 3 on large tablets, 4 on desktop
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
               >
                 <AnimatePresence mode="popLayout">
                   {filteredRoadmaps.map((item) => {
@@ -193,33 +192,50 @@ export default function RoadmapListingPage() {
                             {/* Hover Gradient Overlay */}
                             <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${style.gradient} pointer-events-none`} />
 
-                            <div className="relative p-6 flex flex-col h-full">
-                              {/* Header: Icon & Decor */}
-                              <div className="flex justify-between items-start mb-6">
+                            <div className="relative p-5 sm:p-6 flex flex-col h-full">
+                              
+                              {/* RESPONSIVE HEADER:
+                                - Mobile (< sm): Row layout (Icon Left, Title Right, Arrow Far Right)
+                                - Desktop (sm+): Column layout (Icon Top, Title Below)
+                              */}
+                              <div className="flex sm:block items-center justify-between sm:justify-start gap-4 mb-2 sm:mb-6">
+                                
+                                {/* Icon */}
                                 <div className={`
-                                  relative z-10 flex items-center justify-center w-12 h-12 rounded-xl 
-                                  bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 
-                                  ${style.color} shadow-sm group-hover:scale-110 transition-transform duration-300
+                                  relative z-10 flex items-center justify-center 
+                                  w-10 h-10 sm:w-12 sm:h-12 
+                                  rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700 
+                                  ${style.color} shadow-sm group-hover:scale-110 transition-transform duration-300 shrink-0
                                 `}>
-                                  <Icon size={24} strokeWidth={2} />
+                                  <Icon size={20} className="sm:w-6 sm:h-6" strokeWidth={2} />
                                 </div>
-                                <div className="text-slate-300 dark:text-slate-700 group-hover:text-indigo-500 transition-colors">
+
+                                {/* Title (Visible only on Mobile here) */}
+                                <h3 className="sm:hidden text-lg font-bold text-slate-900 dark:text-slate-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex-1 line-clamp-1">
+                                  {item.title}
+                                </h3>
+
+                                {/* Arrow (Visible on both, positioned differently) */}
+                                <div className="text-slate-300 dark:text-slate-700 group-hover:text-indigo-500 transition-colors sm:absolute sm:top-6 sm:right-6">
                                    <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                                 </div>
                               </div>
 
-                              {/* Text Content */}
+                              {/* Content Container */}
                               <div className="flex flex-col flex-grow z-10">
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                {/* Title (Visible only on Desktop here) */}
+                                <h3 className="hidden sm:block text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                   {item.title}
                                 </h3>
+                                
+                                {/* Description */}
                                 <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-2">
                                   {item.description}
                                 </p>
                               </div>
 
-                              {/* Footer Line */}
-                              <div className="mt-6 h-1 w-12 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:w-full group-hover:bg-indigo-500/50 transition-all duration-500" />
+                              {/* Footer Line (Desktop Only) */}
+                              <div className="hidden sm:block mt-6 h-1 w-12 rounded-full bg-slate-100 dark:bg-slate-800 group-hover:w-full group-hover:bg-indigo-500/50 transition-all duration-500" />
                             </div>
                           </div>
                         </Link>
