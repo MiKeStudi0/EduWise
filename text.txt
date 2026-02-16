@@ -30,6 +30,7 @@ seo_metadata
 roadmaps
 - id
 - slug
+- slug_icon
 - title
 - description
 - seo_id          -- FK → seo_metadata.id
@@ -43,31 +44,83 @@ technologies
 - id
 - roadmap_id
 - slug
-- name
+- slug_icon
+- title
 - description
 - seo_id          -- FK → seo_metadata.id
 - order_index
+- is_active
 - created_at
 - updated_at
 
 modules
 - id
+- roadmap_id
 - technology_id
 - slug
 - title
 - description
 - seo_id          -- FK → seo_metadata.id
+- is_active
 - order_index
 - created_at
 - updated_at
 
 topics
 - id
+- roadmap_id
+- technology_id
 - module_id
 - slug
 - title
-- summary
+- description
+- examples :{
+    - title
+    - description
+    - code_snippet
+    - output
+    - images
+    - video_url
+}       
+- image_banner_url
+- images             -- JSON / TEXT[]
+- video_url
+- when_to_use         -- JSON / TEXT[]
+- when_to_avoid       -- JSON / TEXT[]
+- problems -[what problem does this topic solve?] -- JSON / TEXT[]
+- mental_models -[what the topic related to real world Example?] -- JSON / TEXT[]
+- common_mistakes -[what are the common mistakes when learning this topic?] -- JSON / TEXT[]
+- bonus_tips -[any bonus tips related to this topic?] -- JSON / TEXT[]
+- related_topics -[what are the related topics?] -- JSON / TEXT[]
 - seo_id          -- FK → seo_metadata.id
+- is_active
+- order_index
+- created_at
+- updated_at
+
+
+sub_topics
+- id
+- roadmap_id
+- technology_id
+- module_id
+- topic_id
+- slug
+- title
+- description
+- examples          -- JSON / TEXT[title,description,code_snippet,output,images,video_url]
+- image_banner_url
+- images             -- JSON / TEXT[]
+- video_url
+- when_to_use         -- JSON / TEXT[]
+- when_to_avoid       -- JSON / TEXT[]
+- problems -[what problem does this topic solve?] -- JSON / TEXT[]
+- mental_models -[what the topic related to real world Example?] -- JSON / TEXT[]
+- common_mistakes -[what are the common mistakes when learning this topic?] -- JSON / TEXT[]
+- bonus_tips -[any bonus tips related to this topic?] -- JSON / TEXT[]
+- related_topics -[what are the related topics?] -- JSON / TEXT[]
+- seo_id          -- FK → seo_metadata.id
+- is_active
 - order_index
 - created_at
 - updated_at
@@ -75,20 +128,27 @@ topics
 
 lessons
 - id
+- roadmap_id
+- technology_id
+- module_id
 - topic_id
 - slug
 - title
-- summary
-- content
+- description
+- examples          -- JSON / TEXT[title,description,code_snippet,output,images,video_url]
+- image_banner_url
+- images             -- JSON / TEXT[]
 - video_url
-- problems          -- JSON / TEXT[]
 - when_to_use         -- JSON / TEXT[]
 - when_to_avoid       -- JSON / TEXT[]
-- syntax_highlighted_code -- JSON / TEXT[]
-- difficulty
-- content_type
-- duration_minutes
+- problems -[what problem does this topic solve?] -- JSON / TEXT[]
+- mental_models -[what the topic related to real world Example?] -- JSON / TEXT[]
+- common_mistakes -[what are the common mistakes when learning this topic?] -- JSON / TEXT[]
+- bonus_tips -[any bonus tips related to this topic?] -- JSON / TEXT[]
+- related_topics -[what are the related topics?] -- JSON / TEXT[]
 - seo_id          -- FK → seo_metadata.id
+- is_active
 - order_index
 - created_at
 - updated_at
+

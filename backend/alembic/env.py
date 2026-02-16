@@ -29,6 +29,14 @@ from app.models.subscription import Subscription
 from app.models.user_profile import UserProfile
 from app.models.role_permission import RolePermission
 from app.models.permission import Permission
+from app.models.technology import Technology
+from app.models.roadmap import Roadmap
+from app.models.module import Module
+from app.models.topic import Topic
+from app.models.sub_topic import SubTopic
+from app.models.lesson import Lesson
+from app.models.seo_metadata import SeoMetadata
+
 
 target_metadata = Base.metadata
 

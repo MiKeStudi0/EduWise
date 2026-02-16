@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.v1.endpoints import users, roles, subscriptions, profiles, permissions, role_permissions
+from app.api.v1.endpoints import users, roles, subscriptions, profiles, permissions, role_permissions, roadmaps, technologies, modules,topics, sub_topics, lessons,seo
 
 api_router = APIRouter()
 
@@ -14,3 +14,17 @@ api_router.include_router(
     role_permissions.router,
     tags=["role-permissions"],
 )
+
+api_router.include_router(roadmaps.router,)
+api_router.include_router(technologies.router)
+api_router.include_router(modules.router)
+api_router.include_router(topics.router)
+api_router.include_router(sub_topics.router)
+api_router.include_router(lessons.router)
+api_router.include_router(seo.router)
+
+
+
+
+
+

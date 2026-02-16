@@ -4,3 +4,10 @@ from .subscription import Subscription
 from .user_profile import UserProfile
 from .role_permission import RolePermission
 from .permission import Permission
+from .technology import Technology
+from .roadmap import Roadmap
+from .module import Module
+from .topic import Topic
+from .sub_topic import SubTopic
+from .lesson import Lesson
+from .seo_metadata import SeoMetadata
