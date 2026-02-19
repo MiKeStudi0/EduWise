@@ -2,6 +2,7 @@ from sqlalchemy import String, Text, ForeignKey, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.db.base import Base
 from app.models.base_mixins import TimestampMixin, OrderableMixin, ActiveMixin
+from app.models.sub_topic import SubTopic
 
 class Topic(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     __tablename__ = "topics"
@@ -35,3 +36,9 @@ class Topic(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     )
 
     module = relationship("Module", back_populates="topics")
+    # 👇 THIS IS REQUIRED
+    sub_topics: Mapped[list["SubTopic"]] = relationship(
+        "SubTopic",
+        back_populates="topic",
+        cascade="all, delete-orphan"
+    )

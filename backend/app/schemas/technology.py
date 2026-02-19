@@ -3,6 +3,18 @@ from typing import Optional
 from datetime import datetime
 
 
+# ---------- SEO Schema (Mirroring Roadmap) ----------
+class SeoSchema(BaseModel):
+    meta_title: Optional[str] = None
+    meta_description: Optional[str] = None
+    keywords: Optional[list[str]] = None
+    canonical_url: Optional[str] = None
+    robots: Optional[str] = None
+    og_title: Optional[str] = None
+    og_description: Optional[str] = None
+    og_image_url: Optional[str] = None
+    twitter_card: Optional[str] = None
+
 # ---------- Base ----------
 class TechnologyBase(BaseModel):
     roadmap_id: int
@@ -17,7 +29,7 @@ class TechnologyBase(BaseModel):
 
 # ---------- Create ----------
 class TechnologyCreate(TechnologyBase):
-    pass
+    seo: Optional[SeoSchema] = None
 
 
 # ---------- Update ----------
@@ -30,6 +42,7 @@ class TechnologyUpdate(BaseModel):
     seo_id: Optional[int] = None
     order_index: Optional[int] = None
     is_active: Optional[bool] = None
+    seo: Optional[SeoSchema] = None
 
 
 # ---------- Response ----------
@@ -37,6 +50,7 @@ class TechnologyResponse(TechnologyBase):
     id: int
     created_at: datetime
     updated_at: datetime
+    seo: Optional[SeoSchema] = None
 
     class Config:
         from_attributes = True

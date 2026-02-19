@@ -5,6 +5,7 @@ from app.schemas.technology import TechnologyCreate, TechnologyUpdate
 
 class CRUDTechnology:
 
+    # Note: Complex create logic with SEO is now handled in technology_service.py
     def create(self, db: Session, obj_in: TechnologyCreate) -> Technology:
         tech = Technology(**obj_in.model_dump())
         db.add(tech)
@@ -37,6 +38,7 @@ class CRUDTechnology:
             q = q.filter(Technology.is_active.is_(True))
         return q.order_by(Technology.order_index).all()
 
+    # Note: Complex update logic with SEO is now handled in technology_service.py
     def update(
         self,
         db: Session,
