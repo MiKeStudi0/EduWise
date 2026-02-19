@@ -23,6 +23,17 @@ def create(payload: TechnologyCreate, db: Session = Depends(get_db)):
     return create_technology(db, payload)
 
 
+# READ ALL (New endpoint)
+@router.get(
+    "/",
+    response_model=list[TechnologyResponse],
+)
+def list_all(
+    db: Session = Depends(get_db)
+):
+    return crud_technology.get_all(db)
+
+
 # READ ALL (by roadmap)
 @router.get(
     "/roadmap/{roadmap_id}",

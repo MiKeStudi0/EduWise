@@ -18,20 +18,21 @@ import {
   type TechnologyTableItem,
   type CreateTechnologyPayload,
   type UpdateTechnologyPayload
-} from '@/hooks/queries/useTechnologiesQueries'; // Adjust path if necessary
+} from '@/hooks/queries/useTechnologiesQueries';
+import { useRoadmapsQuery } from '@/hooks/queries/useRoadmapsQueries';
 
 // --- Configuration ---
 
 const columns: Column<TechnologyTableItem>[] = [
-  { 
-    key: "slugIcon", 
-    label: "Icon", 
+  {
+    key: "slugIcon",
+    label: "Icon",
     render: (item) => (
       <div className="w-8 h-8 rounded bg-muted/50 flex items-center justify-center text-lg overflow-hidden">
         {item.slugIcon && item.slugIcon.startsWith('http') ? (
-           <img src={item.slugIcon} alt="" className="w-full h-full object-cover" />
+          <img src={item.slugIcon} alt="" className="w-full h-full object-cover" />
         ) : (
-           <span>{item.slugIcon || <FileText size={14} className="text-muted-foreground"/>}</span>
+          <span>{item.slugIcon || <FileText size={14} className="text-muted-foreground" />}</span>
         )}
       </div>
     )
@@ -45,8 +46,8 @@ const columns: Column<TechnologyTableItem>[] = [
 // Data Mapping Helper: Form Data -> API Payload
 const toTechnologyPayload = (data: Record<string, string>): CreateTechnologyPayload => {
   const parsedOrder = Number.parseInt(data.order_index ?? "", 10);
-  
-  const keywordsList = data.keywords 
+
+  const keywordsList = data.keywords
     ? data.keywords.split(',').map(k => k.trim()).filter(k => k.length > 0)
     : [];
 
@@ -60,26 +61,27 @@ const toTechnologyPayload = (data: Record<string, string>): CreateTechnologyPayl
     // Note: is_active is handled separately or defaults in backend, 
     // but we can default to true for new items if needed.
     seo: {
-        meta_title: data.meta_title?.trim() || null,
-        meta_description: data.meta_description?.trim() || null,
-        keywords: keywordsList.length > 0 ? keywordsList : null,
-        canonical_url: data.canonical_url?.trim() || null,
-        robots: data.robots?.trim() || null,
-        og_title: data.og_title?.trim() || null,
-        og_description: data.og_description?.trim() || null,
-        og_image_url: data.og_image_url?.trim() || null,
-        twitter_card: data.twitter_card?.trim() || null,
+      meta_title: data.meta_title?.trim() || null,
+      meta_description: data.meta_description?.trim() || null,
+      keywords: keywordsList.length > 0 ? keywordsList : null,
+      canonical_url: data.canonical_url?.trim() || null,
+      robots: data.robots?.trim() || null,
+      og_title: data.og_title?.trim() || null,
+      og_description: data.og_description?.trim() || null,
+      og_image_url: data.og_image_url?.trim() || null,
+      twitter_card: data.twitter_card?.trim() || null,
     }
   };
 };
 
 export default function TechnologiesList() {
   const navigate = useNavigate();
-  // We keep useApp for roadmaps and permissions, but remove technologies state
-  const { roadmaps, canEdit } = useApp(); 
+  const { canEdit } = useApp();
 
   // --- React Query Hooks ---
   const { data: technologiesData, isLoading, isError } = useTechnologiesQuery();
+  const { data: roadmapsData } = useRoadmapsQuery();
+
   const createMutation = useCreateTechnologyMutation();
   const updateMutation = useUpdateTechnologyMutation();
   const deleteMutation = useDeleteTechnologyMutation();
@@ -97,18 +99,18 @@ export default function TechnologiesList() {
 
   // Form Fields Configuration
   const formFields: FormField[] = useMemo(() => [
-    { 
-      name: 'roadmap_id', label: 'Roadmap', type: 'select', required: true, 
-      options: roadmaps.items.map((r: any) => ({ value: String(r.id), label: r.title })) 
+    {
+      name: 'roadmap_id', label: 'Roadmap', type: 'select', required: true,
+      options: roadmapsData?.map((r) => ({ value: String(r.id), label: r.title })) || []
     },
     { name: 'name', label: 'Name', type: 'text', required: true, placeholder: "e.g. React" },
     { name: 'slug', label: 'Slug', type: 'text', required: true, placeholder: "react" },
     { name: 'slug_icon', label: 'Icon URL / Emoji', type: 'text', placeholder: "https://... or ⚛️" },
     { name: 'order_index', label: 'Order Priority', type: 'number', placeholder: "0" },
     { name: 'description', label: 'Description', type: 'textarea', placeholder: "Brief overview..." },
-    
-    { name: "sep_seo", label: "--- SEO Configuration ---", type: "text", required: false, placeholder: "Visual Separator" },
-    
+
+    { name: "sep_seo", label: "--- SEO Configuration ---", type: "separator", required: false, placeholder: "Visual Separator" },
+
     { name: "meta_title", label: "SEO Meta Title", type: "text" },
     { name: "meta_description", label: "SEO Meta Description", type: "textarea" },
     { name: "keywords", label: "Keywords (comma separated)", type: "text" },
@@ -118,25 +120,25 @@ export default function TechnologiesList() {
     { name: "og_description", label: "OG Description", type: "textarea" },
     { name: "og_image_url", label: "OG Image URL", type: "text" },
     { name: "twitter_card", label: "Twitter Card", type: "select", options: [{ value: "summary", label: "Summary" }, { value: "summary_large_image", label: "Summary Large Image" }] },
-  ], [roadmaps]);
+  ], [roadmapsData]);
 
   // Initial Data for Edit Mode
   const getInitialData = (item: TechnologyTableItem) => ({
-      roadmap_id: item.roadmapId,
-      name: item.name,
-      slug: item.slug,
-      slug_icon: item.slugIcon || "",
-      order_index: String(item.orderIndex),
-      description: item.description || "",
-      meta_title: item.seo?.meta_title || "",
-      meta_description: item.seo?.meta_description || "",
-      keywords: item.seo?.keywords ? item.seo.keywords.join(", ") : "",
-      canonical_url: item.seo?.canonical_url || "",
-      robots: item.seo?.robots || "index, follow",
-      og_title: item.seo?.og_title || "",
-      og_description: item.seo?.og_description || "",
-      og_image_url: item.seo?.og_image_url || "",
-      twitter_card: item.seo?.twitter_card || "summary_large_image",
+    roadmap_id: item.roadmapId,
+    name: item.name,
+    slug: item.slug,
+    slug_icon: item.slugIcon || "",
+    order_index: String(item.orderIndex),
+    description: item.description || "",
+    meta_title: item.seo?.meta_title || "",
+    meta_description: item.seo?.meta_description || "",
+    keywords: item.seo?.keywords ? item.seo.keywords.join(", ") : "",
+    canonical_url: item.seo?.canonical_url || "",
+    robots: item.seo?.robots || "index, follow",
+    og_title: item.seo?.og_title || "",
+    og_description: item.seo?.og_description || "",
+    og_image_url: item.seo?.og_image_url || "",
+    twitter_card: item.seo?.twitter_card || "summary_large_image",
   });
 
   // --- Handlers ---
@@ -145,9 +147,9 @@ export default function TechnologiesList() {
     const payload = toTechnologyPayload(data);
 
     if (editItem) {
-      updateMutation.mutate({ 
-        techId: Number(editItem.id), 
-        payload: payload as UpdateTechnologyPayload 
+      updateMutation.mutate({
+        techId: Number(editItem.id),
+        payload: payload as UpdateTechnologyPayload
       }, {
         onSuccess: () => {
           toast({ title: 'Technology updated successfully' });
@@ -210,8 +212,8 @@ export default function TechnologiesList() {
           <p className="text-sm text-muted-foreground">Click a technology to explore its modules</p>
         </div>
         {canEdit && (
-          <button 
-            onClick={() => { setEditItem(null); setFormOpen(true); }} 
+          <button
+            onClick={() => { setEditItem(null); setFormOpen(true); }}
             className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Plus size={16} /> Add Technology
@@ -219,31 +221,31 @@ export default function TechnologiesList() {
         )}
       </div>
 
-      <DataTable 
-        data={tableData} 
-        columns={columns} 
+      <DataTable
+        data={tableData}
+        columns={columns}
         searchFields={['name', 'slug', 'description']}
         onEdit={item => { setEditItem(item); setFormOpen(true); }}
         onDelete={item => setDeleteItem(item)}
         onToggleStatus={handleToggleStatus}
         onRowClick={item => navigate(`/technologies/${item.id}/modules`)}
-        canEdit={canEdit} 
+        canEdit={canEdit}
       />
 
-      <FormModal 
-        isOpen={formOpen} 
-        onClose={() => setFormOpen(false)} 
-        title={editItem ? 'Edit Technology & SEO' : 'Add Technology'} 
+      <FormModal
+        isOpen={formOpen}
+        onClose={() => setFormOpen(false)}
+        title={editItem ? 'Edit Technology & SEO' : 'Add Technology'}
         fields={formFields.filter(f => f.name !== 'sep_seo')} // Filter out the visual separator from logic
         initialData={editItem ? getInitialData(editItem) : undefined}
-        onSubmit={handleCreateOrUpdate} 
+        onSubmit={handleCreateOrUpdate}
         isSubmitting={createMutation.isPending || updateMutation.isPending}
       />
 
-      <ConfirmModal 
-        isOpen={!!deleteItem} 
-        onClose={() => setDeleteItem(null)} 
-        title="Delete Technology" 
+      <ConfirmModal
+        isOpen={!!deleteItem}
+        onClose={() => setDeleteItem(null)}
+        title="Delete Technology"
         message={`Are you sure you want to delete ${deleteItem?.name}?`}
         onConfirm={handleDelete}
         isLoading={deleteMutation.isPending}

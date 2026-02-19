@@ -38,6 +38,12 @@ class CRUDTechnology:
             q = q.filter(Technology.is_active.is_(True))
         return q.order_by(Technology.order_index).all()
 
+    def get_all(self, db: Session, active_only: bool = True):
+        q = db.query(Technology)
+        if active_only:
+            q = q.filter(Technology.is_active.is_(True))
+        return q.order_by(Technology.id.desc()).all()
+
     # Note: Complex update logic with SEO is now handled in technology_service.py
     def update(
         self,
