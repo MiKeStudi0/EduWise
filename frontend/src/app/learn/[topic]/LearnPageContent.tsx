@@ -19,103 +19,19 @@ import { Input } from "@/components/ui/input";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { topics } from "./Topics";
+import { useLearnSidebarData } from "@/hooks/queries/useLearnSidebarData";
 
-// --- Data Structure (Unchanged) ---
-// const topics = [
-//   {
-//     id: "html",
-//     name: "HTML",
-//     icon: FileCode,
-//     color: "text-orange-500",
-//     bgColor: "bg-orange-500/10",
-//     lessons: [
-//       { 
-//         id: "intro", 
-//         title: "Introduction to HTML", 
-//         description: "HTML (HyperText Markup Language) is the skeleton of every website. It tells the browser what content is on the page—headings, paragraphs, images, and links.",
-//         videoUrl: "https://www.youtube.com/embed/UB1O30fR-EE", 
-//         problem: "Computers need a structured way to understand text, images, and layout. Without HTML, a browser would just see a blob of unformatted text.",
-//         mentalModel: "Think of HTML like the frame of a house. It defines the rooms (sections) and structure, but it doesn't decide the paint color (CSS) or how the lights turn on (JavaScript).",
-//         whenToUse: ["Structuring web content", "Creating forms", "Embedding images/video"],
-//         whenNotToUse: ["Styling the page (use CSS)", "Complex logic (use JS)"],
-//         syntax: "<tagname>Content goes here...</tagname>",
-//         code: `<!DOCTYPE html>
-// <html>
-// <head>
-//   <title>My First Page</title>
-// </head>
-// <body>
-//   <h1>Hello World</h1>
-//   <p>This is my first website.</p>
-// </body>
-// </html>`,
-//         subtopics: [
-//             {
-//                 title: "The Anatomy of an Element",
-//                 content: "An HTML element usually consists of a start tag, content, and an end tag.",
-//                 example: "<h1>This is a Heading</h1>",
-//                 tip: "Tags are case-insensitive, but it's best practice to use lowercase (e.g., <div> not <DIV>)."
-//             },
-//             {
-//                 title: "Nesting Elements",
-//                 content: "Elements can contain other elements. This is called nesting.",
-//                 example: "<div><p>I am inside a div!</p></div>",
-//                 tip: "Always close inner tags before closing outer tags. Think of them like Russian nesting dolls."
-//             }
-//         ],
-//         commonMistakes: [
-//             "Forgetting the end tag (e.g., leaving a <p> open).",
-//             "Nesting block elements inside inline elements incorrectly."
-//         ],
-//         bonusTip: "Use semantic tags like <article> and <section> instead of just <div> for better SEO and accessibility."
-//       },
-//     ],
-//   },
-//   {
-//     id: "css",
-//     name: "CSS",
-//     icon: Palette,
-//     color: "text-blue-500",
-//     bgColor: "bg-blue-500/10",
-//     lessons: [
-//       { 
-//         id: "intro", 
-//         title: "Introduction to CSS", 
-//         description: "CSS (Cascading Style Sheets) controls how HTML elements are displayed.",
-//         videoUrl: "https://www.youtube.com/embed/yfoY53QXEnI",
-//         problem: "HTML is ugly by default. CSS solves the problem of design, layout, and visual hierarchy.",
-//         mentalModel: "If HTML is the skeleton, CSS is the skin, clothes, and makeup.",
-//         whenToUse: ["Changing colors/fonts", "Layouts (Grid/Flexbox)", "Responsive design"],
-//         whenNotToUse: ["Defining page structure (use HTML)", "Handling data logic (use JS)"],
-//         syntax: "selector { property: value; }",
-//         code: `body {
-//   font-family: sans-serif;
-//   background-color: #f0f0f0;
-// }
-// h1 {
-//   color: navy;
-//   text-align: center;
-// }`,
-//         subtopics: [],
-//         commonMistakes: [" forgetting the semi-colon ; at the end of a line."],
-//         bonusTip: "Use CSS Variables (--primary-color) to make theme changes easy."
-//       },
-//     ],
-//   },
-// ];
-
-// --- Animation Variants ---
 const fadeInUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const fadeInLeft = { hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } };
 
 export default function LearnPageContent({ topic }: { topic: string }) {
   const urlTopic = topic.toLowerCase();
-  const initialTopicId = topics.some((item) => item.id === urlTopic) ? urlTopic : topics[0].id;
+  
+  const { data: topics, technology, isPending, isError } = useLearnSidebarData(urlTopic);
 
-  const [activeTopicId, setActiveTopicId] = useState(initialTopicId);
-  const [activeLessonId, setActiveLessonId] = useState("intro");
-  const [expandedTopic, setExpandedTopic] = useState(initialTopicId);
+  const [activeTopicId, setActiveTopicId] = useState("");
+  const [activeLessonId, setActiveLessonId] = useState("");
+  const [expandedTopic, setExpandedTopic] = useState("");
   
   // Responsive Sidebar Logic
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -136,11 +52,37 @@ export default function LearnPageContent({ topic }: { topic: string }) {
 
   const [searchQuery, setSearchQuery] = useState("");
 
-  const currentTopic = useMemo(() => topics.find(t => t.id === activeTopicId) || topics[0], [activeTopicId]);
-  const currentLesson = useMemo(() => currentTopic.lessons.find(l => l.id === activeLessonId) || currentTopic.lessons[0], [currentTopic, activeLessonId]);
+  useEffect(() => {
+    if (topics && topics.length > 0 && !activeTopicId) {
+       setActiveTopicId(topics[0].id);
+       setExpandedTopic(topics[0].id);
+       if (topics[0].lessons?.length > 0) {
+          setActiveLessonId(topics[0].lessons[0].id);
+       }
+    }
+  }, [topics, activeTopicId]);
+
+  const currentTopic = useMemo(() => (topics || []).find((t: any) => t.id === activeTopicId) || (topics || [])[0], [topics, activeTopicId]);
+  const currentLesson = useMemo(() => currentTopic?.lessons?.find((l: any) => l.id === activeLessonId) || currentTopic?.lessons?.[0], [currentTopic, activeLessonId]);
   
-  const [code, setCode] = useState(currentLesson.code);
-  useEffect(() => { setCode(currentLesson.code); }, [currentLesson]);
+  const [code, setCode] = useState("");
+  useEffect(() => { if (currentLesson) setCode(currentLesson.code); }, [currentLesson]);
+
+  if (isPending) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-slate-50/50 dark:bg-[#0B0C10]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+      </div>
+    );
+  }
+
+  if (isError || !topics || topics.length === 0 || !currentTopic || !currentLesson) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-slate-50/50 dark:bg-[#0B0C10] text-slate-500">
+        No content available for {topic}.
+      </div>
+    );
+  }
 
   const progress = 33; 
 
@@ -279,7 +221,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
              </Button>
              <div className="h-6 w-px bg-slate-200 dark:bg-slate-800 hidden md:block" />
              <nav className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 overflow-hidden whitespace-nowrap mask-linear-fade">
-                <span className="font-semibold text-primary hidden md:inline">{currentTopic.name}</span>
+                <span className="font-semibold text-primary hidden md:inline">{technology?.name || currentTopic.name}</span>
                 <ChevronRight className="w-4 h-4 text-slate-300 hidden md:inline" />
                 <span className="text-slate-900 dark:text-white font-medium truncate">{currentLesson.title}</span>
              </nav>
@@ -298,8 +240,8 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                 </p>
               </div>
 
-              {/* 2. PROBLEM & MENTAL MODEL CARDS - Stack on mobile */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* 2. PROBLEM & MENTAL MODEL CARDS - Full width */}
+              <div className="flex flex-col gap-6">
                 <div className="p-5 md:p-6 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm">
                   <div className="flex items-center gap-2 mb-3 text-orange-600 dark:text-orange-400 font-bold uppercase text-xs tracking-wider">
                     <AlertTriangle className="w-4 h-4" /> The Problem
@@ -332,8 +274,8 @@ export default function LearnPageContent({ topic }: { topic: string }) {
               </motion.div>
             )}
 
-            {/* 4. USE CASES - Stack on mobile */}
-            <motion.div variants={fadeInUp} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* 4. USE CASES - Full width */}
+            <motion.div variants={fadeInUp} className="flex flex-col gap-8">
               <div>
                 <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
                   <CheckCircle className="w-5 h-5 text-emerald-500" /> When to use

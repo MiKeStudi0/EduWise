@@ -23,17 +23,40 @@ import { useRoadmapsQuery } from '@/hooks/queries/useRoadmapsQueries';
 
 // --- Configuration ---
 
+const TechnologyIcon = ({ item }: { item: TechnologyTableItem }) => {
+  const [error, setError] = useState(false);
+  
+  const isUrl = item.slugIcon?.startsWith('http');
+  const isEmoji = item.slugIcon && /\p{Emoji}/u.test(item.slugIcon) && !item.slugIcon.match(/^[a-zA-Z0-9\-]+$/);
+  const iconSource = isUrl 
+    ? item.slugIcon 
+    : `https://cdn.simpleicons.org/${item.slugIcon && !isEmoji ? item.slugIcon : item.slug}`;
+
+  if (isEmoji) {
+    return <span>{item.slugIcon}</span>;
+  }
+
+  if (error) {
+    return <FileText size={14} className="text-muted-foreground" />;
+  }
+
+  return (
+    <img 
+      src={iconSource as string} 
+      alt={item.name} 
+      className="w-full h-full object-contain" 
+      onError={() => setError(true)}
+    />
+  );
+};
+
 const columns: Column<TechnologyTableItem>[] = [
   {
     key: "slugIcon",
     label: "Icon",
     render: (item) => (
-      <div className="w-8 h-8 rounded bg-muted/50 flex items-center justify-center text-lg overflow-hidden">
-        {item.slugIcon && item.slugIcon.startsWith('http') ? (
-          <img src={item.slugIcon} alt="" className="w-full h-full object-cover" />
-        ) : (
-          <span>{item.slugIcon || <FileText size={14} className="text-muted-foreground" />}</span>
-        )}
+      <div className="w-8 h-8 rounded bg-muted/50 flex items-center justify-center text-lg overflow-hidden p-1">
+        <TechnologyIcon item={item} />
       </div>
     )
   },

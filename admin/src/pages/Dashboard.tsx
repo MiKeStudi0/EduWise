@@ -73,7 +73,7 @@ export default function Dashboard() {
           <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-6">Content Status</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
-              <Pie data={pieData} cx="50%" cy="50%" innerRadius={80} outerRadius={110} paddingAngle={5} dataKey="value" label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`} labelLine={false} fontSize={14} fontWeight={500}>
+              <Pie data={pieData} cx="50%" cy="50%" innerRadius={80} outerRadius={110} paddingAngle={5} dataKey="value" label={({ name, percent }) => `${name} ${((percent ?? 0) * 100).toFixed(0)}%`} labelLine={false} fontSize={14} fontWeight={500}>
                 <Cell fill="hsl(var(--success))" strokeWidth={0} />
                 <Cell fill="hsl(var(--muted))" strokeWidth={0} />
               </Pie>
