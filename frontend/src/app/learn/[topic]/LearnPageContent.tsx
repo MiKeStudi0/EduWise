@@ -213,6 +213,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                                   setActiveTopicId(topic.id); 
                                   setActiveLessonId(lesson.id);
                                   if(isMobile && (!lesson.subtopics || lesson.subtopics.length === 0)) setSidebarOpen(false);
+                                  window.scrollTo({ top: 0, behavior: 'smooth' });
                                 }}
                                 className={cn(
                                   "w-full flex items-center justify-between gap-2.5 py-2 px-3 text-sm rounded-lg transition-all text-left relative overflow-hidden", 
@@ -245,7 +246,11 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                                           key={sub.id}
                                           onClick={() => {
                                              if(isMobile) setSidebarOpen(false);
-                                             // Could implement a specific scroll-to functionality here or local subtopic state
+                                             const el = document.getElementById(`subtopic-${sub.id}`);
+                                             if (el) {
+                                                const y = el.getBoundingClientRect().top + window.scrollY - 100;
+                                                window.scrollTo({ top: y, behavior: 'smooth' });
+                                             }
                                           }}
                                           className="w-full flex items-center gap-2 py-1.5 px-3 text-[13px] rounded-md transition-all text-left text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/50"
                                           >
@@ -431,7 +436,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
             {/* 11. SUBTOPICS */}
             <div className="space-y-16 mt-8">
                {currentLesson.subtopics?.map((sub: any, idx: number) => (
-                 <motion.div key={idx} variants={fadeInUp} className="relative pl-6 md:pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
+                 <motion.div key={idx} id={`subtopic-${sub.id}`} variants={fadeInUp} className="relative pl-6 md:pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
                     <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-100 dark:border-indigo-900" >
                         <span className="absolute inset-0 m-auto w-1.5 h-1.5 rounded-full bg-primary" />
                     </span>
@@ -457,7 +462,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     {(sub.problems?.length > 0 || sub.mentalModel?.length > 0) && (
                       <div className="flex flex-col gap-4">
                         {sub.problems?.length > 0 && (
-                          <div className="p-4 md:p-5 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm">
+                          <div className="p-4 md:p-5 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm transition-all hover:shadow-md">
                             <div className="flex items-center gap-2 mb-2 text-orange-600 dark:text-orange-400 font-bold uppercase text-xs tracking-wider">
                               <AlertTriangle className="w-4 h-4" /> The Problem
                             </div>
@@ -472,7 +477,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                           </div>
                         )}
                         {sub.mentalModel?.length > 0 && (
-                          <div className="p-4 md:p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-500/5 border border-indigo-100 dark:border-indigo-500/10 shadow-sm">
+                          <div className="p-4 md:p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-500/5 border border-indigo-100 dark:border-indigo-500/10 shadow-sm transition-all hover:shadow-md">
                             <div className="flex items-center gap-2 mb-2 text-indigo-600 dark:text-indigo-400 font-bold uppercase text-xs tracking-wider">
                               <BrainCircuit className="w-4 h-4" /> Mental Model
                             </div>
@@ -519,7 +524,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
 
                     {/* 7. COMMON MISTAKES */}
                     {sub.commonMistakes?.length > 0 && (
-                      <div className="p-4 md:p-5 rounded-xl border border-rose-100 dark:border-rose-900/30 bg-rose-50/50 dark:bg-rose-900/5">
+                      <div className="p-4 md:p-5 rounded-xl border border-rose-100 dark:border-rose-900/30 bg-rose-50/50 dark:bg-rose-900/5 transition-all hover:shadow-sm">
                         <h4 className="font-bold text-rose-700 dark:text-rose-400 mb-3 flex items-center gap-2 text-sm uppercase tracking-wider">
                           <XCircle className="w-4 h-4" /> Common Mistakes
                         </h4>
@@ -537,7 +542,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     {(sub.whenToUse?.length > 0 || sub.whenNotToUse?.length > 0) && (
                       <div className="flex flex-col md:flex-row gap-6">
                         {sub.whenToUse?.length > 0 && (
-                          <div className="flex-1">
+                          <div className="flex-1 transition-all hover:translate-y-[-2px]">
                             <h4 className="flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white mb-3">
                               <CheckCircle className="w-4 h-4 text-emerald-500" /> When to use
                             </h4>
@@ -552,7 +557,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                           </div>
                         )}
                         {sub.whenNotToUse?.length > 0 && (
-                          <div className="flex-1">
+                          <div className="flex-1 transition-all hover:translate-y-[-2px]">
                             <h4 className="flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white mb-3">
                               <XCircle className="w-4 h-4 text-rose-500" /> When NOT to use
                             </h4>
@@ -571,7 +576,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
 
                     {/* 10. BONUS TIPS */}
                     {sub.tip?.length > 0 && (
-                      <div className="flex flex-col gap-3 p-4 md:p-5 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100 text-sm">
+                      <div className="flex flex-col gap-3 p-4 md:p-5 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100 text-sm transition-all hover:shadow-sm">
                          <div className="flex items-center gap-2">
                            <Zap className="w-5 h-5 shrink-0 text-blue-500" />
                            <strong className="font-semibold text-blue-700 dark:text-blue-300">Pro Tips</strong>
