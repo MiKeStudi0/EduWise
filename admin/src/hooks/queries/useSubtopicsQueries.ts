@@ -12,6 +12,7 @@ export interface SubTopicResponse {
   technology_id: number;
   module_id: number;
   topic_id: number;
+  slug: string;
   title: string;
   description: string | null;
   examples: any | null;
@@ -27,6 +28,7 @@ export interface CreateSubTopicPayload {
   technology_id: number;
   module_id: number;
   topic_id: number;
+  slug: string;
   title: string;
   description?: string | null;
   examples?: any | null;
@@ -45,6 +47,7 @@ export interface UpdateSubTopicParams {
 export interface SubTopicTableItem {
   id: string;
   topicId: string;
+  slug: string;
   name: string; // Mapped from 'title'
   description: string;
   orderIndex: number;
@@ -71,6 +74,7 @@ const parseDateLabel = (isoDate: string) => {
 const subtopicToTableItem = (sub: SubTopicResponse): SubTopicTableItem => ({
   id: String(sub.id),
   topicId: String(sub.topic_id),
+  slug: sub.slug,
   name: sub.title,
   description: sub.description ?? "",
   orderIndex: sub.order_index,

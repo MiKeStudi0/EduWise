@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 from app.models.topic import Topic
 from app.schemas.topic import TopicCreate, TopicUpdate
 
@@ -36,7 +36,7 @@ class CRUDTopic:
         module_id: int,
         active_only: bool = True,
     ):
-        q = db.query(Topic).filter(
+        q = db.query(Topic).options(selectinload(Topic.sub_topics)).filter(
             Topic.module_id == module_id
         )
         if active_only:

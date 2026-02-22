@@ -62,16 +62,17 @@ export interface Topic {
   image_banner_url: string | null;
   images: any | null;
   video_url: string | null;
-  when_to_use: string[] | null;
-  when_to_avoid: string[] | null;
-  problems: string | null;
-  mental_models: string | null;
-  common_mistakes: string[] | null;
-  bonus_tips: string | null;
+  when_to_use: any[] | null;
+  when_to_avoid: any[] | null;
+  problems: any[] | null;
+  mental_models: any[] | null;
+  common_mistakes: any[] | null;
+  bonus_tips: any[] | null;
   related_topics: string[] | null;
 
   seo_id: number | null;
   seo: SeoMetadata | null;
+  sub_topics: any[];
   created_at: string;
   updated_at: string;
 }

@@ -20,12 +20,12 @@ class SubTopicBase(BaseModel):
     images: Optional[List[str]] = None
     video_url: Optional[str] = None
 
-    when_to_use: Optional[List[str]] = None
-    when_to_avoid: Optional[List[str]] = None
-    problems: Optional[List[str]] = None
-    mental_models: Optional[List[str]] = None
-    common_mistakes: Optional[List[str]] = None
-    bonus_tips: Optional[List[str]] = None
+    when_to_use: Optional[List[Dict]] = None
+    when_to_avoid: Optional[List[Dict]] = None
+    problems: Optional[List[Dict]] = None
+    mental_models: Optional[List[Dict]] = None
+    common_mistakes: Optional[List[Dict]] = None
+    bonus_tips: Optional[List[Dict]] = None
     related_topics: Optional[List[str]] = None
 
     seo_id: Optional[int] = None
@@ -49,12 +49,12 @@ class SubTopicUpdate(BaseModel):
     images: Optional[List[str]] = None
     video_url: Optional[str] = None
 
-    when_to_use: Optional[List[str]] = None
-    when_to_avoid: Optional[List[str]] = None
-    problems: Optional[List[str]] = None
-    mental_models: Optional[List[str]] = None
-    common_mistakes: Optional[List[str]] = None
-    bonus_tips: Optional[List[str]] = None
+    when_to_use: Optional[List[Dict]] = None
+    when_to_avoid: Optional[List[Dict]] = None
+    problems: Optional[List[Dict]] = None
+    mental_models: Optional[List[Dict]] = None
+    common_mistakes: Optional[List[Dict]] = None
+    bonus_tips: Optional[List[Dict]] = None
     related_topics: Optional[List[str]] = None
 
     seo_id: Optional[int] = None

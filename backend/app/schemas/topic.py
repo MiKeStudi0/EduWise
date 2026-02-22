@@ -19,12 +19,12 @@ class TopicBase(BaseModel):
     images: Optional[List[str]] = None
     video_url: Optional[str] = None
 
-    when_to_use: Optional[List[str]] = None
-    when_to_avoid: Optional[List[str]] = None
-    problems: Optional[List[str]] = None
-    mental_models: Optional[List[str]] = None
-    common_mistakes: Optional[List[str]] = None
-    bonus_tips: Optional[List[str]] = None
+    when_to_use: Optional[List[Dict]] = None
+    when_to_avoid: Optional[List[Dict]] = None
+    problems: Optional[List[Dict]] = None
+    mental_models: Optional[List[Dict]] = None
+    common_mistakes: Optional[List[Dict]] = None
+    bonus_tips: Optional[List[Dict]] = None
     related_topics: Optional[List[str]] = None
 
     seo_id: Optional[int] = None
@@ -48,12 +48,12 @@ class TopicUpdate(BaseModel):
     images: Optional[List[str]] = None
     video_url: Optional[str] = None
 
-    when_to_use: Optional[List[str]] = None
-    when_to_avoid: Optional[List[str]] = None
-    problems: Optional[List[str]] = None
-    mental_models: Optional[List[str]] = None
-    common_mistakes: Optional[List[str]] = None
-    bonus_tips: Optional[List[str]] = None
+    when_to_use: Optional[List[Dict]] = None
+    when_to_avoid: Optional[List[Dict]] = None
+    problems: Optional[List[Dict]] = None
+    mental_models: Optional[List[Dict]] = None
+    common_mistakes: Optional[List[Dict]] = None
+    bonus_tips: Optional[List[Dict]] = None
     related_topics: Optional[List[str]] = None
 
     seo_id: Optional[int] = None
@@ -61,11 +61,14 @@ class TopicUpdate(BaseModel):
     is_active: Optional[bool] = None
 
 
+from app.schemas.sub_topic import SubTopicResponse
+
 # ---------- Response ----------
 class TopicResponse(TopicBase):
     id: int
     created_at: datetime
     updated_at: datetime
+    sub_topics: List[SubTopicResponse] = Field(default_factory=list)
 
     class Config:
         from_attributes = True

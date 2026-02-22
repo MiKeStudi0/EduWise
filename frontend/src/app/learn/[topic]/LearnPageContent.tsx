@@ -20,9 +20,41 @@ import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useLearnSidebarData } from "@/hooks/queries/useLearnSidebarData";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import Editor from 'react-simple-code-editor';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-python';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const fadeInUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const fadeInLeft = { hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } };
+
+// Helper function to convert standard YouTube URLs to embed URLs
+const getYouTubeEmbedUrl = (url: string) => {
+  if (!url) return "";
+  try {
+    const urlObj = new URL(url);
+    if (urlObj.hostname.includes("youtube.com")) {
+      const videoId = urlObj.searchParams.get("v");
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?rel=0`;
+      }
+    } else if (urlObj.hostname.includes("youtu.be")) {
+      const videoId = urlObj.pathname.slice(1);
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}?rel=0`;
+      }
+    }
+  } catch (e) {
+    // If URL parsing fails, just return the original string
+    return url;
+  }
+  return url;
+};
 
 export default function LearnPageContent({ topic }: { topic: string }) {
   const urlTopic = topic.toLowerCase();
@@ -174,24 +206,58 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                         className="overflow-hidden"
                       >
                         <div className="ml-5 pl-4 border-l-2 border-slate-200 dark:border-slate-800 my-2 space-y-0.5">
-                          {topic.lessons.map((lesson) => (
-                            <button
-                              key={lesson.id}
-                              onClick={() => { 
-                                setActiveTopicId(topic.id); 
-                                setActiveLessonId(lesson.id);
-                                if(isMobile) setSidebarOpen(false); // Auto close on mobile click
-                              }}
-                              className={cn(
-                                "w-full flex items-center gap-2.5 py-2 px-3 text-sm rounded-lg transition-all text-left relative overflow-hidden", 
-                                activeLessonId === lesson.id 
-                                  ? "bg-primary/10 text-primary font-medium" 
-                                  : "text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100"
-                              )}
-                            >
-                              {activeLessonId === lesson.id ? <CheckCircle2 className="w-3.5 h-3.5 shrink-0" /> : <Circle className="w-3.5 h-3.5 shrink-0 opacity-40" />}
-                              <span className="line-clamp-1">{lesson.title}</span>
-                            </button>
+                          {topic.lessons.map((lesson: any) => (
+                            <div key={lesson.id} className="mb-1">
+                              <button
+                                onClick={() => { 
+                                  setActiveTopicId(topic.id); 
+                                  setActiveLessonId(lesson.id);
+                                  if(isMobile && (!lesson.subtopics || lesson.subtopics.length === 0)) setSidebarOpen(false);
+                                }}
+                                className={cn(
+                                  "w-full flex items-center justify-between gap-2.5 py-2 px-3 text-sm rounded-lg transition-all text-left relative overflow-hidden", 
+                                  activeLessonId === lesson.id 
+                                    ? "bg-primary/10 text-primary font-medium" 
+                                    : "text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-slate-100"
+                                )}
+                              >
+                                <div className="flex items-center gap-2.5 overflow-hidden">
+                                  {activeLessonId === lesson.id ? <CheckCircle2 className="w-3.5 h-3.5 shrink-0" /> : <Circle className="w-3.5 h-3.5 shrink-0 opacity-40" />}
+                                  <span className="line-clamp-1">{lesson.title}</span>
+                                </div>
+                                {lesson.subtopics && lesson.subtopics.length > 0 && (
+                                  <ChevronDown className={cn("w-3.5 h-3.5 opacity-50 transition-transform", activeLessonId === lesson.id && "rotate-180")} />
+                                )}
+                              </button>
+                              
+                              {/* Subtopics nested list */}
+                              <AnimatePresence>
+                                {activeLessonId === lesson.id && lesson.subtopics && lesson.subtopics.length > 0 && (
+                                  <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    className="overflow-hidden"
+                                  >
+                                    <div className="ml-4 pl-3.5 border-l-2 border-slate-100 dark:border-slate-800/80 my-1 space-y-0.5">
+                                      {lesson.subtopics.map((sub: any, idx: number) => (
+                                        <button
+                                          key={sub.id}
+                                          onClick={() => {
+                                             if(isMobile) setSidebarOpen(false);
+                                             // Could implement a specific scroll-to functionality here or local subtopic state
+                                          }}
+                                          className="w-full flex items-center gap-2 py-1.5 px-3 text-[13px] rounded-md transition-all text-left text-slate-500 dark:text-slate-500 hover:text-slate-900 dark:hover:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+                                          >
+                                          <div className="w-1.5 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 shrink-0" />
+                                          <span className="line-clamp-1">{sub.title}</span>
+                                        </button>
+                                      ))}
+                                    </div>
+                                  </motion.div>
+                                )}
+                              </AnimatePresence>
+                            </div>
                           ))}
                         </div>
                       </motion.div>
@@ -227,45 +293,71 @@ export default function LearnPageContent({ topic }: { topic: string }) {
              </nav>
           </div>
 
-          <div className="container max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-12 space-y-12 md:space-y-16 relative z-10 flex-1">
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 md:py-12 space-y-12 md:space-y-16 relative z-10 flex-1">
             
-            {/* 1. TITLE & DESCRIPTION */}
+            {/* 1. IMAGE BANNER */}
+            {currentLesson.imageUrl && (
+              <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 mb-12">
+                <img 
+                  src={currentLesson.imageUrl} 
+                  alt={currentLesson.title} 
+                  className="w-full h-auto object-cover max-h-[500px]" 
+                />
+              </motion.div>
+            )}
+
+            {/* 2. TITLE & DESCRIPTION */}
             <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
                   {currentLesson.title}
                 </h1>
-                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+                <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-none md:pr-12">
                   {currentLesson.description}
                 </p>
               </div>
+            </motion.div>
 
-              {/* 2. PROBLEM & MENTAL MODEL CARDS - Full width */}
-              <div className="flex flex-col gap-6">
+            {/* 3 & 4. PROBLEM & MENTAL MODEL CARDS */}
+            <div className="flex flex-col gap-6">
+              {currentLesson.problem?.length > 0 && (
                 <div className="p-5 md:p-6 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm">
                   <div className="flex items-center gap-2 mb-3 text-orange-600 dark:text-orange-400 font-bold uppercase text-xs tracking-wider">
                     <AlertTriangle className="w-4 h-4" /> The Problem
                   </div>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
-                    {currentLesson.problem}
-                  </p>
+                  <ul className="space-y-3">
+                    {currentLesson.problem.map((prob: string, i: number) => (
+                      <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2 shrink-0" />
+                        {prob}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+              )}
+              
+              {currentLesson.mentalModel?.length > 0 && (
                 <div className="p-5 md:p-6 rounded-2xl bg-indigo-50 dark:bg-indigo-500/5 border border-indigo-100 dark:border-indigo-500/10 shadow-sm">
                   <div className="flex items-center gap-2 mb-3 text-indigo-600 dark:text-indigo-400 font-bold uppercase text-xs tracking-wider">
                     <BrainCircuit className="w-4 h-4" /> Mental Model
                   </div>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
-                    {currentLesson.mentalModel}
-                  </p>
+                  <ul className="space-y-3">
+                    {currentLesson.mentalModel.map((model: string, i: number) => (
+                      <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-2 shrink-0" />
+                        {model}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-            </motion.div>
+              )}
+            </div>
 
-            {/* 3. VIDEO */}
+            {/* 5. VIDEO */}
             {currentLesson.videoUrl && (
               <motion.div variants={fadeInUp} className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 bg-black aspect-video relative group">
                 <iframe 
-                  src={currentLesson.videoUrl} 
+                  src={getYouTubeEmbedUrl(currentLesson.videoUrl)} 
                   className="w-full h-full" 
                   title="Lesson Video" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -274,37 +366,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
               </motion.div>
             )}
 
-            {/* 4. USE CASES - Full width */}
-            <motion.div variants={fadeInUp} className="flex flex-col gap-8">
-              <div>
-                <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
-                  <CheckCircle className="w-5 h-5 text-emerald-500" /> When to use
-                </h3>
-                <ul className="space-y-3">
-                  {currentLesson.whenToUse?.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-500/5 border border-emerald-100 dark:border-emerald-500/10 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
-                  <XCircle className="w-5 h-5 text-rose-500" /> When NOT to use
-                </h3>
-                <ul className="space-y-3">
-                  {currentLesson.whenNotToUse?.map((item, i) => (
-                    <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-rose-50/50 dark:bg-rose-500/5 border border-rose-100 dark:border-rose-500/10 text-sm md:text-base">
-                      <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* 5. SYNTAX & CODE PLAYGROUND */}
+            {/* 6. EXAMPLES / SYNTAX & CODE PLAYGROUND */}
             <motion.div variants={fadeInUp} className="space-y-4">
                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <h3 className="text-2xl font-bold flex items-center gap-2 text-slate-900 dark:text-white">
@@ -329,12 +391,30 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                           <Copy className="w-3 h-3 mr-1"/> Copy
                        </Button>
                     </div>
-                    <textarea 
-                      value={code} 
-                      onChange={(e) => setCode(e.target.value)} 
-                      className="flex-1 w-full p-4 md:p-6 bg-[#1e1e2e] text-slate-300 font-mono text-sm resize-none focus:outline-none leading-relaxed selection:bg-indigo-500/30" 
-                      spellCheck={false} 
-                    />
+                    <div className="flex-1 overflow-auto bg-[#1e1e2e]">
+                      <Editor
+                        value={code}
+                        onValueChange={code => setCode(code)}
+                        highlight={code => {
+                           const lang = urlTopic === 'python' ? Prism.languages.python 
+                                      : urlTopic === 'javascript' || urlTopic === 'js' ? Prism.languages.javascript 
+                                      : urlTopic === 'css' ? Prism.languages.css 
+                                      : Prism.languages.html;
+                           const langStr = urlTopic === 'python' ? 'python' 
+                                      : urlTopic === 'javascript' || urlTopic === 'js' ? 'javascript' 
+                                      : urlTopic === 'css' ? 'css' 
+                                      : 'html';
+                           return Prism.highlight(code, lang, langStr);
+                        }}
+                        padding={24}
+                        style={{
+                          fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+                          fontSize: 14,
+                          minHeight: '100%',
+                        }}
+                        className="w-full text-slate-300 focus:outline-none leading-relaxed selection:bg-indigo-500/30"
+                      />
+                    </div>
                   </div>
 
                   {/* Preview */}
@@ -348,62 +428,237 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                </div>
             </motion.div>
 
-            {/* 6. SUBTOPICS */}
-            <div className="space-y-12">
-               {currentLesson.subtopics?.map((sub, idx) => (
-                 <motion.div key={idx} variants={fadeInUp} className="relative pl-6 md:pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+            {/* 11. SUBTOPICS */}
+            <div className="space-y-16 mt-8">
+               {currentLesson.subtopics?.map((sub: any, idx: number) => (
+                 <motion.div key={idx} variants={fadeInUp} className="relative pl-6 md:pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-8">
                     <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-4 border-indigo-100 dark:border-indigo-900" >
                         <span className="absolute inset-0 m-auto w-1.5 h-1.5 rounded-full bg-primary" />
                     </span>
-                    <h3 className="text-xl md:text-2xl font-bold mb-3 text-slate-900 dark:text-white">{sub.title}</h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">{sub.content}</p>
+
+                    {/* 1. IMAGE BANNER */}
+                    {sub.imageUrl && (
+                      <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50">
+                        <img 
+                          src={sub.imageUrl} 
+                          alt={sub.title} 
+                          className="w-full h-auto object-cover max-h-[400px]" 
+                        />
+                      </div>
+                    )}
                     
-                    {sub.example && (
-                      <div className="rounded-xl bg-slate-900 dark:bg-black p-4 md:p-5 font-mono text-xs md:text-sm text-emerald-400 border border-slate-800 shadow-inner mb-6 overflow-x-auto">
-                         {sub.example}
+                    {/* 2. TITLE & DESCRIPTION */}
+                    <div>
+                      <h3 className="text-xl md:text-2xl font-bold mb-3 text-slate-900 dark:text-white">{sub.title}</h3>
+                      <p className="text-slate-600 dark:text-slate-400 leading-relaxed">{sub.content}</p>
+                    </div>
+
+                    {/* 3 & 4. PROBLEMS & MENTAL MODELS */}
+                    {(sub.problems?.length > 0 || sub.mentalModel?.length > 0) && (
+                      <div className="flex flex-col gap-4">
+                        {sub.problems?.length > 0 && (
+                          <div className="p-4 md:p-5 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm">
+                            <div className="flex items-center gap-2 mb-2 text-orange-600 dark:text-orange-400 font-bold uppercase text-xs tracking-wider">
+                              <AlertTriangle className="w-4 h-4" /> The Problem
+                            </div>
+                            <ul className="space-y-3">
+                              {sub.problems.map((prob: string, i: number) => (
+                                <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-1.5 shrink-0" />
+                                  {prob}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {sub.mentalModel?.length > 0 && (
+                          <div className="p-4 md:p-5 rounded-2xl bg-indigo-50 dark:bg-indigo-500/5 border border-indigo-100 dark:border-indigo-500/10 shadow-sm">
+                            <div className="flex items-center gap-2 mb-2 text-indigo-600 dark:text-indigo-400 font-bold uppercase text-xs tracking-wider">
+                              <BrainCircuit className="w-4 h-4" /> Mental Model
+                            </div>
+                            <ul className="space-y-3">
+                              {sub.mentalModel.map((model: string, i: number) => (
+                                <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
+                                  {model}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     )}
 
-                    {sub.tip && (
-                      <div className="flex flex-col md:flex-row gap-4 p-5 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100 text-sm">
-                         <Zap className="w-5 h-5 shrink-0 text-blue-500" />
-                         <div>
-                            <strong className="block mb-1 font-semibold text-blue-700 dark:text-blue-300">Pro Tip</strong>
-                            {sub.tip}
+                    {/* 5. VIDEO */}
+                    {sub.videoUrl && (
+                      <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 bg-black aspect-video relative">
+                        <iframe 
+                          src={getYouTubeEmbedUrl(sub.videoUrl)} 
+                          className="w-full h-full" 
+                          title={`${sub.title} Video`} 
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          allowFullScreen 
+                        />
+                      </div>
+                    )}
+
+                    {/* 6. EXAMPLES (CODE) */}
+                    {sub.example && (
+                      <div className="rounded-xl overflow-hidden border border-slate-800 shadow-inner mt-4 text-xs md:text-sm">
+                        <SyntaxHighlighter
+                          language={urlTopic}
+                          style={vscDarkPlus}
+                          customStyle={{ margin: 0, padding: '1.25rem', backgroundColor: '#000000' }}
+                          wrapLines={true}
+                          wrapLongLines={true}
+                        >
+                          {sub.example}
+                        </SyntaxHighlighter>
+                      </div>
+                    )}
+
+                    {/* 7. COMMON MISTAKES */}
+                    {sub.commonMistakes?.length > 0 && (
+                      <div className="p-4 md:p-5 rounded-xl border border-rose-100 dark:border-rose-900/30 bg-rose-50/50 dark:bg-rose-900/5">
+                        <h4 className="font-bold text-rose-700 dark:text-rose-400 mb-3 flex items-center gap-2 text-sm uppercase tracking-wider">
+                          <XCircle className="w-4 h-4" /> Common Mistakes
+                        </h4>
+                        <ul className="space-y-2">
+                          {sub.commonMistakes.map((mistake: string, i: number) => (
+                            <li key={i} className="flex gap-2 text-sm text-rose-900 dark:text-rose-200/80">
+                               <CornerDownRight className="w-3 h-3 shrink-0 opacity-50 mt-1" /> {mistake}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* 8 & 9. WHEN TO USE / NOT TO USE */}
+                    {(sub.whenToUse?.length > 0 || sub.whenNotToUse?.length > 0) && (
+                      <div className="flex flex-col md:flex-row gap-6">
+                        {sub.whenToUse?.length > 0 && (
+                          <div className="flex-1">
+                            <h4 className="flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white mb-3">
+                              <CheckCircle className="w-4 h-4 text-emerald-500" /> When to use
+                            </h4>
+                            <ul className="space-y-2">
+                              {sub.whenToUse.map((item: string, i: number) => (
+                                <li key={i} className="flex gap-2 text-slate-600 dark:text-slate-400 p-2 text-sm">
+                                  <span className="w-1 h-1 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                        {sub.whenNotToUse?.length > 0 && (
+                          <div className="flex-1">
+                            <h4 className="flex items-center gap-2 text-base font-bold text-slate-900 dark:text-white mb-3">
+                              <XCircle className="w-4 h-4 text-rose-500" /> When NOT to use
+                            </h4>
+                            <ul className="space-y-2">
+                              {sub.whenNotToUse.map((item: string, i: number) => (
+                                <li key={i} className="flex gap-2 text-slate-600 dark:text-slate-400 p-2 text-sm">
+                                  <span className="w-1 h-1 rounded-full bg-rose-500 mt-2 shrink-0" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* 10. BONUS TIPS */}
+                    {sub.tip?.length > 0 && (
+                      <div className="flex flex-col gap-3 p-4 md:p-5 rounded-xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100 text-sm">
+                         <div className="flex items-center gap-2">
+                           <Zap className="w-5 h-5 shrink-0 text-blue-500" />
+                           <strong className="font-semibold text-blue-700 dark:text-blue-300">Pro Tips</strong>
                          </div>
+                         <ul className="space-y-2 pl-7">
+                           {sub.tip.map((t: string, i: number) => (
+                             <li key={i} className="flex gap-2">
+                               <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 shrink-0" />
+                               <span>{t}</span>
+                             </li>
+                           ))}
+                         </ul>
                       </div>
                     )}
                  </motion.div>
                ))}
             </div>
 
-            {/* 7. COMMON MISTAKES & BONUS */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-               <motion.div variants={fadeInUp} className="p-6 rounded-2xl border border-rose-100 dark:border-rose-900/30 bg-rose-50/50 dark:bg-rose-900/5">
-                  <h3 className="font-bold text-rose-700 dark:text-rose-400 mb-4 flex items-center gap-2">
-                    <XCircle className="w-5 h-5" /> Common Mistakes
-                  </h3>
-                  <ul className="space-y-3">
-                    {currentLesson.commonMistakes?.map((mistake, i) => (
-                      <li key={i} className="flex gap-3 text-sm text-rose-900 dark:text-rose-200/80">
-                         <CornerDownRight className="w-4 h-4 shrink-0 opacity-50 mt-0.5" /> {mistake}
-                      </li>
-                    ))}
-                  </ul>
-               </motion.div>
+            {/* 7. COMMON MISTAKES */}
+            {currentLesson.commonMistakes?.length > 0 && (
+              <motion.div variants={fadeInUp} className="p-6 rounded-2xl border border-rose-100 dark:border-rose-900/30 bg-rose-50/50 dark:bg-rose-900/5">
+                <h3 className="font-bold text-rose-700 dark:text-rose-400 mb-4 flex items-center gap-2 text-lg">
+                  <XCircle className="w-5 h-5" /> Common Mistakes
+                </h3>
+                <ul className="space-y-3">
+                  {currentLesson.commonMistakes.map((mistake: string, i: number) => (
+                    <li key={i} className="flex gap-3 text-sm md:text-base text-rose-900 dark:text-rose-200/80">
+                      <CornerDownRight className="w-4 h-4 shrink-0 opacity-50 mt-1" /> {mistake}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
 
-               <motion.div variants={fadeInUp} className="p-6 rounded-2xl border border-amber-100 dark:border-amber-900/30 bg-amber-50/50 dark:bg-amber-900/5 relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                     <Lightbulb className="w-24 h-24 text-amber-500" />
+            {/* 8 & 9. USE CASES - Full width */}
+            {(currentLesson.whenToUse?.length > 0 || currentLesson.whenNotToUse?.length > 0) && (
+              <motion.div variants={fadeInUp} className="flex flex-col md:flex-row gap-8">
+                {currentLesson.whenToUse?.length > 0 && (
+                  <div className="flex-1">
+                    <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
+                      <CheckCircle className="w-5 h-5 text-emerald-500" /> When to use
+                    </h3>
+                    <ul className="space-y-3">
+                      {currentLesson.whenToUse.map((item: any, i: number) => (
+                        <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-500/5 border border-emerald-100 dark:border-emerald-500/10 text-sm md:text-base">
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className="font-bold text-amber-700 dark:text-amber-400 mb-4 flex items-center gap-2">
-                    <Sparkles className="w-5 h-5" /> Bonus Tip
-                  </h3>
-                  <p className="text-sm text-amber-900 dark:text-amber-200/80 leading-relaxed relative z-10">
-                    {currentLesson.bonusTip}
-                  </p>
-               </motion.div>
-            </div>
+                )}
+                {currentLesson.whenNotToUse?.length > 0 && (
+                  <div className="flex-1">
+                    <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900 dark:text-white mb-4">
+                      <XCircle className="w-5 h-5 text-rose-500" /> When NOT to use
+                    </h3>
+                    <ul className="space-y-3">
+                      {currentLesson.whenNotToUse.map((item: any, i: number) => (
+                        <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-rose-50/50 dark:bg-rose-500/5 border border-rose-100 dark:border-rose-500/10 text-sm md:text-base">
+                          <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </motion.div>
+            )}
+
+            {/* 10. BONUS TIPS */}
+            {currentLesson.bonusTip?.length > 0 && (
+              <motion.div variants={fadeInUp} className="flex flex-col gap-4 p-6 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 text-blue-900 dark:text-blue-100">
+                <div className="flex items-center gap-3">
+                  <Zap className="w-6 h-6 shrink-0 text-blue-500" />
+                  <strong className="text-lg font-bold text-blue-700 dark:text-blue-300">Pro Tips</strong>
+                </div>
+                <ul className="space-y-3 pl-9">
+                  {currentLesson.bonusTip.map((t: string, i: number) => (
+                    <li key={i} className="flex gap-3 text-sm md:text-base">
+                      <span className="w-2 h-2 rounded-full bg-blue-400 mt-2.5 shrink-0" />
+                      <span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            )}
 
             {/* NAVIGATOR FOOTER */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 border-t border-slate-200 dark:border-slate-800">

@@ -67,15 +67,29 @@ export function useLearnSidebarData(technologySlug: string) {
         title: topic.title,
         description: topic.description || "",
         videoUrl: topic.video_url || "",
-        problem: topic.problems || "No specific problem description provided.",
-        mentalModel: topic.mental_models || "Think of this conceptually.",
-        whenToUse: topic.when_to_use || [],
-        whenNotToUse: topic.when_to_avoid || [],
+        imageUrl: topic.image_banner_url || (topic.images?.length > 0 ? topic.images[0] : ""),
+        problem: topic.problems?.map((p: any) => p.problem) || [],
+        mentalModel: topic.mental_models?.map((m: any) => m.model) || [],
+        whenToUse: topic.when_to_use?.map((w: any) => w.point) || [],
+        whenNotToUse: topic.when_to_avoid?.map((w: any) => w.point) || [],
         syntax: "", // Optionally fallback
-        code: topic.examples?.trim() || "",
-        subtopics: [] as any[], // We could potentially map subtopics here if we had them or map JSON content
-        commonMistakes: topic.common_mistakes || [],
-        bonusTip: topic.bonus_tips || ""
+        code: topic.examples?.[0]?.code_snippet || "",
+        subtopics: (topic.sub_topics || []).map((sub: any) => ({
+          id: sub.slug,
+          title: sub.title,
+          content: sub.description || "",
+          videoUrl: sub.video_url || "",
+          imageUrl: sub.image_banner_url || (sub.images?.length > 0 ? sub.images[0] : ""),
+          example: sub.examples?.[0]?.code_snippet || "",
+          tip: sub.bonus_tips?.map((b: any) => b.tip) || [],
+          problems: sub.problems?.map((p: any) => p.problem) || [],
+          mentalModel: sub.mental_models?.map((m: any) => m.model) || [],
+          whenToUse: sub.when_to_use?.map((w: any) => w.point) || [],
+          whenNotToUse: sub.when_to_avoid?.map((w: any) => w.point) || [],
+          commonMistakes: sub.common_mistakes?.map((c: any) => c.mistake) || [],
+        })),
+        commonMistakes: topic.common_mistakes?.map((c: any) => c.mistake) || [],
+        bonusTip: topic.bonus_tips?.map((b: any) => b.tip) || []
       }))
     };
   });

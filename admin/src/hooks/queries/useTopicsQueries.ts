@@ -45,6 +45,7 @@ export interface UpdateTopicParams {
 export interface TopicTableItem {
   id: string;
   moduleId: string;
+  slug: string;
   name: string; // Mapped from 'title'
   description: string;
   orderIndex: number;
@@ -71,6 +72,7 @@ const parseDateLabel = (isoDate: string) => {
 const topicToTableItem = (topic: TopicResponse): TopicTableItem => ({
   id: String(topic.id),
   moduleId: String(topic.module_id),
+  slug: topic.slug,
   name: topic.title,
   description: topic.description ?? "",
   orderIndex: topic.order_index,

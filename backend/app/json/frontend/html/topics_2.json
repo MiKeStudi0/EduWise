@@ -1,0 +1,594 @@
+{
+  "topic": {
+    "id": 2,
+    "roadmap_id": 1,
+    "technology_id": 1,
+    "module_id": 1,
+    "slug": "html-document-structure",
+    "title": "HTML Document Structure",
+    "description": "Every HTML page must follow a specific structure with required elements. This includes the DOCTYPE declaration, html root element, head section for metadata and configuration, and body section for visible content. Understanding this structure is the foundation for creating valid, accessible, and performant web pages.",
+    "examples": [
+      {
+        "title": "Complete HTML5 Boilerplate Template",
+        "description": "The standard HTML5 document structure that every web page should start with. This template includes all essential elements: DOCTYPE, proper meta tags, viewport configuration, and semantic structure.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- Character encoding: always UTF-8 for universal character support -->\n    <meta charset=\"UTF-8\">\n    \n    <!-- Viewport: essential for responsive design on mobile devices -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- SEO: helps search engines understand and display your page -->\n    <meta name=\"description\" content=\"A clear, concise description of your page content (150-160 characters)\">\n    <meta name=\"keywords\" content=\"relevant, keywords, for, your, page\">\n    \n    <!-- Page title: shown in browser tab and search results -->\n    <title>Your Page Title - Brand Name</title>\n    \n    <!-- Favicon: small icon shown in browser tab -->\n    <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n    \n    <!-- External CSS: keep styles in separate file -->\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <!-- Header: site logo, navigation, etc. -->\n    <header>\n        <nav>\n            <ul>\n                <li><a href=\"#home\">Home</a></li>\n                <li><a href=\"#about\">About</a></li>\n                <li><a href=\"#contact\">Contact</a></li>\n            </ul>\n        </nav>\n    </header>\n    \n    <!-- Main: primary content of the page -->\n    <main>\n        <h1>Main Page Heading</h1>\n        <p>Your main content goes here.</p>\n    </main>\n    \n    <!-- Footer: copyright, links, contact info -->\n    <footer>\n        <p>&copy; 2024 Your Company. All rights reserved.</p>\n    </footer>\n    \n    <!-- External JavaScript: loaded after content for better performance -->\n    <script src=\"script.js\" defer></script>\n</body>\n</html>",
+        "output": "A fully structured HTML page with proper metadata, responsive viewport settings, and semantic sections. The browser tab displays the title and favicon. The page is mobile-friendly and SEO-optimized.",
+        "images": null,
+        "video_url": null
+      },
+      {
+        "title": "Minimal Valid HTML Document",
+        "description": "The absolute minimum required for a valid HTML5 document. While you should use the full boilerplate in production, this shows what browsers actually require.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Page Title</title>\n</head>\n<body>\n    <h1>Hello World</h1>\n</body>\n</html>",
+        "output": "A valid but bare-bones HTML page. This will render correctly but lacks viewport configuration (not mobile-friendly), SEO metadata, and semantic structure.",
+        "images": null,
+        "video_url": null
+      },
+      {
+        "title": "HTML Document with All Common Meta Tags",
+        "description": "A comprehensive example showing all commonly used meta tags for SEO, social media sharing, and browser configuration.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- Primary Meta Tags -->\n    <title>Amazing Product - Buy Online Today</title>\n    <meta name=\"title\" content=\"Amazing Product - Buy Online Today\">\n    <meta name=\"description\" content=\"Discover our amazing product with free shipping and 30-day returns. Shop now and save 20%.\">\n    <meta name=\"keywords\" content=\"product, shopping, online store, discount\">\n    <meta name=\"author\" content=\"Your Company Name\">\n    \n    <!-- Open Graph Meta Tags (for Facebook, LinkedIn) -->\n    <meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:url\" content=\"https://www.yoursite.com/product\">\n    <meta property=\"og:title\" content=\"Amazing Product - Buy Online Today\">\n    <meta property=\"og:description\" content=\"Discover our amazing product with free shipping and 30-day returns.\">\n    <meta property=\"og:image\" content=\"https://www.yoursite.com/images/product.jpg\">\n    \n    <!-- Twitter Card Meta Tags -->\n    <meta property=\"twitter:card\" content=\"summary_large_image\">\n    <meta property=\"twitter:url\" content=\"https://www.yoursite.com/product\">\n    <meta property=\"twitter:title\" content=\"Amazing Product - Buy Online Today\">\n    <meta property=\"twitter:description\" content=\"Discover our amazing product with free shipping and 30-day returns.\">\n    <meta property=\"twitter:image\" content=\"https://www.yoursite.com/images/product.jpg\">\n    \n    <!-- Browser Theme Color (mobile) -->\n    <meta name=\"theme-color\" content=\"#4285f4\">\n    \n    <!-- Prevent automatic phone number detection -->\n    <meta name=\"format-detection\" content=\"telephone=no\">\n    \n    <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <h1>Product Page</h1>\n    <p>Your content here.</p>\n</body>\n</html>",
+        "output": "When shared on social media, this page displays with a rich preview card showing title, description, and image. The mobile browser chrome displays in the specified theme color. Search engines have complete metadata for indexing.",
+        "images": null,
+        "video_url": null
+      }
+    ],
+    "image_banner_url": null,
+    "images": null,
+    "video_url": null,
+    "when_to_use": [
+      {
+        "point": "Every single HTML file you create must start with this structure. There are no exceptions."
+      },
+      {
+        "point": "Use the complete boilerplate template when starting any new web page or web application."
+      },
+      {
+        "point": "Include proper meta tags for every page that will be shared on social media or indexed by search engines."
+      },
+      {
+        "point": "Always include viewport meta tag for any page that needs to work on mobile devices (which is nearly all pages today)."
+      },
+      {
+        "point": "Use semantic HTML5 elements (header, main, footer, nav, article, section) inside the body to create meaningful document structure."
+      }
+    ],
+    "when_to_avoid": [
+      {
+        "point": "Never omit the DOCTYPE declaration. Without it, browsers enter quirks mode which causes unpredictable rendering bugs."
+      },
+      {
+        "point": "Never put visible content inside the head element. Only metadata, links to resources, and scripts belong there."
+      },
+      {
+        "point": "Do not skip the charset meta tag. Without UTF-8 declaration, special characters may display as broken symbols."
+      },
+      {
+        "point": "Do not forget the viewport meta tag on mobile-responsive sites. Without it, mobile browsers will render at desktop width and scale down, making text tiny."
+      },
+      {
+        "point": "Never use multiple h1 elements at the top level of a page. One h1 per page is the standard for SEO and accessibility."
+      },
+      {
+        "point": "Do not place link or meta elements inside the body. While some browsers may tolerate this, it is invalid HTML."
+      }
+    ],
+    "problems": [
+      {
+        "problem": "Without a defined document structure, browsers must guess how to interpret the file, leading to inconsistent rendering across different browsers."
+      },
+      {
+        "problem": "Missing DOCTYPE forces browsers into quirks mode, which emulates old browser bugs from the 1990s, causing layout problems that are extremely hard to debug."
+      },
+      {
+        "problem": "Pages without proper head structure lack essential metadata, making them invisible to search engines, inaccessible on mobile devices, and unable to be properly shared on social media."
+      },
+      {
+        "problem": "Without character encoding declaration, international characters, special symbols, and emoji may render as garbage characters or question marks."
+      },
+      {
+        "problem": "Missing viewport configuration means mobile users see a tiny, zoomed-out desktop version of the page, requiring pinch-to-zoom to read anything."
+      }
+    ],
+    "mental_models": [
+      {
+        "model": "Think of HTML document structure like a book. The DOCTYPE is the cover label telling you what type of book it is. The head is the front matter (title page, copyright, table of contents) that you reference but don't read as main content. The body is the actual chapters and content you came to read."
+      },
+      {
+        "model": "The head element is like a shipping label on a package. It contains information about the package (title, description, where it came from) but is not the actual contents. The body is what is inside the package."
+      },
+      {
+        "model": "Meta tags are like catalog cards in a library. They help librarians (search engines) categorize and describe the book (web page) so readers can find it, but they are not part of the book itself."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Forgetting the DOCTYPE declaration at the very top. This single missing line causes browsers to render in quirks mode, creating layout bugs that can take hours to debug."
+      },
+      {
+        "mistake": "Placing the charset meta tag after other elements in the head. It should be the first meta tag so the browser knows how to decode all following content."
+      },
+      {
+        "mistake": "Using vague or duplicate titles across pages. Each page should have a unique, descriptive title. Generic titles like 'Home' or 'Page 1' harm SEO and user experience."
+      },
+      {
+        "mistake": "Copying the viewport meta tag without understanding it. Many developers copy 'maximum-scale=1, user-scalable=no' which prevents users from zooming in, harming accessibility."
+      },
+      {
+        "mistake": "Forgetting to set the lang attribute on the html element. Screen readers use this to select the correct pronunciation and voice."
+      },
+      {
+        "mistake": "Putting script tags in the head without defer or async. This blocks the entire page from rendering until the script downloads and executes."
+      },
+      {
+        "mistake": "Writing meta descriptions longer than 160 characters. Search engines will cut them off, potentially ending mid-sentence."
+      },
+      {
+        "mistake": "Not updating the title and meta description for each page. Using the same metadata across all pages confuses search engines and users."
+      }
+    ],
+    "bonus_tips": [
+      {
+        "tip": "The order of elements in the head matters. Place charset first, then viewport, then other meta tags, then title, then link and script tags."
+      },
+      {
+        "tip": "Use defer on script tags instead of placing them at the end of body. It achieves the same non-blocking effect but keeps your code more organized."
+      },
+      {
+        "tip": "The meta description does not directly affect search ranking, but it is the text shown in search results. A well-written description increases click-through rates."
+      },
+      {
+        "tip": "You can use the html lang attribute with regional codes like 'en-US' or 'en-GB' for more specific language targeting."
+      },
+      {
+        "tip": "Modern browsers support SVG favicons which look sharp on high-resolution displays. Use both ICO and SVG formats for maximum compatibility."
+      },
+      {
+        "tip": "The theme-color meta tag changes the browser chrome color on mobile, creating a more immersive branded experience."
+      },
+      {
+        "tip": "Always validate your HTML using the W3C Validator (validator.w3.org) to catch structural errors before they cause problems."
+      }
+    ],
+    "related_topics": [
+      "HTML Elements & Tags",
+      "HTML Semantic Elements",
+      "HTML Meta Tags for SEO",
+      "Responsive Web Design",
+      "Web Accessibility (WCAG)",
+      "Browser Rendering Process",
+      "HTML Form Elements",
+      "CSS Introduction"
+    ],
+    "seo_id": 1,
+    "is_active": true,
+    "order_index": 2,
+    "created_at": null,
+    "updated_at": null
+  },
+  "subtopics": [
+    {
+      "id": 1,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 1,
+      "topic_id": 2,
+      "slug": "doctype-declaration",
+      "title": "DOCTYPE Declaration",
+      "description": "The DOCTYPE declaration is the very first line in every HTML document. It tells the browser which version of HTML the page is written in and ensures the browser uses standards mode for rendering instead of quirks mode.",
+      "examples": [
+        {
+          "title": "Modern HTML5 DOCTYPE",
+          "description": "The current standard DOCTYPE for all HTML5 documents. This is the only DOCTYPE you should use for new projects.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Modern HTML5 Page</title>\n</head>\n<body>\n    <h1>This page uses HTML5 standards mode</h1>\n</body>\n</html>",
+          "output": "Browser renders the page in standards mode, applying modern CSS and HTML5 features correctly.",
+          "images": null,
+          "video_url": null
+        },
+        {
+          "title": "What Happens Without DOCTYPE",
+          "description": "Demonstrating the problem when DOCTYPE is missing. This triggers quirks mode.",
+          "code_snippet": "<!-- NO DOCTYPE - WRONG! -->\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Page Without DOCTYPE</title>\n    <style>\n        .box {\n            width: 200px;\n            padding: 20px;\n            border: 1px solid black;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"box\">This box will render differently in quirks mode</div>\n</body>\n</html>",
+          "output": "Without DOCTYPE, browsers enter quirks mode. The box model behaves differently (width includes padding and border in quirks mode, not in standards mode). Layouts break unpredictably.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": [
+        {
+          "point": "Always include <!DOCTYPE html> as the very first line of every HTML document, with no spaces or content before it."
+        },
+        {
+          "point": "Use the HTML5 DOCTYPE for all new projects. It is simple, short, and the current standard."
+        }
+      ],
+      "when_to_avoid": [
+        {
+          "point": "Never use old XHTML or HTML4 DOCTYPEs. They are complex, outdated, and unnecessary for modern web development."
+        },
+        {
+          "point": "Never omit the DOCTYPE. Even if the page seems to work without it, you are relying on quirks mode which causes unpredictable bugs."
+        }
+      ],
+      "problems": null,
+      "mental_models": [
+        {
+          "model": "Think of DOCTYPE like a version label on a software file. It tells the program (browser) which rules to follow when interpreting the file. Without it, the program guesses and may use old, buggy rules."
+        },
+        {
+          "model": "DOCTYPE is like a handshake protocol. You are telling the browser 'I speak HTML5' so the browser knows how to respond correctly."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Adding spaces or comments before the DOCTYPE. The DOCTYPE must be the absolute first thing in the file, starting at line 1, character 1."
+        },
+        {
+          "mistake": "Using uppercase <!DOCTYPE HTML> or mixed case. While technically valid, lowercase <!DOCTYPE html> is the universal convention."
+        },
+        {
+          "mistake": "Copying old XHTML DOCTYPEs from tutorials. If you see a long, complex DOCTYPE with URLs, it is outdated. Use <!DOCTYPE html>."
+        },
+        {
+          "mistake": "Assuming the DOCTYPE is optional. Without it, browsers enter quirks mode which emulates Internet Explorer 5 bugs from 20 years ago."
+        }
+      ],
+      "bonus_tips": [
+        {
+          "tip": "The HTML5 DOCTYPE is case-insensitive, but lowercase <!DOCTYPE html> is the standard convention followed by 99% of developers."
+        },
+        {
+          "tip": "You can check if a page is in quirks mode by opening DevTools console and typing: document.compatMode. It should return 'CSS1Compat' for standards mode."
+        },
+        {
+          "tip": "All modern code editors and HTML generators include the DOCTYPE automatically. If yours does not, configure it to use an HTML5 template."
+        }
+      ],
+      "related_topics": [
+        "HTML Document Structure",
+        "Browser Rendering Modes",
+        "HTML Standards and Specifications",
+        "CSS Box Model"
+      ],
+      "seo_id": 2,
+      "is_active": true,
+      "order_index": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 2,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 1,
+      "topic_id": 2,
+      "slug": "html-head-element",
+      "title": "HTML Head Element",
+      "description": "The head element contains metadata and configuration for the HTML document. Nothing inside the head is directly visible on the page. It includes the title, meta tags, links to CSS files, scripts, and other resources that describe or configure the page.",
+      "examples": [
+        {
+          "title": "Complete Head Section with All Essential Elements",
+          "description": "A production-ready head element containing all the essential meta tags, links, and configuration that most web pages need.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- Character encoding: must be first -->\n    <meta charset=\"UTF-8\">\n    \n    <!-- Viewport: essential for mobile responsiveness -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- IE compatibility mode (optional, for legacy support) -->\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    \n    <!-- Page title: appears in browser tab and search results -->\n    <title>Complete Guide to Web Development | Your Site</title>\n    \n    <!-- SEO meta tags -->\n    <meta name=\"description\" content=\"Learn web development from scratch with our comprehensive guide covering HTML, CSS, and JavaScript.\">\n    <meta name=\"keywords\" content=\"web development, HTML, CSS, JavaScript, tutorial\">\n    <meta name=\"author\" content=\"Your Name\">\n    \n    <!-- Favicon -->\n    <link rel=\"icon\" href=\"/favicon.ico\" type=\"image/x-icon\">\n    <link rel=\"icon\" href=\"/favicon.svg\" type=\"image/svg+xml\">\n    <link rel=\"apple-touch-icon\" href=\"/apple-touch-icon.png\">\n    \n    <!-- Stylesheets -->\n    <link rel=\"stylesheet\" href=\"/css/styles.css\">\n    \n    <!-- Preload critical resources -->\n    <link rel=\"preload\" href=\"/fonts/main-font.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>\n    \n    <!-- External scripts with defer for non-blocking load -->\n    <script src=\"/js/app.js\" defer></script>\n</head>\n<body>\n    <h1>Page Content</h1>\n</body>\n</html>",
+          "output": "The browser tab shows the title and favicon. The page is mobile-responsive, SEO-optimized, and loads efficiently with non-blocking scripts. Search engines have all necessary metadata.",
+          "images": null,
+          "video_url": null
+        },
+        {
+          "title": "Head Element Order and Organization",
+          "description": "The order of elements in the head matters for performance and parsing. This example shows the recommended order.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- 1. Character encoding MUST be first (within first 1024 bytes) -->\n    <meta charset=\"UTF-8\">\n    \n    <!-- 2. Viewport for responsive design -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- 3. Title (should be early for browser tabs) -->\n    <title>Page Title</title>\n    \n    <!-- 4. Other meta tags -->\n    <meta name=\"description\" content=\"Page description\">\n    \n    <!-- 5. Favicon and icons -->\n    <link rel=\"icon\" href=\"favicon.ico\">\n    \n    <!-- 6. Preconnect to external domains (performance) -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    \n    <!-- 7. Stylesheets (block rendering, so load early) -->\n    <link rel=\"stylesheet\" href=\"styles.css\">\n    \n    <!-- 8. Scripts with defer (won't block rendering) -->\n    <script src=\"script.js\" defer></script>\n</head>\n<body>\n    <h1>Content</h1>\n</body>\n</html>",
+          "output": "Optimal loading order ensures the browser can decode characters correctly, set viewport immediately, show the title quickly, and load resources in the most efficient sequence.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": [
+        {
+          "point": "Every HTML document must have exactly one head element containing all metadata and configuration."
+        },
+        {
+          "point": "Place character encoding as the first element inside head for proper text decoding."
+        },
+        {
+          "point": "Include title, viewport, and description meta tags in every page's head."
+        },
+        {
+          "point": "Link external CSS files in the head so styles load before content displays."
+        },
+        {
+          "point": "Use defer or async on script tags in the head to prevent blocking page rendering."
+        }
+      ],
+      "when_to_avoid": [
+        {
+          "point": "Never place visible content inside the head. Elements like h1, p, div, img should never be in the head."
+        },
+        {
+          "point": "Do not load scripts in the head without defer or async unless they absolutely must run before the page renders."
+        },
+        {
+          "point": "Avoid placing the charset meta tag after other elements. It should be first so the browser can decode all following content correctly."
+        },
+        {
+          "point": "Do not include multiple title elements. Each page must have exactly one title."
+        }
+      ],
+      "problems": null,
+      "mental_models": [
+        {
+          "model": "Think of the head element like the front matter of a book. It contains the title page, copyright notice, and table of contents that help you understand and navigate the book, but it is not the story itself."
+        },
+        {
+          "model": "The head is like configuration settings for a program. You set up how the program should behave (character encoding, viewport, resources to load) before the program runs (body renders)."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Placing the charset meta tag after the title or other elements. It must be first so the browser can decode all text correctly, including the title."
+        },
+        {
+          "mistake": "Forgetting to close the head tag. An unclosed head tag causes the browser to guess where the head ends and the body begins."
+        },
+        {
+          "mistake": "Loading large scripts in the head without defer. This blocks the entire page from rendering until the script downloads and executes."
+        },
+        {
+          "mistake": "Using generic or duplicate titles across multiple pages. Each page should have a unique, descriptive title for SEO and usability."
+        },
+        {
+          "mistake": "Linking to CSS files at the end of the head or in the body. CSS should load early to prevent unstyled content from flashing on screen."
+        }
+      ],
+      "bonus_tips": [
+        {
+          "tip": "The charset meta tag must appear within the first 1024 bytes of the HTML file. Place it first to be safe."
+        },
+        {
+          "tip": "Use the link rel='preconnect' tag to establish early connections to external domains you will load resources from (fonts, analytics, APIs)."
+        },
+        {
+          "tip": "You can inline critical CSS in a style tag in the head for above-the-fold content, then load the full stylesheet normally."
+        },
+        {
+          "tip": "The defer attribute loads scripts in order they appear. If script order matters, use defer. If scripts are independent, use async."
+        }
+      ],
+      "related_topics": [
+        "HTML Meta Tags",
+        "HTML Title Element",
+        "HTML Script Loading Strategies",
+        "Web Performance Optimization",
+        "SEO Best Practices"
+      ],
+      "seo_id": 3,
+      "is_active": true,
+      "order_index": 2,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 3,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 1,
+      "topic_id": 2,
+      "slug": "html-meta-tags-viewport",
+      "title": "HTML Meta Tags & Viewport Configuration",
+      "description": "Meta tags provide information about the HTML document to browsers, search engines, and social media platforms. The viewport meta tag specifically controls how the page scales and displays on mobile devices, making it essential for responsive web design.",
+      "examples": [
+        {
+          "title": "Essential Meta Tags Every Page Needs",
+          "description": "The core meta tags that should be included in every HTML page for proper character encoding, mobile responsiveness, and basic SEO.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- Character encoding: tells browser how to decode text -->\n    <meta charset=\"UTF-8\">\n    \n    <!-- Viewport: makes page responsive on mobile devices -->\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- Page description: appears in search results -->\n    <meta name=\"description\" content=\"Learn essential HTML meta tags and viewport configuration for building responsive, SEO-friendly web pages.\">\n    \n    <title>HTML Meta Tags Guide</title>\n</head>\n<body>\n    <h1>Page Content</h1>\n</body>\n</html>",
+          "output": "The page renders correctly on all devices. Mobile browsers display it at the correct scale without requiring pinch-to-zoom. Search engines have a description to show in search results.",
+          "images": null,
+          "video_url": null
+        },
+        {
+          "title": "Viewport Meta Tag Explained",
+          "description": "Breaking down the viewport meta tag and its properties. Understanding each part helps you configure mobile responsiveness correctly.",
+          "code_snippet": "<!-- Basic viewport: most common and recommended -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n<!-- width=device-width: \n     Sets the page width to match the device screen width\n     Without this, mobile browsers render at ~980px and scale down -->\n\n<!-- initial-scale=1.0:\n     Sets the initial zoom level to 1 (no zoom)\n     Values: 0.1 to 10 -->\n\n<!-- AVOID: Disabling zoom harms accessibility -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\">\n<!-- ❌ maximum-scale and user-scalable=no prevent users from zooming,\n     which is bad for accessibility and fails WCAG guidelines -->\n\n<!-- Advanced: Setting minimum zoom -->\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=0.5\">",
+          "output": "The basic viewport makes pages mobile-friendly. The accessibility-harmful version prevents users with vision impairments from zooming in to read text.",
+          "images": null,
+          "video_url": null
+        },
+        {
+          "title": "SEO and Social Media Meta Tags",
+          "description": "Meta tags that help search engines index your page and create rich previews when shared on social media.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- Primary SEO meta tags -->\n    <meta name=\"description\" content=\"Shop eco-friendly water bottles with 24-hour insulation. Free shipping on orders over $50.\">\n    <meta name=\"keywords\" content=\"water bottles, insulated bottles, eco-friendly, sustainable\">\n    <meta name=\"author\" content=\"EcoBottle Inc.\">\n    <meta name=\"robots\" content=\"index, follow\">\n    \n    <!-- Open Graph for Facebook, LinkedIn -->\n    <meta property=\"og:title\" content=\"EcoBottle - Sustainable Insulated Water Bottles\">\n    <meta property=\"og:description\" content=\"Shop eco-friendly water bottles with 24-hour insulation.\">\n    <meta property=\"og:image\" content=\"https://www.ecobottle.com/images/product-social.jpg\">\n    <meta property=\"og:url\" content=\"https://www.ecobottle.com\">\n    <meta property=\"og:type\" content=\"website\">\n    \n    <!-- Twitter Card -->\n    <meta name=\"twitter:card\" content=\"summary_large_image\">\n    <meta name=\"twitter:title\" content=\"EcoBottle - Sustainable Water Bottles\">\n    <meta name=\"twitter:description\" content=\"24-hour insulation, eco-friendly materials.\">\n    <meta name=\"twitter:image\" content=\"https://www.ecobottle.com/images/product-social.jpg\">\n    \n    <title>EcoBottle - Sustainable Insulated Water Bottles</title>\n</head>\n<body>\n    <h1>EcoBottle Products</h1>\n</body>\n</html>",
+          "output": "When shared on Facebook or Twitter, the page displays with a rich card showing title, description, and image. Search engines have detailed information for indexing. The robots meta tag tells search engines to index and follow links.",
+          "images": null,
+          "video_url": null
+        },
+        {
+          "title": "Other Useful Meta Tags",
+          "description": "Additional meta tags for browser configuration, mobile web apps, and special behaviors.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    \n    <!-- Browser theme color (mobile) -->\n    <meta name=\"theme-color\" content=\"#4285f4\">\n    \n    <!-- Prevent automatic phone number detection -->\n    <meta name=\"format-detection\" content=\"telephone=no\">\n    \n    <!-- Refresh/redirect (use sparingly, harms UX) -->\n    <meta http-equiv=\"refresh\" content=\"30\">\n    <!-- This refreshes the page every 30 seconds -->\n    \n    <!-- Referrer policy for security -->\n    <meta name=\"referrer\" content=\"no-referrer-when-downgrade\">\n    \n    <!-- Mobile web app meta tags (iOS) -->\n    <meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n    <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\n    \n    <title>Advanced Meta Tags</title>\n</head>\n<body>\n    <h1>Page Content</h1>\n</body>\n</html>",
+          "output": "The mobile browser chrome displays in the specified theme color. Phone numbers are not automatically turned into links. The page can run as a standalone web app on iOS devices.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": [
+        {
+          "point": "Always include charset and viewport meta tags in every HTML page. These are not optional."
+        },
+        {
+          "point": "Use the description meta tag on every page for SEO. Write unique descriptions for each page."
+        },
+        {
+          "point": "Add Open Graph and Twitter Card meta tags on pages that will be shared on social media."
+        },
+        {
+          "point": "Use the theme-color meta tag to match your brand colors on mobile browsers."
+        },
+        {
+          "point": "Include robots meta tag if you need to control search engine indexing (noindex, nofollow)."
+        }
+      ],
+      "when_to_avoid": [
+        {
+          "point": "Never use maximum-scale or user-scalable=no in the viewport meta tag. This prevents users from zooming and fails accessibility guidelines."
+        },
+        {
+          "point": "Avoid the keywords meta tag for SEO. Search engines ignore it due to historical spam abuse."
+        },
+        {
+          "point": "Do not use the refresh meta tag for redirects. Use proper HTTP 301/302 redirects on the server instead."
+        },
+        {
+          "point": "Never write meta descriptions longer than 160 characters. Search engines will cut them off."
+        },
+        {
+          "point": "Avoid duplicate meta descriptions across multiple pages. Each page should have unique metadata."
+        }
+      ],
+      "problems": null,
+      "mental_models": [
+        {
+          "model": "Think of meta tags like labels on a product package. They tell you what is inside (description), who made it (author), and how to handle it (viewport, charset), but they are not the product itself."
+        },
+        {
+          "model": "The viewport meta tag is like telling a camera how wide to frame a photo. Without it, mobile browsers frame your site at desktop width (980px) then shrink it down, making everything tiny. With it, they frame at the actual device width."
+        },
+        {
+          "model": "Open Graph meta tags are like a business card for your web page. When someone shares your link, these tags tell social media platforms what information to display on the card."
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "Forgetting the viewport meta tag entirely. Without it, your site will not be mobile-friendly no matter how good your CSS is."
+        },
+        {
+          "mistake": "Copying viewport code that includes user-scalable=no. This prevents users from zooming in and is an accessibility violation."
+        },
+        {
+          "mistake": "Writing the same meta description for every page. Each page should have a unique description that accurately describes its specific content."
+        },
+        {
+          "mistake": "Using relative URLs in Open Graph image tags. Social media platforms require absolute URLs (starting with https://)."
+        },
+        {
+          "mistake": "Placing meta tags in the body instead of the head. Meta tags belong in the head element only."
+        },
+        {
+          "mistake": "Using the keywords meta tag hoping it helps SEO. Modern search engines ignore it completely."
+        }
+      ],
+      "bonus_tips": [
+        {
+          "tip": "Test your Open Graph tags using Facebook's Sharing Debugger (developers.facebook.com/tools/debug) and Twitter's Card Validator."
+        },
+        {
+          "tip": "The optimal meta description length is 150-160 characters. This is what most search engines display in results."
+        },
+        {
+          "tip": "Use the viewport meta tag even if your site is not responsive yet. It prevents mobile browsers from making incorrect assumptions."
+        },
+        {
+          "tip": "The theme-color meta tag can match your CSS variables for a cohesive branded experience on mobile."
+        },
+        {
+          "tip": "You can use JavaScript to dynamically update meta tags (for single-page applications) but initial HTML should include them for SEO."
+        }
+      ],
+      "related_topics": [
+        "Responsive Web Design",
+        "SEO Fundamentals",
+        "Open Graph Protocol",
+        "Web Accessibility (WCAG)",
+        "HTML Head Element",
+        "Mobile Web Development"
+      ],
+      "seo_id": 4,
+      "is_active": true,
+      "order_index": 3,
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
+  "seo_metadata": [
+    {
+      "id": 1,
+      "meta_title": "HTML Document Structure - Complete Guide with DOCTYPE, Head & Body",
+      "meta_description": "Master HTML document structure with DOCTYPE declaration, head element configuration, meta tags, viewport settings, and HTML5 boilerplate templates. Complete guide for beginners.",
+      "keywords": [
+        "HTML document structure",
+        "HTML5 boilerplate",
+        "DOCTYPE declaration",
+        "HTML head element",
+        "HTML body element",
+        "HTML template",
+        "HTML page structure",
+        "valid HTML document",
+        "HTML meta tags",
+        "viewport meta tag"
+      ],
+      "canonical_url": "/html/document-structure",
+      "robots": "index, follow"
+    },
+    {
+      "id": 2,
+      "meta_title": "DOCTYPE Declaration - Why Every HTML Page Needs It",
+      "meta_description": "Learn what the DOCTYPE declaration is, why it's essential for every HTML page, and how it prevents quirks mode rendering. Understand HTML5 DOCTYPE best practices.",
+      "keywords": [
+        "DOCTYPE declaration",
+        "HTML5 DOCTYPE",
+        "HTML quirks mode",
+        "DOCTYPE html",
+        "standards mode",
+        "browser rendering modes",
+        "HTML validation",
+        "DOCTYPE syntax"
+      ],
+      "canonical_url": "/html/doctype-declaration",
+      "robots": "index, follow"
+    },
+    {
+      "id": 3,
+      "meta_title": "HTML Head Element - Meta Tags, Title, and Configuration Guide",
+      "meta_description": "Complete guide to the HTML head element. Learn what goes in the head, proper element order, meta tags, title configuration, and best practices for SEO and performance.",
+      "keywords": [
+        "HTML head element",
+        "HTML head section",
+        "meta tags",
+        "HTML title tag",
+        "head element order",
+        "HTML configuration",
+        "charset declaration",
+        "HTML metadata",
+        "link tags"
+      ],
+      "canonical_url": "/html/head-element",
+      "robots": "index, follow"
+    },
+    {
+      "id": 4,
+      "meta_title": "HTML Meta Tags & Viewport - SEO, Mobile & Social Media Guide",
+      "meta_description": "Master HTML meta tags including viewport configuration for mobile, SEO metadata, Open Graph tags for social media, and essential meta tag best practices.",
+      "keywords": [
+        "HTML meta tags",
+        "viewport meta tag",
+        "mobile responsive viewport",
+        "meta description",
+        "Open Graph tags",
+        "Twitter Card meta tags",
+        "SEO meta tags",
+        "charset meta tag",
+        "theme-color meta tag"
+      ],
+      "canonical_url": "/html/meta-tags-viewport",
+      "robots": "index, follow"
+    }
+  ]
+}
