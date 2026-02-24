@@ -1,6 +1,19 @@
 from pydantic import BaseModel, Field
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 from datetime import datetime
+
+
+# ---------- Block Schema (rich content) ----------
+class ContentBlock(BaseModel):
+    type: str
+    text: Optional[Any] = None      # paragraph / heading inline text
+    items: Optional[List[str]] = None   # ul / ol
+    headers: Optional[List[str]] = None # table
+    rows: Optional[List[List[str]]] = None
+    code: Optional[str] = None
+    language: Optional[str] = None
+    title: Optional[str] = None
+    data: Optional[Dict[str, Any]] = None
 
 
 # ---------- Base ----------
@@ -12,6 +25,9 @@ class TopicBase(BaseModel):
     slug: str = Field(..., example="javascript-closures")
     title: str
     description: Optional[str] = None
+
+    # ⭐ NEW → rich lesson content
+    content: Optional[List[ContentBlock]] = None
 
     examples: Optional[List[Dict]] = None
 
@@ -43,6 +59,9 @@ class TopicUpdate(BaseModel):
     title: Optional[str] = None
     description: Optional[str] = None
 
+    # ⭐ NEW
+    content: Optional[List[ContentBlock]] = None
+
     examples: Optional[List[Dict]] = None
     image_banner_url: Optional[str] = None
     images: Optional[List[str]] = None
@@ -62,6 +81,7 @@ class TopicUpdate(BaseModel):
 
 
 from app.schemas.sub_topic import SubTopicResponse
+
 
 # ---------- Response ----------
 class TopicResponse(TopicBase):

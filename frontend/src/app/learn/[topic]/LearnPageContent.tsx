@@ -33,28 +33,245 @@ import 'prismjs/themes/prism-tomorrow.css';
 const fadeInUp = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } };
 const fadeInLeft = { hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0 } };
 
-// Helper function to convert standard YouTube URLs to embed URLs
-const getYouTubeEmbedUrl = (url: string) => {
-  if (!url) return "";
-  try {
-    const urlObj = new URL(url);
-    if (urlObj.hostname.includes("youtube.com")) {
-      const videoId = urlObj.searchParams.get("v");
-      if (videoId) {
-        return `https://www.youtube.com/embed/${videoId}?rel=0`;
-      }
-    } else if (urlObj.hostname.includes("youtu.be")) {
-      const videoId = urlObj.pathname.slice(1);
-      if (videoId) {
-        return `https://www.youtube.com/embed/${videoId}?rel=0`;
-      }
-    }
-  } catch (e) {
-    // If URL parsing fails, just return the original string
-    return url;
-  }
-  return url;
+const SAFE_URL_PROTOCOLS = new Set(["http:", "https:"]);
+const YOUTUBE_HOSTS = new Set(["youtube.com", "www.youtube.com", "m.youtube.com", "youtu.be", "www.youtu.be"]);
+const URL_CACHE_LIMIT = 500;
+const safeAbsoluteUrlCache = new Map<string, string>();
+const safeAssetUrlCache = new Map<string, string>();
+const safeHrefCache = new Map<string, string>();
+const youtubeEmbedUrlCache = new Map<string, string>();
+
+const setCachedValue = (cache: Map<string, string>, key: string, value: string) => {
+  if (cache.size >= URL_CACHE_LIMIT) cache.clear();
+  cache.set(key, value);
+  return value;
 };
+
+const toSafeAbsoluteHttpUrl = (url: unknown) => {
+  if (typeof url !== "string") return "";
+  const trimmedUrl = url.trim();
+  if (!trimmedUrl) return "";
+  const cached = safeAbsoluteUrlCache.get(trimmedUrl);
+  if (cached !== undefined) return cached;
+
+  let safeUrl = "";
+  try {
+    const parsedUrl = new URL(trimmedUrl);
+    if (SAFE_URL_PROTOCOLS.has(parsedUrl.protocol)) {
+      safeUrl = parsedUrl.toString();
+    }
+  } catch {
+    safeUrl = "";
+  }
+
+  return setCachedValue(safeAbsoluteUrlCache, trimmedUrl, safeUrl);
+};
+
+const toSafeAssetUrl = (url: unknown) => {
+  if (typeof url !== "string") return "";
+  const trimmedUrl = url.trim();
+  if (!trimmedUrl) return "";
+  const cached = safeAssetUrlCache.get(trimmedUrl);
+  if (cached !== undefined) return cached;
+
+  const safeUrl = trimmedUrl.startsWith("/") ? trimmedUrl : toSafeAbsoluteHttpUrl(trimmedUrl);
+  return setCachedValue(safeAssetUrlCache, trimmedUrl, safeUrl);
+};
+
+const toSafeHref = (href: unknown) => {
+  if (typeof href !== "string") return "/";
+  const trimmedHref = href.trim();
+  if (!trimmedHref) return "/";
+  const cached = safeHrefCache.get(trimmedHref);
+  if (cached !== undefined) return cached;
+
+  const safeHref = trimmedHref.startsWith("/") ? trimmedHref : (toSafeAbsoluteHttpUrl(trimmedHref) || "/");
+  return setCachedValue(safeHrefCache, trimmedHref, safeHref);
+};
+
+// Converts supported YouTube URLs to trusted embed URLs
+const getYouTubeEmbedUrl = (url: unknown) => {
+  if (typeof url !== "string") return "";
+  const trimmedUrl = url.trim();
+  if (!trimmedUrl) return "";
+
+  const cached = youtubeEmbedUrlCache.get(trimmedUrl);
+  if (cached !== undefined) return cached;
+
+  const safeUrl = toSafeAbsoluteHttpUrl(trimmedUrl);
+  if (!safeUrl) return setCachedValue(youtubeEmbedUrlCache, trimmedUrl, "");
+
+  let safeEmbedUrl = "";
+  try {
+    const urlObj = new URL(safeUrl);
+    const host = urlObj.hostname.toLowerCase();
+    if (!YOUTUBE_HOSTS.has(host)) {
+      return setCachedValue(youtubeEmbedUrlCache, trimmedUrl, "");
+    }
+
+    let videoId = "";
+    if (host === "youtu.be" || host === "www.youtu.be") {
+      videoId = urlObj.pathname.split("/").filter(Boolean)[0] || "";
+    } else if (urlObj.pathname.startsWith("/embed/")) {
+      videoId = urlObj.pathname.replace("/embed/", "").split("/")[0] || "";
+    } else {
+      videoId = urlObj.searchParams.get("v") || "";
+    }
+
+    if (/^[A-Za-z0-9_-]{11}$/.test(videoId)) {
+      safeEmbedUrl = `https://www.youtube.com/embed/${videoId}?rel=0`;
+    }
+  } catch {
+    safeEmbedUrl = "";
+  }
+
+  return setCachedValue(youtubeEmbedUrlCache, trimmedUrl, safeEmbedUrl);
+};
+
+function InlineText({ parts }: any) {
+  if (!Array.isArray(parts)) return <>{parts}</>;
+
+  return parts.map((p: any, i: number) => {
+    const className = cn(
+      p.bold && "font-semibold",
+      p.italic && "italic",
+      p.highlight && "bg-yellow-200 dark:bg-yellow-500/30 px-1 rounded"
+    );
+
+    if (p.link) {
+      return (
+        <Link key={i} href={toSafeHref(p.link)} className={cn("underline text-primary", className)}>
+          {p.value}
+        </Link>
+      );
+    }
+
+    return (
+      <span key={i} className={className}>
+        {p.value}
+      </span>
+    );
+  });
+}
+
+function RenderBlocks({ blocks }: any) {
+  if (!Array.isArray(blocks) || blocks.length === 0) return null;
+
+  return (
+    <div className="space-y-6">
+      {blocks.map((b: any, i: number) => {
+        switch (b.type) {
+          case "heading":
+            const Tag = `h${b.level || 2}` as any;
+            return (
+              <Tag key={i} className="font-bold text-2xl text-slate-900 dark:text-white">
+                {b.text}
+              </Tag>
+            );
+
+          case "paragraph":
+            return (
+              <p key={i} className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <InlineText parts={b.text} />
+              </p>
+            );
+
+          case "ul":
+            return (
+              <ul key={i} className="list-disc pl-6 space-y-1">
+                {b.items?.map((it: string, idx: number) => (
+                  <li key={idx}>{it}</li>
+                ))}
+              </ul>
+            );
+
+          case "ol":
+            return (
+              <ol key={i} className="list-decimal pl-6 space-y-1">
+                {b.items?.map((it: string, idx: number) => (
+                  <li key={idx}>{it}</li>
+                ))}
+              </ol>
+            );
+
+          case "table":
+            return (
+              <div key={i} className="overflow-auto border rounded-xl">
+                <table className="w-full text-sm">
+                  <thead className="bg-slate-100 dark:bg-slate-800">
+                    <tr>
+                      {b.headers?.map((h: string, idx: number) => (
+                        <th key={idx} className="p-3 text-left">{h}</th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {b.rows?.map((row: any[], r: number) => (
+                      <tr key={r} className="border-t">
+                        {row.map((c, cidx) => (
+                          <td key={cidx} className="p-3">{c}</td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+
+          case "code":
+            return (
+              <SyntaxHighlighter key={i} language={b.language} style={vscDarkPlus}>
+                {b.code}
+              </SyntaxHighlighter>
+            );
+
+          case "callout":
+            return (
+              <div key={i} className="p-4 rounded-xl border bg-indigo-50 dark:bg-indigo-500/10">
+                <div className="font-semibold mb-1">{b.title}</div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">{b.text}</div>
+              </div>
+            );
+
+          case "image": {
+            const safeImageUrl = toSafeAssetUrl(b.url);
+            if (!safeImageUrl) return null;
+
+            return (
+              <img
+                key={i}
+                src={safeImageUrl}
+                alt={typeof b.alt === "string" ? b.alt : "Lesson image"}
+                className="rounded-xl border"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            );
+          }
+
+          case "video": {
+            const safeVideoUrl = getYouTubeEmbedUrl(b.url);
+            if (!safeVideoUrl) return null;
+
+            return (
+              <iframe
+                key={i}
+                src={safeVideoUrl}
+                className="w-full aspect-video rounded-xl"
+                title={typeof b.title === "string" ? b.title : "Lesson video"}
+                referrerPolicy="no-referrer"
+                allowFullScreen
+              />
+            );
+          }
+
+          default:
+            return null;
+        }
+      })}
+    </div>
+  );
+}
 
 export default function LearnPageContent({ topic }: { topic: string }) {
   const urlTopic = topic.toLowerCase();
@@ -126,6 +343,9 @@ export default function LearnPageContent({ topic }: { topic: string }) {
       setActiveLessonId(currentTopic.lessons[currentIndex - 1].id);
     }
   };
+
+  const currentLessonImageUrl = toSafeAssetUrl(currentLesson.imageUrl);
+  const currentLessonVideoUrl = getYouTubeEmbedUrl(currentLesson.videoUrl);
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50/50 dark:bg-[#0B0C10]">
@@ -301,12 +521,14 @@ export default function LearnPageContent({ topic }: { topic: string }) {
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 md:py-12 space-y-12 md:space-y-16 relative z-10 flex-1">
             
             {/* 1. IMAGE BANNER */}
-            {currentLesson.imageUrl && (
+            {currentLessonImageUrl && (
               <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 mb-12">
                 <img 
-                  src={currentLesson.imageUrl} 
+                  src={currentLessonImageUrl}
                   alt={currentLesson.title} 
-                  className="w-full h-auto object-cover max-h-[500px]" 
+                  className="w-full h-auto object-cover max-h-[500px]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
               </motion.div>
             )}
@@ -357,15 +579,17 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                 </div>
               )}
             </div>
+            <RenderBlocks blocks={currentLesson.content} />
 
             {/* 5. VIDEO */}
-            {currentLesson.videoUrl && (
+            {currentLessonVideoUrl && (
               <motion.div variants={fadeInUp} className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 bg-black aspect-video relative group">
                 <iframe 
-                  src={getYouTubeEmbedUrl(currentLesson.videoUrl)} 
+                  src={currentLessonVideoUrl}
                   className="w-full h-full" 
                   title="Lesson Video" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  referrerPolicy="no-referrer"
                   allowFullScreen 
                 />
               </motion.div>
@@ -428,7 +652,13 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                        <MonitorPlay className="w-3 h-3 text-slate-400 mr-2" />
                        <span className="text-xs font-medium text-slate-500 uppercase tracking-wider">Preview</span>
                     </div>
-                    <iframe srcDoc={code} className="flex-1 w-full border-none" title="output" />
+                    <iframe
+                      srcDoc={typeof code === "string" ? code : ""}
+                      className="flex-1 w-full border-none"
+                      title="output"
+                      sandbox=""
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
                </div>
             </motion.div>
@@ -442,12 +672,14 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     </span>
 
                     {/* 1. IMAGE BANNER */}
-                    {sub.imageUrl && (
+                    {toSafeAssetUrl(sub.imageUrl) && (
                       <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50">
                         <img 
-                          src={sub.imageUrl} 
+                          src={toSafeAssetUrl(sub.imageUrl)}
                           alt={sub.title} 
-                          className="w-full h-auto object-cover max-h-[400px]" 
+                          className="w-full h-auto object-cover max-h-[400px]"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
                         />
                       </div>
                     )}
@@ -495,13 +727,14 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     )}
 
                     {/* 5. VIDEO */}
-                    {sub.videoUrl && (
+                    {getYouTubeEmbedUrl(sub.videoUrl) && (
                       <div className="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl shadow-slate-200/50 dark:shadow-black/50 bg-black aspect-video relative">
                         <iframe 
-                          src={getYouTubeEmbedUrl(sub.videoUrl)} 
+                          src={getYouTubeEmbedUrl(sub.videoUrl)}
                           className="w-full h-full" 
                           title={`${sub.title} Video`} 
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                          referrerPolicy="no-referrer"
                           allowFullScreen 
                         />
                       </div>

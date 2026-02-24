@@ -6,7 +6,7 @@ from app.schemas.lesson import LessonCreate, LessonUpdate
 class CRUDLesson:
 
     def create(self, db: Session, obj_in: LessonCreate) -> Lesson:
-        lesson = Lesson(**obj_in.model_dump())
+        lesson = Lesson(**obj_in.model_dump(exclude_none=True))  # ⭐ changed
         db.add(lesson)
         db.commit()
         db.refresh(lesson)
@@ -15,12 +15,7 @@ class CRUDLesson:
     def get(self, db: Session, lesson_id: int) -> Lesson | None:
         return db.get(Lesson, lesson_id)
 
-    def get_by_slug(
-        self,
-        db: Session,
-        sub_topic_id: int,
-        slug: str,
-    ) -> Lesson | None:
+    def get_by_slug(self, db: Session, sub_topic_id: int, slug: str) -> Lesson | None:
         return (
             db.query(Lesson)
             .filter(
@@ -30,12 +25,7 @@ class CRUDLesson:
             .first()
         )
 
-    def get_by_sub_topic(
-        self,
-        db: Session,
-        sub_topic_id: int,
-        active_only: bool = True,
-    ):
+    def get_by_sub_topic(self, db: Session, sub_topic_id: int, active_only: bool = True):
         q = db.query(Lesson).filter(
             Lesson.sub_topic_id == sub_topic_id
         )
@@ -43,15 +33,10 @@ class CRUDLesson:
             q = q.filter(Lesson.is_active.is_(True))
         return q.order_by(Lesson.order_index).all()
 
-    def update(
-        self,
-        db: Session,
-        db_obj: Lesson,
-        obj_in: LessonUpdate,
-    ) -> Lesson:
-        for field, value in obj_in.model_dump(
-            exclude_unset=True
-        ).items():
+    def update(self, db: Session, db_obj: Lesson, obj_in: LessonUpdate) -> Lesson:
+        data = obj_in.model_dump(exclude_unset=True)
+
+        for field, value in data.items():
             setattr(db_obj, field, value)
 
         db.commit()

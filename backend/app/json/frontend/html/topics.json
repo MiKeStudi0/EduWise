@@ -6,160 +6,185 @@
     "module_id": 1,
     "slug": "html-introduction-web-basics",
     "title": "HTML Introduction & Web Basics",
-    "description": "HTML (HyperText Markup Language) is the basic markup language used to build content on the web. This topic covers what HTML is, how browsers request and display it, and how the web system of HTML, CSS, JavaScript, HTTP, and DNS work together to show web pages.",
+    "description": "A beginner's guide to HTML, how the web works, and the roles of HTML, CSS, and JavaScript.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "What is HTML and Why Does It Matter?"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "HTML stands for "
+          },
+          {
+            "value": "HyperText Markup Language",
+            "bold": true
+          },
+          {
+            "value": ". It is the standard language used to create and structure content on the web. Every webpage you visit — from a news article to an e-commerce store — is built on an HTML foundation. Learn more at the "
+          },
+          {
+            "value": "MDN HTML Docs",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "info",
+        "title": "Key Idea",
+        "text": "HTML provides structure and meaning. CSS handles appearance. JavaScript adds behavior. All three work together but each has a distinct, separate job."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "How a Web Page Reaches Your Browser"
+      },
+      {
+        "type": "ol",
+        "items": [
+          "You type a URL into the browser address bar.",
+          "The browser sends a DNS request to resolve the domain to an IP address.",
+          "The browser sends an HTTP or HTTPS request to the web server at that IP.",
+          "The server responds with an HTML file.",
+          "The browser parses the HTML and requests linked CSS, JS, and image files.",
+          "The browser renders the fully assembled page on your screen."
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "HTML, CSS, and JavaScript: Roles at a Glance"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Layer",
+          "Technology",
+          "Responsibility",
+          "Example"
+        ],
+        "rows": [
+          [
+            "Structure",
+            "HTML",
+            "Defines content and meaning",
+            "<h1>, <p>, <nav>"
+          ],
+          [
+            "Presentation",
+            "CSS",
+            "Controls layout and visual style",
+            "color, font-size, grid"
+          ],
+          [
+            "Behavior",
+            "JavaScript",
+            "Adds interactivity and dynamic updates",
+            "click handlers, API calls"
+          ]
+        ]
+      }
+    ],
     "examples": [
       {
-        "title": "Minimal HTML Page Structure",
-        "description": "The bare minimum required for a valid HTML document. Every HTML page must include a DOCTYPE declaration, an html element with a lang attribute, a head section with charset and viewport meta tags, a title, and a body where visible content lives.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>My First Page</title>\n</head>\n<body>\n    <h1>Hello, World</h1>\n    <p>This is a paragraph.</p>\n</body>\n</html>",
-        "output": "Renders a page with a large heading 'Hello, World' followed by a paragraph of text. The browser tab shows 'My First Page' as the title.",
+        "title": "Your First HTML Document",
+        "description": "This example shows the minimum valid structure every HTML page must have. Each line has a specific purpose and removing any of them produces a technically incomplete document. Understanding this skeleton first makes every other HTML concept easier to place.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <!-- head: metadata the browser needs but the user doesn't see directly -->\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>My First Page</title>\n</head>\n<body>\n  <!-- body: everything the user sees -->\n  <h1>Hello, World!</h1>\n  <p>This is my first HTML page.</p>\n</body>\n</html>",
+        "output": "Browser renders a page with a large bold heading 'Hello, World!' followed by the paragraph text. The tab title shows 'My First Page'.",
         "images": null,
         "video_url": null
       },
       {
-        "title": "Production-Ready HTML Page",
-        "description": "A realistic HTML document for a product landing page. Shows proper page structure, SEO meta tags, external CSS/JS links, navigation, and correct document organization. These are all patterns used in real projects.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"description\" content=\"Product landing page for eco-friendly water bottles\">\n    <title>EcoBottle - Sustainable Hydration</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <header>\n        <nav>\n            <ul>\n                <li><a href=\"#features\">Features</a></li>\n                <li><a href=\"#pricing\">Pricing</a></li>\n                <li><a href=\"#contact\">Contact</a></li>\n            </ul>\n        </nav>\n    </header>\n\n    <main>\n        <section id=\"hero\">\n            <h1>Drink Sustainably</h1>\n            <p>Premium insulated bottles that keep drinks cold for 24 hours.</p>\n            <a href=\"#pricing\" class=\"cta-button\">Shop Now</a>\n        </section>\n\n        <section id=\"features\">\n            <h2>Why Choose EcoBottle?</h2>\n            <article>\n                <h3>24-Hour Insulation</h3>\n                <p>Double-wall vacuum technology maintains temperature.</p>\n            </article>\n            <article>\n                <h3>100% Recyclable</h3>\n                <p>Made from food-grade stainless steel, fully recyclable.</p>\n            </article>\n        </section>\n    </main>\n\n    <footer>\n        <p>&copy; 2024 EcoBottle Inc. All rights reserved.</p>\n    </footer>\n\n    <script src=\"app.js\" defer></script>\n</body>\n</html>",
-        "output": "Renders a product landing page with a sticky nav bar linking to page sections, a hero section with a heading and CTA button, a features section with two article cards, and a footer with copyright text.",
+        "title": "HTML, CSS, and JavaScript Working Together",
+        "description": "This example shows the three layers of a web page in action within a single file. The HTML defines a button and a message. The CSS makes them look polished. The JavaScript makes the button interactive. Each layer could be swapped or removed without breaking the others.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Three Layers Demo</title>\n  <style>\n    /* CSS: controls appearance only */\n    body {\n      font-family: sans-serif;\n      display: flex;\n      flex-direction: column;\n      align-items: center;\n      padding: 3rem;\n    }\n    button {\n      background: #2563eb;\n      color: white;\n      border: none;\n      padding: 0.6rem 1.4rem;\n      border-radius: 6px;\n      font-size: 1rem;\n      cursor: pointer;\n    }\n    button:hover { background: #1d4ed8; }\n    #message {\n      margin-top: 1rem;\n      font-size: 1.1rem;\n      color: #16a34a;\n      min-height: 1.5rem;\n    }\n  </style>\n</head>\n<body>\n\n  <!-- HTML: defines structure and content -->\n  <h1>Separation of Concerns Demo</h1>\n  <button id=\"greetBtn\">Say Hello</button>\n  <p id=\"message\"></p>\n\n  <script>\n    // JavaScript: handles behavior only\n    const btn = document.getElementById('greetBtn');\n    const msg = document.getElementById('message');\n\n    btn.addEventListener('click', function () {\n      msg.textContent = 'Hello from JavaScript!';\n    });\n  </script>\n\n</body>\n</html>",
+        "output": "Page renders a centered heading, a blue button, and an empty paragraph. Clicking the button fills the paragraph with 'Hello from JavaScript!' in green text. The HTML, CSS, and JavaScript each handle their own layer independently.",
         "images": null,
         "video_url": null
       }
     ],
-    "image_banner_url": null,
+    "image_banner_url": "https://imgs.search.brave.com/OlsEKLcVHcOMtcB1-I0fnpBa7M-ruCRukhZmckPHxOQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b25saW5lLnVjLmVk/dS9jb250ZW50L2Rh/bS9yZWZyZXNoL29u/bGluZS9XaGF0LUlz/LUlULUJsb2ctSW5m/b2dyYXBoaWMtSG93/LXRvLUJyZWFrLWlu/dG8tSVQtRmllbGQu/anBn",
     "images": null,
     "video_url": null,
     "when_to_use": [
       {
-        "point": "Building any web page or web application. HTML is required for all browser-based content."
+        "point": "When structuring any content intended for a web browser"
       },
       {
-        "point": "Creating proper document structure that helps accessibility, SEO, and machine reading."
+        "point": "When building the semantic foundation before adding CSS or JS"
       },
       {
-        "point": "Defining content that needs to be indexed and found by search engines."
-      },
-      {
-        "point": "Building email templates (with specific client limitations)."
-      },
-      {
-        "point": "Embedding content in web views inside mobile or desktop applications."
-      },
-      {
-        "point": "Creating documentation that must be accessible across all platforms and devices."
+        "point": "When creating documents that need to be indexed by search engines"
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Native mobile applications. Use platform-specific UI tools like SwiftUI or Jetpack Compose instead."
+        "point": "Avoid HTML for native mobile apps; use Swift or Kotlin instead"
       },
       {
-        "point": "Print-specific documents where exact layout control is required. Use PDF or word processing formats."
+        "point": "Avoid HTML for data storage or server-side processing logic"
       },
       {
-        "point": "Real-time collaborative editing at the protocol level. HTML alone cannot handle this type of editing."
-      },
-      {
-        "point": "Complex application state management. HTML is stateless, use JavaScript frameworks for dynamic data-driven apps."
-      },
-      {
-        "point": "Styling or interactivity in isolation. HTML only defines structure, do not mix inline styles or behavior into it."
-      },
-      {
-        "point": "Binary data transmission. HTML is text-based, use appropriate binary protocols for media streaming."
-      },
-      {
-        "point": "Using divs and spans for everything instead of proper tags. This creates meaningless code that harms accessibility and SEO."
+        "point": "Avoid writing HTML without a proper doctype declaration"
       }
     ],
-    "problems": [
+    "what_it_solves": [
       {
-        "problem": "No standardized way existed to structure text documents for universal display across different computers and systems."
+        "1": "Plain text has no structure, so browsers cannot identify headings, links, or sections."
       },
       {
-        "problem": "There was no way to link documents together, the basic 'hypertext' concept that makes the web navigable."
+        "2": "Without HTML, there is no standard way to embed images, links, or media on a page."
       },
       {
-        "problem": "Content and presentation were tightly connected, making it impossible to display the same content on different devices."
-      },
-      {
-        "problem": "Machines (search engines, screen readers, browsers) had no way to understand meaning from plain text documents."
-      },
-      {
-        "problem": "There was no universal document format that worked regardless of operating system or hardware."
+        "3": "HTML gives search engines and screen readers the structure they need to process content."
       }
     ],
-    "mental_models": [
+    "conceptual_understanding": [
       {
-        "model": "Think of HTML like blueprints for a building. The blueprint defines structure (this is a bedroom, this is a hallway, this is a door) just as HTML says (this is a heading, this is a paragraph, this is a link). The blueprint does not decide paint colors or furniture (that is CSS), and it can be read by any qualified person (any browser)."
+        "model": "HTML is like the blueprint of a building. It defines which rooms exist and where walls go. CSS is the interior designer who decides colors and furniture. JavaScript is the electrician who makes the lights switch on and off. You need all three for a finished building, but each professional has a distinct job."
       },
       {
-        "model": "The web request cycle is like ordering a book from a library. You give the librarian an address (URL), the librarian looks up the shelf location (DNS), gets the book (HTTP request/response), and hands it to you. You then read the book (browser reads HTML) and follow any references it contains (additional CSS, JS, image requests)."
+        "model": "A web browser is like a translation service. HTML is a foreign-language manuscript. The browser reads it, translates the markup into visual elements, and presents the result on screen. The original HTML file stays unchanged behind the scenes."
       },
       {
-        "model": "HTML, CSS, and JavaScript form three separate layers. HTML is the skeleton (structure), CSS is the skin (appearance), and JavaScript is the muscles (behavior). Mixing these layers in a single file is like building a wall using paint and wires. It works temporarily but becomes impossible to maintain."
+        "model": "The request-response cycle is like ordering from a restaurant. You (the browser) ask for a dish (a URL). The kitchen (the server) prepares it and sends it out. The dish arrives (HTML file) and you experience it (the rendered page). If extra ingredients are needed (CSS, JS, images), the kitchen sends those separately."
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Confusing HTML with a programming language. HTML has no logic, loops, or variables. It is a markup language that describes structure. You describe what things are, you do not write code logic."
+        "mistake": "Skipping the DOCTYPE declaration: Without <!DOCTYPE html> at the top, browsers fall into 'quirks mode' and apply inconsistent rendering rules from the early web era, causing layout bugs that are difficult to diagnose."
       },
       {
-        "mistake": "Using div and span for everything (div soup). Div has no meaning. Use nav, header, main, article, section, and footer so browsers and screen readers can understand page structure."
+        "mistake": "Missing the lang attribute on html: The lang='en' attribute tells screen readers which language to use for pronunciation. Omitting it forces assistive tools to guess, leading to incorrect text-to-speech output for multilingual users."
       },
       {
-        "mistake": "Adding inline styles and scripts throughout the document. Mixing structure, presentation, and behavior in one file breaks the separation of concerns and creates code that cannot be maintained."
+        "mistake": "Using CSS or JavaScript to fake structure: Styling a div to look like a heading does not make it a heading semantically. Search engines and screen readers rely on HTML tags for meaning, not visual appearance."
       },
       {
-        "mistake": "Forgetting the DOCTYPE declaration. Without <!DOCTYPE html>, browsers enter quirks mode and apply old rendering behavior, causing unpredictable layout issues."
-      },
-      {
-        "mistake": "Leaving out alt text on images. Screen readers cannot understand images without alt attributes, breaking accessibility. Search engines also use alt text for image indexing."
-      },
-      {
-        "mistake": "Confusing head with header. Head contains invisible information (title, CSS links, meta tags). Header is a visible page section for introductory content like navigation."
-      },
-      {
-        "mistake": "Assuming HTML renders the same in all browsers. Different browsers have different default styles. Always test across browsers and use a CSS reset or normalize.css."
-      },
-      {
-        "mistake": "Using tables for page layout. Tables are for tabular data only. Using them for layout breaks meaning, harms accessibility, and makes responsive design nearly impossible."
-      },
-      {
-        "mistake": "Loading scripts in the head without defer or async. This blocks HTML parsing and slows page load. Always place scripts at the end of body or use the defer attribute."
-      },
-      {
-        "mistake": "Not labeling form inputs. Inputs without connected label elements exclude keyboard-only users and screen reader users from using forms."
+        "mistake": "Mixing concerns in one file for production: Inline CSS and JavaScript inside HTML is fine for small experiments but creates unmaintainable code in real projects. Always separate HTML, CSS, and JS into their own files for anything beyond a demo."
       }
     ],
     "bonus_tips": [
       {
-        "tip": "HTML is a living standard. It is continuously updated by WHATWG, not released in frozen versions. Always check MDN Web Docs for the current specification."
+        "tip": "Open any webpage and press Ctrl+U (or Cmd+U on Mac) to view its raw HTML source. Reading source code of sites you admire is one of the fastest ways to learn real-world HTML patterns used by professional teams."
       },
       {
-        "tip": "The lang attribute on the html element is not decorative. Screen readers use it to select the correct pronunciation. Always set it accurately."
-      },
-      {
-        "tip": "Empty alt attributes (alt='') are intentional and correct for decorative images. They tell screen readers to skip the image entirely rather than read the filename."
-      },
-      {
-        "tip": "Use the defer attribute on script tags instead of placing scripts at the bottom of body. It achieves the same non-blocking behavior but keeps scripts in the head where they belong."
-      },
-      {
-        "tip": "Add rel='noopener noreferrer' to all external links that open in a new tab (target='_blank'). This prevents the opened page from accessing your window object."
-      },
-      {
-        "tip": "Validate your HTML using the W3C Markup Validation Service (validator.w3.org). Invalid HTML is parsed differently by each browser and causes subtle, hard-to-debug rendering differences."
+        "tip": "Bookmark the MDN Web Docs at developer.mozilla.org as your primary HTML reference. It is maintained by browser vendors, always accurate, and covers every element and attribute with compatibility tables and live examples."
       }
     ],
     "related_topics": [
-      "HTML Elements & Tags",
-      "HTML Semantic Elements",
-      "CSS Introduction",
-      "JavaScript Introduction",
-      "HTTP & HTTPS Protocol",
-      "DNS (Domain Name System)",
-      "DOM (Document Object Model)",
-      "Web Accessibility (WCAG)"
+      "HTML Document Structure",
+      "HTML Meta Tags",
+      "CSS Fundamentals",
+      "JavaScript Basics",
+      "Browser DevTools"
     ],
     "seo_id": 1,
     "is_active": true,
@@ -176,93 +201,87 @@
       "topic_id": 1,
       "slug": "what-is-html",
       "title": "What is HTML?",
-      "description": "HTML (HyperText Markup Language) is a markup language that structures content for web browsers. It defines what content exists (text, images, links, forms) and organizes it into a document browsers can read and display, without controlling logic or behavior.",
+      "description": "HTML is the markup language that defines the structure and meaning of all web page content.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "HTML stands for "
+            },
+            {
+              "value": "HyperText Markup Language",
+              "bold": true
+            },
+            {
+              "value": ". It uses "
+            },
+            {
+              "value": "tags",
+              "highlight": true
+            },
+            {
+              "value": " wrapped in angle brackets to label and organize content. Browsers read these tags and render them as headings, paragraphs, links, images, and more. The full HTML specification is maintained by the "
+            },
+            {
+              "value": "WHATWG",
+              "link": "https://html.spec.whatwg.org/"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "W3C",
+              "link": "https://www.w3.org/TR/html52/"
+            },
+            {
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "What HyperText Means",
+          "text": "HyperText refers to text that links to other text or resources. This linking ability is what turns a collection of pages into the interconnected World Wide Web."
+        }
+      ],
       "examples": [
         {
-          "title": "HTML Element Anatomy",
-          "description": "Every HTML element follows the same pattern: an opening tag, optional attributes, content, and a closing tag. Understanding this anatomy makes all HTML syntax predictable.",
-          "code_snippet": "<!-- Standard element with content -->\n<tagname attribute=\"value\">Content goes here</tagname>\n\n<!-- Self-closing elements have no content or closing tag -->\n<img src=\"photo.jpg\" alt=\"A description of the photo\">\n<br>\n<input type=\"text\" placeholder=\"Enter your name\">",
-          "output": "The img element renders an image. The br element inserts a line break. The input element renders a single-line text field. None of these require a closing tag because they contain no content.",
+          "title": "HTML Tags, Elements, and Attributes",
+          "description": "This example shows the anatomy of an HTML element: opening tag, content, closing tag, and attributes. Understanding these four building blocks is enough to read and write any HTML on the web.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>HTML Anatomy</title>\n</head>\n<body>\n\n  <!--\n    ELEMENT ANATOMY:\n    <tagname attribute=\"value\">content</tagname>\n    |______| |_______________|  |_____| |_______|\n    opening  attribute            inner  closing\n    tag      (optional)          text   tag\n  -->\n\n  <!-- A paragraph element with no attributes -->\n  <p>This is a paragraph. The browser wraps text automatically.</p>\n\n  <!-- An anchor element with an href attribute -->\n  <a href=\"https://developer.mozilla.org\">Visit MDN Web Docs</a>\n\n  <!-- An image element: self-closing, no content between tags -->\n  <img src=\"/logo.png\" alt=\"Company logo\" width=\"200\">\n\n  <!-- Boolean attribute: presence means true, no value needed -->\n  <input type=\"checkbox\" checked>\n\n  <!-- Multiple attributes on one element -->\n  <button\n    type=\"button\"\n    id=\"submitBtn\"\n    class=\"btn btn-primary\"\n    aria-label=\"Submit the form\">\n    Submit\n  </button>\n\n  <!--\n    Void elements: no closing tag, no content.\n    Examples: <br>, <hr>, <img>, <input>, <meta>, <link>\n  -->\n  <hr>\n  <br>\n\n</body>\n</html>",
+          "output": "Page renders: a paragraph of text, a clickable MDN link, a company logo image, a checked checkbox, a Submit button, a horizontal rule, and a line break. Each element is labeled in comments showing its structural parts.",
           "images": null,
           "video_url": null
         }
       ],
-      "image_banner_url": null,
+      "image_banner_url": "https://imgs.search.brave.com/OlsEKLcVHcOMtcB1-I0fnpBa7M-ruCRukhZmckPHxOQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b25saW5lLnVjLmVk/dS9jb250ZW50L2Rh/bS9yZWZyZXNoL29u/bGluZS9XaGF0LUlz/LUlULUJsb2ctSW5m/b2dyYXBoaWMtSG93/LXRvLUJyZWFrLWlu/dG8tSVQtRmllbGQu/anBn",
       "images": null,
       "video_url": null,
-      "when_to_use": [
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
         {
-          "point": "Whenever you need to define the structure and content of a web page visible in a browser."
+          "model": "An HTML tag is like a label on a package. The label does not change what is inside the box, but it tells the delivery system, the recipient, and every handler in between exactly what kind of item it is and how to treat it. A heading tag tells the browser: treat this text as a top-level title."
         },
         {
-          "point": "When marking up text so browsers and machines can tell headings from paragraphs from links."
-        },
-        {
-          "point": "When creating forms, tables, lists, navigation menus, or any structured content."
-        },
-        {
-          "point": "When providing meaning to content so search engines and screen readers can understand it correctly."
+          "model": "HTML is a markup language, not a programming language. It does not perform calculations or make decisions. It annotates content with meaning, the same way an editor marks up a manuscript with margin notes saying 'this is the title' or 'this is a footnote'."
         }
       ],
-      "when_to_avoid": [
-        {
-          "point": "Do not use HTML to control visual styling. That is the job of CSS."
-        },
-        {
-          "point": "Do not use HTML to add interactivity or application logic. That is the job of JavaScript."
-        },
-        {
-          "point": "Do not use old HTML attributes like bgcolor, align, or width on elements. These are outdated. Use CSS instead."
-        },
-        {
-          "point": "Do not use HTML for non-browser output formats like PDF, native apps, or terminal interfaces."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of HTML tags like labeled boxes. You put content inside a box and write on the outside what the content is (heading, paragraph, list, link). The browser reads the label and decides how to present what is inside."
-        },
-        {
-          "model": "HTML is like a manuscript with editorial marks. The marks (tags) do not change the words, but tell the printer (browser) how to format and present each piece of text."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Treating HTML as a programming language. It cannot do calculations, make decisions, or respond to events on its own."
-        },
-        {
-          "mistake": "Forgetting closing tags on elements that require them. Unclosed tags cause browsers to guess about structure, leading to broken layouts."
-        },
-        {
-          "mistake": "Using uppercase tag names like <P> or <DIV>. While HTML5 allows this, lowercase is the universal standard and mixing cases is unprofessional."
-        },
-        {
-          "mistake": "Nesting elements incorrectly, such as placing a block element like div inside an inline element like span. This makes invalid HTML that browsers may fix in unpredictable ways."
-        },
-        {
-          "mistake": "Confusing attributes with CSS properties. Attributes configure element behavior (src, href, alt, type). CSS properties control appearance (color, font-size, margin)."
-        }
-      ],
+      "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "HTML is parsed top to bottom. The order you write elements directly controls document flow and rendering order."
-        },
-        {
-          "tip": "Whitespace (spaces, tabs, newlines) between HTML elements is mostly ignored by browsers. Use it freely to indent and format your code for readability without affecting output."
-        },
-        {
-          "tip": "Quote attribute values consistently using double quotes. While single quotes work, double quotes are the universal HTML standard."
+          "tip": "Use the MDN HTML element reference at developer.mozilla.org/en-US/docs/Web/HTML/Element to look up any tag. Each entry shows the element's purpose, valid attributes, browser compatibility, and live examples — far more reliable than memory alone."
         }
       ],
       "related_topics": [
-        "HTML Document Structure",
-        "HTML Semantic Elements",
-        "HTML Attributes",
-        "CSS Introduction",
-        "DOM (Document Object Model)"
+        "HTML Introduction and Web Basics",
+        "How the Web Works",
+        "HTML Document Structure"
       ],
-      "seo_id": 2,
+      "seo_id": 1,
       "is_active": true,
       "order_index": 1,
       "created_at": null,
@@ -276,77 +295,126 @@
       "topic_id": 1,
       "slug": "how-the-web-works",
       "title": "How the Web Works",
-      "description": "The web is a system of connected computers that exchange documents using HTTP. When you visit a URL, a series of events (DNS lookup, HTTP request, server response, HTML parsing, and asset loading) turns a plain text file into a rendered web page on your screen.",
+      "description": "The web works through HTTP requests and responses exchanged between browsers, DNS, and servers.",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "text": "The Request-Response Cycle"
+        },
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "When you enter a URL in your browser, it triggers a chain of events. The browser contacts a "
+            },
+            {
+              "value": "DNS server",
+              "bold": true
+            },
+            {
+              "value": " to convert the domain name into an IP address, then sends an "
+            },
+            {
+              "value": "HTTP",
+              "highlight": true
+            },
+            {
+              "value": " or "
+            },
+            {
+              "value": "HTTPS",
+              "highlight": true
+            },
+            {
+              "value": " request to the web server at that address. The server responds with an HTML file, which the browser parses and renders. Learn how this works in depth at "
+            },
+            {
+              "value": "MDN: How the Web Works",
+              "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works"
+            },
+            {
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Who Acts",
+            "What Happens"
+          ],
+          "rows": [
+            [
+              "1. URL entered",
+              "User",
+              "Types address into the browser bar"
+            ],
+            [
+              "2. DNS lookup",
+              "Browser + DNS server",
+              "Domain name resolved to an IP address"
+            ],
+            [
+              "3. HTTP request",
+              "Browser",
+              "Sends GET request to the server IP"
+            ],
+            [
+              "4. Server response",
+              "Web server",
+              "Returns HTML file with status code 200"
+            ],
+            [
+              "5. Sub-resource requests",
+              "Browser",
+              "Fetches linked CSS, JS, and images"
+            ],
+            [
+              "6. Render",
+              "Browser engine",
+              "Parses HTML and paints the page on screen"
+            ]
+          ]
+        }
+      ],
       "examples": [
         {
-          "title": "Tracing a Full Web Request",
-          "description": "This annotated sequence shows what happens at each stage from typing a URL to seeing a rendered page. Each step maps to a concrete technical action.",
-          "code_snippet": "// Step 1: User types URL in browser\n// https://example.com/about.html\n\n// Step 2: DNS Lookup\n// Browser asks: \"What IP address is example.com?\"\n// DNS responds: \"93.184.216.34\"\n\n// Step 3: HTTP Request sent to server\n// GET /about.html HTTP/1.1\n// Host: example.com\n\n// Step 4: Server Response\n// HTTP/1.1 200 OK\n// Content-Type: text/html\n// [HTML file contents follow]\n\n// Step 5: Browser parses HTML top-to-bottom\n// Builds the DOM tree\n\n// Step 6: Browser encounters linked assets\n// <link rel=\"stylesheet\" href=\"styles.css\">  → new HTTP request\n// <img src=\"hero.jpg\">                       → new HTTP request\n// <script src=\"app.js\" defer></script>       → new HTTP request\n\n// Step 7: CSS applied, JS executed\n// Page is fully rendered and interactive",
-          "output": "No visual output. This is a conceptual trace of network and browser activity. Understanding this sequence explains why slow DNS slows page load, why blocking scripts hurt performance, and why HTTP requests for assets happen one after another from the initial HTML response.",
+          "title": "HTTP Status Codes in HTML Context",
+          "description": "This example shows how HTTP status codes affect what the browser renders and how developers handle them in HTML and JavaScript. Understanding status codes is essential for debugging blank pages, broken images, and failed form submissions.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>HTTP Status Codes Demo</title>\n</head>\n<body>\n\n  <h1>Common HTTP Status Codes</h1>\n\n  <!--\n    200 OK: request succeeded, page loads normally.\n    This is what happens when you see a working page.\n  -->\n\n  <!--\n    301 Moved Permanently: browser follows the redirect automatically.\n    Users never see the 301 - they land on the new URL directly.\n  -->\n\n  <!--\n    404 Not Found: server could not find the requested resource.\n    Common cause: broken link, deleted page, or mistyped URL.\n    Provide a helpful 404 page rather than a blank browser error.\n  -->\n  <p>If a linked image returns 404, the browser shows a broken image icon:</p>\n  <img src=\"/missing-image.jpg\" alt=\"Product photo\" width=\"200\">\n  <!-- alt text shows when image fails to load -->\n\n  <!--\n    Handle fetch errors in JS to show user-friendly messages\n    instead of silently failing on 4xx or 5xx responses.\n  -->\n  <div id=\"result\"></div>\n\n  <script>\n    const resultEl = document.getElementById('result');\n\n    fetch('/api/user/profile')\n      .then(response => {\n        if (response.status === 200) {\n          return response.json();\n        } else if (response.status === 401) {\n          resultEl.textContent = 'Please log in to view your profile.';\n        } else if (response.status === 404) {\n          resultEl.textContent = 'Profile not found.';\n        } else if (response.status >= 500) {\n          resultEl.textContent = 'Server error. Please try again later.';\n        }\n      })\n      .then(data => {\n        if (data) {\n          resultEl.textContent = 'Welcome, ' + data.name;\n        }\n      })\n      .catch(() => {\n        resultEl.textContent = 'Network error. Check your connection.';\n      });\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders the heading and a paragraph. The missing image shows a broken image icon with 'Product photo' as fallback alt text. The result div shows a status-specific message depending on the API response: a welcome message on 200, a login prompt on 401, or an error message on 404 and 500.",
           "images": null,
           "video_url": null
         }
       ],
-      "image_banner_url": null,
+      "image_banner_url": "https://imgs.search.brave.com/OlsEKLcVHcOMtcB1-I0fnpBa7M-ruCRukhZmckPHxOQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b25saW5lLnVjLmVk/dS9jb250ZW50L2Rh/bS9yZWZyZXNoL29u/bGluZS9XaGF0LUlz/LUlULUJsb2ctSW5m/b2dyYXBoaWMtSW5m/b2dyYXBoaWMtSG93/LXRvLUJyZWFrLWlu/dG8tSVQtRmllbGQu/anBn",
       "images": null,
       "video_url": null,
       "when_to_use": null,
       "when_to_avoid": null,
-      "problems": null,
-      "mental_models": [
+      "what_it_solves": null,
+      "conceptual_understanding": [
         {
-          "model": "Think of the web like a postal system. The URL is the address on the envelope (DNS translates the name to a street address / IP). The HTTP request is the letter you send. The server is the person who reads your letter and sends a reply. The reply is the HTML document. When you read that document (parse HTML), you find instructions to get more items (CSS, images, JS), like a letter that includes a shopping list of attachments."
+          "model": "The browser-server relationship is like ordering food by phone. You (browser) call a restaurant (server) and place an order (HTTP request). The restaurant prepares the food (processes the request) and delivers it (HTTP response). If an ingredient is missing, you get an error message (404 or 500) instead of the dish."
         },
         {
-          "model": "DNS is a phone book. You know the human-readable name (example.com) but need the actual phone number (IP address) to make the call. DNS resolvers look up the number for you."
-        },
-        {
-          "model": "The browser is a document reader, not a document viewer. It does not just display what it gets. It parses, validates, builds an internal tree (DOM), and renders that tree using style rules (CSS), then allows JavaScript to change that tree dynamically."
+          "model": "DNS is the phone book of the internet. Domain names like google.com are human-friendly aliases. DNS translates them to numeric IP addresses like 142.250.190.46 that routers use to actually route the traffic. Without DNS you would need to memorize IP addresses instead of domain names."
         }
       ],
-      "common_mistakes": [
-        {
-          "mistake": "Assuming the browser displays the raw HTML file. Browsers parse HTML into a DOM tree and render that tree. The visual output is never a direct display of the source text."
-        },
-        {
-          "mistake": "Thinking the web is one network. The web is a distributed system of independently operated servers connected by the internet. There is no central server."
-        },
-        {
-          "mistake": "Confusing HTTP with HTML. HTTP is the transport protocol (how documents travel). HTML is the document format (what is transported). They are different layers."
-        },
-        {
-          "mistake": "Not understanding that every linked asset (CSS, JS, image, font) is a separate HTTP request. This is why pages with many resources load more slowly, and why bundling and caching matter for performance."
-        },
-        {
-          "mistake": "Assuming HTTPS is just 'secure HTTP' with no functional difference. HTTPS adds encryption and authentication, which affects certificate handling, mixed content errors, and cookie behavior."
-        },
-        {
-          "mistake": "Treating the URL bar as a search box. A URL is a precise address. When a browser cannot find a URL, the error comes from DNS, not the browser itself."
-        }
-      ],
+      "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Open your browser DevTools (F12) and go to the Network tab before loading any page. Watching real HTTP requests fire in sequence makes this entire mental model immediately clear."
-        },
-        {
-          "tip": "The first byte of an HTTP response is called TTFB (Time To First Byte). It is one of the most important performance metrics because it measures server response time before any rendering can begin."
-        },
-        {
-          "tip": "HTTP/2 and HTTP/3 allow multiple requests to travel at the same time over one connection (multiplexing), which significantly changes the performance implications of many small files versus one large file compared to HTTP/1.1."
-        },
-        {
-          "tip": "304 Not Modified is a valid HTTP response. It means the browser already has a cached copy and should use it, which is why repeat visits to a page are faster than first visits."
+          "tip": "Open browser DevTools and go to the Network tab, then refresh any webpage. Every HTTP request the browser makes is listed with its status code, response time, and file size. This is the fastest way to understand what actually happens when a page loads and to debug slow or broken resources."
         }
       ],
       "related_topics": [
-        "HTTP & HTTPS Protocol",
-        "DNS (Domain Name System)",
-        "Browser Rendering Pipeline",
-        "DOM (Document Object Model)",
-        "Web Performance Optimization",
-        "CDN (Content Delivery Network)"
+        "What is HTML",
+        "HTML Document Structure",
+        "HTTP and Web Security Basics"
       ],
-      "seo_id": 3,
+      "seo_id": 2,
       "is_active": true,
       "order_index": 2,
       "created_at": null,
@@ -358,311 +426,99 @@
       "technology_id": 1,
       "module_id": 1,
       "topic_id": 1,
-      "slug": "html-document-structure",
-      "title": "HTML Document Structure",
-      "description": "Every valid HTML page follows a required document structure: a DOCTYPE declaration, an html root element, a head section for information, and a body section for visible content. Breaking from this structure causes browsers to enter quirks mode and produce unpredictable rendering.",
-      "examples": [
-        {
-          "title": "Complete Valid HTML Document",
-          "description": "The standard structure every HTML page must follow. Each element at this level has a specific, required role. This is not a template to modify casually. It is the standard agreement between your document and the browser.",
-          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <!-- Information: invisible to users, essential for browsers and search engines -->\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta name=\"description\" content=\"A short page description for search engines (150-160 characters)\">\n    <title>Page Title Shown in Browser Tab</title>\n\n    <!-- External resources loaded before body renders -->\n    <link rel=\"stylesheet\" href=\"styles.css\">\n    <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">\n</head>\n<body>\n    <!-- All visible page content goes here -->\n    <header>\n        <h1>Page Heading</h1>\n    </header>\n    <main>\n        <p>Main content area.</p>\n    </main>\n    <footer>\n        <p>Footer content.</p>\n    </footer>\n\n    <!-- Scripts loaded after body content to avoid blocking rendering -->\n    <script src=\"app.js\" defer></script>\n</body>\n</html>",
-          "output": "A fully valid HTML page. The browser tab shows 'Page Title Shown in Browser Tab'. The page renders a header, main content area, and footer. The stylesheet is applied before the body renders, so there is no flash of unstyled content.",
-          "images": null,
-          "video_url": null
-        }
-      ],
-      "image_banner_url": null,
-      "images": null,
-      "video_url": null,
-      "when_to_use": [
-        {
-          "point": "Every HTML file you create must follow this exact structure. There are no exceptions for production code."
-        },
-        {
-          "point": "When creating HTML email templates, use a simplified version of this structure (email clients have strict, non-standard HTML support)."
-        },
-        {
-          "point": "When generating HTML dynamically from a server-side language, always wrap output in this full document structure."
-        }
-      ],
-      "when_to_avoid": [
-        {
-          "point": "Never leave out the DOCTYPE. Its absence triggers browser quirks mode, which causes layout bugs that are extremely difficult to debug."
-        },
-        {
-          "point": "Never put visible content inside the head element. Only information, link tags, and script references belong there."
-        },
-        {
-          "point": "Never place link or meta elements inside the body. While some browsers tolerate this, it is invalid HTML and may cause rendering inconsistencies."
-        },
-        {
-          "point": "Do not use multiple h1 elements at the document level. One h1 per page is the SEO and accessibility standard."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of the HTML document structure like a formal letter. The head is the letterhead and address block at the top. It contains identifying information (title, meta) and instructions (charset, viewport) but is not the message itself. The body is the actual letter content that the person reads."
-        },
-        {
-          "model": "The DOCTYPE declaration is like a format indicator on a file. It tells the application (browser) which rules to follow when reading the file. Without it, the browser falls back to old assumptions that may be decades outdated."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Leaving out the charset meta tag. Without UTF-8 charset declaration, special characters like accented letters, quotes, and emoji may render as broken symbols."
-        },
-        {
-          "mistake": "Forgetting the viewport meta tag. Without it, mobile browsers render pages at desktop width and then scale them down, making text unreadably small on phones."
-        },
-        {
-          "mistake": "Putting the title tag outside the head element. Some browsers will still render it, but it is invalid HTML and breaks document structure."
-        },
-        {
-          "mistake": "Placing script tags in the head without defer or async. This blocks HTML parsing, meaning the browser stops building the page until the script downloads and runs."
-        },
-        {
-          "mistake": "Using a non-descriptive or duplicate title. The title tag is the most visible SEO signal. Generic titles like 'Home' or 'Page 1' harm both search ranking and usability."
-        },
-        {
-          "mistake": "Forgetting the lang attribute on the html element. Screen readers use this to select the correct language and pronunciation."
-        }
-      ],
-      "bonus_tips": [
-        {
-          "tip": "The meta description tag does not directly affect search ranking, but it controls the text snippet shown in search results. A well-written description improves click-through rates."
-        },
-        {
-          "tip": "You can add a theme-color meta tag to control the browser chrome color on mobile: <meta name='theme-color' content='#2563eb'>."
-        },
-        {
-          "tip": "The defer attribute on script tags tells the browser to download the script in parallel with HTML parsing but only run it after parsing is complete. It is almost always the correct choice for scripts that do not need to run immediately."
-        },
-        {
-          "tip": "Favicons are not just decorative. Browsers request favicon.ico automatically on every page load. A missing favicon generates a 404 request that appears in server logs and slightly increases load time."
-        }
-      ],
-      "related_topics": [
-        "HTML Meta Tags",
-        "HTML head Element",
-        "HTML Semantic Elements",
-        "Web Performance",
-        "SEO Fundamentals",
-        "Responsive Web Design"
-      ],
-      "seo_id": 4,
-      "is_active": true,
-      "order_index": 3,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": 4,
-      "roadmap_id": 1,
-      "technology_id": 1,
-      "module_id": 1,
-      "topic_id": 1,
       "slug": "html-css-javascript-separation-of-concerns",
       "title": "HTML, CSS & JavaScript: Separation of Concerns",
-      "description": "HTML, CSS, and JavaScript each serve a separate, non-overlapping role in web development. HTML defines structure, CSS defines presentation, and JavaScript defines behavior. Mixing these layers in a single file creates code that is hard to maintain, hard to debug, and impossible to scale.",
+      "description": "Separation of concerns keeps HTML structure, CSS presentation, and JS behavior in separate layers.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Separation of concerns is a core web development principle. "
+            },
+            {
+              "value": "HTML",
+              "bold": true
+            },
+            {
+              "value": " defines what content is. "
+            },
+            {
+              "value": "CSS",
+              "bold": true
+            },
+            {
+              "value": " defines how it looks. "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true
+            },
+            {
+              "value": " defines how it behaves. Keeping these in separate files makes code easier to maintain, test, and hand off to teammates. Read the official "
+            },
+            {
+              "value": "CSS specification",
+              "link": "https://www.w3.org/Style/CSS/"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "JavaScript reference",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": " to understand each layer in depth."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "warning",
+          "title": "Why It Matters",
+          "text": "Mixing CSS and JS inside HTML files works in demos but creates unmaintainable code at scale. A designer can update a CSS file without touching HTML. A developer can update JS without breaking styles."
+        }
+      ],
       "examples": [
         {
-          "title": "Correct Separation vs Common Violations",
-          "description": "Comparing the wrong approach (mixing concerns) with the correct approach (separating them into dedicated files and using clean HTML hooks like classes and IDs).",
-          "code_snippet": "<!-- ❌ WRONG: Mixing all three concerns in HTML -->\n<p\n  style=\"color: red; font-weight: bold;\"\n  onclick=\"this.style.display='none'\"\n>\n  Click to hide me\n</p>\n\n\n<!-- ✅ CORRECT: Clean HTML with semantic class and ID -->\n<!-- HTML: structure and meaning only -->\n<p class=\"warning-text\" id=\"dismissible-notice\">\n  Click to hide me\n</p>\n\n/* CSS (styles.css): presentation only */\n.warning-text {\n    color: red;\n    font-weight: bold;\n}\n\n// JavaScript (app.js): behavior only\nconst notice = document.getElementById('dismissible-notice');\nnotice.addEventListener('click', () => {\n    notice.style.display = 'none';\n});",
-          "output": "Both examples produce identical visual output and behavior. A red bold paragraph that disappears when clicked. The difference is entirely in maintainability. The correct version allows you to change the color in one CSS file across all pages, change the behavior in one JS file, and keep HTML focused purely on content.",
+          "title": "Separation of Concerns: Wrong vs Right",
+          "description": "This example contrasts the wrong approach of mixing all three layers inside one HTML file with the correct approach of separating them. The output is identical but the correct version is maintainable, cacheable, and team-friendly.",
+          "code_snippet": "<!-- ============================================\n     WRONG: Everything mixed in one HTML file\n     Hard to maintain, cannot be cached, teammates\n     stepping on each other's changes.\n============================================ -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head><title>Mixed (Wrong)</title></head>\n<body>\n  <h1 style=\"color: #2563eb; font-size: 2rem;\">Dashboard</h1>\n  <button\n    style=\"background:#16a34a; color:white; padding:0.5rem 1rem; border:none; border-radius:6px;\"\n    onclick=\"document.getElementById('msg').textContent='Saved!';\">\n    Save\n  </button>\n  <p id=\"msg\"></p>\n</body>\n</html>\n\n\n<!-- ============================================\n     RIGHT: Three separate files, same output\n============================================ -->\n\n<!-- index.html: structure only -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Dashboard</title>\n  <link rel=\"stylesheet\" href=\"styles.css\">   <!-- CSS linked externally -->\n</head>\n<body>\n  <h1>Dashboard</h1>\n  <button id=\"saveBtn\">Save</button>\n  <p id=\"msg\"></p>\n  <script src=\"app.js\" defer></script>         <!-- JS linked externally -->\n</body>\n</html>\n\n/* styles.css: presentation only */\nh1 {\n  color: #2563eb;\n  font-size: 2rem;\n}\n#saveBtn {\n  background: #16a34a;\n  color: white;\n  padding: 0.5rem 1rem;\n  border: none;\n  border-radius: 6px;\n  cursor: pointer;\n}\n\n// app.js: behavior only\nconst btn = document.getElementById('saveBtn');\nconst msg = document.getElementById('msg');\nbtn.addEventListener('click', () => {\n  msg.textContent = 'Saved!';\n});",
+          "output": "Both versions render identically: a blue heading, a green Save button, and an empty message paragraph. Clicking Save shows 'Saved!'. The right version allows a designer to update styles.css, a developer to update app.js, and a content writer to update index.html, all without interfering with each other.",
           "images": null,
           "video_url": null
         }
       ],
-      "image_banner_url": null,
+      "image_banner_url": "https://imgs.search.brave.com/OlsEKLcVHcOMtcB1-I0fnpBa7M-ruCRukhZmckPHxOQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b25saW5lLnVjLmVk/dS9jb250ZW50L2Rh/bS9yZWZyZXNoL29u/bGluZS9XaGF0LUlz/LUlULUJsb2ctSW5m/b2dyYXBoaWMtSG93/LXRvLUJyZWFrLWlu/dG8tSVQtRmllbGQu/anBn",
       "images": null,
       "video_url": null,
-      "when_to_use": [
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
         {
-          "point": "Always maintain this separation in any project with more than one HTML page."
+          "model": "Separation of concerns is like a restaurant kitchen. The chef (HTML) decides what dishes are on the menu. The plating team (CSS) decides how each dish looks on the plate. The waitstaff (JavaScript) handles interactions with the customer. If the chef starts plating dishes, or the waitstaff starts cooking, the kitchen breaks down. Each role exists for a reason."
         },
         {
-          "point": "Use external CSS files so styles can be shared, cached, and updated across all pages from one location."
-        },
-        {
-          "point": "Use external JavaScript files so behavior logic is testable, reusable, and independent of markup."
-        },
-        {
-          "point": "Apply this separation even in small projects. Habits built on small projects carry into large ones."
+          "model": "External CSS and JS files are cached by the browser after the first visit. On every subsequent page load, the browser reuses the cached files instead of re-downloading them. Inline styles and scripts cannot be cached because they are embedded in a different HTML file on every page, multiplying the data each visitor downloads."
         }
       ],
-      "when_to_avoid": [
-        {
-          "point": "Inline styles (style attribute) are acceptable only for dynamically calculated values that JavaScript sets at runtime, not for static design decisions."
-        },
-        {
-          "point": "A single self-contained HTML file for a shareable demo or prototype (such as a CodePen export) may combine all three for portability. But this is an exception, not a practice."
-        },
-        {
-          "point": "Do not use this separation as justification for moving all JS into a separate file when a small script tag in the body is simpler for a genuinely one-page tool."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of a restaurant. The chef decides what food exists and how it is made (HTML). The interior designer decides how the restaurant looks, colors, furniture, lighting (CSS). The waiter manages interaction, taking orders, delivering food, responding to requests (JavaScript). Each has a separate role. A chef who also chooses the paint colors and seats customers creates chaos."
-        },
-        {
-          "model": "HTML is a noun. It names things. CSS is an adjective. It describes how things look. JavaScript is a verb. It defines what things do. Mixing parts of speech in one place produces unclear language."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Using style attributes for all styling because it feels faster. This removes the ability to change styles globally and makes every element its own isolated styling problem."
-        },
-        {
-          "mistake": "Writing onclick handlers directly in HTML. These cannot be centrally managed, removed, or tested. They also create security risks by making inline script injection easier."
-        },
-        {
-          "mistake": "Thinking that CSS-in-JS frameworks violate separation of concerns. They do not. They co-locate styles with components logically, while still keeping style logic separate from HTML structure and application behavior."
-        },
-        {
-          "mistake": "Forgetting that separation of concerns applies within each layer too. CSS should be organized by component, JavaScript should be modular, and HTML should not repeat structural patterns manually."
-        },
-        {
-          "mistake": "Over-correcting by putting all logic in JavaScript and generating HTML dynamically for content that should be static. This harms SEO and initial load performance."
-        }
-      ],
+      "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "External CSS and JS files are cached by the browser after the first load. A user visiting your second page will not re-download them, making later pages load faster."
-        },
-        {
-          "tip": "CSS custom properties (variables) blur the line between HTML data and CSS presentation in a controlled, intentional way. This is a feature, not a violation of separation of concerns."
-        },
-        {
-          "tip": "Linters like ESLint and Stylelint can automatically detect when JavaScript is being written inside HTML and when CSS logic is being duplicated. Integrate them early."
+          "tip": "In modern frameworks like React, Vue, and Svelte, components appear to mix HTML, CSS, and JS in one file. This is still separation of concerns at the component level: each component owns its own structure, styles, and behavior as a self-contained unit. The principle scales from file-level to component-level separation."
         }
       ],
       "related_topics": [
-        "CSS Introduction",
-        "JavaScript Introduction",
-        "HTML Semantic Elements",
-        "Web Performance",
-        "Component Architecture"
+        "What is HTML",
+        "How the Web Works",
+        "CSS Fundamentals",
+        "JavaScript Basics"
       ],
-      "seo_id": 5,
+      "seo_id": 3,
       "is_active": true,
-      "order_index": 4,
-      "created_at": null,
-      "updated_at": null
-    },
-    {
-      "id": 5,
-      "roadmap_id": 1,
-      "technology_id": 1,
-      "module_id": 1,
-      "topic_id": 1,
-      "slug": "html-accessibility-security-performance",
-      "title": "Accessibility, Security & Performance in HTML",
-      "description": "Writing valid, proper HTML is not just about correct rendering. It directly affects who can access your content, how secure your pages are against attacks, and how fast they load. These are production concerns, not optional improvements.",
-      "examples": [
-        {
-          "title": "Accessible Form with Security and Performance Best Practices",
-          "description": "A contact form implementing accessible labels, proper input types, secure external link attributes, and performance-optimized image loading, all in one realistic example.",
-          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Contact Us - EcoBottle</title>\n    <!-- Performance: preload critical image -->\n    <link rel=\"preload\" href=\"hero.jpg\" as=\"image\">\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <main>\n        <!-- Performance: lazy load below-fold image -->\n        <img\n            src=\"hero.jpg\"\n            alt=\"Stainless steel water bottle on a mountain trail\"\n            loading=\"lazy\"\n            width=\"800\"\n            height=\"400\"\n        >\n\n        <!-- Security: noopener on external links -->\n        <a\n            href=\"https://external-partner.com\"\n            target=\"_blank\"\n            rel=\"noopener noreferrer\"\n        >View Partner Site</a>\n\n        <!-- Accessibility: labeled, typed form inputs -->\n        <form action=\"/submit\" method=\"POST\">\n            <label for=\"email\">Email Address</label>\n            <input\n                type=\"email\"\n                id=\"email\"\n                name=\"email\"\n                required\n                autocomplete=\"email\"\n                aria-describedby=\"email-hint\"\n            >\n            <p id=\"email-hint\">We will never share your email.</p>\n\n            <label for=\"message\">Your Message</label>\n            <textarea\n                id=\"message\"\n                name=\"message\"\n                required\n                rows=\"5\"\n            ></textarea>\n\n            <button type=\"submit\">Send Message</button>\n        </form>\n    </main>\n\n    <script src=\"app.js\" defer></script>\n</body>\n</html>",
-          "output": "A fully accessible, secure, and performance-optimized contact page. Screen readers announce 'Email Address' before the input field and read the hint text. The external link cannot hijack the parent window. The image below the fold does not block initial page load. The form validates email format before submission.",
-          "images": null,
-          "video_url": null
-        }
-      ],
-      "image_banner_url": null,
-      "images": null,
-      "video_url": null,
-      "when_to_use": [
-        {
-          "point": "Apply accessibility practices to every HTML page, not just pages you think disabled users will visit."
-        },
-        {
-          "point": "Apply security attributes (rel='noopener noreferrer') to every external link that opens in a new tab, without exception."
-        },
-        {
-          "point": "Use loading='lazy' on all images that are not in the initial viewport (above the fold)."
-        },
-        {
-          "point": "Specify width and height attributes on all img elements to prevent layout shift during page load."
-        },
-        {
-          "point": "Use defer on all script tags that do not need to run before the page renders."
-        }
-      ],
-      "when_to_avoid": [
-        {
-          "point": "Do not use aria-label as a substitute for missing proper HTML. Fix the HTML structure first, then add ARIA only where native meaning is insufficient."
-        },
-        {
-          "point": "Do not apply loading='lazy' to the hero image or any image visible on initial load. Lazy loading above-the-fold images delays their appearance and hurts performance."
-        },
-        {
-          "point": "Do not rely on HTML5 form validation alone. It is a UX convenience only. Always validate and sanitize all input server-side before processing or storing it."
-        },
-        {
-          "point": "Do not add rel='noopener' to same-origin links or links that do not use target='_blank'. It has no security benefit in those contexts."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of accessibility like building entrance ramps alongside staircases. You are not building a different building for different users. You are making the same building usable by everyone. Proper HTML and proper labels are the ramps of web content."
-        },
-        {
-          "model": "Security in HTML is about controlling what gets in. Your HTML is a door. rel='noopener' is a lock on the window, alt text escaping is a filter on the keyhole. Most HTML security vulnerabilities come from treating untrusted content as trusted."
-        },
-        {
-          "model": "Performance in HTML is about controlling what gets loaded and when. Think of the initial page load like the critical path in a project timeline. Any resource on the critical path delays delivery. Defer and lazy loading move non-critical resources off the critical path."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Skipping alt text on images because 'sighted users do not need it'. Alt text also appears when images fail to load and is used by search engines for image indexing."
-        },
-        {
-          "mistake": "Using placeholder text as a label substitute. Placeholder disappears when the user starts typing, leaving them unable to remember what the field is for."
-        },
-        {
-          "mistake": "Not setting width and height on images. This causes layout shift that makes pages feel broken and hurts Core Web Vitals scores used in Google search ranking."
-        },
-        {
-          "mistake": "Using onclick attributes in HTML for navigation. This breaks keyboard-only navigation and is incompatible with screen readers. Use proper anchor tags with href instead."
-        },
-        {
-          "mistake": "Skipping rel='noopener' on external links. This is a security vulnerability present in the majority of websites and is trivially easy to fix."
-        },
-        {
-          "mistake": "Trusting HTML5 form validation as a security measure. The required, type, and pattern attributes can be bypassed by anyone with browser DevTools. They are UX features only."
-        }
-      ],
-      "bonus_tips": [
-        {
-          "tip": "Run your HTML through the WAVE Web Accessibility Evaluation Tool (wave.webaim.org). It identifies missing labels, low contrast issues, and missing alt text automatically."
-        },
-        {
-          "tip": "Core Web Vitals (LCP, CLS, FID) are Google's ranking signals and they are directly affected by HTML decisions. Image dimensions, script loading strategy, and DOM size all contribute."
-        },
-        {
-          "tip": "The prefers-reduced-motion media query in CSS and respectful use of autoplay attributes in HTML can significantly improve the experience for users with vestibular disorders."
-        },
-        {
-          "tip": "WCAG 2.1 AA compliance is a legal requirement in many jurisdictions, including the EU (under the European Accessibility Act) and the US (under ADA guidance for digital content)."
-        }
-      ],
-      "related_topics": [
-        "Web Accessibility (WCAG)",
-        "HTML ARIA Attributes",
-        "XSS (Cross-Site Scripting)",
-        "Core Web Vitals",
-        "HTML Forms & Inputs",
-        "Content Security Policy (CSP)"
-      ],
-      "seo_id": 6,
-      "is_active": true,
-      "order_index": 5,
+      "order_index": 3,
       "created_at": null,
       "updated_at": null
     }
@@ -670,110 +526,74 @@
   "seo_metadata": [
     {
       "id": 1,
-      "meta_title": "HTML Introduction & Web Basics - Complete Beginner's Guide",
-      "meta_description": "Learn what HTML is, how the web works, and understand the foundation of web development. Complete guide covering HTML structure, browser requests, DNS, HTTP, and separation of concerns.",
+      "meta_title": "HTML Introduction & Web Basics | Beginner Guide",
+      "meta_description": "Learn what HTML is, how the web works, and the roles of HTML, CSS, and JavaScript. Beginner-friendly guide with real examples and production best practices.",
       "keywords": [
-        "HTML tutorial",
+        "HTML introduction",
         "what is HTML",
         "how the web works",
+        "HTML CSS JavaScript",
+        "separation of concerns",
+        "web basics",
         "HTML for beginners",
-        "web development basics",
-        "HTML introduction",
-        "HTML structure",
-        "learn HTML",
-        "HTML fundamentals",
-        "web page structure"
+        "HTTP request response",
+        "web browser rendering",
+        "HTML fundamentals"
       ],
-      "canonical_url": "/html/introduction-web-basics",
+      "canonical_url": "/html/html-introduction-web-basics",
+      "robots": "index, follow"
+    },
+    {
+      "id": 1,
+      "meta_title": "What is HTML? Tags, Elements, and Attributes",
+      "meta_description": "Learn what HTML is, how tags and elements work, the difference between void and container elements, and where to find the official HTML specification.",
+      "keywords": [
+        "what is HTML",
+        "HTML tags",
+        "HTML elements",
+        "HTML attributes",
+        "HTML void elements",
+        "HTML markup language",
+        "HTML basics",
+        "HTML opening closing tags",
+        "HyperText Markup Language"
+      ],
+      "canonical_url": "/html/html-introduction-web-basics/what-is-html",
       "robots": "index, follow"
     },
     {
       "id": 2,
-      "meta_title": "What is HTML? Understanding HyperText Markup Language",
-      "meta_description": "HTML (HyperText Markup Language) is the markup language that structures web content. Learn what HTML is, how it works, and why it's essential for web development.",
+      "meta_title": "How the Web Works | HTTP, DNS, and Browsers",
+      "meta_description": "Understand how the web works: DNS lookup, HTTP requests, server responses, and browser rendering. Includes HTTP status codes and the request-response cycle explained.",
       "keywords": [
-        "what is HTML",
-        "HTML definition",
-        "HyperText Markup Language",
-        "HTML basics",
-        "HTML explained",
-        "HTML tutorial for beginners",
-        "HTML elements",
-        "HTML tags"
+        "how the web works",
+        "HTTP request response",
+        "DNS lookup",
+        "web browser rendering",
+        "HTTP status codes",
+        "client server model",
+        "URL to webpage",
+        "web server HTML",
+        "browser network request"
       ],
-      "canonical_url": "/html/what-is-html",
+      "canonical_url": "/html/html-introduction-web-basics/how-the-web-works",
       "robots": "index, follow"
     },
     {
       "id": 3,
-      "meta_title": "How the Web Works - DNS, HTTP, and Browser Rendering Explained",
-      "meta_description": "Understand the complete web request cycle from typing a URL to seeing a rendered page. Learn about DNS lookup, HTTP requests, HTML parsing, and how browsers work.",
+      "meta_title": "HTML CSS JavaScript Separation of Concerns",
+      "meta_description": "Learn why separating HTML structure, CSS styling, and JavaScript behavior into distinct layers produces maintainable, scalable, and team-friendly web projects.",
       "keywords": [
-        "how the web works",
-        "web request cycle",
-        "DNS lookup",
-        "HTTP request",
-        "browser rendering",
-        "how browsers work",
-        "web fundamentals",
-        "HTTP response",
-        "client-server architecture"
+        "separation of concerns HTML",
+        "HTML CSS JavaScript roles",
+        "inline CSS vs external CSS",
+        "HTML structure CSS style JS behavior",
+        "web development layers",
+        "external stylesheet HTML",
+        "maintainable HTML",
+        "HTML best practices"
       ],
-      "canonical_url": "/html/how-the-web-works",
-      "robots": "index, follow"
-    },
-    {
-      "id": 4,
-      "meta_title": "HTML Document Structure - DOCTYPE, Head, and Body Explained",
-      "meta_description": "Learn the required HTML document structure including DOCTYPE, html element, head section, and body section. Understand meta tags, viewport, and proper HTML organization.",
-      "keywords": [
-        "HTML document structure",
-        "HTML DOCTYPE",
-        "HTML head element",
-        "HTML body element",
-        "HTML meta tags",
-        "viewport meta tag",
-        "charset declaration",
-        "HTML page structure",
-        "valid HTML document"
-      ],
-      "canonical_url": "/html/document-structure",
-      "robots": "index, follow"
-    },
-    {
-      "id": 5,
-      "meta_title": "Separation of Concerns - HTML, CSS, and JavaScript Explained",
-      "meta_description": "Understand why HTML, CSS, and JavaScript should be separated. Learn best practices for organizing structure, presentation, and behavior in web development.",
-      "keywords": [
-        "separation of concerns",
-        "HTML CSS JavaScript",
-        "web development best practices",
-        "external CSS",
-        "external JavaScript",
-        "maintainable code",
-        "HTML structure",
-        "CSS presentation",
-        "JavaScript behavior"
-      ],
-      "canonical_url": "/html/separation-of-concerns",
-      "robots": "index, follow"
-    },
-    {
-      "id": 6,
-      "meta_title": "HTML Accessibility, Security & Performance Best Practices",
-      "meta_description": "Learn essential HTML accessibility, security, and performance practices. Covers WCAG compliance, XSS prevention, Core Web Vitals, and production-ready HTML.",
-      "keywords": [
-        "HTML accessibility",
-        "web accessibility WCAG",
-        "HTML security",
-        "XSS prevention",
-        "HTML performance",
-        "Core Web Vitals",
-        "accessible forms",
-        "semantic HTML",
-        "web performance optimization"
-      ],
-      "canonical_url": "/html/accessibility-security-performance",
+      "canonical_url": "/html/html-introduction-web-basics/html-css-javascript-separation-of-concerns",
       "robots": "index, follow"
     }
   ]

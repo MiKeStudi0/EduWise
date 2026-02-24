@@ -25,6 +25,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from typing import Any
 
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
@@ -36,13 +37,20 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     sys.exit("❌  DATABASE_URL not set. Add it to your .env file.")
 
-DEFAULT_JSON = Path(__file__).parent.parent / "json" / "frontend" / "html" / "topics_5.json"
+DEFAULT_JSON = Path(__file__).parent.parent / "json" / "frontend" / "html" / "topics.json"
 
 # ── JSON fields that map to DB JSON columns ───────────────────────────────────
-JSON_COLUMNS = [
-    "examples", "images", "when_to_use", "when_to_avoid",
-    "problems", "mental_models", "common_mistakes",
-    "bonus_tips", "related_topics",
+DB_JSON_COLUMNS = [
+    "content",
+    "examples",
+    "images",
+    "when_to_use",
+    "when_to_avoid",
+    "problems",
+    "mental_models",
+    "common_mistakes",
+    "bonus_tips",
+    "related_topics",
 ]
 
 
@@ -59,6 +67,163 @@ def row_exists(session: Session, table: str, column: str, value) -> bool:
         {column: value},
     ).fetchone()
     return row is not None
+
+
+def _normalize_problem_items(value: Any) -> list[dict[str, str]] | None:
+    """
+    Normalize source content into:
+      [{"problem": "..."}]
+
+    Supported source forms:
+      - [{"problem": "..."}]
+      - [{"1": "..."}]  # from `what_it_solves`
+      - ["..."]
+    """
+    if not isinstance(value, list):
+        return None
+
+    normalized: list[dict[str, str]] = []
+    for item in value:
+        if isinstance(item, str):
+            text_value = item.strip()
+            if text_value:
+                normalized.append({"problem": text_value})
+            continue
+
+        if not isinstance(item, dict):
+            continue
+
+        if isinstance(item.get("problem"), str):
+            text_value = item["problem"].strip()
+            if text_value:
+                normalized.append({"problem": text_value})
+            continue
+
+        for raw in item.values():
+            if isinstance(raw, str):
+                text_value = raw.strip()
+                if text_value:
+                    normalized.append({"problem": text_value})
+                break
+
+    return normalized or None
+
+
+def _normalize_model_items(value: Any) -> list[dict[str, str]] | None:
+    """
+    Normalize source content into:
+      [{"model": "..."}]
+
+    Supported source forms:
+      - [{"model": "..."}]
+      - ["..."]
+    """
+    if not isinstance(value, list):
+        return None
+
+    normalized: list[dict[str, str]] = []
+    for item in value:
+        if isinstance(item, str):
+            text_value = item.strip()
+            if text_value:
+                normalized.append({"model": text_value})
+            continue
+
+        if not isinstance(item, dict):
+            continue
+
+        if isinstance(item.get("model"), str):
+            text_value = item["model"].strip()
+            if text_value:
+                normalized.append({"model": text_value})
+            continue
+
+        for raw in item.values():
+            if isinstance(raw, str):
+                text_value = raw.strip()
+                if text_value:
+                    normalized.append({"model": text_value})
+                break
+
+    return normalized or None
+
+
+def _jsonb(value: Any) -> str | None:
+    return json.dumps(value) if value is not None else None
+
+
+def build_json_values(payload: dict) -> dict[str, str | None]:
+    """
+    Build JSONB payloads while preserving source JSON naming.
+
+    Mapping:
+      - `what_it_solves` -> DB `problems`
+      - `conceptual_understanding` -> DB `mental_models`
+    """
+    problems_source = payload.get("problems")
+    if problems_source is None:
+        problems_source = payload.get("what_it_solves")
+
+    models_source = payload.get("mental_models")
+    if models_source is None:
+        models_source = payload.get("conceptual_understanding")
+
+    normalized_payload = {
+        "content": payload.get("content"),
+        "examples": payload.get("examples"),
+        "images": payload.get("images"),
+        "when_to_use": payload.get("when_to_use"),
+        "when_to_avoid": payload.get("when_to_avoid"),
+        "problems": _normalize_problem_items(problems_source),
+        "mental_models": _normalize_model_items(models_source),
+        "common_mistakes": payload.get("common_mistakes"),
+        "bonus_tips": payload.get("bonus_tips"),
+        "related_topics": payload.get("related_topics"),
+    }
+
+    return {col: _jsonb(normalized_payload.get(col)) for col in DB_JSON_COLUMNS}
+
+
+def _normalize_canonical_path(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    return value.strip().strip("/").lower()
+
+
+def find_matching_seo(
+    seo_meta: list[dict],
+    seo_id: int | None,
+    slug: str | None,
+    parent_slug: str | None = None,
+) -> dict | None:
+    """
+    Resolve SEO rows robustly when IDs are duplicated in JSON.
+    Prefers canonical_url matching by slug path.
+    """
+    normalized_slug = (slug or "").strip().strip("/").lower()
+    normalized_parent_slug = (parent_slug or "").strip().strip("/").lower()
+
+    target_suffixes = [normalized_slug] if normalized_slug else []
+    if normalized_slug and normalized_parent_slug:
+        target_suffixes.insert(0, f"{normalized_parent_slug}/{normalized_slug}")
+
+    def canonical_matches(seo: dict) -> bool:
+        canonical = _normalize_canonical_path(seo.get("canonical_url"))
+        return any(canonical.endswith(suffix) for suffix in target_suffixes)
+
+    candidates = [seo for seo in seo_meta if seo.get("id") == seo_id] if seo_id is not None else []
+    for seo in candidates:
+        if canonical_matches(seo):
+            return seo
+
+    if candidates:
+        return candidates[0]
+
+    for seo in seo_meta:
+        if canonical_matches(seo):
+            return seo
+
+    return None
 
 
 def insert_seo(session: Session, seo: dict) -> int:
@@ -106,11 +271,7 @@ def insert_seo(session: Session, seo: dict) -> int:
 
 
 def insert_topic(session: Session, topic: dict, seo_id: int | None) -> int:
-    # Serialise JSON column values
-    json_values = {
-        col: json.dumps(topic[col]) if topic.get(col) is not None else None
-        for col in JSON_COLUMNS
-    }
+    json_values = build_json_values(topic)
 
     result = session.execute(
         text("""
@@ -118,7 +279,7 @@ def insert_topic(session: Session, topic: dict, seo_id: int | None) -> int:
                 roadmap_id, technology_id, module_id,
                 slug, title, description,
                 is_active, order_index, seo_id,
-                examples, image_banner_url, images, video_url,
+                content, examples, image_banner_url, images, video_url,
                 when_to_use, when_to_avoid, problems,
                 mental_models, common_mistakes, bonus_tips, related_topics,
                 created_at, updated_at
@@ -126,7 +287,7 @@ def insert_topic(session: Session, topic: dict, seo_id: int | None) -> int:
                 :roadmap_id, :technology_id, :module_id,
                 :slug, :title, :description,
                 :is_active, :order_index, :seo_id,
-                CAST(:examples AS jsonb), :image_banner_url, CAST(:images AS jsonb), :video_url,
+                CAST(:content AS jsonb), CAST(:examples AS jsonb), :image_banner_url, CAST(:images AS jsonb), :video_url,
                 CAST(:when_to_use AS jsonb), CAST(:when_to_avoid AS jsonb), CAST(:problems AS jsonb),
                 CAST(:mental_models AS jsonb), CAST(:common_mistakes AS jsonb), CAST(:bonus_tips AS jsonb), CAST(:related_topics AS jsonb),
                 NOW(), NOW()
@@ -152,10 +313,7 @@ def insert_topic(session: Session, topic: dict, seo_id: int | None) -> int:
 
 
 def insert_subtopic(session: Session, st: dict, seo_id: int | None, topic_id: int) -> int:
-    json_values = {
-        col: json.dumps(st[col]) if st.get(col) is not None else None
-        for col in JSON_COLUMNS
-    }
+    json_values = build_json_values(st)
 
     result = session.execute(
         text("""
@@ -163,7 +321,7 @@ def insert_subtopic(session: Session, st: dict, seo_id: int | None, topic_id: in
                 roadmap_id, technology_id, module_id, topic_id,
                 slug, title, description,
                 is_active, order_index, seo_id,
-                examples, image_banner_url, images, video_url,
+                content, examples, image_banner_url, images, video_url,
                 when_to_use, when_to_avoid, problems,
                 mental_models, common_mistakes, bonus_tips, related_topics,
                 created_at, updated_at
@@ -171,7 +329,7 @@ def insert_subtopic(session: Session, st: dict, seo_id: int | None, topic_id: in
                 :roadmap_id, :technology_id, :module_id, :topic_id,
                 :slug, :title, :description,
                 :is_active, :order_index, :seo_id,
-                CAST(:examples AS jsonb), :image_banner_url, CAST(:images AS jsonb), :video_url,
+                CAST(:content AS jsonb), CAST(:examples AS jsonb), :image_banner_url, CAST(:images AS jsonb), :video_url,
                 CAST(:when_to_use AS jsonb), CAST(:when_to_avoid AS jsonb), CAST(:problems AS jsonb),
                 CAST(:mental_models AS jsonb), CAST(:common_mistakes AS jsonb), CAST(:bonus_tips AS jsonb), CAST(:related_topics AS jsonb),
                 NOW(), NOW()
@@ -258,8 +416,11 @@ def main() -> None:
     print(f"📋  Found topic '{topic['title']}' and {len(subtopics)} subtopics in {json_path.name}\n")
 
     # Match SEO record to the topic by id
-    topic_seo_id = topic.get("seo_id")    
-    topic_seo = next((seo for seo in seo_meta if seo.get("id") == topic_seo_id), None)
+    topic_seo = find_matching_seo(
+        seo_meta=seo_meta,
+        seo_id=topic.get("seo_id"),
+        slug=topic.get("slug"),
+    )
     
     # ── Dry run ──────────────────────────────────────────────────────────────
     if args.dry_run:
@@ -275,8 +436,12 @@ def main() -> None:
         
         print(f"\n── SUBTOPICS ──────────────────────────────────────────────────")
         for i, st in enumerate(subtopics, 1):
-            st_seo_id = st.get("seo_id")
-            st_seo = next((seo for seo in seo_meta if seo.get("id") == st_seo_id), None)
+            st_seo = find_matching_seo(
+                seo_meta=seo_meta,
+                seo_id=st.get("seo_id"),
+                slug=st.get("slug"),
+                parent_slug=topic.get("slug"),
+            )
             print(
                 f"  [{i:03d}] topic_id=TBD | "
                 f"mod={st['module_id']:02d} | "
@@ -309,11 +474,9 @@ def main() -> None:
         slug = topic["slug"]
 
         tid = None
-        topic_exists = False
         if row_exists(session, "topics", "slug", slug):
             print(f"  ⏭️  Skip TOPIC '{topic['title']}' — slug already exists.")
             t_skipped += 1
-            topic_exists = True
             # Need the existing topic id for subtopics
             existing_t = session.execute(
                 text("SELECT id FROM topics WHERE slug = :slug"),
@@ -332,6 +495,9 @@ def main() -> None:
                     f"  seo_id={seo_id}"
                 )
                 t_inserted += 1
+                # Persist topic before subtopics so later subtopic errors
+                # cannot roll back the parent row.
+                session.commit()
 
             except Exception as exc:
                 print(f"  ❌  Error on TOPIC '{topic['title']}': {exc}")
@@ -350,11 +516,18 @@ def main() -> None:
                     continue
                     
                 try:
-                    st_seo_id = st.get("seo_id")
-                    st_seo = next((seo for seo in seo_meta if seo.get("id") == st_seo_id), None)
-                    
-                    seo_id = insert_seo(session, st_seo) if st_seo else None
-                    stid   = insert_subtopic(session, st, seo_id, tid)
+                    # Isolate each subtopic write so failures don't poison
+                    # the outer transaction or rollback prior successful inserts.
+                    with session.begin_nested():
+                        st_seo = find_matching_seo(
+                            seo_meta=seo_meta,
+                            seo_id=st.get("seo_id"),
+                            slug=st.get("slug"),
+                            parent_slug=topic.get("slug"),
+                        )
+
+                        seo_id = insert_seo(session, st_seo) if st_seo else None
+                        stid = insert_subtopic(session, st, seo_id, tid)
 
                     print(
                         f"    ✅  SUBTOPIC [{stid:04d}] "
@@ -367,7 +540,6 @@ def main() -> None:
 
                 except Exception as exc:
                     print(f"    ❌  Error on SUBTOPIC '{st['title']}': {exc}")
-                    session.rollback()
                     s_errors += 1
                     continue
 

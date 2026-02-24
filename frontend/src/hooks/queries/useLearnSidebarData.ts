@@ -66,6 +66,7 @@ export function useLearnSidebarData(technologySlug: string) {
         id: topic.slug,
         title: topic.title,
         description: topic.description || "",
+        content: Array.isArray((topic as any).content) ? (topic as any).content : [],
         videoUrl: topic.video_url || "",
         imageUrl: topic.image_banner_url || (topic.images?.length > 0 ? topic.images[0] : ""),
         problem: topic.problems?.map((p: any) => p.problem) || [],

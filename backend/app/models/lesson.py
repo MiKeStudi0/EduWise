@@ -1,5 +1,6 @@
 from sqlalchemy import String, Text, ForeignKey, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from app.db.base import Base
 from app.models.base_mixins import TimestampMixin, OrderableMixin, ActiveMixin
 
@@ -7,8 +8,10 @@ from app.models.base_mixins import TimestampMixin, OrderableMixin, ActiveMixin
 class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     __tablename__ = "lessons"
 
+    # Primary key
     id: Mapped[int] = mapped_column(primary_key=True)
 
+    # Relations
     roadmap_id: Mapped[int] = mapped_column(
         ForeignKey("roadmaps.id", ondelete="CASCADE")
     )
@@ -25,16 +28,23 @@ class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
         ForeignKey("sub_topics.id", ondelete="CASCADE")
     )
 
+    # Basic info
     slug: Mapped[str] = mapped_column(String(150), index=True)
     title: Mapped[str] = mapped_column(String(255))
     description: Mapped[str | None] = mapped_column(Text)
 
+    # ⭐ MAIN LESSON CONTENT (rich blocks)
+    content: Mapped[list[dict] | None] = mapped_column(JSON)
+
+    # Examples
     examples: Mapped[list[dict] | None] = mapped_column(JSON)
 
+    # Media
     image_banner_url: Mapped[str | None] = mapped_column(String(255))
     images: Mapped[list[str] | None] = mapped_column(JSON)
     video_url: Mapped[str | None] = mapped_column(String(255))
 
+    # Learning sections
     when_to_use: Mapped[list[str] | None] = mapped_column(JSON)
     when_to_avoid: Mapped[list[str] | None] = mapped_column(JSON)
     problems: Mapped[list[str] | None] = mapped_column(JSON)
@@ -43,6 +53,7 @@ class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     bonus_tips: Mapped[list[str] | None] = mapped_column(JSON)
     related_topics: Mapped[list[str] | None] = mapped_column(JSON)
 
+    # SEO
     seo_id: Mapped[int | None] = mapped_column(
         ForeignKey("seo_metadata.id", ondelete="SET NULL")
     )

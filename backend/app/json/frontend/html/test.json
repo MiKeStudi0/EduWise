@@ -1,0 +1,73 @@
+[
+  {
+    "type": "heading",
+    "level": 1,
+    "text": "React Overview"
+  },
+
+  {
+    "type": "paragraph",
+    "text": [
+      { "value": "React uses " },
+      { "value": "Virtual DOM", "highlight": true, "bold": true },
+      { "value": " for performance. Learn more about " },
+      { "value": "HTML Meta Tags", "link": "/html/meta-tags" },
+      { "value": "." }
+    ]
+  },
+
+  {
+    "type": "callout",
+    "variant": "info",
+    "title": "Key Idea",
+    "text": "Virtual DOM minimizes direct DOM manipulation which improves performance."
+  },
+
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Advantages"
+  },
+
+  {
+    "type": "ul",
+    "items": [
+      "Fast updates",
+      "Reusable components",
+      "Large ecosystem"
+    ]
+  },
+
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Steps to start"
+  },
+
+  {
+    "type": "ol",
+    "items": [
+      "Install React",
+      "Create App",
+      "Run"
+    ]
+  },
+
+  {
+    "type": "heading",
+    "level": 2,
+    "text": "Comparison"
+  },
+
+  {
+    "type": "table",
+    "headers": ["Feature", "React", "Angular"],
+    "rows": [
+      ["DOM", "Virtual", "Real"],
+      ["Language", "JavaScript", "TypeScript"]
+    ]
+  }
+
+
+
+]

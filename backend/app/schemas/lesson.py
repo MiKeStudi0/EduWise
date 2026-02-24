@@ -1,6 +1,19 @@
 from pydantic import BaseModel, Field
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any
 from datetime import datetime
+
+
+# ---------- Block Schema (shared across Topic/SubTopic/Lesson) ----------
+class ContentBlock(BaseModel):
+    type: str
+    text: Optional[Any] = None
+    items: Optional[List[str]] = None
+    headers: Optional[List[str]] = None
+    rows: Optional[List[List[str]]] = None
+    code: Optional[str] = None
+    language: Optional[str] = None
+    title: Optional[str] = None
+    data: Optional[Dict[str, Any]] = None
 
 
 # ---------- Base ----------
@@ -14,6 +27,9 @@ class LessonBase(BaseModel):
     slug: str = Field(..., example="closure-scope-deep-dive")
     title: str
     description: Optional[str] = None
+
+    # ⭐ NEW rich lesson content
+    content: Optional[List[ContentBlock]] = None
 
     examples: Optional[List[Dict]] = None
 
@@ -44,6 +60,9 @@ class LessonUpdate(BaseModel):
     slug: Optional[str] = None
     title: Optional[str] = None
     description: Optional[str] = None
+
+    # ⭐ NEW
+    content: Optional[List[ContentBlock]] = None
 
     examples: Optional[List[Dict]] = None
     image_banner_url: Optional[str] = None

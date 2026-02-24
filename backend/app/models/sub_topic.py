@@ -1,5 +1,6 @@
 from sqlalchemy import String, Text, ForeignKey, JSON
 from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 from app.db.base import Base
 from app.models.base_mixins import TimestampMixin, OrderableMixin, ActiveMixin
 
@@ -7,8 +8,10 @@ from app.models.base_mixins import TimestampMixin, OrderableMixin, ActiveMixin
 class SubTopic(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     __tablename__ = "sub_topics"
 
+    # Primary key
     id: Mapped[int] = mapped_column(primary_key=True)
 
+    # Relations
     roadmap_id: Mapped[int] = mapped_column(
         ForeignKey("roadmaps.id", ondelete="CASCADE")
     )
@@ -22,30 +25,58 @@ class SubTopic(Base, TimestampMixin, OrderableMixin, ActiveMixin):
         ForeignKey("topics.id", ondelete="CASCADE")
     )
 
+    # Basic info
     slug: Mapped[str] = mapped_column(String(150), index=True)
     title: Mapped[str] = mapped_column(String(255))
     description: Mapped[str | None] = mapped_column(Text)
 
+    # ⭐ MAIN RICH CONTENT
+    content: Mapped[list[dict] | None] = mapped_column(JSON)
+
+    # Examples
     examples: Mapped[list[dict] | None] = mapped_column(JSON)
 
-    image_banner_url: Mapped[str | None] = mapped_column(String(255))
+    # Media
+    image_banner_url: Mapped[str | None] = mapped_column(Text)
     images: Mapped[list[str] | None] = mapped_column(JSON)
-    video_url: Mapped[str | None] = mapped_column(String(255))
+    video_url: Mapped[str | None] = mapped_column(Text)
 
-    when_to_use: Mapped[list[str] | None] = mapped_column(JSON)
-    when_to_avoid: Mapped[list[str] | None] = mapped_column(JSON)
-    problems: Mapped[list[str] | None] = mapped_column(JSON)
-    mental_models: Mapped[list[str] | None] = mapped_column(JSON)
-    common_mistakes: Mapped[list[str] | None] = mapped_column(JSON)
-    bonus_tips: Mapped[list[str] | None] = mapped_column(JSON)
+    # Learning sections
+    when_to_use: Mapped[list[dict] | None] = mapped_column(JSON)
+    when_to_avoid: Mapped[list[dict] | None] = mapped_column(JSON)
+    problems: Mapped[list[dict] | None] = mapped_column(JSON)
+    mental_models: Mapped[list[dict] | None] = mapped_column(JSON)
+    common_mistakes: Mapped[list[dict] | None] = mapped_column(JSON)
+    bonus_tips: Mapped[list[dict] | None] = mapped_column(JSON)
     related_topics: Mapped[list[str] | None] = mapped_column(JSON)
 
+    # SEO
     seo_id: Mapped[int | None] = mapped_column(
         ForeignKey("seo_metadata.id", ondelete="SET NULL")
     )
 
     # Relationships
     topic = relationship("Topic", back_populates="sub_topics")
+
     lessons = relationship(
-        "Lesson", back_populates="sub_topic", cascade="all, delete"
+        "Lesson",
+        back_populates="sub_topic",
+        cascade="all, delete"
     )
+
+    # JSON compatibility aliases (keep DB columns unchanged)
+    @property
+    def what_it_solves(self) -> list[dict] | None:
+        return self.problems
+
+    @what_it_solves.setter
+    def what_it_solves(self, value: list[dict] | None) -> None:
+        self.problems = value
+
+    @property
+    def conceptual_understanding(self) -> list[dict] | None:
+        return self.mental_models
+
+    @conceptual_understanding.setter
+    def conceptual_understanding(self, value: list[dict] | None) -> None:
+        self.mental_models = value
