@@ -1,0 +1,242 @@
+{
+  "topic": {
+    "id": 8,
+    "roadmap_id": 1,
+    "technology_id": 1,
+    "module_id": 3,
+    "slug": "html-quotation-citation-elements",
+    "title": "HTML Quotation & Citation Elements",
+    "description": "HTML uses blockquote, q, cite, and abbr to give quoted text and work titles clear semantic meaning.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Quoting and Citing Content in HTML"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "HTML provides dedicated elements for three distinct quotation scenarios. "
+          },
+          {
+            "value": "<blockquote>",
+            "highlight": true
+          },
+          {
+            "value": " wraps long, block-level quotes from external sources. "
+          },
+          {
+            "value": "<q>",
+            "highlight": true
+          },
+          {
+            "value": " marks short inline quotations within a sentence. "
+          },
+          {
+            "value": "<cite>",
+            "highlight": true
+          },
+          {
+            "value": " marks the title of a creative or intellectual work being referenced. Each element carries semantic meaning that browsers, search engines, and screen readers can interpret. All three accept a "
+          },
+          {
+            "value": "cite",
+            "highlight": true
+          },
+          {
+            "value": " attribute pointing to the source URL. Full reference at "
+          },
+          {
+            "value": "MDN: blockquote",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
+          },
+          {
+            "value": ", "
+          },
+          {
+            "value": "MDN: q",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+          },
+          {
+            "value": ", and "
+          },
+          {
+            "value": "MDN: cite",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Element",
+          "Type",
+          "Use Case",
+          "Key Attribute",
+          "Default Rendering"
+        ],
+        "rows": [
+          [
+            "<blockquote>",
+            "Block",
+            "Multi-sentence or paragraph quotes from external sources",
+            "cite='url'",
+            "Indented block"
+          ],
+          [
+            "<q>",
+            "Inline",
+            "Short quotes within a sentence, browser adds quotation marks",
+            "cite='url'",
+            "Inline with auto quotes"
+          ],
+          [
+            "<cite>",
+            "Inline",
+            "Title of a book, film, song, article, or other creative work",
+            "None standard",
+            "Italic"
+          ],
+          [
+            "<abbr>",
+            "Inline",
+            "Abbreviations and acronyms with full expansion in title",
+            "title='full form'",
+            "Dotted underline"
+          ],
+          [
+            "<address>",
+            "Block",
+            "Contact information for the nearest article or body ancestor",
+            "None",
+            "Italic block"
+          ]
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "cite Element vs cite Attribute",
+        "text": "The cite element marks the title of a creative work in visible text. The cite attribute on blockquote and q holds a URL pointing to the source of the quote. They are different things with the same name. cite='https://...' is an attribute. <cite>Book Title</cite> is an element."
+      }
+    ],
+    "examples": [
+      {
+        "title": "blockquote, q, and cite in a Real Article",
+        "description": "This example shows all three quotation elements used correctly in a blog article. blockquote wraps an extended pull quote with a cite attribute pointing to the source. q handles a short inline quotation within a sentence. cite marks the titles of referenced works. The example also shows the recommended pattern for attributing a blockquote using a footer and cite together.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Quotation Elements Demo</title>\n  <style>\n    body {\n      font-family: Georgia, serif;\n      max-width: 680px;\n      margin: 2rem auto;\n      padding: 0 1rem;\n      line-height: 1.8;\n      color: #1e293b;\n    }\n    h1 { font-size: 1.6rem; }\n    h2 { font-size: 1.1rem; margin-top: 2rem; }\n\n    /* blockquote: browser default indentation is usually enough,\n       but adding a left border is a common design pattern */\n    blockquote {\n      margin: 1.5rem 0;\n      padding: 1rem 1.5rem;\n      border-left: 4px solid #2563eb;\n      background: #f8fafc;\n      border-radius: 0 8px 8px 0;\n      font-style: italic;\n    }\n    blockquote footer {\n      margin-top: 0.75rem;\n      font-style: normal;\n      font-size: 0.88em;\n      color: #475569;\n    }\n    blockquote footer cite {\n      font-style: italic;\n    }\n\n    /* q: browser adds quotation marks automatically.\n       Do not add your own quotes around q content. */\n    q { color: #1d4ed8; }\n\n    /* cite: italic by default, sometimes styled differently */\n    cite { font-style: italic; }\n  </style>\n</head>\n<body>\n\n  <h1>The Importance of Readable Code</h1>\n\n  <p>\n    Software is written once but read many times.\n    As <cite>Clean Code</cite> by Robert C. Martin argues,\n    the ratio of time spent reading code versus writing it is well over ten to one.\n  </p>\n\n  <!--\n    blockquote: for multi-sentence or paragraph-length quotes.\n    cite attribute: URL of the source (not visible to users, for machines).\n    footer inside blockquote: attribution pattern recommended by HTML spec.\n    cite element inside footer: marks the work title, not the author name.\n  -->\n  <blockquote cite=\"https://www.goodreads.com/book/show/3735293-clean-code\">\n    <p>\n      Indeed, the ratio of time spent reading versus writing is well over 10 to 1.\n      We are constantly reading old code as part of the effort to write new code.\n      Making it easy to read makes it easier to write.\n    </p>\n    <footer>\n      Robert C. Martin, <cite>Clean Code: A Handbook of Agile Software Craftsmanship</cite>\n    </footer>\n  </blockquote>\n\n  <p>\n    This idea extends beyond programming. Donald Knuth famously described\n    his approach as <q cite=\"https://www-cs-faculty.stanford.edu/~knuth/lp.html\">literate\n    programming</q>, where the primary audience for code is human readers,\n    not compilers.\n  </p>\n\n  <!--\n    q: for short inline quotes that fit within a sentence.\n    Browser automatically wraps content in language-appropriate quotation marks.\n    Do NOT add your own quote characters around the content inside q.\n  -->\n  <p>\n    The <cite>Structure and Interpretation of Computer Programs</cite>\n    opens with the observation that\n    <q>programs must be written for people to read, and only incidentally\n    for machines to execute.</q>\n    This remains one of the most cited principles in software education.\n  </p>\n\n\n  <h2>Wrong: Using Straight Quotes Instead of q</h2>\n  <p>\n    <!--\n      WRONG: using plain quotation marks instead of the q element.\n      The text still renders with quotes, but loses semantic meaning.\n      No cite attribute possible. Screen readers get no quote boundary signal.\n    -->\n    Martin described the practice as \"reading old code as part of writing new code\".\n\n    <!-- RIGHT: use q with the cite attribute for source traceability -->\n    Martin described the practice as\n    <q cite=\"https://www.goodreads.com/book/show/3735293-clean-code\">reading\n    old code as part of writing new code</q>.\n  </p>\n\n\n  <h2>Multiple blockquotes with Attribution</h2>\n\n  <blockquote cite=\"https://en.wikiquote.org/wiki/Linus_Torvalds\">\n    <p>\n      Talk is cheap. Show me the code.\n    </p>\n    <footer>\n      Linus Torvalds, in a message to the\n      <cite>Linux Kernel Mailing List</cite>, 2000\n    </footer>\n  </blockquote>\n\n  <blockquote cite=\"https://www.brainyquote.com/quotes/donald_knuth_181634\">\n    <p>\n      Premature optimization is the root of all evil.\n    </p>\n    <footer>\n      Donald Knuth, <cite>Computer Programming as an Art</cite>\n    </footer>\n  </blockquote>\n\n</body>\n</html>",
+        "output": "Page renders a readable article with a blue left-border blockquote for the Clean Code extended quote, a footer attribution line with the full title in italic cite. Two inline q elements appear in blue with automatic quotation marks added by the browser. The cite element marks book and paper titles in italic. The second wrong-vs-right example shows plain quotes beside a semantic q element. Two additional blockquotes at the bottom show the Linus Torvalds and Donald Knuth quotes with structured attribution footers.",
+        "images": null,
+        "video_url": null
+      },
+      {
+        "title": "abbr and address Elements in Context",
+        "description": "This example shows the abbr element with the title attribute for full abbreviation expansion, and the address element used correctly for contact information in an article footer. Both elements are part of the broader quotation and reference family and are commonly misused or overlooked.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>abbr and address Demo</title>\n  <style>\n    body {\n      font-family: system-ui, sans-serif;\n      max-width: 680px;\n      margin: 2rem auto;\n      padding: 0 1rem;\n      line-height: 1.8;\n    }\n    h1 { font-size: 1.5rem; }\n    h2 { font-size: 1.05rem; margin-top: 2rem; }\n\n    abbr {\n      cursor: help;\n      text-decoration: underline dotted; /* explicit for consistency across browsers */\n      text-underline-offset: 3px;\n    }\n\n    address {\n      font-style: normal; /* override browser default italic */\n      background: #f8fafc;\n      border: 1px solid #e2e8f0;\n      border-radius: 8px;\n      padding: 1rem 1.25rem;\n      margin-top: 1rem;\n    }\n    address p { margin: 0.2rem 0; }\n    address a { color: #2563eb; }\n  </style>\n</head>\n<body>\n\n  <h1>Building a REST API with Node.js</h1>\n\n  <!--\n    abbr: marks abbreviations and acronyms.\n    title attribute: holds the full expanded form shown on hover.\n    First occurrence rule: expand in full on the first use on each page,\n    then use abbr for subsequent references.\n  -->\n  <p>\n    This guide covers building a\n    <abbr title=\"Representational State Transfer\">REST</abbr>\n    <abbr title=\"Application Programming Interface\">API</abbr>\n    using Node.js and Express. We will implement\n    <abbr title=\"JavaScript Object Notation\">JSON</abbr> responses,\n    <abbr title=\"Cross-Origin Resource Sharing\">CORS</abbr> headers, and\n    <abbr title=\"JSON Web Token\">JWT</abbr> authentication.\n  </p>\n\n  <p>\n    The server will listen on\n    <abbr title=\"Hypertext Transfer Protocol Secure\">HTTPS</abbr>\n    port 443 in production and on\n    <abbr title=\"Hypertext Transfer Protocol\">HTTP</abbr>\n    port 3000 in development. Deploy using a\n    <abbr title=\"Virtual Private Server\">VPS</abbr> or a managed\n    <abbr title=\"Platform as a Service\">PaaS</abbr> provider.\n  </p>\n\n\n  <h2>abbr: Wrong Usage</h2>\n  <p>\n    <!--\n      WRONG: abbreviation without title attribute.\n      Users hovering cannot see the expansion.\n      Screen readers have no full form to announce.\n    -->\n    This API uses JWT for auth.\n\n    <!-- RIGHT: each abbreviation has a title expansion -->\n    This <abbr title=\"Application Programming Interface\">API</abbr>\n    uses <abbr title=\"JSON Web Token\">JWT</abbr> for auth.\n  </p>\n\n\n  <h2>address: Contact Information</h2>\n  <!--\n    address: for contact information of the nearest article or body ancestor.\n    Correct: author contact at the bottom of an article.\n    Correct: business contact details in the site footer.\n    WRONG: for any physical postal address unrelated to the document author.\n    WRONG: for structured data that is not contact information.\n\n    address renders in italic by default. Use CSS font-style:normal\n    if the design requires non-italic contact information.\n  -->\n\n  <article>\n    <h2>Article: Getting Started with Express.js</h2>\n    <p>Express.js is the most widely used Node.js web framework...</p>\n\n    <!-- address at the end of an article: contact for the article author -->\n    <address>\n      <p>Written by <a href=\"mailto:priya@devdocs.in\">Priya Sharma</a></p>\n      <p>Senior Engineer, DevDocs India</p>\n      <p><a href=\"https://github.com/priyasharma\">github.com/priyasharma</a></p>\n    </address>\n  </article>\n\n\n  <footer style=\"margin-top:2rem; padding-top:1rem; border-top:1px solid #e5e7eb;\">\n    <!-- address in footer: contact for the organisation running the site -->\n    <address>\n      <p><strong>DevDocs India</strong></p>\n      <p>Email: <a href=\"mailto:hello@devdocs.in\">hello@devdocs.in</a></p>\n      <p>Kozhikode, Kerala, India</p>\n    </address>\n  </footer>\n\n</body>\n</html>",
+        "output": "Page renders a technical article about building a REST API. Every abbreviation (REST, API, JSON, CORS, JWT, HTTPS, HTTP, VPS, PaaS) shows a dotted underline cursor with a tooltip expansion on hover. The wrong usage section shows bare abbreviations beside marked-up versions. The article ends with an address block in a light card showing the author's name as a mailto link, title, and GitHub link. The footer contains an organisation address with email link and location.",
+        "images": null,
+        "video_url": null
+      }
+    ],
+    "image_banner_url": null,
+    "images": null,
+    "video_url": null,
+    "when_to_use": [
+      {
+        "point": "When reproducing an extended quote from a book, article, or speech in your content"
+      },
+      {
+        "point": "When referencing the title of a book, film, article, or other creative work inline"
+      },
+      {
+        "point": "When marking abbreviations with their full expansion for screen readers and hover tooltips"
+      }
+    ],
+    "when_to_avoid": [
+      {
+        "point": "Avoid using blockquote for visual indentation when the content is not an actual quotation"
+      },
+      {
+        "point": "Avoid omitting the title attribute on abbr since the expansion is invisible without it"
+      },
+      {
+        "point": "Avoid using address for postal addresses unrelated to the document or article author"
+      }
+    ],
+    "what_it_solves": [
+      {
+        "1": "Plain quotation marks provide no machine-readable signal that text is a quote from an external source."
+      },
+      {
+        "2": "Without cite, referenced work titles have no semantic distinction from surrounding prose text."
+      },
+      {
+        "3": "Without abbr, screen readers pronounce acronyms letter-by-letter with no way to announce the full form."
+      }
+    ],
+    "conceptual_understanding": [
+      {
+        "model": "blockquote is a formal citation container, like an indented and attributed passage in an academic paper. The cite attribute on it is the footnote number pointing to the reference list. The cite element inside the footer attribution is the italicised title of the work in that reference. All three pieces work together the same way a proper academic citation does."
+      },
+      {
+        "model": "The q element is like a smart quote character that knows it is a quotation. A plain quotation mark is just a glyph with no meaning to any tool. The q element tells the browser to add the appropriate quotation mark style for the page language, tells screen readers to announce a quotation boundary, and holds a cite attribute where the source URL can be recorded for machine consumption."
+      },
+      {
+        "model": "abbr with a title attribute is like a glossary entry embedded directly in the text. Instead of sending the reader to a separate glossary page to find out what REST means, the full definition travels with the abbreviation wherever it appears on the page. Screen readers can announce the full form. Search engines understand the term. Sighted users get the tooltip on hover."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Using blockquote for visual indentation: blockquote has a strong semantic meaning: this content is a quotation from another source. Using it to indent a paragraph or callout that is not a quotation misleads screen readers, which announce the block as a quotation, and violates the HTML specification. Use CSS padding or margin for visual indentation of non-quote content."
+      },
+      {
+        "mistake": "Adding manual quotation marks inside a q element: The browser automatically wraps q content in language-appropriate quotation marks. Writing <q>\"quoted text\"</q> produces double quotation marks, resulting in ugly doubled quotes in the rendered output. Write only the quoted text inside q with no surrounding punctuation."
+      },
+      {
+        "mistake": "Using address for any postal address: The address element is specifically for contact information related to the nearest article ancestor or the document body. Using it for a delivery address in an order confirmation, a location in a directory listing, or any address not belonging to the document author or site owner is semantically incorrect. Use a div or p for unrelated address data."
+      }
+    ],
+    "bonus_tips": [
+      {
+        "tip": "Use the cite attribute on blockquote and q to link to the exact source URL, even though the attribute is not visible to users. Tools that process structured content, browser reader modes, and semantic search engines can extract this URL to verify the source, build citation networks, or present the original source alongside your content. It costs nothing to add and signals responsible sourcing."
+      },
+      {
+        "tip": "For the first occurrence of every abbreviation on a page, write it out in full followed by the abbreviation in parentheses, then use abbr for subsequent references. For example: Representational State Transfer (REST). From here, use <abbr title='Representational State Transfer'>REST</abbr> for every following mention. This serves users who cannot hover, including touch screen and screen reader users who never see the title tooltip."
+      }
+    ],
+    "related_topics": [
+      "HTML Paragraph Elements",
+      "HTML Text Formatting Elements",
+      "HTML Semantic Elements",
+      "Accessibility and ARIA",
+      "SEO Fundamentals"
+    ],
+    "is_active": true,
+    "order_index": 8,
+    "created_at": null,
+    "updated_at": null
+  },
+  "subtopics": [],
+  "seo_metadata": {
+    "meta_title": "HTML Quotation & Citation Elements | blockquote, q, cite, abbr Guide",
+    "meta_description": "Learn HTML quotation and citation elements: blockquote for extended quotes, q for inline quotes, cite for work titles, abbr for abbreviations, and address for contact info.",
+    "keywords": [
+      "HTML blockquote element",
+      "HTML q element",
+      "HTML cite element",
+      "HTML quotation elements",
+      "HTML abbr element",
+      "HTML address element",
+      "blockquote cite attribute",
+      "HTML inline quotation",
+      "HTML citation markup",
+      "HTML abbreviation title attribute"
+    ],
+    "canonical_url": "/html/html-quotation-citation-elements",
+    "robots": "index, follow"
+  }
+}

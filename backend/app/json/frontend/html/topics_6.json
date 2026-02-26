@@ -1,0 +1,181 @@
+{
+  "topic": {
+    "id": 9,
+    "roadmap_id": 1,
+    "technology_id": 1,
+    "module_id": 3,
+    "slug": "html-comment-syntax",
+    "title": "HTML Comment Syntax",
+    "description": "HTML comments let developers annotate markup with notes that browsers ignore and users never see.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Writing and Using HTML Comments"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "An HTML comment starts with "
+          },
+          {
+            "value": "<!--",
+            "highlight": true
+          },
+          {
+            "value": " and ends with "
+          },
+          {
+            "value": "-->",
+            "highlight": true
+          },
+          {
+            "value": ". Everything between those delimiters is ignored by the browser's rendering engine and never displayed to the user. Comments can span a single line or multiple lines. They can appear anywhere in the document that accepts character data: inside "
+          },
+          {
+            "value": "head",
+            "highlight": true
+          },
+          {
+            "value": ", inside "
+          },
+          {
+            "value": "body",
+            "highlight": true
+          },
+          {
+            "value": ", between elements, or between attributes. They cannot appear inside an element's opening or closing tag. The HTML comment specification is defined in the "
+          },
+          {
+            "value": "WHATWG HTML Living Standard",
+            "link": "https://html.spec.whatwg.org/multipage/syntax.html#comments"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "Comments Are Not Private",
+        "text": "HTML comments are invisible in the browser viewport but fully visible in page source. Any user who presses Ctrl+U or opens DevTools can read every comment. Never put passwords, API keys, internal notes about security weaknesses, or sensitive business logic in HTML comments."
+      }
+    ],
+    "examples": [
+      {
+        "title": "HTML Comment Syntax, Placement, and Production Patterns",
+        "description": "This example covers every aspect of HTML comment usage: single-line and multi-line syntax, valid placement positions, the one syntax restriction to know, and the four comment patterns that appear most in production codebases: section labels, TODO notes, template placeholders, and conditional comments for legacy IE.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>HTML Comments Demo</title>\n\n  <!-- Comments are valid in head -->\n  <!-- Link the main stylesheet -->\n  <link rel=\"stylesheet\" href=\"styles.css\">\n\n  <!-- TODO: add preconnect for fonts once design is finalised -->\n  <!-- <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\"> -->\n</head>\n<body>\n\n  <!-- ============================================================\n       PATTERN 1: SECTION LABELS\n       Large codebases use comment banners to mark major sections\n       so developers can find regions quickly without collapsing.\n  ============================================================ -->\n\n  <!-- HEADER -->\n  <header>\n    <nav aria-label=\"Main navigation\">\n      <a href=\"/\">Home</a>\n      <a href=\"/about\">About</a>\n      <a href=\"/contact\">Contact</a>\n    </nav>\n  </header>\n  <!-- /HEADER -->\n\n\n  <!-- MAIN CONTENT -->\n  <main id=\"main\">\n\n    <h1>Product Catalogue</h1>\n\n    <!-- ============================================================\n         PATTERN 2: TODO AND FIXME NOTES\n         Track work-in-progress directly in the template.\n         Most editors highlight TODO and FIXME in comment text.\n    ============================================================ -->\n\n    <!-- TODO: replace static card list with server-rendered loop -->\n    <!-- FIXME: card grid breaks at 480px, needs media query fix   -->\n    <!-- NOTE: product IDs must match the warehouse database schema -->\n\n    <div class=\"card-grid\">\n\n      <!-- ============================================================\n           PATTERN 3: TEMPLATE PLACEHOLDERS\n           Comment out content that will be replaced by a CMS or\n           server-side template later. Keeps the HTML reviewable\n           before dynamic data is wired up.\n      ============================================================ -->\n\n      <!-- BEGIN: product card - repeat for each product -->\n      <div class=\"card\" data-id=\"1\">\n        <h2>ThinkBook 14</h2>\n        <p>Rs 62,000</p>\n        <!-- TODO: add add-to-cart button once cart API is ready -->\n      </div>\n      <!-- END: product card -->\n\n      <div class=\"card\" data-id=\"2\">\n        <h2>Pixel 8a</h2>\n        <p>Rs 52,999</p>\n      </div>\n\n    </div>\n\n\n    <!--\n      SINGLE-LINE COMMENT (most common):\n      <!-- This is a single-line comment -->\n\n      MULTI-LINE COMMENT (for longer notes):\n      Everything between the delimiters is ignored,\n      including line breaks and HTML tags.\n      <p>This paragraph inside a comment does NOT render.</p>\n      <div>This div does NOT render either.</div>\n    -->\n\n\n    <!-- ============================================================\n         SYNTAX RESTRICTION: two consecutive hyphens inside a comment\n         are not allowed by the HTML spec and cause parse errors.\n         WRONG:  <!-- a -- b -->  (double hyphen inside comment)\n         RIGHT:  <!-- a - b -->   (single hyphen is fine)\n    ============================================================ -->\n\n    <!--\n      ALSO INVALID (causes parse errors):\n      <!-->           empty comment with no space\n      <!--->          minimized comment (not valid HTML5)\n\n      VALID EMPTY COMMENT:\n      <!---->\n    -->\n\n    <!--\n      PATTERN 4: COMMENTED-OUT CODE BLOCKS\n      Temporarily disable a section without deleting it.\n      Useful during debugging or A/B layout testing.\n    -->\n    <!--\n    <section class=\"promo-banner\">\n      <h2>Sale: 20% off all laptops</h2>\n      <a href=\"/sale\">Shop now</a>\n    </section>\n    -->\n\n  </main>\n  <!-- /MAIN CONTENT -->\n\n\n  <!-- FOOTER -->\n  <footer>\n    <!-- Copyright year is updated manually each January -->\n    <small>&copy; 2024 DevDocs India</small>\n  </footer>\n  <!-- /FOOTER -->\n\n\n  <!--\n    PATTERN 5: IE CONDITIONAL COMMENTS (legacy, IE only)\n    These were a Microsoft extension. Modern browsers treat them\n    as regular HTML comments and ignore them entirely.\n    Only relevant when maintaining very old codebases.\n\n    <!--[if IE]>\n      <p>You are using Internet Explorer. Please upgrade.</p>\n    <![endif]-->\n  -->\n\n  <!-- Load scripts at the bottom for performance -->\n  <script src=\"app.js\" defer></script>\n\n</body>\n</html>",
+        "output": "Browser renders only the visible content: the nav, h1, two product cards with names and prices, and the copyright footer. Every comment is invisible in the viewport. The commented-out promo banner section does not render. Opening page source with Ctrl+U reveals all comments exactly as written. The section label banners, TODO notes, template placeholders, and disabled code block are all readable in source but produce no output.",
+        "images": null,
+        "video_url": null
+      },
+      {
+        "title": "Comments in Development vs Production: Security and Performance",
+        "description": "This example shows the contrast between acceptable development comments and comments that should never reach production. It also demonstrates how build tools strip comments automatically and what kinds of information must never appear in client-side HTML regardless of environment.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Comment Safety Demo</title>\n</head>\n<body>\n\n  <!--\n    ============================================================\n    ACCEPTABLE IN PRODUCTION:\n    Generic structural notes, section labels, and copyright\n    notices that contain no sensitive information.\n    ============================================================\n  -->\n\n  <!-- Navigation region -->\n  <nav aria-label=\"Main\">\n    <a href=\"/\">Home</a>\n    <a href=\"/pricing\">Pricing</a>\n  </nav>\n\n  <!-- &copy; 2024 Acme Corp. All rights reserved. -->\n\n\n  <!--\n    ============================================================\n    NEVER PUT THESE IN HTML COMMENTS:\n    (Shown here only as examples of what NOT to do)\n    ============================================================\n  -->\n\n  <!--\n    WRONG - credentials visible in page source:\n    DB password: Acme@prod#2024\n    AWS key: AKIAIOSFODNN7EXAMPLE\n    Stripe secret: sk_live_...\n  -->\n\n  <!--\n    WRONG - security weakness disclosure:\n    Admin panel at /admin-v2 - not yet protected, add auth before launch\n    SQL injection fixed in v2.1 but old endpoint /api/v1/users still open\n  -->\n\n  <!--\n    WRONG - internal business information:\n    Launch delayed because client has not paid the second invoice\n    Competitor XYZ has same feature, do not mention in demos\n  -->\n\n  <!--\n    WRONG - disabled code with hardcoded credentials:\n    <script>\n      const API_KEY = 'live_key_abc123';\n      fetch('/api/data?key=' + API_KEY);\n    </script>\n  -->\n\n\n  <!--\n    ============================================================\n    BUILD TOOL COMMENT STRIPPING:\n    Tools like Vite, webpack, and HTML minifiers automatically\n    remove HTML comments during production builds.\n\n    Development source:\n    <!-- Section header -->\n    <header>...</header>\n\n    After minification (what users actually download):\n    <header>...</header>\n\n    This means developer-facing comments never reach production\n    IF a build pipeline is in place. Do not rely on this for\n    security. Treat every comment as permanently public.\n    ============================================================\n  -->\n\n  <main>\n    <h1>Welcome</h1>\n    <!-- Component: HeroSection - see /src/components/Hero.jsx -->\n    <section class=\"hero\">\n      <p>Build fast, ship often.</p>\n    </section>\n  </main>\n\n</body>\n</html>",
+        "output": "Browser renders only the nav, h1, and hero section paragraph. All comments are invisible in the viewport but fully readable in page source. The WRONG examples demonstrate what developers must never write in HTML. The build tool section explains that minifiers strip comments in production pipelines, but emphasises that security must never depend on comment removal.",
+        "images": null,
+        "video_url": null
+      }
+    ],
+    "image_banner_url": null,
+    "images": null,
+    "video_url": null,
+    "when_to_use": [
+      {
+        "point": "When labeling major sections of a long template so teammates can navigate the file quickly"
+      },
+      {
+        "point": "When temporarily disabling a block of markup during debugging without deleting it"
+      },
+      {
+        "point": "When leaving TODO or FIXME notes in templates that need follow-up before launch"
+      }
+    ],
+    "when_to_avoid": [
+      {
+        "point": "Avoid putting passwords, API keys, or any credentials inside HTML comments"
+      },
+      {
+        "point": "Avoid leaving security weakness disclosures or internal business notes in comments"
+      },
+      {
+        "point": "Avoid overusing comments for obvious markup, comment only what is genuinely unclear"
+      }
+    ],
+    "what_it_solves": [
+      {
+        "1": "Without comments, long HTML templates have no internal landmarks and are slow to navigate."
+      },
+      {
+        "2": "Comments allow markup to be temporarily disabled for testing without permanent deletion."
+      },
+      {
+        "3": "TODO comments in templates keep pending work visible to the team without a separate task tracker."
+      }
+    ],
+    "conceptual_understanding": [
+      {
+        "model": "An HTML comment is like a sticky note placed on the outside of a sealed envelope. The postal system (the browser renderer) ignores the sticky note and delivers the letter as written. But anyone who handles the envelope on the way (anyone reading page source) can read every sticky note in full. The note is invisible to the letter's recipient but not secret."
+      },
+      {
+        "model": "Commenting out code in HTML is like covering a painting with a cloth in a gallery. The painting still exists in the room. Staff members who enter the storage area can see it. Only the public exhibition view hides it. Commented-out HTML still exists in the source file delivered to every visitor's browser, it is just not rendered on screen."
+      },
+      {
+        "model": "The double-hyphen restriction inside HTML comments exists because the original SGML parsing rules defined -- as the comment close signal. Two consecutive hyphens anywhere inside a comment body confuses parsers that follow the original rules. Modern HTML5 parsers are more lenient but the restriction remains in the specification to avoid cross-browser inconsistencies."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Placing sensitive information in HTML comments: API keys, database credentials, internal endpoint paths, and security notes placed in comments are delivered to every visitor's browser in plain text. The comment being invisible in the rendered page provides no protection. Any person, bot, or search engine crawler that fetches the HTML can read every comment in the source."
+      },
+      {
+        "mistake": "Using double hyphens inside comment content: The HTML specification forbids two consecutive hyphens anywhere between the opening <!-- and closing --> other than as part of the closing delimiter itself. Writing <!-- a -- b --> is a parse error. Some browsers handle it gracefully, others treat the double hyphen as the end of the comment and render the following text as content."
+      },
+      {
+        "mistake": "Using comments for visual indentation or spacing instead of CSS: Some developers add blank comment lines between elements to create visual breathing room in the source. This has no effect on the rendered page. It increases file size, makes the source harder to scan, and does not replace the proper solution of CSS margin or padding for visual spacing between rendered elements."
+      }
+    ],
+    "bonus_tips": [
+      {
+        "tip": "In VS Code, press Ctrl+/ (Windows and Linux) or Cmd+/ (macOS) to toggle an HTML comment on any selected line or block. Select multiple lines and press the shortcut once to wrap them all in a single comment block, or to remove the comment delimiters if they are already there. This is the fastest way to comment out or uncomment sections during debugging."
+      },
+      {
+        "tip": "Use a consistent comment convention across your team for section labels. A widely adopted pattern is opening with <!-- SECTION NAME --> and closing with <!-- /SECTION NAME -->, mirroring the way HTML tags open and close. This makes it immediately clear in long files where each major region ends, without needing to scroll back to find the opening comment."
+      }
+    ],
+    "related_topics": [
+      "HTML Document Structure",
+      "HTML Elements Tags and Attributes",
+      "HTML Text Formatting Elements",
+      "Browser DevTools",
+      "HTML Boilerplate Template"
+    ],
+    "is_active": true,
+    "order_index": 9,
+    "created_at": null,
+    "updated_at": null
+  },
+  "subtopics": [],
+  "seo_metadata": {
+    "meta_title": "HTML Comment Syntax | Usage, Security, and Best Practices Guide",
+    "meta_description": "Learn HTML comment syntax: single-line and multi-line comments, valid placement, syntax restrictions, production patterns, and what never to put in HTML comments.",
+    "keywords": [
+      "HTML comment syntax",
+      "HTML comments",
+      "HTML comment security",
+      "HTML comment best practices",
+      "HTML multi-line comment",
+      "HTML comment-out code",
+      "HTML TODO comment",
+      "HTML section comment",
+      "HTML comment restrictions",
+      "HTML page source comments"
+    ],
+    "canonical_url": "/html/html-comment-syntax",
+    "robots": "index, follow"
+  }
+}

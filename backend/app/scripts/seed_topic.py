@@ -37,7 +37,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     sys.exit("❌  DATABASE_URL not set. Add it to your .env file.")
 
-DEFAULT_JSON = Path(__file__).parent.parent / "json" / "frontend" / "html" / "topics.json"
+DEFAULT_JSON = Path(__file__).parent.parent / "json" / "frontend" / "html" / "topics_9.json"
 
 # ── JSON fields that map to DB JSON columns ───────────────────────────────────
 DB_JSON_COLUMNS = [
@@ -408,7 +408,13 @@ def main() -> None:
     data      = load_json(json_path)
     topic     = data.get("topic")
     subtopics = data.get("subtopics", [])
-    seo_meta  = data.get("seo_metadata", [])
+    seo_meta = data.get("seo_metadata", [])
+
+    # 🔥 normalize: allow dict OR list
+    if isinstance(seo_meta, dict):
+        seo_meta = [seo_meta]
+    elif not isinstance(seo_meta, list):
+        seo_meta = []
 
     if not topic:
         sys.exit("❌  No topic found in the JSON file.")

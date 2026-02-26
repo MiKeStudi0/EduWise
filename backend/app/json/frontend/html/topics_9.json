@@ -1,0 +1,314 @@
+{
+  "topic": {
+    "id": 6,
+    "roadmap_id": 1,
+    "technology_id": 1,
+    "module_id": 3,
+    "slug": "html-paragraph-elements",
+    "title": "HTML Paragraph Elements",
+    "description": "The HTML paragraph element groups related sentences into a discrete block of text on the page.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "The Paragraph Element and Inline Text Formatting"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The "
+          },
+          {
+            "value": "<p>",
+            "highlight": true
+          },
+          {
+            "value": " element is the primary container for body text. Each paragraph is a block-level element that automatically receives vertical spacing from the browser's default stylesheet. Beyond plain paragraphs, HTML provides a set of "
+          },
+          {
+            "value": "inline text elements",
+            "bold": true
+          },
+          {
+            "value": " that add semantic meaning to words and phrases within a paragraph: "
+          },
+          {
+            "value": "<strong>",
+            "highlight": true
+          },
+          {
+            "value": " for importance, "
+          },
+          {
+            "value": "<em>",
+            "highlight": true
+          },
+          {
+            "value": " for emphasis, "
+          },
+          {
+            "value": "<code>",
+            "highlight": true
+          },
+          {
+            "value": " for code, "
+          },
+          {
+            "value": "<mark>",
+            "highlight": true
+          },
+          {
+            "value": " for highlights, and more. Full reference at "
+          },
+          {
+            "value": "MDN: The Paragraph element",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Element",
+          "Semantic Meaning",
+          "Default Rendering",
+          "Use Case"
+        ],
+        "rows": [
+          [
+            "<p>",
+            "A discrete block of related text",
+            "Block, vertical margin above and below",
+            "Body text, descriptions, captions"
+          ],
+          [
+            "<strong>",
+            "High importance or urgency",
+            "Bold",
+            "Warnings, key terms, critical info"
+          ],
+          [
+            "<em>",
+            "Stress emphasis that changes meaning",
+            "Italic",
+            "Words stressed in speech"
+          ],
+          [
+            "<b>",
+            "Stylistically bold, no extra importance",
+            "Bold",
+            "Keywords, product names, bold without importance"
+          ],
+          [
+            "<i>",
+            "Alternative voice, technical terms, titles",
+            "Italic",
+            "Foreign words, technical terms, book titles"
+          ],
+          [
+            "<mark>",
+            "Highlighted or relevant to current context",
+            "Yellow background",
+            "Search result highlights, annotations"
+          ],
+          [
+            "<small>",
+            "Side comments, fine print, legal text",
+            "Smaller font",
+            "Copyright notices, disclaimers"
+          ],
+          [
+            "<del>",
+            "Text removed or no longer accurate",
+            "Strikethrough",
+            "Price reductions, changelog removals"
+          ],
+          [
+            "<ins>",
+            "Text inserted or newly added",
+            "Underline",
+            "Changelog additions, corrections"
+          ],
+          [
+            "<sub>",
+            "Subscript notation",
+            "Lowered baseline, smaller",
+            "Chemical formulas: H2O, footnote refs"
+          ],
+          [
+            "<sup>",
+            "Superscript notation",
+            "Raised baseline, smaller",
+            "Mathematical exponents, ordinal numbers"
+          ],
+          [
+            "<abbr>",
+            "Abbreviation or acronym",
+            "Dotted underline (browser dependent)",
+            "HTML, NASA, API with title attribute"
+          ],
+          [
+            "<code>",
+            "Inline code or computer output",
+            "Monospace font",
+            "Variable names, function names, commands"
+          ],
+          [
+            "<kbd>",
+            "Keyboard input",
+            "Monospace, bordered (browser dependent)",
+            "Keyboard shortcuts: Ctrl+S"
+          ],
+          [
+            "<q>",
+            "Short inline quotation",
+            "Adds quotation marks automatically",
+            "Brief quotes within a sentence"
+          ],
+          [
+            "<cite>",
+            "Title of a creative work",
+            "Italic",
+            "Book, film, article titles"
+          ],
+          [
+            "<time>",
+            "Machine-readable date or time",
+            "None",
+            "Dates, durations, event times"
+          ],
+          [
+            "<br>",
+            "Line break within text",
+            "Forced new line",
+            "Addresses, poetry, where breaks are meaningful"
+          ],
+          [
+            "<wbr>",
+            "Suggested word break opportunity",
+            "None visible",
+            "Long URLs, compound words in narrow containers"
+          ]
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "title": "Paragraph Elements and Inline Semantics in a Real Article",
+        "description": "This example shows the p element used correctly alongside all major inline text elements in context. Every inline element is chosen for its semantic meaning, not its visual output. The example also demonstrates the difference between strong and b, and between em and i, which are the most commonly confused pairs.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Inline Text Semantics Demo</title>\n  <style>\n    body { font-family: Georgia, serif; max-width: 680px;\n           margin: 2rem auto; padding: 0 1rem; line-height: 1.8; }\n    h1   { font-size: 1.6rem; }\n    h2   { font-size: 1.2rem; margin-top: 2rem; }\n    abbr { cursor: help; }\n    kbd  { background: #f1f5f9; border: 1px solid #cbd5e1;\n           border-radius: 4px; padding: 0.1rem 0.4rem;\n           font-size: 0.85em; }\n    code { background: #f1f5f9; border-radius: 3px;\n           padding: 0.1rem 0.35rem; font-size: 0.88em; }\n    mark { background: #fef08a; border-radius: 2px; padding: 0 0.15rem; }\n    time { font-style: normal; }\n  </style>\n</head>\n<body>\n\n  <h1>Understanding CSS Specificity</h1>\n\n  <!--\n    Plain paragraph: the default use case.\n    Each <p> gets automatic top and bottom margin from the browser stylesheet.\n    Never add <br><br> between paragraphs to simulate spacing.\n    Use CSS margin-bottom on p instead.\n  -->\n  <p>\n    CSS specificity is the algorithm browsers use to decide which style rule\n    wins when multiple rules target the same element. Every selector has a\n    score, and the rule with the highest score takes effect.\n  </p>\n\n\n  <h2>strong vs b</h2>\n  <!--\n    strong: semantic importance. Screen readers may change tone.\n    b: stylistically bold but carries no extra importance or urgency.\n  -->\n  <p>\n    When two rules conflict, the one with higher specificity wins.\n    <strong>Inline styles always win over class and element selectors.</strong>\n    This is why inline styles should be avoided in production code.\n  </p>\n  <p>\n    The main libraries covered in this guide are\n    <b>Tailwind CSS</b>, <b>Bootstrap</b>, and <b>Bulma</b>.\n    <!-- b is correct here: product names styled bold, no urgency implied -->\n  </p>\n\n\n  <h2>em vs i</h2>\n  <!--\n    em: stress emphasis that shifts meaning, like spoken inflection.\n    i: italic for non-emphasis reasons: foreign words, technical terms, titles.\n  -->\n  <p>\n    You should use the selector with the <em>highest</em> specificity,\n    not simply the one that appears <em>last</em> in the stylesheet.\n    <!-- em: stressing these specific words changes the meaning of the sentence -->\n  </p>\n  <p>\n    The property is known as <i>specificity</i> in the\n    <cite>CSS Cascading and Inheritance specification</cite>.\n    <!-- i: technical term; cite: title of a specification document -->\n  </p>\n\n\n  <h2>mark, del, ins</h2>\n  <p>\n    Browser support for the <mark>:has() pseudo-class</mark> has improved\n    significantly since 2023.\n    <!-- mark: highlighted term relevant to a search or annotation context -->\n  </p>\n  <p>\n    The old specificity formula was <del>0-0-0-1</del>\n    and is now expressed as <ins>0-0-1</ins> in the updated specification.\n    <!-- del: removed content; ins: inserted replacement content -->\n  </p>\n\n\n  <h2>code, kbd, abbr, sub, sup</h2>\n  <p>\n    The <code>:nth-child()</code> pseudo-class accepts\n    <abbr title=\"Argument notation for pattern matching\">An+B</abbr> syntax.\n    Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> to open\n    <abbr title=\"Developer Tools\">DevTools</abbr> and inspect specificity scores.\n    <!-- code: function name; abbr: abbreviation with tooltip; kbd: keyboard keys -->\n  </p>\n  <p>\n    Specificity is calculated as a three-column score:\n    ID<sup>[1]</sup>, class<sup>[2]</sup>, element<sup>[3]</sup>.\n    Water is H<sub>2</sub>O and not related, but shows subscript usage.\n    <!-- sup: footnote markers and exponents; sub: chemical subscripts -->\n  </p>\n\n\n  <h2>q, time, small, br</h2>\n  <p>\n    As the specification states:\n    <q>specificity is determined by the selector structure, not by document order.</q>\n    <!-- q: inline quotation, browser adds the quotation marks automatically -->\n  </p>\n  <p>\n    The specification was last updated on\n    <time datetime=\"2024-01-15\">15 January 2024</time>.\n    <!-- time: machine-readable date, datetime attribute is the parseable value -->\n  </p>\n  <p>\n    <small>All examples in this guide target CSS Level 4 specification.\n    Browser support may vary. Always check compatibility tables.</small>\n    <!-- small: fine print, side comments, disclaimers -->\n  </p>\n\n  <!--\n    br: use only when the line break itself is part of the content meaning.\n    Correct uses: postal addresses, poetry, song lyrics.\n    Wrong use: adding br br between paragraphs to create spacing.\n  -->\n  <p>\n    Anthropic, Inc.<br>\n    548 Market Street<br>\n    San Francisco, CA 94104\n  </p>\n\n</body>\n</html>",
+        "output": "Page renders a CSS Specificity article with all inline elements displayed in context. strong appears bold with semantic weight for the inline styles warning. b appears bold for library names without urgency. em italicises stressed words that shift sentence meaning. i italicises the technical term and cite italicises the specification title. mark highlights the :has() term in yellow. del shows the old formula struck through and ins shows the new formula underlined. code renders in monospace, kbd shows keyboard keys with borders, abbr shows dotted underlines with tooltips. sup renders footnote markers raised. The address block uses br for meaningful line breaks.",
+        "images": null,
+        "video_url": null
+      },
+      {
+        "title": "Common Paragraph Mistakes: Spacing, Nesting, and Misused Elements",
+        "description": "This example contrasts the wrong and right way to handle three common paragraph mistakes: using br for spacing instead of CSS, nesting block elements inside p, and using visual elements like b and i where semantic elements like strong and em belong. Understanding these prevents a category of subtle rendering and accessibility bugs.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Paragraph Mistakes</title>\n  <style>\n    body { font-family: sans-serif; max-width: 680px; margin: 2rem auto; padding: 0 1rem; }\n    h2   { font-size: 1rem; margin-top: 1.75rem; color: #1e293b; }\n    .wrong { border-left: 3px solid #dc2626; padding-left: 1rem; background: #fef2f2;\n             border-radius: 0 6px 6px 0; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }\n    .right { border-left: 3px solid #16a34a; padding-left: 1rem; background: #f0fdf4;\n             border-radius: 0 6px 6px 0; padding: 0.75rem 1rem; margin-bottom: 0.5rem; }\n    .label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase;\n             letter-spacing: 0.05em; margin-bottom: 0.4rem; }\n    .wrong .label { color: #dc2626; }\n    .right .label { color: #16a34a; }\n\n    /* RIGHT: use CSS for paragraph spacing, never br br -->\n    p.spaced { margin-bottom: 1.25rem; }\n  </style>\n</head>\n<body>\n\n  <h1>Common Paragraph Mistakes</h1>\n\n\n  <!-- MISTAKE 1: using br br for spacing between paragraphs -->\n  <h2>1. Paragraph Spacing</h2>\n\n  <div class=\"wrong\">\n    <p class=\"label\">Wrong: br br for spacing</p>\n    First paragraph of text.<br><br>\n    Second paragraph of text.<br><br>\n    Third paragraph of text.\n    <!--\n      Problems:\n      - Not real paragraphs, so screen readers cannot navigate between them\n      - No semantic structure, search engines see one block of text\n      - Spacing cannot be changed by CSS targeting p elements\n    -->\n  </div>\n\n  <div class=\"right\">\n    <p class=\"label\">Right: real p elements with CSS margin</p>\n    <p class=\"spaced\">First paragraph of text.</p>\n    <p class=\"spaced\">Second paragraph of text.</p>\n    <p>Third paragraph of text.</p>\n    <!--\n      Benefits:\n      - Screen readers announce each paragraph boundary\n      - Spacing is controlled centrally via CSS\n      - Structure is semantically correct\n    -->\n  </div>\n\n\n  <!-- MISTAKE 2: nesting block elements inside p -->\n  <h2>2. Invalid Nesting</h2>\n\n  <div class=\"wrong\">\n    <p class=\"label\">Wrong: block elements inside p</p>\n    <!--\n      p cannot contain block-level elements.\n      When a browser sees <div> inside <p>, it auto-closes the <p>\n      before the <div>, then opens a new implicit <p> after.\n      The rendered output is unpredictable.\n    -->\n    <!-- <p>Introduction text <div>Block content</div> more text</p> -->\n    <!-- <p>Text <ul><li>Item</li></ul></p>                          -->\n    <!-- <p>Text <h2>Subheading</h2></p>                            -->\n    <p style=\"color:#dc2626;font-style:italic;\">\n      p cannot contain div, ul, ol, h1-h6, blockquote, or table.\n      Attempting this causes the browser to auto-close the p early.\n    </p>\n  </div>\n\n  <div class=\"right\">\n    <p class=\"label\">Right: p contains only inline content</p>\n    <p>Introduction text with <strong>inline emphasis</strong> and\n       <a href=\"/docs\">inline links</a>.</p>\n    <!--\n      p can contain:\n      text nodes, a, span, strong, em, b, i, code, abbr, mark,\n      small, del, ins, sub, sup, time, br, img, input, label\n      (any phrasing content element)\n    -->\n  </div>\n\n\n  <!-- MISTAKE 3: visual elements where semantic elements belong -->\n  <h2>3. Visual vs Semantic Elements</h2>\n\n  <div class=\"wrong\">\n    <p class=\"label\">Wrong: visual styling without meaning</p>\n    <p>\n      <b>Warning:</b> This action cannot be undone.\n      <!-- b: bold but no importance signal. Screen readers do not change tone. -->\n    </p>\n    <p>\n      Do <i>not</i> click Submit twice.\n      <!-- i: italic but no stress. Meaning is not emphasised for screen readers. -->\n    </p>\n  </div>\n\n  <div class=\"right\">\n    <p class=\"label\">Right: semantic elements that communicate meaning</p>\n    <p>\n      <strong>Warning:</strong> This action cannot be undone.\n      <!-- strong: screen readers announce importance; search engines weight it -->\n    </p>\n    <p>\n      Do <em>not</em> click Submit twice.\n      <!-- em: stress emphasis; screen readers may inflect the word differently -->\n    </p>\n  </div>\n\n</body>\n</html>",
+        "output": "Page renders three mistake-and-fix pairs. The spacing section shows the wrong version as a single block of text with visible line gaps from br, and the right version as three clearly separated p elements. The nesting section shows an explanatory note about what block elements cannot go inside p. The semantic section shows the wrong b and i usage beside the correct strong and em usage, visually identical but semantically distinct.",
+        "images": null,
+        "video_url": null
+      }
+    ],
+    "image_banner_url": null,
+    "images": null,
+    "video_url": null,
+    "when_to_use": [
+      {
+        "point": "When grouping a discrete block of related sentences that form a single thought"
+      },
+      {
+        "point": "When marking up inline text with semantic meaning using strong, em, code, or mark"
+      },
+      {
+        "point": "When representing dates, abbreviations, or keyboard shortcuts with time, abbr, or kbd"
+      }
+    ],
+    "when_to_avoid": [
+      {
+        "point": "Avoid using br br between blocks of text instead of real p elements for spacing"
+      },
+      {
+        "point": "Avoid nesting block-level elements like div, ul, or h2 inside a p element"
+      },
+      {
+        "point": "Avoid using b and i for visual styling when strong and em are semantically correct"
+      }
+    ],
+    "what_it_solves": [
+      {
+        "1": "Without p elements, body text has no structure and screen readers cannot identify paragraph boundaries."
+      },
+      {
+        "2": "Inline semantic elements communicate meaning to assistive tools that cannot see visual styling."
+      },
+      {
+        "3": "Elements like time and abbr embed machine-readable data that browsers and crawlers can parse."
+      }
+    ],
+    "conceptual_understanding": [
+      {
+        "model": "A paragraph element is like a sentence in a formal letter that starts on a new line with a blank line above it. The blank line signals to the reader that a new thought is beginning. The p element signals the same thing to browsers, screen readers, and search engines: a new discrete block of related content is starting here."
+      },
+      {
+        "model": "The difference between strong and b, and between em and i, is the difference between a highlighted warning label and bold decorative text on a menu. The warning label communicates urgency to anyone who reads it, including assistive tools. The menu decoration is purely visual. strong and em carry meaning. b and i carry only appearance."
+      },
+      {
+        "model": "Inline semantic elements are like margin annotations in a textbook. The text flows normally on the page, but specific words carry annotations: this word is a keyboard shortcut, this phrase is a quotation, this abbreviation expands to a full term. The annotations do not change the reading flow but add a layer of structured information for any tool that reads the page."
+      }
+    ],
+    "common_mistakes": [
+      {
+        "mistake": "Using br br to separate blocks of text instead of p elements: Double line breaks create visual spacing but produce no semantic structure. Screen readers cannot navigate between br-separated blocks. CSS cannot target them as paragraphs. Search engines see one continuous block of unstructured text. Always use separate p elements and control spacing with CSS margin."
+      },
+      {
+        "mistake": "Nesting block-level elements inside p: The p element can only contain phrasing content (inline elements and text). Placing a div, ul, h2, or blockquote inside a p causes the browser to auto-close the p before the block element, creating multiple implicit paragraph elements and unpredictable layout. Always validate nesting with the W3C Validator."
+      },
+      {
+        "mistake": "Choosing b and i instead of strong and em for meaningful text: b and i are purely presentational and carry no semantic weight. Screen readers do not alter their reading for b or i. strong signals importance and em signals stress emphasis, both of which affect how assistive tools process and announce the content to users who rely on them."
+      }
+    ],
+    "bonus_tips": [
+      {
+        "tip": "Use the time element with a datetime attribute for all dates and times in content: <time datetime='2024-06-15'>15 June 2024</time>. The datetime attribute holds a machine-readable ISO 8601 value while the element content holds a human-friendly display string. This lets browsers, search engines, and calendar tools parse dates reliably without scraping visible text."
+      },
+      {
+        "tip": "Add a title attribute to every abbr element so users can see the full expansion on hover: <abbr title='Application Programming Interface'>API</abbr>. For the first occurrence of an abbreviation on any page, consider also writing the expansion in full before the abbreviation in parentheses, which benefits users who cannot hover, including touch screen and screen reader users."
+      }
+    ],
+    "related_topics": [
+      "HTML Heading Elements h1-h6",
+      "HTML Semantic Elements",
+      "HTML Text Formatting",
+      "Accessibility and ARIA",
+      "CSS Typography"
+    ],
+    "is_active": true,
+    "order_index": 6,
+    "created_at": null,
+    "updated_at": null
+  },
+  "subtopics": [],
+  "seo_metadata": {
+    "meta_title": "HTML Paragraph Elements | Inline Text Semantics and Formatting Guide",
+    "meta_description": "Learn HTML paragraph elements and inline text semantics: strong vs b, em vs i, mark, code, kbd, abbr, time, sub, sup, del, ins, and common paragraph mistakes.",
+    "keywords": [
+      "HTML paragraph element",
+      "HTML inline elements",
+      "HTML strong vs b",
+      "HTML em vs i",
+      "HTML text formatting",
+      "HTML mark element",
+      "HTML abbr element",
+      "HTML time element",
+      "HTML code kbd elements",
+      "HTML semantic text elements"
+    ],
+    "canonical_url": "/html/html-paragraph-elements",
+    "robots": "index, follow"
+  }
+}

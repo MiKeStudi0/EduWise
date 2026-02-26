@@ -1,58 +1,116 @@
 {
   "topic": {
-    "id": 3,
+    "id": 4,
     "roadmap_id": 1,
     "technology_id": 1,
     "module_id": 2,
-    "slug": "html-elements-tags-attributes",
-    "title": "HTML Elements, Tags & Attributes",
-    "description": "HTML elements are the building blocks of web pages. Each element is created using tags (opening and closing) and can be customized with attributes. Understanding elements, tags, and attributes is essential for creating structured, meaningful HTML documents.",
+    "slug": "html-dom-fundamentals",
+    "title": "HTML DOM Fundamentals",
+    "description": "The DOM is the browser's live object tree of an HTML document that JavaScript can read and modify.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "What Is the DOM?"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When a browser loads an HTML file it parses the markup and builds a "
+          },
+          {
+            "value": "Document Object Model",
+            "bold": true
+          },
+          {
+            "value": " in memory. The DOM is not the HTML source file. It is a "
+          },
+          {
+            "value": "live tree of objects",
+            "bold": true
+          },
+          {
+            "value": " where every element, text node, comment, and attribute becomes a JavaScript-accessible object. Changes to the DOM instantly update what the user sees without reloading the page. The DOM standard is maintained by the "
+          },
+          {
+            "value": "WHATWG DOM Living Standard",
+            "link": "https://dom.spec.whatwg.org/"
+          },
+          {
+            "value": " and documented in full at "
+          },
+          {
+            "value": "MDN: Introduction to the DOM",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Node Type",
+          "nodeType Value",
+          "Example",
+          "Description"
+        ],
+        "rows": [
+          [
+            "Element node",
+            "1",
+            "<p>, <div>, <h1>",
+            "Every HTML element in the document"
+          ],
+          [
+            "Text node",
+            "3",
+            "Hello World",
+            "The text content inside an element"
+          ],
+          [
+            "Comment node",
+            "8",
+            "<!-- note -->",
+            "HTML comments in the source"
+          ],
+          [
+            "Document node",
+            "9",
+            "document",
+            "The root node representing the whole document"
+          ],
+          [
+            "Attribute node",
+            "2",
+            "class=\"card\"",
+            "Attributes on elements (accessed via element, not tree)"
+          ]
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "info",
+        "title": "DOM vs HTML Source",
+        "text": "The DOM and the HTML source file are not the same thing. The browser fixes malformed HTML when building the DOM, JavaScript can add nodes that were never in the source, and the DOM reflects the current live state of the page at any moment."
+      }
+    ],
     "examples": [
       {
-        "title": "Element Anatomy - Tags, Content, and Attributes",
-        "description": "Breaking down the complete structure of an HTML element showing how tags, attributes, and content work together.",
-        "code_snippet": "<!-- Basic element with content -->\n<p>This is a paragraph element</p>\n<!-- Opening tag: <p>\n     Content: This is a paragraph element\n     Closing tag: </p> -->\n\n<!-- Element with attributes -->\n<a href=\"https://example.com\" target=\"_blank\" rel=\"noopener\">Click here</a>\n<!-- Element: a (anchor/link)\n     Attributes: href, target, rel\n     Attribute values: the URLs and settings in quotes -->\n\n<!-- Self-closing element (no content, no closing tag) -->\n<img src=\"photo.jpg\" alt=\"A description of the photo\">\n<!-- Elements like img, br, hr, input have no content\n     so they don't need closing tags -->\n\n<!-- Nested elements (elements inside elements) -->\n<div class=\"container\">\n    <h2>Heading Inside Div</h2>\n    <p>Paragraph inside div with <strong>bold text</strong> inside.</p>\n</div>",
-        "output": "Shows a paragraph, a clickable link that opens in a new tab, an image, and nested elements inside a div. Demonstrates how elements contain content and how attributes modify element behavior.",
+        "title": "Exploring the DOM Tree: Nodes, Parents, Children, and Siblings",
+        "description": "This example builds a visible page structure and then uses JavaScript to walk the DOM tree using parent, child, and sibling relationships. Understanding tree traversal is the foundation for every DOM operation that selects or modifies elements without hardcoded IDs.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>DOM Tree Explorer</title>\n  <style>\n    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }\n    .highlight { background: #fef9c3; outline: 2px solid #ca8a04; }\n    #output { background: #0f172a; color: #e2e8f0; padding: 1rem;\n              border-radius: 8px; font-family: monospace; font-size: 0.85rem;\n              margin-top: 1rem; white-space: pre; }\n    button { padding: 0.4rem 0.9rem; border-radius: 6px; border: 1px solid #d1d5db;\n             cursor: pointer; margin-right: 0.5rem; margin-bottom: 0.5rem; }\n  </style>\n</head>\n<body>\n\n  <h1>DOM Tree Explorer</h1>\n\n  <section id=\"team\">\n    <h2>Engineering Team</h2>\n    <ul id=\"member-list\">\n      <li class=\"member\" data-role=\"lead\">Priya Sharma</li>\n      <li class=\"member\" data-role=\"senior\">Rahul Gupta</li>\n      <li class=\"member\" data-role=\"junior\">Anjali Mehta</li>\n    </ul>\n  </section>\n\n  <div>\n    <button id=\"btn-parent\">parentElement</button>\n    <button id=\"btn-children\">children</button>\n    <button id=\"btn-first\">firstElementChild</button>\n    <button id=\"btn-last\">lastElementChild</button>\n    <button id=\"btn-next\">nextElementSibling</button>\n    <button id=\"btn-prev\">previousElementSibling</button>\n    <button id=\"btn-nodes\">childNodes (all)</button>\n  </div>\n\n  <div id=\"output\">Click a button to inspect the DOM tree...</div>\n\n  <script>\n    const list   = document.getElementById('member-list');\n    const output = document.getElementById('output');\n\n    function log(label, node) {\n      if (!node) { output.textContent = label + ': null'; return; }\n      const info = node.nodeType === 1\n        ? `<${node.tagName.toLowerCase()}> \"${node.textContent.trim()}\"`\n        : node.nodeType === 3\n          ? `TextNode: \"${node.textContent.trim() || '(whitespace)'}\" `\n          : `NodeType ${node.nodeType}`;\n      output.textContent = `${label}:\\n  ${info}`;\n    }\n\n    // parentElement: the immediate element parent\n    document.getElementById('btn-parent').onclick = () => {\n      log('list.parentElement', list.parentElement);\n      // returns <section id=\"team\">\n    };\n\n    // children: live HTMLCollection of element children only (no text nodes)\n    document.getElementById('btn-children').onclick = () => {\n      const names = [...list.children].map(li => li.textContent.trim());\n      output.textContent = `list.children (${list.children.length}):\\n  ${names.join('\\n  ')}`;\n    };\n\n    // firstElementChild / lastElementChild: element nodes only\n    document.getElementById('btn-first').onclick = () =>\n      log('list.firstElementChild', list.firstElementChild);\n\n    document.getElementById('btn-last').onclick = () =>\n      log('list.lastElementChild', list.lastElementChild);\n\n    // nextElementSibling / previousElementSibling: adjacent element siblings\n    document.getElementById('btn-next').onclick = () => {\n      const second = list.children[1]; // Rahul Gupta\n      log('second-li.nextElementSibling', second.nextElementSibling);\n      // returns <li>Anjali Mehta</li>\n    };\n\n    document.getElementById('btn-prev').onclick = () => {\n      const second = list.children[1];\n      log('second-li.previousElementSibling', second.previousElementSibling);\n      // returns <li>Priya Sharma</li>\n    };\n\n    // childNodes: includes element nodes AND text nodes (whitespace included)\n    document.getElementById('btn-nodes').onclick = () => {\n      const nodes = [...list.childNodes];\n      const info  = nodes.map(n =>\n        n.nodeType === 1\n          ? `Element: <${n.tagName.toLowerCase()}> \"${n.textContent.trim()}\"`\n          : `Text:    \"${n.textContent.trim() || '(whitespace)'}\" `\n      ).join('\\n  ');\n      output.textContent = `list.childNodes (${nodes.length}):\\n  ${info}`;\n      // Shows 7 nodes: 3 li elements + 4 whitespace text nodes between them\n    };\n  </script>\n\n</body>\n</html>",
+        "output": "Page renders an Engineering Team section with three list items and six inspector buttons. Clicking parentElement shows the section element. Clicking children shows the three member names. Clicking childNodes shows 7 nodes total: three li elements and four whitespace text nodes between them, demonstrating why childNodes count differs from children count. Each button updates the dark output panel with the result.",
         "images": null,
         "video_url": null
       },
       {
-        "title": "Block vs Inline Elements",
-        "description": "HTML elements are either block-level (take full width, start on new line) or inline (flow with text). Understanding this is crucial for layout.",
-        "code_snippet": "<!-- Block-level elements: take full width, stack vertically -->\n<div>This is a div (block)</div>\n<div>This is another div (block) - starts on new line</div>\n\n<p>This is a paragraph (block)</p>\n<p>This is another paragraph (block) - also new line</p>\n\n<h1>Heading 1 (block)</h1>\n<h2>Heading 2 (block)</h2>\n\n<!-- Inline elements: flow with text, don't break lines -->\n<p>\n    This paragraph contains <span>a span (inline)</span> and \n    <strong>bold text (inline)</strong> and \n    <a href=\"#\">a link (inline)</a> that all flow together.\n</p>\n\n<!-- Common block elements: div, p, h1-h6, ul, ol, li, header, footer, section, article -->\n<!-- Common inline elements: span, a, strong, em, img, input, button -->",
-        "output": "Block elements each start on a new line and take full available width. Inline elements sit next to each other within the same line of text, like words in a sentence.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Common Global Attributes Used on Any Element",
-        "description": "Global attributes can be used on any HTML element. Here are the most commonly used ones in real projects.",
-        "code_snippet": "<!-- id: unique identifier for the element -->\n<div id=\"header\">Can be targeted with CSS or JavaScript</div>\n\n<!-- class: reusable style identifier (can have multiple) -->\n<p class=\"text-large text-bold highlighted\">Multiple classes separated by spaces</p>\n\n<!-- style: inline CSS (avoid in production, use external CSS) -->\n<p style=\"color: red; font-size: 18px;\">Red text</p>\n\n<!-- title: tooltip text that appears on hover -->\n<button title=\"This saves your changes\">Save</button>\n\n<!-- data-* attributes: store custom data -->\n<div data-user-id=\"12345\" data-role=\"admin\">User info</div>\n\n<!-- hidden: hides the element completely -->\n<div hidden>This content is hidden from view</div>\n\n<!-- tabindex: controls keyboard navigation order -->\n<button tabindex=\"1\">First</button>\n<button tabindex=\"2\">Second</button>\n\n<!-- lang: specifies language of element content -->\n<p lang=\"es\">Hola mundo</p>\n\n<!-- contenteditable: makes element editable by user -->\n<div contenteditable=\"true\">You can edit this text</div>",
-        "output": "Each attribute modifies element behavior. The id creates unique identifiers, classes allow styling, title shows tooltips on hover, data attributes store custom information, hidden removes elements from view, and contenteditable allows direct text editing.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Boolean Attributes - Present or Absent",
-        "description": "Boolean attributes don't need values. Their presence means true, their absence means false. Common in forms and media elements.",
-        "code_snippet": "<!-- Form input boolean attributes -->\n<input type=\"text\" required>\n<!-- required means this field must be filled -->\n\n<input type=\"checkbox\" checked>\n<!-- checked means checkbox starts selected -->\n\n<input type=\"text\" disabled>\n<!-- disabled means user cannot interact with this field -->\n\n<input type=\"text\" readonly value=\"Cannot change this\">\n<!-- readonly means user can see but not edit -->\n\n<input type=\"email\" autofocus>\n<!-- autofocus means cursor starts in this field when page loads -->\n\n<!-- Select dropdown boolean attributes -->\n<select>\n    <option value=\"1\">Option 1</option>\n    <option value=\"2\" selected>Option 2</option>\n    <option value=\"3\" disabled>Option 3 (cannot select)</option>\n</select>\n\n<!-- Media boolean attributes -->\n<video src=\"video.mp4\" controls autoplay muted loop></video>\n<!-- controls: show play/pause buttons\n     autoplay: start playing automatically\n     muted: no sound\n     loop: replay when finished -->\n\n<!-- Script boolean attribute -->\n<script src=\"app.js\" defer></script>\n<!-- defer: load script after HTML is parsed -->",
-        "output": "The required input must be filled before form submission. The checkbox starts checked. The disabled input cannot be clicked. The video plays automatically on muted loop with controls visible. Boolean attributes control behavior through their presence alone.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Custom Data Attributes for Storing Information",
-        "description": "Data attributes (data-*) let you store custom information on HTML elements that JavaScript can read and use. Essential for interactive web applications.",
-        "code_snippet": "<!-- Product card with custom data -->\n<div class=\"product-card\" \n     data-product-id=\"P12345\"\n     data-price=\"29.99\"\n     data-category=\"electronics\"\n     data-in-stock=\"true\">\n    <h3>Wireless Mouse</h3>\n    <p>$29.99</p>\n    <button onclick=\"addToCart(this.parentElement)\">Add to Cart</button>\n</div>\n\n<script>\nfunction addToCart(element) {\n    // JavaScript can read data attributes\n    const productId = element.dataset.productId;  // \"P12345\"\n    const price = element.dataset.price;          // \"29.99\"\n    const category = element.dataset.category;    // \"electronics\"\n    const inStock = element.dataset.inStock;      // \"true\"\n    \n    console.log(`Adding product ${productId} for $${price}`);\n}\n</script>\n\n<!-- Tab navigation with data attributes -->\n<div class=\"tabs\">\n    <button class=\"tab-button\" data-tab=\"home\">Home</button>\n    <button class=\"tab-button\" data-tab=\"profile\">Profile</button>\n    <button class=\"tab-button\" data-tab=\"settings\">Settings</button>\n</div>\n\n<div class=\"tab-content\" data-tab-content=\"home\">Home content</div>\n<div class=\"tab-content\" data-tab-content=\"profile\" hidden>Profile content</div>\n<div class=\"tab-content\" data-tab-content=\"settings\" hidden>Settings content</div>\n\n<!-- User action tracking with data attributes -->\n<button data-action=\"purchase\" data-value=\"99.99\" data-currency=\"USD\">\n    Buy Now\n</button>",
-        "output": "Data attributes store custom information directly in HTML. JavaScript can access these values using element.dataset. This is cleaner than storing data in classes or other attributes. The product card stores ID, price, and stock status. The tabs store which content section they control.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Div and Span - Generic Containers",
-        "description": "Div (block) and span (inline) are generic containers with no semantic meaning. Use them when no semantic element fits, and add meaningful class names.",
-        "code_snippet": "<!-- DIV: generic block container -->\n<div class=\"card\">\n    <div class=\"card-header\">\n        <h3>Card Title</h3>\n    </div>\n    <div class=\"card-body\">\n        <p>Card content goes here.</p>\n    </div>\n    <div class=\"card-footer\">\n        <button>Action</button>\n    </div>\n</div>\n\n<!-- SPAN: generic inline container -->\n<p>\n    The price is <span class=\"price\">$29.99</span> and includes \n    <span class=\"highlight\">free shipping</span> on orders over \n    <span class=\"price\">$50</span>.\n</p>\n\n<!-- Using div for layout when semantic elements don't fit -->\n<div class=\"grid\">\n    <div class=\"grid-item\">Item 1</div>\n    <div class=\"grid-item\">Item 2</div>\n    <div class=\"grid-item\">Item 3</div>\n</div>\n\n<!-- ❌ BAD: div soup (no semantic meaning, hard to understand) -->\n<div>\n    <div>\n        <div>Content</div>\n    </div>\n</div>\n\n<!-- ✅ GOOD: semantic elements where they fit -->\n<article>\n    <header>\n        <h2>Article Title</h2>\n    </header>\n    <p>Article content</p>\n</article>\n\n<!-- ✅ ACCEPTABLE: div with clear purpose via class name -->\n<div class=\"notification-container\">\n    <div class=\"notification success\">\n        <span class=\"notification-icon\">✓</span>\n        <span class=\"notification-message\">Saved successfully!</span>\n    </div>\n</div>",
-        "output": "The div creates a card layout with header, body, and footer sections. Span highlights specific words within a paragraph without breaking the text flow. Divs create a grid layout. The semantic example uses article and header which have meaning. The good div example uses clear class names to explain its purpose.",
+        "title": "DOM Selection, Inspection, and Manipulation",
+        "description": "This example covers all major DOM selection methods and the most common manipulation operations: reading and writing text content, changing attributes, toggling classes, creating new nodes, inserting them, and removing them. These are the core operations behind every interactive web component.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>DOM Manipulation</title>\n  <style>\n    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }\n    .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem; }\n    .featured { border-color: #2563eb; background: #eff6ff; }\n    .badge { display:inline-block; background:#dbeafe; color:#1d4ed8;\n             padding:0.15rem 0.5rem; border-radius:999px; font-size:0.75rem; }\n    button { padding:0.4rem 0.8rem; border-radius:6px; border:1px solid #d1d5db;\n             cursor:pointer; margin: 0.25rem; }\n    #log { background:#0f172a; color:#86efac; padding:1rem; border-radius:8px;\n           font-family:monospace; font-size:0.8rem; margin-top:1rem;\n           min-height:60px; white-space:pre-wrap; }\n  </style>\n</head>\n<body>\n\n  <h1 id=\"page-title\">Product Catalogue</h1>\n\n  <div id=\"catalogue\">\n    <div class=\"card\" id=\"card-1\" data-product=\"laptop\">\n      <h3 class=\"card-title\">ThinkBook 14</h3>\n      <p class=\"card-price\">Rs 62,000</p>\n    </div>\n    <div class=\"card featured\" id=\"card-2\" data-product=\"phone\">\n      <h3 class=\"card-title\">Pixel 8a</h3>\n      <p class=\"card-price\">Rs 52,999</p>\n    </div>\n  </div>\n\n  <div>\n    <button id=\"btn-read\">Read Content</button>\n    <button id=\"btn-write\">Update Title</button>\n    <button id=\"btn-attr\">Toggle Featured</button>\n    <button id=\"btn-class\">Add Badge</button>\n    <button id=\"btn-create\">Add Card</button>\n    <button id=\"btn-remove\">Remove Last Card</button>\n    <button id=\"btn-query\">querySelectorAll</button>\n  </div>\n\n  <div id=\"log\">Click a button to see the operation...</div>\n\n  <script>\n    const catalogue = document.getElementById('catalogue');\n    const log       = document.getElementById('log');\n    const print     = msg => { log.textContent = msg; };\n\n\n    // ===== SELECTION METHODS =====\n\n    // getElementById: fastest, returns single element or null\n    const card1 = document.getElementById('card-1');\n\n    // querySelector: CSS selector, returns first match or null\n    const firstTitle = document.querySelector('.card-title');\n\n    // querySelectorAll: CSS selector, returns static NodeList\n    const allCards = document.querySelectorAll('.card');\n\n    // getElementsByClassName: live HTMLCollection\n    const byClass = document.getElementsByClassName('card');\n\n\n    // ===== READ CONTENT =====\n    document.getElementById('btn-read').onclick = () => {\n      const title = document.getElementById('page-title');\n\n      // textContent: all text, including hidden elements, no HTML tags\n      // innerHTML:   raw HTML string including child tags\n      // innerText:   only visible text, respects CSS display:none\n      print(\n        `textContent: \"${title.textContent}\"\\n` +\n        `innerHTML:   \"${title.innerHTML}\"\\n` +\n        `id attr:     \"${title.getAttribute('id')}\"\\n` +\n        `tagName:     \"${title.tagName}\"\\n` +\n        `card1 data:  \"${card1.dataset.product}\"`\n      );\n    };\n\n\n    // ===== WRITE CONTENT =====\n    document.getElementById('btn-write').onclick = () => {\n      const title = document.getElementById('page-title');\n      title.textContent = 'Updated Catalogue 2024';\n      // Use textContent to set plain text (safe, no XSS risk)\n      // Use innerHTML only when you intentionally need to insert HTML markup\n      print('Title updated via textContent.');\n    };\n\n\n    // ===== ATTRIBUTE MANIPULATION =====\n    document.getElementById('btn-attr').onclick = () => {\n      const card2 = document.getElementById('card-2');\n\n      // classList methods: add, remove, toggle, contains, replace\n      card2.classList.toggle('featured');\n\n      // getAttribute / setAttribute / removeAttribute\n      const hasFeatured = card2.classList.contains('featured');\n      print(`card-2 featured class: ${hasFeatured}\\nclassList: ${[...card2.classList].join(', ')}`);\n    };\n\n\n    // ===== ADD A BADGE VIA innerHTML =====\n    document.getElementById('btn-class').onclick = () => {\n      const title = card1.querySelector('.card-title');\n      // innerHTML is acceptable here: content is not user-supplied\n      title.innerHTML = 'ThinkBook 14 <span class=\"badge\">New</span>';\n      print('Badge added via innerHTML.');\n    };\n\n\n    // ===== CREATE AND INSERT A NEW NODE =====\n    document.getElementById('btn-create').onclick = () => {\n      // createElement: creates a detached element\n      const newCard  = document.createElement('div');\n      newCard.className = 'card';\n      newCard.id = `card-${Date.now()}`;\n\n      // createTextNode or textContent to set safe text\n      const heading = document.createElement('h3');\n      heading.className = 'card-title';\n      heading.textContent = 'Galaxy Tab S9';\n\n      const price = document.createElement('p');\n      price.className = 'card-price';\n      price.textContent = 'Rs 74,999';\n\n      // Append children to the new card\n      newCard.appendChild(heading);\n      newCard.appendChild(price);\n\n      // Insert the new card into the DOM\n      catalogue.appendChild(newCard);           // adds at the end\n      // catalogue.prepend(newCard);            // adds at the start\n      // card1.insertAdjacentElement('afterend', newCard); // after card-1\n\n      print(`Created and appended: ${newCard.id}`);\n    };\n\n\n    // ===== REMOVE A NODE =====\n    document.getElementById('btn-remove').onclick = () => {\n      const last = catalogue.lastElementChild;\n      if (last) {\n        const removed = last.id;\n        last.remove();           // modern: element removes itself\n        print(`Removed: ${removed}`);\n      } else {\n        print('No cards left to remove.');\n      }\n    };\n\n\n    // ===== querySelectorAll DEMO =====\n    document.getElementById('btn-query').onclick = () => {\n      // Returns a static NodeList, not live\n      const titles = document.querySelectorAll('#catalogue .card-title');\n      const names  = [...titles].map(t => t.textContent.trim()).join(', ');\n      print(`querySelectorAll('.card-title') found ${titles.length}:\\n${names}`);\n    };\n\n  </script>\n\n</body>\n</html>",
+        "output": "Page renders a catalogue heading, two product cards (second with blue featured styling), and six action buttons. Read Content logs textContent, innerHTML, id attribute, tagName, and dataset value. Update Title changes the h1 text. Toggle Featured switches the blue styling on and off. Add Badge injects a New badge into the first card title. Add Card appends a third Galaxy Tab S9 card. Remove Last Card deletes the most recent card. querySelectorAll logs all current card titles with a count.",
         "images": null,
         "video_url": null
       }
@@ -62,134 +120,76 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "Use semantic HTML elements (header, nav, main, article, section, footer) whenever they accurately describe your content structure."
+        "point": "When reading or modifying page content dynamically without a full page reload"
       },
       {
-        "point": "Use div and span only when no semantic element fits the purpose, and always add descriptive class names."
+        "point": "When building interactive UI components that respond to user actions"
       },
       {
-        "point": "Use global attributes like id, class, and title to make elements identifiable and usable."
-      },
-      {
-        "point": "Use data attributes to store custom information that JavaScript will need to access."
-      },
-      {
-        "point": "Use boolean attributes on form inputs and media elements to control behavior."
-      },
-      {
-        "point": "Use the hidden attribute to hide content rather than using CSS display: none for better semantics."
+        "point": "When traversing element relationships to find siblings, parents, or children"
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Never use div and span everywhere (div soup). Overusing generic containers makes HTML meaningless and harms accessibility."
+        "point": "Avoid frequent individual DOM updates in loops, batch with DocumentFragment instead"
       },
       {
-        "point": "Avoid using inline style attributes in production. Keep styling in external CSS files for maintainability."
+        "point": "Avoid innerHTML with unsanitised user input as it creates XSS vulnerabilities"
       },
       {
-        "point": "Do not create custom attributes without the data- prefix. Non-standard attributes may conflict with future HTML specifications."
-      },
-      {
-        "point": "Never use the same id value twice on the same page. IDs must be unique per document."
-      },
-      {
-        "point": "Avoid putting multiple unrelated purposes in a single class name. Use multiple classes instead."
-      },
-      {
-        "point": "Do not use presentational class names like 'red-text' or 'big-heading'. Use semantic names like 'error-message' or 'page-title'."
+        "point": "Avoid deep DOM traversal chains like parent.parent.children when an id selector works"
       }
     ],
-    "problems": [
+    "what_it_solves": [
       {
-        "problem": "Without proper element choice, content loses semantic meaning. Screen readers and search engines cannot understand page structure if everything is a div."
+        "1": "Static HTML alone cannot update content after the page loads without the DOM API."
       },
       {
-        "problem": "Without attributes, elements cannot be styled, targeted by JavaScript, or configured with custom behavior."
+        "2": "Without the DOM, JavaScript has no structured way to find, read, or change page elements."
       },
       {
-        "problem": "Before data attributes existed, developers stored data in classes or non-standard attributes, making code fragile and hard to maintain."
-      },
-      {
-        "problem": "Generic containers (div, span) were needed because HTML didn't originally have enough semantic elements. HTML5 added semantic elements to reduce reliance on divs."
+        "3": "DOM tree relationships let code navigate complex structures without memorising every element ID."
       }
     ],
-    "mental_models": [
+    "conceptual_understanding": [
       {
-        "model": "Think of HTML elements like LEGO blocks. Each block type (p, h1, div, img) has a specific shape and purpose. Tags are how you snap the blocks into your structure. Attributes are the custom decorations or labels you stick on each block."
+        "model": "The DOM is like a live organisation chart for a company. The document is the CEO at the top. Each department head is an element node. Each employee is a text or child element node. You can read who reports to whom, move people between departments, hire new employees, or fire existing ones, and the org chart updates instantly to reflect the changes."
       },
       {
-        "model": "Elements are nouns (things that exist), tags are the syntax that creates those nouns, and attributes are adjectives (properties that describe or modify those things)."
+        "model": "The difference between HTML source and the DOM is like the difference between a blueprint and the actual building. The blueprint is the original HTML file, static and unchanging on disk. The building is the DOM, constructed from the blueprint but then modified by workers over time. Renovations happen to the building, not to the blueprint stored in the archive."
       },
       {
-        "model": "Think of div and span like generic boxes and tape in a moving truck. You use them when you need to group or hold things together, but you label the boxes (with class names) so you know what's inside."
-      },
-      {
-        "model": "Data attributes are like sticky notes on objects. They hold extra information that isn't visible on the surface but that you can read when you need it (especially in JavaScript)."
+        "model": "childNodes versus children is like counting everyone in a room versus counting only the adults. childNodes includes every node: element nodes, text nodes, and whitespace nodes. children counts only element nodes. The room looks the same but the count depends on who you include in the tally."
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Using div for everything instead of semantic elements. This creates 'div soup' where the HTML structure has no meaning, harming accessibility and SEO."
+        "mistake": "Confusing childNodes with children: childNodes returns all node types including whitespace text nodes between elements. children returns only element nodes. Looping over childNodes expecting only elements will process unexpected text nodes and cause errors or incorrect results."
       },
       {
-        "mistake": "Forgetting to close tags. An unclosed div can break the entire page layout as subsequent elements nest inside it incorrectly."
+        "mistake": "Using innerHTML with user-supplied data: Setting element.innerHTML = userInput directly injects raw HTML into the DOM. If the input contains a script tag or an event attribute like onerror, it executes in the user's browser, creating a cross-site scripting vulnerability. Always use textContent for plain text from user input."
       },
       {
-        "mistake": "Using duplicate id values. IDs must be unique per page. If you need to target multiple elements, use classes instead."
-      },
-      {
-        "mistake": "Not quoting attribute values. While HTML5 allows unquoted values in some cases, always use quotes for consistency and to avoid bugs."
-      },
-      {
-        "mistake": "Creating custom attributes without data- prefix. Attributes like 'user-id' or 'product-name' are invalid. Use 'data-user-id' and 'data-product-name' instead."
-      },
-      {
-        "mistake": "Misspelling boolean attributes or adding values to them. Write 'required' not 'required=\"required\"' or 'required=\"true\"'. The presence alone means true."
-      },
-      {
-        "mistake": "Using presentational class names like 'blue-button' or 'text-16px' instead of semantic names like 'primary-button' or 'body-text'."
-      },
-      {
-        "mistake": "Nesting block elements incorrectly, like putting a div inside a span or a p inside an a. This creates invalid HTML."
+        "mistake": "Querying the DOM before it is ready: Running document.getElementById or querySelector at the top of a script file before the HTML below it has been parsed returns null. Always place scripts at the end of body, or use the defer attribute on the script tag, or wrap code in DOMContentLoaded to ensure elements exist before selecting them."
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Use the browser DevTools inspector to see the element tree and verify your nesting is correct. Right-click any element and choose 'Inspect'."
+        "tip": "Use document.querySelector with any valid CSS selector to select elements with the same syntax you already know from CSS. For example: document.querySelector('section#team li.member[data-role=\"lead\"]') finds the lead member inside the team section in one call. This is often more precise and readable than chaining multiple DOM traversal calls."
       },
       {
-        "tip": "When choosing between div and semantic elements, ask yourself: 'What does this represent?' If there's a specific answer (navigation, article, header), use the semantic element."
-      },
-      {
-        "tip": "Data attributes can store JSON strings for complex data: data-config='{\"theme\": \"dark\", \"lang\": \"en\"}' then parse in JavaScript."
-      },
-      {
-        "tip": "You can use CSS attribute selectors to style elements based on data attributes: [data-category='electronics'] { color: blue; }"
-      },
-      {
-        "tip": "The contenteditable attribute makes any element editable, even divs and spans. This is how rich text editors are built."
-      },
-      {
-        "tip": "Multiple classes are separated by spaces in the class attribute, not commas: class='header primary-nav' not class='header, primary-nav'."
-      },
-      {
-        "tip": "Use the hidden attribute instead of style='display: none' because it better communicates intent and works with accessibility tools."
+        "tip": "When appending multiple new elements in a loop, use a DocumentFragment to batch all insertions into a single DOM update. Create the fragment with document.createDocumentFragment(), append all new nodes to it, then append the fragment to the DOM once. This triggers only one reflow instead of one per element, significantly improving performance for large lists."
       }
     ],
     "related_topics": [
+      "HTML Elements Tags and Attributes",
       "HTML Semantic Elements",
-      "CSS Selectors",
       "JavaScript DOM Manipulation",
-      "HTML Forms and Inputs",
-      "Web Accessibility (ARIA)",
-      "HTML Document Structure",
-      "CSS Box Model",
-      "HTML5 New Elements"
+      "Browser DevTools",
+      "JavaScript Events"
     ],
-    "seo_id": 1,
     "is_active": true,
-    "order_index": 3,
+    "order_index": 4,
     "created_at": null,
     "updated_at": null
   },
@@ -199,24 +199,180 @@
       "roadmap_id": 1,
       "technology_id": 1,
       "module_id": 2,
-      "topic_id": 3,
-      "slug": "global-html-attributes",
-      "title": "Global HTML Attributes",
-      "description": "Global attributes can be used on any HTML element regardless of type. They provide common functionality like identification (id), styling hooks (class), tooltips (title), and custom data storage (data-*). Understanding global attributes is essential for making elements interactive and maintainable.",
-      "examples": [
+      "topic_id": 4,
+      "slug": "dom-tree-and-node-relationships",
+      "title": "DOM Tree and Node Relationships",
+      "description": "The DOM tree is a hierarchy of nodes where every element, text, and comment has a defined position.",
+      "content": [
         {
-          "title": "Most Important Global Attributes",
-          "description": "The global attributes you'll use most often in real projects, with practical examples of each.",
-          "code_snippet": "<!-- id: unique identifier (use for single elements) -->\n<div id=\"main-navigation\">Navigation content</div>\n<script>\n    // JavaScript can find element by id\n    const nav = document.getElementById('main-navigation');\n</script>\n\n<!-- class: reusable identifier (use for multiple elements) -->\n<button class=\"btn btn-primary\">Save</button>\n<button class=\"btn btn-secondary\">Cancel</button>\n<button class=\"btn btn-primary\">Submit</button>\n\n<!-- title: tooltip on hover -->\n<button title=\"Save your changes to the database\">💾 Save</button>\n<abbr title=\"HyperText Markup Language\">HTML</abbr>\n\n<!-- style: inline CSS (avoid in production) -->\n<p style=\"color: red; font-weight: bold;\">Error message</p>\n\n<!-- data-*: custom data attributes -->\n<button data-user-id=\"12345\" data-action=\"delete\">Delete User</button>\n\n<!-- hidden: hide element from display -->\n<div hidden>This is hidden from view and screen readers</div>\n\n<!-- lang: language of content -->\n<p>This is English</p>\n<p lang=\"fr\">Ceci est en français</p>\n<p lang=\"es\">Esto es español</p>\n\n<!-- tabindex: keyboard navigation order -->\n<div tabindex=\"0\">Can be focused with Tab key</div>\n<div tabindex=\"-1\">Can be focused programmatically, not with Tab</div>",
-          "output": "The id uniquely identifies the navigation. Classes style multiple buttons consistently. Title shows tooltips on hover. Data attributes store custom information. Hidden removes the div from view. Lang tells screen readers which language pronunciation to use. Tabindex controls keyboard focus order.",
-          "images": null,
-          "video_url": null
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The DOM tree starts at the "
+            },
+            {
+              "value": "document",
+              "highlight": true
+            },
+            {
+              "value": " node, then the "
+            },
+            {
+              "value": "html",
+              "highlight": true
+            },
+            {
+              "value": " element, then branches into "
+            },
+            {
+              "value": "head",
+              "highlight": true
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "body",
+              "highlight": true
+            },
+            {
+              "value": ", and continues branching from there. Each node has a "
+            },
+            {
+              "value": "parentNode",
+              "highlight": true
+            },
+            {
+              "value": ", zero or more "
+            },
+            {
+              "value": "childNodes",
+              "highlight": true
+            },
+            {
+              "value": ", and optional "
+            },
+            {
+              "value": "previousSibling",
+              "highlight": true
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "nextSibling",
+              "highlight": true
+            },
+            {
+              "value": " neighbours. The element-only variants ("
+            },
+            {
+              "value": "parentElement",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "children",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "firstElementChild",
+              "highlight": true
+            },
+            {
+              "value": ") skip text and comment nodes, which is what most code needs. Full reference at "
+            },
+            {
+              "value": "MDN: Node relationships",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node"
+            },
+            {
+              "value": "."
+            }
+          ]
         },
         {
-          "title": "Less Common But Useful Global Attributes",
-          "description": "Additional global attributes for specific use cases like editing, drag and drop, and translation control.",
-          "code_snippet": "<!-- contenteditable: make element editable -->\n<div contenteditable=\"true\">You can edit this text directly</div>\n<p contenteditable=\"false\">This paragraph cannot be edited</p>\n\n<!-- draggable: enable drag and drop -->\n<div draggable=\"true\">Drag me around</div>\n<img src=\"image.jpg\" draggable=\"false\" alt=\"Cannot drag this image\">\n\n<!-- translate: control translation tools -->\n<p translate=\"no\">Don't translate this: API_KEY_12345</p>\n<p translate=\"yes\">Please translate this paragraph</p>\n\n<!-- spellcheck: browser spell checking -->\n<textarea spellcheck=\"true\">Type something heer (will show red underline)</textarea>\n<input type=\"text\" spellcheck=\"false\" placeholder=\"Code: no spellcheck\">\n\n<!-- dir: text direction for right-to-left languages -->\n<p dir=\"ltr\">Left to right (English)</p>\n<p dir=\"rtl\">Right to left (Arabic: مرحبا)</p>\n\n<!-- accesskey: keyboard shortcut (use carefully) -->\n<button accesskey=\"s\">Save (Alt+S on Windows, Control+Option+S on Mac)</button>",
-          "output": "Contenteditable allows direct text editing in the browser. Draggable enables drag and drop functionality. Translate controls whether translation tools should translate content. Spellcheck enables or disables browser spell checking. Dir sets text direction for right-to-left languages. Accesskey creates keyboard shortcuts.",
+          "type": "table",
+          "headers": [
+            "Property",
+            "Returns",
+            "Includes Text Nodes?"
+          ],
+          "rows": [
+            [
+              "parentNode",
+              "Parent node of any type",
+              "Yes"
+            ],
+            [
+              "parentElement",
+              "Parent element node only",
+              "No"
+            ],
+            [
+              "childNodes",
+              "All child nodes (NodeList)",
+              "Yes"
+            ],
+            [
+              "children",
+              "Child element nodes only (HTMLCollection)",
+              "No"
+            ],
+            [
+              "firstChild",
+              "First child node of any type",
+              "Yes"
+            ],
+            [
+              "firstElementChild",
+              "First child element node",
+              "No"
+            ],
+            [
+              "lastChild",
+              "Last child node of any type",
+              "Yes"
+            ],
+            [
+              "lastElementChild",
+              "Last child element node",
+              "No"
+            ],
+            [
+              "nextSibling",
+              "Next sibling node of any type",
+              "Yes"
+            ],
+            [
+              "nextElementSibling",
+              "Next sibling element node",
+              "No"
+            ],
+            [
+              "previousSibling",
+              "Previous sibling node of any type",
+              "Yes"
+            ],
+            [
+              "previousElementSibling",
+              "Previous sibling element node",
+              "No"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "title": "Traversing the DOM Tree Without Hardcoded Selectors",
+          "description": "This example demonstrates DOM tree traversal using only relationship properties, without using getElementById or querySelector. This pattern is useful when writing event handlers or utility functions that need to navigate relative to an element they already have, such as finding the parent list when a list item is clicked.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>DOM Tree Traversal</title>\n  <style>\n    body  { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }\n    li    { cursor: pointer; padding: 0.4rem 0.6rem; border-radius: 4px; }\n    li:hover  { background: #f1f5f9; }\n    li.active { background: #dbeafe; font-weight: 600; }\n    #info { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 8px;\n            font-family: monospace; font-size: 0.8rem; margin-top: 1rem; white-space: pre; }\n  </style>\n</head>\n<body>\n\n  <h2>Click any team member</h2>\n\n  <ul id=\"team\">\n    <li data-dept=\"frontend\">Priya Sharma</li>\n    <li data-dept=\"backend\">Rahul Gupta</li>\n    <li data-dept=\"devops\">Anjali Mehta</li>\n    <li data-dept=\"frontend\">Vikram Nair</li>\n  </ul>\n\n  <div id=\"info\">Click a name to inspect its tree position...</div>\n\n  <script>\n    const info = document.getElementById('info');\n    const team = document.getElementById('team');\n\n    // Event delegation: attach one listener to the parent instead of each li\n    team.addEventListener('click', (event) => {\n      const clicked = event.target;\n      if (clicked.tagName !== 'LI') return;\n\n      // Remove active from all siblings\n      [...team.children].forEach(li => li.classList.remove('active'));\n      clicked.classList.add('active');\n\n      // Navigate the tree using relationship properties\n      const parent     = clicked.parentElement;          // <ul id=\"team\">\n      const grandparent = clicked.parentElement          // <ul>\n                               .parentElement;           // <body>\n      const prev       = clicked.previousElementSibling; // li above, or null\n      const next       = clicked.nextElementSibling;     // li below, or null\n      const index      = [...parent.children].indexOf(clicked);\n      const total      = parent.children.length;\n\n      // childNodes vs children comparison on the parent\n      const allNodes    = parent.childNodes.length;      // includes text nodes\n      const elemNodes   = parent.children.length;        // element nodes only\n\n      info.textContent = [\n        `Clicked:          <${clicked.tagName.toLowerCase()}> \"${clicked.textContent}\"`,\n        `dept data attr:   ${clicked.dataset.dept}`,\n        `parentElement:    <${parent.tagName.toLowerCase()}#${parent.id}>`,\n        `grandparent:      <${grandparent.tagName.toLowerCase()}>`,\n        `position in list: ${index + 1} of ${total}`,\n        `prevElementSib:   ${prev ? '\"' + prev.textContent + '\"' : 'null (first item)'}`,\n        `nextElementSib:   ${next ? '\"' + next.textContent + '\"' : 'null (last item)'}`,\n        `parent.childNodes:  ${allNodes} (includes whitespace text nodes)`,\n        `parent.children:    ${elemNodes} (element nodes only)`,\n      ].join('\\n');\n    });\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders a four-item team list. Clicking any name highlights it blue and updates the info panel with: the element tag and text, the data attribute value, the parentElement, the grandparent element, the position in the list, the previous and next sibling names (or null for first and last), and a comparison showing that childNodes count is higher than children count because of whitespace text nodes.",
           "images": null,
           "video_url": null
         }
@@ -224,85 +380,28 @@
       "image_banner_url": null,
       "images": null,
       "video_url": null,
-      "when_to_use": [
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
         {
-          "point": "Use id for unique elements that need to be targeted by CSS, JavaScript, or fragment links."
+          "model": "The DOM tree is like a family tree. The document is the founding ancestor. Each element is a descendant. Parent, child, and sibling are literal relationship terms in this hierarchy. When you click a button and need to find its containing form, you walk up the family tree using parentElement until you reach the form ancestor."
         },
         {
-          "point": "Use class for any element that needs styling or JavaScript selection, especially when multiple elements share the same styles."
-        },
-        {
-          "point": "Use title for adding helpful tooltips on buttons, abbreviations, and icons."
-        },
-        {
-          "point": "Use data-* attributes to store custom information that JavaScript will read."
-        },
-        {
-          "point": "Use hidden to hide content both visually and from screen readers."
-        },
-        {
-          "point": "Use lang when content is in a different language than the page default."
+          "model": "The difference between Node properties and Element properties is like counting everyone at a party versus counting only the guests on the invitation list. childNodes counts everyone: guests, staff, furniture (whitespace text nodes). children counts only the invited guests: actual HTML elements. For most UI work you want the guest list, not the full room count."
         }
       ],
-      "when_to_avoid": [
-        {
-          "point": "Never use the same id value twice on one page. IDs must be unique."
-        },
-        {
-          "point": "Avoid using style attribute for production styling. Use external CSS instead."
-        },
-        {
-          "point": "Don't rely on accesskey because different browsers and operating systems handle them differently."
-        },
-        {
-          "point": "Avoid contenteditable for complex editing. Build proper form inputs or use a rich text editor library."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of id like a social security number. Each person (element) gets exactly one, and no two people can have the same number."
-        },
-        {
-          "model": "Think of class like job titles. Multiple people (elements) can have the same job title, and one person can have multiple roles."
-        },
-        {
-          "model": "Think of data attributes like pockets. They're places to store small bits of information you'll need later, but they don't affect what you see from the outside."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Using duplicate id values. Each id must be unique per page. Use classes for multiple elements."
-        },
-        {
-          "mistake": "Adding spaces in id or data attribute names. Use hyphens or camelCase: id='user-profile' or data-user-id, not id='user profile'."
-        },
-        {
-          "mistake": "Forgetting that class attribute accepts multiple classes separated by spaces: class='btn primary' not class='btn, primary'."
-        },
-        {
-          "mistake": "Using presentational class names like 'red-text' instead of semantic names like 'error-message'."
-        }
-      ],
+      "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "You can use CSS to style based on attributes: [data-status='active'] { color: green; } targets elements with that data attribute value."
-        },
-        {
-          "tip": "JavaScript can access data attributes via the dataset property: element.dataset.userId reads data-user-id."
-        },
-        {
-          "tip": "The hidden attribute is better than style='display:none' because it communicates semantic intent to browsers and assistive technologies."
+          "tip": "Use the element.closest(selector) method to walk up the DOM tree and find the nearest ancestor matching a CSS selector. For example, inside a click handler on a delete button inside a card, event.target.closest('.card') finds the wrapping card element without knowing how many levels up it is. This is more reliable than a fixed chain of parentElement calls."
         }
       ],
       "related_topics": [
-        "CSS Selectors",
-        "JavaScript DOM Manipulation",
-        "HTML Data Attributes",
-        "Web Accessibility (ARIA)",
-        "HTML Forms"
+        "HTML DOM Fundamentals",
+        "DOM Inspection and Manipulation Basics",
+        "JavaScript Events"
       ],
-      "seo_id": 2,
       "is_active": true,
       "order_index": 1,
       "created_at": null,
@@ -313,40 +412,197 @@
       "roadmap_id": 1,
       "technology_id": 1,
       "module_id": 2,
-      "topic_id": 3,
-      "slug": "boolean-attributes",
-      "title": "Boolean HTML Attributes",
-      "description": "Boolean attributes are special attributes that represent true/false values by their presence or absence. If the attribute is present, it's true. If it's absent, it's false. No value is needed. These are commonly used on form inputs, buttons, and media elements.",
+      "topic_id": 4,
+      "slug": "dom-inspection-and-manipulation-basics",
+      "title": "DOM Inspection and Manipulation Basics",
+      "description": "DOM manipulation covers selecting elements to read, write, create, or remove nodes in the document.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The DOM API provides four primary selection methods: "
+            },
+            {
+              "value": "getElementById",
+              "highlight": true
+            },
+            {
+              "value": " for unique elements by ID, "
+            },
+            {
+              "value": "querySelector",
+              "highlight": true
+            },
+            {
+              "value": " for the first CSS match, "
+            },
+            {
+              "value": "querySelectorAll",
+              "highlight": true
+            },
+            {
+              "value": " for all CSS matches, and "
+            },
+            {
+              "value": "getElementsByClassName",
+              "highlight": true
+            },
+            {
+              "value": " for a live collection by class. Once selected, content is read or written via "
+            },
+            {
+              "value": "textContent",
+              "highlight": true
+            },
+            {
+              "value": " for plain text or "
+            },
+            {
+              "value": "innerHTML",
+              "highlight": true
+            },
+            {
+              "value": " for HTML markup. Classes are managed via "
+            },
+            {
+              "value": "classList",
+              "highlight": true
+            },
+            {
+              "value": " and attributes via "
+            },
+            {
+              "value": "setAttribute",
+              "highlight": true
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "getAttribute",
+              "highlight": true
+            },
+            {
+              "value": ". Full API reference at "
+            },
+            {
+              "value": "MDN: Document",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document"
+            },
+            {
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Method or Property",
+            "Returns",
+            "Notes"
+          ],
+          "rows": [
+            [
+              "Select by ID",
+              "getElementById('id')",
+              "Element or null",
+              "Fastest selection method"
+            ],
+            [
+              "Select first match",
+              "querySelector('css')",
+              "Element or null",
+              "Accepts any CSS selector"
+            ],
+            [
+              "Select all matches",
+              "querySelectorAll('css')",
+              "Static NodeList",
+              "Use spread [...] to get array methods"
+            ],
+            [
+              "Select by class",
+              "getElementsByClassName('cls')",
+              "Live HTMLCollection",
+              "Updates automatically as DOM changes"
+            ],
+            [
+              "Read plain text",
+              "element.textContent",
+              "String",
+              "Safe for reading user-supplied text"
+            ],
+            [
+              "Write plain text",
+              "element.textContent = '...'",
+              "String set",
+              "Never executes HTML, safe for user input"
+            ],
+            [
+              "Read or write HTML",
+              "element.innerHTML",
+              "String",
+              "Only use with trusted content, never user input"
+            ],
+            [
+              "Add class",
+              "classList.add('name')",
+              "void",
+              "Does not duplicate if already present"
+            ],
+            [
+              "Remove class",
+              "classList.remove('name')",
+              "void",
+              "Silent if class not present"
+            ],
+            [
+              "Toggle class",
+              "classList.toggle('name')",
+              "Boolean",
+              "Returns true if class was added"
+            ],
+            [
+              "Get attribute",
+              "getAttribute('name')",
+              "String or null",
+              "Works for all attributes including data-*"
+            ],
+            [
+              "Set attribute",
+              "setAttribute('name','val')",
+              "void",
+              "Creates attribute if it does not exist"
+            ],
+            [
+              "Create element",
+              "createElement('tag')",
+              "Element",
+              "Element is detached until inserted"
+            ],
+            [
+              "Append child",
+              "parent.appendChild(el)",
+              "Element",
+              "Inserts at end of parent"
+            ],
+            [
+              "Remove element",
+              "element.remove()",
+              "void",
+              "Modern, removes itself from DOM"
+            ]
+          ]
+        }
+      ],
       "examples": [
         {
-          "title": "Form Input Boolean Attributes",
-          "description": "The most common boolean attributes used in forms to control input behavior and validation.",
-          "code_snippet": "<!-- required: field must be filled before form submission -->\n<input type=\"text\" name=\"username\" required>\n<input type=\"email\" name=\"email\" required>\n\n<!-- disabled: user cannot interact with this field -->\n<input type=\"text\" name=\"locked-field\" value=\"Cannot edit\" disabled>\n<button disabled>Cannot Click</button>\n\n<!-- readonly: user can see but not edit (value submits with form) -->\n<input type=\"text\" name=\"user-id\" value=\"12345\" readonly>\n\n<!-- checked: checkbox or radio starts selected -->\n<input type=\"checkbox\" name=\"agree\" checked> I agree to terms\n<input type=\"radio\" name=\"size\" value=\"small\" checked> Small\n<input type=\"radio\" name=\"size\" value=\"large\"> Large\n\n<!-- autofocus: cursor starts in this field when page loads -->\n<input type=\"text\" name=\"search\" autofocus placeholder=\"Search...\">\n\n<!-- multiple: allow multiple file selection or option selection -->\n<input type=\"file\" multiple>\n<select multiple>\n    <option>Option 1</option>\n    <option>Option 2</option>\n    <option>Option 3</option>\n</select>",
-          "output": "Required fields must be filled before form submission. Disabled inputs are grayed out and cannot be changed. Readonly inputs show values but don't allow editing. Checked inputs start selected. Autofocus puts the cursor in the search box immediately. Multiple allows selecting several files or options.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Media Element Boolean Attributes",
-          "description": "Boolean attributes that control how audio and video elements behave on the page.",
-          "code_snippet": "<!-- Video with boolean attributes -->\n<video src=\"demo.mp4\" \n       controls \n       autoplay \n       muted \n       loop \n       playsinline\n       width=\"640\" \n       height=\"360\">\n</video>\n\n<!-- controls: show play/pause, volume, timeline buttons -->\n<!-- autoplay: start playing automatically when page loads -->\n<!-- muted: no sound (required for autoplay to work in most browsers) -->\n<!-- loop: replay from start when video ends -->\n<!-- playsinline: play inline on iOS instead of fullscreen -->\n\n<!-- Audio with boolean attributes -->\n<audio src=\"song.mp3\" controls autoplay loop></audio>\n\n<!-- Image with boolean attribute -->\n<img src=\"photo.jpg\" alt=\"Description\" ismap>\n<!-- ismap: makes image a server-side image map (rarely used) -->",
-          "output": "The video plays automatically on muted loop with visible controls. The audio plays continuously with controls. Autoplay requires muted in most browsers to work due to user experience policies.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Script and Other Boolean Attributes",
-          "description": "Boolean attributes for scripts, iframes, and other elements.",
-          "code_snippet": "<!-- Script loading strategies -->\n<script src=\"app.js\" defer></script>\n<!-- defer: download in parallel, execute after HTML parsed -->\n\n<script src=\"analytics.js\" async></script>\n<!-- async: download and execute as soon as ready (don't wait) -->\n\n<!-- Iframe sandbox -->\n<iframe src=\"external.html\" sandbox></iframe>\n<!-- sandbox: restricts iframe content for security -->\n\n<!-- Details element (collapsible content) -->\n<details open>\n    <summary>Click to expand/collapse</summary>\n    <p>Hidden content shown because of 'open' attribute</p>\n</details>\n\n<!-- Dialog element -->\n<dialog open>\n    <p>This dialog is visible because of 'open' attribute</p>\n    <button>Close</button>\n</dialog>\n\n<!-- Option in select -->\n<select>\n    <option value=\"1\">Option 1</option>\n    <option value=\"2\" selected>Option 2 (pre-selected)</option>\n    <option value=\"3\">Option 3</option>\n</select>",
-          "output": "Scripts with defer load without blocking page rendering. The details element starts expanded. The dialog is visible on page load. Option 2 is pre-selected in the dropdown. Each boolean attribute controls behavior through its presence alone.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Correct vs Incorrect Boolean Attribute Syntax",
-          "description": "How to properly write boolean attributes. Remember: presence means true, absence means false.",
-          "code_snippet": "<!-- ✅ CORRECT: Just the attribute name -->\n<input type=\"checkbox\" checked>\n<input type=\"text\" required>\n<button disabled>Click</button>\n<video autoplay muted></video>\n\n<!-- ✅ ALSO CORRECT: Empty string value (HTML5 allows this) -->\n<input type=\"checkbox\" checked=\"\">\n<input type=\"text\" required=\"\">\n\n<!-- ✅ ALSO CORRECT: Attribute name as value (XHTML style) -->\n<input type=\"checkbox\" checked=\"checked\">\n<input type=\"text\" required=\"required\">\n\n<!-- ❌ WRONG: Using \"true\" or \"false\" as values -->\n<input type=\"checkbox\" checked=\"true\">\n<!-- This is still TRUE because attribute is present -->\n<input type=\"checkbox\" checked=\"false\">\n<!-- This is also TRUE! The attribute is present, value doesn't matter -->\n\n<!-- ✅ CORRECT: To make it false, remove the attribute entirely -->\n<input type=\"checkbox\">\n<!-- No checked attribute = not checked -->\n\n<!-- ❌ WRONG: Setting boolean to \"false\" doesn't work -->\n<button disabled=\"false\">This is still disabled!</button>\n\n<!-- ✅ CORRECT: Remove attribute to enable -->\n<button>This works (no disabled attribute)</button>",
-          "output": "The correct examples all work identically. The checked attribute with any value (or no value) means checked. To uncheck it, remove the attribute entirely. You cannot set a boolean attribute to false using a value.",
+          "title": "Selection Methods Compared and Safe Content Manipulation",
+          "description": "This example puts all four selection methods side by side and demonstrates the critical difference between textContent and innerHTML for writing content. It also shows the complete workflow for creating a new element, setting its content safely, and inserting it at a specific position in the DOM.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Selection and Manipulation</title>\n  <style>\n    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }\n    .item { padding: 0.5rem 0.75rem; border: 1px solid #e5e7eb;\n            border-radius: 6px; margin-bottom: 0.4rem; }\n    .highlight { background: #fef9c3; border-color: #ca8a04; }\n    .error     { background: #fef2f2; border-color: #dc2626; color: #dc2626; }\n    .success   { background: #f0fdf4; border-color: #16a34a; }\n    button { padding:0.4rem 0.8rem; border-radius:6px;\n             border:1px solid #d1d5db; cursor:pointer; margin:0.25rem; }\n    #log { background:#0f172a; color:#86efac; padding:1rem; border-radius:8px;\n           font-family:monospace; font-size:0.8rem; margin-top:1rem; white-space:pre-wrap; }\n    input { padding:0.4rem 0.6rem; border:1px solid #d1d5db;\n            border-radius:6px; width: 200px; }\n  </style>\n</head>\n<body>\n\n  <h2>Notification List</h2>\n\n  <div id=\"notif-list\">\n    <div class=\"item\" id=\"notif-1\">Server deployment completed successfully.</div>\n    <div class=\"item highlight\" id=\"notif-2\">Memory usage above 80% threshold.</div>\n    <div class=\"item\" id=\"notif-3\">Backup job scheduled for midnight.</div>\n  </div>\n\n\n  <!-- textContent vs innerHTML safety demo -->\n  <h2>Content Writing Safety</h2>\n  <div id=\"safe-demo\" class=\"item\">\n    Original content here.\n  </div>\n\n  <div style=\"margin-bottom:0.5rem;\">\n    <input id=\"user-input\" type=\"text\"\n           value=\"<img src=x onerror=alert('XSS')>\">\n    <button id=\"btn-text\">Write via textContent</button>\n    <button id=\"btn-html\">Write via innerHTML</button>\n  </div>\n\n\n  <div>\n    <button id=\"btn-select\">Compare selectors</button>\n    <button id=\"btn-add-success\">Add success notif</button>\n    <button id=\"btn-add-error\">Add error notif</button>\n    <button id=\"btn-remove\">Remove first notif</button>\n    <button id=\"btn-clear\">Clear all</button>\n  </div>\n\n  <div id=\"log\">Click a button...</div>\n\n\n  <script>\n    const list = document.getElementById('notif-list');\n    const log  = document.getElementById('log');\n    let   counter = 4;\n\n\n    // ===== SELECTION METHODS COMPARED =====\n    document.getElementById('btn-select').onclick = () => {\n\n      // 1. getElementById: fastest, returns single element or null\n      const byId = document.getElementById('notif-2');\n\n      // 2. querySelector: first CSS match\n      const first = document.querySelector('#notif-list .item');\n\n      // 3. querySelectorAll: all CSS matches, static NodeList\n      const all = document.querySelectorAll('#notif-list .item');\n\n      // 4. getElementsByClassName: live HTMLCollection (updates as DOM changes)\n      const live = document.getElementsByClassName('highlight');\n\n      log.textContent = [\n        `getElementById('notif-2'):       \"${byId.textContent.trim().slice(0,30)}...\"`,\n        `querySelector('.item'):          \"${first.textContent.trim().slice(0,30)}...\"`,\n        `querySelectorAll('.item').length: ${all.length}`,\n        `getElementsByClassName length:   ${live.length} (live, auto-updates)`,\n      ].join('\\n');\n    };\n\n\n    // ===== textContent vs innerHTML SAFETY =====\n    document.getElementById('btn-text').onclick = () => {\n      const demo  = document.getElementById('safe-demo');\n      const input = document.getElementById('user-input').value;\n\n      // SAFE: textContent treats value as plain text\n      // The <img onerror=...> is rendered as visible text, not executed\n      demo.textContent = input;\n      demo.className = 'item success';\n      log.textContent = 'Set via textContent.\\nHTML tags are escaped and shown as text.\\nNo script executed.';\n    };\n\n    document.getElementById('btn-html').onclick = () => {\n      const demo  = document.getElementById('safe-demo');\n      const input = document.getElementById('user-input').value;\n\n      // DANGEROUS with user input: innerHTML parses and executes HTML\n      // The onerror attribute on the broken img fires as JavaScript\n      // For demonstration only - do NOT use innerHTML with user input in production\n      demo.innerHTML = '<strong>[innerHTML output]:</strong> ' + input;\n      demo.className = 'item error';\n      log.textContent = 'WARNING: innerHTML executed the user input as HTML.\\nIn production this triggers XSS attacks.\\nAlways use textContent for user-supplied text.';\n    };\n\n\n    // ===== CREATE AND INSERT =====\n    function addNotif(text, type) {\n      const div = document.createElement('div');\n      div.className = `item ${type}`;\n      div.id = `notif-${counter++}`;\n      div.textContent = text;        // textContent is safe even here\n      list.appendChild(div);\n      log.textContent = `Created ${div.id} and appended to list.`;\n    }\n\n    document.getElementById('btn-add-success').onclick = () =>\n      addNotif('Deployment pipeline passed all checks.', 'success');\n\n    document.getElementById('btn-add-error').onclick = () =>\n      addNotif('Database connection timeout on replica.', 'error');\n\n\n    // ===== REMOVE =====\n    document.getElementById('btn-remove').onclick = () => {\n      const first = list.firstElementChild;\n      if (first) {\n        const id = first.id;\n        first.remove();\n        log.textContent = `Removed ${id}.`;\n      } else {\n        log.textContent = 'List is empty.';\n      }\n    };\n\n    document.getElementById('btn-clear').onclick = () => {\n      // Clear all children efficiently\n      list.innerHTML = '';  // safe here: no user input involved\n      log.textContent = 'All notifications cleared.';\n    };\n\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders three notification items (second highlighted yellow), a content safety demo area with a pre-filled input containing an XSS payload, and action buttons. Clicking Compare selectors logs all four selection methods and their results. Clicking Write via textContent renders the XSS payload as safe escaped text. Clicking Write via innerHTML executes the payload and triggers a browser alert. Add buttons append styled success or error notifications. Remove deletes the first item. Clear empties the list.",
           "images": null,
           "video_url": null
         }
@@ -354,280 +610,50 @@
       "image_banner_url": null,
       "images": null,
       "video_url": null,
-      "when_to_use": [
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
         {
-          "point": "Use required on form inputs that must be filled before submission."
+          "model": "DOM selection methods are like different ways to find a person in a building. getElementById is knowing the exact room number: direct, fastest. querySelector is describing the person: find the first person wearing a blue badge in the east wing. querySelectorAll is finding everyone matching that description. getElementsByClassName is a live employee directory that updates the moment someone joins or leaves."
         },
         {
-          "point": "Use disabled to prevent interaction with form elements or buttons."
-        },
-        {
-          "point": "Use checked to pre-select checkboxes or radio buttons."
-        },
-        {
-          "point": "Use defer on script tags for better page load performance."
-        },
-        {
-          "point": "Use muted with autoplay on videos (most browsers require it)."
+          "model": "textContent versus innerHTML is the difference between a typewriter and a printing press. textContent types out whatever you give it as plain characters. The angle brackets in a script tag become visible less-than and greater-than symbols, harmless on screen. innerHTML runs the printing press: it formats and executes everything it receives as real HTML markup, which is powerful for trusted content but dangerous for anything a user typed."
         }
       ],
-      "when_to_avoid": [
-        {
-          "point": "Don't use autofocus on multiple elements. Only one element should have focus on page load."
-        },
-        {
-          "point": "Avoid autoplay on videos with sound. It's a poor user experience and browsers block it."
-        },
-        {
-          "point": "Don't use disabled when you mean readonly. Disabled values don't submit with forms, readonly values do."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of boolean attributes like light switches. The switch is either on (attribute present) or off (attribute absent). There's no middle setting."
-        },
-        {
-          "model": "Boolean attributes are like flags on a mailbox. If the flag is up (attribute present), it means true. If the flag is down (attribute absent), it means false. The flag doesn't need a label saying 'this flag is up'."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Trying to set boolean attributes to false using values like disabled='false'. This doesn't work. The attribute's presence makes it true. To make it false, remove the attribute entirely."
-        },
-        {
-          "mistake": "Confusing disabled and readonly. Disabled elements are grayed out and their values don't submit with forms. Readonly elements look normal and their values do submit."
-        },
-        {
-          "mistake": "Using autoplay on videos without muted. Most browsers block autoplay with sound for better user experience."
-        },
-        {
-          "mistake": "Adding multiple autofocus attributes. Only one element can have focus at page load."
-        }
-      ],
+      "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "In JavaScript, you can toggle boolean attributes: element.toggleAttribute('hidden') or element.disabled = true/false."
-        },
-        {
-          "tip": "You can use CSS to style based on boolean attributes: input[disabled] { opacity: 0.5; } or input:required { border-color: red; }"
-        },
-        {
-          "tip": "The checked attribute sets initial state. User interaction changes the checked property in JavaScript, but the attribute stays the same."
+          "tip": "Spread a NodeList from querySelectorAll into an array using [...document.querySelectorAll('selector')] to unlock array methods like map, filter, and reduce. NodeList only has forEach natively. Converting to a real array lets you chain operations: [...document.querySelectorAll('.card')].filter(c => c.dataset.inStock === 'true').map(c => c.dataset.price) returns all prices for in-stock cards in one expression."
         }
       ],
       "related_topics": [
-        "HTML Form Elements",
-        "HTML Form Validation",
-        "HTML Media Elements",
-        "JavaScript DOM Properties",
-        "HTML Attributes"
+        "HTML DOM Fundamentals",
+        "DOM Tree and Node Relationships",
+        "JavaScript Events"
       ],
-      "seo_id": 3,
       "is_active": true,
       "order_index": 2,
       "created_at": null,
       "updated_at": null
-    },
-    {
-      "id": 3,
-      "roadmap_id": 1,
-      "technology_id": 1,
-      "module_id": 2,
-      "topic_id": 3,
-      "slug": "custom-data-attributes",
-      "title": "Custom Data Attributes",
-      "description": "Data attributes (data-*) allow you to store custom information on HTML elements that JavaScript can read and use. They're perfect for attaching metadata to elements without using non-standard attributes. Every data attribute starts with 'data-' followed by your custom name.",
-      "examples": [
-        {
-          "title": "Basic Data Attributes Usage",
-          "description": "How to create and use data attributes to store custom information on elements.",
-          "code_snippet": "<!-- Product card with data attributes -->\n<div class=\"product\" \n     data-id=\"12345\"\n     data-name=\"Wireless Mouse\"\n     data-price=\"29.99\"\n     data-category=\"electronics\"\n     data-in-stock=\"true\">\n    <h3>Wireless Mouse</h3>\n    <p>$29.99</p>\n    <button onclick=\"buyProduct(this.parentElement)\">Buy Now</button>\n</div>\n\n<script>\nfunction buyProduct(productElement) {\n    // Access data attributes via dataset property\n    const id = productElement.dataset.id;           // \"12345\"\n    const name = productElement.dataset.name;       // \"Wireless Mouse\"\n    const price = productElement.dataset.price;     // \"29.99\"\n    const category = productElement.dataset.category; // \"electronics\"\n    const inStock = productElement.dataset.inStock;   // \"true\"\n    \n    // Note: data-in-stock becomes inStock in JavaScript (camelCase)\n    console.log(`Buying ${name} (ID: ${id}) for $${price}`);\n}\n</script>\n\n<!-- User profile with data attributes -->\n<div class=\"user-card\"\n     data-user-id=\"987\"\n     data-username=\"john_doe\"\n     data-role=\"admin\"\n     data-last-login=\"2024-01-15\">\n    <p>User: john_doe</p>\n    <p>Role: admin</p>\n</div>",
-          "output": "When the Buy Now button is clicked, JavaScript reads all the product information from data attributes. The user card stores user metadata that JavaScript can access. Notice how data-in-stock becomes dataset.inStock with camelCase.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Naming Rules for Data Attributes",
-          "description": "How to properly name data attributes and how they convert to JavaScript property names.",
-          "code_snippet": "<!-- Data attribute naming rules -->\n<div \n    data-product-id=\"123\"         → dataset.productId\n    data-price-usd=\"49.99\"        → dataset.priceUsd  \n    data-in-stock=\"true\"          → dataset.inStock\n    data-created-date=\"2024-01-01\" → dataset.createdDate\n    data-user=\"john\"              → dataset.user\n    data-x=\"10\"                   → dataset.x\n>\n\n<!-- ❌ WRONG: Don't use these characters -->\n<div \n    data-price$=\"50\"       <!-- $ not allowed -->\n    data-user name=\"john\"  <!-- spaces not allowed -->\n    data-Price=\"50\"        <!-- uppercase not recommended -->\n>\n\n<!-- ✅ CORRECT: Use hyphens for multi-word names -->\n<div \n    data-product-category=\"electronics\"\n    data-user-email=\"user@example.com\"\n    data-last-updated=\"2024-01-15\"\n>\n\n<script>\n// Hyphenated names become camelCase in JavaScript\nconst element = document.querySelector('div');\n\n// data-product-id → dataset.productId\nconsole.log(element.dataset.productId);\n\n// data-price-usd → dataset.priceUsd  \nconsole.log(element.dataset.priceUsd);\n\n// Setting data attributes from JavaScript\nelement.dataset.newAttribute = 'value'; // Creates data-new-attribute\nelement.dataset.userId = '456';         // Creates data-user-id\n</script>",
-          "output": "Data attribute names in HTML use hyphens (data-product-id). In JavaScript, they become camelCase (dataset.productId). Names can only contain letters, numbers, hyphens, and must start with 'data-'.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Real-World Use Cases",
-          "description": "Practical examples of when and how to use data attributes in real applications.",
-          "code_snippet": "<!-- 1. Tab navigation -->\n<div class=\"tabs\">\n    <button class=\"tab\" data-target=\"home\">Home</button>\n    <button class=\"tab\" data-target=\"profile\">Profile</button>\n    <button class=\"tab\" data-target=\"settings\">Settings</button>\n</div>\n\n<div class=\"tab-content\" data-tab=\"home\">Home content</div>\n<div class=\"tab-content\" data-tab=\"profile\" hidden>Profile content</div>\n<div class=\"tab-content\" data-tab=\"settings\" hidden>Settings content</div>\n\n<script>\ndocument.querySelectorAll('.tab').forEach(button => {\n    button.addEventListener('click', () => {\n        const target = button.dataset.target;\n        // Show the matching content\n        document.querySelectorAll('.tab-content').forEach(content => {\n            content.hidden = content.dataset.tab !== target;\n        });\n    });\n});\n</script>\n\n<!-- 2. Sortable list -->\n<ul id=\"task-list\">\n    <li data-priority=\"high\" data-due=\"2024-01-20\">Important task</li>\n    <li data-priority=\"low\" data-due=\"2024-01-25\">Less urgent task</li>\n    <li data-priority=\"medium\" data-due=\"2024-01-15\">Medium task</li>\n</ul>\n\n<button onclick=\"sortByPriority()\">Sort by Priority</button>\n<button onclick=\"sortByDueDate()\">Sort by Due Date</button>\n\n<!-- 3. Modal dialogs -->\n<button data-modal=\"login-modal\">Open Login</button>\n<button data-modal=\"signup-modal\">Open Signup</button>\n\n<div id=\"login-modal\" class=\"modal\" hidden data-modal-id=\"login-modal\">\n    <h2>Login</h2>\n</div>\n\n<!-- 4. API endpoints -->\n<form data-api-endpoint=\"/api/users\" data-method=\"POST\">\n    <input name=\"username\" data-validation=\"required\">\n    <input name=\"email\" data-validation=\"required email\">\n    <button type=\"submit\">Submit</button>\n</form>\n\n<!-- 5. Tracking and analytics -->\n<button \n    data-track-event=\"click\"\n    data-track-category=\"navigation\"\n    data-track-label=\"header-cta\">\n    Sign Up Now\n</button>",
-          "output": "Tabs use data attributes to connect buttons with content. Sortable lists store metadata for sorting. Modal buttons reference which modal to open. Forms store API configuration. Analytics buttons store tracking information. Data attributes make these features flexible and maintainable.",
-          "images": null,
-          "video_url": null
-        },
-        {
-          "title": "Storing Complex Data (JSON)",
-          "description": "You can store JSON strings in data attributes for more complex data structures.",
-          "code_snippet": "<!-- Storing JSON data -->\n<div class=\"widget\"\n     data-config='{\"theme\": \"dark\", \"size\": \"large\", \"autoSave\": true}'>\n    Widget Content\n</div>\n\n<script>\nconst widget = document.querySelector('.widget');\nconst config = JSON.parse(widget.dataset.config);\n\nconsole.log(config.theme);    // \"dark\"\nconsole.log(config.size);     // \"large\" \nconsole.log(config.autoSave); // true\n</script>\n\n<!-- Chart configuration -->\n<canvas \n    data-chart-type=\"line\"\n    data-chart-options='{\"responsive\": true, \"legend\": {\"display\": false}}'>\n</canvas>\n\n<!-- User permissions -->\n<div class=\"admin-panel\"\n     data-permissions='[\"read\", \"write\", \"delete\"]'>\n</div>\n\n<script>\nconst panel = document.querySelector('.admin-panel');\nconst permissions = JSON.parse(panel.dataset.permissions);\nconsole.log(permissions); // [\"read\", \"write\", \"delete\"]\n</script>",
-          "output": "Complex configuration can be stored as JSON strings in data attributes. JavaScript parses the JSON to access nested properties and arrays. This is useful for widget settings, chart configurations, and structured data.",
-          "images": null,
-          "video_url": null
-        }
-      ],
-      "image_banner_url": null,
-      "images": null,
-      "video_url": null,
-      "when_to_use": [
-        {
-          "point": "Use data attributes to store custom information that JavaScript needs to access."
-        },
-        {
-          "point": "Use them when building interactive components like tabs, modals, or dropdowns that need to reference other elements."
-        },
-        {
-          "point": "Use them for configuration settings that control element behavior."
-        },
-        {
-          "point": "Use them for tracking and analytics metadata."
-        },
-        {
-          "point": "Use them to store identifiers that connect HTML elements to backend data."
-        }
-      ],
-      "when_to_avoid": [
-        {
-          "point": "Don't store sensitive information like passwords or API keys in data attributes. They're visible in HTML source code."
-        },
-        {
-          "point": "Don't use data attributes for data that should be in a database or backend. They're for client-side data only."
-        },
-        {
-          "point": "Avoid storing very large amounts of data in data attributes. They bloat HTML and hurt performance."
-        },
-        {
-          "point": "Don't use data attributes when a standard HTML attribute exists. Use href for links, src for images, etc."
-        }
-      ],
-      "problems": null,
-      "mental_models": [
-        {
-          "model": "Think of data attributes like sticky notes on objects. They hold extra information that's not visible on the surface but that you can read when you need it."
-        },
-        {
-          "model": "Data attributes are like metadata in a photo file. The photo shows the image, but the metadata stores extra information (camera settings, date, location) that programs can read."
-        }
-      ],
-      "common_mistakes": [
-        {
-          "mistake": "Creating custom attributes without the data- prefix. Attributes like 'product-id' or 'user-name' are invalid HTML. Always use 'data-product-id' and 'data-user-name'."
-        },
-        {
-          "mistake": "Using spaces or special characters in data attribute names. Use hyphens for multi-word names: data-user-id not data-user_id or data-userId."
-        },
-        {
-          "mistake": "Storing sensitive information in data attributes. They're visible in the page source code and browser inspector."
-        },
-        {
-          "mistake": "Forgetting that data attribute values are always strings. If you store '123', you get the string '123' not the number 123. Convert with parseInt() or parseFloat() if needed."
-        }
-      ],
-      "bonus_tips": [
-        {
-          "tip": "You can style elements based on data attributes using CSS: [data-status='active'] { color: green; }"
-        },
-        {
-          "tip": "Access all data attributes at once: element.dataset returns an object with all data attributes."
-        },
-        {
-          "tip": "You can add/remove data attributes dynamically: element.dataset.newAttr = 'value' or delete element.dataset.oldAttr"
-        },
-        {
-          "tip": "Data attributes are inherited by JavaScript frameworks like React, Vue, and Angular. They're framework-agnostic."
-        }
-      ],
-      "related_topics": [
-        "JavaScript DOM Manipulation",
-        "HTML Global Attributes",
-        "CSS Attribute Selectors",
-        "JSON Data Format",
-        "Web APIs"
-      ],
-      "seo_id": 4,
-      "is_active": true,
-      "order_index": 3,
-      "created_at": null,
-      "updated_at": null
     }
   ],
-  "seo_metadata": [
-    {
-      "id": 1,
-      "meta_title": "HTML Elements, Tags & Attributes - Complete Guide for Beginners",
-      "meta_description": "Master HTML elements, tags, and attributes. Learn global attributes, boolean attributes, data attributes, div and span usage, and best practices for building semantic HTML.",
-      "keywords": [
-        "HTML elements",
-        "HTML tags",
-        "HTML attributes",
-        "global attributes",
-        "boolean attributes",
-        "data attributes",
-        "HTML div span",
-        "HTML syntax",
-        "HTML structure",
-        "block inline elements"
-      ],
-      "canonical_url": "/html/elements-tags-attributes",
-      "robots": "index, follow"
-    },
-    {
-      "id": 2,
-      "meta_title": "Global HTML Attributes - id, class, title, data-* and More",
-      "meta_description": "Complete guide to global HTML attributes that work on any element. Learn id, class, title, style, data-*, hidden, lang, tabindex, and contenteditable with practical examples.",
-      "keywords": [
-        "global HTML attributes",
-        "HTML id attribute",
-        "HTML class attribute",
-        "HTML title attribute",
-        "data attributes",
-        "HTML hidden attribute",
-        "contenteditable",
-        "HTML lang attribute",
-        "tabindex"
-      ],
-      "canonical_url": "/html/global-attributes",
-      "robots": "index, follow"
-    },
-    {
-      "id": 3,
-      "meta_title": "Boolean HTML Attributes - required, disabled, checked Explained",
-      "meta_description": "Understand boolean HTML attributes that use presence/absence for true/false. Learn required, disabled, checked, readonly, autofocus, defer, muted, and more with examples.",
-      "keywords": [
-        "boolean HTML attributes",
-        "HTML required attribute",
-        "HTML disabled attribute",
-        "HTML checked attribute",
-        "HTML readonly",
-        "HTML autofocus",
-        "HTML defer async",
-        "form validation attributes"
-      ],
-      "canonical_url": "/html/boolean-attributes",
-      "robots": "index, follow"
-    },
-    {
-      "id": 4,
-      "meta_title": "Custom Data Attributes (data-*) - Store Custom Data in HTML",
-      "meta_description": "Learn how to use HTML data attributes (data-*) to store custom information on elements. Includes JavaScript access, naming rules, and real-world examples.",
-      "keywords": [
-        "HTML data attributes",
-        "data-* attributes",
-        "custom HTML attributes",
-        "dataset JavaScript",
-        "HTML metadata",
-        "data attribute examples",
-        "HTML5 data attributes",
-        "storing data in HTML"
-      ],
-      "canonical_url": "/html/data-attributes",
-      "robots": "index, follow"
-    }
-  ]
+  "seo_metadata": {
+    "meta_title": "HTML DOM Fundamentals | Tree, Nodes, Selection and Manipulation Guide",
+    "meta_description": "Learn HTML DOM fundamentals: the DOM tree, node types, parent-child relationships, selection methods, content manipulation, and creating or removing elements.",
+    "keywords": [
+      "HTML DOM",
+      "DOM tree",
+      "DOM node types",
+      "DOM manipulation",
+      "querySelector",
+      "getElementById",
+      "DOM parent child",
+      "childNodes vs children",
+      "textContent vs innerHTML",
+      "DOM traversal"
+    ],
+    "canonical_url": "/html/html-dom-fundamentals",
+    "robots": "index, follow"
+  }
 }

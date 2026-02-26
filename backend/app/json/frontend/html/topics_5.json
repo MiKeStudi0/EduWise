@@ -1,66 +1,143 @@
 {
   "topic": {
-    "id": 4,
+    "id": 5,
     "roadmap_id": 1,
     "technology_id": 1,
-    "module_id": 2,
-    "slug": "html-dom-fundamentals",
-    "title": "HTML DOM Fundamentals",
-    "description": "The DOM (Document Object Model) is a programming interface that represents HTML documents as a tree structure. Browsers convert HTML into the DOM, allowing JavaScript to read, modify, and interact with page content dynamically. Understanding the DOM is essential for creating interactive web applications.",
+    "module_id": 3,
+    "slug": "html-heading-elements",
+    "title": "HTML Heading Elements (h1-h6)",
+    "description": "HTML heading elements h1 to h6 build a ranked content outline for browsers, SEO, and accessibility.",
+    "content": [
+      {
+        "type": "heading",
+        "level": 1,
+        "text": "Headings as Document Outline"
+      },
+      {
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "HTML provides six heading levels: "
+          },
+          {
+            "value": "h1",
+            "highlight": true
+          },
+          {
+            "value": " through "
+          },
+          {
+            "value": "h6",
+            "highlight": true
+          },
+          {
+            "value": ". Each level represents a rank in the document outline. "
+          },
+          {
+            "value": "h1",
+            "highlight": true
+          },
+          {
+            "value": " is the page title, appearing exactly once per page. "
+          },
+          {
+            "value": "h2",
+            "highlight": true
+          },
+          {
+            "value": " marks major sections. "
+          },
+          {
+            "value": "h3",
+            "highlight": true
+          },
+          {
+            "value": " marks subsections within those, and so on. Search engines weight keywords in headings by level. Screen readers let users "
+          },
+          {
+            "value": "navigate by headings",
+            "bold": true
+          },
+          {
+            "value": " like a table of contents, jumping section to section without reading every line. Full reference at "
+          },
+          {
+            "value": "MDN: Heading elements",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": "."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Element",
+          "Role",
+          "Typical Use",
+          "Default Browser Style"
+        ],
+        "rows": [
+          [
+            "h1",
+            "Page title",
+            "Main topic of the page, exactly one per page",
+            "Largest, bold"
+          ],
+          [
+            "h2",
+            "Major section",
+            "Top-level sections: About, Features, Contact",
+            "Large, bold"
+          ],
+          [
+            "h3",
+            "Subsection",
+            "Subsections within an h2 section",
+            "Medium-large, bold"
+          ],
+          [
+            "h4",
+            "Sub-subsection",
+            "Nested content within an h3",
+            "Medium, bold"
+          ],
+          [
+            "h5",
+            "Minor heading",
+            "Deep structures like legal or technical docs",
+            "Small, bold"
+          ],
+          [
+            "h6",
+            "Lowest heading",
+            "Deepest nesting level, rarely needed",
+            "Smallest, bold"
+          ]
+        ]
+      },
+      {
+        "type": "callout",
+        "variant": "warning",
+        "title": "Never Choose a Heading Level for Its Size",
+        "text": "Never pick h3 or h4 because the default size looks right in the design. Heading level communicates document rank to tools, not visual size. Set the correct semantic level in HTML and use CSS to control the size."
+      }
+    ],
     "examples": [
       {
-        "title": "HTML to DOM Tree Conversion",
-        "description": "When browsers load HTML, they parse it into a tree structure called the DOM. Each HTML element becomes a node in the tree with parent-child relationships.",
-        "code_snippet": "<!-- HTML Document -->\n<!DOCTYPE html>\n<html>\n<head>\n    <title>My Page</title>\n</head>\n<body>\n    <h1>Welcome</h1>\n    <p>This is a <strong>paragraph</strong> with bold text.</p>\n    <ul>\n        <li>Item 1</li>\n        <li>Item 2</li>\n    </ul>\n</body>\n</html>\n\n<!-- Browser converts this to a DOM tree structure:\n\nDocument\n└── html (root element)\n    ├── head\n    │   └── title\n    │       └── \"My Page\" (text node)\n    └── body\n        ├── h1\n        │   └── \"Welcome\" (text node)\n        ├── p\n        │   ├── \"This is a\" (text node)\n        │   ├── strong\n        │   │   └── \"paragraph\" (text node)\n        │   └── \"with bold text.\" (text node)\n        └── ul\n            ├── li\n            │   └── \"Item 1\" (text node)\n            └── li\n                └── \"Item 2\" (text node)\n-->\n\n<!-- Each element becomes a node:\n- Element nodes: html, head, body, h1, p, strong, ul, li\n- Text nodes: The actual text content inside elements\n- The Document is the root of the entire tree\n-->",
-        "output": "The browser creates an internal tree structure. HTML elements become element nodes. Text content becomes text nodes. This tree structure allows JavaScript to navigate and modify any part of the page.",
+        "title": "All Six Heading Levels in a Realistic Document",
+        "description": "This example shows all six heading levels in a real technical documentation article. Every level is contextually justified and shows the parent-child outline relationship. It also shows how CSS can independently control visual size without changing the semantic rank of any heading.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>API Security Guide | DevDocs</title>\n  <style>\n    body { font-family: Georgia, serif; max-width: 720px;\n           margin: 2rem auto; padding: 0 1rem; line-height: 1.7; }\n\n    /* CSS controls visual size. HTML controls semantic rank. These are independent. */\n    h1 { font-size: 2rem;    color: #0f172a; margin-bottom: 0.25rem; }\n    h2 { font-size: 1.5rem;  color: #1e293b; margin-top: 2rem;\n         border-bottom: 1px solid #e2e8f0; padding-bottom: 0.25rem; }\n    h3 { font-size: 1.2rem;  color: #334155; margin-top: 1.5rem; }\n    h4 { font-size: 1rem;    color: #475569; margin-top: 1.25rem; }\n    h5 { font-size: 0.9rem;  color: #64748b; font-style: italic; }\n    h6 { font-size: 0.85rem; color: #94a3b8; text-transform: uppercase;\n         letter-spacing: 0.05em; }\n  </style>\n</head>\n<body>\n\n  <!-- h1: page title, one per page, matches the <title> element closely -->\n  <h1>API Security Guide</h1>\n  <p>A complete reference for securing REST APIs in production environments.</p>\n\n  <!-- h2: major top-level sections of the page -->\n  <h2>Authentication Methods</h2>\n  <p>Choosing the right authentication method is the first security decision for any API.</p>\n\n    <!-- h3: subsection inside Authentication Methods -->\n    <h3>API Keys</h3>\n    <p>Simple shared secrets passed as a header or query parameter.</p>\n\n      <!-- h4: a detail topic inside API Keys -->\n      <h4>When to Use API Keys</h4>\n      <p>Appropriate for server-to-server communication where the client is trusted.</p>\n\n      <h4>Key Rotation Best Practices</h4>\n      <p>Rotate keys every 90 days and immediately upon any suspected compromise.</p>\n\n    <h3>OAuth 2.0</h3>\n    <p>Delegates authentication to a trusted identity provider.</p>\n\n      <h4>Authorization Code Flow</h4>\n      <p>For web apps where the client secret can be stored securely on the server.</p>\n\n        <!-- h5: a specification note within Authorization Code Flow -->\n        <h5>PKCE Extension</h5>\n        <p>Adds a cryptographic verifier to prevent authorization code interception.</p>\n\n          <!-- h6: a reference detail inside PKCE, very rarely needed outside technical docs -->\n          <h6>RFC Reference</h6>\n          <p>Defined in RFC 7636. Required for all public clients since the OAuth 2.1 draft.</p>\n\n      <h4>Client Credentials Flow</h4>\n      <p>For machine-to-machine communication with no user involved.</p>\n\n  <!-- h2 again: next major section, valid return to level 2 -->\n  <h2>Rate Limiting</h2>\n  <p>Protects APIs from abuse and ensures fair resource allocation.</p>\n\n    <h3>Token Bucket Algorithm</h3>\n    <p>Tokens replenish at a fixed rate. Each request consumes one token.</p>\n\n    <h3>Sliding Window Algorithm</h3>\n    <p>Tracks request counts over a rolling time window for smoother enforcement.</p>\n\n  <h2>Error Response Standards</h2>\n  <p>Consistent error responses are as important as consistent success responses.</p>\n\n    <h3>HTTP Status Code Selection</h3>\n    <p>Return 401 for unauthenticated, 403 for unauthorised, 429 for rate limited.</p>\n\n</body>\n</html>",
+        "output": "Page renders a full API security article. Three h2 sections appear: Authentication Methods, Rate Limiting, and Error Response Standards. Authentication Methods contains h3 subsections for API Keys and OAuth 2.0, each with h4 children. Authorization Code Flow has an h5 for PKCE and an h6 for the RFC reference, showing all six levels in natural context. Each level is visually distinct via CSS.",
         "images": null,
         "video_url": null
       },
       {
-        "title": "Understanding Node Types and Relationships",
-        "description": "Every item in the DOM tree is a node. Nodes have different types and are connected through parent, child, and sibling relationships.",
-        "code_snippet": "<!-- HTML Structure -->\n<div id=\"container\">\n    <h2>Title</h2>\n    <p>Paragraph text</p>\n    <span>Span text</span>\n</div>\n\n<script>\n// Get the container element\nconst container = document.getElementById('container');\n\n// Node type (different numbers for different node types)\nconsole.log(container.nodeType);  // 1 (Element node)\nconsole.log(container.nodeName);  // \"DIV\"\n\n// Parent relationship\nconsole.log(container.parentNode);        // body element\nconsole.log(container.parentElement);     // body element\n\n// Children relationships\nconsole.log(container.childNodes);        // All child nodes (includes text nodes from whitespace)\nconsole.log(container.children);          // Only element children (h2, p, span)\nconsole.log(container.firstChild);        // First child node (might be text node)\nconsole.log(container.firstElementChild); // First element child (h2)\nconsole.log(container.lastElementChild);  // Last element child (span)\n\n// Sibling relationships\nconst h2 = container.firstElementChild;\nconsole.log(h2.nextSibling);           // Next node (might be text node)\nconsole.log(h2.nextElementSibling);    // Next element sibling (p)\nconsole.log(h2.previousElementSibling); // null (no element before h2)\n\n// Checking if node has children\nconsole.log(container.hasChildNodes());  // true\nconsole.log(container.childElementCount); // 3 (h2, p, span)\n</script>\n\n<!-- Node Type Numbers:\n1 = Element node (div, p, span, etc.)\n3 = Text node (actual text content)\n8 = Comment node (<!-- comments -->)\n9 = Document node (the document itself)\n-->\n\n<!-- Key Differences:\n- childNodes includes ALL nodes (text, comments, elements)\n- children includes ONLY element nodes\n- nextSibling includes text nodes, nextElementSibling skips to elements\n-->",
-        "output": "Console shows the container's node type (1 for element), its parent (body), its children (h2, p, span), and sibling relationships. Understanding these relationships is crucial for navigating the DOM tree.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Selecting DOM Elements - Finding Elements in the Tree",
-        "description": "Before you can modify the DOM, you need to select elements. There are multiple methods to find elements in the DOM tree.",
-        "code_snippet": "<!-- HTML Structure -->\n<div id=\"header\">\n    <h1 class=\"title\">Main Title</h1>\n    <p class=\"subtitle\">Subtitle text</p>\n</div>\n\n<div class=\"content\">\n    <p class=\"subtitle\">Content paragraph 1</p>\n    <p class=\"subtitle\">Content paragraph 2</p>\n    <a href=\"#\">Link</a>\n</div>\n\n<script>\n// 1. Get element by ID (fastest, returns single element)\nconst header = document.getElementById('header');\nconsole.log(header); // <div id=\"header\">...</div>\n\n// 2. Get elements by class name (returns live HTMLCollection)\nconst subtitles = document.getElementsByClassName('subtitle');\nconsole.log(subtitles.length); // 2 (both p elements with class=\"subtitle\")\n\n// 3. Get elements by tag name (returns live HTMLCollection)\nconst allParagraphs = document.getElementsByTagName('p');\nconsole.log(allParagraphs.length); // 3 paragraphs total\n\n// 4. Query selector (CSS selector, returns first match)\nconst firstSubtitle = document.querySelector('.subtitle');\nconsole.log(firstSubtitle); // First p with class=\"subtitle\"\n\n// 5. Query selector all (CSS selector, returns all matches)\nconst allSubtitles = document.querySelectorAll('.subtitle');\nconsole.log(allSubtitles.length); // 2\n\n// Advanced selectors\nconst headerTitle = document.querySelector('#header .title');\nconst contentParagraphs = document.querySelectorAll('.content p');\nconst firstContentSubtitle = document.querySelector('.content .subtitle');\n\n// Selecting from a specific element (not just document)\nconst contentDiv = document.querySelector('.content');\nconst linksInContent = contentDiv.querySelectorAll('a');\n\n// Which method to use?\n// - getElementById: When you have a unique ID\n// - querySelector: When you need CSS selector power\n// - querySelectorAll: When you need multiple elements with CSS selector\n</script>",
-        "output": "Different selection methods find elements in different ways. getElementById is fastest for single elements. querySelector and querySelectorAll are most flexible, supporting any CSS selector. Understanding when to use each method makes your code more efficient.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Reading and Modifying Element Content",
-        "description": "Once you have selected an element, you can read or change its content, attributes, and styles.",
-        "code_snippet": "<!-- HTML Structure -->\n<div id=\"demo\">\n    <h2 id=\"title\">Original Title</h2>\n    <p id=\"text\">Original text content</p>\n    <a id=\"link\" href=\"https://example.com\">Click here</a>\n    <img id=\"image\" src=\"old.jpg\" alt=\"Old image\">\n</div>\n\n<script>\n// 1. Reading and changing TEXT content\nconst title = document.getElementById('title');\n\nconsole.log(title.textContent); // \"Original Title\"\ntitle.textContent = 'New Title';  // Changes text\n\nconsole.log(title.innerText);   // \"New Title\" (similar to textContent)\n\n// 2. Reading and changing HTML content\nconst demo = document.getElementById('demo');\n\nconsole.log(demo.innerHTML); // Shows all HTML inside div\ndemo.innerHTML = '<h2>Completely New Content</h2><p>Everything replaced</p>';\n\n// 3. Reading and changing ATTRIBUTES\nconst link = document.getElementById('link');\n\nconsole.log(link.getAttribute('href'));     // \"https://example.com\"\nlink.setAttribute('href', 'https://new.com'); // Changes href\nlink.setAttribute('target', '_blank');       // Adds new attribute\n\n// Alternative attribute access\nconsole.log(link.href);   // \"https://new.com\"\nlink.href = 'https://another.com'; // Direct property access\n\nconst image = document.getElementById('image');\nimage.src = 'new.jpg';  // Change image source\nimage.alt = 'New image'; // Change alt text\n\n// 4. Reading and changing STYLES\nconst text = document.getElementById('text');\n\ntext.style.color = 'red';\ntext.style.fontSize = '20px';\ntext.style.backgroundColor = 'yellow';\n\n// Reading computed styles\nconst styles = window.getComputedStyle(text);\nconsole.log(styles.color);      // Current color value\nconsole.log(styles.fontSize);   // Current font size\n\n// 5. Working with CLASSES\ntext.classList.add('highlight');      // Add class\ntext.classList.remove('highlight');   // Remove class\ntext.classList.toggle('active');      // Add if absent, remove if present\nconsole.log(text.classList.contains('active')); // Check if class exists\n</script>",
-        "output": "The title text changes from 'Original Title' to 'New Title'. The link href changes to a new URL. The image src changes to a new file. The text turns red with yellow background and 20px font. Classes can be added, removed, or toggled dynamically.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Creating and Adding New Elements to the DOM",
-        "description": "JavaScript can create new HTML elements and insert them into the DOM tree at any position.",
-        "code_snippet": "<!-- HTML Structure -->\n<div id=\"container\">\n    <h2>Existing Content</h2>\n</div>\n\n<script>\n// 1. Create new element\nconst newParagraph = document.createElement('p');\nnewParagraph.textContent = 'This is a new paragraph';\nnewParagraph.className = 'dynamic-content';\n\n// 2. Create element with attributes\nconst newLink = document.createElement('a');\nnewLink.href = 'https://example.com';\nnewLink.textContent = 'Click me';\nnewLink.target = '_blank';\n\n// 3. Create element with HTML content\nconst newDiv = document.createElement('div');\nnewDiv.innerHTML = '<strong>Bold text</strong> and regular text';\n\n// 4. Add elements to the DOM\nconst container = document.getElementById('container');\n\n// appendChild: adds element at the end\ncontainer.appendChild(newParagraph);\ncontainer.appendChild(newLink);\n\n// insertBefore: adds element before a reference node\nconst h2 = container.querySelector('h2');\ncontainer.insertBefore(newDiv, h2); // Insert newDiv before h2\n\n// 5. Modern insertion methods\nconst anotherParagraph = document.createElement('p');\nanotherParagraph.textContent = 'Inserted with modern methods';\n\n// Insert at different positions\nh2.insertAdjacentElement('beforebegin', anotherParagraph); // Before h2\nh2.insertAdjacentElement('afterbegin', anotherParagraph);  // Inside h2, at start\nh2.insertAdjacentElement('beforeend', anotherParagraph);   // Inside h2, at end\nh2.insertAdjacentElement('afterend', anotherParagraph);    // After h2\n\n// 6. Creating multiple elements in a loop\nconst list = document.createElement('ul');\nfor (let i = 1; i <= 3; i++) {\n    const listItem = document.createElement('li');\n    listItem.textContent = `Item ${i}`;\n    list.appendChild(listItem);\n}\ncontainer.appendChild(list);\n\n// 7. Creating elements from HTML string (use carefully)\nconst tempDiv = document.createElement('div');\ntempDiv.innerHTML = '<button class=\"btn\">New Button</button>';\nconst button = tempDiv.firstElementChild;\ncontainer.appendChild(button);\n</script>",
-        "output": "The container now has several new elements: a paragraph, a link, a div with bold text, a ul with 3 list items, and a button. All created and inserted using JavaScript. The DOM tree is dynamically modified.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Removing and Replacing Elements",
-        "description": "You can also remove elements from the DOM or replace them with new ones.",
-        "code_snippet": "<!-- HTML Structure -->\n<div id=\"container\">\n    <p id=\"remove-me\">This will be removed</p>\n    <p id=\"replace-me\">This will be replaced</p>\n    <p id=\"keep-me\">This stays</p>\n</div>\n\n<script>\n// 1. Removing elements\nconst removeElement = document.getElementById('remove-me');\n\n// Method 1: Modern remove() method\nremoveElement.remove(); // Element is gone from DOM\n\n// Method 2: Old way (still works)\nconst container = document.getElementById('container');\nconst replaceElement = document.getElementById('replace-me');\ncontainer.removeChild(replaceElement);\n\n// 2. Replacing elements\nconst oldElement = document.getElementById('keep-me');\nconst newElement = document.createElement('p');\nnewElement.textContent = 'This is the replacement';\nnewElement.id = 'new-element';\n\n// Modern replaceWith() method\noldElement.replaceWith(newElement);\n\n// Old way: replaceChild() on parent\n// container.replaceChild(newElement, oldElement);\n\n// 3. Removing all children of an element\nconst clearContainer = document.getElementById('container');\n\n// Method 1: Set innerHTML to empty\nclearContainer.innerHTML = '';\n\n// Method 2: Remove children one by one\nwhile (clearContainer.firstChild) {\n    clearContainer.removeChild(clearContainer.firstChild);\n}\n\n// Method 3: Modern way\nclearContainer.replaceChildren(); // Removes all children\n\n// 4. Cloning elements before removing (to keep a copy)\nconst elementToClone = document.getElementById('some-element');\nconst clone = elementToClone.cloneNode(true); // true = deep clone (includes children)\n// Now you have a copy before removing the original\nelementToClone.remove();\n// Can add clone back later if needed\ncontainer.appendChild(clone);\n</script>",
-        "output": "The first paragraph is removed completely. The second is replaced with new content. The container can be emptied of all children. Elements can be cloned before removal to keep a copy. The DOM tree is modified by removing and replacing nodes.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "Practical Example - Building a Todo List with DOM Manipulation",
-        "description": "A complete real-world example showing DOM creation, modification, and removal in action.",
-        "code_snippet": "<!-- HTML Structure -->\n<!DOCTYPE html>\n<html>\n<head>\n    <title>Todo List</title>\n    <style>\n        .completed { text-decoration: line-through; color: gray; }\n        .todo-item { margin: 10px 0; }\n    </style>\n</head>\n<body>\n    <h1>My Todo List</h1>\n    <input type=\"text\" id=\"todo-input\" placeholder=\"Enter a task\">\n    <button id=\"add-btn\">Add Task</button>\n    <ul id=\"todo-list\"></ul>\n\n    <script>\n        // Get DOM elements\n        const input = document.getElementById('todo-input');\n        const addBtn = document.getElementById('add-btn');\n        const todoList = document.getElementById('todo-list');\n\n        // Function to add new todo\n        function addTodo() {\n            const taskText = input.value.trim();\n            \n            if (taskText === '') return; // Don't add empty tasks\n\n            // Create new list item\n            const li = document.createElement('li');\n            li.className = 'todo-item';\n\n            // Create checkbox\n            const checkbox = document.createElement('input');\n            checkbox.type = 'checkbox';\n            checkbox.addEventListener('change', function() {\n                if (this.checked) {\n                    span.classList.add('completed');\n                } else {\n                    span.classList.remove('completed');\n                }\n            });\n\n            // Create text span\n            const span = document.createElement('span');\n            span.textContent = taskText;\n\n            // Create delete button\n            const deleteBtn = document.createElement('button');\n            deleteBtn.textContent = 'Delete';\n            deleteBtn.addEventListener('click', function() {\n                li.remove(); // Remove the entire list item\n            });\n\n            // Assemble the todo item\n            li.appendChild(checkbox);\n            li.appendChild(span);\n            li.appendChild(deleteBtn);\n\n            // Add to list\n            todoList.appendChild(li);\n\n            // Clear input\n            input.value = '';\n        }\n\n        // Event listeners\n        addBtn.addEventListener('click', addTodo);\n        input.addEventListener('keypress', function(e) {\n            if (e.key === 'Enter') {\n                addTodo();\n            }\n        });\n    </script>\n</body>\n</html>",
-        "output": "A functional todo list where users can add tasks by typing and clicking Add. Each task has a checkbox (marks as complete with strikethrough) and a Delete button (removes the item from the DOM). Demonstrates creating elements, adding event listeners, modifying classes, and removing elements.",
+        "title": "Headings, SEO Keywords, and the sr-only Pattern",
+        "description": "This example shows how heading hierarchy directly affects SEO keyword weighting and introduces the sr-only visually-hidden heading pattern. The sr-only technique labels regions like sidebars and footers for screen reader navigation without adding visible headings that would disrupt the design.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>React State Management Guide | DevDocs India</title>\n  <style>\n    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }\n\n    /*\n      sr-only: removes element from visual layout but keeps it\n      in the accessibility tree and heading navigation list.\n      Screen reader users hear the heading. Sighted users do not see it.\n    */\n    .sr-only {\n      position: absolute;\n      width: 1px; height: 1px;\n      padding: 0; margin: -1px;\n      overflow: hidden;\n      clip: rect(0,0,0,0);\n      white-space: nowrap;\n      border: 0;\n    }\n\n    nav.crumb { font-size: 0.85rem; color: #6b7280; margin-bottom: 1rem; }\n    nav.crumb a { color: #2563eb; text-decoration: none; }\n    .tag { background:#dbeafe; color:#1d4ed8; padding:0.15rem 0.5rem;\n           border-radius:999px; font-size:0.75rem; margin-right:0.3rem; }\n    aside { background:#f8fafc; border-radius:8px; padding:1rem; margin:1.5rem 0; }\n    .links { list-style:none; padding:0; margin:0; }\n    .links li { padding:0.3rem 0; border-bottom:1px solid #e5e7eb; }\n    .links li:last-child { border-bottom:none; }\n    footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }\n    footer nav { display:flex; gap:1rem; }\n    footer a { color:#6b7280; font-size:0.85rem; }\n  </style>\n</head>\n<body>\n\n  <nav class=\"crumb\" aria-label=\"Breadcrumb\">\n    <a href=\"/\">Home</a> /\n    <a href=\"/react\">React</a> /\n    <span>State Management</span>\n  </nav>\n\n  <!--\n    h1 carries the primary keyword for this page.\n    Search engines give h1 the highest on-page keyword weight.\n    It should match or closely mirror the <title> element.\n  -->\n  <h1>React State Management: useState, useReducer, and Context</h1>\n  <p><span class=\"tag\">React 18</span><span class=\"tag\">Intermediate</span></p>\n\n  <!--\n    h2 elements carry secondary keywords.\n    Each h2 signals a major subtopic that search engines index independently.\n  -->\n  <h2>When to Use useState</h2>\n  <p>Correct for local, independent, component-level state that does not\n  need to be shared with other components.</p>\n\n  <h2>When to Use useReducer</h2>\n  <p>Handles complex state with multiple sub-values or where the next state\n  depends on the previous in non-trivial ways.</p>\n\n    <h3>Reducer Pattern vs useState Pattern</h3>\n    <p>useReducer centralises all state transitions in one pure function,\n    making complex state changes auditable and testable.</p>\n\n  <h2>Context API for Shared State</h2>\n  <p>React Context solves prop drilling but is not a general-purpose\n  replacement for dedicated state libraries in large applications.</p>\n\n\n  <!--\n    sr-only heading on an aside:\n    The sidebar is visually obvious to sighted users.\n    Screen reader users navigating by headings would pass it with no label.\n    The sr-only h2 adds it to the heading outline without showing a visible heading.\n  -->\n  <aside>\n    <h2 class=\"sr-only\">Related Articles</h2>\n    <ul class=\"links\">\n      <li><a href=\"/react/hooks\">React Hooks Complete Guide</a></li>\n      <li><a href=\"/react/context\">React Context Deep Dive</a></li>\n      <li><a href=\"/react/redux\">Redux vs Context: When to Use Each</a></li>\n    </ul>\n  </aside>\n\n\n  <!--\n    Footer uses sr-only h2 so screen reader users can jump\n    to the footer section via heading navigation.\n  -->\n  <footer>\n    <h2 class=\"sr-only\">Footer Navigation</h2>\n    <nav aria-label=\"Footer\">\n      <a href=\"/privacy\">Privacy</a>\n      <a href=\"/terms\">Terms</a>\n      <a href=\"/contact\">Contact</a>\n    </nav>\n  </footer>\n\n</body>\n</html>",
+        "output": "Page renders a breadcrumb, h1 with primary keywords, tag badges, three h2 sections with content, an h3 subsection, an aside with three article links (its h2 is invisible), and a footer with three links (its h2 is invisible). Both sr-only headings are absent from the visual layout but appear in the screen reader heading navigation list, making Related Articles and Footer Navigation fully navigable by keyboard and assistive technology.",
         "images": null,
         "video_url": null
       }
@@ -70,154 +147,190 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "Use DOM manipulation when building interactive web applications that respond to user actions."
+        "point": "When introducing any distinct section of content that needs a label in the document outline"
       },
       {
-        "point": "Use querySelector and querySelectorAll for flexible element selection with CSS selectors."
+        "point": "When placing primary keywords in h1 and secondary keywords in h2 for search engine benefit"
       },
       {
-        "point": "Use textContent to change text safely (it escapes HTML automatically)."
-      },
-      {
-        "point": "Use innerHTML when you need to insert HTML markup, but sanitize user input first to prevent XSS attacks."
-      },
-      {
-        "point": "Use createElement and appendChild to build complex DOM structures programmatically."
-      },
-      {
-        "point": "Use classList.add/remove/toggle for managing CSS classes instead of directly manipulating className."
+        "point": "When labeling landmark regions with sr-only headings so screen reader users can navigate to them"
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid using innerHTML with unsanitized user input. It can lead to XSS (Cross-Site Scripting) security vulnerabilities."
+        "point": "Avoid choosing a heading level based on its default visual size rather than its document rank"
       },
       {
-        "point": "Do not use document.write() in modern web development. It can overwrite the entire page and causes problems."
+        "point": "Avoid skipping levels when descending, such as jumping from h2 directly to h4"
       },
       {
-        "point": "Avoid excessive DOM manipulation in loops. Create elements first, then add them all at once for better performance."
-      },
-      {
-        "point": "Do not modify the DOM repeatedly for small changes. Batch changes together to avoid layout thrashing."
-      },
-      {
-        "point": "Avoid selecting elements repeatedly. Store references to frequently used elements in variables."
+        "point": "Avoid placing more than one h1 on a page as it dilutes keyword signal and confuses screen readers"
       }
     ],
-    "problems": [
+    "what_it_solves": [
       {
-        "problem": "Without the DOM, JavaScript would have no way to interact with HTML. The page would be completely static with no interactivity."
+        "1": "Without headings, pages are flat text blocks with no scannable structure for users or tools."
       },
       {
-        "problem": "Before the DOM was standardized, different browsers had different ways to access and modify page content, making cross-browser development extremely difficult."
+        "2": "Screen reader users navigate by headings to jump sections instead of reading every line."
       },
       {
-        "problem": "Direct HTML manipulation (like innerHTML) can introduce security vulnerabilities if user input is not properly sanitized."
-      },
-      {
-        "problem": "Frequent DOM manipulation can be slow because it triggers browser reflows and repaints, affecting performance on complex pages."
+        "3": "Search engines use heading levels to rank keywords and understand the topic structure of a page."
       }
     ],
-    "mental_models": [
+    "conceptual_understanding": [
       {
-        "model": "Think of the DOM like a family tree. The document is the great-grandparent, html is the grandparent, body and head are parents, and all other elements are children or siblings. You navigate the tree by going up (parent), down (children), or sideways (siblings)."
+        "model": "Heading levels are like a book's table of contents. The book title is h1. Chapters are h2. Sections within chapters are h3. Subsections are h4. If the table of contents jumped from Chapter 2 directly to Section 2.3.1 with nothing between, any reader navigating by the list would be lost. Screen reader users experience that exact disorientation when heading levels are skipped."
       },
       {
-        "model": "The DOM is like a live representation of your HTML. When you change the DOM with JavaScript, the browser immediately updates what you see on screen. It's a two-way connection between code and visual display."
+        "model": "Choosing a heading level for its visual size is like changing a chapter title to footnote-size text because it needs to look smaller on the printed page. The font size is a presentation decision controlled by CSS. The heading level is a structural decision in HTML. These two concerns are independent and should never influence each other."
       },
       {
-        "model": "Think of DOM manipulation like remodeling a house. You can add rooms (create elements), remove walls (delete elements), repaint (change styles), or rearrange furniture (move elements). The blueprint (HTML) stays the same, but the house (DOM) changes."
-      },
-      {
-        "model": "Element selection is like giving the browser directions. 'getElementById' is like saying 'find the house with address 123'. 'querySelector' is like saying 'find the first red house on Main Street'. 'querySelectorAll' is 'find all red houses on Main Street'."
+        "model": "The h1 is a contract between the page and every tool that reads it. It says: this single phrase is what this entire page is about. Search engines trust h1 as the authoritative topic statement. Screen readers announce it first. Browsers use it for reader mode extraction. One clear, descriptive h1 per page is not a convention; it is how the web information system was designed to work."
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Trying to manipulate elements before the DOM is fully loaded. Use DOMContentLoaded event or place scripts at the end of body."
+        "mistake": "Selecting heading levels by visual size: Developers frequently use h3 or h4 because the default browser size matches their design. This corrupts the document outline and causes screen reader users to encounter unexpected jumps in heading navigation. Always assign the correct semantic level and use CSS to control size independently."
       },
       {
-        "mistake": "Confusing textContent with innerHTML. textContent is for plain text only and is safer. innerHTML interprets HTML tags and can execute scripts if not careful."
+        "mistake": "Using multiple h1 elements on a single page: Search engines treat the first h1 as the definitive page topic statement. Multiple h1 elements dilute keyword weight and cause screen reader heading lists to show several equally-ranked top-level items, making the navigation list ambiguous and harder to use."
       },
       {
-        "mistake": "Not storing element references in variables. Selecting the same element multiple times wastes performance. Select once, store in a variable, use many times."
-      },
-      {
-        "mistake": "Modifying the DOM inside loops without batching changes. This causes many reflows. Create all elements first, then append them together."
-      },
-      {
-        "mistake": "Using innerHTML to add small pieces of content. Use textContent or createElement instead for better performance and security."
-      },
-      {
-        "mistake": "Forgetting that getElementsByClassName and getElementsByTagName return live collections that update automatically. querySelectorAll returns a static NodeList."
-      },
-      {
-        "mistake": "Not understanding the difference between childNodes (all nodes including text) and children (only element nodes). This causes confusion when counting or iterating."
-      },
-      {
-        "mistake": "Using style property for many style changes. It creates inline styles that are hard to override. Use classList to add/remove CSS classes instead."
+        "mistake": "Skipping heading levels when descending: Jumping from h2 directly to h4 leaves a structural gap in the outline. Screen readers announce heading levels numerically, so a user hears level 2 followed immediately by level 4, signalling a broken structure. Always increment one level at a time when going deeper into the hierarchy."
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Use browser DevTools Elements panel to inspect the DOM tree. Right-click any element and select 'Inspect' to see its position in the tree."
+        "tip": "Install the Headings Map browser extension for Chrome or Firefox to see the heading outline of any page as a collapsible tree. Use it to audit your own pages before publishing. A healthy map looks like a clean nested outline. A broken one shows gaps, duplicate h1 elements, or long content stretches with no headings at all."
       },
       {
-        "tip": "The console.dir() method shows an element's properties in a more detailed way than console.log(), useful for exploring what properties are available."
-      },
-      {
-        "tip": "Modern browsers support element.remove() and element.replaceWith() which are simpler than the old parent.removeChild() and parent.replaceChild() methods."
-      },
-      {
-        "tip": "Use DocumentFragment to build complex DOM structures. It's a lightweight container that doesn't trigger reflows until you append it to the actual DOM."
-      },
-      {
-        "tip": "The matches() method checks if an element matches a CSS selector: element.matches('.active') returns true or false."
-      },
-      {
-        "tip": "Use closest() to find the nearest ancestor matching a selector: element.closest('.container') walks up the tree to find the first container."
-      },
-      {
-        "tip": "MutationObserver API lets you watch for DOM changes and react to them. Useful for detecting when elements are added or removed by other scripts."
+        "tip": "In single-page applications where the main content region changes on route navigation, programmatically focus the new h1 after each route change using element.focus(). Without this, screen reader users land on the new view with no announcement of where they are. Add tabindex=-1 to the heading to allow programmatic focus without including it in the natural tab order."
       }
     ],
     "related_topics": [
-      "JavaScript Event Handling",
-      "JavaScript Selectors and Traversal",
-      "HTML Elements and Attributes",
-      "Browser Rendering Process",
-      "Web Performance Optimization",
-      "XSS Prevention and Security",
-      "JavaScript ES6+ Features",
-      "Virtual DOM (React, Vue)"
+      "HTML Semantic Elements",
+      "HTML Paragraph and Text Elements",
+      "Accessibility and ARIA",
+      "SEO Fundamentals",
+      "CSS Typography"
     ],
-    "seo_id": 1,
     "is_active": true,
-    "order_index": 4,
+    "order_index": 5,
     "created_at": null,
     "updated_at": null
   },
-  "subtopics": [],
-  "seo_metadata": [
+  "subtopics": [
     {
       "id": 1,
-      "meta_title": "HTML DOM Fundamentals - Tree Structure, Nodes & Manipulation Guide",
-      "meta_description": "Master the HTML DOM (Document Object Model). Learn DOM tree structure, node relationships, element selection, content manipulation, and how to create interactive web pages with JavaScript.",
-      "keywords": [
-        "HTML DOM",
-        "Document Object Model",
-        "DOM tree structure",
-        "DOM nodes",
-        "DOM manipulation",
-        "JavaScript DOM",
-        "querySelector",
-        "DOM traversal",
-        "createElement",
-        "DOM tutorial"
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 3,
+      "topic_id": 5,
+      "slug": "proper-heading-hierarchy",
+      "title": "Proper Heading Hierarchy",
+      "description": "A valid heading hierarchy descends one level at a time, keeping the document outline gap-free.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "A valid heading hierarchy has one "
+            },
+            {
+              "value": "h1",
+              "highlight": true
+            },
+            {
+              "value": " at the top, "
+            },
+            {
+              "value": "h2",
+              "highlight": true
+            },
+            {
+              "value": " for major sections, and deeper levels appearing only as direct children of their parent level. The rule is: "
+            },
+            {
+              "value": "never skip a level going deeper",
+              "bold": true
+            },
+            {
+              "value": ". Returning to a higher level is always valid: an h4 section followed by an h2 for a new major section is correct because you are going up, not skipping down. The "
+            },
+            {
+              "value": "WCAG 2.1 Success Criterion 1.3.1",
+              "link": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            },
+            {
+              "value": " requires heading structure to correctly convey information and relationships."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "The One Direction Rule",
+          "text": "Never skip levels going deeper. You may skip levels going back up. An h4 followed by an h2 is valid: you ended a subsection and started a new major section. An h2 followed by an h4 is invalid: you skipped h3 on the way down."
+        }
       ],
-      "canonical_url": "/html/dom-fundamentals",
-      "robots": "index, follow"
+      "examples": [
+        {
+          "title": "Broken vs Correct Heading Hierarchy with Live Outline Inspector",
+          "description": "This example places a broken and a corrected heading structure side by side with identical content. All headings are forced to the same visual size with CSS to demonstrate that hierarchy is structural, not visual. A JavaScript outline builder reads both columns and annotates each heading, flagging skipped levels and duplicate h1 elements.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Heading Hierarchy: Broken vs Correct</title>\n  <style>\n    body  { font-family: sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }\n    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }\n    .box  { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1.25rem; }\n    .bad  { border-color: #dc2626; background: #fef2f2; }\n    .good { border-color: #16a34a; background: #f0fdf4; }\n    .label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase;\n             letter-spacing: 0.06em; margin-bottom: 0.75rem; }\n    .bad  .label { color: #dc2626; }\n    .good .label { color: #16a34a; }\n\n    /*\n      All headings inside demo boxes are forced to the same visual size.\n      This proves that heading level is a structural decision, not a visual one.\n      Only CSS changes can make them look different, not the element choice.\n    */\n    .box h1,.box h2,.box h3,.box h4,.box h5 {\n      font-size: 0.95rem;\n      font-weight: 600;\n      margin: 0.5rem 0 0.15rem;\n      color: #1e293b;\n    }\n    .box p { margin: 0 0 0.4rem; font-size: 0.85rem; color: #475569; }\n\n    .outline { background: #0f172a; color: #e2e8f0; border-radius: 6px;\n               padding: 0.75rem 1rem; font-family: monospace; font-size: 0.78rem;\n               white-space: pre; margin-top: 0.5rem; }\n    .outline .warn { color: #fca5a5; }\n  </style>\n</head>\n<body>\n\n  <h1>Heading Hierarchy: Broken vs Correct</h1>\n  <p>Both columns contain identical content. All headings inside are forced to\n  the same visual size with CSS to show hierarchy is structural, not visual.</p>\n\n  <div class=\"cols\">\n\n    <!-- BROKEN: three issues annotated inline -->\n    <div class=\"box bad\" id=\"box-bad\">\n      <p class=\"label\">Broken Hierarchy</p>\n\n      <h1>Online Courses Platform</h1>   <!-- issue: second h1 on the page -->\n\n      <!-- issue: jumps h1 to h3, h2 is missing -->\n      <h3>Web Development</h3>\n\n      <!-- issue: jumps h3 to h5, h4 is missing -->\n      <h5>HTML and CSS</h5>\n      <p>Beginner, 12 hours.</p>\n\n      <h5>JavaScript</h5>\n      <p>Intermediate, 20 hours.</p>\n\n      <h3>Design Courses</h3>\n\n      <h5>Figma Basics</h5>\n      <p>UI design, 8 hours.</p>\n    </div>\n\n    <!-- CORRECT: clean incremental hierarchy -->\n    <div class=\"box good\" id=\"box-good\">\n      <p class=\"label\">Correct Hierarchy</p>\n\n      <!-- h2: no second h1, this section sits below the page h1 above -->\n      <h2>Online Courses Platform</h2>\n\n      <!-- h3: direct child of h2, no skip -->\n      <h3>Web Development</h3>\n\n      <!-- h4: direct child of h3, no skip -->\n      <h4>HTML and CSS</h4>\n      <p>Beginner, 12 hours.</p>\n\n      <h4>JavaScript</h4>\n      <p>Intermediate, 20 hours.</p>\n\n      <!-- h3 again: valid return to major section level -->\n      <h3>Design Courses</h3>\n\n      <h4>Figma Basics</h4>\n      <p>UI design, 8 hours.</p>\n    </div>\n  </div>\n\n\n  <h2>Live Outline Inspector</h2>\n  <div class=\"cols\">\n    <div>\n      <strong style=\"font-size:0.85rem;\">Broken outline:</strong>\n      <div class=\"outline\" id=\"out-bad\"></div>\n    </div>\n    <div>\n      <strong style=\"font-size:0.85rem;\">Correct outline:</strong>\n      <div class=\"outline\" id=\"out-good\"></div>\n    </div>\n  </div>\n\n  <script>\n    function buildOutline(boxId) {\n      const box = document.getElementById(boxId);\n      const hs  = box.querySelectorAll('h1,h2,h3,h4,h5,h6');\n      let prev = 0;\n      let firstH1Found = false;\n      const pageH1Level = 1; // the page already has an h1\n\n      return [...hs].map(h => {\n        const lvl    = parseInt(h.tagName[1]);\n        const indent = '  '.repeat(Math.max(0, lvl - 1));\n        const text   = h.textContent.trim();\n        let note = '';\n\n        if (lvl === 1) {\n          note = firstH1Found ? ' <- SECOND h1 on page' : ' <- h1 (page-level)';\n          firstH1Found = true;\n        } else if (prev > 0 && lvl > prev + 1) {\n          note = ` <- SKIP: h${prev} -> h${lvl} (missing h${prev + 1})`;\n        }\n\n        prev = lvl;\n        return `${indent}h${lvl}: ${text}${note}`;\n      }).join('\\n');\n    }\n\n    document.getElementById('out-bad').textContent  = buildOutline('box-bad');\n    document.getElementById('out-good').textContent = buildOutline('box-good');\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders a two-column layout, both columns visually identical since all headings share the same CSS size. The broken outline panel shows: h1 flagged as SECOND h1 on page, then h3 with a SKIP warning showing h1 to h3 missing h2, then h5 with a SKIP warning showing h3 to h5 missing h4. The correct outline panel shows a clean tree: h2, h3, h4, h4, h3, h4 with no warnings.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
+        {
+          "model": "Heading hierarchy is like a numbered filing system. The cabinet is h1. Drawers inside it are h2. Folders inside drawers are h3. Documents inside folders are h4. If a document is placed directly in the cabinet with no drawer or folder between them, the system breaks. Screen reader users experience the same breakdown when a heading level is skipped on the way deeper."
+        },
+        {
+          "model": "Think of heading levels as nested containers that must fit inside each other in order. An h4 must sit inside an h3, which sits inside an h2, which sits inside an h1. You can close an inner container and open a new one at any parent level, that is returning up the hierarchy. But you cannot open an h4 container directly inside an h2 container because the h3 container is missing."
+        }
+      ],
+      "common_mistakes": null,
+      "bonus_tips": [
+        {
+          "tip": "Run your page through the WAVE accessibility checker at wave.webaim.org. WAVE places visual flag icons directly on the page where heading errors occur, showing skipped levels and duplicate h1 elements exactly where they appear in the content. This makes hierarchy problems fast to locate and fix without reading through all the source code."
+        }
+      ],
+      "related_topics": [
+        "HTML Heading Elements h1-h6",
+        "HTML Semantic Elements",
+        "Accessibility and ARIA"
+      ],
+      "is_active": true,
+      "order_index": 1,
+      "created_at": null,
+      "updated_at": null
     }
-  ]
+  ],
+  "seo_metadata": {
+    "meta_title": "HTML Heading Elements h1-h6 | Hierarchy, SEO and Accessibility Guide",
+    "meta_description": "Master HTML heading elements h1 through h6: document hierarchy, SEO keyword placement, screen reader navigation, proper heading structure, and the sr-only pattern.",
+    "keywords": [
+      "HTML heading elements",
+      "HTML h1 h2 h3",
+      "heading hierarchy HTML",
+      "h1 SEO best practices",
+      "HTML heading accessibility",
+      "proper heading structure",
+      "skip heading levels",
+      "sr-only heading pattern",
+      "HTML document outline",
+      "screen reader heading navigation"
+    ],
+    "canonical_url": "/html/html-heading-elements",
+    "robots": "index, follow"
+  }
 }

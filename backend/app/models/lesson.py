@@ -29,8 +29,8 @@ class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     )
 
     # Basic info
-    slug: Mapped[str] = mapped_column(String(150), index=True)
-    title: Mapped[str] = mapped_column(String(255))
+    slug: Mapped[str] = mapped_column(Text, index=True)
+    title: Mapped[str] = mapped_column(Text)
     description: Mapped[str | None] = mapped_column(Text)
 
     # ⭐ MAIN LESSON CONTENT (rich blocks)
@@ -40,9 +40,9 @@ class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     examples: Mapped[list[dict] | None] = mapped_column(JSON)
 
     # Media
-    image_banner_url: Mapped[str | None] = mapped_column(String(255))
+    image_banner_url: Mapped[str | None] = mapped_column(Text)
     images: Mapped[list[str] | None] = mapped_column(JSON)
-    video_url: Mapped[str | None] = mapped_column(String(255))
+    video_url: Mapped[str | None] = mapped_column(Text)
 
     # Learning sections
     when_to_use: Mapped[list[str] | None] = mapped_column(JSON)

@@ -26,8 +26,8 @@ class SubTopic(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     )
 
     # Basic info
-    slug: Mapped[str] = mapped_column(String(150), index=True)
-    title: Mapped[str] = mapped_column(String(255))
+    slug: Mapped[str] = mapped_column(Text, index=True)
+    title: Mapped[str] = mapped_column(Text)
     description: Mapped[str | None] = mapped_column(Text)
 
     # ⭐ MAIN RICH CONTENT
