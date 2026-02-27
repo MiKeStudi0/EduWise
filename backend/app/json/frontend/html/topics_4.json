@@ -120,65 +120,510 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "When reading or modifying page content dynamically without a full page reload"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When reading or modifying page content dynamically without a full page reload"
+          }
+        ]
       },
       {
-        "point": "When building interactive UI components that respond to user actions"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When building interactive UI components that respond to user actions"
+          }
+        ]
       },
       {
-        "point": "When traversing element relationships to find siblings, parents, or children"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When traversing element relationships to find siblings, parents, or "
+          },
+          {
+            "value": "children",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+          }
+        ]
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid frequent individual DOM updates in loops, batch with DocumentFragment instead"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid frequent individual "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " updates in loops, batch with "
+          },
+          {
+            "value": "DocumentFragment",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment"
+          },
+          {
+            "value": " instead"
+          }
+        ]
       },
       {
-        "point": "Avoid innerHTML with unsanitised user input as it creates XSS vulnerabilities"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid "
+          },
+          {
+            "value": "innerHTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+          },
+          {
+            "value": " with unsanitised user input as it creates "
+          },
+          {
+            "value": "XSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://owasp.org/www-community/attacks/xss/"
+          },
+          {
+            "value": " vulnerabilities"
+          }
+        ]
       },
       {
-        "point": "Avoid deep DOM traversal chains like parent.parent.children when an id selector works"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid deep "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " traversal chains like parent.parent."
+          },
+          {
+            "value": "children",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+          },
+          {
+            "value": " when an id selector works"
+          }
+        ]
       }
     ],
     "what_it_solves": [
       {
-        "1": "Static HTML alone cannot update content after the page loads without the DOM API."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Static "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " alone cannot update content after the page loads without the "
+          },
+          {
+            "value": "DOM API",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": "."
+          }
+        ]
       },
       {
-        "2": "Without the DOM, JavaScript has no structured way to find, read, or change page elements."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": ", "
+          },
+          {
+            "value": "JavaScript",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "value": " has no structured way to find, read, or change page elements."
+          }
+        ]
       },
       {
-        "3": "DOM tree relationships let code navigate complex structures without memorising every element ID."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " tree relationships let "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": " navigate complex structures without memorising every element ID."
+          }
+        ]
       }
     ],
     "conceptual_understanding": [
       {
-        "model": "The DOM is like a live organisation chart for a company. The document is the CEO at the top. Each department head is an element node. Each employee is a text or child element node. You can read who reports to whom, move people between departments, hire new employees, or fire existing ones, and the org chart updates instantly to reflect the changes."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " is like a live organisation chart for a company. The document is the CEO at the top. Each department "
+          },
+          {
+            "value": "head",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head"
+          },
+          {
+            "value": " is an element node. Each employee is a text or child element node. You can read who reports to whom, move people between departments, hire new employees, or fire existing ones, and the org chart updates instantly to reflect the changes."
+          }
+        ]
       },
       {
-        "model": "The difference between HTML source and the DOM is like the difference between a blueprint and the actual building. The blueprint is the original HTML file, static and unchanging on disk. The building is the DOM, constructed from the blueprint but then modified by workers over time. Renovations happen to the building, not to the blueprint stored in the archive."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The difference between "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " source and the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " is like the difference between a blueprint and the actual building. The blueprint is the original "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " file, static and unchanging on disk. The building is the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": ", constructed from the blueprint but then modified by workers over "
+          },
+          {
+            "value": "time",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+          },
+          {
+            "value": ". Renovations happen to the building, not to the blueprint stored in the archive."
+          }
+        ]
       },
       {
-        "model": "childNodes versus children is like counting everyone in a room versus counting only the adults. childNodes includes every node: element nodes, text nodes, and whitespace nodes. children counts only element nodes. The room looks the same but the count depends on who you include in the tally."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "childNodes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"
+          },
+          {
+            "value": " versus "
+          },
+          {
+            "value": "children",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+          },
+          {
+            "value": " is like counting everyone in a room versus counting only the adults. "
+          },
+          {
+            "value": "childNodes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"
+          },
+          {
+            "value": " includes every node: element nodes, text nodes, and whitespace nodes. "
+          },
+          {
+            "value": "children",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+          },
+          {
+            "value": " counts only element nodes. The room looks the same but the count depends on who you include in the tally."
+          }
+        ]
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Confusing childNodes with children: childNodes returns all node types including whitespace text nodes between elements. children returns only element nodes. Looping over childNodes expecting only elements will process unexpected text nodes and cause errors or incorrect results."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Confusing "
+          },
+          {
+            "value": "childNodes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"
+          },
+          {
+            "value": " with "
+          },
+          {
+            "value": "children",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+          },
+          {
+            "value": ": "
+          },
+          {
+            "value": "childNodes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"
+          },
+          {
+            "value": " returns all node types including whitespace text."
+          }
+        ]
       },
       {
-        "mistake": "Using innerHTML with user-supplied data: Setting element.innerHTML = userInput directly injects raw HTML into the DOM. If the input contains a script tag or an event attribute like onerror, it executes in the user's browser, creating a cross-site scripting vulnerability. Always use textContent for plain text from user input."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using "
+          },
+          {
+            "value": "innerHTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+          },
+          {
+            "value": " with user-supplied data: Setting element."
+          },
+          {
+            "value": "innerHTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+          },
+          {
+            "value": " = userInput directly injects raw."
+          }
+        ]
       },
       {
-        "mistake": "Querying the DOM before it is ready: Running document.getElementById or querySelector at the top of a script file before the HTML below it has been parsed returns null. Always place scripts at the end of body, or use the defer attribute on the script tag, or wrap code in DOMContentLoaded to ensure elements exist before selecting them."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Querying the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " before it is ready: Running document."
+          },
+          {
+            "value": "getElementById",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+          },
+          {
+            "value": " or "
+          },
+          {
+            "value": "querySelector",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+          },
+          {
+            "value": " at the top of."
+          }
+        ]
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Use document.querySelector with any valid CSS selector to select elements with the same syntax you already know from CSS. For example: document.querySelector('section#team li.member[data-role=\"lead\"]') finds the lead member inside the team section in one call. This is often more precise and readable than chaining multiple DOM traversal calls."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Use document."
+          },
+          {
+            "value": "querySelector",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+          },
+          {
+            "value": " with any valid "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": " selector to select elements with the same syntax you already know from "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": ". For example: document."
+          },
+          {
+            "value": "querySelector",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+          },
+          {
+            "value": "('section#team li.member[data-role=\"lead\"]') finds the lead member inside the team section in one call. This is often more precise and readable than chaining multiple "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " traversal calls."
+          }
+        ]
       },
       {
-        "tip": "When appending multiple new elements in a loop, use a DocumentFragment to batch all insertions into a single DOM update. Create the fragment with document.createDocumentFragment(), append all new nodes to it, then append the fragment to the DOM once. This triggers only one reflow instead of one per element, significantly improving performance for large lists."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When appending multiple new elements in a loop, use a "
+          },
+          {
+            "value": "DocumentFragment",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment"
+          },
+          {
+            "value": " to batch all insertions into a single "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " update. Create the fragment with "
+          },
+          {
+            "value": "document.createDocumentFragment()",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment"
+          },
+          {
+            "value": ", append all new nodes to it, then append the fragment to the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " once. This triggers only one reflow instead of one per element, significantly improving performance for large lists."
+          }
+        ]
       }
     ],
     "related_topics": [
@@ -385,16 +830,94 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "The DOM tree is like a family tree. The document is the founding ancestor. Each element is a descendant. Parent, child, and sibling are literal relationship terms in this hierarchy. When you click a button and need to find its containing form, you walk up the family tree using parentElement until you reach the form ancestor."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "DOM",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            },
+            {
+              "value": " tree is like a family tree. The document is the founding ancestor. Each element is a descendant. Parent, child, and sibling are literal relationship terms in this hierarchy. When you click a button and need to find its containing form, you walk up the family tree using parentElement until you reach the form ancestor."
+            }
+          ]
         },
         {
-          "model": "The difference between Node properties and Element properties is like counting everyone at a party versus counting only the guests on the invitation list. childNodes counts everyone: guests, staff, furniture (whitespace text nodes). children counts only the invited guests: actual HTML elements. For most UI work you want the guest list, not the full room count."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The difference between Node properties and Element properties is like counting everyone at a party versus counting only the guests on the invitation list. "
+            },
+            {
+              "value": "childNodes",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Node/childNodes"
+            },
+            {
+              "value": " counts everyone: guests, staff, furniture (whitespace text nodes). "
+            },
+            {
+              "value": "children",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/children"
+            },
+            {
+              "value": " counts only the invited guests: actual "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " elements. For most UI work you want the guest list, not the full room count."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Use the element.closest(selector) method to walk up the DOM tree and find the nearest ancestor matching a CSS selector. For example, inside a click handler on a delete button inside a card, event.target.closest('.card') finds the wrapping card element without knowing how many levels up it is. This is more reliable than a fixed chain of parentElement calls."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Use the element.closest(selector) method to walk up the "
+            },
+            {
+              "value": "DOM",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            },
+            {
+              "value": " tree and find the nearest ancestor matching a "
+            },
+            {
+              "value": "CSS",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "value": " selector. For example, inside a click handler on a delete button inside a card, event."
+            },
+            {
+              "value": "target",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target"
+            },
+            {
+              "value": ".closest('.card') finds the wrapping card element without knowing how many levels up it is. This is more reliable than a fixed chain of parentElement calls."
+            }
+          ]
         }
       ],
       "related_topics": [
@@ -615,16 +1138,136 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "DOM selection methods are like different ways to find a person in a building. getElementById is knowing the exact room number: direct, fastest. querySelector is describing the person: find the first person wearing a blue badge in the east wing. querySelectorAll is finding everyone matching that description. getElementsByClassName is a live employee directory that updates the moment someone joins or leaves."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "DOM",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            },
+            {
+              "value": " selection methods are like different ways to find a person in a building. "
+            },
+            {
+              "value": "getElementById",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+            },
+            {
+              "value": " is knowing the exact room number: direct, fastest. "
+            },
+            {
+              "value": "querySelector",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+            },
+            {
+              "value": " is describing the person: find the first person wearing a blue badge in the east wing. "
+            },
+            {
+              "value": "querySelectorAll",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+            },
+            {
+              "value": " is finding everyone matching that description. getElementsByClassName is a live employee directory that updates the moment someone joins or leaves."
+            }
+          ]
         },
         {
-          "model": "textContent versus innerHTML is the difference between a typewriter and a printing press. textContent types out whatever you give it as plain characters. The angle brackets in a script tag become visible less-than and greater-than symbols, harmless on screen. innerHTML runs the printing press: it formats and executes everything it receives as real HTML markup, which is powerful for trusted content but dangerous for anything a user typed."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "textContent versus "
+            },
+            {
+              "value": "innerHTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+            },
+            {
+              "value": " is the difference between a typewriter and a printing press. textContent types out whatever you give it as plain characters. The angle brackets in a script tag become visible less-than and greater-than symbols, harmless on screen. "
+            },
+            {
+              "value": "innerHTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+            },
+            {
+              "value": " runs the printing press: it formats and executes everything it receives as real "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " markup, which is powerful for trusted content but dangerous for anything a user typed."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Spread a NodeList from querySelectorAll into an array using [...document.querySelectorAll('selector')] to unlock array methods like map, filter, and reduce. NodeList only has forEach natively. Converting to a real array lets you chain operations: [...document.querySelectorAll('.card')].filter(c => c.dataset.inStock === 'true').map(c => c.dataset.price) returns all prices for in-stock cards in one expression."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Spread a NodeList from "
+            },
+            {
+              "value": "querySelectorAll",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+            },
+            {
+              "value": " into an array using [...document."
+            },
+            {
+              "value": "querySelectorAll",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+            },
+            {
+              "value": "('selector')] to unlock array methods like map, filter, and reduce. NodeList only has forEach natively. Converting to a real array lets you chain operations: [...document."
+            },
+            {
+              "value": "querySelectorAll",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+            },
+            {
+              "value": "('.card')].filter(c => c."
+            },
+            {
+              "value": "dataset",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "value": ".inStock === 'true').map(c => c."
+            },
+            {
+              "value": "dataset",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "value": ".price) returns all prices for in-stock cards in one expression."
+            }
+          ]
         }
       ],
       "related_topics": [

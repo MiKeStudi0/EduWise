@@ -69,10 +69,10 @@ export function useLearnSidebarData(technologySlug: string) {
         content: Array.isArray((topic as any).content) ? (topic as any).content : [],
         videoUrl: topic.video_url || "",
         imageUrl: topic.image_banner_url || (topic.images?.length > 0 ? topic.images[0] : ""),
-        problem: topic.problems?.map((p: any) => p.problem) || [],
-        mentalModel: topic.mental_models?.map((m: any) => m.model) || [],
-        whenToUse: topic.when_to_use?.map((w: any) => w.point) || [],
-        whenNotToUse: topic.when_to_avoid?.map((w: any) => w.point) || [],
+        problem: topic.problems || [],
+        mentalModel: topic.mental_models || [],
+        whenToUse: topic.when_to_use || [],
+        whenNotToUse: topic.when_to_avoid || [],
         syntax: "", // Optionally fallback
         code: topic.examples?.[0]?.code_snippet || "",
         subtopics: (topic.sub_topics || []).map((sub: any) => ({
@@ -82,15 +82,15 @@ export function useLearnSidebarData(technologySlug: string) {
           videoUrl: sub.video_url || "",
           imageUrl: sub.image_banner_url || (sub.images?.length > 0 ? sub.images[0] : ""),
           example: sub.examples?.[0]?.code_snippet || "",
-          tip: sub.bonus_tips?.map((b: any) => b.tip) || [],
-          problems: sub.problems?.map((p: any) => p.problem) || [],
-          mentalModel: sub.mental_models?.map((m: any) => m.model) || [],
-          whenToUse: sub.when_to_use?.map((w: any) => w.point) || [],
-          whenNotToUse: sub.when_to_avoid?.map((w: any) => w.point) || [],
-          commonMistakes: sub.common_mistakes?.map((c: any) => c.mistake) || [],
+          tip: sub.bonus_tips || [],
+          problems: sub.problems || [],
+          mentalModel: sub.mental_models || [],
+          whenToUse: sub.when_to_use || [],
+          whenNotToUse: sub.when_to_avoid || [],
+          commonMistakes: sub.common_mistakes || [],
         })),
-        commonMistakes: topic.common_mistakes?.map((c: any) => c.mistake) || [],
-        bonusTip: topic.bonus_tips?.map((b: any) => b.tip) || []
+        commonMistakes: topic.common_mistakes || [],
+        bonusTip: topic.bonus_tips || []
       }))
     };
   });

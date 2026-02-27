@@ -115,68 +115,158 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "When structuring any content intended for a web browser"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When structuring any content intended for a web browser"
+          }
+        ]
       },
       {
-        "point": "When building the semantic foundation before adding CSS or JS"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When building the semantic foundation before adding CSS or JS"
+          }
+        ]
       },
       {
-        "point": "When creating documents that need to be indexed by search engines"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When creating documents that need to be indexed by search engines"
+          }
+        ]
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid HTML for native mobile apps; use Swift or Kotlin instead"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid HTML for native mobile apps; use Swift or Kotlin instead"
+          }
+        ]
       },
       {
-        "point": "Avoid HTML for data storage or server-side processing logic"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid HTML for data storage or server-side processing logic"
+          }
+        ]
       },
       {
-        "point": "Avoid writing HTML without a proper doctype declaration"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid writing HTML without a proper doctype declaration"
+          }
+        ]
       }
     ],
     "what_it_solves": [
       {
-        "1": "Plain text has no structure, so browsers cannot identify headings, links, or sections."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Plain text has no structure, so browsers cannot identify headings, links, or sections."
+          }
+        ]
       },
       {
-        "2": "Without HTML, there is no standard way to embed images, links, or media on a page."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without HTML, there is no standard way to embed images, links, or media on a page."
+          }
+        ]
       },
       {
-        "3": "HTML gives search engines and screen readers the structure they need to process content."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "HTML gives search engines and screen readers the structure they need to process content."
+          }
+        ]
       }
     ],
     "conceptual_understanding": [
       {
-        "model": "HTML is like the blueprint of a building. It defines which rooms exist and where walls go. CSS is the interior designer who decides colors and furniture. JavaScript is the electrician who makes the lights switch on and off. You need all three for a finished building, but each professional has a distinct job."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "HTML is like the blueprint of a building. It defines which rooms exist and where walls go. CSS is the interior designer who decides colors and furniture. JavaScript is the electrician who makes the lights switch on and off. You need all three for a finished building, but each professional has a distinct job."
+          }
+        ]
       },
       {
-        "model": "A web browser is like a translation service. HTML is a foreign-language manuscript. The browser reads it, translates the markup into visual elements, and presents the result on screen. The original HTML file stays unchanged behind the scenes."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "A web browser is like a translation service. HTML is a foreign-language manuscript. The browser reads it, translates the markup into visual elements, and presents the result on screen. The original HTML file stays unchanged behind the scenes."
+          }
+        ]
       },
       {
-        "model": "The request-response cycle is like ordering from a restaurant. You (the browser) ask for a dish (a URL). The kitchen (the server) prepares it and sends it out. The dish arrives (HTML file) and you experience it (the rendered page). If extra ingredients are needed (CSS, JS, images), the kitchen sends those separately."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The request-response cycle is like ordering from a restaurant. You (the browser) ask for a dish (a URL). The kitchen (the server) prepares it and sends it out. The dish arrives (HTML file) and you experience it (the rendered page). If extra ingredients are needed (CSS, JS, images), the kitchen sends those separately."
+          }
+        ]
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Skipping the DOCTYPE declaration: Without <!DOCTYPE html> at the top, browsers fall into 'quirks mode' and apply inconsistent rendering rules from the early web era, causing layout bugs that are difficult to diagnose."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Skipping the DOCTYPE declaration: Without <!DOCTYPE html> at the top, browsers fall into 'quirks mode' and apply inconsistent rendering rules from the early web era, causing layout bugs that are difficult to diagnose."
+          }
+        ]
       },
       {
-        "mistake": "Missing the lang attribute on html: The lang='en' attribute tells screen readers which language to use for pronunciation. Omitting it forces assistive tools to guess, leading to incorrect text-to-speech output for multilingual users."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Missing the lang attribute on html: The lang='en' attribute tells screen readers which language to use for pronunciation. Omitting it forces assistive tools to guess, leading to incorrect text-to-speech output for multilingual users."
+          }
+        ]
       },
       {
-        "mistake": "Using CSS or JavaScript to fake structure: Styling a div to look like a heading does not make it a heading semantically. Search engines and screen readers rely on HTML tags for meaning, not visual appearance."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using CSS or JavaScript to fake structure: Styling a div to look like a heading does not make it a heading semantically. Search engines and screen readers rely on HTML tags for meaning, not visual appearance."
+          }
+        ]
       },
       {
-        "mistake": "Mixing concerns in one file for production: Inline CSS and JavaScript inside HTML is fine for small experiments but creates unmaintainable code in real projects. Always separate HTML, CSS, and JS into their own files for anything beyond a demo."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Mixing concerns in one file for production: Inline CSS and JavaScript inside HTML is fine for small experiments but creates unmaintainable code in real projects. Always separate HTML, CSS, and JS into their own files for anything beyond a demo."
+          }
+        ]
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Open any webpage and press Ctrl+U (or Cmd+U on Mac) to view its raw HTML source. Reading source code of sites you admire is one of the fastest ways to learn real-world HTML patterns used by professional teams."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Open any webpage and press Ctrl+U (or Cmd+U on Mac) to view its raw HTML source. Reading source code of sites you admire is one of the fastest ways to learn real-world HTML patterns used by professional teams."
+          }
+        ]
       },
       {
-        "tip": "Bookmark the MDN Web Docs at developer.mozilla.org as your primary HTML reference. It is maintained by browser vendors, always accurate, and covers every element and attribute with compatibility tables and live examples."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Bookmark the MDN Web Docs at developer.mozilla.org as your primary HTML reference. It is maintained by browser vendors, always accurate, and covers every element and attribute with compatibility tables and live examples."
+          }
+        ]
       }
     ],
     "related_topics": [
@@ -264,16 +354,31 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "An HTML tag is like a label on a package. The label does not change what is inside the box, but it tells the delivery system, the recipient, and every handler in between exactly what kind of item it is and how to treat it. A heading tag tells the browser: treat this text as a top-level title."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "An HTML tag is like a label on a package. The label does not change what is inside the box, but it tells the delivery system, the recipient, and every handler in between exactly what kind of item it is and how to treat it. A heading tag tells the browser: treat this text as a top-level title."
+            }
+          ]
         },
         {
-          "model": "HTML is a markup language, not a programming language. It does not perform calculations or make decisions. It annotates content with meaning, the same way an editor marks up a manuscript with margin notes saying 'this is the title' or 'this is a footnote'."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "HTML is a markup language, not a programming language. It does not perform calculations or make decisions. It annotates content with meaning, the same way an editor marks up a manuscript with margin notes saying 'this is the title' or 'this is a footnote'."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Use the MDN HTML element reference at developer.mozilla.org/en-US/docs/Web/HTML/Element to look up any tag. Each entry shows the element's purpose, valid attributes, browser compatibility, and live examples — far more reliable than memory alone."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Use the MDN HTML element reference at developer.mozilla.org/en-US/docs/Web/HTML/Element to look up any tag. Each entry shows the element's purpose, valid attributes, browser compatibility, and live examples — far more reliable than memory alone."
+            }
+          ]
         }
       ],
       "related_topics": [
@@ -397,16 +502,31 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "The browser-server relationship is like ordering food by phone. You (browser) call a restaurant (server) and place an order (HTTP request). The restaurant prepares the food (processes the request) and delivers it (HTTP response). If an ingredient is missing, you get an error message (404 or 500) instead of the dish."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The browser-server relationship is like ordering food by phone. You (browser) call a restaurant (server) and place an order (HTTP request). The restaurant prepares the food (processes the request) and delivers it (HTTP response). If an ingredient is missing, you get an error message (404 or 500) instead of the dish."
+            }
+          ]
         },
         {
-          "model": "DNS is the phone book of the internet. Domain names like google.com are human-friendly aliases. DNS translates them to numeric IP addresses like 142.250.190.46 that routers use to actually route the traffic. Without DNS you would need to memorize IP addresses instead of domain names."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "DNS is the phone book of the internet. Domain names like google.com are human-friendly aliases. DNS translates them to numeric IP addresses like 142.250.190.46 that routers use to actually route the traffic. Without DNS you would need to memorize IP addresses instead of domain names."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Open browser DevTools and go to the Network tab, then refresh any webpage. Every HTTP request the browser makes is listed with its status code, response time, and file size. This is the fastest way to understand what actually happens when a page loads and to debug slow or broken resources."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Open browser DevTools and go to the Network tab, then refresh any webpage. Every HTTP request the browser makes is listed with its status code, response time, and file size. This is the fastest way to understand what actually happens when a page loads and to debug slow or broken resources."
+            }
+          ]
         }
       ],
       "related_topics": [
@@ -498,16 +618,31 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "Separation of concerns is like a restaurant kitchen. The chef (HTML) decides what dishes are on the menu. The plating team (CSS) decides how each dish looks on the plate. The waitstaff (JavaScript) handles interactions with the customer. If the chef starts plating dishes, or the waitstaff starts cooking, the kitchen breaks down. Each role exists for a reason."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Separation of concerns is like a restaurant kitchen. The chef (HTML) decides what dishes are on the menu. The plating team (CSS) decides how each dish looks on the plate. The waitstaff (JavaScript) handles interactions with the customer. If the chef starts plating dishes, or the waitstaff starts cooking, the kitchen breaks down. Each role exists for a reason."
+            }
+          ]
         },
         {
-          "model": "External CSS and JS files are cached by the browser after the first visit. On every subsequent page load, the browser reuses the cached files instead of re-downloading them. Inline styles and scripts cannot be cached because they are embedded in a different HTML file on every page, multiplying the data each visitor downloads."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "External CSS and JS files are cached by the browser after the first visit. On every subsequent page load, the browser reuses the cached files instead of re-downloading them. Inline styles and scripts cannot be cached because they are embedded in a different HTML file on every page, multiplying the data each visitor downloads."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "In modern frameworks like React, Vue, and Svelte, components appear to mix HTML, CSS, and JS in one file. This is still separation of concerns at the component level: each component owns its own structure, styles, and behavior as a self-contained unit. The principle scales from file-level to component-level separation."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "In modern frameworks like React, Vue, and Svelte, components appear to mix HTML, CSS, and JS in one file. This is still separation of concerns at the component level: each component owns its own structure, styles, and behavior as a self-contained unit. The principle scales from file-level to component-level separation."
+            }
+          ]
         }
       ],
       "related_topics": [

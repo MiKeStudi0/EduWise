@@ -1,69 +1,97 @@
 {
   "topic": {
-    "id": 8,
+    "id": 7,
     "roadmap_id": 1,
     "technology_id": 1,
     "module_id": 3,
-    "slug": "html-quotation-citation-elements",
-    "title": "HTML Quotation & Citation Elements",
-    "description": "HTML uses blockquote, q, cite, and abbr to give quoted text and work titles clear semantic meaning.",
+    "slug": "html-text-formatting-elements",
+    "title": "HTML Text Formatting Elements",
+    "description": "HTML formatting elements give inline text semantic meaning that plain paragraphs cannot communicate.",
     "content": [
       {
         "type": "heading",
         "level": 1,
-        "text": "Quoting and Citing Content in HTML"
+        "text": "Semantic Formatting vs Visual Styling"
       },
       {
         "type": "paragraph",
         "text": [
           {
-            "value": "HTML provides dedicated elements for three distinct quotation scenarios. "
+            "value": "HTML provides two categories of text formatting. "
           },
           {
-            "value": "<blockquote>",
+            "value": "Semantic elements",
+            "bold": true
+          },
+          {
+            "value": " carry meaning that tools like screen readers and search engines can interpret: "
+          },
+          {
+            "value": "<strong>",
             "highlight": true
-          },
-          {
-            "value": " wraps long, block-level quotes from external sources. "
-          },
-          {
-            "value": "<q>",
-            "highlight": true
-          },
-          {
-            "value": " marks short inline quotations within a sentence. "
-          },
-          {
-            "value": "<cite>",
-            "highlight": true
-          },
-          {
-            "value": " marks the title of a creative or intellectual work being referenced. Each element carries semantic meaning that browsers, search engines, and screen readers can interpret. All three accept a "
-          },
-          {
-            "value": "cite",
-            "highlight": true
-          },
-          {
-            "value": " attribute pointing to the source URL. Full reference at "
-          },
-          {
-            "value": "MDN: blockquote",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"
           },
           {
             "value": ", "
           },
           {
-            "value": "MDN: q",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+            "value": "<em>",
+            "highlight": true
           },
           {
-            "value": ", and "
+            "value": ", "
           },
           {
-            "value": "MDN: cite",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite"
+            "value": "<mark>",
+            "highlight": true
+          },
+          {
+            "value": ", "
+          },
+          {
+            "value": "<code>",
+            "highlight": true
+          },
+          {
+            "value": ", "
+          },
+          {
+            "value": "<sub>",
+            "highlight": true
+          },
+          {
+            "value": ", "
+          },
+          {
+            "value": "<sup>",
+            "highlight": true
+          },
+          {
+            "value": ". "
+          },
+          {
+            "value": "Presentational elements",
+            "bold": true
+          },
+          {
+            "value": " carry only visual styling with no added meaning: "
+          },
+          {
+            "value": "<b>",
+            "highlight": true
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "<i>",
+            "highlight": true
+          },
+          {
+            "value": ". Choosing the wrong category produces text that looks correct visually but fails assistive tools and search engines. Full reference at "
+          },
+          {
+            "value": "MDN: HTML text-level semantics",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element#inline_text_semantics"
           },
           {
             "value": "."
@@ -74,70 +102,116 @@
         "type": "table",
         "headers": [
           "Element",
-          "Type",
-          "Use Case",
-          "Key Attribute",
-          "Default Rendering"
+          "Category",
+          "Semantic Meaning",
+          "Equivalent CSS-only output"
         ],
         "rows": [
           [
-            "<blockquote>",
-            "Block",
-            "Multi-sentence or paragraph quotes from external sources",
-            "cite='url'",
-            "Indented block"
+            "<strong>",
+            "Semantic",
+            "High importance, urgency, or seriousness",
+            "font-weight: bold (but no meaning)"
           ],
           [
-            "<q>",
-            "Inline",
-            "Short quotes within a sentence, browser adds quotation marks",
-            "cite='url'",
-            "Inline with auto quotes"
+            "<b>",
+            "Presentational",
+            "Stylistically bold, no extra importance",
+            "font-weight: bold"
           ],
           [
-            "<cite>",
-            "Inline",
-            "Title of a book, film, song, article, or other creative work",
-            "None standard",
-            "Italic"
+            "<em>",
+            "Semantic",
+            "Stress emphasis that shifts sentence meaning",
+            "font-style: italic (but no meaning)"
           ],
           [
-            "<abbr>",
-            "Inline",
-            "Abbreviations and acronyms with full expansion in title",
-            "title='full form'",
-            "Dotted underline"
+            "<i>",
+            "Presentational",
+            "Alternate voice, technical terms, titles",
+            "font-style: italic"
           ],
           [
-            "<address>",
-            "Block",
-            "Contact information for the nearest article or body ancestor",
-            "None",
-            "Italic block"
+            "<mark>",
+            "Semantic",
+            "Highlighted for relevance in current context",
+            "background-color: yellow (but no meaning)"
+          ],
+          [
+            "<small>",
+            "Semantic",
+            "Side comments, fine print, legal disclaimers",
+            "font-size: smaller (but no meaning)"
+          ],
+          [
+            "<sub>",
+            "Semantic",
+            "Subscript for chemical formulas and notation",
+            "vertical-align: sub; font-size: smaller"
+          ],
+          [
+            "<sup>",
+            "Semantic",
+            "Superscript for exponents and ordinals",
+            "vertical-align: super; font-size: smaller"
+          ],
+          [
+            "<code>",
+            "Semantic",
+            "Inline code, variable names, commands",
+            "font-family: monospace (but no meaning)"
+          ],
+          [
+            "<pre>",
+            "Semantic",
+            "Preformatted text preserving whitespace",
+            "white-space: pre; font-family: monospace"
+          ],
+          [
+            "<kbd>",
+            "Semantic",
+            "User keyboard or voice input",
+            "font-family: monospace (but no meaning)"
+          ],
+          [
+            "<samp>",
+            "Semantic",
+            "Sample output from a program",
+            "font-family: monospace (but no meaning)"
+          ],
+          [
+            "<var>",
+            "Semantic",
+            "Mathematical or programming variable",
+            "font-style: italic (but no meaning)"
+          ],
+          [
+            "<del>",
+            "Semantic",
+            "Removed or no longer accurate text",
+            "text-decoration: line-through"
+          ],
+          [
+            "<ins>",
+            "Semantic",
+            "Newly inserted or added text",
+            "text-decoration: underline"
           ]
         ]
       },
       {
         "type": "callout",
-        "variant": "warning",
-        "title": "cite Element vs cite Attribute",
-        "text": "The cite element marks the title of a creative work in visible text. The cite attribute on blockquote and q holds a URL pointing to the source of the quote. They are different things with the same name. cite='https://...' is an attribute. <cite>Book Title</cite> is an element."
+        "variant": "info",
+        "title": "The Core Rule",
+        "text": "If the formatting carries meaning that matters beyond appearance, use a semantic element. If the formatting is purely decorative with no meaning to communicate, use CSS on a span instead of a presentational HTML element."
       }
     ],
     "examples": [
       {
-        "title": "blockquote, q, and cite in a Real Article",
-        "description": "This example shows all three quotation elements used correctly in a blog article. blockquote wraps an extended pull quote with a cite attribute pointing to the source. q handles a short inline quotation within a sentence. cite marks the titles of referenced works. The example also shows the recommended pattern for attributing a blockquote using a footer and cite together.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Quotation Elements Demo</title>\n  <style>\n    body {\n      font-family: Georgia, serif;\n      max-width: 680px;\n      margin: 2rem auto;\n      padding: 0 1rem;\n      line-height: 1.8;\n      color: #1e293b;\n    }\n    h1 { font-size: 1.6rem; }\n    h2 { font-size: 1.1rem; margin-top: 2rem; }\n\n    /* blockquote: browser default indentation is usually enough,\n       but adding a left border is a common design pattern */\n    blockquote {\n      margin: 1.5rem 0;\n      padding: 1rem 1.5rem;\n      border-left: 4px solid #2563eb;\n      background: #f8fafc;\n      border-radius: 0 8px 8px 0;\n      font-style: italic;\n    }\n    blockquote footer {\n      margin-top: 0.75rem;\n      font-style: normal;\n      font-size: 0.88em;\n      color: #475569;\n    }\n    blockquote footer cite {\n      font-style: italic;\n    }\n\n    /* q: browser adds quotation marks automatically.\n       Do not add your own quotes around q content. */\n    q { color: #1d4ed8; }\n\n    /* cite: italic by default, sometimes styled differently */\n    cite { font-style: italic; }\n  </style>\n</head>\n<body>\n\n  <h1>The Importance of Readable Code</h1>\n\n  <p>\n    Software is written once but read many times.\n    As <cite>Clean Code</cite> by Robert C. Martin argues,\n    the ratio of time spent reading code versus writing it is well over ten to one.\n  </p>\n\n  <!--\n    blockquote: for multi-sentence or paragraph-length quotes.\n    cite attribute: URL of the source (not visible to users, for machines).\n    footer inside blockquote: attribution pattern recommended by HTML spec.\n    cite element inside footer: marks the work title, not the author name.\n  -->\n  <blockquote cite=\"https://www.goodreads.com/book/show/3735293-clean-code\">\n    <p>\n      Indeed, the ratio of time spent reading versus writing is well over 10 to 1.\n      We are constantly reading old code as part of the effort to write new code.\n      Making it easy to read makes it easier to write.\n    </p>\n    <footer>\n      Robert C. Martin, <cite>Clean Code: A Handbook of Agile Software Craftsmanship</cite>\n    </footer>\n  </blockquote>\n\n  <p>\n    This idea extends beyond programming. Donald Knuth famously described\n    his approach as <q cite=\"https://www-cs-faculty.stanford.edu/~knuth/lp.html\">literate\n    programming</q>, where the primary audience for code is human readers,\n    not compilers.\n  </p>\n\n  <!--\n    q: for short inline quotes that fit within a sentence.\n    Browser automatically wraps content in language-appropriate quotation marks.\n    Do NOT add your own quote characters around the content inside q.\n  -->\n  <p>\n    The <cite>Structure and Interpretation of Computer Programs</cite>\n    opens with the observation that\n    <q>programs must be written for people to read, and only incidentally\n    for machines to execute.</q>\n    This remains one of the most cited principles in software education.\n  </p>\n\n\n  <h2>Wrong: Using Straight Quotes Instead of q</h2>\n  <p>\n    <!--\n      WRONG: using plain quotation marks instead of the q element.\n      The text still renders with quotes, but loses semantic meaning.\n      No cite attribute possible. Screen readers get no quote boundary signal.\n    -->\n    Martin described the practice as \"reading old code as part of writing new code\".\n\n    <!-- RIGHT: use q with the cite attribute for source traceability -->\n    Martin described the practice as\n    <q cite=\"https://www.goodreads.com/book/show/3735293-clean-code\">reading\n    old code as part of writing new code</q>.\n  </p>\n\n\n  <h2>Multiple blockquotes with Attribution</h2>\n\n  <blockquote cite=\"https://en.wikiquote.org/wiki/Linus_Torvalds\">\n    <p>\n      Talk is cheap. Show me the code.\n    </p>\n    <footer>\n      Linus Torvalds, in a message to the\n      <cite>Linux Kernel Mailing List</cite>, 2000\n    </footer>\n  </blockquote>\n\n  <blockquote cite=\"https://www.brainyquote.com/quotes/donald_knuth_181634\">\n    <p>\n      Premature optimization is the root of all evil.\n    </p>\n    <footer>\n      Donald Knuth, <cite>Computer Programming as an Art</cite>\n    </footer>\n  </blockquote>\n\n</body>\n</html>",
-        "output": "Page renders a readable article with a blue left-border blockquote for the Clean Code extended quote, a footer attribution line with the full title in italic cite. Two inline q elements appear in blue with automatic quotation marks added by the browser. The cite element marks book and paper titles in italic. The second wrong-vs-right example shows plain quotes beside a semantic q element. Two additional blockquotes at the bottom show the Linus Torvalds and Donald Knuth quotes with structured attribution footers.",
-        "images": null,
-        "video_url": null
-      },
-      {
-        "title": "abbr and address Elements in Context",
-        "description": "This example shows the abbr element with the title attribute for full abbreviation expansion, and the address element used correctly for contact information in an article footer. Both elements are part of the broader quotation and reference family and are commonly misused or overlooked.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>abbr and address Demo</title>\n  <style>\n    body {\n      font-family: system-ui, sans-serif;\n      max-width: 680px;\n      margin: 2rem auto;\n      padding: 0 1rem;\n      line-height: 1.8;\n    }\n    h1 { font-size: 1.5rem; }\n    h2 { font-size: 1.05rem; margin-top: 2rem; }\n\n    abbr {\n      cursor: help;\n      text-decoration: underline dotted; /* explicit for consistency across browsers */\n      text-underline-offset: 3px;\n    }\n\n    address {\n      font-style: normal; /* override browser default italic */\n      background: #f8fafc;\n      border: 1px solid #e2e8f0;\n      border-radius: 8px;\n      padding: 1rem 1.25rem;\n      margin-top: 1rem;\n    }\n    address p { margin: 0.2rem 0; }\n    address a { color: #2563eb; }\n  </style>\n</head>\n<body>\n\n  <h1>Building a REST API with Node.js</h1>\n\n  <!--\n    abbr: marks abbreviations and acronyms.\n    title attribute: holds the full expanded form shown on hover.\n    First occurrence rule: expand in full on the first use on each page,\n    then use abbr for subsequent references.\n  -->\n  <p>\n    This guide covers building a\n    <abbr title=\"Representational State Transfer\">REST</abbr>\n    <abbr title=\"Application Programming Interface\">API</abbr>\n    using Node.js and Express. We will implement\n    <abbr title=\"JavaScript Object Notation\">JSON</abbr> responses,\n    <abbr title=\"Cross-Origin Resource Sharing\">CORS</abbr> headers, and\n    <abbr title=\"JSON Web Token\">JWT</abbr> authentication.\n  </p>\n\n  <p>\n    The server will listen on\n    <abbr title=\"Hypertext Transfer Protocol Secure\">HTTPS</abbr>\n    port 443 in production and on\n    <abbr title=\"Hypertext Transfer Protocol\">HTTP</abbr>\n    port 3000 in development. Deploy using a\n    <abbr title=\"Virtual Private Server\">VPS</abbr> or a managed\n    <abbr title=\"Platform as a Service\">PaaS</abbr> provider.\n  </p>\n\n\n  <h2>abbr: Wrong Usage</h2>\n  <p>\n    <!--\n      WRONG: abbreviation without title attribute.\n      Users hovering cannot see the expansion.\n      Screen readers have no full form to announce.\n    -->\n    This API uses JWT for auth.\n\n    <!-- RIGHT: each abbreviation has a title expansion -->\n    This <abbr title=\"Application Programming Interface\">API</abbr>\n    uses <abbr title=\"JSON Web Token\">JWT</abbr> for auth.\n  </p>\n\n\n  <h2>address: Contact Information</h2>\n  <!--\n    address: for contact information of the nearest article or body ancestor.\n    Correct: author contact at the bottom of an article.\n    Correct: business contact details in the site footer.\n    WRONG: for any physical postal address unrelated to the document author.\n    WRONG: for structured data that is not contact information.\n\n    address renders in italic by default. Use CSS font-style:normal\n    if the design requires non-italic contact information.\n  -->\n\n  <article>\n    <h2>Article: Getting Started with Express.js</h2>\n    <p>Express.js is the most widely used Node.js web framework...</p>\n\n    <!-- address at the end of an article: contact for the article author -->\n    <address>\n      <p>Written by <a href=\"mailto:priya@devdocs.in\">Priya Sharma</a></p>\n      <p>Senior Engineer, DevDocs India</p>\n      <p><a href=\"https://github.com/priyasharma\">github.com/priyasharma</a></p>\n    </address>\n  </article>\n\n\n  <footer style=\"margin-top:2rem; padding-top:1rem; border-top:1px solid #e5e7eb;\">\n    <!-- address in footer: contact for the organisation running the site -->\n    <address>\n      <p><strong>DevDocs India</strong></p>\n      <p>Email: <a href=\"mailto:hello@devdocs.in\">hello@devdocs.in</a></p>\n      <p>Kozhikode, Kerala, India</p>\n    </address>\n  </footer>\n\n</body>\n</html>",
-        "output": "Page renders a technical article about building a REST API. Every abbreviation (REST, API, JSON, CORS, JWT, HTTPS, HTTP, VPS, PaaS) shows a dotted underline cursor with a tooltip expansion on hover. The wrong usage section shows bare abbreviations beside marked-up versions. The article ends with an address block in a light card showing the author's name as a mailto link, title, and GitHub link. The footer contains an organisation address with email link and location.",
+        "title": "All Text Formatting Elements in a Technical Documentation Page",
+        "description": "This example uses every major text formatting element in a realistic technical documentation context. Each element is chosen for its semantic meaning, not its visual output. Comments explain why each element was selected over its visual-only alternative.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Node.js fs Module Reference</title>\n  <style>\n    body  { font-family: system-ui, sans-serif; max-width: 740px;\n            margin: 2rem auto; padding: 0 1rem; line-height: 1.75; }\n    h1    { font-size: 1.6rem; }\n    h2    { font-size: 1.1rem; margin-top: 2rem; border-bottom: 1px solid #e5e7eb; }\n    code  { background: #f1f5f9; border-radius: 3px;\n            padding: 0.1rem 0.35rem; font-size: 0.88em; }\n    pre   { background: #0f172a; color: #e2e8f0; padding: 1rem 1.25rem;\n            border-radius: 8px; overflow-x: auto; font-size: 0.87em; }\n    pre code { background: none; padding: 0; color: inherit; }\n    kbd   { background: #f1f5f9; border: 1px solid #cbd5e1;\n            border-bottom: 2px solid #94a3b8; border-radius: 4px;\n            padding: 0.1rem 0.45rem; font-size: 0.83em; }\n    mark  { background: #fef08a; border-radius: 2px; padding: 0 0.15rem; }\n    del   { color: #dc2626; }\n    ins   { color: #16a34a; text-decoration-color: #16a34a; }\n    small { color: #6b7280; }\n    var   { font-style: italic; color: #7c3aed; }\n    samp  { background: #f0fdf4; border-radius: 3px;\n            padding: 0.1rem 0.35rem; font-size: 0.88em; color: #166534; }\n  </style>\n</head>\n<body>\n\n  <h1>Node.js <code>fs</code> Module Reference</h1>\n\n  <!-- strong: high importance warning the reader must not miss -->\n  <!-- b: stylistically bold product name, no urgency or importance -->\n  <p>\n    <strong>Warning: all synchronous fs methods block the event loop.</strong>\n    Use them only in startup scripts, never inside request handlers in\n    <b>Express</b> or <b>Fastify</b> applications.\n  </p>\n\n\n  <h2>fs.readFile</h2>\n\n  <!-- em: stress emphasis that changes which part of the sentence matters -->\n  <p>\n    This method reads the <em>entire</em> file into memory before calling the\n    callback. For large files, prefer <code>fs.createReadStream</code> instead.\n  </p>\n\n  <!-- pre + code: block of preformatted code preserving indentation -->\n  <pre><code>// Asynchronous (non-blocking) - preferred\nfs.readFile('/data/config.json', 'utf8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});\n\n// Synchronous (blocking) - use only at startup\nconst data = fs.readFileSync('/data/config.json', 'utf8');\n</code></pre>\n\n\n  <h2>Method Signature</h2>\n\n  <!-- var: mathematical or programming variable / parameter name -->\n  <!-- code: inline function and parameter names -->\n  <p>\n    <code>fs.readFile(<var>path</var>, <var>options</var>, <var>callback</var>)</code>\n  </p>\n\n  <p>\n    The <var>options</var> object accepts an <code>encoding</code> string\n    and a <code>flag</code> string. If <var>options</var> is a string,\n    it is treated as the encoding value directly.\n  </p>\n\n\n  <h2>Changelog</h2>\n\n  <!-- del and ins: document changes between versions -->\n  <p>\n    The <code>bufferSize</code> option was\n    <del>deprecated in v14.0.0</del> and\n    <ins>removed in v16.0.0</ins>.\n    Use <code>highWaterMark</code> instead.\n  </p>\n\n\n  <h2>Terminal Output</h2>\n\n  <!-- kbd: what the user types -->\n  <!-- samp: what the program outputs -->\n  <p>\n    Run <kbd>node read.js</kbd> in your terminal.\n    On success you will see:\n  </p>\n  <p><samp>{ database: 'postgres', port: 5432, ssl: true }</samp></p>\n  <p>\n    If the file is missing, Node prints:\n    <samp>Error: ENOENT: no such file or directory, open '/data/config.json'</samp>\n  </p>\n\n\n  <h2>Performance Notes</h2>\n\n  <!-- mark: highlights a term relevant to the current context or search -->\n  <p>\n    For files larger than <mark>10 MB</mark>, the memory overhead of\n    <code>readFile</code> becomes significant. The highlighted threshold\n    applies to the default Node.js heap configuration.\n  </p>\n\n\n  <h2>Version Support</h2>\n\n  <!-- small: fine print, version notes, disclaimers -->\n  <p>\n    <small>Behaviour described here applies to Node.js v18 LTS and above.\n    Older versions may differ. Always check the official Node.js\n    documentation for the version you are running.</small>\n  </p>\n\n</body>\n</html>",
+        "output": "Page renders a Node.js fs module reference. The warning paragraph shows strong in bold for the event loop warning alongside b in bold for Express and Fastify product names. readFile explanation uses em on 'entire' to stress which word matters. A dark code block shows pre and code together with preserved indentation. The method signature shows var in purple italics for parameter names alongside inline code. The changelog shows del in red strikethrough and ins in green underline. The terminal section shows kbd for user input and samp in a green monospace badge for program output. The 10 MB threshold is marked in yellow. The version note appears in small grey fine print.",
         "images": null,
         "video_url": null
       }
@@ -147,96 +221,1534 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "When reproducing an extended quote from a book, article, or speech in your content"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When the formatted text carries meaning that matters to "
+          },
+          {
+            "value": "screen readers",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+          },
+          {
+            "value": " or search engines"
+          }
+        ]
       },
       {
-        "point": "When referencing the title of a book, film, article, or other creative work inline"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When displaying "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": ", keyboard input, or program output in documentation or tutorials"
+          }
+        ]
       },
       {
-        "point": "When marking abbreviations with their full expansion for screen readers and hover tooltips"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When marking changed content with "
+          },
+          {
+            "value": "del",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "ins",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+          },
+          {
+            "value": " in changelogs, diffs, or corrections"
+          }
+        ]
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid using blockquote for visual indentation when the content is not an actual quotation"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid "
+          },
+          {
+            "value": "strong",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "em",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+          },
+          {
+            "value": " for visual styling when the text has no actual importance or stress"
+          }
+        ]
       },
       {
-        "point": "Avoid omitting the title attribute on abbr since the expansion is invisible without it"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " for indentation tricks in prose; it is only for content where whitespace is meaningful"
+          }
+        ]
       },
       {
-        "point": "Avoid using address for postal addresses unrelated to the document or article author"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid nesting block elements like "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " inside p as p only accepts inline content"
+          }
+        ]
       }
     ],
     "what_it_solves": [
       {
-        "1": "Plain quotation marks provide no machine-readable signal that text is a quote from an external source."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Visual styling alone conveys no meaning to "
+          },
+          {
+            "value": "screen readers",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+          },
+          {
+            "value": " or search engine crawlers."
+          }
+        ]
       },
       {
-        "2": "Without cite, referenced work titles have no semantic distinction from surrounding prose text."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": ", source "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": " loses its indentation and structure when rendered in a browser."
+          }
+        ]
       },
       {
-        "3": "Without abbr, screen readers pronounce acronyms letter-by-letter with no way to announce the full form."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "del",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "ins",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+          },
+          {
+            "value": " communicate document history to tools and readers without removing the original text."
+          }
+        ]
       }
     ],
     "conceptual_understanding": [
       {
-        "model": "blockquote is a formal citation container, like an indented and attributed passage in an academic paper. The cite attribute on it is the footnote number pointing to the reference list. The cite element inside the footer attribution is the italicised title of the work in that reference. All three pieces work together the same way a proper academic citation does."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Semantic",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+          },
+          {
+            "value": " text elements are like annotation layers on a manuscript. The text is the manuscript. The "
+          },
+          {
+            "value": "semantic",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+          },
+          {
+            "value": " tags are coloured stickers a librarian places on specific words: red for warnings, blue for technical terms, yellow for highlighted passages. A sighted reader sees the stickers. A cataloguing system also reads them to index the document. "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": "-only styling is invisible ink: it affects appearance but leaves no sticker for any system to read."
+          }
+        ]
       },
       {
-        "model": "The q element is like a smart quote character that knows it is a quotation. A plain quotation mark is just a glyph with no meaning to any tool. The q element tells the browser to add the appropriate quotation mark style for the page language, tells screen readers to announce a quotation boundary, and holds a cite attribute where the source URL can be recorded for machine consumption."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The "
+          },
+          {
+            "value": "strong",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+          },
+          {
+            "value": " versus "
+          },
+          {
+            "value": "b",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b"
+          },
+          {
+            "value": " distinction mirrors the difference between a red STOP sign and red decorative text on a restaurant menu. Both are red and bold. Only one communicates urgency. A screen reader navigating by importance will find the STOP sign but skip the menu decoration. "
+          },
+          {
+            "value": "strong",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+          },
+          {
+            "value": " is the stop sign. "
+          },
+          {
+            "value": "b",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b"
+          },
+          {
+            "value": " is the menu text."
+          }
+        ]
       },
       {
-        "model": "abbr with a title attribute is like a glossary entry embedded directly in the text. Instead of sending the reader to a separate glossary page to find out what REST means, the full definition travels with the abbreviation wherever it appears on the page. Screen readers can announce the full form. Search engines understand the term. Sighted users get the tooltip on hover."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " is a "
+          },
+          {
+            "value": "time",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+          },
+          {
+            "value": " capsule for whitespace. When "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " is parsed, all consecutive spaces and line breaks normally collapse into one space. "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " opts out of that rule. Every space, every indented line, every blank line is preserved exactly as written. This is the only correct tool for source "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": ", terminal output, and any content where the position of whitespace carries meaning."
+          }
+        ]
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Using blockquote for visual indentation: blockquote has a strong semantic meaning: this content is a quotation from another source. Using it to indent a paragraph or callout that is not a quotation misleads screen readers, which announce the block as a quotation, and violates the HTML specification. Use CSS padding or margin for visual indentation of non-quote content."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using "
+          },
+          {
+            "value": "strong",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "em",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+          },
+          {
+            "value": " for decorative bold and italic text: When every third sentence is wrapped in."
+          }
+        ]
       },
       {
-        "mistake": "Adding manual quotation marks inside a q element: The browser automatically wraps q content in language-appropriate quotation marks. Writing <q>\"quoted text\"</q> produces double quotation marks, resulting in ugly doubled quotes in the rendered output. Write only the quoted text inside q with no surrounding punctuation."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " for layout indentation in prose: The "
+          },
+          {
+            "value": "pre",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+          },
+          {
+            "value": " element is for content where whitespace carries."
+          }
+        ]
       },
       {
-        "mistake": "Using address for any postal address: The address element is specifically for contact information related to the nearest article ancestor or the document body. Using it for a delivery address in an order confirmation, a location in a directory listing, or any address not belonging to the document author or site owner is semantically incorrect. Use a div or p for unrelated address data."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": " for all monospace styling regardless of content: "
+          },
+          {
+            "value": "code",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+          },
+          {
+            "value": " has a specific "
+          },
+          {
+            "value": "semantic",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+          },
+          {
+            "value": " meaning:"
+          }
+        ]
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Use the cite attribute on blockquote and q to link to the exact source URL, even though the attribute is not visible to users. Tools that process structured content, browser reader modes, and semantic search engines can extract this URL to verify the source, build citation networks, or present the original source alongside your content. It costs nothing to add and signals responsible sourcing."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Combine "
+          },
+          {
+            "value": "kbd",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": " elements for keyboard shortcuts by wrapping each key separately: "
+          },
+          {
+            "value": "<kbd>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": "Ctrl"
+          },
+          {
+            "value": "</kbd>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": "+"
+          },
+          {
+            "value": "<kbd>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": "S"
+          },
+          {
+            "value": "</kbd>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": ". This lets you style each key as a separate badge via "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": " and gives "
+          },
+          {
+            "value": "screen readers",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+          },
+          {
+            "value": " individual key names to announce. The plus sign between them is plain text, not inside "
+          },
+          {
+            "value": "kbd",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd"
+          },
+          {
+            "value": ", because the plus is punctuation connecting the keys rather than a key itself."
+          }
+        ]
       },
       {
-        "tip": "For the first occurrence of every abbreviation on a page, write it out in full followed by the abbreviation in parentheses, then use abbr for subsequent references. For example: Representational State Transfer (REST). From here, use <abbr title='Representational State Transfer'>REST</abbr> for every following mention. This serves users who cannot hover, including touch screen and screen reader users who never see the title tooltip."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Use "
+          },
+          {
+            "value": "del",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+          },
+          {
+            "value": " and "
+          },
+          {
+            "value": "ins",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+          },
+          {
+            "value": " together with the "
+          },
+          {
+            "value": "datetime",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+          },
+          {
+            "value": " attribute to record when a change happened: "
+          },
+          {
+            "value": "<del datetime='2024-01-10'>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+          },
+          {
+            "value": "old text"
+          },
+          {
+            "value": "</del>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+          },
+          {
+            "value": " "
+          },
+          {
+            "value": "<ins datetime='2024-01-15'>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+          },
+          {
+            "value": "new text"
+          },
+          {
+            "value": "</ins>",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+          },
+          {
+            "value": ". The "
+          },
+          {
+            "value": "datetime",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+          },
+          {
+            "value": " attribute is machine-readable and follows the same ISO 8601 format as the "
+          },
+          {
+            "value": "time",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+          },
+          {
+            "value": " element. Tools that process document history can use this to build a revision timeline."
+          }
+        ]
       }
     ],
     "related_topics": [
       "HTML Paragraph Elements",
-      "HTML Text Formatting Elements",
+      "HTML Heading Elements h1-h6",
       "HTML Semantic Elements",
       "Accessibility and ARIA",
-      "SEO Fundamentals"
+      "CSS Typography"
     ],
     "is_active": true,
-    "order_index": 8,
+    "order_index": 7,
     "created_at": null,
     "updated_at": null
   },
-  "subtopics": [],
+  "subtopics": [
+    {
+      "id": 1,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 3,
+      "topic_id": 7,
+      "slug": "strong-and-emphasis-elements",
+      "title": "Strong and Emphasis Elements",
+      "description": "Strong signals importance or urgency and em signals spoken stress that changes a sentence meaning.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "<strong>",
+              "highlight": true
+            },
+            {
+              "value": " element marks text as having "
+            },
+            {
+              "value": "high importance, urgency, or seriousness",
+              "bold": true
+            },
+            {
+              "value": ". Screen readers may change their tone or pace when they encounter it. The "
+            },
+            {
+              "value": "<em>",
+              "highlight": true
+            },
+            {
+              "value": " element marks "
+            },
+            {
+              "value": "stress emphasis",
+              "bold": true
+            },
+            {
+              "value": ": the kind of spoken inflection that changes what a sentence means depending on which word carries the stress. Both elements render visually as bold or italic by default, but their meaning comes from the tag, not from that appearance. Their presentational counterparts "
+            },
+            {
+              "value": "<b>",
+              "highlight": true
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "<i>",
+              "highlight": true
+            },
+            {
+              "value": " produce identical visuals with no added semantic weight. Full reference at "
+            },
+            {
+              "value": "MDN: strong",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "MDN: em",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "variant": "info",
+          "title": "When to Use b and i Instead",
+          "text": "Use b for stylistically bold text that carries no importance: product names, keywords in a summary, bold text in a UI. Use i for alternate voice, foreign words, technical terms, or titles of works. Neither b nor i communicates importance or stress to assistive tools."
+        }
+      ],
+      "examples": [
+        {
+          "title": "strong vs b and em vs i with Meaning Demonstration",
+          "description": "This example places strong, b, em, and i side by side in identical-looking sentences to show that the visual output is the same but the semantic meaning differs. It also demonstrates how placing em on different words in the same sentence produces different meanings, which is the core purpose of the element.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>strong vs b and em vs i</title>\n  <style>\n    body { font-family: sans-serif; max-width: 700px; margin: 2rem auto;\n           padding: 0 1rem; line-height: 1.8; }\n    h2   { font-size: 1rem; margin-top: 1.75rem; color: #374151; }\n    .box { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem;\n           margin-bottom: 0.75rem; }\n    .label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase;\n             letter-spacing: 0.06em; color: #6b7280; margin-bottom: 0.4rem; }\n    .meaning { font-size: 0.8rem; color: #2563eb; margin-top: 0.4rem;\n               font-style: italic; }\n  </style>\n</head>\n<body>\n\n  <h1>strong vs b and em vs i</h1>\n\n\n  <!-- STRONG vs B -->\n  <h2>strong vs b: both look bold, only one carries meaning</h2>\n\n  <div class=\"box\">\n    <p class=\"label\">strong: high importance (screen readers may signal this)</p>\n    <p>\n      <strong>Do not delete this file.</strong> Removing it will\n      break the application on next startup.\n    </p>\n    <p class=\"meaning\">Meaning: this specific instruction is critically important.</p>\n  </div>\n\n  <div class=\"box\">\n    <p class=\"label\">b: stylistically bold, no importance (screen readers ignore)</p>\n    <p>\n      This guide covers <b>React</b>, <b>Vue</b>, and <b>Svelte</b>.\n    </p>\n    <p class=\"meaning\">\n      Meaning: product names are highlighted for readability, not urgency.\n      b is correct here. strong would be wrong and misleading.\n    </p>\n  </div>\n\n\n  <!-- EM vs I -->\n  <h2>em vs i: both look italic, only one shifts sentence meaning</h2>\n\n  <div class=\"box\">\n    <p class=\"label\">em: stress emphasis (changes which word carries the sentence weight)</p>\n\n    <!-- The same sentence with em on a different word changes the meaning entirely -->\n    <p><em>I</em> never said she stole the money.</p>\n    <p class=\"meaning\">Meaning: someone else said it, not me.</p>\n\n    <p>I never said <em>she</em> stole the money.</p>\n    <p class=\"meaning\">Meaning: someone stole it, but not her specifically.</p>\n\n    <p>I never said she stole <em>the money</em>.</p>\n    <p class=\"meaning\">Meaning: she may have taken something, but not the money.</p>\n  </div>\n\n  <div class=\"box\">\n    <p class=\"label\">i: alternate voice or non-emphasis italic (no stress change)</p>\n    <p>\n      The algorithm is known as <i>binary search</i> in computer science.\n      <!-- i: technical term in a different register, not stress emphasis -->\n    </p>\n    <p>\n      The novel <i>The Pragmatic Programmer</i> is essential reading.\n      <!-- i: title of a creative work, not stress emphasis -->\n    </p>\n    <p>\n      In French, a general store is called a <i lang=\"fr\">épicerie</i>.\n      <!-- i: foreign word, with lang attribute for correct pronunciation -->\n    </p>\n    <p class=\"meaning\">\n      Meaning: alternate voice or different register, no spoken stress implied.\n    </p>\n  </div>\n\n\n  <!-- NESTING -->\n  <h2>Nesting strong and em for combined importance and stress</h2>\n  <div class=\"box\">\n    <p>\n      You <strong>must</strong> restart the server after\n      <strong><em>every</em></strong> configuration change.\n    </p>\n    <p class=\"meaning\">\n      strong wraps the must (important). strong wraps em wraps every\n      (both important and stressed). Nesting is valid and additive.\n    </p>\n  </div>\n\n</body>\n</html>",
+          "output": "Page renders all comparisons visually identical: strong and b both appear bold, em and i both appear italic. The semantic difference is invisible to sighted users but significant to screen readers. The three em sentences demonstrate how shifting emphasis to different words ('I', 'she', 'the money') changes the implied meaning of the same sentence. The i examples show technical term, book title, and foreign word usage. The nesting example shows strong and em combined.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "strong",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "em",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": " are like a highlighter and a sticky note on a printed page. The highlighter marks text that matters most ("
+            },
+            {
+              "value": "strong",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+            },
+            {
+              "value": "). The sticky note marks a word that a reader would stress aloud when reading it ("
+            },
+            {
+              "value": "em",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": "). "
+            },
+            {
+              "value": "b",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "i",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"
+            },
+            {
+              "value": " are the same colours but just decorative pen strokes: they look the same but carry no instruction to any reader, human or machine."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "em",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": " element models spoken language. In speech, stressing a different word in a sentence changes its meaning. '"
+            },
+            {
+              "value": "I",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"
+            },
+            {
+              "value": " never said she stole it' has seven different meanings depending on which word you stress. "
+            },
+            {
+              "value": "em",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": " encodes that stress into "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " so that text-to-speech tools and language processors can read the sentence with the correct inflection the author intended."
+            }
+          ]
+        }
+      ],
+      "common_mistakes": null,
+      "bonus_tips": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "When using "
+            },
+            {
+              "value": "i",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"
+            },
+            {
+              "value": " for a foreign word or technical term in a different language, always add a "
+            },
+            {
+              "value": "lang",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+            },
+            {
+              "value": " attribute to the element: "
+            },
+            {
+              "value": "<i lang='fr'>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"
+            },
+            {
+              "value": "épicerie"
+            },
+            {
+              "value": "</i>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/i"
+            },
+            {
+              "value": ". This tells "
+            },
+            {
+              "value": "screen readers",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+            },
+            {
+              "value": " to switch pronunciation rules for that word, producing correct speech output. Without "
+            },
+            {
+              "value": "lang",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+            },
+            {
+              "value": ", the reader applies the document language rules and mispronounces the foreign term."
+            }
+          ]
+        }
+      ],
+      "related_topics": [
+        "HTML Text Formatting Elements",
+        "HTML Paragraph Elements",
+        "Accessibility and ARIA"
+      ],
+      "is_active": true,
+      "order_index": 1,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 2,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 3,
+      "topic_id": 7,
+      "slug": "mark-small-del-ins-elements",
+      "title": "Mark, Small, Del and Ins Elements",
+      "description": "Mark highlights contextually relevant text and del or ins track additions and removals in documents.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "<mark>",
+              "highlight": true
+            },
+            {
+              "value": " element highlights text that is "
+            },
+            {
+              "value": "relevant to the user's current context",
+              "bold": true
+            },
+            {
+              "value": ", such as a search term in results. "
+            },
+            {
+              "value": "<small>",
+              "highlight": true
+            },
+            {
+              "value": " represents "
+            },
+            {
+              "value": "side comments, fine print, and legal disclaimers",
+              "bold": true
+            },
+            {
+              "value": " that are secondary to the main content. "
+            },
+            {
+              "value": "<del>",
+              "highlight": true
+            },
+            {
+              "value": " marks text that has been "
+            },
+            {
+              "value": "removed or is no longer accurate",
+              "bold": true
+            },
+            {
+              "value": ", and "
+            },
+            {
+              "value": "<ins>",
+              "highlight": true
+            },
+            {
+              "value": " marks text that has been "
+            },
+            {
+              "value": "inserted or added",
+              "bold": true
+            },
+            {
+              "value": ". Both del and ins accept a "
+            },
+            {
+              "value": "datetime",
+              "highlight": true
+            },
+            {
+              "value": " attribute for machine-readable change timestamps. Reference: "
+            },
+            {
+              "value": "MDN: mark",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "MDN: del",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+            },
+            {
+              "value": "."
+            }
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "title": "Mark for Search Highlights, Small for Disclaimers, Del and Ins for Changelogs",
+          "description": "This example shows all four elements in production contexts: mark used to highlight search matches in a result list, small used for copyright and version disclaimers, and del paired with ins to document a changelog with machine-readable timestamps. All three patterns appear regularly on real content sites.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Mark, Small, Del, Ins Demo</title>\n  <style>\n    body   { font-family: sans-serif; max-width: 680px; margin: 2rem auto;\n             padding: 0 1rem; line-height: 1.75; }\n    h2     { font-size: 1rem; margin-top: 1.75rem; }\n    mark   { background: #fef08a; border-radius: 2px; padding: 0 0.15rem; }\n    small  { color: #6b7280; font-size: 0.82em; display: block;\n             margin-top: 0.25rem; }\n    del    { color: #dc2626; background: #fef2f2;\n             text-decoration-color: #dc2626; }\n    ins    { color: #16a34a; background: #f0fdf4;\n             text-decoration-color: #16a34a; }\n    .result { border: 1px solid #e5e7eb; border-radius: 8px;\n              padding: 0.75rem 1rem; margin-bottom: 0.6rem; }\n    .result a { color: #2563eb; font-weight: 600; text-decoration: none; }\n    .result a:hover { text-decoration: underline; }\n    .changelog { border-left: 3px solid #e5e7eb; padding-left: 1rem; }\n    .changelog li { margin-bottom: 0.4rem; font-size: 0.9rem; }\n    .version { font-weight: 700; color: #374151; }\n    time { font-size: 0.78rem; color: #9ca3af; margin-left: 0.4rem; }\n  </style>\n</head>\n<body>\n\n  <!-- MARK: highlight search matches in results -->\n  <h2>Search Results for \"<mark>Node.js</mark> authentication\"</h2>\n\n  <div class=\"result\">\n    <a href=\"/guides/nodejs-jwt\">JWT Authentication in <mark>Node.js</mark> with Express</a>\n    <p>A step-by-step guide to implementing JSON Web Token authentication\n    in your <mark>Node.js</mark> REST API.</p>\n    <small>devdocs.in/guides/nodejs-jwt</small>\n  </div>\n\n  <div class=\"result\">\n    <a href=\"/guides/nodejs-session\">Session-Based Auth in <mark>Node.js</mark></a>\n    <p>How to manage server-side sessions with express-session in a\n    <mark>Node.js</mark> application.</p>\n    <small>devdocs.in/guides/nodejs-session</small>\n  </div>\n\n  <!--\n    mark is for relevance to current context (search query, annotation).\n    Do not use mark for general highlighting or decorative purposes.\n    For highlighted important text use strong instead.\n  -->\n\n\n  <!-- SMALL: fine print, disclaimers, copyright -->\n  <h2>Pricing</h2>\n  <p>Pro Plan: Rs 999 per month</p>\n  <small>Price excludes applicable taxes. Billed annually at Rs 9,990.\n  Cancel any time. No refunds for partial months.</small>\n\n  <p>Enterprise Plan: Custom pricing</p>\n  <small>Contact sales for volume discounts and SLA terms.\n  Minimum commitment of 12 months required.</small>\n\n\n  <!-- DEL + INS: changelog tracking with datetime attributes -->\n  <h2>Changelog</h2>\n  <ul class=\"changelog\">\n\n    <li>\n      <span class=\"version\">v3.2.0</span>\n      <time datetime=\"2024-03-10\">10 Mar 2024</time>\n      <ul>\n        <li>\n          <ins datetime=\"2024-03-10\">Added support for OAuth 2.0 PKCE flow</ins>\n        </li>\n        <li>\n          <ins datetime=\"2024-03-10\">New rate-limiting middleware with Redis backend</ins>\n        </li>\n      </ul>\n    </li>\n\n    <li>\n      <span class=\"version\">v3.1.5</span>\n      <time datetime=\"2024-02-18\">18 Feb 2024</time>\n      <ul>\n        <li>\n          <del datetime=\"2024-02-18\">Removed deprecated /api/v1/auth endpoint</del>\n        </li>\n        <li>\n          The <code>bufferSize</code> config option was\n          <del datetime=\"2024-02-18\">accepted but ignored</del>,\n          now replaced by\n          <ins datetime=\"2024-02-18\">highWaterMark with proper validation</ins>.\n        </li>\n      </ul>\n    </li>\n\n  </ul>\n\n\n  <!-- FOOTER with small for copyright -->\n  <footer style=\"margin-top:2rem;padding-top:1rem;border-top:1px solid #e5e7eb;\">\n    <small>&copy; 2024 DevDocs India. All rights reserved.\n    Content is provided for educational purposes only.</small>\n  </footer>\n\n</body>\n</html>",
+          "output": "Page renders a search results section where every occurrence of 'Node.js' is highlighted in yellow by mark. The pricing section shows two plans, each followed by small grey fine print with billing details. The changelog shows version numbers with timestamps, ins entries in green underline for additions, and del entries in red strikethrough for removals. The footer shows small copyright text. The del and ins entries both carry datetime attributes for machine-readable change records.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "mark",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+            },
+            {
+              "value": " is a highlighter pen used by a student after the fact, not by the original author. The author wrote the text. The student marks the parts relevant to what they are currently studying. On a search results page, the search engine is the student: it highlights where the query appears in existing content. "
+            },
+            {
+              "value": "mark",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+            },
+            {
+              "value": " is not for decorative highlighting or general emphasis."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "del",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "ins",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins"
+            },
+            {
+              "value": " together create a two-colour tracked-changes view like the one in a word processor. Red strikethrough shows what was removed. Green underline shows what was added. The "
+            },
+            {
+              "value": "datetime",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time"
+            },
+            {
+              "value": " attribute is the timestamp in the document margin. A tool reading the "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " can reconstruct the history of every change without needing a separate version control system."
+            }
+          ]
+        }
+      ],
+      "common_mistakes": null,
+      "bonus_tips": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "When using "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": " to highlight search terms in rendered "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": ", create "
+            },
+            {
+              "value": "mark",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+            },
+            {
+              "value": " elements programmatically rather than using "
+            },
+            {
+              "value": "innerHTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML"
+            },
+            {
+              "value": " with a regex replace. Split the text node at the match position, wrap the matched range in a "
+            },
+            {
+              "value": "createElement",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+            },
+            {
+              "value": "('"
+            },
+            {
+              "value": "mark",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+            },
+            {
+              "value": "'), and insert it. This avoids "
+            },
+            {
+              "value": "XSS",
+              "bold": true,
+              "highlight": true,
+              "link": "https://owasp.org/www-community/attacks/xss/"
+            },
+            {
+              "value": " risk from injecting raw "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " and keeps the "
+            },
+            {
+              "value": "DOM",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            },
+            {
+              "value": " structure valid even when the search term contains special characters."
+            }
+          ]
+        }
+      ],
+      "related_topics": [
+        "HTML Text Formatting Elements",
+        "HTML Paragraph Elements",
+        "JavaScript DOM Manipulation"
+      ],
+      "is_active": true,
+      "order_index": 2,
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "id": 3,
+      "roadmap_id": 1,
+      "technology_id": 1,
+      "module_id": 3,
+      "topic_id": 7,
+      "slug": "subscript-superscript-and-code-elements",
+      "title": "Subscript, Superscript and Code Elements",
+      "description": "Sub and sup position scientific notation and code, pre, kbd, and samp label computer text content.",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "<sub>",
+              "highlight": true
+            },
+            {
+              "value": " element lowers text below the baseline for chemical formulas and footnote references. "
+            },
+            {
+              "value": "<sup>",
+              "highlight": true
+            },
+            {
+              "value": " raises text above the baseline for mathematical exponents and ordinal suffixes. For code content, "
+            },
+            {
+              "value": "<code>",
+              "highlight": true
+            },
+            {
+              "value": " marks inline computer code or variable names, "
+            },
+            {
+              "value": "<pre>",
+              "highlight": true
+            },
+            {
+              "value": " preserves whitespace in a block for multiline code, "
+            },
+            {
+              "value": "<kbd>",
+              "highlight": true
+            },
+            {
+              "value": " marks user keyboard input, and "
+            },
+            {
+              "value": "<samp>",
+              "highlight": true
+            },
+            {
+              "value": " marks program output. Combining "
+            },
+            {
+              "value": "pre and code",
+              "bold": true
+            },
+            {
+              "value": " together is the standard pattern for code blocks in documentation. References: "
+            },
+            {
+              "value": "MDN: sub",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub"
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "MDN: code",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "MDN: pre",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": "."
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Element",
+            "Use Case",
+            "Example Output"
+          ],
+          "rows": [
+            [
+              "<sub>",
+              "Chemical formulas, footnote references",
+              "H2O, CO2"
+            ],
+            [
+              "<sup>",
+              "Exponents, ordinal suffixes, footnote markers",
+              "E=mc2, 1st, [1]"
+            ],
+            [
+              "<code>",
+              "Inline code, variable names, file paths",
+              "Array.isArray()"
+            ],
+            [
+              "<pre>",
+              "Multiline preformatted text, code blocks",
+              "Indented code block"
+            ],
+            [
+              "<kbd>",
+              "Keyboard input or shortcut the user types",
+              "Ctrl+S"
+            ],
+            [
+              "<samp>",
+              "Output produced by a program or system",
+              "Error: file not found"
+            ],
+            [
+              "<var>",
+              "Mathematical or programming variable",
+              "x, n, options"
+            ]
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "title": "Scientific Notation and Code Documentation Patterns",
+          "description": "This example shows sub and sup in realistic scientific and mathematical contexts, then demonstrates the four code-related elements together in a documentation pattern. The pre plus code combination is the industry standard for displaying multiline code blocks that preserve indentation.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Sub, Sup, Code, Pre, Kbd, Samp</title>\n  <style>\n    body  { font-family: system-ui, sans-serif; max-width: 720px;\n            margin: 2rem auto; padding: 0 1rem; line-height: 1.8; }\n    h2    { font-size: 1.05rem; margin-top: 1.75rem; color: #1e293b; }\n    code  { background: #f1f5f9; border-radius: 3px;\n            padding: 0.1rem 0.35rem; font-size: 0.87em; }\n    pre   {\n      background: #0f172a;\n      color: #e2e8f0;\n      padding: 1rem 1.25rem;\n      border-radius: 8px;\n      overflow-x: auto;\n      font-size: 0.87em;\n      /* Critical: pre preserves whitespace.\n         Never add extra indentation inside pre\n         or it will appear in the rendered output. */\n    }\n    pre code { background: none; padding: 0; color: inherit; font-size: inherit; }\n    kbd  { background: #f1f5f9; border: 1px solid #cbd5e1;\n           border-bottom-width: 2px; border-radius: 4px;\n           padding: 0.1rem 0.45rem; font-size: 0.83em; }\n    samp { background: #f0fdf4; color: #166534; border-radius: 3px;\n           padding: 0.1rem 0.35rem; font-size: 0.87em; }\n    var  { color: #7c3aed; }\n    .footnotes { border-top: 1px solid #e5e7eb; margin-top: 2rem;\n                 padding-top: 0.75rem; font-size: 0.85rem; color: #4b5563; }\n  </style>\n</head>\n<body>\n\n  <h1>Chemistry and Code Reference</h1>\n\n\n  <!-- SUB: chemical formulas and footnote references -->\n  <h2>Subscript: sub</h2>\n  <p>\n    Water is H<sub>2</sub>O. Carbon dioxide is CO<sub>2</sub>.\n    Glucose is C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>.\n    Sulfuric acid is H<sub>2</sub>SO<sub>4</sub>.\n  </p>\n  <p>\n    <!-- sub for footnote reference numbers in academic text -->\n    The boiling point of water at sea level is 100 degrees Celsius.<sup><a href=\"#fn1\">[1]</a></sup>\n    The melting point of iron is 1538 degrees Celsius.<sup><a href=\"#fn2\">[2]</a></sup>\n  </p>\n\n\n  <!-- SUP: exponents, ordinals, footnote markers -->\n  <h2>Superscript: sup</h2>\n  <p>\n    Einstein's mass-energy equivalence: E = mc<sup>2</sup>\n  </p>\n  <p>\n    Avogadro's number: 6.022 &times; 10<sup>23</sup> mol<sup>&minus;1</sup>\n  </p>\n  <p>\n    <!-- sup for ordinal suffixes -->\n    The 1<sup>st</sup> place award went to the\n    3<sup>rd</sup> entry in the 21<sup>st</sup> annual competition.\n  </p>\n\n\n  <!-- CODE: inline code in prose -->\n  <h2>Inline Code: code</h2>\n  <p>\n    Call <code>Array.isArray(<var>value</var>)</code> to check whether\n    <var>value</var> is an array. It returns <code>true</code> or <code>false</code>.\n    Do not use <code>typeof</code> for this check because\n    <code>typeof []</code> returns <code>\"object\"</code>, not <code>\"array\"</code>.\n  </p>\n\n\n  <!-- PRE + CODE: multiline code block -->\n  <h2>Code Block: pre + code</h2>\n  <p>\n    The standard pattern for code blocks is <code>pre</code> wrapping <code>code</code>.\n    <code>pre</code> preserves whitespace. <code>code</code> adds semantic meaning.\n  </p>\n\n  <!--\n    CRITICAL: the opening pre tag and the first line of code\n    must be on the same line. Any whitespace inside pre is rendered.\n    If you indent the code block in your HTML editor, that indentation\n    appears in the browser output.\n  -->\n<pre><code>function fibonacci(n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nconsole.log(fibonacci(10)); // 55\n</code></pre>\n\n\n  <!-- KBD: what the user types -->\n  <!-- SAMP: what the program outputs -->\n  <h2>Keyboard Input and Program Output: kbd and samp</h2>\n  <p>\n    To run the script, type <kbd>node fibonacci.js</kbd> and press <kbd>Enter</kbd>.\n  </p>\n  <p>\n    If the function is correct, you will see:\n    <samp>55</samp>\n  </p>\n  <p>\n    To save a file in VS Code, press <kbd>Ctrl</kbd>+<kbd>S</kbd>\n    on Windows or <kbd>Cmd</kbd>+<kbd>S</kbd> on macOS.\n  </p>\n\n\n  <!-- Footnotes using sub-linked sup above -->\n  <div class=\"footnotes\">\n    <p id=\"fn1\">[1] National Institute of Standards and Technology, 2023.</p>\n    <p id=\"fn2\">[2] CRC Handbook of Chemistry and Physics, 104th edition.</p>\n  </div>\n\n</body>\n</html>",
+          "output": "Page renders chemical formulas with correctly lowered subscript numbers for H2O, CO2, glucose, and sulfuric acid. Footnote reference numbers appear as raised superscript links. The Einstein equation shows mc squared with a raised 2. Avogadro's number shows the exponent and negative-one superscripts. Ordinal suffixes st, rd, and st are raised. Inline code appears in a light monospace badge. The multiline Fibonacci code block renders in a dark container with preserved indentation. The kbd entries appear as key badges, samp shows the output in a green badge, and the keyboard shortcut separates each key into its own kbd element.",
+          "images": null,
+          "video_url": null
+        }
+      ],
+      "image_banner_url": null,
+      "images": null,
+      "video_url": null,
+      "when_to_use": null,
+      "when_to_avoid": null,
+      "what_it_solves": null,
+      "conceptual_understanding": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "pre",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": " is like a photograph of text. Normal "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " prose is typeset text where the browser decides where line breaks go and how to handle spaces. "
+            },
+            {
+              "value": "pre",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": " is a photograph: every space, tab, and newline is captured and reproduced exactly as it appeared. This is the only way to display source "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " or terminal output without rewriting it to remove all meaningful whitespace."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " element is a "
+            },
+            {
+              "value": "semantic",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            },
+            {
+              "value": " label, not a visual style. Wrapping text in "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " tells every tool reading the page: this is a computer instruction, not a word in natural language. A syntax highlighter reads "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " elements to know what to colour. A search engine reads them to understand that a term is a programming concept. A screen reader may switch to a different reading voice for "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " content."
+            }
+          ]
+        }
+      ],
+      "common_mistakes": null,
+      "bonus_tips": [
+        {
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Always start the content of a "
+            },
+            {
+              "value": "pre",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": " block on the same line as the opening "
+            },
+            {
+              "value": "pre",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": " tag: "
+            },
+            {
+              "value": "<pre>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": "<code>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": "first line of "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": ". Any newline between "
+            },
+            {
+              "value": "<pre>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "<code>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": ", or between "
+            },
+            {
+              "value": "<code>",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " and the first line of content, becomes a visible blank line at the top of the rendered "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " block. This is one of the most common causes of unexpected extra whitespace in documentation "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": " blocks."
+            }
+          ]
+        }
+      ],
+      "related_topics": [
+        "HTML Text Formatting Elements",
+        "HTML Paragraph Elements",
+        "CSS Typography"
+      ],
+      "is_active": true,
+      "order_index": 3,
+      "created_at": null,
+      "updated_at": null
+    }
+  ],
   "seo_metadata": {
-    "meta_title": "HTML Quotation & Citation Elements | blockquote, q, cite, abbr Guide",
-    "meta_description": "Learn HTML quotation and citation elements: blockquote for extended quotes, q for inline quotes, cite for work titles, abbr for abbreviations, and address for contact info.",
+    "meta_title": "HTML Text Formatting Elements | strong, em, mark, code, pre and More",
+    "meta_description": "Learn all HTML text formatting elements: strong vs b, em vs i, mark, small, del, ins, sub, sup, code, pre, kbd, samp, and var with semantic usage and examples.",
     "keywords": [
-      "HTML blockquote element",
-      "HTML q element",
-      "HTML cite element",
-      "HTML quotation elements",
-      "HTML abbr element",
-      "HTML address element",
-      "blockquote cite attribute",
-      "HTML inline quotation",
-      "HTML citation markup",
-      "HTML abbreviation title attribute"
+      "HTML text formatting elements",
+      "HTML strong vs b",
+      "HTML em vs i",
+      "HTML mark element",
+      "HTML code pre elements",
+      "HTML sub sup elements",
+      "HTML del ins elements",
+      "HTML kbd samp elements",
+      "HTML semantic inline elements",
+      "HTML small element"
     ],
-    "canonical_url": "/html/html-quotation-citation-elements",
+    "canonical_url": "/html/html-text-formatting-elements",
     "robots": "index, follow"
   }
 }

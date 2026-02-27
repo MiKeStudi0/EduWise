@@ -1,55 +1,62 @@
 {
   "topic": {
-    "id": 2,
+    "id": 3,
     "roadmap_id": 1,
     "technology_id": 1,
-    "module_id": 1,
-    "slug": "html-document-structure",
-    "title": "HTML Document Structure",
-    "description": "HTML document structure is the required skeleton every valid page must follow to render correctly.",
+    "module_id": 2,
+    "slug": "html-elements-tags-attributes",
+    "title": "HTML Elements, Tags & Attributes",
+    "description": "HTML elements, tags, and attributes are the core building blocks used to structure web content.",
     "content": [
       {
         "type": "heading",
         "level": 1,
-        "text": "The Anatomy of an HTML Document"
+        "text": "Elements, Tags, and Attributes Explained"
       },
       {
         "type": "paragraph",
         "text": [
           {
-            "value": "Every HTML page follows a fixed structure. It starts with a "
+            "value": "An "
           },
           {
-            "value": "DOCTYPE declaration",
+            "value": "element",
             "bold": true
           },
           {
-            "value": ", followed by the "
+            "value": " is the complete unit: opening tag, content, and closing tag. A "
           },
           {
-            "value": "html",
+            "value": "tag",
+            "bold": true
+          },
+          {
+            "value": " is just the angle-bracket notation like "
+          },
+          {
+            "value": "<p>",
             "highlight": true
           },
           {
-            "value": " root element containing two children: "
+            "value": " or "
           },
           {
-            "value": "head",
+            "value": "</p>",
             "highlight": true
           },
           {
-            "value": " and "
+            "value": ". An "
           },
           {
-            "value": "body",
-            "highlight": true
+            "value": "attribute",
+            "bold": true
           },
           {
-            "value": ". The head holds metadata the browser needs. The body holds everything users see and interact with. The full specification is maintained by the "
+            "value": " lives inside the opening tag and provides extra information about the element. The complete reference for all HTML elements is maintained at "
           },
           {
-            "value": "WHATWG HTML Standard",
-            "link": "https://html.spec.whatwg.org/multipage/syntax.html"
+            "value": "MDN HTML Element Reference",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
           },
           {
             "value": "."
@@ -57,66 +64,66 @@
         ]
       },
       {
-        "type": "heading",
-        "level": 2,
-        "text": "Document Structure at a Glance"
-      },
-      {
         "type": "table",
         "headers": [
-          "Part",
-          "Element",
-          "Purpose",
-          "Visible to User"
+          "Concept",
+          "What It Is",
+          "Example"
         ],
         "rows": [
           [
-            "Document type",
-            "<!DOCTYPE html>",
-            "Tells browser to use modern HTML5 standards mode",
-            "No"
+            "Tag",
+            "The angle-bracket label",
+            "<h1> or </h1>"
           ],
           [
-            "Root",
-            "<html lang='en'>",
-            "Wraps the entire document, declares language",
-            "No"
+            "Element",
+            "Opening tag + content + closing tag",
+            "<h1>Hello</h1>"
           ],
           [
-            "Metadata",
-            "<head>",
-            "Title, charset, viewport, CSS links, meta tags",
-            "No"
+            "Void element",
+            "Self-closing, no content or closing tag",
+            "<img src='logo.png' alt='Logo'>"
           ],
           [
-            "Content",
-            "<body>",
-            "All visible page content and interactive elements",
-            "Yes"
+            "Attribute",
+            "Name-value pair inside the opening tag",
+            "class=\"card\" or id=\"hero\""
+          ],
+          [
+            "Boolean attribute",
+            "Presence alone means true, no value needed",
+            "checked, disabled, required"
+          ],
+          [
+            "Data attribute",
+            "Custom attribute prefixed with data-",
+            "data-user-id=\"42\""
           ]
         ]
       },
       {
         "type": "callout",
         "variant": "info",
-        "title": "Why Structure Matters",
-        "text": "A missing or incorrect document structure causes browsers to enter quirks mode, producing unpredictable layout bugs that are hard to diagnose and inconsistent across browsers."
+        "title": "Elements vs Tags",
+        "text": "Developers often say tag when they mean element. Technically a tag is just the <p> or </p> bracket notation. The full element includes everything between and including the opening and closing tags."
       }
     ],
     "examples": [
       {
-        "title": "Complete HTML Document Boilerplate",
-        "description": "This example shows the production-ready HTML boilerplate used as the starting point for every new web page. Every line has a specific purpose. Understanding what each part does and why it is included prevents a whole category of subtle bugs that only appear in specific browsers or devices.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <!-- Character encoding: must be the very first meta tag in head -->\n  <meta charset=\"UTF-8\">\n\n  <!-- Viewport: controls layout on mobile devices -->\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n  <!-- Page title: shown in browser tab, search results, and bookmarks -->\n  <title>Page Title | Site Name</title>\n\n  <!-- SEO description: 150-160 chars shown in search snippets -->\n  <meta name=\"description\" content=\"A clear, concise description of this page for search engines.\">\n\n  <!-- Canonical URL: prevents duplicate content issues -->\n  <link rel=\"canonical\" href=\"https://example.com/page\">\n\n  <!-- Open Graph: controls how page looks when shared on social media -->\n  <meta property=\"og:title\" content=\"Page Title\">\n  <meta property=\"og:description\" content=\"Description for social sharing previews.\">\n  <meta property=\"og:type\" content=\"website\">\n  <meta property=\"og:image\" content=\"https://example.com/og-image.jpg\">\n\n  <!-- External CSS -->\n  <link rel=\"stylesheet\" href=\"styles.css\">\n\n  <!-- Favicon -->\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\">\n</head>\n<body>\n\n  <!-- Skip link: accessibility for keyboard users -->\n  <a href=\"#main-content\" style=\"position:absolute;top:-100%;\">Skip to main content</a>\n\n  <header>\n    <nav aria-label=\"Main navigation\">\n      <!-- navigation links -->\n    </nav>\n  </header>\n\n  <main id=\"main-content\">\n    <h1>Page Heading</h1>\n    <!-- primary page content -->\n  </main>\n\n  <footer>\n    <!-- footer content -->\n  </footer>\n\n  <!-- JS with defer: downloads in parallel, runs after HTML is parsed -->\n  <script src=\"app.js\" defer></script>\n\n</body>\n</html>",
-        "output": "Browser renders a blank page with 'Page Heading' as the h1. The tab shows 'Page Title | Site Name'. DevTools shows the full head metadata: charset, viewport, linked resources, and Open Graph tags in the Elements panel.",
+        "title": "Anatomy of an HTML Element: Tags, Attributes, and Void Elements",
+        "description": "This example breaks down the full anatomy of HTML elements in a realistic page context. It covers container elements, void elements, multiple attributes, and the distinction between required and optional attributes, all with annotated comments for each part.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Element Anatomy</title>\n</head>\n<body>\n\n  <!--\n    ELEMENT ANATOMY:\n    <tagname attribute=\"value\">content</tagname>\n    |______| |_______________|  |_____| |_______|\n    opening  attribute            inner  closing\n    tag                           text   tag\n  -->\n\n  <!-- Container element: has opening tag, content, and closing tag -->\n  <p class=\"intro\" id=\"first-para\">This is a paragraph element.</p>\n\n  <!-- Nested elements: elements can contain other elements -->\n  <p>This paragraph contains <strong>bold text</strong> and\n  <em>italic text</em> inside it.</p>\n\n  <!--\n    Void elements: no closing tag, no content between tags.\n    These are all the void elements in HTML5:\n    <area> <base> <br> <col> <embed> <hr> <img>\n    <input> <link> <meta> <param> <source> <track> <wbr>\n  -->\n  <img src=\"/photo.jpg\" alt=\"Team photo\" width=\"400\" height=\"300\">\n  <input type=\"text\" name=\"username\" placeholder=\"Enter username\">\n  <hr>\n  <br>\n\n  <!-- Multiple attributes: order does not matter -->\n  <button\n    type=\"button\"\n    id=\"submitBtn\"\n    class=\"btn btn-primary\"\n    disabled\n    aria-label=\"Submit form\">\n    Submit\n  </button>\n\n  <!--\n    Attribute value quoting rules:\n    - Double quotes: most common and recommended\n    - Single quotes: valid alternative\n    - No quotes: technically valid for simple values, avoid in practice\n\n    RECOMMENDED:  class=\"card\"\n    VALID:        class='card'\n    AVOID:        class=card\n  -->\n  <div class=\"card\" data-id=\"101\">Card content</div>\n\n  <!--\n    Case sensitivity:\n    HTML tag names and attribute names are case-insensitive.\n    By convention always write them in lowercase.\n    WRONG (but works): <DIV CLASS=\"card\">\n    RIGHT:             <div class=\"card\">\n  -->\n\n</body>\n</html>",
+        "output": "Page renders: a paragraph with class and id, a paragraph with bold and italic text, an image, a text input, a horizontal rule, a line break, a disabled Submit button, and a card div. The button appears greyed out because of the disabled attribute. All comments are invisible to the user.",
         "images": null,
         "video_url": null
       },
       {
-        "title": "Head vs Body: What Goes Where",
-        "description": "This example shows a side-by-side comparison of what belongs in head and what belongs in body. A common beginner mistake is placing visible content in head or putting meta tags in body. Both cause silent failures with no obvious browser error.",
-        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Head vs Body Demo</title>\n\n  <!-- CORRECT items in head: all invisible to the user -->\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <meta name=\"description\" content=\"Demonstrates what belongs in head vs body.\">\n  <link rel=\"stylesheet\" href=\"styles.css\">\n  <link rel=\"canonical\" href=\"https://example.com/page\">\n\n  <!-- WRONG: visible content placed in head is ignored by browsers -->\n  <!-- <p>This paragraph will NOT render</p> -->\n  <!-- <h1>This heading will NOT render</h1> -->\n</head>\n<body>\n\n  <!-- CORRECT items in body: all visible content -->\n  <h1>Main Heading</h1>\n  <p>Body paragraph text that users read.</p>\n  <img src=\"/photo.jpg\" alt=\"Descriptive alt text\">\n  <a href=\"/about\">About page link</a>\n\n  <!-- WRONG: meta tags placed in body are ignored -->\n  <!-- <meta name=\"description\" content=\"This does nothing in body\"> -->\n\n  <!--\n    Script placement:\n    Option A (recommended): in head with defer attribute, non-blocking\n    Option B (traditional): at the very end of body\n    Never place scripts in the middle of body content.\n  -->\n  <script src=\"app.js\" defer></script>\n\n</body>\n</html>",
-        "output": "Page renders only the body content: h1 heading, paragraph, image, and link. All head elements are invisible to the user but visible in DevTools. The commented-out wrong examples confirm that visible content in head and meta tags in body are both silently ignored by browsers.",
+        "title": "Global Attributes, Boolean Attributes, and Data Attributes in Action",
+        "description": "This example shows all three attribute categories used together in a realistic component. Global attributes apply to every element. Boolean attributes toggle behaviour by their presence. Custom data attributes pass structured data from HTML to JavaScript without using hidden inputs or global variables.",
+        "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Attribute Types Demo</title>\n  <style>\n    [data-theme=\"dark\"] { background:#0f172a; color:white; padding:1rem; border-radius:8px; }\n    [data-theme=\"light\"] { background:#f8fafc; color:#0f172a; padding:1rem; border-radius:8px; }\n    .hidden { display: none; }\n    .tooltip { position:relative; display:inline-block; }\n    .tooltip:hover::after {\n      content: attr(data-tooltip);\n      position: absolute;\n      bottom: 125%;\n      left: 50%;\n      transform: translateX(-50%);\n      background: #1e293b;\n      color: white;\n      padding: 0.3rem 0.6rem;\n      border-radius: 4px;\n      font-size: 0.8rem;\n      white-space: nowrap;\n    }\n    form { display:flex; flex-direction:column; gap:0.75rem; max-width:320px; margin-top:1rem; }\n    input, select { padding:0.5rem; border:1px solid #d1d5db; border-radius:6px; }\n  </style>\n</head>\n<body>\n\n  <!-- ===== GLOBAL ATTRIBUTES =====\n    id, class, lang, title, hidden, tabindex, contenteditable,\n    draggable, spellcheck are available on EVERY HTML element. -->\n\n  <!-- id: unique identifier, used for JS selection and fragment links -->\n  <!-- class: one or more space-separated class names for CSS and JS -->\n  <!-- lang: overrides document language for this element and its children -->\n  <p id=\"intro\" class=\"lead-text\" lang=\"en\">\n    Every HTML element accepts global attributes.\n  </p>\n\n  <!-- title: tooltip text shown on hover by the browser -->\n  <abbr title=\"HyperText Markup Language\">HTML</abbr>\n\n  <!-- hidden: removes element from layout and accessibility tree -->\n  <p hidden>This paragraph is not rendered or announced.</p>\n\n  <!-- tabindex: controls keyboard tab order.\n       tabindex=\"0\"  = included in natural tab order\n       tabindex=\"-1\" = focusable via JS only, excluded from tab order\n       tabindex=\"1+\" = avoid, breaks natural reading order -->\n  <div tabindex=\"0\"\n       role=\"button\"\n       aria-label=\"Custom focusable region\">\n    Focusable via keyboard Tab key\n  </div>\n\n  <!-- contenteditable: makes any element editable in the browser -->\n  <div contenteditable=\"true\"\n       style=\"border:1px solid #d1d5db;padding:0.5rem;border-radius:6px;\">\n    Click here to edit this text directly in the browser.\n  </div>\n\n\n  <!-- ===== BOOLEAN ATTRIBUTES =====\n    Presence = true. Absence = false.\n    The value does not matter; only the presence of the attribute matters. -->\n\n  <form>\n    <!-- required: form will not submit if this field is empty -->\n    <input type=\"email\" name=\"email\" placeholder=\"Email\" required>\n\n    <!-- disabled: input is visible but cannot be interacted with -->\n    <input type=\"text\" name=\"username\" value=\"johndoe\" disabled>\n\n    <!-- readonly: user can read but not change the value -->\n    <input type=\"text\" name=\"role\" value=\"Administrator\" readonly>\n\n    <!-- checked: checkbox or radio is pre-selected -->\n    <label>\n      <input type=\"checkbox\" name=\"terms\" checked>\n      I accept the terms\n    </label>\n\n    <!-- multiple: allows selecting multiple options -->\n    <select name=\"skills\" multiple>\n      <option>HTML</option>\n      <option selected>CSS</option>\n      <option selected>JavaScript</option>\n    </select>\n\n    <!-- WRONG: trying to set boolean to false by value does not work -->\n    <!-- <input type=\"text\" disabled=\"false\">  still disabled! -->\n    <!-- RIGHT: remove the attribute entirely to set it to false -->\n    <input type=\"text\" name=\"active\" placeholder=\"This field is enabled\">\n\n    <button type=\"submit\">Submit</button>\n  </form>\n\n\n  <!-- ===== CUSTOM DATA ATTRIBUTES =====\n    Syntax: data-* where * is any lowercase name you choose.\n    Used to embed custom data in HTML that JavaScript can read.\n    Does not affect rendering. Not visible to users. -->\n\n  <!-- Card with embedded data for JS to use without extra API calls -->\n  <div\n    id=\"product-card\"\n    class=\"card\"\n    data-product-id=\"SKU-4821\"\n    data-price=\"1499\"\n    data-category=\"electronics\"\n    data-in-stock=\"true\"\n    data-theme=\"light\"\n    style=\"margin-top:1rem;\">\n    <h3>Wireless Earbuds Pro</h3>\n    <p>Price: Rs 1,499</p>\n    <button type=\"button\" id=\"addToCart\">Add to Cart</button>\n  </div>\n\n  <!-- Tooltip using data attribute (pure CSS, no JS) -->\n  <span\n    class=\"tooltip\"\n    data-tooltip=\"Opens in a new browser tab\"\n    style=\"margin-top:1rem;display:inline-block;\">\n    External Link Info\n  </span>\n\n  <script>\n    // Reading data attributes with dataset API\n    const card = document.getElementById('product-card');\n\n    // dataset automatically converts kebab-case to camelCase:\n    // data-product-id  =>  dataset.productId\n    // data-in-stock    =>  dataset.inStock\n    console.log(card.dataset.productId);  // \"SKU-4821\"\n    console.log(card.dataset.price);      // \"1499\"\n    console.log(card.dataset.category);   // \"electronics\"\n    console.log(card.dataset.inStock);    // \"true\"\n\n    // Writing data attributes via JS\n    const addBtn = document.getElementById('addToCart');\n    addBtn.addEventListener('click', () => {\n      card.dataset.inStock = 'false';\n      card.dataset.theme = 'dark';\n      addBtn.textContent = 'Added!';\n      addBtn.disabled = true;\n    });\n  </script>\n\n</body>\n</html>",
+        "output": "Page renders: a lead paragraph, an HTML abbreviation with tooltip on hover, a hidden paragraph (not visible), a keyboard-focusable div, an editable div, a form with email, disabled username, readonly role, pre-checked checkbox, multi-select with two pre-selected options, and a submit button. Below the form, a light-themed product card with Add to Cart button. Clicking Add to Cart darkens the card background, disables the button, and changes its text to Added. The tooltip on the span appears on hover.",
         "images": null,
         "video_url": null
       }
@@ -126,75 +133,333 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "When creating any new HTML file intended to be opened in a browser"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When structuring any content with the appropriate "
+          },
+          {
+            "value": "semantic",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+          },
+          {
+            "value": " or generic element"
+          }
+        ]
       },
       {
-        "point": "When setting up the metadata foundation before adding page content"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When passing data from "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " to "
+          },
+          {
+            "value": "JavaScript",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "value": " without extra network calls"
+          }
+        ]
       },
       {
-        "point": "When targeting multiple devices and languages with one page"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When controlling form behaviour with "
+          },
+          {
+            "value": "boolean attributes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML"
+          },
+          {
+            "value": " like required and disabled"
+          }
+        ]
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid omitting charset meta on any page that contains non-ASCII text"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid data attributes for sensitive data since they are visible in the "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          }
+        ]
       },
       {
-        "point": "Avoid placing visible content elements outside the body element"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid div and span when a "
+          },
+          {
+            "value": "semantic",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+          },
+          {
+            "value": " element like article or nav fits better"
+          }
+        ]
       },
       {
-        "point": "Avoid skipping the title element as it harms both SEO and accessibility"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid tabindex values greater than 0 as they break natural keyboard navigation"
+          }
+        ]
       }
     ],
     "what_it_solves": [
       {
-        "1": "Without proper structure browsers enter quirks mode and render the page inconsistently."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without attributes, elements have no way to carry identity, state, or configuration data."
+          }
+        ]
       },
       {
-        "2": "Missing charset causes garbled or incorrect text for users on non-English pages."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without data attributes, developers resort to hidden inputs or global "
+          },
+          {
+            "value": "JS",
+            "bold": true,
+            "highlight": true
+          },
+          {
+            "value": " variables for "
+          },
+          {
+            "value": "DOM",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+          },
+          {
+            "value": " data."
+          }
+        ]
       },
       {
-        "3": "Missing viewport meta makes pages render as desktop-sized on mobile screens."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without "
+          },
+          {
+            "value": "boolean attributes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML"
+          },
+          {
+            "value": ", toggling form field states requires adding and removing value strings."
+          }
+        ]
       }
     ],
     "conceptual_understanding": [
       {
-        "model": "An HTML document is like a sealed envelope. The head is the outside of the envelope containing the address, stamp, and sender info that the postal system uses to route and handle it. The body is the letter inside, which is the actual message the recipient reads."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "An "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " element is like a labeled box. The tag name is the type of box: a p box, a button box, an img box. Attributes are sticky notes on the outside of the box that give extra instructions: this box has id=hero, class=featured, and data-priority=high. The content is what is inside the box."
+          }
+        ]
       },
       {
-        "model": "DOCTYPE is a handshake between the HTML file and the browser. It says: I am a modern HTML5 document, please render me using current standards. Without it the browser defaults to a compatibility mode full of old rendering quirks from the early web era."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Boolean attributes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML"
+          },
+          {
+            "value": " work like light switches. The switch being on the wall means the light is on. Taking the switch off the wall entirely means the light is off. Writing disabled=false is like taping a note that says off to a switch that is still physically on the wall. The switch ignores the note and the light stays on."
+          }
+        ]
       },
       {
-        "model": "The html lang attribute is like a language tag on a printed book. A human can guess the language by reading a few words, but a screen reader or translation engine needs the tag to know how to process the text correctly from the very first character."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Data attributes are like luggage tags at an airport. The suitcase is the "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " element. The tag attached to it carries machine-readable information: owner, destination, flight number. The airport systems read the tag to route the bag. "
+          },
+          {
+            "value": "JavaScript",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "value": " reads the data attribute to route the data, without the user ever seeing the tag."
+          }
+        ]
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Omitting charset or placing it late in head: The charset meta must be the very first element inside head. Placing it after a title or other meta tags means the browser may misinterpret characters in those earlier elements, causing garbled output for non-ASCII content."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using tabindex values above 0: Setting tabindex=1 or higher pulls that element to the very front of."
+          }
+        ]
       },
       {
-        "mistake": "Forgetting the viewport meta tag: Without the viewport meta, mobile browsers render the page at a default width of around 980px and then scale it down, making text and buttons tiny and unreadable on phones and tablets."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Trying to disable "
+          },
+          {
+            "value": "boolean attributes",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Boolean/HTML"
+          },
+          {
+            "value": " by setting them to false: Writing disabled=false or."
+          }
+        ]
       },
       {
-        "mistake": "Missing lang attribute on the html element: Screen readers use lang to determine pronunciation rules. Without it a reader configured for one language may mispronounce every word on the page, creating a broken experience for visually impaired users."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Storing sensitive data in data attributes: Data attributes are fully visible to any user who opens."
+          }
+        ]
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Save your boilerplate as a snippet in VS Code using File > Preferences > User Snippets. Type a short trigger like html5 and the full boilerplate expands instantly. This prevents forgotten meta tags and ensures every new page starts from a consistent, correct foundation."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Use the "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": " attribute selector with data attributes to apply styles based on state without adding extra classes. For example: [data-theme='dark'] applies dark styles, [data-status='error'] applies error styles. This keeps your styling tied to meaningful data rather than arbitrary class names, making the intent clear."
+          }
+        ]
       },
       {
-        "tip": "Use the W3C Markup Validation Service at validator.w3.org to check any page for structural errors. It catches missing doctypes, unclosed tags, misplaced elements, and invalid attribute values that browsers silently ignore but that affect accessibility and SEO."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "In "
+          },
+          {
+            "value": "JavaScript",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          },
+          {
+            "value": ", document."
+          },
+          {
+            "value": "querySelectorAll",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"
+          },
+          {
+            "value": "('[data-lazy]') selects all elements that have a data-lazy attribute regardless of its value. This pattern lets you declaratively "
+          },
+          {
+            "value": "mark",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark"
+          },
+          {
+            "value": " elements in "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": " and then initialize them with a single "
+          },
+          {
+            "value": "JS",
+            "bold": true,
+            "highlight": true
+          },
+          {
+            "value": " selector rather than assigning individual IDs or classes."
+          }
+        ]
       }
     ],
     "related_topics": [
-      "HTML Introduction and Web Basics",
+      "HTML Document Structure",
       "HTML Semantic Elements",
       "Accessibility and ARIA",
-      "SEO Fundamentals"
+      "CSS Attribute Selectors",
+      "JavaScript DOM Manipulation"
     ],
     "is_active": true,
-    "order_index": 2,
+    "order_index": 3,
     "created_at": null,
     "updated_at": null
   },
@@ -203,50 +468,91 @@
       "id": 1,
       "roadmap_id": 1,
       "technology_id": 1,
-      "module_id": 1,
-      "topic_id": 2,
-      "slug": "doctype-and-html-root",
-      "title": "DOCTYPE Declaration and HTML Root",
-      "description": "DOCTYPE tells browsers to use standards mode, and the html root element wraps the entire document.",
+      "module_id": 2,
+      "topic_id": 3,
+      "slug": "global-and-boolean-attributes",
+      "title": "Global and Boolean Attributes",
+      "description": "Global attributes apply to all HTML elements and boolean attributes toggle on by their presence.",
       "content": [
         {
           "type": "paragraph",
           "text": [
             {
-              "value": "The "
+              "value": "Global attributes are a set of attributes accepted by every HTML element without exception. Key ones include "
             },
             {
-              "value": "<!DOCTYPE html>",
-              "highlight": true,
-              "bold": true
-            },
-            {
-              "value": " declaration must be the very first line of every HTML file, before the html tag. It is not an HTML element, it is an instruction to the browser. Without it, browsers switch to "
-            },
-            {
-              "value": "quirks mode",
-              "bold": true
-            },
-            {
-              "value": ", which applies legacy rendering rules from the early 2000s that break modern CSS layouts. The "
-            },
-            {
-              "value": "html",
+              "value": "id",
               "highlight": true
             },
             {
-              "value": " element that follows takes a "
+              "value": ", "
+            },
+            {
+              "value": "class",
+              "highlight": true
+            },
+            {
+              "value": ", "
             },
             {
               "value": "lang",
               "highlight": true
             },
             {
-              "value": " attribute that declares the page language for screen readers and translation tools. Full explanation at "
+              "value": ", "
             },
             {
-              "value": "MDN: Quirks Mode",
-              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode"
+              "value": "title",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "hidden",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "tabindex",
+              "highlight": true
+            },
+            {
+              "value": ", and "
+            },
+            {
+              "value": "contenteditable",
+              "highlight": true
+            },
+            {
+              "value": ". Boolean attributes like "
+            },
+            {
+              "value": "disabled",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "required",
+              "highlight": true
+            },
+            {
+              "value": ", and "
+            },
+            {
+              "value": "checked",
+              "highlight": true
+            },
+            {
+              "value": " are toggled on by their presence and toggled off only by removing them entirely. Full list at "
+            },
+            {
+              "value": "MDN Global Attributes",
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
             },
             {
               "value": "."
@@ -254,18 +560,89 @@
           ]
         },
         {
-          "type": "callout",
-          "variant": "warning",
-          "title": "Quirks Mode Warning",
-          "text": "Quirks mode changes the CSS box model, table layout, and font handling. Pages that accidentally trigger quirks mode look broken in some browsers but not others, making the bug hard to reproduce."
+          "type": "table",
+          "headers": [
+            "Attribute",
+            "Type",
+            "Elements",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "id",
+              "Global",
+              "All",
+              "Unique identifier for JS selection and fragment links"
+            ],
+            [
+              "class",
+              "Global",
+              "All",
+              "One or more CSS class names for styling and JS hooks"
+            ],
+            [
+              "lang",
+              "Global",
+              "All",
+              "Declares language for this element and its children"
+            ],
+            [
+              "hidden",
+              "Global (Boolean)",
+              "All",
+              "Removes element from layout and accessibility tree"
+            ],
+            [
+              "tabindex",
+              "Global",
+              "All",
+              "Controls keyboard tab order (use only 0 or -1)"
+            ],
+            [
+              "contenteditable",
+              "Global",
+              "All",
+              "Makes element content editable in the browser"
+            ],
+            [
+              "disabled",
+              "Boolean",
+              "Form elements",
+              "Blocks interaction and excludes from form submission"
+            ],
+            [
+              "required",
+              "Boolean",
+              "Form inputs",
+              "Prevents form submission if field is empty"
+            ],
+            [
+              "checked",
+              "Boolean",
+              "checkbox, radio",
+              "Pre-selects the input on page load"
+            ],
+            [
+              "multiple",
+              "Boolean",
+              "select, file input",
+              "Allows selecting more than one option or file"
+            ],
+            [
+              "readonly",
+              "Boolean",
+              "text inputs",
+              "Shows value but prevents editing by the user"
+            ]
+          ]
         }
       ],
       "examples": [
         {
-          "title": "DOCTYPE Placement, HTML Root, and Lang Attribute",
-          "description": "This example shows correct DOCTYPE placement, the lang attribute on the html element, and why the modern short DOCTYPE replaced the verbose HTML4 and XHTML strings. It also shows how to verify which rendering mode the browser is using.",
-          "code_snippet": "<!-- CORRECT: DOCTYPE is the absolute first line, nothing before it -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Standards Mode</title>\n</head>\n<body>\n  <p>This page renders in full standards mode.</p>\n</body>\n</html>\n\n\n<!--\n  lang attribute values for common Indian and global languages:\n  lang=\"en\"    English\n  lang=\"hi\"    Hindi\n  lang=\"ta\"    Tamil\n  lang=\"te\"    Telugu\n  lang=\"bn\"    Bengali\n  lang=\"fr\"    French\n  lang=\"ar\"    Arabic (also triggers RTL text direction)\n-->\n<html lang=\"hi\">\n  <!-- Screen readers will pronounce content using Hindi rules -->\n</html>\n\n\n<!--\n  OLD HTML4 DOCTYPE (verbose, no longer needed):\n  <!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\n    \"http://www.w3.org/TR/html4/strict.dtd\">\n\n  OLD XHTML DOCTYPE (also obsolete):\n  <!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"\n    \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n\n  MODERN HTML5 (all you ever need):\n  <!DOCTYPE html>\n-->\n\n\n<!-- Verify rendering mode in browser console:\n     document.compatMode\n     \"CSS1Compat\"  = standards mode (correct)\n     \"BackCompat\"  = quirks mode (DOCTYPE missing or malformed)\n-->",
-          "output": "The correct example renders in full standards mode. Running document.compatMode in DevTools Console returns CSS1Compat confirming standards mode. The lang attribute examples show how a single attribute change switches pronunciation rules for the entire document.",
+          "title": "Global Attributes Reference and Boolean Attribute Toggling",
+          "description": "This example demonstrates the most commonly used global attributes on various elements and shows the only correct way to toggle boolean attributes on and off using JavaScript. It also shows the common mistake of setting a boolean attribute to false as a string value.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Global and Boolean Attributes</title>\n  <style>\n    .highlight-box {\n      border: 2px solid #2563eb;\n      padding: 0.75rem;\n      border-radius: 6px;\n      margin-bottom: 0.75rem;\n    }\n    [lang=\"hi\"] { font-style: italic; color: #7c3aed; }\n  </style>\n</head>\n<body>\n\n  <!-- id: unique per page, used by fragment links (#intro) and document.getElementById -->\n  <!-- class: multiple classes space-separated -->\n  <!-- title: tooltip on hover -->\n  <div id=\"intro\" class=\"highlight-box section-header\"\n       title=\"Introduction section\">\n    Introduction\n  </div>\n\n  <!-- lang on a child element: overrides document lang for this element only -->\n  <p>Welcome to the platform.\n    <span lang=\"hi\">यहाँ हिंदी सामग्री है।</span>\n  </p>\n\n  <!-- hidden: completely removes from layout and screen reader tree -->\n  <!-- To show later: remove the hidden attribute via JS -->\n  <div id=\"alert-box\" hidden>\n    This alert is currently hidden. It does not take up space.\n  </div>\n\n  <!-- tabindex -->\n  <!-- 0  = joins natural tab order at its document position -->\n  <!-- -1 = focusable only via JS focus(), excluded from Tab key -->\n  <div tabindex=\"0\" role=\"button\" aria-label=\"Custom card action\"\n       style=\"padding:0.5rem;background:#f1f5f9;border-radius:6px;cursor:pointer;\">\n    Tab to focus this custom element\n  </div>\n\n\n  <!-- BOOLEAN ATTRIBUTE TOGGLING -->\n  <h2>Boolean Attribute Demo</h2>\n\n  <button id=\"saveBtn\" disabled>Save Changes</button>\n  <button id=\"toggle\">Enable / Disable Save</button>\n\n  <hr>\n\n  <input id=\"emailField\" type=\"email\" required\n         placeholder=\"Required email field\">\n\n  <script>\n    const saveBtn = document.getElementById('saveBtn');\n    const toggle  = document.getElementById('toggle');\n\n    toggle.addEventListener('click', () => {\n      // CORRECT way to toggle a boolean attribute:\n      if (saveBtn.disabled) {\n        saveBtn.removeAttribute('disabled');  // removes attribute = false\n      } else {\n        saveBtn.setAttribute('disabled', ''); // adds attribute = true\n      }\n    });\n\n    // WRONG: does NOT disable the button\n    // saveBtn.setAttribute('disabled', 'false'); // still disabled!\n    // saveBtn.disabled = 'false';               // still disabled! (truthy string)\n\n    // CORRECT via property (boolean, not string):\n    // saveBtn.disabled = false; // removes disabled state\n    // saveBtn.disabled = true;  // adds disabled state\n\n    // Show hidden alert after 2 seconds\n    setTimeout(() => {\n      document.getElementById('alert-box').removeAttribute('hidden');\n    }, 2000);\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders a bordered introduction div with hover tooltip, a paragraph with a purple italic Hindi span, a tabindex div that receives focus on Tab, a greyed-out disabled Save button, and an Enable toggle button. After 2 seconds the hidden alert div appears. Clicking the toggle button alternately enables and disables the Save button. The email field shows the required indicator in supported browsers.",
           "images": null,
           "video_url": null
         }
@@ -278,22 +655,100 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "DOCTYPE is like selecting the correct operating mode before booting a device. Without it the browser picks any mode it wants, usually the oldest compatible one. <!DOCTYPE html> selects the modern HTML5 mode, ensuring all CSS and layout rules behave as expected."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Global attributes are like passport fields that every traveller carries regardless of nationality: name, date of birth, nationality. These fields exist on every passport because every person needs them. "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " global attributes are the same: id, class, "
+            },
+            {
+              "value": "lang",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang"
+            },
+            {
+              "value": ", and hidden are the universal fields every element carries regardless of its tag type."
+            }
+          ]
         },
         {
-          "model": "The lang attribute on html is the document-level language declaration. Every element on the page inherits this language unless overridden with its own lang attribute. This inheritance makes it efficient to declare once at the root rather than on every paragraph."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "A boolean attribute is a door latch, not a door lock. The latch being installed means the door is latched. Removing the latch means it is not latched. You cannot write 'unlatched' on the latch to make it inactive. The only way to unlatch is to remove it. disabled='false' is writing 'unlatched' on a latch that is still physically installed."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "To check which rendering mode your page is using, open DevTools, go to the Console tab, and type document.compatMode. CSS1Compat means standards mode is active. BackCompat means quirks mode is active, which almost always means DOCTYPE is missing or there is whitespace before it."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Use the hidden attribute instead of "
+            },
+            {
+              "value": "CSS",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "value": " display:none when you want an element invisible and also excluded from the "
+            },
+            {
+              "value": "accessibility",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+            },
+            {
+              "value": " tree. Elements with display:none are invisible but still exist in the "
+            },
+            {
+              "value": "DOM",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+            },
+            {
+              "value": ". Elements with hidden are excluded from both layout and the "
+            },
+            {
+              "value": "accessibility",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+            },
+            {
+              "value": " tree, meaning "
+            },
+            {
+              "value": "screen readers",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+            },
+            {
+              "value": " will not announce them at all."
+            }
+          ]
         }
       ],
       "related_topics": [
-        "HTML Document Structure",
-        "HTML Head and Body Structure",
-        "HTML Boilerplate Template"
+        "HTML Elements Tags and Attributes",
+        "Custom Data Attributes",
+        "Accessibility and ARIA"
       ],
       "is_active": true,
       "order_index": 1,
@@ -304,93 +759,83 @@
       "id": 2,
       "roadmap_id": 1,
       "technology_id": 1,
-      "module_id": 1,
-      "topic_id": 2,
-      "slug": "html-meta-tags-and-title",
-      "title": "Meta Tags and Title Element",
-      "description": "Meta tags and the title element define page identity for browsers, search engines, and social tools.",
+      "module_id": 2,
+      "topic_id": 3,
+      "slug": "custom-data-attributes",
+      "title": "Custom Data Attributes",
+      "description": "Custom data attributes store private metadata on HTML elements, readable by JavaScript via dataset.",
       "content": [
         {
           "type": "paragraph",
           "text": [
             {
-              "value": "The "
+              "value": "Custom data attributes follow the syntax "
             },
             {
-              "value": "title",
+              "value": "data-*",
+              "highlight": true,
+              "bold": true
+            },
+            {
+              "value": " where * is any lowercase name you choose. They store structured data directly on elements so JavaScript can read it without separate API calls or global variables. The browser's "
+            },
+            {
+              "value": "dataset",
               "highlight": true
             },
             {
-              "value": " element sets the tab label, search result headline, and bookmark name simultaneously. Meta tags control character encoding, mobile layout, SEO snippets, and social sharing previews. The "
+              "value": " API automatically converts "
             },
             {
-              "value": "Open Graph protocol",
-              "link": "https://ogp.me/"
+              "value": "kebab-case",
+              "bold": true
             },
             {
-              "value": " defines the og: meta properties used by Facebook, LinkedIn, and WhatsApp. "
+              "value": " attribute names to "
             },
             {
-              "value": "Twitter Cards",
-              "link": "https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards"
+              "value": "camelCase",
+              "bold": true
             },
             {
-              "value": " use separate twitter: properties for X (formerly Twitter) previews."
+              "value": " property names: "
+            },
+            {
+              "value": "data-user-id",
+              "highlight": true
+            },
+            {
+              "value": " becomes "
+            },
+            {
+              "value": "dataset.userId",
+              "highlight": true
+            },
+            {
+              "value": ". Full reference at "
+            },
+            {
+              "value": "MDN: Using data attributes",
+              "link": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes"
+            },
+            {
+              "value": "."
             }
           ]
         },
         {
-          "type": "table",
-          "headers": [
-            "Meta Tag",
-            "Attribute",
-            "Purpose"
-          ],
-          "rows": [
-            [
-              "charset",
-              "charset=\"UTF-8\"",
-              "Sets character encoding, always first in head"
-            ],
-            [
-              "viewport",
-              "name=\"viewport\"",
-              "Controls layout on mobile screens"
-            ],
-            [
-              "description",
-              "name=\"description\"",
-              "SEO snippet shown in search results (150-160 chars)"
-            ],
-            [
-              "robots",
-              "name=\"robots\"",
-              "Tells crawlers to index or noindex the page"
-            ],
-            [
-              "og:title",
-              "property=\"og:title\"",
-              "Title shown when page is shared on social media"
-            ],
-            [
-              "og:image",
-              "property=\"og:image\"",
-              "Image shown in social media link preview (1200x630px)"
-            ],
-            [
-              "twitter:card",
-              "name=\"twitter:card\"",
-              "Sets Twitter card display type (summary_large_image)"
-            ]
-          ]
+          "type": "callout",
+          "variant": "warning",
+          "title": "Security Warning",
+          "text": "Data attributes are fully visible in browser DevTools to any user. Never store passwords, API tokens, session IDs, or any sensitive user data in data- attributes. Use server-side sessions or secure HTTP-only cookies for private data."
         }
       ],
       "examples": [
         {
-          "title": "Complete Meta Tags and Title Setup for SEO and Social Sharing",
-          "description": "This example shows a production-ready set of meta tags covering charset, viewport, title, SEO description, canonical URL, Open Graph, and Twitter Cards. This is the exact meta configuration used on most professional websites and content platforms.",
-          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n\n  <!-- Character encoding: always the very first tag -->\n  <meta charset=\"UTF-8\">\n\n  <!-- Viewport for responsive design -->\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n\n  <!-- TITLE: 50-60 chars recommended.\n       Format: Page Name | Site Name\n       Unique per page, matches the h1 heading closely. -->\n  <title>How to Build a REST API in Node.js | DevDocs</title>\n\n\n  <!-- SEO META -->\n\n  <!-- Description: 150-160 chars, shown as search result snippet -->\n  <meta name=\"description\"\n        content=\"Learn how to build a production-ready REST API using Node.js and Express. Covers routing, middleware, authentication, and deployment.\">\n\n  <!-- Robots: allow indexing and follow links (default behaviour) -->\n  <meta name=\"robots\" content=\"index, follow\">\n\n  <!-- Canonical URL: prevents duplicate content penalty -->\n  <link rel=\"canonical\" href=\"https://devdocs.in/nodejs/rest-api\">\n\n\n  <!-- OPEN GRAPH (Facebook, LinkedIn, WhatsApp previews) -->\n  <meta property=\"og:type\"        content=\"article\">\n  <meta property=\"og:title\"       content=\"How to Build a REST API in Node.js\">\n  <meta property=\"og:description\" content=\"Step-by-step guide to a production-ready REST API with Node.js and Express.\">\n  <meta property=\"og:url\"         content=\"https://devdocs.in/nodejs/rest-api\">\n  <meta property=\"og:image\"       content=\"https://devdocs.in/images/rest-api-og.jpg\">\n  <meta property=\"og:image:width\"  content=\"1200\">\n  <meta property=\"og:image:height\" content=\"630\">\n  <meta property=\"og:site_name\"   content=\"DevDocs India\">\n  <meta property=\"og:locale\"      content=\"en_IN\">\n\n\n  <!-- TWITTER CARDS -->\n  <meta name=\"twitter:card\"        content=\"summary_large_image\">\n  <meta name=\"twitter:title\"       content=\"How to Build a REST API in Node.js\">\n  <meta name=\"twitter:description\" content=\"Step-by-step guide to a production-ready REST API with Node.js and Express.\">\n  <meta name=\"twitter:image\"       content=\"https://devdocs.in/images/rest-api-twitter.jpg\">\n  <meta name=\"twitter:site\"        content=\"@devdocsin\">\n\n</head>\n<body>\n  <h1>How to Build a REST API in Node.js</h1>\n</body>\n</html>",
-          "output": "Page renders only the h1 visually. Browser tab shows 'How to Build a REST API in Node.js | DevDocs'. In Google search results the title and description meta appear as the clickable headline and grey snippet text. When the URL is pasted into WhatsApp or LinkedIn, the og:image appears as a large card preview with the og:title and og:description as caption.",
+          "title": "Data Attributes for Component State, Filtering, and CSS Hooks",
+          "description": "This example shows three production patterns for data attributes: storing component state that JavaScript updates, driving a filter and sort UI without class toggling, and using CSS attribute selectors to apply styles based on data values. All three patterns keep HTML as the single source of truth for UI state.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Data Attributes Patterns</title>\n  <style>\n    /* CSS reads data attributes directly - no extra JS class toggling needed */\n    [data-status=\"active\"]   { border-left: 4px solid #16a34a; background: #f0fdf4; }\n    [data-status=\"pending\"]  { border-left: 4px solid #d97706; background: #fffbeb; }\n    [data-status=\"inactive\"] { border-left: 4px solid #dc2626; background: #fef2f2;\n                               opacity: 0.6; }\n\n    .task { padding: 0.75rem 1rem; border-radius: 6px;\n            margin-bottom: 0.5rem; font-size: 0.9rem; }\n    .task[data-priority=\"high\"]::after {\n      content: ' (' attr(data-priority) ' priority)';\n      color: #dc2626;\n      font-weight: 600;\n    }\n\n    /* Filter buttons: highlight active filter visually -->\n    [data-filter].active { background: #2563eb; color: white; }\n    button { padding: 0.4rem 0.8rem; border-radius:4px;\n             border:1px solid #d1d5db; cursor:pointer; margin-right:0.4rem; }\n  </style>\n</head>\n<body>\n\n  <!-- PATTERN 1: Status-driven styling via data-status -->\n  <h2>Task List</h2>\n  <ul id=\"task-list\" style=\"list-style:none;padding:0;\">\n    <li class=\"task\" data-id=\"1\" data-status=\"active\"   data-priority=\"high\">\n      Review pull request #214\n    </li>\n    <li class=\"task\" data-id=\"2\" data-status=\"pending\"  data-priority=\"normal\">\n      Write unit tests for auth module\n    </li>\n    <li class=\"task\" data-id=\"3\" data-status=\"inactive\" data-priority=\"low\">\n      Update changelog for v2.1.0\n    </li>\n    <li class=\"task\" data-id=\"4\" data-status=\"active\"   data-priority=\"high\">\n      Fix production bug in payment flow\n    </li>\n  </ul>\n\n\n  <!-- PATTERN 2: Filter UI driven by data attributes -->\n  <h2>Filter by Status</h2>\n  <div>\n    <button data-filter=\"all\"      class=\"active\">All</button>\n    <button data-filter=\"active\">Active</button>\n    <button data-filter=\"pending\">Pending</button>\n    <button data-filter=\"inactive\">Inactive</button>\n  </div>\n\n\n  <!-- PATTERN 3: Component with embedded data for JS -->\n  <h2>Product Card</h2>\n  <div id=\"product\"\n       data-product-id=\"PRD-881\"\n       data-price=\"2499\"\n       data-stock=\"12\"\n       data-category=\"peripherals\"\n       style=\"border:1px solid #e5e7eb;padding:1rem;\n              border-radius:8px;max-width:300px;margin-top:0.5rem;\">\n    <h3 style=\"margin:0 0 0.5rem;\">Mechanical Keyboard TKL</h3>\n    <p style=\"margin:0 0 0.75rem;color:#6b7280;\">Rs 2,499 | 12 in stock</p>\n    <button id=\"cartBtn\" type=\"button\">Add to Cart</button>\n    <p id=\"cartMsg\" style=\"margin:0.5rem 0 0;color:#16a34a;display:none;\"></p>\n  </div>\n\n\n  <script>\n    // PATTERN 2: Filter tasks by reading data-filter and data-status\n    const buttons = document.querySelectorAll('[data-filter]');\n    const tasks   = document.querySelectorAll('.task');\n\n    buttons.forEach(btn => {\n      btn.addEventListener('click', () => {\n        const filter = btn.dataset.filter; // reads data-filter attribute\n\n        // Update active button\n        buttons.forEach(b => b.classList.remove('active'));\n        btn.classList.add('active');\n\n        // Show/hide tasks based on their data-status\n        tasks.forEach(task => {\n          const match = filter === 'all' || task.dataset.status === filter;\n          task.style.display = match ? 'block' : 'none';\n        });\n      });\n    });\n\n\n    // PATTERN 3: Read product data on cart button click\n    const cartBtn = document.getElementById('cartBtn');\n    const cartMsg = document.getElementById('cartMsg');\n    const product = document.getElementById('product');\n\n    cartBtn.addEventListener('click', () => {\n      // dataset API: kebab-case names become camelCase properties\n      const { productId, price, stock, category } = product.dataset;\n\n      console.log('Adding to cart:', productId, price, category);\n\n      // Update DOM and data attribute\n      const remaining = parseInt(stock) - 1;\n      product.dataset.stock = remaining; // write back to data attribute\n\n      cartMsg.style.display = 'block';\n      cartMsg.textContent   = `Added! ${remaining} remaining in stock.`;\n\n      if (remaining === 0) {\n        cartBtn.disabled = true;\n        cartBtn.textContent = 'Out of Stock';\n      }\n    });\n  </script>\n\n</body>\n</html>",
+          "output": "Page renders a colour-coded task list: green left border for active tasks, amber for pending, red-tinted for inactive. High-priority tasks show a red priority label via CSS content. Filter buttons show All, Active, Pending, and Inactive. Clicking a filter hides non-matching tasks. The product card shows name, price, and stock count. Clicking Add to Cart shows a green confirmation with decremented stock count. At zero stock the button becomes disabled and changes to Out of Stock.",
           "images": null,
           "video_url": null
         }
@@ -403,22 +848,145 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "Meta tags are like the cover and spine of a book. Readers experience the content inside. But librarians, search engines, and social platforms categorize and display the book using the cover title, spine description, and barcode without reading every page. Meta tags are those external identifiers."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Data attributes are like luggage tags at an airport check-in. The suitcase is the "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " element. The tag attached to it carries machine-readable information: owner ID, destination, flight number. The baggage system reads the tag to route the bag without opening it. "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": " reads the data attribute to route logic, without the user ever seeing the tag."
+            }
+          ]
         },
         {
-          "model": "The title element is the only HTML content that lives in three places at once: the browser tab, the search result headline, and the bookmark label. This triple purpose makes it the most SEO-critical single element on any page, and also the one most worth keeping concise and descriptive."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The "
+            },
+            {
+              "value": "dataset",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "value": " "
+            },
+            {
+              "value": "API",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/API"
+            },
+            {
+              "value": " is a bilingual translator sitting between "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " and "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": ". "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " speaks kebab-case: data-product-id. "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": " speaks camelCase: productId. The "
+            },
+            {
+              "value": "dataset",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "value": " object is the translator that converts between them automatically. You write in whichever language fits the context and "
+            },
+            {
+              "value": "dataset",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset"
+            },
+            {
+              "value": " handles the conversion."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Use the Meta Tags checker at metatags.io to preview exactly how your page will appear in Google search results, Twitter, Facebook, LinkedIn, and Slack before publishing. Paste any live URL or raw meta tag code and see the rendered previews of all platforms instantly."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Use the "
+            },
+            {
+              "value": "CSS",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "value": " attr() function inside a content property to display a data attribute value as visible text without any "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": ". For example: [data-count]::after { content: ' (' attr(data-count) ')'; } renders the count inline after the element. This is useful for badges, labels, and tooltips driven purely by data attributes."
+            }
+          ]
         }
       ],
       "related_topics": [
-        "HTML Document Structure",
-        "HTML Viewport Meta Configuration",
-        "SEO Fundamentals"
+        "HTML Elements Tags and Attributes",
+        "Global and Boolean Attributes",
+        "JavaScript DOM Manipulation"
       ],
       "is_active": true,
       "order_index": 2,
@@ -429,92 +997,89 @@
       "id": 3,
       "roadmap_id": 1,
       "technology_id": 1,
-      "module_id": 1,
-      "topic_id": 2,
-      "slug": "viewport-and-boilerplate",
-      "title": "Viewport Configuration and Boilerplate Template",
-      "description": "Viewport meta enables responsive layouts, and the boilerplate bundles all required head elements.",
+      "module_id": 2,
+      "topic_id": 3,
+      "slug": "div-and-span-elements",
+      "title": "HTML Div and Span Elements",
+      "description": "Div and span are generic containers used only when no semantic HTML element fits the content needed.",
       "content": [
         {
           "type": "paragraph",
           "text": [
             {
-              "value": "Without the viewport meta tag, mobile browsers render pages at a default width of around "
+              "value": "The "
             },
             {
-              "value": "980px",
-              "bold": true
-            },
-            {
-              "value": " and scale the entire page down, making text tiny and unreadable. Setting "
-            },
-            {
-              "value": "width=device-width",
+              "value": "div",
               "highlight": true
             },
             {
-              "value": " tells the browser to match the actual screen width, which is the fundamental requirement for "
+              "value": " element is a "
             },
             {
-              "value": "CSS media queries",
+              "value": "block-level",
               "bold": true
             },
             {
-              "value": " to work correctly. A boilerplate bundles all required and recommended head elements into one reusable starting template. Reference: "
+              "value": " generic container. It starts on a new line and takes the full available width. The "
             },
             {
-              "value": "MDN Viewport Meta Tag",
-              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag"
+              "value": "span",
+              "highlight": true
             },
             {
-              "value": " and "
+              "value": " element is an "
             },
             {
-              "value": "HTML5 Boilerplate",
-              "link": "https://html5boilerplate.com/"
+              "value": "inline",
+              "bold": true
             },
             {
-              "value": "."
+              "value": " generic container. It flows within text without breaking the line. Neither element has semantic meaning. They exist purely for styling hooks and JavaScript targets when no suitable semantic element exists. Always prefer a semantic element like "
+            },
+            {
+              "value": "article",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "section",
+              "highlight": true
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "nav",
+              "highlight": true
+            },
+            {
+              "value": ", or "
+            },
+            {
+              "value": "aside",
+              "highlight": true
+            },
+            {
+              "value": " over div whenever the content has meaning."
             }
           ]
         },
         {
-          "type": "table",
-          "headers": [
-            "Viewport Property",
-            "Recommended Value",
-            "Effect"
-          ],
-          "rows": [
-            [
-              "width",
-              "device-width",
-              "Sets viewport width to actual device screen width"
-            ],
-            [
-              "initial-scale",
-              "1.0",
-              "Sets starting zoom level to 100%"
-            ],
-            [
-              "maximum-scale",
-              "5.0",
-              "Allows user to zoom up to 5x (accessibility safe)"
-            ],
-            [
-              "user-scalable",
-              "yes (default)",
-              "Allows pinch-to-zoom, never set to no"
-            ]
-          ]
+          "type": "callout",
+          "variant": "info",
+          "title": "When to Use div and span",
+          "text": "Use div when you need a block container purely for layout or styling and no semantic element fits. Use span when you need to target a portion of inline text with CSS or JavaScript and no semantic inline element like strong, em, or code fits."
         }
       ],
       "examples": [
         {
-          "title": "Viewport Configuration and Full Annotated Boilerplate",
-          "description": "This example first demonstrates viewport behavior differences on mobile screens, then shows a fully annotated production boilerplate with every element labeled as required or recommended. This is the copy-paste starting point for any new HTML page.",
-          "code_snippet": "<!-- VIEWPORT DEMO -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n\n  <!-- STANDARD: use this on every single page -->\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n  <!--\n    WRONG: disabling user zoom is an accessibility violation.\n    Low-vision users rely on pinch-to-zoom to read content.\n    Most modern browsers ignore user-scalable=no by design.\n  -->\n  <!-- <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\"> -->\n\n  <title>Viewport Demo</title>\n  <style>\n    /* Media queries only work correctly AFTER viewport meta is set */\n    .card { background:#f1f5f9; padding:1rem; border-radius:8px; margin-bottom:1rem; }\n\n    /* Mobile-first base: single column */\n    .grid { display: grid; gap: 1rem; }\n\n    /* Tablet: 2 columns at 640px and above */\n    @media (min-width: 640px) {\n      .grid { grid-template-columns: 1fr 1fr; }\n    }\n\n    /* Desktop: 3 columns at 1024px and above */\n    @media (min-width: 1024px) {\n      .grid { grid-template-columns: 1fr 1fr 1fr; }\n    }\n  </style>\n</head>\n<body>\n  <div class=\"grid\">\n    <div class=\"card\">Card One</div>\n    <div class=\"card\">Card Two</div>\n    <div class=\"card\">Card Three</div>\n  </div>\n</body>\n</html>\n\n\n<!-- FULL PRODUCTION BOILERPLATE -->\n<!DOCTYPE html>                                      <!-- REQUIRED -->\n<html lang=\"en\">                                     <!-- REQUIRED -->\n<head>\n  <meta charset=\"UTF-8\">                             <!-- REQUIRED: first -->\n  <meta name=\"viewport\"\n        content=\"width=device-width, initial-scale=1.0\"> <!-- REQUIRED -->\n\n  <title>Page Title | Site Name</title>              <!-- REQUIRED -->\n  <meta name=\"description\" content=\"150-160 char description.\"> <!-- RECOMMENDED -->\n\n  <link rel=\"canonical\" href=\"https://example.com/page\">  <!-- RECOMMENDED -->\n\n  <meta property=\"og:title\" content=\"Page Title\">    <!-- RECOMMENDED -->\n  <meta property=\"og:image\" content=\"https://example.com/og.jpg\"> <!-- RECOMMENDED -->\n  <meta property=\"og:type\"  content=\"website\">        <!-- RECOMMENDED -->\n\n  <link rel=\"icon\" type=\"image/svg+xml\" href=\"/favicon.svg\"> <!-- RECOMMENDED -->\n  <link rel=\"stylesheet\" href=\"/styles.css\">         <!-- YOUR STYLESHEET -->\n</head>\n<body>\n\n  <a href=\"#main\" style=\"position:absolute;top:-100%;\">  <!-- a11y skip link -->\n    Skip to main content\n  </a>\n\n  <header>\n    <nav aria-label=\"Main navigation\"></nav>\n  </header>\n\n  <main id=\"main\">\n    <h1>Page Heading</h1>\n  </main>\n\n  <footer></footer>\n\n  <script src=\"/app.js\" defer></script>             <!-- YOUR SCRIPT -->\n</body>\n</html>",
-          "output": "Viewport demo: on mobile the three cards stack in a single column at full readable width. At 640px they switch to 2 columns. At 1024px they display in 3 columns. Without the viewport meta all three breakpoints fail on mobile and render as a zoomed-out desktop view. The boilerplate renders a skip link (invisible until Tab is pressed), a header, an h1, and a footer.",
+          "title": "Div vs Span vs Semantic Elements: Choosing Correctly",
+          "description": "This example shows div and span used correctly alongside their semantic alternatives. It builds a card grid using divs for layout, inline text highlights using span, and then contrasts both with semantic replacements to reinforce when to reach for div or span and when to use something more meaningful.",
+          "code_snippet": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Div and Span Guide</title>\n  <style>\n    /* div used correctly: layout wrapper with no semantic meaning */\n    .card-grid {\n      display: grid;\n      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\n      gap: 1rem;\n      max-width: 700px;\n    }\n    .card {\n      border: 1px solid #e5e7eb;\n      border-radius: 8px;\n      padding: 1rem;\n    }\n\n    /* span used correctly: inline highlight with no semantic meaning */\n    .price  { color: #16a34a; font-weight: 700; }\n    .badge  { background: #dbeafe; color: #1d4ed8;\n              padding: 0.15rem 0.5rem; border-radius: 999px;\n              font-size: 0.75rem; }\n    .strike { text-decoration: line-through; color: #9ca3af; }\n  </style>\n</head>\n<body>\n\n  <!--\n    CORRECT USE OF div:\n    A card grid layout has no meaningful semantic equivalent.\n    div is appropriate here because the container is purely structural.\n  -->\n  <div class=\"card-grid\">\n    <div class=\"card\">\n      <h3>NovaPen X2</h3>\n      <!-- span: highlights a portion of inline text with a price style -->\n      <p>Price: <span class=\"price\">Rs 1,499</span></p>\n      <p>\n        <!-- span: inline badge needs no semantic weight -->\n        <span class=\"badge\">In Stock</span>\n      </p>\n    </div>\n    <div class=\"card\">\n      <h3>USB-C Hub Pro</h3>\n      <p>\n        <!-- span: strike-through on old price, highlight on new -->\n        <span class=\"strike\">Rs 3,299</span>\n        <span class=\"price\"> Rs 2,499</span>\n      </p>\n      <p><span class=\"badge\">Sale</span></p>\n    </div>\n    <div class=\"card\">\n      <h3>Mechanical Keyboard TKL</h3>\n      <p>Price: <span class=\"price\">Rs 4,999</span></p>\n      <p><span class=\"badge\">Limited Stock</span></p>\n    </div>\n  </div>\n\n\n  <!--\n    WRONG: using div for content that has a semantic element\n  -->\n  <div class=\"article\">         <!-- WRONG: use <article> -->\n    <div class=\"heading\">       <!-- WRONG: use <h2> -->\n      Blog Post Title\n    </div>\n    <div class=\"nav\">           <!-- WRONG: use <nav> -->\n      <div class=\"nav-item\">    <!-- WRONG: use <a> -->\n        Home\n      </div>\n    </div>\n  </div>\n\n  <!-- RIGHT: semantic elements for the same content -->\n  <article>\n    <h2>Blog Post Title</h2>\n    <nav aria-label=\"Post navigation\">\n      <a href=\"/\">Home</a>\n    </nav>\n  </article>\n\n\n  <!--\n    WRONG: using span where a semantic inline element is better\n  -->\n  <p>\n    This is <span style=\"font-weight:bold;\">important</span> text.  <!-- WRONG -->\n    This is <strong>important</strong> text.                         <!-- RIGHT -->\n\n    Press <span style=\"font-family:monospace;\">Ctrl+S</span> to save. <!-- WRONG -->\n    Press <kbd>Ctrl+S</kbd> to save.                                  <!-- RIGHT -->\n\n    The value is <span class=\"italic\">approximately</span> correct.   <!-- WRONG -->\n    The value is <em>approximately</em> correct.                      <!-- RIGHT -->\n  </p>\n\n</body>\n</html>",
+          "output": "Page renders a three-column card grid with product names, green price text, and blue badge pills for stock status. The NovaPen and USB-C Hub cards show their prices with the hub showing a strike-through old price beside a green new price. The semantic comparison section renders a blog article with heading and navigation link. The inline element comparisons all look visually similar but the semantic versions carry meaning for screen readers and search engines.",
           "images": null,
           "video_url": null
         }
@@ -527,23 +1092,109 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "The viewport meta tag is like telling a printing press the paper size before it prints. Without it the press assumes a standard large sheet and scales your design down to fit a phone-sized piece, making everything illegible. With it the press knows the exact paper size and prints at the correct scale."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Div and span are the blank sticky notes of "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": ". When you have a specific idea, you write it on a labelled card: article, nav, "
+            },
+            {
+              "value": "strong",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong"
+            },
+            {
+              "value": ", "
+            },
+            {
+              "value": "em",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em"
+            },
+            {
+              "value": ". When you just need something to stick there and the label does not matter, you use a blank sticky note. The blank notes are useful but they should not replace the labelled ones when a label exists."
+            }
+          ]
         },
         {
-          "model": "A boilerplate is like a legal contract template. A lawyer does not write a rental agreement from scratch every time. They start from a proven template with all required clauses already included, then fill in the specific details. The HTML boilerplate gives developers the same foundation so no critical element is ever forgotten."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "The difference between div and span is the same as the difference between a paragraph break and a word in a sentence. Div is a paragraph break: it starts a new block, takes the full width, and pushes content before and after it onto separate lines. Span is a word: it flows inline within surrounding text without disrupting the line."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Test viewport behavior by opening Chrome DevTools and pressing Ctrl+Shift+M to toggle device simulation. Switch between device presets and confirm that text is readable and touch targets are at least 44x44px. This catches viewport issues without needing a physical device for every test."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "When you find yourself writing class names like div.header, div.footer, div.nav, or div.article, that is a signal to replace each div with its "
+            },
+            {
+              "value": "semantic",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            },
+            {
+              "value": " "
+            },
+            {
+              "value": "HTML",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+            },
+            {
+              "value": " equivalent: header, footer, nav, and article. "
+            },
+            {
+              "value": "Semantic",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Glossary/Semantics"
+            },
+            {
+              "value": " elements are free built-in labels that give your structure meaning without any extra "
+            },
+            {
+              "value": "CSS",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+            },
+            {
+              "value": " or "
+            },
+            {
+              "value": "JavaScript",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            },
+            {
+              "value": "."
+            }
+          ]
         }
       ],
       "related_topics": [
-        "HTML Document Structure",
-        "HTML Meta Tags and Title",
-        "CSS Responsive Design",
-        "CSS Media Queries"
+        "HTML Semantic Elements",
+        "HTML Elements Tags and Attributes",
+        "CSS Display and Layout"
       ],
       "is_active": true,
       "order_index": 3,
@@ -552,21 +1203,21 @@
     }
   ],
   "seo_metadata": {
-    "meta_title": "HTML Document Structure | DOCTYPE, Head, Body, Meta Tags Guide",
-    "meta_description": "Learn HTML document structure: DOCTYPE declaration, head and body elements, meta tags, title element, viewport configuration, and production boilerplate with examples.",
+    "meta_title": "HTML Elements, Tags & Attributes | Global, Boolean, Data Attributes Guide",
+    "meta_description": "Learn HTML elements, tags, and attributes: global attributes, boolean attributes, custom data attributes, and div vs span with production examples and best practices.",
     "keywords": [
-      "HTML document structure",
-      "HTML DOCTYPE",
-      "HTML head element",
-      "HTML body element",
-      "HTML meta tags",
-      "HTML title element",
-      "HTML boilerplate",
-      "viewport meta tag",
-      "HTML charset",
-      "HTML5 page structure"
+      "HTML elements",
+      "HTML tags",
+      "HTML attributes",
+      "global HTML attributes",
+      "boolean attributes HTML",
+      "custom data attributes",
+      "HTML data-* attribute",
+      "HTML dataset API",
+      "HTML div element",
+      "HTML span element"
     ],
-    "canonical_url": "/html/html-document-structure",
+    "canonical_url": "/html/html-elements-tags-attributes",
     "robots": "index, follow"
   }
 }

@@ -147,65 +147,378 @@
     "video_url": null,
     "when_to_use": [
       {
-        "point": "When introducing any distinct section of content that needs a label in the document outline"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When introducing any distinct section of content that needs a label in the document outline"
+          }
+        ]
       },
       {
-        "point": "When placing primary keywords in h1 and secondary keywords in h2 for search engine benefit"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When placing primary keywords in "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " and secondary keywords in "
+          },
+          {
+            "value": "h2",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " for search engine benefit"
+          }
+        ]
       },
       {
-        "point": "When labeling landmark regions with sr-only headings so screen reader users can navigate to them"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "When labeling landmark regions with sr-only headings so screen reader users can navigate to them"
+          }
+        ]
       }
     ],
     "when_to_avoid": [
       {
-        "point": "Avoid choosing a heading level based on its default visual size rather than its document rank"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid choosing a heading level based on its default visual size rather than its document rank"
+          }
+        ]
       },
       {
-        "point": "Avoid skipping levels when descending, such as jumping from h2 directly to h4"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid skipping levels when descending, such as jumping from "
+          },
+          {
+            "value": "h2",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " directly to "
+          },
+          {
+            "value": "h4",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          }
+        ]
       },
       {
-        "point": "Avoid placing more than one h1 on a page as it dilutes keyword signal and confuses screen readers"
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Avoid placing more than one "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " on a page as it dilutes keyword signal and confuses "
+          },
+          {
+            "value": "screen readers",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+          }
+        ]
       }
     ],
     "what_it_solves": [
       {
-        "1": "Without headings, pages are flat text blocks with no scannable structure for users or tools."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Without headings, pages are flat text blocks with no scannable structure for users or tools."
+          }
+        ]
       },
       {
-        "2": "Screen reader users navigate by headings to jump sections instead of reading every line."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Screen reader users navigate by headings to jump sections instead of reading every line."
+          }
+        ]
       },
       {
-        "3": "Search engines use heading levels to rank keywords and understand the topic structure of a page."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Search engines use heading levels to rank keywords and understand the topic structure of a page."
+          }
+        ]
       }
     ],
     "conceptual_understanding": [
       {
-        "model": "Heading levels are like a book's table of contents. The book title is h1. Chapters are h2. Sections within chapters are h3. Subsections are h4. If the table of contents jumped from Chapter 2 directly to Section 2.3.1 with nothing between, any reader navigating by the list would be lost. Screen reader users experience that exact disorientation when heading levels are skipped."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Heading levels are like a book's table of contents. The book "
+          },
+          {
+            "value": "title",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"
+          },
+          {
+            "value": " is "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": ". Chapters are "
+          },
+          {
+            "value": "h2",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": ". Sections within chapters are "
+          },
+          {
+            "value": "h3",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": ". Subsections are "
+          },
+          {
+            "value": "h4",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": ". If the table of contents jumped from Chapter 2 directly to Section 2.3.1 with nothing between, any reader navigating by the list would be lost. Screen reader users experience that exact disorientation when heading levels are skipped."
+          }
+        ]
       },
       {
-        "model": "Choosing a heading level for its visual size is like changing a chapter title to footnote-size text because it needs to look smaller on the printed page. The font size is a presentation decision controlled by CSS. The heading level is a structural decision in HTML. These two concerns are independent and should never influence each other."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Choosing a heading level for its visual size is like changing a chapter "
+          },
+          {
+            "value": "title",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title"
+          },
+          {
+            "value": " to footnote-size text because it needs to look smaller on the printed page. The font size is a presentation decision controlled by "
+          },
+          {
+            "value": "CSS",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+          },
+          {
+            "value": ". The heading level is a structural decision in "
+          },
+          {
+            "value": "HTML",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+          },
+          {
+            "value": ". These two concerns are independent and should never influence each other."
+          }
+        ]
       },
       {
-        "model": "The h1 is a contract between the page and every tool that reads it. It says: this single phrase is what this entire page is about. Search engines trust h1 as the authoritative topic statement. Screen readers announce it first. Browsers use it for reader mode extraction. One clear, descriptive h1 per page is not a convention; it is how the web information system was designed to work."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "The "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " is a contract between the page and every tool that reads it. It says: this single phrase is what this entire page is about. Search engines trust "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " as the authoritative topic statement. "
+          },
+          {
+            "value": "Screen readers",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Glossary/Screen_reader"
+          },
+          {
+            "value": " announce it first. Browsers use it for reader mode extraction. One clear, descriptive "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " per page is not a convention; it is how the web information system was designed to work."
+          }
+        ]
       }
     ],
     "common_mistakes": [
       {
-        "mistake": "Selecting heading levels by visual size: Developers frequently use h3 or h4 because the default browser size matches their design. This corrupts the document outline and causes screen reader users to encounter unexpected jumps in heading navigation. Always assign the correct semantic level and use CSS to control size independently."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Selecting heading levels by visual size: Developers frequently use "
+          },
+          {
+            "value": "h3",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " or "
+          },
+          {
+            "value": "h4",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " because the default."
+          }
+        ]
       },
       {
-        "mistake": "Using multiple h1 elements on a single page: Search engines treat the first h1 as the definitive page topic statement. Multiple h1 elements dilute keyword weight and cause screen reader heading lists to show several equally-ranked top-level items, making the navigation list ambiguous and harder to use."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Using multiple "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " elements on a single page: Search engines treat the first "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " as the definitive."
+          }
+        ]
       },
       {
-        "mistake": "Skipping heading levels when descending: Jumping from h2 directly to h4 leaves a structural gap in the outline. Screen readers announce heading levels numerically, so a user hears level 2 followed immediately by level 4, signalling a broken structure. Always increment one level at a time when going deeper into the hierarchy."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Skipping heading levels when descending: Jumping from "
+          },
+          {
+            "value": "h2",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " directly to "
+          },
+          {
+            "value": "h4",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " leaves a structural gap in."
+          }
+        ]
       }
     ],
     "bonus_tips": [
       {
-        "tip": "Install the Headings Map browser extension for Chrome or Firefox to see the heading outline of any page as a collapsible tree. Use it to audit your own pages before publishing. A healthy map looks like a clean nested outline. A broken one shows gaps, duplicate h1 elements, or long content stretches with no headings at all."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "Install the Headings Map browser extension for Chrome or Firefox to see the heading outline of any page as a collapsible tree. Use it to audit your own pages before publishing. A healthy map looks like a clean nested outline. A broken one shows gaps, duplicate "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " elements, or long content stretches with no headings at all."
+          }
+        ]
       },
       {
-        "tip": "In single-page applications where the main content region changes on route navigation, programmatically focus the new h1 after each route change using element.focus(). Without this, screen reader users land on the new view with no announcement of where they are. Add tabindex=-1 to the heading to allow programmatic focus without including it in the natural tab order."
+        "type": "paragraph",
+        "text": [
+          {
+            "value": "In single-page applications where the main content region changes on route navigation, programmatically focus the new "
+          },
+          {
+            "value": "h1",
+            "bold": true,
+            "highlight": true,
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+          },
+          {
+            "value": " after each route change using element.focus(). Without this, screen reader users land on the new view with no announcement of where they are. Add tabindex=-1 to the heading to allow programmatic focus without including it in the natural tab order."
+          }
+        ]
       }
     ],
     "related_topics": [
@@ -292,16 +605,157 @@
       "what_it_solves": null,
       "conceptual_understanding": [
         {
-          "model": "Heading hierarchy is like a numbered filing system. The cabinet is h1. Drawers inside it are h2. Folders inside drawers are h3. Documents inside folders are h4. If a document is placed directly in the cabinet with no drawer or folder between them, the system breaks. Screen reader users experience the same breakdown when a heading level is skipped on the way deeper."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Heading hierarchy is like a numbered filing system. The cabinet is "
+            },
+            {
+              "value": "h1",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ". Drawers inside it are "
+            },
+            {
+              "value": "h2",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ". Folders inside drawers are "
+            },
+            {
+              "value": "h3",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ". Documents inside folders are "
+            },
+            {
+              "value": "h4",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ". If a document is placed directly in the cabinet with no drawer or folder between them, the system breaks. Screen reader users experience the same breakdown when a heading level is skipped on the way deeper."
+            }
+          ]
         },
         {
-          "model": "Think of heading levels as nested containers that must fit inside each other in order. An h4 must sit inside an h3, which sits inside an h2, which sits inside an h1. You can close an inner container and open a new one at any parent level, that is returning up the hierarchy. But you cannot open an h4 container directly inside an h2 container because the h3 container is missing."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Think of heading levels as nested containers that must fit inside each other in order. An "
+            },
+            {
+              "value": "h4",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": " must sit inside an "
+            },
+            {
+              "value": "h3",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ", which sits inside an "
+            },
+            {
+              "value": "h2",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ", which sits inside an "
+            },
+            {
+              "value": "h1",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": ". You can close an inner container and open a new one at any parent level, that is returning up the hierarchy. But you cannot open an "
+            },
+            {
+              "value": "h4",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": " container directly inside an "
+            },
+            {
+              "value": "h2",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": " container because the "
+            },
+            {
+              "value": "h3",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": " container is missing."
+            }
+          ]
         }
       ],
       "common_mistakes": null,
       "bonus_tips": [
         {
-          "tip": "Run your page through the WAVE accessibility checker at wave.webaim.org. WAVE places visual flag icons directly on the page where heading errors occur, showing skipped levels and duplicate h1 elements exactly where they appear in the content. This makes hierarchy problems fast to locate and fix without reading through all the source code."
+          "type": "paragraph",
+          "text": [
+            {
+              "value": "Run your page through the WAVE "
+            },
+            {
+              "value": "accessibility",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/Accessibility"
+            },
+            {
+              "value": " checker at wave.webaim.org. WAVE places visual flag icons directly on the page where heading errors occur, showing skipped levels and duplicate "
+            },
+            {
+              "value": "h1",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements"
+            },
+            {
+              "value": " elements exactly where they appear in the content. This makes hierarchy problems fast to locate and fix without reading through all the source "
+            },
+            {
+              "value": "code",
+              "bold": true,
+              "highlight": true,
+              "link": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/code"
+            },
+            {
+              "value": "."
+            }
+          ]
         }
       ],
       "related_topics": [

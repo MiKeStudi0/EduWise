@@ -69,83 +69,7 @@ def row_exists(session: Session, table: str, column: str, value) -> bool:
     return row is not None
 
 
-def _normalize_problem_items(value: Any) -> list[dict[str, str]] | None:
-    """
-    Normalize source content into:
-      [{"problem": "..."}]
 
-    Supported source forms:
-      - [{"problem": "..."}]
-      - [{"1": "..."}]  # from `what_it_solves`
-      - ["..."]
-    """
-    if not isinstance(value, list):
-        return None
-
-    normalized: list[dict[str, str]] = []
-    for item in value:
-        if isinstance(item, str):
-            text_value = item.strip()
-            if text_value:
-                normalized.append({"problem": text_value})
-            continue
-
-        if not isinstance(item, dict):
-            continue
-
-        if isinstance(item.get("problem"), str):
-            text_value = item["problem"].strip()
-            if text_value:
-                normalized.append({"problem": text_value})
-            continue
-
-        for raw in item.values():
-            if isinstance(raw, str):
-                text_value = raw.strip()
-                if text_value:
-                    normalized.append({"problem": text_value})
-                break
-
-    return normalized or None
-
-
-def _normalize_model_items(value: Any) -> list[dict[str, str]] | None:
-    """
-    Normalize source content into:
-      [{"model": "..."}]
-
-    Supported source forms:
-      - [{"model": "..."}]
-      - ["..."]
-    """
-    if not isinstance(value, list):
-        return None
-
-    normalized: list[dict[str, str]] = []
-    for item in value:
-        if isinstance(item, str):
-            text_value = item.strip()
-            if text_value:
-                normalized.append({"model": text_value})
-            continue
-
-        if not isinstance(item, dict):
-            continue
-
-        if isinstance(item.get("model"), str):
-            text_value = item["model"].strip()
-            if text_value:
-                normalized.append({"model": text_value})
-            continue
-
-        for raw in item.values():
-            if isinstance(raw, str):
-                text_value = raw.strip()
-                if text_value:
-                    normalized.append({"model": text_value})
-                break
-
-    return normalized or None
 
 
 def _jsonb(value: Any) -> str | None:
@@ -174,8 +98,8 @@ def build_json_values(payload: dict) -> dict[str, str | None]:
         "images": payload.get("images"),
         "when_to_use": payload.get("when_to_use"),
         "when_to_avoid": payload.get("when_to_avoid"),
-        "problems": _normalize_problem_items(problems_source),
-        "mental_models": _normalize_model_items(models_source),
+        "problems": problems_source,
+        "mental_models": models_source,
         "common_mistakes": payload.get("common_mistakes"),
         "bonus_tips": payload.get("bonus_tips"),
         "related_topics": payload.get("related_topics"),

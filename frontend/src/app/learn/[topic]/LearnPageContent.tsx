@@ -544,8 +544,6 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                 </p>
               </div>
             </motion.div>
-
-            {/* 3 & 4. PROBLEM & MENTAL MODEL CARDS */}
             <div className="flex flex-col gap-6">
               {currentLesson.problem?.length > 0 && (
                 <div className="p-5 md:p-6 rounded-2xl bg-orange-50 dark:bg-orange-500/5 border border-orange-100 dark:border-orange-500/10 shadow-sm">
@@ -553,10 +551,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     <AlertTriangle className="w-4 h-4" /> The Problem
                   </div>
                   <ul className="space-y-3">
-                    {currentLesson.problem.map((prob: string, i: number) => (
+                    {currentLesson.problem.map((prob: any, i: number) => (
                       <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2 shrink-0" />
-                        {prob}
+                        <div className="flex-1"><RenderBlocks blocks={[prob]} /></div>
                       </li>
                     ))}
                   </ul>
@@ -569,10 +567,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                     <BrainCircuit className="w-4 h-4" /> Mental Model
                   </div>
                   <ul className="space-y-3">
-                    {currentLesson.mentalModel.map((model: string, i: number) => (
+                    {currentLesson.mentalModel.map((model: any, i: number) => (
                       <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
                         <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-2 shrink-0" />
-                        {model}
+                        <div className="flex-1"><RenderBlocks blocks={[model]} /></div>
                       </li>
                     ))}
                   </ul>
@@ -699,10 +697,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                               <AlertTriangle className="w-4 h-4" /> The Problem
                             </div>
                             <ul className="space-y-3">
-                              {sub.problems.map((prob: string, i: number) => (
+                              {sub.problems.map((prob: any, i: number) => (
                                 <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
                                   <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-1.5 shrink-0" />
-                                  {prob}
+                                  <div className="flex-1 text-slate-700 dark:text-slate-300"><RenderBlocks blocks={[prob]} /></div>
                                 </li>
                               ))}
                             </ul>
@@ -714,10 +712,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                               <BrainCircuit className="w-4 h-4" /> Mental Model
                             </div>
                             <ul className="space-y-3">
-                              {sub.mentalModel.map((model: string, i: number) => (
+                              {sub.mentalModel.map((model: any, i: number) => (
                                 <li key={i} className="flex gap-3 text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
                                   <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
-                                  {model}
+                                  <div className="flex-1 text-slate-700 dark:text-slate-300"><RenderBlocks blocks={[model]} /></div>
                                 </li>
                               ))}
                             </ul>
@@ -762,9 +760,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                           <XCircle className="w-4 h-4" /> Common Mistakes
                         </h4>
                         <ul className="space-y-2">
-                          {sub.commonMistakes.map((mistake: string, i: number) => (
+                          {sub.commonMistakes.map((mistake: any, i: number) => (
                             <li key={i} className="flex gap-2 text-sm text-rose-900 dark:text-rose-200/80">
-                               <CornerDownRight className="w-3 h-3 shrink-0 opacity-50 mt-1" /> {mistake}
+                               <CornerDownRight className="w-3 h-3 shrink-0 opacity-50 mt-1" />
+                               <div className="flex-1"><RenderBlocks blocks={[mistake]} /></div>
                             </li>
                           ))}
                         </ul>
@@ -780,10 +779,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                               <CheckCircle className="w-4 h-4 text-emerald-500" /> When to use
                             </h4>
                             <ul className="space-y-2">
-                              {sub.whenToUse.map((item: string, i: number) => (
+                              {sub.whenToUse.map((item: any, i: number) => (
                                 <li key={i} className="flex gap-2 text-slate-600 dark:text-slate-400 p-2 text-sm">
                                   <span className="w-1 h-1 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                                  {item}
+                                  <div className="flex-1"><RenderBlocks blocks={[item]} /></div>
                                 </li>
                               ))}
                             </ul>
@@ -795,10 +794,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                               <XCircle className="w-4 h-4 text-rose-500" /> When NOT to use
                             </h4>
                             <ul className="space-y-2">
-                              {sub.whenNotToUse.map((item: string, i: number) => (
+                              {sub.whenNotToUse.map((item: any, i: number) => (
                                 <li key={i} className="flex gap-2 text-slate-600 dark:text-slate-400 p-2 text-sm">
                                   <span className="w-1 h-1 rounded-full bg-rose-500 mt-2 shrink-0" />
-                                  {item}
+                                  <div className="flex-1"><RenderBlocks blocks={[item]} /></div>
                                 </li>
                               ))}
                             </ul>
@@ -815,10 +814,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                            <strong className="font-semibold text-blue-700 dark:text-blue-300">Pro Tips</strong>
                          </div>
                          <ul className="space-y-2 pl-7">
-                           {sub.tip.map((t: string, i: number) => (
+                           {sub.tip.map((t: any, i: number) => (
                              <li key={i} className="flex gap-2">
                                <span className="w-1.5 h-1.5 rounded-full bg-blue-400 mt-1.5 shrink-0" />
-                               <span>{t}</span>
+                               <div className="flex-1"><RenderBlocks blocks={[t]} /></div>
                              </li>
                            ))}
                          </ul>
@@ -835,9 +834,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                   <XCircle className="w-5 h-5" /> Common Mistakes
                 </h3>
                 <ul className="space-y-3">
-                  {currentLesson.commonMistakes.map((mistake: string, i: number) => (
+                  {currentLesson.commonMistakes.map((mistake: any, i: number) => (
                     <li key={i} className="flex gap-3 text-sm md:text-base text-rose-900 dark:text-rose-200/80">
-                      <CornerDownRight className="w-4 h-4 shrink-0 opacity-50 mt-1" /> {mistake}
+                      <CornerDownRight className="w-4 h-4 shrink-0 opacity-50 mt-1" /> 
+                      <div className="flex-1"><RenderBlocks blocks={[mistake]} /></div>
                     </li>
                   ))}
                 </ul>
@@ -856,7 +856,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                       {currentLesson.whenToUse.map((item: any, i: number) => (
                         <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-emerald-50/50 dark:bg-emerald-500/5 border border-emerald-100 dark:border-emerald-500/10 text-sm md:text-base">
                           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
-                          {item}
+                          <div className="flex-1"><RenderBlocks blocks={[item]} /></div>
                         </li>
                       ))}
                     </ul>
@@ -871,7 +871,7 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                       {currentLesson.whenNotToUse.map((item: any, i: number) => (
                         <li key={i} className="flex gap-3 text-slate-600 dark:text-slate-400 p-3 rounded-lg bg-rose-50/50 dark:bg-rose-500/5 border border-rose-100 dark:border-rose-500/10 text-sm md:text-base">
                           <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
-                          {item}
+                          <div className="flex-1"><RenderBlocks blocks={[item]} /></div>
                         </li>
                       ))}
                     </ul>
@@ -888,10 +888,10 @@ export default function LearnPageContent({ topic }: { topic: string }) {
                   <strong className="text-lg font-bold text-blue-700 dark:text-blue-300">Pro Tips</strong>
                 </div>
                 <ul className="space-y-3 pl-9">
-                  {currentLesson.bonusTip.map((t: string, i: number) => (
+                  {currentLesson.bonusTip.map((t: any, i: number) => (
                     <li key={i} className="flex gap-3 text-sm md:text-base">
                       <span className="w-2 h-2 rounded-full bg-blue-400 mt-2.5 shrink-0" />
-                      <span>{t}</span>
+                      <div className="flex-1"><RenderBlocks blocks={[t]} /></div>
                     </li>
                   ))}
                 </ul>

@@ -45,12 +45,12 @@ class Lesson(Base, TimestampMixin, OrderableMixin, ActiveMixin):
     video_url: Mapped[str | None] = mapped_column(Text)
 
     # Learning sections
-    when_to_use: Mapped[list[str] | None] = mapped_column(JSON)
-    when_to_avoid: Mapped[list[str] | None] = mapped_column(JSON)
-    problems: Mapped[list[str] | None] = mapped_column(JSON)
-    mental_models: Mapped[list[str] | None] = mapped_column(JSON)
-    common_mistakes: Mapped[list[str] | None] = mapped_column(JSON)
-    bonus_tips: Mapped[list[str] | None] = mapped_column(JSON)
+    when_to_use: Mapped[list[dict] | None] = mapped_column(JSON)
+    when_to_avoid: Mapped[list[dict] | None] = mapped_column(JSON)
+    problems: Mapped[list[dict] | None] = mapped_column(JSON)
+    mental_models: Mapped[list[dict] | None] = mapped_column(JSON)
+    common_mistakes: Mapped[list[dict] | None] = mapped_column(JSON)
+    bonus_tips: Mapped[list[dict] | None] = mapped_column(JSON)
     related_topics: Mapped[list[str] | None] = mapped_column(JSON)
 
     # SEO
